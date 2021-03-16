@@ -28,6 +28,7 @@ variables:
     - cd biom-backup
     - git checkout dev
     - (ssh -o stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL" sudo docker exec -i diversity-postgres pg_dump --username biom --exclude-table-data=user) > ~/biom-backup/postgresql/backup/backup.sql
+    - rm -rf ~/biom-backup/diversity
     - scp -r $PATRINAT_CI_USER@"$SERVER_URL":/apps/diversity ~/biom-backup/
     - git add .
     - git commit -m "backup-${CI_JOB_STARTED_AT}"
@@ -35,10 +36,15 @@ variables:
     - cat ~/biom-backup/postgresql/backup/backup.sql
 
 dump-test-db:
+  only:
+    - dev@biom/biom-backup
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
   environment:
     name: test
     url: https://"$BIOM_TEST_SERVER_URL"
   variables:
     SERVER_URL: $BIOM_TEST_SERVER_URL
+    BRANCH_NAME: dev
   extends: .dump-db
 
