@@ -25,6 +25,7 @@ variables:
     - ssh-keyscan -v "$SERVER_URL" >> ~/.ssh/known_hosts
     - cd ~
     - git clone git@ic-prod1.patnat.mnhn.fr:biom/biom-backup.git
+    - git checkout dev
     - (ssh -o stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL" sudo docker exec -i diversity-postgres pg_dump --username biom --exclude-table-data=user) > ~/biom-backup/postgresql/backup/backup.sql
     - scp -r $PATRINAT_CI_USER@"$SERVER_URL":/apps/diversity ~/biom-backup/
     - cd ~/biom-backup
