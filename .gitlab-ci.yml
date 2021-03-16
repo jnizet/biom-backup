@@ -24,7 +24,7 @@ variables:
     - cd ~
     - git clone git@ic-prod1.patnat.mnhn.fr:biom/biom-backup.git
     - (ssh -o stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL" sudo docker exec -i diversity-postgres pg_dump --username biom --exclude-table-data=user) > ~/biom-backup/postgresql/backup/backup.sql
-    - $ scp -r stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL":/apps/diversity /biom-backup/
+    - scp -r stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL":/apps/diversity /biom-backup/
     - cat ~/biom-backup/postgresql/backup/backup.sql
 
 dump-test-db:
