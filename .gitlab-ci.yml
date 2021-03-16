@@ -1,0 +1,29 @@
+stages:
+  - dump
+  - push
+
+variables:
+  DOCKER_COMPOSE_PATH: "/apps/docker"
+
+.dump-db:
+  image: circleci/openjdk:11-browsers
+  services:
+    - name: postgres:12.2-alpine
+      alias: postgres
+  before_script:
+    - "which ssh-agent || ( apt update && apt install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - 'id gitlab-runner || (useradd gitlab-runner && mkdir /home/gitlab-runner && chown -R gitlab-runner:gitlab-runner /home/gitlab-runner)'
+    - dir=$(pwd)
+    - chown -R gitlab-runner:gitlab-runner $dir
+    - su gitlab-runner -c "cd $dir"
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - ssh-add <(echo "$PATRINAT_CI_SSH_KEY")
+    - touch  ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - ssh-keyscan -v "$SERVER_URL" >> ~/.ssh/known_hosts
+    - ssh -o stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL" sudo docker exec -i diversity-postgres pg_dump --username biom --exclude-table-data=user >> ~/biom-backup/postgresql/backup/backup.sql
+
