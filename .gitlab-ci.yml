@@ -21,6 +21,7 @@ variables:
     - touch  ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
     - ssh-keyscan -v "$SERVER_URL" >> ~/.ssh/known_hosts
+    - touch ~/biom-backup/postgresql/backup/backup.sql
     - (ssh -o stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL" sudo docker exec -i diversity-postgres pg_dump --username biom --exclude-table-data=user) > ~/biom-backup/postgresql/backup/backup.sql
     - cat ~/biom-backup/postgresql/backup/backup.sql
 
