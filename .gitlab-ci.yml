@@ -37,9 +37,8 @@ variables:
 
 dump-test-db:
   only:
+    - schedules
     - dev@biom/biom-backup
-  rules:
-    - if: '$CI_PIPELINE_SOURCE == "schedule"'
   environment:
     name: test
     url: https://"$BIOM_TEST_SERVER_URL"
