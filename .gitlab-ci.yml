@@ -37,8 +37,7 @@ variables:
 
 dump-test-db:
   only:
-    - schedules
-    - dev@biom/biom-backup
+    - schedules && dev@biom/biom-backup
   environment:
     name: test
     url: https://"$BIOM_TEST_SERVER_URL"
