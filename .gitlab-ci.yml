@@ -14,6 +14,8 @@ variables:
   before_script:
     - "which ssh-agent || ( apt update && apt install openssh-client -y )"
     - eval $(ssh-agent -s)
+    - git config --global user.email "gitlab-ci@mnhn.fr"
+    - git config --global user.name "gitlab-ci"
     - mkdir -p ~/.ssh
     - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
   script:
