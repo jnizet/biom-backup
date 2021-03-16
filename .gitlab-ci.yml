@@ -7,6 +7,7 @@ variables:
 
 .dump-db:
   image: circleci/openjdk:11-browsers
+  stage: dump
   services:
     - name: postgres:12.2-alpine
       alias: postgres
@@ -25,5 +26,14 @@ variables:
     - touch  ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
     - ssh-keyscan -v "$SERVER_URL" >> ~/.ssh/known_hosts
-    - ssh -o stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL" sudo docker exec -i diversity-postgres pg_dump --username biom --exclude-table-data=user >> ~/biom-backup/postgresql/backup/backup.sql
+    - (ssh -o stricthostkeychecking=no $PATRINAT_CI_USER@"$SERVER_URL" sudo docker exec -i diversity-postgres pg_dump --username biom --exclude-table-data=user) >> ~/biom-backup/postgresql/backup/backup.sql
+    - cat ~/biom-backup/postgresql/backup/backup.sql
+
+dump-test-db:
+  environment:
+    name: test
+    url: https://"$BIOM_TEST_SERVER_URL"
+  variables:
+    SERVER_URL: $BIOM_TEST_SERVER_URL
+  extends: .dump-db
 
