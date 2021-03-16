@@ -29,7 +29,7 @@ variables:
     - scp -r $PATRINAT_CI_USER@"$SERVER_URL":/apps/diversity ~/biom-backup/
     - cd ~/biom-backup
     - git add .
-    - git commit -m "$CI_JOB_STARTED_AT"
+    - git commit -m "backup-${CI_JOB_STARTED_AT}"
     - git push
     - cat ~/biom-backup/postgresql/backup/backup.sql
 
