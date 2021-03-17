@@ -40,7 +40,7 @@ dump-test-db:
     refs:
       - schedules
     variables:
-      - $ENV == "release"
+      - $ENV == "dev"
   environment:
     name: test
     url: https://"$BIOM_TEST_SERVER_URL"
