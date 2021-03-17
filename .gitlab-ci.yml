@@ -57,6 +57,6 @@ dump-release-db:
     name: release
     url: https://"$BIOM_PREPROD_SERVER_URL"
   variables:
-    SERVER_URL: $BIOM_PREPROD_SERVER_URL
+    SERVER_URL: $BIOM_PREPROD_SERVER_URL 
     BRANCH_NAME: release
   extends: .dump-db
