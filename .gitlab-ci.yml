@@ -37,7 +37,10 @@ variables:
 
 dump-test-db:
   only:
-    - schedules && dev@biom/biom-backup
+    refs:
+      - schedules
+    variables:
+      - $ENV == "release"
   environment:
     name: test
     url: https://"$BIOM_TEST_SERVER_URL"
@@ -48,7 +51,10 @@ dump-test-db:
 
 dump-release-db:
   only:
-    - schedules && release@biom/biom-backup
+    refs:
+      - schedules
+    variables:
+      - $ENV == "release"
   environment:
     name: release
     url: https://"$BIOM_PREPROD_SERVER_URL"
