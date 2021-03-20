@@ -649,10 +649,6 @@ COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 --
 
 COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdin;
-1070	1003	MARTINIQUE	19.40384829	%
-1068	1003	OUTRE_MER	19.69798074	%
-1069	1003	GUADELOUPE	28.63712677	%
-1065	1000	NOUVELLE_CALEDONIE	38	
 1034	1007	OUTRE_MER	29.26829268	%
 1035	1007	GUADELOUPE	60	%
 1038	1007	REUNION	21.42857143	%
@@ -675,9 +671,13 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 1047	1004	REUNION	35.2	%
 1048	1004	SAINT_PIERRE_ET_MIQUELON	13.04347826	%
 1045	1004	MARTINIQUE	46.22641509	%
+1070	1003	MARTINIQUE	19.40384829	%
+1068	1003	OUTRE_MER	19.69798074	%
+1069	1003	GUADELOUPE	28.63712677	%
 1064	1000	MARTINIQUE	18	
-1066	1000	SAINT_PIERRE_ET_MIQUELON	7	
 1062	1000	OUTRE_MER	60	
+1066	1000	SAINT_PIERRE_ET_MIQUELON	7	
+1065	1000	NOUVELLE_CALEDONIE	38	
 1063	1000	GUADELOUPE	17	
 1067	1005	OUTRE_MER	25.21552908	%
 1049	1001	OUTRE_MER	16264	
@@ -704,16 +704,16 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1024	protection-contre-eee	ecogesture	Protection contre les EEE
 1027	protection-flore	ecogesture	Préserver la flore sauvage
 1018	ecogeste-agir	ecogesture-act	Encadré "agir pour la biodiversité" fiche écogeste
-1019	sciences-participatives	science	Sciences participatives
-1008	especes-endemiques	indicator	Espèces endémiques
 1009	especes-inventoriees	indicator	Espèces inventoriées
 1030	mentions-legales	legal-terms	Mentions légales
+1019	sciences-participatives	science	Sciences participatives
+1004	especes-exotiques-envahissantes	indicator	Espèces exotiques envahissantes
+1008	especes-endemiques	indicator	Espèces endémiques
 1002	antilles	territory-zone	bassin antillais
 1007	apropos	about	A propos
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
 1005	indicateurs	indicators	Tous les indicateurs
 1001	guadeloupe	territory	Guadeloupe
-1004	especes-exotiques-envahissantes	indicator	Espèces exotiques envahissantes
 1015	martinique	territory	Martinique
 1021	reunion	territory	La Réunion
 1010	especes-menacees	indicator	Espèces éteintes et menacées
@@ -1025,6 +1025,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19860	1021	IMAGE	species.8.image	\N	1194	Image manquante	\N	f
 19861	1021	TEXT	species.0.name	Le Gecko vert de Manapany	\N	\N	\N	f
 19862	1021	TEXT	events.4.date	2007	\N	\N	\N	f
+20534	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
+20535	1019	IMAGE	images.0.image	\N	1078	© U.S. Fish and Wildlife Service Southeast Region / CC BY 2.0	\N	f
+20536	1019	TEXT	examples.projects.2.subject	Suivi de l’état de santé des récifs de Nouvelle-Calédonie	\N	\N	\N	f
+20537	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
+20538	1019	TEXT	examples.projects.1.target	Ornithologues amateurs ou professionnels (à titre bénévole). Formation nécessaire. 	\N	\N	\N	f
+20539	1019	TEXT	examples.projects.0.target	Plongeurs, apnéistes, pratiquant la photo sous-marine	\N	\N	\N	f
+20540	1019	TEXT	examples.projects.0.title	La photo-identification des tortues marines à La Réunion	\N	\N	\N	f
 20062	1006	IMAGE	presentation.file	\N	1018	Affiche	\N	f
 20063	1006	IMAGE	action.cards.2.icon	\N	1022	Plongée	\N	f
 20064	1006	TEXT	presentation.name	Je protège les récifs coralliens	\N	\N	\N	f
@@ -1040,6 +1047,20 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20074	1006	TEXT	understand.quote	La grande barrière de corail de Nouvelle-Calédonie est la deuxième plus grande au monde, après celle se trouvant sur la côte est de l'Australie.	\N	\N	\N	f
 20075	1006	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20076	1006	TEXT	action.cards.0.description	En bateau, je jette l'ancre sur des zones sableuses, et non pas à proximité de récifs ou d'herbiers. 	\N	\N	\N	f
+20541	1019	TEXT	examples.projects.0.subject	Suivi individuel des tortues marines	\N	\N	\N	f
+20542	1019	TEXT	header.subtitle	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.  \n\nFaune, flore, milieu marin ou terrestre, observation ponctuelle ou programmes protocolés, trouvez le programme qui vous correspond et contribuez au développement des connaissances !	\N	\N	\N	f
+20543	1019	TEXT	examples.projects.1.actor	Groupe d’étude et de protection des oiseaux de Guyane (GEPOG)	\N	\N	\N	f
+20544	1019	LINK	examples.projects.1.more	En savoir plus	\N	\N	http://www.gepog.org/Nos-actions/Milieux-terrestres/Suivi-Temporel-des-Oiseaux-Communs-STOC-EPS	f
+20545	1019	TEXT	examples.projects.2.title	Le Réseau d’observation des récifs coralliens (RORC) de Nouvelle-Calédonie	\N	\N	\N	f
+20546	1019	TEXT	header.title	C'est quoi les sciences participatives ?	\N	\N	\N	f
+20547	1019	IMAGE	examples.projects.2.image	\N	1083	© Reefcheck France 	\N	f
+20548	1019	IMAGE	examples.projects.1.image	\N	1082	Tangara évêque © P. Ingremeau 	\N	f
+20549	1019	IMAGE	images.2.image	\N	1087	© Riccardo.salvini  / CC BY 4.0 	\N	f
+20550	1019	TEXT	paragraphs.1.title	Les projets adossés à des programmes de recherche	\N	\N	\N	f
+20551	1019	TEXT	presentation.description	Les observations sont réalisées de manière bénévole, le plus souvent par des non-professionnels, certains programmes nécessitent des formations au préalables. On distingue trois catégories de programmes participatifs selon les objectifs	\N	\N	\N	f
+20552	1019	TEXT	paragraphs.0.text	Il s’agit de projet d’inventaires et de signalements destinés aux amateurs sachant identifier les taxons observés. Les débutants y sont les bienvenus.\nL’objet principal est de partager de la connaissance, les données seront éventuellement mobilisables a posteriori dans un projet de recherche ou dans un objectif de conservation.	\N	\N	\N	f
+20553	1019	TEXT	examples.projects.2.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
+20554	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.facebook.com/paladalik/	f
 19863	1021	IMAGE	interests.locations.2.image	\N	1157	Vue sur le Piton de la Fournaise © Philippe Gourdain	\N	f
 19864	1021	IMAGE	ecosystems.ecosystems.2.image	\N	1195	Image manquante	\N	f
 19865	1021	TEXT	interests.locations.3.name	La forêt de Mare-Longue	\N	\N	\N	f
@@ -1068,6 +1089,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19888	1021	TEXT	risks.risks.0.name	Une pression démographique importante	\N	\N	\N	f
 19889	1021	IMAGE	interests.locations.1.image	\N	1156	Vue sur le cirque de Mafate © Céline Soyer	\N	f
 19890	1021	IMAGE	ecosystems.ecosystems.1.image	\N	1100	© Philippe Gourdain	\N	f
+20555	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
 19891	1021	TEXT	interests.locations.3.description	Vestige de forêt humide primaire de basse altitude du sud sauvage, cette forêt a poussé sur une ancienne coulée de lave. Aujourd’hui réduite à une centaine d’hectares, elle abrite une richesse remarquable en espèces végétales, dont de nombreuses espèces endémiques. Si elle est encore dans un bon état de conservation, la disparition de la faune qui disséminait les graines (oiseaux, tortues géantes, chauves-souris) empêche sa régénération naturelle. 	\N	\N	\N	f
 19892	1021	TEXT	identity.title	La Réunion,  \npoint chaud de l’océan Indien	\N	\N	\N	f
 19893	1021	TEXT	species.4.name	Le Pétrel de Barau	\N	\N	\N	f
@@ -1082,7 +1104,26 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19902	1021	TEXT	events.1.date	-22 000 ans	\N	\N	\N	f
 19903	1021	TEXT	ecosystems.ecosystems.2.name	Les récifs coralliens	\N	\N	\N	f
 19904	1021	TEXT	interests.locations.4.name	[L’étang de Saint-Paul](https://reserve-etangsaintpaul.fr/fr/accueil)	\N	\N	\N	f
+20556	1019	IMAGE	images.1.image	\N	1079	© Steveprutz / CC BY 3.0	\N	f
+20557	1019	TEXT	paragraphs.2.text	On trouve dans cette catégorie divers programmes de sensibilisation à la démarche scientifique ou aux enjeux de conservation. Certains d’entre eux n’impliquent pas de collecte d’information centralisée, leur objectif étant d’abord de permettre aux participants d’acquérir des connaissances. 	\N	\N	\N	f
+20558	1019	TEXT	examples.projects.2.actor	Association Pala Dalik	\N	\N	\N	f
+20559	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
+20560	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
+20561	1019	TEXT	paragraphs.0.title	Les bases de données collaboratives	\N	\N	\N	f
+20562	1019	TEXT	paragraphs.1.text	L’objet et les conditions de collecte des données sont très précisément définis, pour permettre l’exploitabilité des données et la réponse à une question précise. La nature du protocole va contraindre le type de public participant, mais cela peut inclure des débutants. Les données collectées peuvent également rejoindre bases de données collaboratives.\n	\N	\N	\N	f
+20563	1019	TEXT	application.subtitle	J'agis en ligne	\N	\N	\N	f
+20564	1019	IMAGE	examples.projects.0.image	\N	1081	© Cynomana  / CC BY-SA 4.0 	\N	f
+20565	1019	TEXT	examples.projects.1.title	Le Suivi temporel des oiseaux communs (STOC) en Guyane	\N	\N	\N	f
 1799	1002	TEXT	description	Les Antilles sont un « point chaud » de la biodiversité mondiale. Si chacun des quatre territoires français du bassin a son identité et ses spécificités, les acteurs locaux collaborent autour de problématiques partagées. 	\N	\N	\N	f
+20566	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
+20567	1019	TEXT	paragraphs.2.title	Les programmes à visée éducative ou de gestion/conservation	\N	\N	\N	f
+20568	1019	TEXT	examples.projects.2.target	Plongeurs, apnéistes. Formation nécessaire. 	\N	\N	\N	f
+20569	1019	IMAGE	header.background	\N	1075	Mont Orohena, Tahiti © Darko Cotoras	\N	f
+20570	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages réguliers le long de parcours prédéfinis	\N	\N	\N	f
+20571	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
+20572	1019	TEXT	examples.projects.1.description	\n\n\nDébuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et La Réunion, le STOC-Guyane a pour but de suivre les variations d'abondances d'oiseaux communs sur le long terme pour évaluer l'impact des activités humaines. Le programme demande une implication régulière et nécessite une formation au protocole utilisé et la reconnaissance des espèces. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
+20682	1008	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
+20683	1008	TEXT	understand.text2	On trouve un nombre plus important d’espèces endémiques dans les îles par rapport aux continents en raison de leur isolement géographique : les espèces y ont évolué séparément par rapport à celles sur le continent. Ainsi, plus une île est ancienne, plus il est probable que son taux d’endémisme soit élevé, comme par exemple en Nouvelle-Calédonie où 30 % des espèces du territoire sont uniques au monde.\nL’endémisme est également beaucoup plus important chez les espèces terrestres que chez les espèces marines, le milieu marin étant plus ouvert et permettant une connexion plus importante des habitats.	\N	\N	\N	f
 19618	1001	TEXT	species.7.description	Parmi les dizaines d’espèces d’ochidées indigènes, 5 sont endémiques strictes de Guadeloupe, dont [*Octomeria ffrenchiana*](https://inpn.mnhn.fr/espece/cd_nom/630252\n), espèce rare d’altitude découverte il y a quelques années seulement. Environ deux tiers des orchidées de Guadeloupe sont épiphytes : elles utilisent une autre plante comme support. Ces espèces sont considérées comme d’excellents bio-indicateurs de la santé du milieu qui les héberge.\n\nStatut dans la Liste rouge de la flore vasculaire de Guadeloupe pour *Octomeria ffrenchiana* : en danger critique.  	\N	\N	\N	f
 19619	1001	TEXT	species.8.description	La Tortue imbriquée ([*Eretmochelys imbricata*](https://inpn.mnhn.fr/espece/cd_nom/77347\n)) est l’une des trois espèces de tortues marines qui viennent pondre sur les plages de Guadeloupe. Les tortues marines sont menacées entre autres par les captures accidentelles de pêche, les collisions, l’ingestion de déchets, le braconnage ou encore la destruction de leurs sites d’alimentation. Toutes les espèces de tortues sont protégées, et le réseau des tortues marines de Guadeloupe présente une [charte de bonne conduite à respecter en présence de tortues](http://www.tortuesmarinesguadeloupe.org/les-tortues-marines/la-charte-de-bonne-conduite/) pour les préserver.\n\nStatut dans la Liste rouge de la faune de Guadeloupe : quasi-menacée.  	\N	\N	\N	f
 19620	1001	TEXT	events.2.description	Dernière éruption de la Soufrière	\N	\N	\N	f
@@ -1150,6 +1191,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19402	1020	TEXT	interests.locations.4.description	Situé sur la côte Sud-Est de la Grande Terre, entre Thio et Yaté, [ce parc provincial](https://www.province-sud.nc/aires-protegees/parc-cote-oubliee) créé en 2019 protège désormais 93 000 ha terrestres et 29 200 ha marins. Ce véritable trésor de biodiversité compte 98 % d’espèces végétales endémiques, des centaines d’espèces rares ou menacées, la moitié des forêts humides de la Nouvelle-Calédonie et un patrimoine culturel et immatériel précieux. Ce classement a par ailleurs induit le gel d’une centaine de titres miniers. \n	\N	\N	\N	f
 19403	1020	TEXT	risks.risks.0.name	Une richesse en biodiversité soumise à des fortes pressions 	\N	\N	\N	f
 19404	1020	IMAGE	interests.locations.1.image	\N	1090	Poisson-coffre dans les récifs d’Entrecasteaux © DR	\N	f
+20684	1008	TEXT	understand.text1	Qualifier une espèce d’endémique, cela veut dire que sa répartition est limitée à une zone géographique peu étendue et qu’elle ne se retrouve nulle part ailleurs dans le monde. Cela donne au territoire en question une responsabilité particulièrement forte dans la conservation du patrimoine mondial. On parle également d'espèces "sub-endémiques" lorsque leur répartition s'étend sur quelques territoires proches mais reste très limitée. \nEn raison de cette aire de répartition géographique restreinte, ces espèces sont généralements plus sensibles aux pressions liées aux activités humaines et se retrouvent plus souvent en danger de disparition que les espèces plus largement répandues. \n\nReflet de l'état actuel des connaissances, ce chiffre peut augmenter en raison de l'amélioration des connaissances scientifiques et de la [découverte de nouvelles espèces](https://preprod.biodiversite-outre-mer.fr/indicateurs/nouvelles-especes), mais il peut également diminuer lorsque des espèces s'éteignent.  	\N	\N	\N	f
+20685	1008	TEXT	territories.title	Nombre d'espèces endémiques	\N	\N	\N	f
+20686	1008	TEXT	understand.title1	La notion d'endémisme	\N	\N	\N	f
+20687	1008	TEXT	understand.title2	Un taux d’endémisme plus élevé dans les îles ? 	\N	\N	\N	f
+20688	1008	TEXT	presentation.descriptionTerritories	espèces sont endémiques du territoire	\N	\N	\N	f
+20689	1008	TEXT	understand.paragraphs.0.title	Quelques exemples	\N	\N	\N	f
+20690	1008	TEXT	understand.keyword	endémique	\N	\N	\N	f
 13444	1014	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 13445	1014	TEXT	understand.text2	Cet indicateur présente l’évolution du recouvrement en corail vivant sur des stations réparties dans les différents territoires d’outre-mer. La situation est en réalité très hétérogène selon les collectivités : les récifs sont ainsi très dégradés en Martinique et Guadeloupe, mais beaucoup moins à Wallis-et-Futuna ou Mayotte. La situation est considérée comme stable pour 60 % des stations étudiées.  \n\nCet indicateur a cependant des limites, par exemple, le nombre de stations évaluées reste faible : on compte 82 stations évaluées sur plus de 600 existantes. De plus, il se base uniquement sur le caractère vivant du corail, mais pas sur les espèces de coraux présentes, ni les communautés associées (poissons, invertébrés). Des analyses plus complètes et plus fines sont nécessaires afin de bien comprendre l’évolution de l’état de santé des récifs coralliens.	\N	\N	\N	f
 13446	1014	TEXT	understand.text1	Les récifs coralliens sont formés par des colonies de coraux, formées de polypes (petits organismes invertébrés de la même famille que les méduses) sécrétant un squelette calcaire, et vivant en symbiose avec des algues unicellulaires, les zooxanthelles, qui leur apportent des nutriments grâce à la photosynthèse.\nPoissons, crustacés, mollusques, concombres de mer, éponges... les récifs coralliens sont des écosystèmes extrêmement riches en biodiversité, ils représentent une zone de nourrissage, de refuge et de nurserie pour des milliers d'espèces marines.  \n \n10 % des récifs coralliens mondiaux sont situés dans les territoires d’outre-mer français, la France a donc une responsabilité importante à l’échelle mondiale sur la conservation des récifs coralliens.	\N	\N	\N	f
@@ -1161,6 +1209,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 13452	1014	TEXT	understand.keyword	corail	\N	\N	\N	f
 13453	1014	TEXT	ecogestures.title	Comment préserver les coraux à mon échelle ? 	\N	\N	\N	f
 13454	1014	IMAGE	presentation.image	\N	1053	Récif corallien, Parc naturel marin de Mayotte © Marine Dekenen / OFB	\N	f
+20691	1008	TEXT	ecogestures.title	Comment préserver les espèces endémiques ? 	\N	\N	\N	f
+20692	1008	IMAGE	presentation.image	\N	1034	Kaori de forêt (Agathis lanceolata) © Mickaël T / CC BY 2.0	\N	f
 19405	1020	IMAGE	ecosystems.ecosystems.1.image	\N	1093	La piscine naturelle de la baie d’Oro © Jeremy Zero/Unsplash	\N	f
 19406	1020	TEXT	interests.locations.3.description	Autour du point culminant de la Nouvelle-Calédonie, cette réserve de 5 400 hectares a été créée en 1950. Cette réserve botanique exceptionnelle se caractérise par une mosaïque de formations forestières abritant une faune et une flore remarquable : kaoris, palmiers du genre *Clinosperma*, oiseaux (Méliphage noir, Pétrel de Tahiti), papillons...	\N	\N	\N	f
 19407	1020	IMAGE	species.10.image	\N	1243	Image manquante	\N	f
@@ -1363,13 +1413,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20155	1025	TEXT	understand.quote	Une tortue en ponte est très sensible au dérangement, cela peut la conduire à abandonner son nid. 	\N	\N	\N	f
 20156	1025	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20157	1025	TEXT	action.cards.0.description	Je reste à distance des animaux sauvages que je rencontre et je ne cherche pas à les toucher	\N	\N	\N	f
-17634	1019	TEXT	presentation.title	Des sciences pour tous	\N	\N	\N	f
-17635	1019	IMAGE	images.0.image	\N	1078	© U.S. Fish and Wildlife Service Southeast Region / CC BY 2.0	\N	f
-17636	1019	TEXT	examples.projects.2.subject	Suivi de l’état de santé des récifs de La Nouvelle Calédonie	\N	\N	\N	f
-17637	1019	TEXT	examples.title	3 exemples de programmes participatifs en outre-mer	\N	\N	\N	f
-13279	1004	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
-13280	1004	TEXT	understand.text2	Ces espèces exotiques envahissantes perturbent les équilibres environnementaux en entrant en compétition avec les espèces locales (pour la nourriture, les sites de reproduction ou de repos, la lumière, etc.), par prédation, introduction de pathogènes, hybridation ou encore en modifiant les paramètres physico-chimiques des habitats.  Elles ont ainsi de lourds impacts sur les milieux et les espèces indigènes, en particulier dans les îles où elles sont à l'origine de nombreuses extinctions.\n\nOn trouve des espèces exotiques envahissantes dans tous les groupes taxonomiques : champignons, algues, plantes vasculaires, invertébrés, reptiles, oiseaux, poissons, mammifères, etc. et dans tous les milieux : terrestres, marins ou d'eaux douces.	\N	\N	\N	f
-17638	1019	TEXT	examples.projects.1.target	Ornithologues à titre bénévole ou dans un cadre professionnels (Agents de zones protégées)	\N	\N	\N	f
 19655	1001	IMAGE	species.1.image	\N	1009	*Macrobrachium carcinus* © Clinton & Charles Robertson / CC BY 2.0 	\N	f
 19656	1001	TEXT	ecosystems.ecosystems.1.name	Les plages	\N	\N	\N	f
 19657	1001	TEXT	events.2.date	1976	\N	\N	\N	f
@@ -1377,9 +1420,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19659	1001	TEXT	identity.marineArea	90 000	\N	\N	\N	f
 19660	1001	TEXT	events.8.date	2020 - 2029	\N	\N	\N	f
 19661	1001	TEXT	identity.presentation	Formée de deux îles principales, Basse-Terre et Grande-Terre, séparées par un bras de mer et entourées de plusieurs dépendances et d’îlets, la Guadeloupe, en raison de sa taille, son altitude, sa géologie et la diversité de ses paysages, est le territoire le plus riche en espèces, notamment endémiques, des Petites Antilles.  	\N	\N	\N	f
-17639	1019	TEXT	examples.projects.0.target	Plongeurs pratiquant la photo sous-marine	\N	\N	\N	f
-17640	1019	TEXT	examples.projects.0.title	Photo-identification des tortues marines à la Réunion	\N	\N	\N	f
-17641	1019	TEXT	examples.projects.0.subject	Suivi individuel des tortues marines	\N	\N	\N	f
 19662	1001	IMAGE	interests.locations.0.image	\N	1006	Rivière dans le Parc national de Guadeloupe © Filo gèn' / CC BY-SA 4.0	\N	f
 19663	1001	TEXT	species.6.name	Le Palétuvier rouge	\N	\N	\N	f
 19664	1001	TEXT	identity.population	390 253	\N	\N	\N	f
@@ -1394,54 +1434,14 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19673	1001	TEXT	interests.locations.3.name	La Réserve naturelle nationale de la Désirade	\N	\N	\N	f
 19674	1001	TEXT	interests.locations.0.description	Créé en 1989 et premier parc national d’outre-mer, son aire d’adhésion s’étend sur 16 communes du territoire et son cœur de parc sur 21 850 ha dont 3 300 ha marins. Tout l’enjeu du [Parc national de Guadeloupe](http://www.guadeloupe-parcnational.fr/fr) est de conjuguer les activités humaines avec la préservation du patrimoine naturel de grande valeur de la Guadeloupe.	\N	\N	\N	f
 19675	1001	TEXT	interests.locations.2.description	Composée de deux îles séparées par un chenal de 150 m de large, ce site présente l’une des plus importantes populations d’Iguane des Petites Antilles (*Iguana delicatissima*). C’est un refuge pour de nombreuses espèces d’oiseaux, un lieu de ponte pour les tortues marines, et on y trouve également le dernier peuplement de Gaïac (*Guaiacum officinale*), un petit arbre au bois très dense.	\N	\N	\N	f
-13281	1004	TEXT	understand.text1	Une espèce exotique envahissante est une espèce introduite par l’Homme hors de son territoire d’origine et qui présente ensuite, sur son territoire d’introduction, une dispersion et un développement importants, engendrant des impacts environnementaux mais aussi sociaux et économiques. Ces introductions sont parfois volontaires (pour l’agriculture, l’ornementation, comme animaux de compagnie, etc.) ou involontaires (organismes présents dans les marchandises échangées internationalement, dans les eaux de ballast des bateaux, etc.).\n\nDe nombreuses espèces n’arrivent pas à s’adapter ou se reproduire dans leurs territoires d’introduction, cependant certaines trouvent au contraire des conditions favorables à leur développement et prolifèrent, profitant notamment de l’absence de leurs prédateurs ou parasites naturels. 	\N	\N	\N	f
-13282	1004	TEXT	territories.title	Nombre d'espèces présentes sur la liste des 100 espèces exotiques les plus envahissantes au monde 	\N	\N	\N	f
-17642	1019	TEXT	header.subtitle	Permettre à tous les curieux de la nature, du débutant à l’expérimenté, de faire progresser la recherche sur la biodiversité en fournissant aux scientifiques un grand nombre de données de terrain, c’est l’objectif des sciences participatives.\n\nFaune, flore, milieu marin ou terrestre, observations opportunistes ou programmes protocolés, trouvez le programme qui vous correspond et participez au développement des connaissances !\n	\N	\N	\N	f
-13283	1004	TEXT	understand.title1	Des espèces introduites par l'Homme	\N	\N	\N	f
-13284	1004	TEXT	understand.title2	Une des principales causes d'érosion de la biodiversité dans les îles	\N	\N	\N	f
-17643	1019	TEXT	examples.projects.1.actor	Groupe d’Etude et de Protection des Oiseaux de Guyane (GEPOG)	\N	\N	\N	f
-17644	1019	LINK	examples.projects.1.more	En savoir plus	\N	\N	http://www.gepog.org/Nos-actions/Milieux-terrestres/Suivi-Temporel-des-Oiseaux-Communs-STOC-EPS	f
-17645	1019	TEXT	examples.projects.2.title	Réseau d’Observation des Récifs Coralliens de Nouvelle-Calédonie	\N	\N	\N	f
-17646	1019	TEXT	header.title	C'est quoi les Sciences participatives ?	\N	\N	\N	f
-17647	1019	IMAGE	examples.projects.2.image	\N	1083	© Reefcheck France 	\N	f
-17648	1019	IMAGE	examples.projects.1.image	\N	1082	Tangara évêque © P. Ingremeau 	\N	f
-17649	1019	IMAGE	images.2.image	\N	1087	© Riccardo.salvini  / CC BY 4.0 	\N	f
-13285	1004	TEXT	presentation.descriptionTerritories	espèces sur les 100 considérées comme les plus envahissantes au monde sont présentes sur le territoire	\N	\N	\N	f
-13286	1004	TEXT	understand.paragraphs.0.title	Une liste mondiale des espèces les plus problématiques	\N	\N	\N	f
-13287	1004	TEXT	understand.keyword	Espèces	\N	\N	\N	f
-13288	1004	TEXT	ecogestures.title	Que puis-je faire pour éviter l’introduction et la dispersion d’espèces exotiques envahissantes ? 	\N	\N	\N	f
-13289	1004	IMAGE	presentation.image	\N	1014	Rascasse volante (Pterois volitans) dans les fonds sous-marins de Martinique © Alain Pibot / OFB	\N	f
-17650	1019	TEXT	paragraphs.1.title	Les projets adossés à des programmes de recherche	\N	\N	\N	f
+20693	1008	TEXT	understand.paragraphs.0.text	Le Tiaré Apetahi ([*Sclerotheca raiateensis*](https://inpn.mnhn.fr/espece/cd_nom/908708)) en Polynésie Française, le Colibri à tête bleue ([*Cyanophaia bicolor*](https://inpn.mnhn.fr/espece/cd_nom/441841)) en Martinique, le Gecko vert de Manapany ([*Phelsuma inexpectata*](https://inpn.mnhn.fr/espece/cd_nom/528679)) à La Réunion, le Cagou ([*Rhynochetos jubatus*](https://inpn.mnhn.fr/espece/cd_nom/442324)) en Nouvelle-Calédonie, ou encore le Choux de Kerguelen ([*Pringlea antiscorbutica*](https://inpn.mnhn.fr/espece/cd_nom/721546)) dans les îles subantarctiques, chaque territoire d'outre-mer possède de nombreuses espèces uniques. Largement couverte par la très riche forêt amazonienne, la Guyane compte près de 9 % d'espèces endémiques (ou sub-endémiques de la région du plateau des Guyanes). Seul Saint-Pierre-et-Miquelon ne compte aucune espèce connue spécifique au territoire, l'archipel étant très proche de Terre Neuve.\n\nOn trouve malheureusement un grand nombre d'espèces endémiques éteintes, comme le Solitaire de La Réunion ([*Threskiornis solitarius*](https://inpn.mnhn.fr/espece/cd_nom/432588)) (souvent confondu à tord avec le Dodo de l'île Maurice) ou l'Amazone de la Martinique ([*Amazona martinicana*](https://inpn.mnhn.fr/espece/cd_nom/655175)), tous deux disparus depuis la fin du 18e siècle. De nombreuses espèces se sont sans doute éteintes avant même d'avoir été découvertes.	\N	\N	\N	f
+20694	1008	IMAGE	understand.image	\N	1037	Colibri à tête bleue, Martinique © Fabien Lefebvre	\N	f
+20695	1008	TEXT	presentation.description	espèces d’outre-mer sont endémiques	\N	\N	\N	f
+20696	1008	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/nombre-despeces-endemiques-de-france	\N	\N	\N	f
 20173	1028	IMAGE	presentation.file	\N	1141	test	\N	f
 20174	1028	IMAGE	action.cards.2.icon	\N	1145	bagages	\N	f
 20175	1028	TEXT	presentation.name	Je ne participe pas à l’exploitation des espèces protégées	\N	\N	\N	f
 20176	1028	IMAGE	action.cards.0.icon	\N	1143	pêche	\N	f
-13290	1004	TEXT	understand.paragraphs.0.text	En 2007, l’Union internationale pour la conservation de la nature a publié [une liste de 100 espèces exotiques considérées comme les plus envahissantes du monde](https://portals.iucn.org/library/sites/library/files/documents/2000-126-Fr.pdf), c’est-à-dire celles avec le plus fort potentiel de dispersion et le plus lourd impact sur leur environnement d’accueil. On y trouve notamment le rat noir (*Rattus rattus*), introduit dans de nombreuses îles et responsable, entre autres, du déclin des populations de nombreuses espèces d’oiseau dans les outre-mer, ou encore le Miconia (*Miconia calvescens*), un arbre introduit à Tahiti en 1937 et aujourd’hui très répandu sur l’île où il remplace la végétation indigène. Ce dernier a également été introduit en Nouvelle-Calédonie et découvert récemment en Martinique et en Guadeloupe.\n\nDe nombreuses interventions sont réalisées pour tenter de limiter leur propagation et leurs impacts, voire dans certains cas de les éradiquer pour préserver l'équilibre des écosystèmes. Des processus de biosécurité (désinfection, inspections minutieuses, utilisation de chiens formés à la détection, etc.) sont mis en œuvre par les territoires afin de limiter les risques d’entrée d’espèces exotiques. 	\N	\N	\N	f
-13291	1004	IMAGE	understand.image	\N	1027	Miconia calvescens © Forest & Kim Starr / CC BY 3.0 	\N	f
-13292	1004	TEXT	presentation.description	espèces sur les 100 considérées comme les plus envahissantes au monde se trouvent en outre-mer	\N	\N	\N	f
-13293	1004	TEXT	presentation.logoUrl	http://indicateurs-biodiversite.naturefrance.fr/fr/indicateurs/nombre-despeces-en-outremer-parmi-les-plus-envahissantes-au-monde	\N	\N	\N	f
-17651	1019	TEXT	presentation.description	Les sciences participatives, par définition, sont réalisées par des non-professionnels et de manière bénévole. On peut distinguer trois catégories différentes de programmes participatifs selon leurs objectifs.	\N	\N	\N	f
-17652	1019	TEXT	paragraphs.0.text	Il s’agit de projet d’inventaires et de signalements destinés aux amateurs sachant identifier les taxons observés. Les débutants y sont les bienvenus.\nL’objet principal est de partager de la connaissance, les données seront éventuellement mobilisables a posteriori dans un projet de recherche ou dans un objectif de conservation.	\N	\N	\N	f
-17653	1019	TEXT	examples.projects.2.description	Quarante-cinq stations coraliennes sont suivies depuis dix ans selon la méthodologie par transects développée par Reef Check dans le cadre du Réseau d’Observations des Récifs Coraliens (RORC) sur les côtes Néo-calédoniennes. Pala Dalik assure l’animation, la coordination et la formation des participants, y compris auprès des scolaires et tache d’étendre ce réseau de sites.	\N	\N	\N	f
-17654	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.reefcheck.fr/nouvelle-caledonie/	f
-17655	1019	TEXT	examples.projects.0.description	Lancé par l’Observatoire des Tortues Marines de la Réunion, Kelonia, il utilise la base de données en ligne Toorsoi et contribue au Plan National d’Action en faveur des tortues marines sur les territoires français de l’océan Indien. Il repose sur la configuration des écailles de la tête pour l’identification individuelle des sujets suivis.	\N	\N	\N	f
-17656	1019	IMAGE	images.1.image	\N	1079	© Steveprutz / CC BY 3.0	\N	f
-17657	1019	TEXT	paragraphs.2.text	On trouve dans cette catégorie divers programmes de sensibilisation à la démarche scientifique ou aux enjeux de conservation. Certains d’entre eux n’impliquent pas de collecte d’information centralisée, leur objectif étant d’abord de permettre aux participants d’acquérir des connaissances. 	\N	\N	\N	f
-17658	1019	TEXT	examples.projects.2.actor	Pala Dalik, association représentante de Reef Check en Nouvelle Calédonie	\N	\N	\N	f
-17659	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
-17660	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
-17661	1019	TEXT	paragraphs.0.title	Les bases de données collaboratives	\N	\N	\N	f
-17662	1019	TEXT	paragraphs.1.text	L’objet et les conditions de collecte des données sont alors très précisément définis, garantissant ainsi l’exploitabilité des données pour répondre à une question précise. La nature du protocole va contraindre le type de public participant, mais cela peut souvent inclure des débutants. Les données collectées peuvent être ensuite versées dans les projets de bases de données collaboratives.\n	\N	\N	\N	f
-17663	1019	TEXT	application.subtitle	J'agis en ligne	\N	\N	\N	f
-17664	1019	IMAGE	examples.projects.0.image	\N	1081	© Cynomana  / CC BY-SA 4.0 	\N	f
-17665	1019	TEXT	examples.projects.1.title	Suivi Temporel des Oiseaux Communs en Guyane	\N	\N	\N	f
-17666	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
-17667	1019	TEXT	paragraphs.2.title	Les programmes à visée éducative ou de gestion/conservation	\N	\N	\N	f
-17668	1019	TEXT	examples.projects.2.target	Pratiquants de plongée	\N	\N	\N	f
-17669	1019	IMAGE	header.background	\N	1075	Mont Orohena, Tahiti © Darko Cotoras	\N	f
-17670	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages ponctuels simples le long de parcours prédéfinis	\N	\N	\N	f
-17671	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
-17672	1019	TEXT	examples.projects.1.description	Adossé au suivi mis en place en métropole en 1989, le STOC-Guyane a débuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et la Réunion. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
 19676	1001	TEXT	interests.locations.1.description	Entre Basse-Terre et Grande-Terre, cette baie est un véritable réservoir de biodiversité. Côté mer, des herbiers de phanérogames sont entourés par le récif corallien le plus long des Petites Antilles (39 km). Côté terre, la baie est bordée par des mangroves, des forêts marécageuses et marais herbacés sur plus de 5 000 ha. 	\N	\N	\N	f
 19677	1001	TEXT	ecosystems.ecosystems.3.name	Les mangroves	\N	\N	\N	f
 19678	1001	TEXT	statistics.1.text	du territoire couvert par la forêt	\N	\N	\N	f
@@ -1479,21 +1479,19 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20185	1028	TEXT	understand.quote	Certaines espèces peuvent toujours être exploitées ou chassées, mais les règlementations et les quotas doivent être respectés afin de permettre à la ressource de se renouveler durablement.	\N	\N	\N	f
 20186	1028	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20187	1028	TEXT	action.cards.0.description	Je respecte les règlementations de pêche (matériel, technique, zone d'exclusion,...) et ne prélève pas plus qu’autorisé. 	\N	\N	\N	f
-17786	1008	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
-17787	1008	TEXT	understand.text2	On trouve un nombre plus important d’espèces endémiques dans les îles par rapport aux continents en raison de leur isolement géographique : les espèces y ont évolué séparément par rapport à celles sur le continent. Ainsi, plus une île est ancienne, plus il est probable que son taux d’endémisme soit élevé, comme par exemple en Nouvelle-Calédonie où 30 % des espèces du territoire sont uniques au monde.\nL’endémisme est également beaucoup plus important chez les espèces terrestres que chez les espèces marines, le milieu marin étant plus ouvert et permettant une connexion plus importante des habitats.	\N	\N	\N	f
-17788	1008	TEXT	understand.text1	Qualifier une espèce d’endémique, cela veut dire que sa répartition est limitée à une zone géographique peu étendue et qu’elle ne se retrouve nulle part ailleurs dans le monde. Cela donne au territoire en question une responsabilité particulièrement forte dans la conservation du patrimoine mondial. On parle également d'espèces "sub-endémiques" lorsque leur répartition s'étend sur quelques territoires proches mais reste très limitée. \nEn raison de cette aire de répartition géographique restreinte, ces espèces sont généralements plus sensibles aux pressions liées aux activités humaines et se retrouvent plus souvent en danger de disparition que les espèces plus largement répandues. \n\nReflet de l'état actuel des connaissances, ce chiffre peut augmenter en raison de l'amélioration des connaissances scientifiques et de la [découverte de nouvelles espèces](https://preprod.biodiversite-outre-mer.fr/indicateurs/nouvelles-especes), mais il peut également diminuer lorsque des espèces s'éteignent.  	\N	\N	\N	f
-17789	1008	TEXT	territories.title	Nombre d'espèces endémiques	\N	\N	\N	f
-17790	1008	TEXT	understand.title1	La notion d'endémisme	\N	\N	\N	f
-17791	1008	TEXT	understand.title2	Un taux d’endémisme plus élevé dans les îles ? 	\N	\N	\N	f
-17792	1008	TEXT	presentation.descriptionTerritories	espèces sont endémiques du territoire	\N	\N	\N	f
-17793	1008	TEXT	understand.paragraphs.0.title	Quelques exemples	\N	\N	\N	f
-17794	1008	TEXT	understand.keyword	endémique	\N	\N	\N	f
-17795	1008	TEXT	ecogestures.title	Comment préserver les espèces endémiques ? 	\N	\N	\N	f
-17796	1008	IMAGE	presentation.image	\N	1034	Kaori de forêt (Agathis lanceolata) © Mickaël T / CC BY 2.0	\N	f
-17797	1008	TEXT	understand.paragraphs.0.text	Le Cagou en Nouvelle-Calédonie, le Colibri à tête bleue en Martinique, le Gecko vert de Manapany à La Réunion, le Tiaré Apetahi en Polynésie Française, ou encore le Choux de Kerguelen dans les îles subantarctiques, chaque territoire d'outre-mer possède de nombreuses espèces uniques. Seul Saint-Pierre-et-Miquelon ne compte aucune espèce endémique, l'archipel étant très proche de Terre Neuve. Bien que n'étant pas une île, la Guyane compte près de 9 % d'espèces endémiques vivant principalement au sein de la très riche forêt amazonienne.\n\nOn trouve malheureusement un grand nombre d'espèces endémiques éteintes, comme le Solitaire de La Réunion (souvent confondu à tord avec le Dodo de l'île Maurice) ou l'Amazone de Martinique, tous deux disparus depuis la fin du 18e siècle. Et de nombreuses espèces se sont sans doute éteintes avant même d'avoir été découvertes.	\N	\N	\N	f
-17798	1008	IMAGE	understand.image	\N	1037	Colibri à tête bleue, Martinique © Fabien Lefebvre	\N	f
-17799	1008	TEXT	presentation.description	espèces d’outre-mer sont endémiques	\N	\N	\N	f
-17800	1008	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/nombre-despeces-endemiques-de-france	\N	\N	\N	f
+20620	1004	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
+20621	1004	TEXT	understand.text2	Ces espèces exotiques envahissantes perturbent les équilibres environnementaux en entrant en compétition avec les espèces locales (pour la nourriture, les sites de reproduction ou de repos, la lumière, etc.), par prédation, introduction de pathogènes, hybridation ou encore en modifiant les paramètres physico-chimiques des habitats.  Elles ont ainsi de lourds impacts sur les milieux et les espèces indigènes, en particulier dans les îles où elles sont à l'origine de nombreuses extinctions.\n\nOn trouve des espèces exotiques envahissantes dans tous les groupes taxonomiques : champignons, algues, plantes vasculaires, invertébrés, reptiles, oiseaux, poissons, mammifères, etc. et dans tous les milieux : terrestres, marins ou d'eaux douces.	\N	\N	\N	f
+20622	1004	TEXT	understand.text1	Une espèce exotique envahissante est une espèce introduite par l’Homme hors de son territoire d’origine et qui présente ensuite, sur son territoire d’introduction, une dispersion et un développement importants, engendrant des impacts environnementaux mais aussi sociaux et économiques. Ces introductions sont parfois volontaires (pour l’agriculture, l’ornementation, comme animaux de compagnie, etc.) ou involontaires (organismes présents dans les marchandises échangées internationalement, dans les eaux de ballast des bateaux, etc.).\n\nDe nombreuses espèces n’arrivent pas à s’adapter ou se reproduire dans leurs territoires d’introduction, cependant certaines trouvent au contraire des conditions favorables à leur développement et prolifèrent, profitant notamment de l’absence de leurs prédateurs ou parasites naturels. 	\N	\N	\N	f
+20623	1004	TEXT	territories.title	Nombre d'espèces présentes sur la liste des 100 espèces exotiques les plus envahissantes au monde 	\N	\N	\N	f
+20624	1004	TEXT	understand.title1	Des espèces introduites par l'Homme	\N	\N	\N	f
+20625	1004	TEXT	understand.paragraphs.1.text	Des processus de biosécurité (désinfection, inspections minutieuses, utilisation de chiens formés à la détection, etc.) sont mis en œuvre par les territoires afin de limiter les risques d’entrée de nouvelles espèces exotiques. Pour les espèces déjà installées, de nombreuses interventions sont réalisées pour tenter de limiter leur propagation et atténuer leurs impacts, voire dans certains cas de les éradiquer pour préserver l'équilibre des écosystèmes. \n  \nLe Comité français de l'Union internationale pour la conservation de la nature conduit depuis 2005 une [initiative sur les espèces exotiques envahissantes en outre-mer](https://especes-envahissantes-outremer.fr/) afin de favoriser l'échange d'informations et le partage d'expérience entre les différents territoires, en mobilisant tous les acteurs concernés.	\N	\N	\N	f
+20626	1004	TEXT	understand.title2	Une des principales causes d'érosion de la biodiversité dans les îles	\N	\N	\N	f
+20627	1004	TEXT	presentation.descriptionTerritories	espèces sur les 100 considérées comme les plus envahissantes au monde sont présentes sur le territoire	\N	\N	\N	f
+20628	1004	TEXT	understand.paragraphs.0.title	Une liste mondiale des espèces les plus problématiques	\N	\N	\N	f
+20629	1004	TEXT	understand.keyword	Espèces	\N	\N	\N	f
+20630	1004	TEXT	ecogestures.title	Que puis-je faire pour éviter l’introduction et la dispersion d’espèces exotiques envahissantes ? 	\N	\N	\N	f
+20631	1004	IMAGE	presentation.image	\N	1014	Rascasse volante (Pterois volitans) dans les fonds sous-marins de Martinique © Alain Pibot / OFB	\N	f
+20632	1004	TEXT	understand.paragraphs.1.title	De la prévention aux actions de gestion	\N	\N	\N	f
 20188	1029	IMAGE	presentation.file	\N	1147	test	\N	f
 20189	1029	TEXT	presentation.name	Je participe à l'amélioration des connaissances sur la biodiversité	\N	\N	\N	f
 20190	1029	IMAGE	action.cards.0.icon	\N	1150	jumelles	\N	f
@@ -1592,6 +1590,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20213	1024	TEXT	understand.quote	La Tortue de Floride, considérée comme l'une des 100 espèces les plus envahissantes du monde, est présente en milieu naturel dans quasiment tous les territoires d'outre-mer français (à l'exception de Saint-Pierre et Miquelon, Wallis et Futuna, et les TAAF)	\N	\N	\N	f
 20214	1024	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20215	1024	TEXT	action.cards.0.description	Je me renseigne sur les espèces végétales que je souhaite planter dans mon jardin et je privilégie d’utiliser des espèces locales. Je respecte la règlementation sur l'interdiction d'introduction d'espèces sur mon territoire.	\N	\N	\N	f
+20633	1004	TEXT	understand.paragraphs.0.text	En 2007, l’Union internationale pour la conservation de la nature a publié [une liste de 100 espèces exotiques considérées comme les plus envahissantes du monde](https://portals.iucn.org/library/sites/library/files/documents/2000-126-Fr.pdf), c’est-à-dire celles avec le plus fort potentiel de dispersion et le plus lourd impact sur leur environnement d’accueil. On y trouve notamment le rat noir ([*Rattus rattus*](https://inpn.mnhn.fr/espece/cd_nom/61587)), introduit dans de nombreuses îles et responsable, entre autres, du déclin des populations de nombreuses espèces d’oiseau dans les outre-mer, ou encore le Miconia ([*Miconia calvescens*](https://inpn.mnhn.fr/espece/cd_nom/447324)), un arbre introduit à Tahiti en 1937 et aujourd’hui très répandu sur l’île où il remplace la végétation indigène. Ce dernier a également été introduit en Nouvelle-Calédonie et découvert récemment en Martinique et en Guadeloupe.  \n\nLes fourmis introduites sont également un important sujet de préoccupations. Plusieurs espèces fortement envahissantes se retrouvent dans les territoires d’outre-mer, telles que la Fourmi folle ([*Anoplolepsis gracilipes*](https://inpn.mnhn.fr/espece/cd_nom/264513)), la Fourmi à grosse-tête ([*Pheidole megacephala*](https://inpn.mnhn.fr/espece/cd_nom/219383)) ou encore la Fourmi de feu ([*Solenopsis invicta*](https://inpn.mnhn.fr/espece/cd_nom/532922)). Elles perturbent de nombreuses autres espèces (arthropodes, reptiles, oiseaux, mammifères), par leurs comportements agressifs et leurs modifications des habitats.	\N	\N	\N	f
+20634	1004	IMAGE	understand.image	\N	1027	Miconia calvescens © Forest & Kim Starr / CC BY 3.0 	\N	f
+20635	1004	TEXT	presentation.description	espèces sur les 100 considérées comme les plus envahissantes au monde se trouvent en outre-mer	\N	\N	\N	f
+20636	1004	TEXT	presentation.logoUrl	http://indicateurs-biodiversite.naturefrance.fr/fr/indicateurs/nombre-despeces-en-outremer-parmi-les-plus-envahissantes-au-monde	\N	\N	\N	f
 20216	1027	IMAGE	presentation.file	\N	1139	test	\N	f
 20217	1027	IMAGE	action.cards.2.icon	\N	1136	nettoyer	\N	f
 20218	1027	TEXT	presentation.name	Je préserve la flore sauvage  	\N	\N	\N	f
@@ -1656,7 +1658,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1070, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 20230, true);
+SELECT pg_catalog.setval('public.page_element_seq', 20696, true);
 
 
 --
