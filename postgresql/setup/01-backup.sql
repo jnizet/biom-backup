@@ -671,13 +671,13 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 1047	1004	REUNION	35.2	%
 1048	1004	SAINT_PIERRE_ET_MIQUELON	13.04347826	%
 1045	1004	MARTINIQUE	46.22641509	%
-1070	1003	MARTINIQUE	19.40384829	%
 1049	1001	OUTRE_MER	16264	
 1050	1001	GUADELOUPE	1369	
 1053	1001	REUNION	1487	
 1052	1001	NOUVELLE_CALEDONIE	7670	
 1054	1001	SAINT_PIERRE_ET_MIQUELON	0	
 1051	1001	MARTINIQUE	629	
+1070	1003	MARTINIQUE	19.40384829	%
 1068	1003	OUTRE_MER	19.69798074	%
 1069	1003	GUADELOUPE	28.63712677	%
 1064	1000	MARTINIQUE	18	
@@ -698,7 +698,6 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1028	exploitation-especes-protegees	ecogesture	Préserver les espèces protégées 
 1029	participer-a-la-connaissance	ecogesture	Participer à la connaissance
 1003	territoires	territories	Découvrez les outre-mer
-1013	nouvelles-especes	indicator	Nouvelles espèces décrites
 1024	protection-contre-eee	ecogesture	Protection contre les EEE
 1027	protection-flore	ecogesture	Préserver la flore sauvage
 1018	ecogeste-agir	ecogesture-act	Encadré "agir pour la biodiversité" fiche écogeste
@@ -717,11 +716,12 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1001	guadeloupe	territory	Guadeloupe
 1015	martinique	territory	Martinique
 1021	reunion	territory	La Réunion
-1010	especes-menacees	indicator	Espèces éteintes et menacées
 1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
 1017	ecogestes	ecogestures	Accueil écogestes
 1000	accueil	home	Accueil
 1016	agir-ensemble	act	Agir ensemble
+1013	nouvelles-especes	indicator	Nouvelles espèces décrites
+1010	especes-menacees	indicator	Espèces éteintes et menacées
 1006	protection-recifs-coralliens	ecogesture	Protéger les récifs coralliens
 1023	ne-pas-jeter-dechets-nature	ecogesture	Je ne jette pas mes déchets dans la nature
 1026	limiation-plastique	ecogesture	Réduire les déchets et le plastique
@@ -823,13 +823,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19795	1015	TEXT	ecosystems.ecosystems.1.description	Les forêts se trouvent principalement dans le nord, sur les massifs montagneux et difficilement accessibles des pitons du Carbet de la Montagne Pelée. On distingue plusieurs types de forêt présentant différents cortèges floristiques en fonction de l’altitude. On y trouve une importante diversité, notamment en espèces endémiques. 	\N	\N	\N	f
 19796	1015	TEXT	ecosystems.ecosystems.0.description	Couvrant 50 km de l’île, surtout dans le sud, les plages sont des lieux de ponte pour 3 espèces de tortues marines et sont également bordées par un cortège floristique intéressant : patates bord de mer, pois bord de mer, raisinier bord de mer… Cette végétation est toutefois fortement dégradée par les installations touristiques et l’importante fréquentation de certaines plages. 	\N	\N	\N	f
 19797	1015	TEXT	identity.highestPoint	1 397	\N	\N	\N	f
-13339	1010	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
-13340	1010	TEXT	understand.text2	De nombreuses espèces ne sont pas encore évaluées ou sont classées dans la catégorie « données insuffisantes ». C’est le cas par exemple pour de nombreux invertébrés, les champignons, ou encore les lichens et mousses, qui sont pourtant essentiels au bon fonctionnement des écosystèmes. Les espèces marines souffrent également d'un important déficit d'évaluations. \nDe nombreux territoires d'outre-mer ont développé des Listes rouges à l'échelle de leur territoire, mais certains, comme Saint-Pierre-et-Miquelon ou Wallis-et-Futuna sont trop petits pour que l'application de cette méthodologie soit pertinente à cette échelle.  \n  \nLes chiffres présentés dans les Listes rouges ne sont donc pas exhaustifs, ils se précisent régulièrement au fur et à mesure de l’amélioration des connaissances scientifiques et de la parution de nouveaux travaux.	\N	\N	\N	f
-13341	1010	TEXT	understand.text1	L'Union internationale pour la conservation de la nature (UICN) développe depuis 1964 un outil permettant de mesurer l'état de conservation de la faune et de la flore mondiale : la Liste rouge. Les espèces y sont classifiées par catégories selon leur degré de vulnérabilité. Cela permet d'identifier les priorités d'action, les progrès accomplis ou les défis à relever pour la conservation des espèces. En France, l'élaboration des Listes rouges est mise en oeuvre par le Muséum national d'Histoire naturelle, l'Office français de la biodiversité et le Comité français de l'UICN, en collaboration avec un large réseau d'experts.\n\nLe chiffre présenté ici comprend les espèces classées dans les catégories « éteinte au niveau mondial », « éteinte à l’état sauvage », « disparue au niveau régional », « en danger critique d’extinction », « en danger » et « vulnérable » dans les Listes rouges réalisées en outre-mer. Parmi ces espèces menacées, on trouve de nombreuses espèces [endémiques](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques).	\N	\N	\N	f
-13342	1010	TEXT	territories.title	Pourcentage d'espèces menacées	\N	\N	\N	f
-13343	1010	TEXT	understand.title1	La Liste rouge de l'UICN	\N	\N	\N	f
-13344	1010	TEXT	understand.title2	Un manque de connaissances et d'évaluations	\N	\N	\N	f
-13345	1010	TEXT	presentation.descriptionTerritories	des espèces sont considérées comme éteintes ou menacées	\N	\N	\N	f
 19798	1015	TEXT	interests.locations.4.description	Ces quatre îlets, gérés par le Parc naturel régional et l’Office national des forêts, sont l'un des plus importants sites de nidification des oiseaux marins des Petites Antilles. On y trouve entre autre puffins, sternes, moines…. L’accès en est strictement interdit.	\N	\N	\N	f
 19799	1015	TEXT	risks.risks.0.name	Des préoccupations communes aux territoires antillais	\N	\N	\N	f
 19800	1015	IMAGE	interests.locations.1.image	\N	1057	Presqu’île de la Caravelle © L. Léonard	\N	f
@@ -838,17 +831,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19803	1015	TEXT	identity.title	La Martinique,  \n« l’île aux iguanes » 	\N	\N	\N	f
 19804	1015	IMAGE	species.6.image	\N	1183	Image manquante	\N	f
 19805	1015	TEXT	interests.locations.1.name	La Réserve naturelle nationale de la presqu’île de la Caravelle	\N	\N	\N	f
-13346	1010	TEXT	understand.paragraphs.0.title	Quelles sont ces menaces ?	\N	\N	\N	f
 19806	1015	TEXT	statistics.2.text	de l'île couverts par le Parc naturel régional 	\N	\N	\N	f
 19807	1015	IMAGE	species.0.image	\N	1061	*Caribena versicolor* © A. Lacoeulhe	\N	f
-13347	1010	TEXT	understand.keyword	menaces	\N	\N	\N	f
-13348	1010	TEXT	ecogestures.title	Que puis-je faire pour protéger les espèces menacées ?	\N	\N	\N	f
-13349	1010	IMAGE	presentation.image	\N	1041	Albatros hurleur © Julie Tucoulet	\N	f
-13350	1010	TEXT	understand.paragraphs.0.text	Selon l'IPBES*, les cinq facteurs directs de changement qui affectent la nature et qui ont les plus forts impacts à l’échelle mondiale sont, dans l'ordre : les changements d’usage des terres et de la mer, l'exploitation directe de certains organismes, le changement climatique, les pollutions et les espèces exotiques envahissantes. Les impacts de ces différents facteurs sont souvent liés et s'additionnent : l'installation de certaines espèces exotiques peut par exemple être facilitée par les changements climatiques. Dans les îles, les espèces exotiques envahissantes seraient le premier facteur de perte de biodiversité. \n\nDes programmes de conservation sont mis en place pour tenter de protéger ces espèces menacées, notamment en préservant leurs milieux de vie et en réglementant les activités humaines pour limiter leurs impacts.\n\n*la Plateforme intergouvernementale scientifique et politique sur la biodiversité et les services écosystémiques (en anglais IPBES) est un groupement international d'experts de la biodiversité, créé sous l'égide de l'ONU en 2012. L'IPBES a publié le 6 mai 2019 le premier rapport d'évaluation mondiale sur la biodiversité et les services écosystémiques. 	\N	\N	\N	f
 19808	1015	TEXT	events.1.date	1929-1932	\N	\N	\N	f
-13351	1010	IMAGE	understand.image	\N	1042	Tortue luth © Raphael Gailhac	\N	f
-13352	1010	TEXT	presentation.description	des espèces d’outre-mer sont considérées comme éteintes ou menacées	\N	\N	\N	f
-13353	1010	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/proportion-despeces-eteintes-ou-menacees-dans-la-liste-rouge-nationale	\N	\N	\N	f
 19809	1015	TEXT	interests.locations.4.name	La réserve naturelle nationale des îlets de Sainte Anne	\N	\N	\N	f
 20698	1004	TEXT	understand.text2	Ces espèces exotiques envahissantes perturbent les équilibres environnementaux en entrant en compétition avec les espèces locales (pour la nourriture, les sites de reproduction ou de repos, la lumière, etc.), par prédation, introduction de pathogènes, hybridation ou encore en modifiant les paramètres physico-chimiques des habitats.  Elles ont ainsi de lourds impacts sur les milieux et les espèces indigènes, en particulier dans les îles où elles sont à l'origine de nombreuses extinctions.\n\nOn trouve des espèces exotiques envahissantes dans tous les groupes taxonomiques : champignons, algues, plantes vasculaires, invertébrés, reptiles, oiseaux, poissons, mammifères, etc. et dans tous les milieux : terrestres, marins ou d'eaux douces.	\N	\N	\N	f
 20699	1004	TEXT	understand.text1	Une espèce exotique envahissante est une espèce introduite par l’Homme hors de son territoire d’origine et qui présente ensuite, sur son territoire d’introduction, une dispersion et un développement importants, engendrant des impacts environnementaux mais aussi sociaux et économiques. Ces introductions sont parfois volontaires (pour l’agriculture, l’ornementation, comme animaux de compagnie, etc.) ou involontaires (organismes présents dans les marchandises échangées internationalement, dans les eaux de ballast des bateaux, etc.).\n\nDe nombreuses espèces n’arrivent pas à s’adapter ou se reproduire dans leurs territoires d’introduction, cependant certaines trouvent au contraire des conditions favorables à leur développement et prolifèrent, profitant notamment de l’absence de leurs prédateurs ou parasites naturels. 	\N	\N	\N	f
@@ -963,6 +948,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19348	1020	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
 19349	1020	TEXT	species.4.name	*Amborella trichopoda*	\N	\N	\N	f
 19350	1020	TEXT	identity.area	16 624	\N	\N	\N	f
+20976	1013	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
 19820	1021	TEXT	species.1.description	L'Échenilleur de La Réunion ([*Lalage newtoni*](https://inpn.mnhn.fr/espece/cd_nom/895898\n)), aussi appelé Tuit-Tuit en raison du chant du mâle, est un passereau endémique de la forêt de la Roche écrite, dans le nord de l’île. Victime de la prédation par les rats et les chats, sa population est actuellement estimée à quelques dizaines de couples et il est considéré en grand danger d’extinction. Grâce aux programmes de lutte contre les prédateurs introduits, ses effectifs remontent petit à petit.\n\nStatut dans la Liste rouge des oiseaux de La Réunion : en danger critique. 	\N	\N	\N	f
 19821	1021	TEXT	species.2.description	Les baleines à bosses ([*Megaptera novaeangliae*](https://inpn.mnhn.fr/espece/cd_nom/60867\n)) viennent se reproduire le long des côtes réunionnaises entre juin et octobre. S’il est possible de les observer depuis un bateau, le respect de la [règlementation](https://cedtm-asso.org/quietude/la-reglementation/) est impératif pour préserver la tranquillité des cétacés, mais également pour la sécurité des observateurs.\n\nStatut dans la Liste rouge des mammifères marins de La Réunion : vulnérable. 	\N	\N	\N	f
 19822	1021	TEXT	events.0.description	Emergence de l’île	\N	\N	\N	f
@@ -979,6 +965,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19833	1021	TEXT	species.4.description	Le Pétrel de Barau ([*Pterodroma baraui*](https://inpn.mnhn.fr/espece/cd_nom/215079\n)), également appelé « Taille Vent », est un oiseau endémique nichant dans des terriers à même le sol, en haute altitude sur les contreforts du Piton des Neiges. Victimes de la prédation par les rats et les chats, de nombreux jeunes sont également désorientés par les éclairages publics lors de leur premier envol et s’échouent en milieu urbain. En danger d’extinction, l’espèce fait l’objet d’un plan de conservation [LIFE+ Pétrels](-\thttps://www.petrels.re/).\n\nStatut dans la Liste rouge des oiseaux de La Réunion : en danger. 	\N	\N	\N	f
 19834	1021	TEXT	events.6.description	Découverte du premier site de nidification du [Pétrel noir de Bourbon](https://www.petrels.re/les-especes/petrel-noir-de-bourbon/) (*Pseudobulweria aterrima*), oiseau endémique encore mal connu	\N	\N	\N	f
 19835	1021	TEXT	events.6.date	2016	\N	\N	\N	f
+20977	1013	TEXT	understand.text2	La taxonomie, ou taxinomie, est la science qui permet de décrire et de classer le vivant. L’espèce est l’unité taxonomique de base. Chaque espèce décrite est classée avec d’autres espèces aux caractéristiques communes au sein d’un même genre, puis d’une famille, d’un ordre, etc. Chaque espèce est identifiée par un nom scientifique latin en deux mots, par exemple *Pelecanus occidentalis* pour le Pelican brun. Cette dénomination en latin permet un référentiel mondial commun, car une même espèce peut posséder des dizaines de noms usuels différents (dits noms "vernaculaires") à travers le monde, selon les langues et les régions. 	\N	\N	\N	f
 19836	1021	TEXT	ecosystems.ecosystems.0.name	Les forêts humides	\N	\N	\N	f
 19837	1021	TEXT	species.5.description	Les Fanjan sont des fougères arborescentes typiques des forêts de Bois de couleur des Hauts. On distingue 3 espèces différentes : [*Alsophila borbonica*](https://inpn.mnhn.fr/espece/cd_nom/707878\n), [*A. glaucifolia*](https://inpn.mnhn.fr/espece/cd_nom/707883\n) et [*A. celsa*](https://inpn.mnhn.fr/espece/cd_nom/707882\n). Traditionnellement utilisés pour la confection de pots à plantes vertes, leur prélèvement a entrainé une dégradation importante des écosystèmes et une menace pour la conservation de ces espèces. Une espèce proche originaire d’Australie (*Sphaeropteris cooperi*) a été introduite sur l’île et présente un caractère envahissant qui pourrait menacer les espèces indigènes.\n\nStatut dans la liste rouge de la flore vasculaire de La Réunion (pour les 3 espèces indigènes) : préoccupation mineure. 	\N	\N	\N	f
 19838	1021	TEXT	species.6.description	Le Latanier rouge ([*Latania lontaroides*](https://inpn.mnhn.fr/espece/cd_nom/630013\n)) est un palmier endémique de La Réunion. A l’état naturel, on ne le trouve plus que dans le sud de l’île et il est considéré en danger critique d’extinction. Il était exploité pour son bois et ses palmes utilisées pour les toits.\n\nStatut dans la Liste rouge de la flore vasculaire de La Réunion : en danger critique. 	\N	\N	\N	f
@@ -998,9 +985,22 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20019	1017	IMAGE	other.image	\N	1074	logo	\N	f
 20020	1017	TEXT	other.text	Biodiversité Tous Vivants !	\N	\N	\N	f
 20021	1017	TEXT	title	Adaptons nos comportement pour préserver la biodiversité	\N	\N	\N	f
+20978	1013	TEXT	understand.text1	Plus de 80 % des nouvelles découvertes d'espèces chaque année en France sont réalisées dans les territoires d'outre-mer. Certaines de ces nouvelles descriptions sont issues d’expéditions scientifiques, par exemple celles menées en Guyane en 2014 et en Nouvelle-Calédonie entre 2016 et 2019 par le Muséum national d’Histoire naturelle dans le cadre de la campagne « [la Planète revisitée](https://www.mnhn.fr/fr/recherche-expertise/lieux/planete-revisitee) », mais d’autres sont également réalisées par des taxonomistes non-professionnels.\nIl peut s'agir également d'espèces déjà décrites dans des territoires frontaliers mais dont la présence n'avait pas encore été observée sur le territoire national. \n\nDans la plupart des cas, il s’agit de petits organismes invertébrés et d’organismes marins (insectes, mollusques, crustacés, vers marins). Certaines espèces ont pu être décrites grâce à l’utilisation d’analyses ADN pour les distinguer d’espèces proches avec lesquelles on peut les confondre.	\N	\N	\N	f
 19846	1021	IMAGE	species.5.image	\N	1191	Image manquante	\N	f
 19847	1021	TEXT	statistics.0.text	hectares de récifs coralliens protégés par la réserve marine	\N	\N	\N	f
 19848	1021	IMAGE	species.1.image	\N	1159	Échenilleur de La Réunion © Jaime Martinez / CC BY-SA 4.0	\N	f
+20979	1013	TEXT	territories.title	Nouvelles espèces décrites	\N	\N	\N	f
+20980	1013	TEXT	understand.title1	L'outre-mer : un vivier d'espèces à découvrir	\N	\N	\N	f
+20981	1013	TEXT	understand.title2	La taxonomie : la science de la description du vivant	\N	\N	\N	f
+20982	1013	TEXT	presentation.descriptionTerritories	nouvelles espèces ont été décrites entre 2016 et 2018	\N	\N	\N	f
+20983	1013	TEXT	understand.paragraphs.0.title	Les sciences participatives : quand les citoyens aident les scientifiques	\N	\N	\N	f
+20984	1013	TEXT	understand.keyword	especes	\N	\N	\N	f
+20985	1013	TEXT	ecogestures.title	Comment aider à la progression des connaissances scientifiques ?	\N	\N	\N	f
+20986	1013	IMAGE	presentation.image	\N	1050	© Fabien Lefebvre	\N	f
+20987	1013	TEXT	understand.paragraphs.0.text	Les sciences participatives permettent à tous, quel que soit le niveau de connaissance de la nature, de s’investir dans l’amélioration des connaissances, en fournissant des observations qui seront ensuite analysées par des scientifiques. Ces programmes peuvent parfois aboutir à la découverte d’espèces non encore décrites. 	\N	\N	\N	f
+20988	1013	IMAGE	understand.image	\N	1052	Tri à la loupe binoculaire d’échantillons récoltés sur le terrain ©  T. Magniez/MNHN/PNI	\N	f
+20989	1013	TEXT	presentation.description	nouvelles espèces décrites en outre-mer entre 2016 et 2018	\N	\N	\N	f
+20990	1013	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/docs/communication/livretInpn/Livret-INPN-especes-2020.pdf	\N	\N	\N	f
 19849	1021	TEXT	ecosystems.ecosystems.1.name	La forêt sèche	\N	\N	\N	f
 19850	1021	TEXT	events.2.date	1708	\N	\N	\N	f
 19851	1021	TEXT	events.5.date	2010	\N	\N	\N	f
@@ -1021,6 +1021,11 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20029	1016	IMAGE	header.background	\N	1071	Manapany, La Réunion © Philippe Gourdain / OFB	\N	f
 20030	1016	TEXT	header.subtitle	Réfléchir à son impact, changer ses habitudes, participer à la progression des connaissances sur les espèces et les espaces, donner de son temps dans des actions de terrain : chacun, à son échelle, peut agir et s’investir pour la préservation de la biodiversité de son territoire.	\N	\N	\N	f
 20031	1016	TEXT	ecogestures.subtitle	Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.	\N	\N	\N	f
+20991	1010	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
+20992	1010	TEXT	understand.text2	Chaque espèce est évaluée par un groupe d’experts selon des critères bien définis tels que la taille de la population, sa zone d’occurrence ou encore la disparition de son habitat naturel, pour pouvoir lui attribuer une catégorie. \nLe chiffre présenté ici comprend les espèces classées dans les catégories « éteinte au niveau mondial », « éteinte à l’état sauvage », « disparue au niveau régional », « en danger critique d’extinction », « en danger » et « vulnérable » dans les Listes rouges réalisées en outre-mer.  \n\nIl faut noter qu’une espèce peut être classée menacée sur le territoire national mais pas à l’échelle mondiale si son statut est bon dans d’autres pays, cependant on trouve en outre-mer de nombreuses espèces [endémiques](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques) qui ne sont présentes nulle part ailleurs dans le monde.	\N	\N	\N	f
+20993	1010	TEXT	understand.text1	L'Union internationale pour la conservation de la nature (UICN) développe depuis 1964 un outil de référence permettant de mesurer l'état de conservation de la faune et de la flore mondiale : la Liste rouge. Les espèces y sont classifiées par catégories selon leur degré de vulnérabilité. Cela permet d'identifier les priorités d'action, les progrès accomplis ou les défis à relever pour la conservation des espèces.  \n  \nEn France, l'élaboration des [Listes rouges](https://inpn.mnhn.fr/programme/listes-rouges/presentation) est mise en œuvre depuis 2008 par le Muséum national d'Histoire naturelle, l'Office français de la biodiversité et le Comité français de l'UICN, en collaboration avec un large réseau d'experts.\n\n	\N	\N	\N	f
+20994	1010	TEXT	territories.title	Pourcentage d'espèces menacées	\N	\N	\N	f
+20995	1010	TEXT	understand.title1	La Liste rouge de l'UICN	\N	\N	\N	f
 20731	1012	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 20732	1012	TEXT	understand.text2	Ces milieux ont une importance au regard des services écosystémiques qu’ils procurent aux humains : régulation des crues et des inondations, protection des côtes de l’érosion et des tempêtes, épuration des eaux...\nSi des phénomènes naturels tels que les cyclones peuvent impacter les mangroves, de nombreuses causes de leur dégradation ont une origine humaine : changement climatique, artificialisation, exploitation intensive de ses ressources (bois, chasse, etc.), dépôts d’ordures, déversement des eaux usées, pollutions, pression touristique, etc. 	\N	\N	\N	f
 20733	1012	TEXT	understand.text1	La mangrove est un écosystème forestier constitué principalement d'arbres appelés palétuviers, et se trouvant dans la zone de balancement des marées. Espace de transition entre le milieu terrestre et le milieu marin, cet écosystème abrite de nombreuses espèces qui en sont dépendantes pour une partie ou la totalité de leur cycle de vie.\n\nOn trouve des mangroves dans tous les territoires tropicaux d’outre-mer français, à l’exception de l’île de La Réunion. Au total, on estime leur superficie à 91 096 ha, la grande majorité se trouvant en Guyane et en Nouvelle-Calédonie. Cependant, en Polynésie, cet écosystème n’est pas présent naturellement : une espèce de palétuvier, [*Rhizophora stylosa*](https://inpn.mnhn.fr/espece/cd_nom/447469), a été introduite volontairement dans les années 1930, et s’est ensuite propagée à l’ensemble des îles de la Société, au détriment de certains écosystèmes natifs. 	\N	\N	\N	f
@@ -1155,10 +1160,17 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19627	1001	TEXT	interests.locations.0.name	Le Parc national de la Guadeloupe	\N	\N	\N	f
 19905	1022	TEXT	events.2.description	Fermeture naturelle de l’isthme	\N	\N	\N	f
 19906	1022	TEXT	events.3.description	Première étude publiée sur la flore de Saint-Pierre et Miquelon (thèse de pharmacie d’Alphonse Gaulthier)	\N	\N	\N	f
+20996	1010	TEXT	understand.paragraphs.1.text	Selon l'IPBES*, les cinq facteurs directs de changement qui affectent la nature et qui ont les plus forts impacts à l’échelle mondiale sont, dans l'ordre : les changements d’usage des terres et de la mer, l'exploitation directe de certains organismes, le changement climatique, les pollutions et les espèces exotiques envahissantes. Les impacts de ces différents facteurs sont souvent liés et s'additionnent : l'installation de certaines espèces exotiques peut par exemple être facilitée par les changements climatiques. Dans les îles, les espèces exotiques envahissantes seraient le premier facteur de perte de biodiversité. \n\n*la Plateforme intergouvernementale scientifique et politique sur la biodiversité et les services écosystémiques (en anglais IPBES) est un groupement international d'experts de la biodiversité, créé sous l'égide de l'ONU en 2012. L'IPBES a publié le 6 mai 2019 le premier rapport d'évaluation mondiale sur la biodiversité et les services écosystémiques. \n\nDes programmes de conservation sont mis en place pour tenter de protéger ces espèces menacées, notamment en préservant leurs milieux de vie et en réglementant les activités humaines pour limiter leurs impacts. Cependant, les résultats des réévaluations réalisées sur certains groupes ont montré que le risque d’extinction continue d’augmenter. Ce risque est nettement supérieur dans les territoires d’outre-mer insulaire (23 %) par rapport aux situations continentales (Guyane et métropole, respectivement 11 et 12 %).	\N	\N	\N	f
+20997	1010	TEXT	understand.title2	Plusieurs catégories de risque d’extinction	\N	\N	\N	f
 19351	1020	TEXT	species.0.description	[*Sphaeropteris intermedia*](https://www.endemia.nc/flore/fiche106) est une espèce de fougère arborescente endémique parmi les plus grandes au monde, qui peut atteindre 35 mètres de haut. Commune sur le territoire, cette plante est utilisée en médecine traditionnelle et son tronc très solide est également utilisé pour la sculpture ou la confection de sagaies.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure.  \nNom en langues kanak : Groubaï (drubéa)\n	\N	\N	\N	f
 19352	1020	TEXT	identity.highestPointName	Mont Panié	\N	\N	\N	f
 19353	1020	TEXT	ecosystems.ecosystems.2.name	Les maquis miniers	\N	\N	\N	f
 19354	1020	TEXT	species.7.description	Ce petit oiseau marin présente un dos gris, un ventre blanc, une tête pourvue d'une calotte noire et un bec droit et pointu. Une sous-espèce de la Sterne néreis, ([*Sternula nereis exul*](https://www.endemia.nc/faune/fiche52)) niche sur les îlots de Nouvelle-Calédonie, notamment autour des îlots du Lagon Sud, des îlots de Koumac et aux îles Chesterfield. Ses faibles effectifs de populations en font une sous-espèce très menacée.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
+20998	1010	TEXT	presentation.descriptionTerritories	des espèces sont considérées comme éteintes ou menacées	\N	\N	\N	f
+20999	1010	TEXT	understand.paragraphs.0.title	Encore beaucoup d'évaluations à réaliser	\N	\N	\N	f
+21000	1010	TEXT	understand.keyword	menaces	\N	\N	\N	f
+21001	1010	TEXT	ecogestures.title	Que puis-je faire pour protéger les espèces menacées ?	\N	\N	\N	f
+21002	1010	IMAGE	presentation.image	\N	1041	Albatros hurleur © Julie Tucoulet	\N	f
 19355	1020	TEXT	species.8.description	Le Niaouli ([*Melaleuca quinquenervia*](https://www.endemia.nc/flore/fiche445)), est un arbre utilisé en médecine et pour la construction, que l’on retrouve dans les milieux ouverts et anthropisés. Il se développe particulièrement bien dans les zones touchées par les incendies en raison de ses propriétés ignifuges. Indigène en Nouvelle-Calédonie, cette espèce a été introduite dans d’autres territoires comme la Guyane où elle présente un profil envahissant.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure.  \nNoms en langues kanak : itachou (paicî), pichöö (xârâcùù), bé (drubéa)	\N	\N	\N	f
 19356	1020	IMAGE	species.2.image	\N	1240	*Dugong dugong* © Hélène Udo	\N	f
 19357	1020	TEXT	species.11.name	La Baleine à bosses	\N	\N	\N	f
@@ -1219,6 +1231,11 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20688	1008	TEXT	presentation.descriptionTerritories	espèces sont endémiques du territoire	\N	\N	\N	f
 20689	1008	TEXT	understand.paragraphs.0.title	Quelques exemples	\N	\N	\N	f
 20690	1008	TEXT	understand.keyword	endémique	\N	\N	\N	f
+21003	1010	TEXT	understand.paragraphs.1.title	Quelles menaces pèsent sur les espèces ?	\N	\N	\N	f
+21004	1010	TEXT	understand.paragraphs.0.text	De nombreuses espèces ne sont pas encore évaluées ou sont classées dans la catégorie « données insuffisantes ». C’est le cas par exemple pour de nombreux invertébrés, les champignons, ou encore les lichens et mousses, qui sont pourtant essentiels au bon fonctionnement des écosystèmes. Les espèces marines souffrent également d'un important déficit d'évaluations. \nLes chiffres présentés dans les Listes rouges ne sont donc pas exhaustifs, ils se précisent régulièrement au fur et à mesure de l’amélioration des connaissances scientifiques et de la parution de nouveaux travaux.  \n\nDe nombreux territoires d'outre-mer ont développé des Listes rouges à l'échelle de leur territoire, mais certains, comme Saint-Pierre-et-Miquelon ou Wallis-et-Futuna sont trop petits pour que l'application de cette méthodologie soit pertinente à cette échelle.  	\N	\N	\N	f
+21005	1010	IMAGE	understand.image	\N	1042	Tortue luth © Raphael Gailhac	\N	f
+21006	1010	TEXT	presentation.description	des espèces d’outre-mer sont considérées comme éteintes ou menacées	\N	\N	\N	f
+21007	1010	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/proportion-despeces-eteintes-ou-menacees-dans-la-liste-rouge-nationale	\N	\N	\N	f
 20691	1008	TEXT	ecogestures.title	Comment préserver les espèces endémiques ? 	\N	\N	\N	f
 20692	1008	IMAGE	presentation.image	\N	1034	Kaori de forêt (Agathis lanceolata) © Mickaël T / CC BY 2.0	\N	f
 19405	1020	IMAGE	ecosystems.ecosystems.1.image	\N	1093	La piscine naturelle de la baie d’Oro © Jeremy Zero/Unsplash	\N	f
@@ -1362,20 +1379,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19956	1022	TEXT	species.2.description	Le Lièvre américain ([*Lepus americanus*](https://inpn.mnhn.fr/espece/cd_nom/456604\n)) et le Lièvre arctique ([*Lepus arcticus*](https://inpn.mnhn.fr/espece/cd_nom/61707\n)) ont été introduits pour la chasse respectivement en 1881 et 1982. Présents sur les trois îles, ils occupent des milieux différents : le Lièvre américain se concentre dans les milieux forestiers, sur lesquels il exerce une pression non négligeable, tandis que le Lièvre arctique préfère la végétation de la toundra, formée d’arbustes à éricacées, de lichens et de mousses.  \n  \nStatut dans la Liste rouge mondiale : préoccupation mineure pour les deux espèces. 	\N	\N	\N	f
 19957	1022	TEXT	statistics.1.number	86 %  	\N	\N	\N	f
 19958	1022	TEXT	statistics.0.number	La seule 	\N	\N	\N	f
-13486	1013	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
-13487	1013	TEXT	understand.text2	La taxonomie, ou taxinomie, est la science qui permet de décrire et de classer le vivant. L’espèce est l’unité taxonomique de base. Chaque espèce décrite est classée avec d’autres espèces aux caractéristiques communes au sein d’un même genre, puis d’une famille, d’un ordre, etc. Chaque espèce est identifiée par un nom scientifique latin en deux mots, par exemple *Pelecanus occidentalis* pour le Pelican brun. Cette dénomination en latin permet un référentiel mondial commun, car une même espèce peut posséder des dizaines de noms usuels différents (dits "vernaculaires") à travers le monde, selon les langues et les régions. 	\N	\N	\N	f
-13488	1013	TEXT	understand.text1	Plus de 80 % des nouvelles découvertes d'espèces chaque année en France sont réalisées dans les territoires d'outre-mer. Certaines de ces nouvelles descriptions sont issues d’expéditions scientifiques, par exemple celles menées en Guyane en 2014 et en Nouvelle-Calédonie en 2016 - 2017 par le Muséum national d’Histoire naturelle dans le cadre de la campagne « la Planète revisitée », mais d’autres sont également réalisées par des taxonomistes non-professionnels.\n\nDans la plupart des cas, il s’agit de petits organismes invertébrés et d’organismes marins (insectes, mollusques, crustacés, vers marins). La plupart de ces espèces sont de réelles découvertes et n’avaient jamais été observées auparavant. D’autres espèces ont pu être décrites grâce à l’utilisation d’analyses ADN pour les distinguer d’espèces proches avec lesquelles on peut les confondre.	\N	\N	\N	f
-13489	1013	TEXT	territories.title	Nouvelles espèces décrites	\N	\N	\N	f
-13490	1013	TEXT	understand.title1	L'outre-mer : un vivier d'espèces à découvrir	\N	\N	\N	f
-13491	1013	TEXT	understand.title2	La taxonomie : la science de la description du vivant	\N	\N	\N	f
-13492	1013	TEXT	presentation.descriptionTerritories	nouvelles espèces ont été décrites entre 2016 et 2018	\N	\N	\N	f
-13493	1013	TEXT	understand.paragraphs.0.title	Les sciences participatives : quand les citoyens aident les scientifiques	\N	\N	\N	f
-13494	1013	TEXT	understand.keyword	especes	\N	\N	\N	f
-13495	1013	TEXT	ecogestures.title	Comment aider à la progression des connaissances scientifiques ?	\N	\N	\N	f
-13496	1013	IMAGE	presentation.image	\N	1050	© Fabien Lefebvre	\N	f
-13497	1013	TEXT	understand.paragraphs.0.text	Les sciences participatives permettent à tous, quel que soit le niveau de connaissance de la nature, de s’investir dans l’amélioration des connaissances, en fournissant des observations qui seront ensuite analysées par des scientifiques. Ces programmes peuvent parfois aboutir à la découverte d’espèces non encore décrites. 	\N	\N	\N	f
-13498	1013	IMAGE	understand.image	\N	1052	Tri à la loupe binoculaire d’échantillons récoltés sur le terrain ©  T. Magniez/MNHN/PNI	\N	f
-13499	1013	TEXT	presentation.description	nouvelles espèces décrites en outre-mer entre 2016 et 2018	\N	\N	\N	f
 19959	1022	TEXT	statistics.2.number	1 000	\N	\N	\N	f
 19960	1022	IMAGE	interests.locations.4.image	\N	1235	Saint-Pierre © Laurent Malthieux	\N	f
 19961	1022	TEXT	species.2.name	Les lièvres	\N	\N	\N	f
@@ -1386,7 +1389,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20777	1009	IMAGE	understand.image	\N	1040	Iguane des petites Antilles © Fabien Lefebvre	\N	f
 20778	1009	TEXT	presentation.description	espèces sont inventoriées dans les outre-mer	\N	\N	\N	f
 20779	1009	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/espece/indicateur	\N	\N	\N	f
-13500	1013	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/docs/communication/livretInpn/Livret-INPN-especes-2020.pdf	\N	\N	\N	f
 19427	1005	TEXT	onb.title	L’Observatoire national de la biodiversité	\N	\N	\N	f
 19638	1001	TEXT	statistics.2.number	1989	\N	\N	\N	f
 19639	1001	TEXT	species.2.name	Le Gaïac	\N	\N	\N	f
@@ -1666,7 +1668,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1070, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 20847, true);
+SELECT pg_catalog.setval('public.page_element_seq', 21007, true);
 
 
 --
