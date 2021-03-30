@@ -676,13 +676,13 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 1047	1004	REUNION	35.2	%
 1048	1004	SAINT_PIERRE_ET_MIQUELON	13.04347826	%
 1045	1004	MARTINIQUE	46.22641509	%
-1070	1003	MARTINIQUE	19.40384829	%
 1049	1001	OUTRE_MER	16264	
 1050	1001	GUADELOUPE	1369	
 1053	1001	REUNION	1487	
 1052	1001	NOUVELLE_CALEDONIE	7670	
 1054	1001	SAINT_PIERRE_ET_MIQUELON	0	
 1051	1001	MARTINIQUE	629	
+1070	1003	MARTINIQUE	19.40384829	%
 1068	1003	OUTRE_MER	19.69798074	%
 1069	1003	GUADELOUPE	28.63712677	%
 1064	1000	MARTINIQUE	18	
@@ -701,7 +701,6 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 COPY public.page (id, name, model_name, title) FROM stdin;
 1025	protection-faune	ecogesture	Respecter la faune sauvage
 1028	exploitation-especes-protegees	ecogesture	Préserver les espèces protégées 
-1010	especes-menacees	indicator	Espèces éteintes et menacées
 1024	protection-contre-eee	ecogesture	Protection contre les EEE
 1027	protection-flore	ecogesture	Préserver la flore sauvage
 1018	ecogeste-agir	ecogesture-act	Encadré "agir pour la biodiversité" fiche écogeste
@@ -725,6 +724,7 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1015	martinique	territory	Martinique
 1021	reunion	territory	La Réunion
 1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
+1010	especes-menacees	indicator	Espèces éteintes et menacées
 1017	ecogestes	ecogestures	Accueil écogestes
 1016	agir-ensemble	act	Agir ensemble
 1006	protection-recifs-coralliens	ecogesture	Protéger les récifs coralliens
@@ -1208,7 +1208,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19408	1020	TEXT	identity.title	La Nouvelle-Calédonie,\nun hotspot de biodiversité dans le Pacifique	\N	\N	\N	f
 19409	1020	IMAGE	species.6.image	\N	1200	Image manquante	\N	f
 19410	1020	TEXT	interests.locations.1.name	Les lagons, inscrits au Patrimoine mondial de l'UNESCO 	\N	\N	\N	f
-21101	1010	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 20111	1023	IMAGE	presentation.file	\N	1113	jeter ses déchets covid	\N	f
 20112	1023	IMAGE	action.cards.2.icon	\N	1116	Tri	\N	f
 20113	1023	TEXT	presentation.name	Je ne jette pas mes déchets dans la nature	\N	\N	\N	f
@@ -1221,7 +1220,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20120	1023	TEXT	action.cards.1.description	Si je suis fumeur, je ne jette jamais mon mégot dans la nature.\nJe peux acheter ou fabriquer un cendrier de poche à garder avec moi.	\N	\N	\N	f
 20121	1023	TEXT	presentation.description	Mégots, sacs plastiques, piles, canettes, vieux filets de pêche, carcasses de voitures… Sur terre comme en mer, tous ces déchets abandonnés dégradent les écosystèmes !	\N	\N	\N	f
 20122	1023	TEXT	action.title	Pour que mes déchets n’impactent pas les milieux 	\N	\N	\N	f
-21102	1010	TEXT	understand.text2	Chaque espèce est évaluée par un groupe d’experts selon des critères bien définis tels que la taille de la population, sa zone d’occurrence ou encore la disparition de son habitat naturel, pour pouvoir lui attribuer une catégorie. \nLe chiffre présenté ici comprend les espèces classées dans les catégories « éteinte au niveau mondial », « éteinte à l’état sauvage », « disparue au niveau régional », « en danger critique d’extinction », « en danger » et « vulnérable » dans les Listes rouges réalisées en outre-mer.  \n\nIl faut noter qu’une espèce peut être classée menacée sur le territoire national mais pas à l’échelle mondiale si son statut est bon dans d’autres pays, cependant on trouve en outre-mer de nombreuses espèces [endémiques](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques) qui ne sont présentes nulle part ailleurs dans le monde.	\N	\N	\N	f
 19411	1020	IMAGE	species.0.image	\N	1091	*Sphaeropteris intermedia* © Benjamin Guichard / OFB	\N	f
 19412	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
 20123	1023	TEXT	understand.quote	A l’échelle mondiale, on estime que 8 millions de tonnes de plastique finissent chaque année dans les océans ! Et un mégot peut polluer à lui seul 500 litres d’eau.	\N	\N	\N	f
@@ -1269,26 +1267,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19920	1022	TEXT	events.6.date	1985	\N	\N	\N	f
 19921	1022	TEXT	events.4.description	Introduction volontaire du Lièvre d’Amérique pour la chasse	\N	\N	\N	f
 19922	1022	TEXT	events.5.description	Introduction du Cerf de Virginie en 1953 à des fins cynégétiques	\N	\N	\N	f
-21103	1010	TEXT	understand.text1	L'Union internationale pour la conservation de la nature (UICN) développe depuis 1964 un outil de référence permettant de mesurer l'état de conservation de la faune et de la flore mondiale : la Liste rouge. Les espèces y sont classifiées par catégories selon leur degré de vulnérabilité. Cela permet d'identifier les priorités d'action, les progrès accomplis ou les défis à relever pour la conservation des espèces.  \n  \nEn France, l'élaboration des [Listes rouges](https://inpn.mnhn.fr/programme/listes-rouges/presentation) est mise en œuvre depuis 2008 par le Muséum national d'Histoire naturelle, l'Office français de la biodiversité et le Comité français de l'UICN, en collaboration avec un large réseau d'experts.\n\n	\N	\N	\N	f
-21104	1010	TEXT	territories.title	Pourcentage d'espèces menacées	\N	\N	\N	f
 20147	1025	TEXT	understand.text	Observer la faune dans son milieu naturel est une chance et une expérience formidable. Cependant, sur terre comme en mer, déranger un animal peut le mettre en péril en occasionnant un stress important et une dépense d’énergie inutile. Il risque également d’abandonner son nid ou ses petits, se blesser, être plus facilement à la merci d’un prédateur…\n\nLes conséquences sont d’autant plus importantes lorsqu’il s’agit d’espèces très menacées, pour laquelle la survie de chaque individu compte.\n\nL'impact des chiens peut être catastrophique pour la faune sensible des outre-mer, que ce soit par prédation ou par le stress qu'ils occasionnent (poursuite, aboiements, destruction de nids,...). En Nouvelle-Calédonie, ils ont joué un rôle non-négligeable dans le déclin de la population de Cagous.\nDans la plupart des espaces protégés, leur présence, même tenus en laisse n'est pas autorisée. 	\N	\N	\N	f
 20148	1025	IMAGE	action.cards.1.icon	\N	1128	bruits	\N	f
-21105	1010	TEXT	understand.title1	La Liste rouge de l'UICN	\N	\N	\N	f
-21106	1010	TEXT	understand.paragraphs.1.text	Selon l'IPBES*, les cinq facteurs directs de changement qui affectent la nature et qui ont les plus forts impacts à l’échelle mondiale sont, dans l'ordre : les changements d’usage des terres et de la mer, l'exploitation directe de certains organismes, le changement climatique, les pollutions et les espèces exotiques envahissantes. Les impacts de ces différents facteurs sont souvent liés et s'additionnent : l'installation de certaines espèces exotiques peut par exemple être facilitée par les changements climatiques. Dans les îles, les espèces exotiques envahissantes seraient le premier facteur de perte de biodiversité. \n\n*la Plateforme intergouvernementale scientifique et politique sur la biodiversité et les services écosystémiques (en anglais IPBES) est un groupement international d'experts de la biodiversité, créé sous l'égide de l'ONU en 2012. L'IPBES a publié le 6 mai 2019 [le premier rapport d'évaluation mondiale sur la biodiversité et les services écosystémiques](https://www.ipbes.net/news/Media-Release-Global-Assessment-Fr). 	\N	\N	\N	f
-21107	1010	TEXT	understand.title2	Plusieurs catégories de risque d’extinction	\N	\N	\N	f
-21108	1010	TEXT	presentation.descriptionTerritories	des espèces sont considérées comme éteintes ou menacées	\N	\N	\N	f
-21109	1010	TEXT	understand.paragraphs.0.title	Encore beaucoup d'évaluations à réaliser	\N	\N	\N	f
-21110	1010	TEXT	understand.keyword	menaces	\N	\N	\N	f
 14286	1030	TEXT	paragraphs.2.text	**Outils de mesure d’audience**\nLe site utilise l’outil d’analyse Matomo. Les traceurs de mesures d’audience issus de Matomo ne nécessitent pas de recueil préalable du consentement de l’utilisateur du fait qu’ils servent uniquement à produire des données statistiques anonymes.\nPour en savoir plus :\nhttps://fr.matomo.org/privacy/\n\n**Politique de confidentialité et RGPD**\nLe Muséum national d’Histoire naturelle porte la plus grande attention à vos données à caractère personnel et s’engage à les protéger.\nIl s'engage à ce que la collecte et le traitement de données à caractère personnel, effectués à partir du présent site, soient conformes à la loi n°78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés ainsi qu’au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 applicable le 25 mai 2018. \n\n**Données personnelles**\nSauf stipulation contraire directement mentionnée, aucune donnée personnelle n’est collectée ni traitée sur le portail « Compteur de biodiversité outre-mer ».	\N	\N	\N	f
 14287	1030	TEXT	paragraphs.1.title	Conditions générales d’utilisation	\N	\N	\N	f
 19923	1022	TEXT	interests.locations.2.name	Le Grand Colombier	\N	\N	\N	f
-21111	1010	TEXT	ecogestures.title	Que puis-je faire pour protéger les espèces menacées ?	\N	\N	\N	f
 19924	1022	TEXT	ecosystems.ecosystems.3.description	Espèces pionnières et graminées colonisent ces milieux littoraux souvent fragilisés par les dégradations (travaux, incendies, pâturages). Espèce typique de ces milieux dunaires, l’oyat (ou Ammophile à ligule courte, *Ammophila breviligulata*) joue un rôle essentiel dans la fixation des dunes et limite l’érosion. En arrière dune, une grande diversité d’espèces indigènes, parfois très rares, cohabitent avec des graminées introduites et naturalisées.	\N	\N	\N	f
-21112	1010	IMAGE	presentation.image	\N	1041	Albatros hurleur © Julie Tucoulet	\N	f
-21113	1010	TEXT	understand.paragraphs.1.title	Quelles menaces pèsent sur les espèces ?	\N	\N	\N	f
-21114	1010	TEXT	understand.paragraphs.0.text	De nombreuses espèces ne sont pas encore évaluées ou sont classées dans la catégorie « données insuffisantes ». C’est le cas par exemple pour de nombreux invertébrés, les champignons, ou encore les lichens et mousses, qui sont pourtant essentiels au bon fonctionnement des écosystèmes. Les espèces marines souffrent également d'un important déficit d'évaluations. \nLes chiffres présentés dans les Listes rouges ne sont donc pas exhaustifs, ils se précisent régulièrement au fur et à mesure de l’amélioration des connaissances scientifiques et de la parution de nouveaux travaux.  \n\nDe nombreux territoires d'outre-mer ont développé des Listes rouges à l'échelle de leur territoire, mais certains, comme Saint-Pierre-et-Miquelon ou Wallis-et-Futuna sont trop petits pour que l'application de cette méthodologie soit pertinente à cette échelle.  	\N	\N	\N	f
-21115	1010	IMAGE	understand.image	\N	1042	Tortue luth © Raphael Gailhac	\N	f
-21116	1010	TEXT	understand.paragraphs.2.title	Des programmes de conservation pour les espèces les plus menacées	\N	\N	\N	f
 14288	1030	TEXT	title	Mentions légales	\N	\N	\N	f
 14289	1030	TEXT	paragraphs.2.title	Mentions relatives à l’utilisation de cookies	\N	\N	\N	f
 14290	1030	TEXT	paragraphs.0.text	**Editeur**\nMuséum national d'Histoire naturelle\nUMS Patrimoine Naturel \nCP41, 36 rue Geoffroy saint-Hilaire\n75005 Paris\n\n**Conception et hébergement**\nAgence Ninja Squad\nwww.ninja-squad.fr\n\nJean-Baptiste Giffard\nwww.digitaldesigner.cool\n\nSite hébergé par le Muséum national d’Histoire naturelle\n\n**Création graphique**\nDesign graphique réalisé par : \nAmélie Bracq\nEdouard Sastre\n\n**Création et mise à jour du contenu**\nLe contenu éditorial du site est produit et mis à jour par l’Unité Mixte de Service Patrimoine Naturel (UMS PatriNat) du MNHN.	\N	\N	\N	f
@@ -1455,6 +1439,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21540	1013	TEXT	presentation.description	nouvelles espèces décrites par an en outre-mer	\N	\N	\N	f
 21541	1013	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/docs/communication/livretInpn/Livret-INPN-especes-2020.pdf	\N	\N	\N	f
 21700	1000	TEXT	testimony.text	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont des outils qui permettent de suivre différents paramètres de la biodiversité, pour renseigner de son évolution.	\N	\N	\N	f
+21777	1010	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
+21778	1010	TEXT	understand.text2	Chaque espèce est évaluée par un groupe d’experts selon des critères bien définis tels que la taille de la population, son aire de distribution ou encore la disparition de son habitat naturel, pour pouvoir lui attribuer une catégorie. \nLe chiffre présenté ici comprend les espèces classées dans les catégories « éteinte au niveau mondial », « éteinte à l’état sauvage », «&nbsp;disparue au niveau régional », « en danger critique d’extinction », « en danger » et «&nbsp;vulnérable » dans les Listes rouges réalisées en outre-mer.  \n\nIl faut noter qu’une espèce peut être classée menacée sur le territoire national mais pas à l’échelle mondiale si son statut est bon dans d’autres pays, cependant on trouve en outre-mer de nombreuses espèces [endémiques](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques) qui ne sont présentes nulle part ailleurs dans le monde.	\N	\N	\N	f
+21779	1010	TEXT	understand.text1	L'Union internationale pour la conservation de la nature (UICN) développe depuis 1964 un outil de référence permettant de mesurer l'état de conservation de la faune et de la flore mondiale : la Liste rouge. Les espèces y sont classifiées par catégories selon leur degré de vulnérabilité. Cela permet d'identifier les priorités d'action, les progrès accomplis ou les défis à relever pour la conservation des espèces.  \n  \nEn France, l'élaboration de la [Liste rouge nationale des espèces menacées](https://inpn.mnhn.fr/programme/listes-rouges-especes/presentation) est mise en œuvre depuis 2008 par le Muséum national d'Histoire naturelle, l'Office français de la biodiversité et le Comité français de l'UICN, en collaboration avec un large réseau d'experts.\n\n	\N	\N	\N	f
+21780	1010	TEXT	territories.title	Pourcentage d'espèces menacées	\N	\N	\N	f
 19676	1001	TEXT	interests.locations.1.description	Entre Basse-Terre et Grande-Terre, cette baie est un véritable réservoir de biodiversité. Côté mer, des herbiers de phanérogames sont entourés par le récif corallien le plus long des Petites Antilles (39 km). Côté terre, la baie est bordée par des mangroves, des forêts marécageuses et marais herbacés sur plus de 5 000 ha. 	\N	\N	\N	f
 19677	1001	TEXT	ecosystems.ecosystems.3.name	Les mangroves	\N	\N	\N	f
 19678	1001	TEXT	statistics.1.text	du territoire couvert par la forêt	\N	\N	\N	f
@@ -1478,6 +1466,15 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19696	1001	IMAGE	ecosystems.ecosystems.1.image	\N	1011	Plage à Deshaies © Stephane Wegner /Unsplash 	\N	f
 19697	1001	TEXT	interests.locations.3.description	Créée en 2011 pour préserver le patrimoine géologique exceptionnel de l’île, où l’on observe les très rares traces des prémices de la formation de la plaque tectonique des Caraïbes, l’île abrite également une végétation particulière avec plusieurs espèces rares dont le Cactus tête à l’Anglais (*Melocactus intortus*), ainsi que de nombreuses espèces d’oiseaux marins. 	\N	\N	\N	f
 19698	1001	TEXT	identity.title	La Guadeloupe,  \n« l’île aux belles eaux »	\N	\N	\N	f
+21781	1010	TEXT	understand.title1	La Liste rouge de l'UICN	\N	\N	\N	f
+21782	1010	TEXT	understand.paragraphs.1.text	Selon l'IPBES*, les cinq facteurs directs de changement qui affectent la nature et qui ont les plus forts impacts à l’échelle mondiale sont, dans l'ordre : les changements d’usage des terres et de la mer, l'exploitation directe de certains organismes, le changement climatique, les pollutions et les espèces exotiques envahissantes. Les impacts de ces différents facteurs sont souvent liés et s'additionnent : l'installation de certaines espèces exotiques peut par exemple être facilitée par les changements climatiques. Dans les îles, les espèces exotiques envahissantes seraient le premier facteur de perte de biodiversité. \n\n*la Plateforme intergouvernementale scientifique et politique sur la biodiversité et les services écosystémiques (en anglais IPBES) est un groupement international d'experts de la biodiversité, créé sous l'égide de l'ONU en 2012. L'IPBES a publié le 6 mai 2019 [le premier rapport d'évaluation mondiale sur la biodiversité et les services écosystémiques](https://www.ipbes.net/news/Media-Release-Global-Assessment-Fr). 	\N	\N	\N	f
+21783	1010	TEXT	understand.title2	Plusieurs catégories de risque d’extinction	\N	\N	\N	f
+21784	1010	TEXT	presentation.descriptionTerritories	des espèces sont considérées comme éteintes ou menacées	\N	\N	\N	f
+21785	1010	TEXT	understand.paragraphs.0.title	Encore beaucoup d'évaluations à réaliser	\N	\N	\N	f
+21786	1010	TEXT	understand.keyword	menaces	\N	\N	\N	f
+21787	1010	TEXT	ecogestures.title	Que puis-je faire pour protéger les espèces menacées ?	\N	\N	\N	f
+21788	1010	IMAGE	presentation.image	\N	1041	Albatros hurleur © Julie Tucoulet	\N	f
+21789	1010	TEXT	understand.paragraphs.1.title	Quelles menaces pèsent sur les espèces ?	\N	\N	\N	f
 19699	1001	TEXT	species.4.name	Les Anolis	\N	\N	\N	f
 19700	1001	TEXT	identity.area	1 628	\N	\N	\N	f
 19701	1001	TEXT	species.0.description	La Frégate superbe ([*Fregata magnificens*](https://inpn.mnhn.fr/espece/cd_nom/2468\n)) est un oiseau marin de grande taille reconnaissable à sa queue fourchue et ses ailes longues et effilées. Le mâle est noir et remarquable par la présence d’une poche rouge sous la gorge qu’il gonfle pendant les parades nuptiales. La femelle et les juvéniles sont tachés de blanc sur le dos et la poitrine. L’espèce n’est cependant plus nicheuse en Guadeloupe.\n\nStatut dans la Liste rouge des oiseaux de Guadeloupe : préoccupation mineure. 	\N	\N	\N	f
@@ -1492,6 +1489,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20185	1028	TEXT	understand.quote	Certaines espèces peuvent toujours être exploitées ou chassées, mais les règlementations et les quotas doivent être respectés afin de permettre à la ressource de se renouveler durablement.	\N	\N	\N	f
 20186	1028	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20187	1028	TEXT	action.cards.0.description	Je respecte les règlementations de pêche (matériel, technique, zone d'exclusion,...) et ne prélève pas plus qu’autorisé. 	\N	\N	\N	f
+21790	1010	TEXT	understand.paragraphs.0.text	De nombreuses espèces ne sont pas encore évaluées ou sont classées dans la catégorie « données insuffisantes ». C’est le cas par exemple pour de nombreux invertébrés, les champignons, ou encore les lichens et mousses, qui sont pourtant essentiels au bon fonctionnement des écosystèmes. Les espèces marines souffrent également d'un important déficit d'évaluations. \nLes chiffres présentés dans les Listes rouges ne sont donc pas exhaustifs, ils se précisent régulièrement au fur et à mesure de l’amélioration des connaissances scientifiques et de la parution de nouveaux travaux.  \n\nDe nombreux territoires d'outre-mer ont développé des Listes rouges à l'échelle de leur territoire, mais certains, comme Saint-Pierre-et-Miquelon ou Wallis-et-Futuna sont trop petits pour que l'application de cette méthodologie soit pertinente à cette échelle.  	\N	\N	\N	f
+21791	1010	IMAGE	understand.image	\N	1042	Tortue luth © Raphael Gailhac	\N	f
+21792	1010	TEXT	understand.paragraphs.2.title	Des programmes de conservation pour les espèces les plus menacées	\N	\N	\N	f
+21793	1010	TEXT	understand.paragraphs.2.text	De nombreux programmes sont mis en place pour tenter de protéger les espèces menacées. Ils visent à organiser des suivis des populations, mettre en œuvre des actions favorables à la restauration de ces populations ou de leur habitat, informer le public et les élus et faciliter l'intégration de la protection de ces espèces dans les politiques publiques.   \n\nParmi ces outils, on trouve notamment les [Plans nationaux d’actions](https://www.ecologie.gouv.fr/plans-nationaux-dactions-en-faveur-des-especes-menacees) qui concernent de nombreuses espèces d’outre-mer telles que l’Albatros d’Amsterdam (TAAF), le Gecko vert de Manapany et le Bois de Papaye (La Réunion), l’Iguane des Petites Antilles (Antilles françaises), les tortues marines (Antilles françaises, Guyane et océan Indien) ou encore le Crabier Blanc (Mayotte). \nLa Commission européenne soutient également des programmes de conservation des espèces et des habitats via son programme de financements LIFE, par exemple le [LIFE+ Pétrels](https://www.petrels.re/) (La Réunion), le [LIFE+ BIODIV'OM](https://www.lifebiodivom.fr/) (5 espèces et un habitat, 5 territoires concernés : Mayotte, Guyane, Saint-Martin, Martinique, La Réunion) ou encore le [LIFE+ Forêt Sèche](https://www.foretseche.re/) (La Réunion).  \n\nIl existe encore bien d'autres initiatives comme un Plan d’action pour la sauvegarde du Cagou (Nouvelle-Calédonie), le [Plan de conservation en faveur des puffins de l'île de La Réunion](http://www.reunion.developpement-durable.gouv.fr/IMG/pdf/pdc_puffins_ld_interactif.pdf) ou différents programmes de conservation des [oiseaux menacés de Polynésie française](https://www.manu.pf/nos-actions/).	\N	\N	\N	f
+21794	1010	TEXT	presentation.description	des espèces d’outre-mer sont considérées comme éteintes ou menacées	\N	\N	\N	f
+21795	1010	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/proportion-despeces-eteintes-ou-menacees-dans-la-liste-rouge-nationale	\N	\N	\N	f
 21542	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
 21543	1019	TEXT	examples.projects.2.subject	Espèces marines	\N	\N	\N	f
 21544	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
@@ -1589,9 +1592,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20213	1024	TEXT	understand.quote	La Tortue de Floride, considérée comme l'une des 100 espèces les plus envahissantes du monde, est présente en milieu naturel dans quasiment tous les territoires d'outre-mer français (à l'exception de Saint-Pierre et Miquelon, Wallis et Futuna, et les TAAF)	\N	\N	\N	f
 20214	1024	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20215	1024	TEXT	action.cards.0.description	Je me renseigne sur les espèces végétales que je souhaite planter dans mon jardin et je privilégie d’utiliser des espèces locales. Je respecte la règlementation sur l'interdiction d'introduction d'espèces sur mon territoire.	\N	\N	\N	f
-21117	1010	TEXT	understand.paragraphs.2.text	De nombreux programmes sont mis en place pour tenter de protéger les espèces menacées. Ils visent à organiser des suivis des populations, mettre en œuvre des actions favorables à la restauration de ces populations ou de leur habitat, informer le public et les élus et faciliter l'intégration de la protection de ces espèces dans les politiques publiques.   \n\nParmi ces outils, on trouve notamment les [Plans nationaux d’action](https://www.ecologie.gouv.fr/plans-nationaux-dactions-en-faveur-des-especes-menacees) qui concernent de nombreuses espèces d’outre-mer telles que l’Albatros d’Amsterdam (TAAF), le Gecko vert de Manapany et le Bois de Papaye (La Réunion), l’Iguane des Petites Antilles (Antilles françaises), les tortues marines (Antilles françaises, Guyane et Océan Indien) ou encore le Crabier Blanc (Mayotte). \nLa Commission européenne soutien également des programmes de conservation des espèces et des habitats via son programme de financements LIFE, par exemple le [LIFE+ Pétrels](https://www.petrels.re/) (La Réunion), le [LIFE+ BIODIV'OM](https://www.lifebiodivom.fr/) (5 espèces et un habitat, 5 territoires concernés : Mayotte, Guyane, Saint-Martin, Martinique, La Réunion) ou encore le [LIFE+ Forêt Sèche](https://www.foretseche.re/) (La Réunion).  \n\nIl existe encore bien d'autres initiatives comme un Plan d’action pour la sauvegarde du Cagou (Nouvelle-Calédonie), le [Plan de conservation en faveur des puffins de l'île de La Réunion](http://www.reunion.developpement-durable.gouv.fr/IMG/pdf/pdc_puffins_ld_interactif.pdf) ou différents programmes de conservation des [oiseaux menacés de Polynésie française](https://www.manu.pf/nos-actions/).	\N	\N	\N	f
-21118	1010	TEXT	presentation.description	des espèces d’outre-mer sont considérées comme éteintes ou menacées	\N	\N	\N	f
-21119	1010	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/proportion-despeces-eteintes-ou-menacees-dans-la-liste-rouge-nationale	\N	\N	\N	f
 20216	1027	IMAGE	presentation.file	\N	1139	test	\N	f
 20217	1027	IMAGE	action.cards.2.icon	\N	1136	nettoyer	\N	f
 20218	1027	TEXT	presentation.name	Je préserve la flore sauvage  	\N	\N	\N	f
@@ -1691,7 +1691,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1070, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 21700, true);
+SELECT pg_catalog.setval('public.page_element_seq', 21795, true);
 
 
 --
