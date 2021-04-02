@@ -602,6 +602,15 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 1259	image/jpeg	Martinique_Fabien Lefebvre.jpg
 1260	image/jpeg	IMG_6438.jpg
 1261	image/jpeg	DSC05001-Modifier.jpg
+1262	image/jpeg	capture d'anaconda.jpg
+1263	image/jpeg	Cerf de Virginie BL 1.jpg
+1264	image/jpeg	Cap de Miquelon.jpeg
+1265	image/jpeg	Paysage BL 3.jpg
+1266	image/jpeg	2U1A9955.jpg
+1267	image/jpeg	DSC04557-Modifier.jpg
+1268	image/jpeg	IMG_4417.jpg
+1269	image/jpeg	IMG_8325.jpg
+1270	image/jpeg	DSC07212-Modifier.jpg
 \.
 
 
@@ -728,11 +737,13 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 
 COPY public.page (id, name, model_name, title) FROM stdin;
 1025	protection-faune	ecogesture	Respecter la faune sauvage
-1000	accueil	home	Accueil
 1004	especes-exotiques-envahissantes	indicator	Espèces exotiques envahissantes
 1028	exploitation-especes-protegees	ecogesture	Préserver les espèces protégées 
+1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
 1024	protection-contre-eee	ecogesture	Protection contre les EEE
 1027	protection-flore	ecogesture	Préserver la flore sauvage
+1015	martinique	territory	Martinique
+1000	accueil	home	Accueil
 1018	ecogeste-agir	ecogesture-act	Encadré "agir pour la biodiversité" fiche écogeste
 1005	indicateurs	indicators	Tous les indicateurs
 1030	mentions-legales	legal-terms	Mentions légales
@@ -747,9 +758,7 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1011	taux-boisement	indicator	Proportion de forêts
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
 1001	guadeloupe	territory	Guadeloupe
-1015	martinique	territory	Martinique
 1021	reunion	territory	La Réunion
-1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
 1010	especes-menacees	indicator	Espèces éteintes et menacées
 1014	recifs-coralliens	indicator	Récifs coralliens
 1012	conservation-mangroves	indicator	Conservation des mangroves d'outre-mer
@@ -766,108 +775,128 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 --
 
 COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, title) FROM stdin;
-19709	1015	TEXT	events.2.description	Création du Parc naturel régional de Martinique et de la Réserve naturelle nationale de la presqu'île de la Caravelle	\N	\N	\N	f
-19710	1015	TEXT	events.3.description	Création de la Réserve naturelle nationale des îlets de Sainte Anne	\N	\N	\N	f
-19711	1015	IMAGE	identity.image	\N	1151	Vue sur les Pitons du Carbet depuis le Jardin Balata © Weronika/Unsplash	\N	f
-19712	1015	TEXT	events.7.description	Création du [Parc naturel marin de Martinique](https://www.parc-marin-martinique.fr/)	\N	\N	\N	f
-19713	1015	TEXT	events.7.date	2017	\N	\N	\N	f
-19714	1015	TEXT	interests.locations.0.name	Le Parc naturel régional de la Martinique	\N	\N	\N	f
-19715	1015	TEXT	events.0.description	Prise de possession française de l’île	\N	\N	\N	f
-19716	1015	TEXT	events.1.description	Dernière éruption de la Montagne Pelée	\N	\N	\N	f
-19717	1015	TEXT	events.8.description	Publication de la Liste rouge de la Faune de Martinique	\N	\N	\N	f
-19718	1015	IMAGE	ecosystems.image	\N	1069	© Fabien Lefebvre	\N	f
-19719	1015	TEXT	identity.species	7 009	\N	\N	\N	f
-19720	1015	IMAGE	ecosystems.ecosystems.0.image	\N	1066	Plage de Martinique © Daniel Öberg/Unsplash	\N	f
-19721	1015	TEXT	species.8.name	Le Gommier blanc	\N	\N	\N	f
-19722	1015	TEXT	events.6.description	Expédition Madibenthos : inventaire de la faune et de la flore marine côtière	\N	\N	\N	f
-19723	1015	TEXT	events.6.date	2016	\N	\N	\N	f
-19724	1015	TEXT	events.4.description	Création de la Réserve naturelle régionale marine du Prêcheur - Albert Falco	\N	\N	\N	f
-19725	1015	TEXT	events.5.description	Création de [l'Observatoire Martiniquais de la biodiversité](http://www.biodiversite-martinique.fr/#)	\N	\N	\N	f
-19726	1015	TEXT	interests.locations.2.name	L’étang des Salines	\N	\N	\N	f
-19727	1015	TEXT	ecosystems.ecosystems.3.description	Les herbiers sont composés principalement de phanérogames marines : ce ne sont pas des algues mais bien des plantes aquatiques. Ils sont des lieux de reproduction, de développement et d’alimentation de nombreuses espèces (poissons, oursins, tortues…). En Martinique, ils s’étendent sur les fonds sableux sur près de 5 000 ha.	\N	\N	\N	f
-19728	1015	TEXT	ecosystems.ecosystems.4.description	Des communautés coralliennes se développent sur tous les petits fonds de l’île mais elles ne forment de véritables récifs que sur la côte atlantique de l’île et dans la baie de Fort de France. 40 espèces coralliennes sont recensées dans les eaux de l’île. Cependant, une importante partie des colonies sont considérées comme dégradées.	\N	\N	\N	f
-19729	1015	TEXT	ecosystems.ecosystems.4.name	Les récifs coralliens	\N	\N	\N	f
-19730	1015	TEXT	statistics.3.text	hectares de mangroves sur le territoire	\N	\N	\N	f
-19731	1015	IMAGE	species.1.image	\N	1060	*Iguana delicatissima* © A. Pibot /OFB	\N	f
-19732	1015	TEXT	events.5.date	2015	\N	\N	\N	f
-19733	1015	TEXT	identity.marineArea	45 000	\N	\N	\N	f
-19734	1015	TEXT	events.8.date	2020	\N	\N	\N	f
-19735	1015	IMAGE	interests.locations.0.image	\N	1056	Cascade dans le Parc Naturel Régional de la Martinique © B. Guichard / OFB	\N	f
-19736	1015	TEXT	species.6.name	Le Trigonocéphale	\N	\N	\N	f
-19737	1015	IMAGE	interests.locations.3.image	\N	1059	Montagne Pelée © Youri Germany/Unsplash	\N	f
-19738	1015	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
-19739	1015	TEXT	interests.locations.3.name	La Montagne Pelée et les Pitons du Carbet	\N	\N	\N	f
-19740	1015	TEXT	statistics.1.text	espèces de coraux recensées dans les eaux de l'île	\N	\N	\N	f
-19741	1015	IMAGE	species.4.image	\N	1064	*Aechmea reclinata* © C. Delnatte / Observatoire Martiniquais de la Biodiversité	\N	f
-19742	1015	TEXT	events.3.date	1995	\N	\N	\N	f
-19743	1015	IMAGE	ecosystems.ecosystems.3.image	\N	1186	Image manquante	\N	f
-19744	1015	IMAGE	species.3.image	\N	1062	*Chelonia mydas* © Benjamin Guichard/OFB	\N	f
-19745	1015	TEXT	species.1.name	L'Iguane des Petites Antilles	\N	\N	\N	f
-19746	1015	TEXT	species.7.name	Le Moqueur gorge-blanche	\N	\N	\N	f
-19747	1015	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
-19748	1015	TEXT	species.4.name	L'Ananas bois	\N	\N	\N	f
-19749	1015	TEXT	identity.area	1 128	\N	\N	\N	f
-19750	1015	TEXT	species.0.description	Le Matoutou Falaise ([*Caribena versicolor*](https://inpn.mnhn.fr/espece/cd_nom/845739\n)) est une mygale arboricole endémique de la Martinique. D’une envergure totale pouvant aller jusqu’à 15 cm, elle se caractérise par ses couleurs : abdomen rouge vif, pattes roses violacées et thorax bleuté. Prédatrice nocturne, elle se nourrit principalement d'insectes et est inoffensive pour les humains. Longtemps prélevée par les terrariophiles, l’espèce est protégée depuis 2017 au niveau national et sa détention est illicite.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
-19751	1015	TEXT	identity.highestPointName	Montagne Pelée	\N	\N	\N	f
-19752	1015	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
-19753	1015	TEXT	species.7.description	Le Moqueur gorge-blanche ([*Ramphocinclus brachyurus*](https://inpn.mnhn.fr/espece/cd_nom/442316\n)) est un petit oiseau à la face dorsale foncée et la face ventrale blanche endémique de la Martinique et de Sainte-Lucie. Il se trouve uniquement dans les zones boisées de la Presqu’île de la Caravelle. Considéré en danger d’extinction en raison de la petite taille de la population, il est victime de la prédation par les espèces introduites et fait l’objet d’un programme de conservation dans le cadre du programme [LIFE BIODIV’OM](https://www.lifebiodivom.fr/especes/moqueur-gorge-blanche/).\n\nStatut dans la Liste rouge des oiseaux de Martinique : en danger critique. 	\N	\N	\N	f
-19754	1015	TEXT	species.8.description	Le Gommier blanc ([*Dacryodes excelsa*](https://inpn.mnhn.fr/espece/cd_nom/447568\n)) est l’un des plus grands arbres des forêts de Martinique, il peut atteindre 35 mètres de haut. Il est exploité pour son bois et sa résine.  \n  \nStatut dans la Liste rouge de la flore vasculaire de Martinique : non évalué.	\N	\N	\N	f
-19755	1015	IMAGE	species.2.image	\N	1063	*Aliger gigas* © divermasterking2000 / CC BY 2.0	\N	f
-19756	1015	IMAGE	ecosystems.ecosystems.4.image	\N	1187	Image manquante	\N	f
-19757	1015	TEXT	species.3.description	La Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338\n)) est l’une des cinq espèces de tortues marines qui fréquentent les eaux de Martinique. Si elle est régulièrement observable dans l’eau, en alimentation sur les herbiers, elle ne pond que rarement sur les plages de Martinique. Comme toutes les espèces de tortues marines, elle est menacée d'extinction, notamment en raison des captures accidentelles dans les filets de pêche et la dégradation des sites de ponte. Le dérangement répété par les baigneurs peut également occasionner une forte dépense d’énergie pour les tortues, c’est pourquoi il est recommandé de garder une distance minimum de quelques mètres et de ne pas tenter de les toucher.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger critique. 	\N	\N	\N	f
-19758	1015	TEXT	statistics.3.number	2 000	\N	\N	\N	f
-19759	1015	TEXT	species.1.description	L’Iguane des Petites Antilles ou Iguane péyi ([*Iguana delicatissima*](https://inpn.mnhn.fr/espece/cd_nom/350755\n)) était autrefois présent sur tout le nord des Petites Antilles, depuis Anguilla jusqu’à la Martinique. Il a aujourd’hui disparu de nombreux territoires, et est considéré en danger critique d’extinction. Sa survie est menacée par l’introduction de l’Iguane commun ([*Iguana iguana*](https://inpn.mnhn.fr/espece/cd_nom/350756\n)) avec qui il ne doit pas être confondu. L’Iguane commun exotique se reconnait aux rayures sombres sur la queue et à sa grosse plaque ronde sur la joue, sous le tympan, que ne possèdent pas l’Iguane des Petites Antilles.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger critique.	\N	\N	\N	f
-19760	1015	TEXT	species.2.description	Le Lambi ([*Aliger gigas*](https://inpn.mnhn.fr/espece/cd_nom/972164\n)) est un mollusque dont la coquille imposante peut atteindre 30 cm et 1,5 kg. Victime de la surpêche pour sa chair et parfois l’usage décoratif de sa coquille, son exploitation est aujourd’hui strictement contrôlée. La Martinique en a fait son emblème officiel.  \n  \nStatut dans la Liste rouge mondiale : non évalué.   	\N	\N	\N	f
-19761	1015	TEXT	statistics.1.number	40	\N	\N	\N	f
-19762	1015	TEXT	statistics.0.number	48	\N	\N	\N	f
-19763	1015	TEXT	statistics.2.number	2/3	\N	\N	\N	f
-19764	1015	IMAGE	interests.locations.4.image	\N	1182	Image manquante	\N	f
-19765	1015	TEXT	species.2.name	Le Lambi	\N	\N	\N	f
-19766	1015	TEXT	risks.risks.1.name	Un Observatoire local de la biodiversité	\N	\N	\N	f
-19767	1015	TEXT	species.4.description	L’Ananas bois ([*Aechmea reclinata*](https://inpn.mnhn.fr/espece/cd_nom/629022\n)) a été décrite pour la première fois en 1999 par une équipe du Parc naturel régional. Endémique de Martinique, cette espèce n’a été observée qu’en arrière-mangrove de Genipa et sur la montagne du Vauclin. Peu après sa découverte, une grande part de son aire de répartition a été défrichée illégalement pour y planter de la canne à sucre, mettant en péril cette espèce tout juste inventoriée.\n\nStatut dans la Liste rouge de la flore vasculaire de Martinique : en danger critique. 	\N	\N	\N	f
-19768	1015	TEXT	ecosystems.ecosystems.0.name	Les plages	\N	\N	\N	f
-19769	1015	TEXT	species.5.description	L’Herbe à Tortue ([*Thalassia testudinum*](https://inpn.mnhn.fr/espece/cd_nom/627263)) est une plante marine qui compose les herbiers de phanérogames sous-marins, souvent accompagnée de l’Herbe à Lamentin ([*Syringodium filiforme*](https://inpn.mnhn.fr/espece/cd_nom/627259)). Son aire de répartition couvre l’ensemble des Caraïbes, et de nombreuses espèces marines s’en nourrissent. L'introduction d'une espèce exotique de phanérogame, [*Halophila stipulacea*](https://inpn.mnhn.fr/espece/cd_nom/368620), signalée depuis 2006 dans les eaux martiniquaises, représente une potentielle menace pour ces herbiers indigènes. Des études sont en cours pour suivre son expansion et mesurer ses impacts sur les communautés marines. \n\nStatut dans la Liste rouge mondiale : préoccupation mineure.\n	\N	\N	\N	f
-19770	1015	TEXT	species.6.description	Serpent endémique venimeux, le Trigonocéphale ([*Bothrops lanceolatus*](https://inpn.mnhn.fr/espece/cd_nom/439142\n)) a été victime de sa mauvaise réputation bien que peu d’accidents aient été à déplorer et qu’un anti-venin existe. Des primes à la capture ont longtemps existé et dans les années 1980, la mangouste ([*Urva auropunctata*](https://inpn.mnhn.fr/espece/cd_nom/850071/)) a été introduite des Indes dans le but de le combattre, cependant le serpent étant nocturne et la mangouste diurne, celle-ci s’est rabattue sur les espèces indigènes. Il est aujourd’hui rare sur l’île.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger. 	\N	\N	\N	f
-19771	1015	TEXT	events.0.date	1635	\N	\N	\N	f
-19772	1015	TEXT	identity.populationYear	2017	\N	\N	\N	f
-19773	1015	IMAGE	species.5.image	\N	1065	*Thalassia testudinum* © James St. John / CC BY 2.0 	\N	f
-19774	1015	TEXT	statistics.0.text	Ilets répartis autour de l'île	\N	\N	\N	f
-19775	1015	TEXT	ecosystems.ecosystems.1.name	La forêt humide tropicale	\N	\N	\N	f
-19776	1015	TEXT	events.2.date	1976	\N	\N	\N	f
-19777	1015	TEXT	identity.presentation	Au cœur de l’arc des Petites Antilles, la Martinique, baptisée *Ioünacaera* « l’île aux iguanes » par ses premiers occupants amérindiens, présente une grande diversité de paysages. Au nord, des forêts humides bien conservées entourent le volcan de la Montagne Pelée. Le sud, plus sec et d’une altitude plus faible, est plus peuplé et urbanisé. L'île est entourée de 48 îlets, répartis principalement sur la côte atlantique, sur lesquels on retrouve une végétation adaptée aux milieux très sec et qui accueillent de nombreux oiseaux nicheurs. 	\N	\N	\N	f
-19778	1015	TEXT	identity.population	372 594	\N	\N	\N	f
-19779	1015	TEXT	species.3.name	La Tortue verte	\N	\N	\N	f
-19780	1015	IMAGE	species.8.image	\N	1185	Image manquante	\N	f
-19781	1015	TEXT	species.0.name	Le Matoutou Falaise	\N	\N	\N	f
-19782	1015	TEXT	events.4.date	2014	\N	\N	\N	f
-19783	1015	IMAGE	interests.locations.2.image	\N	1058	L’Anse Meunier dans l’étang des Salines, Martinique © Hervé Nicolas / CC BY-SA 4.0 	\N	f
-19784	1015	IMAGE	ecosystems.ecosystems.2.image	\N	1068	Mangrove, Martinique © schmitt.stelle / CC BY 2.0 	\N	f
-19785	1015	TEXT	interests.locations.0.description	Créé en 1976, le [Parc naturel régional](http://pnr-martinique.com/) s’étend sur 32 communes et couvre les 2/3 de l’île. Son objectif est de conjuguer le développement de l’île avec la préservation de ses richesses naturelles et culturelles. 	\N	\N	\N	f
-19786	1015	TEXT	risks.risks.1.description	Face aux enjeux  de la préservation et la valorisation de la biodiversité martiniquaise, 43 structures institutionnelles et associatives se sont réunies autour du Parc naturel régional de la Martinique pour la création d’un [Observatoire Martiniquais de la biodiversité](http://www.biodiversite-martinique.fr/#) afin de mutualiser les connaissances, sensibiliser le public et faciliter l’intégration de la biodiversité dans les politiques publiques.	\N	\N	\N	f
-19787	1015	TEXT	interests.locations.2.description	D’une superficie de 207 ha, ce site géré par le Conservatoire du littoral abrite une importante faune et flore patrimoniale. 	\N	\N	\N	f
-19788	1015	TEXT	interests.locations.1.description	A l'est de la Martinique, la presqu’île de la Caravelle présente une grande variété d’écosystèmes : savanes, falaises, forêt, mangroves. Le site est géré par le Parc naturel régional notamment pour y préserver le Moqueur gorge-blanche, oiseau endémique menacé.    	\N	\N	\N	f
-19789	1015	TEXT	ecosystems.ecosystems.3.name	Les herbiers sous-marins	\N	\N	\N	f
-19790	1015	TEXT	identity.subtitle	Des paysages contrastés	\N	\N	\N	f
-19791	1015	IMAGE	species.7.image	\N	1242	*Ramphocinclus brachyurus* ©Vincent Lemoine / OMB	\N	f
-19792	1015	TEXT	species.5.name	L'Herbe à Tortue 	\N	\N	\N	f
-19793	1015	TEXT	risks.risks.0.description	L’expansion démographique et l’urbanisation, surtout au centre et au sud de l’île, impactent les milieux naturels de la Martinique : défrichements, rejets domestiques, industriels et agricoles,…\n\nLes mangroves de l'île sont des milieux particulièrement sensibles et soumis à de fortes pressions anthropiques : aménagements, décharge, pollution, activité agricole. Un projet de réserve naturelle régionale est à l’œuvre concernant les mangroves de la baie de Génipa.\nLes coupes illégales de bois et le trafic d’espèces indigènes, du Lambi ou du Matoutou falaise par exemple, sont des problématiques importantes, et la règlementation existante est difficile à faire appliquer.\n\nDe nombreuses espèces indigènes sont menacées par les espèces exotiques introduites : rat, mangouste, Iguane commun, etc. En milieu marin, le Poisson-lion, espèce originaire de la région indo-pacifique qui a colonisé toute la Caraïbe, est un consommateur vorace de poissons qui ne connait pas de prédateurs et a une stratégie de reproduction très efficace. Il est considéré comme une menace majeure pour la biodiversité marine.  \n\nLes échouages de sargasses sont un phénomène naturel dont l’ampleur a considérablement augmenté ces dernières années. Les radeaux denses et les dépôts épais qu’elles forment sur les plages piègent de nombreuses espèces dont des tortues, et ont également un impact sanitaire et économique important.\n\nLa chlordécone, pesticide utilisé dans les bananeraies entre les années 1970 et 1990 a massivement pollué les milieux naturels de l’île. Si ces impacts sur la santé humaine commencent à être connus, peu de données sont disponibles sur ses conséquences sur les espèces. Cependant, des études ont montré une importante contamination des organismes marins côtiers ce qui a conduit à l'interdiction de la pêche dans tous les cours d'eau et sur une partie des zones côtières de l'île.  	\N	\N	\N	f
-19794	1015	TEXT	ecosystems.ecosystems.2.description	A l’interface entre le milieu marin et le milieu terrestre, la mangrove a des rôles fonctionnels très importants : protection contre l’érosion, piège à sédiment, puit de carbone… Elles couvrent actuellement plus de 2 000 ha en Martinique, mais occupaient autrefois des surfaces beaucoup plus importantes avant d’être déboisées. 	\N	\N	\N	f
-19795	1015	TEXT	ecosystems.ecosystems.1.description	Les forêts se trouvent principalement dans le nord, sur les massifs montagneux et difficilement accessibles des pitons du Carbet de la Montagne Pelée. On distingue plusieurs types de forêt présentant différents cortèges floristiques en fonction de l’altitude. On y trouve une importante diversité, notamment en espèces endémiques. 	\N	\N	\N	f
-19796	1015	TEXT	ecosystems.ecosystems.0.description	Couvrant 50 km de l’île, surtout dans le sud, les plages sont des lieux de ponte pour 3 espèces de tortues marines et sont également bordées par un cortège floristique intéressant : patates bord de mer, pois bord de mer, raisinier bord de mer… Cette végétation est toutefois fortement dégradée par les installations touristiques et l’importante fréquentation de certaines plages. 	\N	\N	\N	f
-19797	1015	TEXT	identity.highestPoint	1 397	\N	\N	\N	f
-19798	1015	TEXT	interests.locations.4.description	Ces quatre îlets, gérés par le Parc naturel régional et l’Office national des forêts, sont l'un des plus importants sites de nidification des oiseaux marins des Petites Antilles. On y trouve entre autre puffins, sternes, moines…. L’accès en est strictement interdit.	\N	\N	\N	f
-19799	1015	TEXT	risks.risks.0.name	Des préoccupations communes aux territoires antillais	\N	\N	\N	f
-19800	1015	IMAGE	interests.locations.1.image	\N	1057	Presqu’île de la Caravelle © L. Léonard	\N	f
-19801	1015	IMAGE	ecosystems.ecosystems.1.image	\N	1067	Sentier dans le Parc naturel régional de la Martinique © Guillaume Gigot	\N	f
-19802	1015	TEXT	interests.locations.3.description	Ces deux zones de forêt humide au nord de l'île sont classées en Réserve biologique intégrale, gérées par l'Office national des forêts. La forêt y est laissée en évolution naturelle, l'exploitation et les interventions y sont interdites, à l'exception des aménagements pour la sécurité du public. La Montagne Pelée, toujours en activité, est étroitement surveillée.	\N	\N	\N	f
-19803	1015	TEXT	identity.title	La Martinique,  \n« l’île aux iguanes » 	\N	\N	\N	f
-19804	1015	IMAGE	species.6.image	\N	1183	Image manquante	\N	f
-19805	1015	TEXT	interests.locations.1.name	La Réserve naturelle nationale de la presqu’île de la Caravelle	\N	\N	\N	f
-19806	1015	TEXT	statistics.2.text	de l'île couverts par le Parc naturel régional 	\N	\N	\N	f
-19807	1015	IMAGE	species.0.image	\N	1061	*Caribena versicolor* © A. Lacoeulhe	\N	f
-19808	1015	TEXT	events.1.date	1929-1932	\N	\N	\N	f
+22215	1015	TEXT	events.2.description	Création du Parc naturel régional de Martinique et de la Réserve naturelle nationale de la presqu'île de la Caravelle	\N	\N	\N	f
+22216	1015	TEXT	events.3.description	Création de la Réserve naturelle nationale des îlets de Sainte Anne	\N	\N	\N	f
+22217	1015	IMAGE	identity.image	\N	1269	La Montagne Pelée depuis la mer © Fabien Lefebvre	\N	f
+22218	1015	TEXT	events.7.description	Création du [Parc naturel marin de Martinique](https://www.parc-marin-martinique.fr/)	\N	\N	\N	f
+22219	1015	TEXT	events.7.date	2017	\N	\N	\N	f
+22220	1015	TEXT	interests.locations.0.name	Le Parc naturel régional de la Martinique	\N	\N	\N	f
+22221	1015	TEXT	events.0.description	Prise de possession française de l’île	\N	\N	\N	f
+22222	1015	TEXT	events.1.description	Dernière éruption de la Montagne Pelée	\N	\N	\N	f
+22223	1015	TEXT	events.8.description	Publication de la Liste rouge de la Faune de Martinique	\N	\N	\N	f
+22224	1015	IMAGE	ecosystems.image	\N	1069	Nudibranche © Fabien Lefebvre	\N	f
+22225	1015	TEXT	identity.species	7 009	\N	\N	\N	f
+22226	1015	IMAGE	ecosystems.ecosystems.0.image	\N	1066	Plage de Martinique © Daniel Öberg/Unsplash	\N	f
+22227	1015	TEXT	species.8.name	Le Gommier blanc	\N	\N	\N	f
+22228	1015	TEXT	events.6.description	Expédition Madibenthos : inventaire de la faune et de la flore marine côtière	\N	\N	\N	f
+22229	1015	TEXT	events.6.date	2016	\N	\N	\N	f
+22230	1015	TEXT	events.4.description	Création de la Réserve naturelle régionale marine du Prêcheur - Albert Falco	\N	\N	\N	f
+22231	1015	TEXT	events.5.description	Création de [l'Observatoire Martiniquais de la biodiversité](http://www.biodiversite-martinique.fr/#)	\N	\N	\N	f
+22232	1015	TEXT	interests.locations.2.name	L’étang des Salines	\N	\N	\N	f
+22233	1015	TEXT	ecosystems.ecosystems.3.description	Les herbiers sont composés principalement de phanérogames marines : ce ne sont pas des algues mais bien des plantes aquatiques. Ils sont des lieux de reproduction, de développement et d’alimentation de nombreuses espèces (poissons, oursins, tortues…). En Martinique, ils s’étendent sur les fonds sableux sur près de 5 000 ha.	\N	\N	\N	f
+22234	1015	TEXT	ecosystems.ecosystems.4.description	Des communautés coralliennes se développent sur tous les petits fonds de l’île mais elles ne forment de véritables récifs que sur la côte atlantique de l’île et dans la baie de Fort de France. 40 espèces coralliennes sont recensées dans les eaux de l’île. Cependant, une importante partie des colonies sont considérées comme dégradées.	\N	\N	\N	f
+22235	1015	TEXT	ecosystems.ecosystems.4.name	Les récifs coralliens	\N	\N	\N	f
+22236	1015	TEXT	statistics.3.text	hectares de mangroves sur le territoire	\N	\N	\N	f
+22237	1015	IMAGE	species.1.image	\N	1060	*Iguana delicatissima* © A. Pibot /OFB	\N	f
+22238	1015	TEXT	events.5.date	2015	\N	\N	\N	f
+22239	1015	TEXT	identity.marineArea	45 000	\N	\N	\N	f
+22240	1015	TEXT	events.8.date	2020	\N	\N	\N	f
+22241	1015	IMAGE	interests.locations.0.image	\N	1056	Cascade dans le Parc Naturel Régional de la Martinique © B. Guichard / OFB	\N	f
+22242	1015	TEXT	species.6.name	Le Trigonocéphale	\N	\N	\N	f
+22243	1015	IMAGE	interests.locations.3.image	\N	1059	Montagne Pelée © Youri Germany/Unsplash	\N	f
+22244	1015	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
+22245	1015	TEXT	interests.locations.3.name	La Montagne Pelée et les Pitons du Carbet	\N	\N	\N	f
+22246	1015	TEXT	statistics.1.text	espèces de coraux recensées dans les eaux de l'île	\N	\N	\N	f
+22247	1015	IMAGE	species.4.image	\N	1064	*Aechmea reclinata* © C. Delnatte / Observatoire Martiniquais de la Biodiversité	\N	f
+22248	1015	TEXT	events.3.date	1995	\N	\N	\N	f
+22249	1015	IMAGE	ecosystems.ecosystems.3.image	\N	1270	Herbier et poisson © Fabien Lefebvre	\N	f
+22250	1015	IMAGE	species.3.image	\N	1062	*Chelonia mydas* © Benjamin Guichard/OFB	\N	f
+22251	1015	TEXT	species.1.name	L'Iguane des Petites Antilles	\N	\N	\N	f
+22252	1015	TEXT	species.7.name	Le Moqueur gorge-blanche	\N	\N	\N	f
+22253	1015	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
+22254	1015	TEXT	species.4.name	L'Ananas bois	\N	\N	\N	f
+22255	1015	TEXT	identity.area	1 128	\N	\N	\N	f
+22256	1015	TEXT	species.0.description	Le Matoutou Falaise ([*Caribena versicolor*](https://inpn.mnhn.fr/espece/cd_nom/845739\n)) est une mygale arboricole endémique de la Martinique. D’une envergure totale pouvant aller jusqu’à 15 cm, elle se caractérise par ses couleurs : abdomen rouge vif, pattes roses violacées et thorax bleuté. Prédatrice nocturne, elle se nourrit principalement d'insectes et est inoffensive pour les humains. Longtemps prélevée par les terrariophiles, l’espèce est protégée depuis 2017 au niveau national et sa détention est illicite.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
+22257	1015	TEXT	identity.highestPointName	Montagne Pelée	\N	\N	\N	f
+22258	1015	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
+22259	1015	TEXT	species.7.description	Le Moqueur gorge-blanche ([*Ramphocinclus brachyurus*](https://inpn.mnhn.fr/espece/cd_nom/442316\n)) est un petit oiseau à la face dorsale foncée et la face ventrale blanche endémique de la Martinique et de Sainte-Lucie. Il se trouve uniquement dans les zones boisées de la Presqu’île de la Caravelle. Considéré en danger d’extinction en raison de la petite taille de la population, il est victime de la prédation par les espèces introduites et fait l’objet d’un programme de conservation dans le cadre du programme [LIFE BIODIV’OM](https://www.lifebiodivom.fr/especes/moqueur-gorge-blanche/).\n\nStatut dans la Liste rouge des oiseaux de Martinique : en danger critique. 	\N	\N	\N	f
+22260	1015	TEXT	species.8.description	Le Gommier blanc ([*Dacryodes excelsa*](https://inpn.mnhn.fr/espece/cd_nom/447568\n)) est l’un des plus grands arbres des forêts de Martinique, il peut atteindre 35 mètres de haut. Il est exploité pour son bois et sa résine.  \n  \nStatut dans la Liste rouge de la flore vasculaire de Martinique : non évalué.	\N	\N	\N	f
+22261	1015	IMAGE	species.2.image	\N	1063	*Aliger gigas* © divermasterking2000 / CC BY 2.0	\N	f
+22262	1015	IMAGE	ecosystems.ecosystems.4.image	\N	1267	Récif de Martinique © Fabien Lefebvre	\N	f
+22263	1015	TEXT	species.3.description	La Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338\n)) est l’une des cinq espèces de tortues marines qui fréquentent les eaux de Martinique. Si elle est régulièrement observable dans l’eau, en alimentation sur les herbiers, elle ne pond que rarement sur les plages de Martinique. Comme toutes les espèces de tortues marines, elle est menacée d'extinction, notamment en raison des captures accidentelles dans les filets de pêche et la dégradation des sites de ponte. Le dérangement répété par les baigneurs peut également occasionner une forte dépense d’énergie pour les tortues, c’est pourquoi il est recommandé de garder une distance minimum de quelques mètres et de ne pas tenter de les toucher.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger critique. 	\N	\N	\N	f
+22264	1015	TEXT	statistics.3.number	2 000	\N	\N	\N	f
+22265	1015	TEXT	species.1.description	L’Iguane des Petites Antilles ou Iguane péyi ([*Iguana delicatissima*](https://inpn.mnhn.fr/espece/cd_nom/350755\n)) était autrefois présent sur tout le nord des Petites Antilles, depuis Anguilla jusqu’à la Martinique. Il a aujourd’hui disparu de nombreux territoires, et est considéré en danger critique d’extinction. Sa survie est menacée par l’introduction de l’Iguane commun ([*Iguana iguana*](https://inpn.mnhn.fr/espece/cd_nom/350756\n)) avec qui il ne doit pas être confondu. L’Iguane commun exotique se reconnait aux rayures sombres sur la queue et à sa grosse plaque ronde sur la joue, sous le tympan, que ne possèdent pas l’Iguane des Petites Antilles.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger critique.	\N	\N	\N	f
+22266	1015	TEXT	species.2.description	Le Lambi ([*Aliger gigas*](https://inpn.mnhn.fr/espece/cd_nom/972164\n)) est un mollusque dont la coquille imposante peut atteindre 30 cm et 1,5 kg. Victime de la surpêche pour sa chair et parfois l’usage décoratif de sa coquille, son exploitation est aujourd’hui strictement contrôlée. La Martinique en a fait son emblème officiel.  \n  \nStatut dans la Liste rouge mondiale : non évalué.   	\N	\N	\N	f
+22267	1015	TEXT	statistics.1.number	40	\N	\N	\N	f
+22268	1015	TEXT	statistics.0.number	48	\N	\N	\N	f
+22269	1015	TEXT	statistics.2.number	2/3	\N	\N	\N	f
+22270	1015	IMAGE	interests.locations.4.image	\N	1182	Image manquante	\N	f
+22271	1015	TEXT	species.2.name	Le Lambi	\N	\N	\N	f
+22272	1015	TEXT	risks.risks.1.name	Un Observatoire local de la biodiversité	\N	\N	\N	f
+22273	1015	TEXT	species.4.description	L’Ananas bois ([*Aechmea reclinata*](https://inpn.mnhn.fr/espece/cd_nom/629022\n)) a été décrite pour la première fois en 1999 par une équipe du Parc naturel régional. Endémique de Martinique, cette espèce n’a été observée qu’en arrière-mangrove de Genipa et sur la montagne du Vauclin. Peu après sa découverte, une grande part de son aire de répartition a été défrichée illégalement pour y planter de la canne à sucre, mettant en péril cette espèce tout juste inventoriée.\n\nStatut dans la Liste rouge de la flore vasculaire de Martinique : en danger critique. 	\N	\N	\N	f
+22274	1015	TEXT	ecosystems.ecosystems.0.name	Les plages	\N	\N	\N	f
+22275	1015	TEXT	species.5.description	L’Herbe à Tortue ([*Thalassia testudinum*](https://inpn.mnhn.fr/espece/cd_nom/627263)) est une plante marine qui compose les herbiers de phanérogames sous-marins, souvent accompagnée de l’Herbe à Lamentin ([*Syringodium filiforme*](https://inpn.mnhn.fr/espece/cd_nom/627259)). Son aire de répartition couvre l’ensemble des Caraïbes, et de nombreuses espèces marines s’en nourrissent. L'introduction d'une espèce exotique de phanérogame, [*Halophila stipulacea*](https://inpn.mnhn.fr/espece/cd_nom/368620), signalée depuis 2006 dans les eaux martiniquaises, représente une potentielle menace pour ces herbiers indigènes. Des études sont en cours pour suivre son expansion et mesurer ses impacts sur les communautés marines. \n\nStatut dans la Liste rouge mondiale : préoccupation mineure.\n	\N	\N	\N	f
+22276	1015	TEXT	species.6.description	Serpent endémique venimeux, le Trigonocéphale ([*Bothrops lanceolatus*](https://inpn.mnhn.fr/espece/cd_nom/439142\n)) a été victime de sa mauvaise réputation bien que peu d’accidents aient été à déplorer et qu’un anti-venin existe. Des primes à la capture ont longtemps existé et dans les années 1980, la mangouste ([*Urva auropunctata*](https://inpn.mnhn.fr/espece/cd_nom/850071/)) a été introduite des Indes dans le but de le combattre, cependant le serpent étant nocturne et la mangouste diurne, celle-ci s’est rabattue sur les espèces indigènes. Il est aujourd’hui rare sur l’île.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger. 	\N	\N	\N	f
+22277	1015	TEXT	events.0.date	1635	\N	\N	\N	f
+22278	1015	TEXT	identity.populationYear	2017	\N	\N	\N	f
+22279	1015	IMAGE	species.5.image	\N	1065	*Thalassia testudinum* © James St. John / CC BY 2.0 	\N	f
+22280	1015	TEXT	statistics.0.text	Ilets répartis autour de l'île	\N	\N	\N	f
+22281	1015	TEXT	ecosystems.ecosystems.1.name	La forêt humide tropicale	\N	\N	\N	f
+22282	1015	TEXT	events.2.date	1976	\N	\N	\N	f
+22283	1015	TEXT	identity.presentation	Au cœur de l’arc des Petites Antilles, la Martinique, baptisée *Ioünacaera* « l’île aux iguanes » par ses premiers occupants amérindiens, présente une grande diversité de paysages. Au nord, des forêts humides bien conservées entourent le volcan de la Montagne Pelée. Le sud, plus sec et d’une altitude plus faible, est plus peuplé et urbanisé. L'île est entourée de 48 îlets, répartis principalement sur la côte atlantique, sur lesquels on retrouve une végétation adaptée aux milieux très sec et qui accueillent de nombreux oiseaux nicheurs. 	\N	\N	\N	f
+22284	1015	TEXT	identity.population	372 594	\N	\N	\N	f
+22285	1015	TEXT	species.3.name	La Tortue verte	\N	\N	\N	f
+22286	1015	IMAGE	species.8.image	\N	1185	Image manquante	\N	f
+22287	1015	TEXT	species.0.name	Le Matoutou Falaise	\N	\N	\N	f
+22288	1015	TEXT	events.4.date	2014	\N	\N	\N	f
+22289	1015	IMAGE	interests.locations.2.image	\N	1058	L’Anse Meunier dans l’étang des Salines, Martinique © Hervé Nicolas / CC BY-SA 4.0 	\N	f
+22290	1015	IMAGE	ecosystems.ecosystems.2.image	\N	1266	Mangrove, Martinique © Fabien Lefebvre	\N	f
+22291	1015	TEXT	interests.locations.0.description	Créé en 1976, le [Parc naturel régional](http://pnr-martinique.com/) s’étend sur 32 communes et couvre les 2/3 de l’île. Son objectif est de conjuguer le développement de l’île avec la préservation de ses richesses naturelles et culturelles. 	\N	\N	\N	f
+22292	1015	TEXT	risks.risks.1.description	Face aux enjeux  de la préservation et la valorisation de la biodiversité martiniquaise, 43 structures institutionnelles et associatives se sont réunies autour du Parc naturel régional de la Martinique pour la création d’un [Observatoire Martiniquais de la biodiversité](http://www.biodiversite-martinique.fr/#) afin de mutualiser les connaissances, sensibiliser le public et faciliter l’intégration de la biodiversité dans les politiques publiques.	\N	\N	\N	f
+22293	1015	TEXT	interests.locations.2.description	D’une superficie de 207 ha, ce site géré par le Conservatoire du littoral abrite une importante faune et flore patrimoniale. 	\N	\N	\N	f
+22294	1015	TEXT	interests.locations.1.description	A l'est de la Martinique, la presqu’île de la Caravelle présente une grande variété d’écosystèmes : savanes, falaises, forêt, mangroves. Le site est géré par le Parc naturel régional notamment pour y préserver le Moqueur gorge-blanche, oiseau endémique menacé.    	\N	\N	\N	f
+22295	1015	TEXT	ecosystems.ecosystems.3.name	Les herbiers sous-marins	\N	\N	\N	f
+22296	1015	TEXT	identity.subtitle	Des paysages contrastés	\N	\N	\N	f
+22297	1015	IMAGE	species.7.image	\N	1242	*Ramphocinclus brachyurus* ©Vincent Lemoine / OMB	\N	f
+22298	1015	TEXT	species.5.name	L'Herbe à Tortue 	\N	\N	\N	f
+22299	1015	TEXT	risks.risks.0.description	L’expansion démographique et l’urbanisation, surtout au centre et au sud de l’île, impactent les milieux naturels de la Martinique : défrichements, rejets domestiques, industriels et agricoles,…\n\nLes mangroves de l'île sont des milieux particulièrement sensibles et soumis à de fortes pressions anthropiques : aménagements, décharge, pollution, activité agricole. Un projet de réserve naturelle régionale est à l’œuvre concernant les mangroves de la baie de Génipa.\nLes coupes illégales de bois et le trafic d’espèces indigènes, du Lambi ou du Matoutou falaise par exemple, sont des problématiques importantes, et la règlementation existante est difficile à faire appliquer.\n\nDe nombreuses espèces indigènes sont menacées par les espèces exotiques introduites : rat, mangouste, Iguane commun, etc. En milieu marin, le Poisson-lion, espèce originaire de la région indo-pacifique qui a colonisé toute la Caraïbe, est un consommateur vorace de poissons qui ne connait pas de prédateurs et a une stratégie de reproduction très efficace. Il est considéré comme une menace majeure pour la biodiversité marine.  \n\nLes échouages de sargasses sont un phénomène naturel dont l’ampleur a considérablement augmenté ces dernières années. Les radeaux denses et les dépôts épais qu’elles forment sur les plages piègent de nombreuses espèces dont des tortues, et ont également un impact sanitaire et économique important.\n\nLa chlordécone, pesticide utilisé dans les bananeraies entre les années 1970 et 1990 a massivement pollué les milieux naturels de l’île. Si ces impacts sur la santé humaine commencent à être connus, peu de données sont disponibles sur ses conséquences sur les espèces. Cependant, des études ont montré une importante contamination des organismes marins côtiers ce qui a conduit à l'interdiction de la pêche dans tous les cours d'eau et sur une partie des zones côtières de l'île.  	\N	\N	\N	f
+22300	1015	TEXT	ecosystems.ecosystems.2.description	A l’interface entre le milieu marin et le milieu terrestre, la mangrove a des rôles fonctionnels très importants : protection contre l’érosion, piège à sédiment, puit de carbone… Elles couvrent actuellement plus de 2 000 ha en Martinique, mais occupaient autrefois des surfaces beaucoup plus importantes avant d’être déboisées. 	\N	\N	\N	f
+22301	1015	TEXT	ecosystems.ecosystems.1.description	Les forêts se trouvent principalement dans le nord, sur les massifs montagneux et difficilement accessibles des pitons du Carbet de la Montagne Pelée. On distingue plusieurs types de forêt présentant différents cortèges floristiques en fonction de l’altitude. On y trouve une importante diversité, notamment en espèces endémiques. 	\N	\N	\N	f
+22302	1015	TEXT	ecosystems.ecosystems.0.description	Couvrant 50 km de l’île, surtout dans le sud, les plages sont des lieux de ponte pour 3 espèces de tortues marines et sont également bordées par un cortège floristique intéressant : patates bord de mer, pois bord de mer, raisinier bord de mer… Cette végétation est toutefois fortement dégradée par les installations touristiques et l’importante fréquentation de certaines plages. 	\N	\N	\N	f
+22303	1015	TEXT	identity.highestPoint	1 397	\N	\N	\N	f
+22304	1015	TEXT	interests.locations.4.description	Ces quatre îlets, gérés par le Parc naturel régional et l’Office national des forêts, sont l'un des plus importants sites de nidification des oiseaux marins des Petites Antilles. On y trouve entre autre puffins, sternes, moines…. L’accès en est strictement interdit.	\N	\N	\N	f
+22305	1015	TEXT	risks.risks.0.name	Des préoccupations communes aux territoires antillais	\N	\N	\N	f
+22306	1015	IMAGE	interests.locations.1.image	\N	1057	Presqu’île de la Caravelle © L. Léonard	\N	f
+22307	1015	IMAGE	ecosystems.ecosystems.1.image	\N	1268	Forêt humide de Martinique © Fabien Lefebvre	\N	f
+22308	1015	TEXT	interests.locations.3.description	Ces deux zones de forêt humide au nord de l'île sont classées en Réserve biologique intégrale, gérées par l'Office national des forêts. La forêt y est laissée en évolution naturelle, l'exploitation et les interventions y sont interdites, à l'exception des aménagements pour la sécurité du public. La Montagne Pelée, toujours en activité, est étroitement surveillée.	\N	\N	\N	f
+22309	1015	TEXT	identity.title	La Martinique,  \n« l’île aux iguanes » 	\N	\N	\N	f
+22310	1015	IMAGE	species.6.image	\N	1183	Image manquante	\N	f
+22311	1015	TEXT	interests.locations.1.name	La Réserve naturelle nationale de la presqu’île de la Caravelle	\N	\N	\N	f
+22312	1015	TEXT	statistics.2.text	de l'île couverts par le Parc naturel régional 	\N	\N	\N	f
+22313	1015	IMAGE	species.0.image	\N	1061	*Caribena versicolor* © A. Lacoeulhe	\N	f
+22314	1015	TEXT	events.1.date	1929-1932	\N	\N	\N	f
+22315	1015	TEXT	interests.locations.4.name	La réserve naturelle nationale des îlets de Sainte Anne	\N	\N	\N	f
+22316	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
+22317	1000	TEXT	carousel.title	Découvrez la biodiversité des outre-mer	\N	\N	\N	f
+22318	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre 	\N	\N	\N	f
+22319	1000	TEXT	testimony.title	Une biodiversité unique mais fragile, protégeons-la !	\N	\N	\N	f
+22320	1000	IMAGE	testimony.image	\N	1262	Agents de l’OFB en Guyane © Raphael Gailhac	\N	f
+22321	1000	IMAGE	carousel.images.1.image	\N	1260	Martinique © F. Lefevbre	\N	f
+22322	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
+22323	1000	TEXT	science.text	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.	\N	\N	\N	f
+22324	1000	TEXT	carousel.text	Partez à la rencontre des espèces et des écosystèmes des territoires français d’outre-mer. 	\N	\N	\N	f
+22325	1000	IMAGE	carousel.images.2.image	\N	1004	Dendrobate à ventre tacheté *Ranitomeya amazonica* © Raphaël Gailhac	\N	f
+22326	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
+22327	1000	IMAGE	science.image	\N	1251	 Observations de terrain à Saint-Pierre-et-Miquelon © Nathalie De Lacoste	\N	f
 21453	1009	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
-19809	1015	TEXT	interests.locations.4.name	La réserve naturelle nationale des îlets de Sainte Anne	\N	\N	\N	f
+22328	1000	TEXT	science.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
+22329	1000	TEXT	testimony.quote	Ces actions conjuguées entraînent un accroissement de la biodiversité, une amélioration de la qualité de l’eau, de l’air mais aussi de la qualité de vie.	\N	\N	\N	f
+22330	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
+22331	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
+22332	1000	IMAGE	carousel.images.0.image	\N	1258	Fonds marins Martinique ©  F. Lefevbre	\N	f
+22333	1000	TEXT	presentation.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
+22334	1000	TEXT	carousel.territoriesButton	Découvrir les territoires	\N	\N	\N	f
+22335	1000	TEXT	testimony.text	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont des outils qui permettent de suivre différents paramètres de la biodiversité, pour renseigner de son évolution.	\N	\N	\N	f
 21454	1009	TEXT	understand.text2	Ce nombre comprend uniquement les espèces dites indigènes des territoires d'outre-mer, c’est-à-dire naturellement présentes sur les territoires. Il ne comprend pas les espèces introduites, volontairement ou involontairement, par les humains (animaux domestiques, plantes cultivées, etc.).\nCe nombre ne prend pas non plus en compte les espèces éteintes.	\N	\N	\N	f
 21201	1005	LINK	onb.link	Retrouvez les indicateurs sur le site de l’ONB	\N	\N	https://naturefrance.fr/indicateurs	f
 21202	1005	TEXT	inpn.description	L’INPN recense les espèces (animales, végétales et fongiques), les habitats naturels, les espaces protégés et le patrimoine géologique, en métropole et en outre-mer. L’ensemble des acteurs de l’environnement contribuent à la mise à jour régulière des informations sur le site de l’INPN dans le cadre du Système d’information de l’Inventaire national du patrimoine naturel (SINP). L’INPN met à disposition de tous des données de référence, validées par des réseaux d'experts. Le Muséum national d'Histoire naturelle en assure la responsabilité scientifique.	\N	\N	\N	f
@@ -887,29 +916,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19303	1020	IMAGE	species.9.image	\N	1203	Image manquante	\N	f
 19304	1020	TEXT	events.2.description	Création de la première aire protégée de l'archipel, l'îlot Leprédour	\N	\N	\N	f
 19305	1020	TEXT	events.3.description	Inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
-21958	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
-21959	1000	TEXT	carousel.title	Découvrez la biodiversité des outre-mer	\N	\N	\N	f
 19306	1020	IMAGE	identity.image	\N	1088	Île des Pins, Nouvelle-Calédonie © Sébastien Jermer/Unsplash	\N	f
 19307	1020	TEXT	events.7.description	Publication du Code de l'environnement de la Province des îles Loyauté	\N	\N	\N	f
 21206	1005	TEXT	questions.0.answer	La biodiversité, ou diversité biologique, désigne la diversité des formes de vie sur terre, c’est à dire l’ensemble du tissu vivant de la planète : plantes, animaux, champignons, bactéries, etc. Elle est le produit de la lente évolution du monde du vivant, depuis les premiers organismes connus datant de 3,5 milliards d’années.\nElle comprend 3 niveaux de définition :\n    • La diversité des écosystèmes, c’est-à-dire des milieux de vie : océans, prairies, forêts, etc. jusqu’à l’échelle d’un organisme ou d’une cellule !\n    • La diversité des espèces qui vivent dans ces milieux, et sont en relation les unes avec les autres ;\n    • La diversité génétique, c’est-à-dire la diversité des individus au sein de ces espèces.\nDe nombreux biens et services indispensables aux activités humaines en dépendent : nourriture, pollinisation, médicaments, matières premières, fertilisation des sols, épuration de l’eau, etc. 	\N	\N	\N	f
 21207	1005	TEXT	questions.0.quote	La biodiversité est encore largement méconnue : on connait seulement 1,8 million d’espèces sur une diversité estimée d’environ 100 millions d’espèces !	\N	\N	\N	f
-21960	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre 	\N	\N	\N	f
-21961	1000	TEXT	testimony.title	Une biodiversité unique mais fragile, protégeons-la !	\N	\N	\N	f
-21962	1000	IMAGE	testimony.image	\N	1002	Un agent de l’OFB en Guyane © Raphael Gailhac	\N	f
 21847	1012	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 21848	1012	TEXT	understand.text2	Ces milieux ont une importance au regard des services écosystémiques qu’ils procurent aux humains : régulation des crues et des inondations, protection des côtes de l’érosion et des tempêtes, épuration des eaux...\nSi des phénomènes naturels tels que les cyclones peuvent impacter les mangroves, de nombreuses causes de leur dégradation ont une origine humaine : changement climatique, artificialisation, exploitation intensive de ses ressources (bois, chasse, etc.), dépôts d’ordures, déversement des eaux usées, pollutions, pression touristique, etc. 	\N	\N	\N	f
-21963	1000	IMAGE	carousel.images.1.image	\N	1260	Martinique © F. Lefevbre	\N	f
-21964	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
-21965	1000	TEXT	science.text	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.	\N	\N	\N	f
-21966	1000	TEXT	carousel.text	Partez à la rencontre des espèces et des écosystèmes des territoires français d’outre-mer. 	\N	\N	\N	f
-21967	1000	IMAGE	carousel.images.2.image	\N	1004	Dendrobate à ventre tacheté *Ranitomeya amazonica* © Raphaël Gailhac	\N	f
-21968	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
-21969	1000	IMAGE	science.image	\N	1251	 Observations de terrain à Saint-Pierre-et-Miquelon © Nathalie De Lacoste	\N	f
-21970	1000	TEXT	science.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
-21971	1000	TEXT	testimony.quote	Ces actions conjuguées entraînent un accroissement de la biodiversité, une amélioration de la qualité de l’eau, de l’air mais aussi de la qualité de vie.	\N	\N	\N	f
-21972	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
-21973	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
-21974	1000	IMAGE	carousel.images.0.image	\N	1258	Fonds marins Martinique ©  F. Lefevbre	\N	f
 19308	1020	TEXT	events.7.date	2016	\N	\N	\N	f
 19309	1020	TEXT	interests.locations.0.name	Le Parc naturel de la Mer de Corail 	\N	\N	\N	f
 19310	1020	TEXT	events.0.description	Dislocation du supercontinent Gondwana et séparation de la Nouvelle-Calédonie avec l’Australie et la Nouvelle-Zélande	\N	\N	\N	f
@@ -1001,9 +1013,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19843	1021	TEXT	interests.locations.5.name	[La Réserve naturelle marine](http://www.reservemarinereunion.fr/)	\N	\N	\N	f
 19844	1021	TEXT	events.0.date	-2 à 3 millions d’années,	\N	\N	\N	f
 19845	1021	TEXT	identity.populationYear	2017	\N	\N	\N	f
-21975	1000	TEXT	presentation.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
-21976	1000	TEXT	carousel.territoriesButton	Découvrir les territoires	\N	\N	\N	f
-21977	1000	TEXT	testimony.text	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont des outils qui permettent de suivre différents paramètres de la biodiversité, pour renseigner de son évolution.	\N	\N	\N	f
 21211	1005	TEXT	onb.description	Depuis 2012, l’Observatoire national de la biodiversité, actuellement piloté par l’Office français pour la biodiversité (OFB), publie des indicateurs sur l’état de la biodiversité française, avec la contribution de nombreux partenaires. Ils sont régulièrement actualisés et enrichis.\nLe Compteur met en lumière les indicateurs de l’ONB qui concernent les outre-mer et contribue à la création de nouveaux indicateurs pour ces territoires.	\N	\N	\N	f
 19846	1021	IMAGE	species.5.image	\N	1191	Image manquante	\N	f
 19847	1021	TEXT	statistics.0.text	hectares de récifs coralliens protégés par la réserve marine	\N	\N	\N	f
@@ -1160,12 +1169,30 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19625	1001	TEXT	events.7.description	Publication de la Liste rouge de la flore vasculaire de Guadeloupe	\N	\N	\N	f
 19626	1001	TEXT	events.7.date	2019	\N	\N	\N	f
 19627	1001	TEXT	interests.locations.0.name	Le Parc national de la Guadeloupe	\N	\N	\N	f
-19905	1022	TEXT	events.2.description	Fermeture naturelle de l’isthme	\N	\N	\N	f
-19906	1022	TEXT	events.3.description	Première étude publiée sur la flore de Saint-Pierre et Miquelon (thèse de pharmacie d’Alphonse Gaulthier)	\N	\N	\N	f
+22015	1022	TEXT	events.2.description	Fermeture naturelle de l’isthme	\N	\N	\N	f
+22016	1022	TEXT	events.3.description	Première étude publiée sur la flore de Saint-Pierre et Miquelon (thèse de pharmacie d’Alphonse Gaulthier)	\N	\N	\N	f
 19351	1020	TEXT	species.0.description	[*Sphaeropteris intermedia*](https://www.endemia.nc/flore/fiche106) est une espèce de fougère arborescente endémique parmi les plus grandes au monde, qui peut atteindre 35 mètres de haut. Commune sur le territoire, cette plante est utilisée en médecine traditionnelle et son tronc très solide est également utilisé pour la sculpture ou la confection de sagaies.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure.  \nNom en langues kanak : Groubaï (drubéa)\n	\N	\N	\N	f
 19352	1020	TEXT	identity.highestPointName	Mont Panié	\N	\N	\N	f
 19353	1020	TEXT	ecosystems.ecosystems.2.name	Les maquis miniers	\N	\N	\N	f
 19354	1020	TEXT	species.7.description	Ce petit oiseau marin présente un dos gris, un ventre blanc, une tête pourvue d'une calotte noire et un bec droit et pointu. Une sous-espèce de la Sterne néreis, ([*Sternula nereis exul*](https://www.endemia.nc/faune/fiche52)) niche sur les îlots de Nouvelle-Calédonie, notamment autour des îlots du Lagon Sud, des îlots de Koumac et aux îles Chesterfield. Ses faibles effectifs de populations en font une sous-espèce très menacée.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
+22017	1022	IMAGE	identity.image	\N	1109	L'étang du Bois brûlé © Nathalie de Lacoste	\N	f
+22018	1022	TEXT	events.7.description	Projet de Réserve naturelle nationale sur le Grand Barachois, finalement abandonné	\N	\N	\N	f
+22019	1022	TEXT	events.7.date	1988 - 1992 	\N	\N	\N	f
+22020	1022	TEXT	interests.locations.0.name	Le Grand Barachois	\N	\N	\N	f
+22021	1022	TEXT	events.0.description	Prise de possession française des îles par Jacques Cartier	\N	\N	\N	f
+22022	1022	TEXT	events.1.description	Première installation permanente des pêcheurs bretons, normands et basques	\N	\N	\N	f
+22023	1022	TEXT	events.8.description	Création du Conseil Scientifique Territorial du Patrimoine Naturel (CSTPN) et projet de Réserve naturelle nationale du Grand Colombier, gelé pour le moment	\N	\N	\N	f
+22024	1022	TEXT	events.9.description	Ouverture de la maison de la nature et de l'environnement	\N	\N	\N	f
+22025	1022	IMAGE	ecosystems.image	\N	1265	Paysage enneigé de Saint-Pierre-et-Miquelon © Bruno Letournel	\N	f
+22026	1022	TEXT	identity.species	2 083	\N	\N	\N	f
+22027	1022	IMAGE	ecosystems.ecosystems.0.image	\N	1264	Cap de Miquelon © Nathalie de Lacoste	\N	f
+22028	1022	TEXT	species.8.name	Le Cerf de Virginie 	\N	\N	\N	f
+22029	1022	TEXT	events.6.description	Disparition de l’archipel du Lagopède des saules (*Lagopus lagopus*), oiseau caractéristique des forêts boréales	\N	\N	\N	f
+22030	1022	TEXT	events.6.date	1985	\N	\N	\N	f
+22031	1022	TEXT	events.4.description	Introduction volontaire du Lièvre d’Amérique pour la chasse	\N	\N	\N	f
+22032	1022	TEXT	events.5.description	Introduction du Cerf de Virginie en 1953 à des fins cynégétiques	\N	\N	\N	f
+22033	1022	TEXT	interests.locations.2.name	Le Grand Colombier	\N	\N	\N	f
+22034	1022	TEXT	ecosystems.ecosystems.3.description	Espèces pionnières et graminées colonisent ces milieux littoraux souvent fragilisés par les dégradations (travaux, incendies, pâturages). Espèce typique de ces milieux dunaires, l’oyat (ou Ammophile à ligule courte, *Ammophila breviligulata*) joue un rôle essentiel dans la fixation des dunes et limite l’érosion. En arrière dune, une grande diversité d’espèces indigènes, parfois très rares, cohabitent avec des graminées introduites et naturalisées.	\N	\N	\N	f
 19355	1020	TEXT	species.8.description	Le Niaouli ([*Melaleuca quinquenervia*](https://www.endemia.nc/flore/fiche445)), est un arbre utilisé en médecine et pour la construction, que l’on retrouve dans les milieux ouverts et anthropisés. Il se développe particulièrement bien dans les zones touchées par les incendies en raison de ses propriétés ignifuges. Indigène en Nouvelle-Calédonie, cette espèce a été introduite dans d’autres territoires comme la Guyane où elle présente un profil envahissant.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure.  \nNoms en langues kanak : itachou (paicî), pichöö (xârâcùù), bé (drubéa)	\N	\N	\N	f
 19356	1020	IMAGE	species.2.image	\N	1240	*Dugong dugong* © Hélène Udo	\N	f
 19357	1020	TEXT	species.11.name	La Baleine à bosses	\N	\N	\N	f
@@ -1189,6 +1216,16 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19375	1020	IMAGE	species.5.image	\N	1199	Image manquante	\N	f
 19376	1020	TEXT	statistics.0.text	de la flore est endémique	\N	\N	\N	f
 19377	1020	TEXT	ecosystems.ecosystems.1.name	Les récifs coralliens et les lagons	\N	\N	\N	f
+22035	1022	TEXT	ecosystems.ecosystems.4.description	« *Les Laminaires sont à la mer ce que la forêt est à la terre* » Daniel Abraham, naturaliste de l'archipel.\n\nFormant de véritables forêts sous-marines, ces grandes algues brunes jouent un rôle très important dans l’équilibre de l’océan, formant un habitat pour de nombreuses espèces animales et végétales. Elles contiennent également des composants utilisés dans le monde en pharmacologie ou agro-alimentaire.	\N	\N	\N	f
+22036	1022	TEXT	ecosystems.ecosystems.4.name	Les forêts de laminaires	\N	\N	\N	f
+22037	1022	IMAGE	species.1.image	\N	1229	Macareux moine © Bruno Letournel	\N	f
+22038	1022	TEXT	events.5.date	1953	\N	\N	\N	f
+22039	1022	TEXT	identity.marineArea	12 300	\N	\N	\N	f
+22040	1022	TEXT	events.8.date	2007	\N	\N	\N	f
+22041	1022	IMAGE	interests.locations.0.image	\N	1217	Grand Barachois © Nathalie De Lacoste	\N	f
+22042	1022	TEXT	species.6.name	La Linnée boréale	\N	\N	\N	f
+22043	1022	IMAGE	interests.locations.3.image	\N	1236	La Vallée du Milieu © Nathalie De Lacoste	\N	f
+22044	1022	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
 19378	1020	TEXT	events.2.date	1940 	\N	\N	\N	f
 19379	1020	TEXT	identity.presentation	La Nouvelle-Calédonie se caractérise par le taux d'endémisme particulièrement élevé de sa flore (76 % d'espèces endémiques) et de sa faune terrestre, ainsi que l'existence d'écosystèmes terrestres remarquables : forêt humide, maquis minier, zones humides... La biodiversité marine est également d'une richesse exceptionnelle, l'archipel abritant notamment la seconde plus grande barrière récifale au monde. Cette richesse est reconnue au niveau international par l'inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO. 	\N	\N	\N	f
 19380	1020	TEXT	identity.population	271 407	\N	\N	\N	f
@@ -1211,12 +1248,14 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19397	1020	TEXT	ecosystems.ecosystems.2.description	Occupant un peu moins du quart de la surface du territoire, ces habitats ont une végétation très particulière du fait de la richesse du sol en minerais (fer, magnésium, nickel) et pauvre en éléments nutritifs. On en distingue plusieurs types en fonction de leur altitude. La richesse floristique exceptionnelle qu'ils abritent (1 170 espèces à 89 % endémiques) peut être menacée par le développement de projets miniers. La faune locale, adaptée aux conditions de vie difficile de ce milieu sec et rocailleux, compte principalement des insectes et des reptiles.	\N	\N	\N	f
 19398	1020	TEXT	species.10.name	Les Roussettes	\N	\N	\N	f
 19399	1020	TEXT	ecosystems.ecosystems.1.description	La Nouvelle-Calédonie possède la 2ème plus grande barrière de corail du monde, longue de 1 600 km et quasi-continue. D'une superficie totale de 23 400 kms<sup>2</sup>, les récifs et lagons calédoniens sont parmi les plus étendus et les plus riches de la planète ! La diversité observée, aussi bien en termes d’espèces que de structures récifales, y est exceptionnelle. Le lagon Sud constitue est une zone de reproduction privilégiée pour la Baleine à bosse. Six zones de lagons sont classées au patrimoine mondial de l’UNESCO depuis 2008.	\N	\N	\N	f
-19907	1022	IMAGE	identity.image	\N	1109	L'étang du Bois brûlé © Nathalie de Lacoste	\N	f
 19400	1020	TEXT	ecosystems.ecosystems.0.description	Ces forêts dites « sempervirentes » couvrent un peu plus de 20 % du territoire, avec des massifs de plusieurs milliers d’hectares d’un seul tenant. Elles concentrent plus de 2000 espèces végétales donc 80 % endémiques, et offrent un habitat à une faune diversifiée : oiseaux, reptiles, chauve-souris, insectes… Elles sont cependant victimes de fortes dégradations (incendies, exploitation minière, espèces exotiques envahissantes…). 	\N	\N	\N	f
 19401	1020	TEXT	identity.highestPoint	1 628	\N	\N	\N	f
 19402	1020	TEXT	interests.locations.4.description	Situé sur la côte Sud-Est de la Grande Terre, entre Thio et Yaté, [ce parc provincial](https://www.province-sud.nc/aires-protegees/parc-cote-oubliee) créé en 2019 protège désormais 93 000 ha terrestres et 29 200 ha marins. Ce véritable trésor de biodiversité compte 98 % d’espèces végétales endémiques, des centaines d’espèces rares ou menacées, la moitié des forêts humides de la Nouvelle-Calédonie et un patrimoine culturel et immatériel précieux. Ce classement a par ailleurs induit le gel d’une centaine de titres miniers. \n	\N	\N	\N	f
 19403	1020	TEXT	risks.risks.0.name	Une richesse en biodiversité soumise à des fortes pressions 	\N	\N	\N	f
 19404	1020	IMAGE	interests.locations.1.image	\N	1090	Poisson-coffre dans les récifs d’Entrecasteaux © DR	\N	f
+22045	1022	TEXT	interests.locations.3.name	La Vallée du Milieu	\N	\N	\N	f
+22046	1022	TEXT	statistics.1.text	des habitants de l'archipel résident à Saint-Pierre	\N	\N	\N	f
+22047	1022	TEXT	events.9.date	2017	\N	\N	\N	f
 20684	1008	TEXT	understand.text1	Qualifier une espèce d’endémique, cela veut dire que sa répartition est limitée à une zone géographique peu étendue et qu’elle ne se retrouve nulle part ailleurs dans le monde. Cela donne au territoire en question une responsabilité particulièrement forte dans la conservation du patrimoine mondial. On parle également d'espèces "sub-endémiques" lorsque leur répartition s'étend sur quelques territoires proches mais reste très limitée. \nEn raison de cette aire de répartition géographique restreinte, ces espèces sont généralements plus sensibles aux pressions liées aux activités humaines et se retrouvent plus souvent en danger de disparition que les espèces plus largement répandues. \n\nReflet de l'état actuel des connaissances, ce chiffre peut augmenter en raison de l'amélioration des connaissances scientifiques et de la [découverte de nouvelles espèces](https://preprod.biodiversite-outre-mer.fr/indicateurs/nouvelles-especes), mais il peut également diminuer lorsque des espèces s'éteignent.  	\N	\N	\N	f
 20685	1008	TEXT	territories.title	Nombre d'espèces endémiques	\N	\N	\N	f
 20686	1008	TEXT	understand.title1	La notion d'endémisme	\N	\N	\N	f
@@ -1224,14 +1263,33 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20688	1008	TEXT	presentation.descriptionTerritories	espèces sont endémiques du territoire	\N	\N	\N	f
 20689	1008	TEXT	understand.paragraphs.0.title	Quelques exemples	\N	\N	\N	f
 20690	1008	TEXT	understand.keyword	endémique	\N	\N	\N	f
+22048	1022	IMAGE	species.4.image	\N	1223	Sapin Baumier © Nathalie De Lacoste	\N	f
+22049	1022	TEXT	events.3.date	1866	\N	\N	\N	f
+22050	1022	IMAGE	ecosystems.ecosystems.3.image	\N	1220	Dunes de sable sur l'isthme © Nathalie de Lacoste	\N	f
+22051	1022	IMAGE	species.3.image	\N	1226	Pluvier siffleur en période de reproduction © Patrick Hacala	\N	f
+22052	1022	TEXT	species.1.name	Le Macareux moine 	\N	\N	\N	f
+22053	1022	TEXT	species.7.name	Les Botryches	\N	\N	\N	f
+22054	1022	TEXT	interests.title	Lieux d’intérêt	\N	\N	\N	f
+22055	1022	TEXT	species.4.name	Le Sapin baumier	\N	\N	\N	f
+22056	1022	TEXT	identity.area	242	\N	\N	\N	f
+22057	1022	TEXT	species.0.description	Une vingtaine d'espèces de mammifères marins fréquentent les eaux de Saint-Pierre et Miquelon, dont deux espèces de phoques : le Phoque veau-marin ([*Phoca vitulina*](https://inpn.mnhn.fr/espece/cd_nom/60811)) et le Phoque gris ([*Halichoerus grypus*](https://inpn.mnhn.fr/espece/cd_nom/60776)). C’est sur les bancs de sable de la lagune du Grand Barachois qu’ils se regroupent en plus grand nombre, mais peuvent être observés partout sur les côtes de l’archipel.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure pour les deux espèces. 	\N	\N	\N	f
+22058	1022	TEXT	identity.highestPointName	Morne de la Grande Montagne	\N	\N	\N	f
 20691	1008	TEXT	ecogestures.title	Comment préserver les espèces endémiques ? 	\N	\N	\N	f
 20692	1008	IMAGE	presentation.image	\N	1034	Kaori de forêt (Agathis lanceolata) © Mickaël T / CC BY 2.0	\N	f
+22059	1022	TEXT	ecosystems.ecosystems.2.name	La forêt boréale 	\N	\N	\N	f
+22060	1022	TEXT	species.7.description	Dans les pelouses sableuses d’arrière dune se cachent plusieurs espèces rares de botryches, comme le Botryche à feuille de Matricaire ([*Botrychium matricariifolium*](https://inpn.mnhn.fr/espece/cd_nom/86186\n)). Il s’agit de petites fougères vivaces dont le nom provient du grec « botrus » signifiant grappes, qui se réfère à l’aspect de ses fructifications.  \n  \nStatut dans la Liste rouge mondiale : espèce non évaluée (pour *Botrychium matricariifolium*). 	\N	\N	\N	f
+22061	1022	TEXT	species.8.description	Peu de mammifères terrestres sont indigènes de l’archipel. Le Cerf de Virginie ([*Odocoileus virginianus*](https://inpn.mnhn.fr/espece/cd_nom/645125\n)) a été introduit à Miquelon et Langlade en 1953 pour la chasse. Grâce à leurs importantes capacités d’adaptation et à l’absence de prédateur naturel, les populations de cerfs se sont largement développées et freinent désormais fortement la régénération de la forêt boréale. L’espèce n'est pas présente sur l’île de Saint-Pierre. \n  \nStatut dans la Liste rouge mondiale : préoccupation mineure.	\N	\N	\N	f
+22062	1022	IMAGE	species.2.image	\N	1228	Lièvre arctique © Daniel Koelsch	\N	f
+22063	1022	IMAGE	ecosystems.ecosystems.4.image	\N	1215	Image manquante	\N	f
 19405	1020	IMAGE	ecosystems.ecosystems.1.image	\N	1093	La piscine naturelle de la baie d’Oro © Jeremy Zero/Unsplash	\N	f
 19406	1020	TEXT	interests.locations.3.description	Autour du point culminant de la Nouvelle-Calédonie, cette réserve de 5 400 hectares a été créée en 1950. Cette réserve botanique exceptionnelle se caractérise par une mosaïque de formations forestières abritant une faune et une flore remarquable : kaoris, palmiers du genre *Clinosperma*, oiseaux (Méliphage noir, Pétrel de Tahiti), papillons...	\N	\N	\N	f
 19407	1020	IMAGE	species.10.image	\N	1243	Image manquante	\N	f
 19408	1020	TEXT	identity.title	La Nouvelle-Calédonie,\nun hotspot de biodiversité dans le Pacifique	\N	\N	\N	f
 19409	1020	IMAGE	species.6.image	\N	1200	Image manquante	\N	f
 19410	1020	TEXT	interests.locations.1.name	Les lagons, inscrits au Patrimoine mondial de l'UNESCO 	\N	\N	\N	f
+22064	1022	TEXT	species.3.description	Le Pluvier siffleur ([*Charadrius melodus*](https://inpn.mnhn.fr/espece/cd_nom/441752\n)) est un petit oiseau limicole, dont la couleur du plumage se confond avec le sable et les graviers des plages où il se nourrit et niche. Il est actuellement le limicole nicheur le plus menacé dans l'archipel, à cause du dérangement important causé par l’activité humaine au niveau de l’isthme entre Miquelon et Langlade, site à haute fréquentation locale et touristique pendant l’été. Faute de dispositifs de protection efficaces la dernière nichée observée en 2019 a été un échec, et un seul individu a été observé en 2020.  \n  \nStatut dans la Liste rouge mondiale : quasi menacé. 	\N	\N	\N	f
+22065	1022	TEXT	species.1.description	Le Macareux moine ([*Fratercula arctica*](https://inpn.mnhn.fr/espece/cd_nom/3402\n)) est l’une des plus importantes populations d’oiseaux nicheurs de l’archipel, avec environ 10 000 couples présents sur l'îlot du Grand Colombier.\n\nStatut dans la Liste rouge mondiale : vulnérable. 	\N	\N	\N	f
+22066	1022	TEXT	species.2.description	Le Lièvre américain ([*Lepus americanus*](https://inpn.mnhn.fr/espece/cd_nom/456604\n)) et le Lièvre arctique ([*Lepus arcticus*](https://inpn.mnhn.fr/espece/cd_nom/61707\n)) ont été introduits pour la chasse respectivement en 1881 et 1982. Présents sur les trois îles, ils occupent des milieux différents : le Lièvre américain se concentre dans les milieux forestiers, sur lesquels il exerce une pression non négligeable, tandis que le Lièvre arctique préfère la végétation de la toundra, formée d’arbustes à éricacées, de lichens et de mousses.  \n  \nStatut dans la Liste rouge mondiale : préoccupation mineure pour les deux espèces. 	\N	\N	\N	f
 20111	1023	IMAGE	presentation.file	\N	1113	jeter ses déchets covid	\N	f
 20112	1023	IMAGE	action.cards.2.icon	\N	1116	Tri	\N	f
 20113	1023	TEXT	presentation.name	Je ne jette pas mes déchets dans la nature	\N	\N	\N	f
@@ -1261,17 +1319,11 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19630	1001	TEXT	events.0.description	Disparition du Lamantin des Caraïbes (*Trichechus manatus*) des eaux de Guadeloupe	\N	\N	\N	f
 19631	1001	TEXT	events.1.description	Introduction du Raton-Laveur (*Procyon lotor*) en Guadeloupe depuis le continent américain	\N	\N	\N	f
 19632	1001	TEXT	events.8.description	2e plan national d'actions en faveur des tortues marines des Antilles françaises	\N	\N	\N	f
-19908	1022	TEXT	events.7.description	Projet de Réserve naturelle nationale sur le Grand Barachois, finalement abandonné	\N	\N	\N	f
-19909	1022	TEXT	events.7.date	1988 - 1992 	\N	\N	\N	f
-19910	1022	TEXT	interests.locations.0.name	Le Grand Barachois	\N	\N	\N	f
-19911	1022	TEXT	events.0.description	Prise de possession française des îles par Jacques Cartier	\N	\N	\N	f
-19912	1022	TEXT	events.1.description	Première installation permanente des pêcheurs bretons, normands et basques	\N	\N	\N	f
-19913	1022	TEXT	events.8.description	Création du Conseil Scientifique Territorial du Patrimoine Naturel (CSTPN) et projet de Réserve naturelle nationale du Grand Colombier, gelé pour le moment	\N	\N	\N	f
-19914	1022	TEXT	events.9.description	Ouverture de la maison de la nature et de l'environnement	\N	\N	\N	f
-19915	1022	IMAGE	ecosystems.image	\N	1111	L’Île aux Marins, Saint-Pierre © Nathalie de Lacoste	\N	f
-19916	1022	TEXT	identity.species	2 083	\N	\N	\N	f
-19917	1022	IMAGE	ecosystems.ecosystems.0.image	\N	1106	La Vallée des Sept Étangs en automne © Nathalie de Lacoste	\N	f
-19918	1022	TEXT	species.8.name	Le Cerf de Virginie 	\N	\N	\N	f
+22067	1022	TEXT	statistics.1.number	86 %  	\N	\N	\N	f
+22068	1022	TEXT	statistics.0.number	La seule 	\N	\N	\N	f
+22069	1022	TEXT	statistics.2.number	1 000	\N	\N	\N	f
+22070	1022	IMAGE	interests.locations.4.image	\N	1235	Saint-Pierre © Laurent Malthieux	\N	f
+22071	1022	TEXT	species.2.name	Les lièvres	\N	\N	\N	f
 20126	1026	IMAGE	presentation.file	\N	1134	test	\N	f
 20127	1026	IMAGE	action.cards.2.icon	\N	1133	jetable	\N	f
 20128	1026	TEXT	presentation.name	Je réduis mes déchets et limite ma consommation de plastique	\N	\N	\N	f
@@ -1287,65 +1339,67 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20138	1026	TEXT	understand.quote	A l’échelle mondiale, un tiers des déchets plastiques se retrouve dans la nature. Seuls 9% des déchets plastiques sont recyclés dans le monde.	\N	\N	\N	f
 20139	1026	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20140	1026	TEXT	action.cards.0.description	Je refuse les sacs plastiques à usage unique, j'utilise des sacs réutilisables en tissus ou en matières naturelles.	\N	\N	\N	f
-19919	1022	TEXT	events.6.description	Disparition de l’archipel du Lagopède des saules (*Lagopus lagopus*), oiseau caractéristique des forêts boréales	\N	\N	\N	f
-19920	1022	TEXT	events.6.date	1985	\N	\N	\N	f
-19921	1022	TEXT	events.4.description	Introduction volontaire du Lièvre d’Amérique pour la chasse	\N	\N	\N	f
-19922	1022	TEXT	events.5.description	Introduction du Cerf de Virginie en 1953 à des fins cynégétiques	\N	\N	\N	f
+22072	1022	TEXT	species.4.description	Le Sapin baumier ([*Abies balsamea*](https://inpn.mnhn.fr/espece/cd_nom/717022\n)) est le conifère dominant de la forêt boréale de Saint-Pierre-et-Miquelon (plus de 80% du peuplement). Caractéristique des forêts boréales nord-américaines, il est parfois accompagné d’autres conifères moins fréquents (Epicéa blanc, Epicéa noir, Mélèze laricin…). En plus de subir des attaques fréquentes de pestes forestières indigènes, il est actuellement menacé par un parasite introduit : le puceron lanigère ([*Adelges piceae*](https://inpn.mnhn.fr/espece/cd_nom/893616\n)).\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
+22073	1022	TEXT	ecosystems.ecosystems.0.name	Les landes et la toundra	\N	\N	\N	f
+22074	1022	TEXT	species.5.description	La Diapensine de Laponie ([*Diapensia lapponica*](https://inpn.mnhn.fr/espece/cd_nom/761885\n)) est une plante typique de la toundra arctico-alpine de l’archipel. Sa forme en coussinet est adaptée aux conditions climatiques très ventées de ce milieu.\n\nStatut dans la Liste rouge mondiale : espèce non évaluée. 	\N	\N	\N	f
+22075	1022	TEXT	species.6.description	Reconnaissable à sa floraison en clochettes roses, la Linnée boréale ([*Linnaea borealis*](https://inpn.mnhn.fr/espece/cd_nom/106260\n)) est une herbacée abondante dans la forêt boréale.  \n  \nStatut dans la Liste rouge mondiale : espèce non évaluée. 	\N	\N	\N	f
+22076	1022	TEXT	events.0.date	1535	\N	\N	\N	f
+22077	1022	TEXT	identity.populationYear	2017	\N	\N	\N	f
+22078	1022	IMAGE	species.5.image	\N	1230	Diapensine de Laponie © DTAM 975	\N	f
+22079	1022	TEXT	statistics.0.text	forêt boréale française	\N	\N	\N	f
+22080	1022	TEXT	ecosystems.ecosystems.1.name	Les marais tourbeux et les tourbières	\N	\N	\N	f
+22081	1022	TEXT	events.2.date	18<sup>e</sup> siècle 	\N	\N	\N	f
+22082	1022	TEXT	identity.presentation	Au sud de l'île de Terre Neuve (Canada), l'archipel se compose de la petit île de Saint-Pierre, où se concentre la majorité de la population, et des îles de Miquelon et Langlade, plus sauvages et préservées. Situé à la confluence du courant froid du Labrador et des eaux plus chaudes du Gulf Stream, l'archipel présente une biodiversité unique en France et une myriade d'écosystèmes, dont la seule forêt boréale française, de très importantes populations d'oiseaux marins et une grande richesse sous-marine.	\N	\N	\N	f
+22083	1022	TEXT	identity.population	6 274	\N	\N	\N	f
+22084	1022	TEXT	species.3.name	Le Pluvier siffleur	\N	\N	\N	f
+22085	1022	IMAGE	species.8.image	\N	1263	Cerf de Virginie © Bruno Letournel	\N	f
 20147	1025	TEXT	understand.text	Observer la faune dans son milieu naturel est une chance et une expérience formidable. Cependant, sur terre comme en mer, déranger un animal peut le mettre en péril en occasionnant un stress important et une dépense d’énergie inutile. Il risque également d’abandonner son nid ou ses petits, se blesser, être plus facilement à la merci d’un prédateur…\n\nLes conséquences sont d’autant plus importantes lorsqu’il s’agit d’espèces très menacées, pour laquelle la survie de chaque individu compte.\n\nL'impact des chiens peut être catastrophique pour la faune sensible des outre-mer, que ce soit par prédation ou par le stress qu'ils occasionnent (poursuite, aboiements, destruction de nids,...). En Nouvelle-Calédonie, ils ont joué un rôle non-négligeable dans le déclin de la population de Cagous.\nDans la plupart des espaces protégés, leur présence, même tenus en laisse n'est pas autorisée. 	\N	\N	\N	f
 20148	1025	IMAGE	action.cards.1.icon	\N	1128	bruits	\N	f
+22086	1022	TEXT	species.0.name	Les phoques	\N	\N	\N	f
+22087	1022	TEXT	events.4.date	1881	\N	\N	\N	f
+22088	1022	IMAGE	interests.locations.2.image	\N	1233	L'îlot du Grand Colombier © Nathalie De Lacoste	\N	f
+22089	1022	IMAGE	ecosystems.ecosystems.2.image	\N	1110	Forêt boréale © Nathalie de Lacoste	\N	f
+22090	1022	TEXT	interests.locations.0.description	Cette lagune de 1 000 ha est bordée de marais et communique avec la mer par un goulet au sud-est. La lagune et les marais qui la bordent sont d’une importante richesse tant faunistique que floristique. Ses bancs de sable accueillent notamment la plus importante colonie reproductrice de phoques veaux-marins du territoire français. Un plan de gestion du site a été validé en 2011 visant à y protéger les espaces naturels remarquables tout en assurant autant que possible leur ouverture au public.	\N	\N	\N	f
 14286	1030	TEXT	paragraphs.2.text	**Outils de mesure d’audience**\nLe site utilise l’outil d’analyse Matomo. Les traceurs de mesures d’audience issus de Matomo ne nécessitent pas de recueil préalable du consentement de l’utilisateur du fait qu’ils servent uniquement à produire des données statistiques anonymes.\nPour en savoir plus :\nhttps://fr.matomo.org/privacy/\n\n**Politique de confidentialité et RGPD**\nLe Muséum national d’Histoire naturelle porte la plus grande attention à vos données à caractère personnel et s’engage à les protéger.\nIl s'engage à ce que la collecte et le traitement de données à caractère personnel, effectués à partir du présent site, soient conformes à la loi n°78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés ainsi qu’au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 applicable le 25 mai 2018. \n\n**Données personnelles**\nSauf stipulation contraire directement mentionnée, aucune donnée personnelle n’est collectée ni traitée sur le portail « Compteur de biodiversité outre-mer ».	\N	\N	\N	f
 14287	1030	TEXT	paragraphs.1.title	Conditions générales d’utilisation	\N	\N	\N	f
-19923	1022	TEXT	interests.locations.2.name	Le Grand Colombier	\N	\N	\N	f
-19924	1022	TEXT	ecosystems.ecosystems.3.description	Espèces pionnières et graminées colonisent ces milieux littoraux souvent fragilisés par les dégradations (travaux, incendies, pâturages). Espèce typique de ces milieux dunaires, l’oyat (ou Ammophile à ligule courte, *Ammophila breviligulata*) joue un rôle essentiel dans la fixation des dunes et limite l’érosion. En arrière dune, une grande diversité d’espèces indigènes, parfois très rares, cohabitent avec des graminées introduites et naturalisées.	\N	\N	\N	f
 14288	1030	TEXT	title	Mentions légales	\N	\N	\N	f
 14289	1030	TEXT	paragraphs.2.title	Mentions relatives à l’utilisation de cookies	\N	\N	\N	f
 14290	1030	TEXT	paragraphs.0.text	**Editeur**\nMuséum national d'Histoire naturelle\nUMS Patrimoine Naturel \nCP41, 36 rue Geoffroy saint-Hilaire\n75005 Paris\n\n**Conception et hébergement**\nAgence Ninja Squad\nwww.ninja-squad.fr\n\nJean-Baptiste Giffard\nwww.digitaldesigner.cool\n\nSite hébergé par le Muséum national d’Histoire naturelle\n\n**Création graphique**\nDesign graphique réalisé par : \nAmélie Bracq\nEdouard Sastre\n\n**Création et mise à jour du contenu**\nLe contenu éditorial du site est produit et mis à jour par l’Unité Mixte de Service Patrimoine Naturel (UMS PatriNat) du MNHN.	\N	\N	\N	f
+22091	1022	TEXT	interests.locations.2.description	Cet ilot situé au nord de l’île de Saint-Pierre est un site de nidification remarquable. Il accueille une grande part des populations d’oiseaux marins nicheuses de l’archipel, voire la totalité des couples pour certaines espèces comme l’Océanite cul-blanc ou le Macareux moine. Pour ces deux espèces, il s’agit de colonies parmi les plus importantes au niveau mondial. 	\N	\N	\N	f
+22092	1022	TEXT	interests.locations.1.description	Cette bande de sable de 12 km de long relie les îles de Miquelon et Langlade depuis la fin du 18<sup>e</sup> siècle. Les dunes colonisées par la végétation sont désormais longées par une piste permettant d'accéder à l'île de Langlade, habitée uniquement en période estivale.	\N	\N	\N	f
+22093	1022	TEXT	ecosystems.ecosystems.3.name	Les dunes sableuses et cordons de galets	\N	\N	\N	f
 21504	1003	TEXT	header.title	À la découverte des outre-mer	\N	\N	\N	f
 21505	1003	TEXT	header.population	2,8 millions	\N	\N	\N	f
 21506	1003	TEXT	header.species	85 117	\N	\N	\N	f
 21507	1003	TEXT	header.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines. Naviguez parmi les portraits biodiversité des différents territoires et découvrez l’histoire des espèces et des écosystèmes qui les peuplent, les enjeux de chaque territoire et les initiatives des acteurs locaux pour les préserver.	\N	\N	\N	f
+22094	1022	TEXT	identity.subtitle	Un climat subarctique, froid et humide	\N	\N	\N	f
+22095	1022	IMAGE	species.7.image	\N	1212	Image manquante	\N	f
+22096	1022	TEXT	species.5.name	La Diapensine	\N	\N	\N	f
+22097	1022	TEXT	risks.risks.0.description	Les menaces pesant sur la biodiversité de Saint-Pierre-et-Miquelon sont nombreuses. Comme tous les territoires d’outre-mer, l’archipel subit la présence d’espèces exotiques envahissantes terrestres : le puceron lanigère (*Adelges piceae*), la Renouée du Japon (*Reynoutria japonica*) et le Séneçon Jacobée (*Jacobaea vulgaris*) sont les plus impactant.  \nLa forêt boréale, sous la pression combinée des herbivores introduits, des pathogènes et du réchauffement climatique, perd en moyenne une vingtaine d'hectares par an, et son état de conservation n'est guère rassurant. \n\nAu niveau marin, depuis l’effondrement des populations de morue des bancs de Terre-Neuve par la surpêche dans les années 70 à 90, la pression de la pêche a diminué, cependant la pêche au filet du Saumon Atlantique capture accidentellement de nombreux oiseaux, tortues et mammifères marins. Les espèces exotiques marines sont également une préoccupation, en particulier les populations de Crabe vert (*Carcinus maenas*), en augmentation.\n\nLa chasse est une question délicate sur l'archipel. Concernant les mammifères introduits, elle permet d'un côté leur régulation, mais de l'autre elle justifie également leur maintien. Quant à la chasse aux oiseaux migrateurs, elle peut freiner l'implantation de colonies nicheuses comme celles de l’Eider à duvet (*Somateria mollisima*).\n\nLe territoire est pour le moment le seul d’outre-mer français à ne disposer d’aucun dispositif de protection réglementaire (hormis les réserves de chasse et de faune sauvage). Après l'abandon d'un premier projet de Réserve naturelle du Grand Barachois au début des années 90, un projet de création de Réserve naturelle sur le Grand et le Petit Colombier a été lancé en 2007. Plaçant sous protection une surface terrestre de 47 ha et une zone maritime de 420 ha, il permettrait de préserver ce site de nidification remarquable. Malgré un avis favorable du Conseil national de protection de la nature, ce projet a été mal perçu par les populations locales qui craignaient des contraintes sur leurs activités traditionnelles, c’est pourquoi le projet est gelé pour le moment.\n\nSur l’archipel, 40 Zones naturelles d'intérêt écologique, faunistique et floristique (ZNIEFF), abritant au moins une espèce ou un habitat naturel remarquable ou rare, ont été délimitées. Cela couvre 89 % du territoire terrestre et traduit la richesse et la valeur écologique des écosystèmes de ces îles, toutefois ce statut n'engendre pas de protection juridique. Actuellement, seules des espèces de chauves-souris, de mammifères marins, d’oiseaux et de tortues marines bénéficient d’une protection réglementaire.\n	\N	\N	\N	f
 21849	1012	TEXT	understand.text1	La mangrove est un écosystème forestier constitué principalement d'arbres appelés palétuviers, et se trouvant dans la zone de balancement des marées. Espace de transition entre le milieu terrestre et le milieu marin, cet écosystème abrite de nombreuses espèces qui en sont dépendantes pour une partie ou la totalité de leur cycle de vie.\n\nOn trouve des mangroves dans tous les territoires tropicaux d’outre-mer français, à l’exception de l’île de La Réunion. Au total, on estime leur superficie à 91 096 ha, la grande majorité se trouvant en Guyane et en Nouvelle-Calédonie. Cependant, en Polynésie, cet écosystème n’est pas présent naturellement : une espèce de palétuvier, [*Rhizophora stylosa*](https://inpn.mnhn.fr/espece/cd_nom/447469), a été introduite volontairement dans les années 1930, et s’est ensuite propagée à l’ensemble des îles de la Société, au détriment de certains écosystèmes natifs. 	\N	\N	\N	f
 21850	1012	TEXT	territories.title	Surface couverte par la mangrove	\N	\N	\N	f
 21851	1012	TEXT	understand.title1	La mangrove, un écosystème protecteur	\N	\N	\N	f
+22098	1022	TEXT	ecosystems.ecosystems.2.description	La seule forêt boréale du territoire français se trouve à Saint-Pierre-et-Miquelon. Fortement dégradée par les herbivores introduits, cette forêt présente une végétation arborescente dans les vallées abritées mais se limite à une strate arbustive ou rampante dans les secteurs exposés aux vents. Dominée par les conifères, on y retrouve le caractéristique Sapin baumier (*Abies balsamea*), l’Epinette blanche (*Picea glauca*), l’épinette noire (*Picea mariana*), dans certains milieux tourbeux le Mélèze laricin (*Larix laricina*), seul conifère qui perd ses épines en hiver, ou encore, bien que rare sur Langlade et Miquelon, l'If du Canada (*Taxus canadensis*) sous sa forme rampante.	\N	\N	\N	f
+22099	1022	TEXT	ecosystems.ecosystems.1.description	Ces zones humides occupent des superficies importantes. Caractérisées par la formation et l’accumulation de tourbe, parfois sur plusieurs mètres d’épaisseur, elles présentent des groupements végétaux remarquables et variés, parmi lesquelles on trouve des sphaignes, des mousses, ainsi que des orchidées.	\N	\N	\N	f
 19633	1001	IMAGE	ecosystems.image	\N	1026	La pointe de la Grande Vigie © Annie Mason/Unsplash	\N	f
 19634	1001	TEXT	identity.species	10 279	\N	\N	\N	f
 19635	1001	TEXT	statistics.1.number	42 %	\N	\N	\N	f
 19636	1001	IMAGE	ecosystems.ecosystems.0.image	\N	1010	La forêt d’altitude sur La Soufrière © Maël Gramain/Unsplash	\N	f
 19637	1001	TEXT	statistics.0.number	1 407	\N	\N	\N	f
-19925	1022	TEXT	ecosystems.ecosystems.4.description	« *Les Laminaires sont à la mer ce que la forêt est à la terre* » Daniel Abraham, naturaliste de l'archipel.\n\nFormant de véritables forêts sous-marines, ces grandes algues brunes jouent un rôle très important dans l’équilibre de l’océan, formant un habitat pour de nombreuses espèces animales et végétales. Elles contiennent également des composants utilisés dans le monde en pharmacologie ou agro-alimentaire.	\N	\N	\N	f
-19926	1022	TEXT	ecosystems.ecosystems.4.name	Les forêts de laminaires	\N	\N	\N	f
-19927	1022	IMAGE	species.1.image	\N	1229	Macareux moine © Bruno Letournel	\N	f
-19928	1022	TEXT	events.5.date	1953	\N	\N	\N	f
-19929	1022	TEXT	identity.marineArea	12 300	\N	\N	\N	f
-19930	1022	TEXT	events.8.date	2007	\N	\N	\N	f
-19931	1022	IMAGE	interests.locations.0.image	\N	1217	Grand Barachois © Nathalie De Lacoste	\N	f
-19932	1022	TEXT	species.6.name	La Linnée boréale	\N	\N	\N	f
-19933	1022	IMAGE	interests.locations.3.image	\N	1236	La Vallée du Milieu © Nathalie De Lacoste	\N	f
-19934	1022	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
-19935	1022	TEXT	interests.locations.3.name	La Vallée du Milieu	\N	\N	\N	f
-19936	1022	TEXT	statistics.1.text	des habitants de l'archipel résident à Saint-Pierre	\N	\N	\N	f
-19937	1022	TEXT	events.9.date	2017	\N	\N	\N	f
-19938	1022	IMAGE	species.4.image	\N	1223	Sapin Baumier © Nathalie De Lacoste	\N	f
-19939	1022	TEXT	events.3.date	1866	\N	\N	\N	f
-19940	1022	IMAGE	ecosystems.ecosystems.3.image	\N	1220	Dunes de sable sur l'isthme © Nathalie de Lacoste	\N	f
-19941	1022	IMAGE	species.3.image	\N	1226	Pluvier siffleur en période de reproduction © Patrick Hacala	\N	f
-19942	1022	TEXT	species.1.name	Le Macareux moine 	\N	\N	\N	f
-19943	1022	TEXT	species.7.name	Les Botryches	\N	\N	\N	f
-19944	1022	TEXT	interests.title	Lieux d’intérêt	\N	\N	\N	f
-19945	1022	TEXT	species.4.name	Le Sapin baumier	\N	\N	\N	f
-19946	1022	TEXT	identity.area	242	\N	\N	\N	f
-19947	1022	TEXT	species.0.description	Une vingtaine d'espèces de mammifères marins fréquentent les eaux de Saint-Pierre et Miquelon, dont deux espèces de phoques : le Phoque veau-marin ([*Phoca vitulina*](https://inpn.mnhn.fr/espece/cd_nom/60811)) et le Phoque gris ([*Halichoerus grypus*](https://inpn.mnhn.fr/espece/cd_nom/60776)). C’est sur les bancs de sable de la lagune du Grand Barachois qu’ils se regroupent en plus grand nombre, mais peuvent être observés partout sur les côtes de l’archipel.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure pour les deux espèces. 	\N	\N	\N	f
-19948	1022	TEXT	identity.highestPointName	Morne de la Grande Montagne	\N	\N	\N	f
-19949	1022	TEXT	ecosystems.ecosystems.2.name	La forêt boréale 	\N	\N	\N	f
-19950	1022	TEXT	species.7.description	Dans les pelouses sableuses d’arrière dune se cachent plusieurs espèces rares de botryches, comme le Botryche à feuille de Matricaire ([*Botrychium matricariifolium*](https://inpn.mnhn.fr/espece/cd_nom/86186\n)). Il s’agit de petites fougères vivaces dont le nom provient du grec « botrus » signifiant grappes, qui se réfère à l’aspect de ses fructifications.  \n  \nStatut dans la Liste rouge mondiale : espèce non évaluée (pour *Botrychium matricariifolium*). 	\N	\N	\N	f
-19951	1022	TEXT	species.8.description	Peu de mammifères terrestres sont indigènes de l’archipel. Le Cerf de Virginie ([*Odocoileus virginianus*](https://inpn.mnhn.fr/espece/cd_nom/645125\n)) a été introduit à Miquelon et Langlade en 1953 pour la chasse. Grâce à leurs importantes capacités d’adaptation et à l’absence de prédateur naturel, les populations de cerfs se sont largement développées et freinent désormais fortement la régénération de la forêt boréale. L’espèce n'est pas présente sur l’île de Saint-Pierre. \n  \nStatut dans la Liste rouge mondiale : préoccupation mineure.	\N	\N	\N	f
-19952	1022	IMAGE	species.2.image	\N	1228	Lièvre arctique © Daniel Koelsch	\N	f
-19953	1022	IMAGE	ecosystems.ecosystems.4.image	\N	1215	Image manquante	\N	f
-19954	1022	TEXT	species.3.description	Le Pluvier siffleur ([*Charadrius melodus*](https://inpn.mnhn.fr/espece/cd_nom/441752\n)) est un petit oiseau limicole, dont la couleur du plumage se confond avec le sable et les graviers des plages où il se nourrit et niche. Il est actuellement le limicole nicheur le plus menacé dans l'archipel, à cause du dérangement important causé par l’activité humaine au niveau de l’isthme entre Miquelon et Langlade, site à haute fréquentation locale et touristique pendant l’été. Faute de dispositifs de protection efficaces la dernière nichée observée en 2019 a été un échec, et un seul individu a été observé en 2020.  \n  \nStatut dans la Liste rouge mondiale : quasi menacé. 	\N	\N	\N	f
-19955	1022	TEXT	species.1.description	Le Macareux moine ([*Fratercula arctica*](https://inpn.mnhn.fr/espece/cd_nom/3402\n)) est l’une des plus importantes populations d’oiseaux nicheurs de l’archipel, avec environ 10 000 couples présents sur l'îlot du Grand Colombier.\n\nStatut dans la Liste rouge mondiale : vulnérable. 	\N	\N	\N	f
-19956	1022	TEXT	species.2.description	Le Lièvre américain ([*Lepus americanus*](https://inpn.mnhn.fr/espece/cd_nom/456604\n)) et le Lièvre arctique ([*Lepus arcticus*](https://inpn.mnhn.fr/espece/cd_nom/61707\n)) ont été introduits pour la chasse respectivement en 1881 et 1982. Présents sur les trois îles, ils occupent des milieux différents : le Lièvre américain se concentre dans les milieux forestiers, sur lesquels il exerce une pression non négligeable, tandis que le Lièvre arctique préfère la végétation de la toundra, formée d’arbustes à éricacées, de lichens et de mousses.  \n  \nStatut dans la Liste rouge mondiale : préoccupation mineure pour les deux espèces. 	\N	\N	\N	f
-19957	1022	TEXT	statistics.1.number	86 %  	\N	\N	\N	f
-19958	1022	TEXT	statistics.0.number	La seule 	\N	\N	\N	f
+22100	1022	TEXT	ecosystems.ecosystems.0.description	Au-dessus des forêts, les végétaux ligneux adoptent un port prostré et laissent place à des landes dominées par les éricacées au port rampant, dont le Kalmia à feuilles étroites (*Kalmia angustifolia*). Aux altitudes les plus élevées, cette formation laisse place à une toundra adaptée aux conditions très venteuses, typique des milieux alpins ou arctiques.	\N	\N	\N	f
+22101	1022	TEXT	identity.highestPoint	240	\N	\N	\N	f
+22102	1022	TEXT	interests.locations.4.description	Chef-lieu du territoire, cette commune concentre 86% de la population de l’archipel. Restreint à la zone portuaire, la ville s’est beaucoup étendue en périphérie ces dernières années, ce qui n’est pas sans causer des problèmes en matière d’assainissement, de gestion des déchets, et de dérangement de la faune aviaire. 	\N	\N	\N	f
+22103	1022	TEXT	risks.risks.0.name	Les ressources naturelles, un enjeu important	\N	\N	\N	f
+22104	1022	IMAGE	interests.locations.1.image	\N	1103	Vue aérienne de l'isthme © DR	\N	f
+22105	1022	IMAGE	ecosystems.ecosystems.1.image	\N	1104	Tourbière près de l’étang de Richepomme © Nathalie de Lacoste	\N	f
+22106	1022	TEXT	interests.locations.3.description	Située dans le tissu urbain de la ville de Saint-Pierre, cette enclave de tourbières et étangs de 27 ha est l’une des dernières tourbières de la partie sud de l’île de Saint-Pierre. D’un intérêt écologique fort, en partie car de nombreuses espèces d’oiseaux y font étape durant leur trajet migratoire, le site fait l’objet d’un plan de gestion depuis 2018.\n\n	\N	\N	\N	f
+22107	1022	TEXT	identity.title	Saint-Pierre-et-Miquelon,  \ndes eaux riches en biodiversité	\N	\N	\N	f
+22108	1022	IMAGE	species.6.image	\N	1211	Image manquante	\N	f
+22109	1022	TEXT	interests.locations.1.name	L’isthme	\N	\N	\N	f
+22110	1022	TEXT	statistics.2.text	hectares de lagune et de marais au Grand Barachois	\N	\N	\N	f
+22111	1022	IMAGE	species.0.image	\N	1227	Phoque veau-marin © Daniel Koelsch	\N	f
+22112	1022	TEXT	events.1.date	17<sup>e</sup> siècle 	\N	\N	\N	f
+22113	1022	TEXT	interests.locations.4.name	Saint-Pierre	\N	\N	\N	f
 21909	1017	TEXT	presentation	Les activités humaines sont à l’origine du déclin de la biodiversité et la dégradation des écosystèmes. Aujourd’hui plus que jamais, il est nécessaire de remettre en question nos comportements et nos choix de consommation, au quotidien ou en voyage, chez soi ou en milieu naturel, pour mieux prendre soin de la biodiversité qui nous entoure. Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.  \n\nL’objectif du Compteur est de mettre en avant des écogestes adaptés aux contextes ultramarins.	\N	\N	\N	f
 21910	1017	IMAGE	image	\N	1073	© DR	\N	f
 21911	1017	TEXT	quote	Des actions concrètes pour agir dès maintenant et préserver cette biodiversité les espèces et les écosystèmes	\N	\N	\N	f
@@ -1355,11 +1409,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21915	1017	IMAGE	other.image	\N	1257	logo	\N	f
 21916	1017	TEXT	other.text	Biodiversité Tous Vivants !	\N	\N	\N	f
 21917	1017	TEXT	title	Adaptons nos comportement pour préserver la biodiversité	\N	\N	\N	f
-19959	1022	TEXT	statistics.2.number	1 000	\N	\N	\N	f
-19960	1022	IMAGE	interests.locations.4.image	\N	1235	Saint-Pierre © Laurent Malthieux	\N	f
-19961	1022	TEXT	species.2.name	Les lièvres	\N	\N	\N	f
-19962	1022	TEXT	species.4.description	Le Sapin baumier ([*Abies balsamea*](https://inpn.mnhn.fr/espece/cd_nom/717022\n)) est le conifère dominant de la forêt boréale de Saint-Pierre-et-Miquelon (plus de 80% du peuplement). Caractéristique des forêts boréales nord-américaines, il est parfois accompagné d’autres conifères moins fréquents (Epicéa blanc, Epicéa noir, Mélèze laricin…). En plus de subir des attaques fréquentes de pestes forestières indigènes, il est actuellement menacé par un parasite introduit : le puceron lanigère ([*Adelges piceae*](https://inpn.mnhn.fr/espece/cd_nom/893616\n)).\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
-19963	1022	TEXT	ecosystems.ecosystems.0.name	Les landes et la toundra	\N	\N	\N	f
 17628	1018	TEXT	secondActionName	Je donne de mon temps	\N	\N	\N	f
 19638	1001	TEXT	statistics.2.number	1989	\N	\N	\N	f
 19639	1001	TEXT	species.2.name	Le Gaïac	\N	\N	\N	f
@@ -1552,54 +1601,14 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19706	1001	IMAGE	species.0.image	\N	1008	*Fregata magnificens* © macraegi /  CC BY-SA 2.0	\N	f
 19707	1001	TEXT	events.1.date	19<sup>e</sup> siècle	\N	\N	\N	f
 19708	1001	TEXT	ecosystems.ecosystems.2.name	La forêt humide	\N	\N	\N	f
-19964	1022	TEXT	species.5.description	La Diapensine de Laponie ([*Diapensia lapponica*](https://inpn.mnhn.fr/espece/cd_nom/761885\n)) est une plante typique de la toundra arctico-alpine de l’archipel. Sa forme en coussinet est adaptée aux conditions climatiques très ventées de ce milieu.\n\nStatut dans la Liste rouge mondiale : espèce non évaluée. 	\N	\N	\N	f
-19965	1022	TEXT	species.6.description	Reconnaissable à sa floraison en clochettes roses, la Linnée boréale ([*Linnaea borealis*](https://inpn.mnhn.fr/espece/cd_nom/106260\n)) est une herbacée abondante dans la forêt boréale.  \n  \nStatut dans la Liste rouge mondiale : espèce non évaluée. 	\N	\N	\N	f
-19966	1022	TEXT	events.0.date	1535	\N	\N	\N	f
-19967	1022	TEXT	identity.populationYear	2017	\N	\N	\N	f
-19968	1022	IMAGE	species.5.image	\N	1230	Diapensine de Laponie © DTAM 975	\N	f
-19969	1022	TEXT	statistics.0.text	forêt boréale française	\N	\N	\N	f
-19970	1022	TEXT	ecosystems.ecosystems.1.name	Les marais tourbeux et les tourbières	\N	\N	\N	f
-19971	1022	TEXT	events.2.date	18<sup>e</sup> siècle 	\N	\N	\N	f
 20203	1024	TEXT	presentation.name	Je protège les milieux contre l’introduction d’espèces exotiques envahissantes	\N	\N	\N	f
 20204	1024	IMAGE	action.cards.0.icon	\N	1122	Planter	\N	f
 20205	1024	IMAGE	presentation.image	\N	1120	© Hans-Jörg Hellwig / CC BY-SA 3.0	\N	f
-19972	1022	TEXT	identity.presentation	Au sud de l'île de Terre Neuve (Canada), l'archipel se compose de la petit île de Saint-Pierre, où se concentre la majorité de la population, et des îles de Miquelon et Langlade, plus sauvages et préservées. Situé à la confluence du courant froid du Labrador et des eaux plus chaudes du Gulf Stream, l'archipel présente une biodiversité unique en France et une myriade d'écosystèmes, dont la seule forêt boréale française, de très importantes populations d'oiseaux marins et une grande richesse sous-marine.	\N	\N	\N	f
-19973	1022	TEXT	identity.population	6 274	\N	\N	\N	f
-19974	1022	TEXT	species.3.name	Le Pluvier siffleur	\N	\N	\N	f
-19975	1022	IMAGE	species.8.image	\N	1231	Femelle de Cerf de Virginie © Bruno Letournel	\N	f
-19976	1022	TEXT	species.0.name	Les phoques	\N	\N	\N	f
-19977	1022	TEXT	events.4.date	1881	\N	\N	\N	f
-19978	1022	IMAGE	interests.locations.2.image	\N	1233	L'îlot du Grand Colombier © Nathalie De Lacoste	\N	f
-19979	1022	IMAGE	ecosystems.ecosystems.2.image	\N	1110	Forêt boréale © Nathalie de Lacoste	\N	f
-19980	1022	TEXT	interests.locations.0.description	Cette lagune de 1 000 ha est bordée de marais et communique avec la mer par un goulet au sud-est. La lagune et les marais qui la bordent sont d’une importante richesse tant faunistique que floristique. Ses bancs de sable accueillent notamment la plus importante colonie reproductrice de phoques veaux-marins du territoire français. Un plan de gestion du site a été validé en 2011 visant à y protéger les espaces naturels remarquables tout en assurant autant que possible leur ouverture au public.	\N	\N	\N	f
-19981	1022	TEXT	interests.locations.2.description	Cet ilot situé au nord de l’île de Saint-Pierre est un site de nidification remarquable. Il accueille une grande part des populations d’oiseaux marins nicheuses de l’archipel, voire la totalité des couples pour certaines espèces comme l’Océanite cul-blanc ou le Macareux moine. Pour ces deux espèces, il s’agit de colonies parmi les plus importantes au niveau mondial. 	\N	\N	\N	f
-19982	1022	TEXT	interests.locations.1.description	Cette bande de sable de 12 km de long relie les îles de Miquelon et Langlade depuis la fin du 18<sup>e</sup> siècle. Les dunes colonisées par la végétation sont désormais longées par une piste permettant d'accéder à l'île de Langlade, habitée uniquement en période estivale.	\N	\N	\N	f
-19983	1022	TEXT	ecosystems.ecosystems.3.name	Les dunes sableuses et cordons de galets	\N	\N	\N	f
-19984	1022	TEXT	identity.subtitle	Un climat subarctique, froid et humide	\N	\N	\N	f
-19985	1022	IMAGE	species.7.image	\N	1212	Image manquante	\N	f
-19986	1022	TEXT	species.5.name	La Diapensine	\N	\N	\N	f
-19987	1022	TEXT	risks.risks.0.description	Les menaces pesant sur la biodiversité de Saint-Pierre-et-Miquelon sont nombreuses. Comme tous les territoires d’outre-mer, l’archipel subit la présence d’espèces exotiques envahissantes terrestres : le puceron lanigère (*Adelges piceae*), la Renouée du Japon (*Reynoutria japonica*) et le Séneçon Jacobée (*Jacobaea vulgaris*) sont les plus impactant.  \nLa forêt boréale, sous la pression combinée des herbivores introduits, des pathogènes et du réchauffement climatique, perd en moyenne une vingtaine d'hectares par an, et son état de conservation n'est guère rassurant. \n\nAu niveau marin, depuis l’effondrement des populations de morue des bancs de Terre-Neuve par la surpêche dans les années 70 à 90, la pression de la pêche a diminué, cependant la pêche au filet du Saumon Atlantique capture accidentellement de nombreux oiseaux, tortues et mammifères marins. Les espèces exotiques marines sont également une préoccupation, en particulier les populations de Crabe vert (*Carcinus maenas*), en augmentation.\n\nLa chasse est une question délicate sur l'archipel. Concernant les mammifères introduits, elle permet d'un côté leur régulation, mais de l'autre elle justifie également leur maintien. Quant à la chasse aux oiseaux migrateurs, elle peut freiner l'implantation de colonies nicheuses comme celles de l’Eider à duvet (*Somateria mollisima*).\n\nLe territoire est pour le moment le seul d’outre-mer français à ne disposer d’aucun dispositif de protection réglementaire (hormis les réserves de chasse et de faune sauvage). Après l'abandon d'un premier projet de Réserve naturelle du Grand Barachois au début des années 90, un projet de création de Réserve naturelle sur le Grand et le Petit Colombier a été lancé en 2007. Plaçant sous protection une surface terrestre de 47 ha et une zone maritime de 420 ha, il permettrait de préserver ce site de nidification remarquable. Malgré un avis favorable du Conseil national de protection de la nature, ce projet a été mal perçu par les populations locales qui craignaient des contraintes sur leurs activités traditionnelles, c’est pourquoi le projet est gelé pour le moment.\n\nSur l’archipel, 40 Zones naturelles d'intérêt écologique, faunistique et floristique (ZNIEFF), abritant au moins une espèce ou un habitat naturel remarquable ou rare, ont été délimitées. Cela couvre 89 % du territoire terrestre et traduit la richesse et la valeur écologique des écosystèmes de ces îles, toutefois ce statut n'engendre pas de protection juridique. Actuellement, seules des espèces de chauves-souris, de mammifères marins, d’oiseaux et de tortues marines bénéficient d’une protection réglementaire.\n	\N	\N	\N	f
 20206	1024	TEXT	understand.text	Les espèces introduites par l’homme hors de leur territoire d’origine peuvent se développer de manière importante dans leur milieu d’introduction et [menacer la biodiversité locale](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-exotiques-envahissantes). Certaines espèces peuvent également avoir des conséquences économiques et sanitaires importantes.\n\nDes animaux de compagnie qui s'échappent ou sont lâchés volontairement dans la nature lorsque leurs propriétaires ne souhaitent pas les garder, c'est l'origine de l'introduction de nombreuses espèces animales exotiques aujourd'hui problématiques, par exemple les Tortues de Floride et autres reptiles, les poissons d'aquarium comme le Guppy ou le Poisson-zèbre ou encore des oiseaux comme le Bulbul Orphée ou le Rossignol du Japon.\n\nDes nombreuses espèces végétales importées ont été plantées dans les parcs et les  jardins pour leur intérêt esthétique, mais certaines n'ont pas tardé à se disperser largement dans les milieux naturels, et à entrer en compétition avec les espèces végétales locales.\n\nDes règlementations, plus ou moins strictes selon les territoires, existent désormais pour limiter l'introduction d'espèces potentiellement envahissantes, en particulier sur les territoires insulaires.	\N	\N	\N	f
-19988	1022	TEXT	ecosystems.ecosystems.2.description	La seule forêt boréale du territoire français se trouve à Saint-Pierre-et-Miquelon. Fortement dégradée par les herbivores introduits, cette forêt présente une végétation arborescente dans les vallées abritées mais se limite à une strate arbustive ou rampante dans les secteurs exposés aux vents. Dominée par les conifères, on y retrouve le caractéristique Sapin baumier (*Abies balsamea*), l’Epinette blanche (*Picea glauca*), l’épinette noire (*Picea mariana*), dans certains milieux tourbeux le Mélèze laricin (*Larix laricina*), seul conifère qui perd ses épines en hiver, ou encore, bien que rare sur Langlade et Miquelon, l'If du Canada (*Taxus canadensis*) sous sa forme rampante.	\N	\N	\N	f
-19989	1022	TEXT	ecosystems.ecosystems.1.description	Ces zones humides occupent des superficies importantes. Caractérisées par la formation et l’accumulation de tourbe, parfois sur plusieurs mètres d’épaisseur, elles présentent des groupements végétaux remarquables et variés, parmi lesquelles on trouve des sphaignes, des mousses, ainsi que des orchidées.	\N	\N	\N	f
-19990	1022	TEXT	ecosystems.ecosystems.0.description	Au-dessus des forêts, les végétaux ligneux adoptent un port prostré et laissent place à des landes dominées par les éricacées au port rampant, dont le Kalmia à feuilles étroites (*Kalmia angustifolia*). Aux altitudes les plus élevées, cette formation laisse place à une toundra adaptée aux conditions très venteuses, typique des milieux alpins ou arctiques.	\N	\N	\N	f
-19991	1022	TEXT	identity.highestPoint	240	\N	\N	\N	f
-19992	1022	TEXT	interests.locations.4.description	Chef-lieu du territoire, cette commune concentre 86% de la population de l’archipel. Restreint à la zone portuaire, la ville s’est beaucoup étendue en périphérie ces dernières années, ce qui n’est pas sans causer des problèmes en matière d’assainissement, de gestion des déchets, et de dérangement de la faune aviaire. 	\N	\N	\N	f
-19993	1022	TEXT	risks.risks.0.name	Les ressources naturelles, un enjeu important	\N	\N	\N	f
-19994	1022	IMAGE	interests.locations.1.image	\N	1103	Vue aérienne de l'isthme © DR	\N	f
-19995	1022	IMAGE	ecosystems.ecosystems.1.image	\N	1104	Tourbière près de l’étang de Richepomme © Nathalie de Lacoste	\N	f
-19996	1022	TEXT	interests.locations.3.description	Située dans le tissu urbain de la ville de Saint-Pierre, cette enclave de tourbières et étangs de 27 ha est l’une des dernières tourbières de la partie sud de l’île de Saint-Pierre. D’un intérêt écologique fort, en partie car de nombreuses espèces d’oiseaux y font étape durant leur trajet migratoire, le site fait l’objet d’un plan de gestion depuis 2018.\n\n	\N	\N	\N	f
 20207	1024	IMAGE	action.cards.1.icon	\N	1123	aquarium	\N	f
 20208	1024	TEXT	action.cards.2.description	Je ne relâche pas mes animaux de compagnie exotiques dans la nature. Certaines espèces sont désormais interdites de détention et nécessitent d’avoir des autorisations.  	\N	\N	\N	f
 20209	1024	TEXT	presentation.category	Sur terre et en mer	\N	\N	\N	f
 20210	1024	TEXT	action.cards.1.description	Je ne vidange pas mon aquarium dans la nature. Les plantes aquatiques et les poissons exotiques peuvent être dangereux pour l’équilibre des cours d’eau.	\N	\N	\N	f
-19997	1022	TEXT	identity.title	Saint-Pierre-et-Miquelon,  \ndes eaux riches en biodiversité	\N	\N	\N	f
-19998	1022	IMAGE	species.6.image	\N	1211	Image manquante	\N	f
-19999	1022	TEXT	interests.locations.1.name	L’isthme	\N	\N	\N	f
-20000	1022	TEXT	statistics.2.text	hectares de lagune et de marais au Grand Barachois	\N	\N	\N	f
-20001	1022	IMAGE	species.0.image	\N	1227	Phoque veau-marin © Daniel Koelsch	\N	f
-20002	1022	TEXT	events.1.date	17<sup>e</sup> siècle 	\N	\N	\N	f
-20003	1022	TEXT	interests.locations.4.name	Saint-Pierre	\N	\N	\N	f
 20211	1024	TEXT	presentation.description	Les espèces exotiques envahissantes sont une menace majeure pour les écosystèmes, en particulier pour les espaces insulaires qui comptent de nombreuses espèces endémiques.	\N	\N	\N	f
 20212	1024	TEXT	action.title	Pour limiter l’introduction et la dispersion d’espèces exotiques envahissantes 	\N	\N	\N	f
 20213	1024	TEXT	understand.quote	La Tortue de Floride, considérée comme l'une des 100 espèces les plus envahissantes du monde, est présente en milieu naturel dans quasiment tous les territoires d'outre-mer français (à l'exception de Saint-Pierre et Miquelon, Wallis et Futuna, et les TAAF)	\N	\N	\N	f
@@ -1698,7 +1707,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 1261, true);
+SELECT pg_catalog.setval('public.image_seq', 1270, true);
 
 
 --
@@ -1719,7 +1728,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1097, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 21994, true);
+SELECT pg_catalog.setval('public.page_element_seq', 22335, true);
 
 
 --
