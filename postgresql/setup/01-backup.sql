@@ -592,6 +592,16 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 1249	image/jpeg	Roche-Ecrite-IMGP9641 (1).JPG
 1250	image/jpeg	13.jpg
 1251	image/jpeg	Observations terrain_St Pierre et Miquelon_N De Lacoste.jpeg
+1252	image/png	Screenshot_2021-04-01 Biodiversité - Se mobiliser.png
+1253	image/png	Screenshot_2021-04-01 Biodiversité - Se mobiliser(1).png
+1254	image/png	Screenshot_2021-04-01 Biodiversité - Se mobiliser(1).png
+1255	image/png	Screenshot_2021-04-01 Biodiversité - Se mobiliser(1).png
+1256	image/png	Screenshot_2021-04-01 Biodiversité - Se mobiliser(1).png
+1257	image/png	Screenshot_2021-04-01 Biodiversité - Se mobiliser(1).png
+1258	image/jpeg	DSC04574-Modifier.jpg
+1259	image/jpeg	Martinique_Fabien Lefebvre.jpg
+1260	image/jpeg	IMG_6438.jpg
+1261	image/jpeg	DSC05001-Modifier.jpg
 \.
 
 
@@ -654,7 +664,6 @@ COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 --
 
 COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdin;
-1035	1007	GUADELOUPE	60	%
 1087	1000	OUTRE_MER	60	
 1094	1000	REUNION	34	
 1092	1000	NOUVELLE_CALEDONIE	38	
@@ -672,11 +681,6 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 1052	1001	NOUVELLE_CALEDONIE	8673	
 1051	1001	MARTINIQUE	700	
 1072	1001	SAINT_BARTHELEMY	70	
-1076	1007	SAINT_MARTIN	33.33333333	%
-1077	1007	MAYOTTE	30	%
-1012	1002	OUTRE_MER	88966	
-1019	1002	REUNION	10915	
-1014	1002	MARTINIQUE	7422	
 1054	1001	SAINT_PIERRE_ET_MIQUELON	0	
 1073	1001	POLYNESIE_FRANCAISE	2673	
 1050	1001	GUADELOUPE	1399	
@@ -692,6 +696,12 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 1038	1007	REUNION	21.42857143	%
 1036	1007	MARTINIQUE	50	%
 1037	1007	NOUVELLE_CALEDONIE	18.51851852	%
+1035	1007	GUADELOUPE	60	%
+1076	1007	SAINT_MARTIN	33.33333333	%
+1077	1007	MAYOTTE	30	%
+1012	1002	OUTRE_MER	88966	
+1019	1002	REUNION	10915	
+1014	1002	MARTINIQUE	7422	
 1017	1002	NOUVELLE_CALEDONIE	28092	
 1021	1002	SAINT_PIERRE_ET_MIQUELON	2112	
 1016	1002	SAINT_BARTHELEMY	2140	
@@ -718,6 +728,8 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 
 COPY public.page (id, name, model_name, title) FROM stdin;
 1025	protection-faune	ecogesture	Respecter la faune sauvage
+1000	accueil	home	Accueil
+1004	especes-exotiques-envahissantes	indicator	Espèces exotiques envahissantes
 1028	exploitation-especes-protegees	ecogesture	Préserver les espèces protégées 
 1024	protection-contre-eee	ecogesture	Protection contre les EEE
 1027	protection-flore	ecogesture	Préserver la flore sauvage
@@ -729,25 +741,23 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1013	nouvelles-especes	indicator	Nouvelles espèces décrites
 1019	sciences-participatives	science	Sciences participatives
 1008	especes-endemiques	indicator	Espèces endémiques
-1004	especes-exotiques-envahissantes	indicator	Espèces exotiques envahissantes
-1012	conservation-mangroves	indicator	Conservation des mangroves d'outre-mer
 1002	antilles	territory-zone	bassin antillais
 1029	s-investir-sur-le-terrain	ecogesture	S'investir sur le terrain
 1007	apropos	about	A propos
 1011	taux-boisement	indicator	Proportion de forêts
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
-1014	recifs-coralliens	indicator	Récifs coralliens
 1001	guadeloupe	territory	Guadeloupe
-1000	accueil	home	Accueil
 1015	martinique	territory	Martinique
 1021	reunion	territory	La Réunion
 1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
 1010	especes-menacees	indicator	Espèces éteintes et menacées
-1017	ecogestes	ecogestures	Accueil écogestes
+1014	recifs-coralliens	indicator	Récifs coralliens
+1012	conservation-mangroves	indicator	Conservation des mangroves d'outre-mer
 1016	agir-ensemble	act	Agir ensemble
 1006	protection-recifs-coralliens	ecogesture	Protéger les récifs coralliens
 1023	ne-pas-jeter-dechets-nature	ecogesture	Je ne jette pas mes déchets dans la nature
 1026	limiation-plastique	ecogesture	Réduire les déchets et le plastique
+1017	ecogestes	ecogestures	Accueil écogestes
 \.
 
 
@@ -833,7 +843,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19783	1015	IMAGE	interests.locations.2.image	\N	1058	L’Anse Meunier dans l’étang des Salines, Martinique © Hervé Nicolas / CC BY-SA 4.0 	\N	f
 19784	1015	IMAGE	ecosystems.ecosystems.2.image	\N	1068	Mangrove, Martinique © schmitt.stelle / CC BY 2.0 	\N	f
 19785	1015	TEXT	interests.locations.0.description	Créé en 1976, le [Parc naturel régional](http://pnr-martinique.com/) s’étend sur 32 communes et couvre les 2/3 de l’île. Son objectif est de conjuguer le développement de l’île avec la préservation de ses richesses naturelles et culturelles. 	\N	\N	\N	f
-20697	1004	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 19786	1015	TEXT	risks.risks.1.description	Face aux enjeux  de la préservation et la valorisation de la biodiversité martiniquaise, 43 structures institutionnelles et associatives se sont réunies autour du Parc naturel régional de la Martinique pour la création d’un [Observatoire Martiniquais de la biodiversité](http://www.biodiversite-martinique.fr/#) afin de mutualiser les connaissances, sensibiliser le public et faciliter l’intégration de la biodiversité dans les politiques publiques.	\N	\N	\N	f
 19787	1015	TEXT	interests.locations.2.description	D’une superficie de 207 ha, ce site géré par le Conservatoire du littoral abrite une importante faune et flore patrimoniale. 	\N	\N	\N	f
 19788	1015	TEXT	interests.locations.1.description	A l'est de la Martinique, la presqu’île de la Caravelle présente une grande variété d’écosystèmes : savanes, falaises, forêt, mangroves. Le site est géré par le Parc naturel régional notamment pour y préserver le Moqueur gorge-blanche, oiseau endémique menacé.    	\N	\N	\N	f
@@ -859,28 +868,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19808	1015	TEXT	events.1.date	1929-1932	\N	\N	\N	f
 21453	1009	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
 19809	1015	TEXT	interests.locations.4.name	La réserve naturelle nationale des îlets de Sainte Anne	\N	\N	\N	f
-20698	1004	TEXT	understand.text2	Ces espèces exotiques envahissantes perturbent les équilibres environnementaux en entrant en compétition avec les espèces locales (pour la nourriture, les sites de reproduction ou de repos, la lumière, etc.), par prédation, introduction de pathogènes, hybridation ou encore en modifiant les paramètres physico-chimiques des habitats.  Elles ont ainsi de lourds impacts sur les milieux et les espèces indigènes, en particulier dans les îles où elles sont à l'origine de nombreuses extinctions.\n\nOn trouve des espèces exotiques envahissantes dans tous les groupes taxonomiques : champignons, algues, plantes vasculaires, invertébrés, reptiles, oiseaux, poissons, mammifères, etc. et dans tous les milieux : terrestres, marins ou d'eaux douces.	\N	\N	\N	f
-20699	1004	TEXT	understand.text1	Une espèce exotique envahissante est une espèce introduite par l’Homme hors de son territoire d’origine et qui présente ensuite, sur son territoire d’introduction, une dispersion et un développement importants, engendrant des impacts environnementaux mais aussi sociaux et économiques. Ces introductions sont parfois volontaires (pour l’agriculture, l’ornementation, comme animaux de compagnie, etc.) ou involontaires (organismes présents dans les marchandises échangées internationalement, dans les eaux de ballast des bateaux, etc.).\n\nDe nombreuses espèces n’arrivent pas à s’adapter ou se reproduire dans leurs territoires d’introduction, cependant certaines trouvent au contraire des conditions favorables à leur développement et prolifèrent, profitant notamment de l’absence de leurs prédateurs ou parasites naturels. 	\N	\N	\N	f
-20700	1004	TEXT	territories.title	Nombre d'espèces présentes sur la liste des 100 espèces exotiques les plus envahissantes au monde 	\N	\N	\N	f
-20701	1004	TEXT	understand.title1	Des espèces introduites par l'Homme	\N	\N	\N	f
-20702	1004	TEXT	understand.paragraphs.1.text	Des processus de biosécurité (désinfection, inspections minutieuses, utilisation de chiens formés à la détection, etc.) sont mis en œuvre par les territoires afin de limiter les risques d’entrée de nouvelles espèces exotiques. Pour les espèces déjà installées, de nombreuses interventions sont réalisées pour tenter de limiter leur propagation et atténuer leurs impacts, voire dans certains cas de les éradiquer pour préserver l'équilibre des écosystèmes. \n  \nLe Comité français de l'Union internationale pour la conservation de la nature conduit depuis 2005 une [initiative sur les espèces exotiques envahissantes en outre-mer](https://especes-envahissantes-outremer.fr/) afin de favoriser les échanges et le partage d'expériences entre les gestionnaires des différents territoires.	\N	\N	\N	f
-20703	1004	TEXT	understand.title2	Une des principales causes d'érosion de la biodiversité dans les îles	\N	\N	\N	f
-20704	1004	TEXT	presentation.descriptionTerritories	espèces sur les 100 considérées comme les plus envahissantes au monde sont présentes sur le territoire	\N	\N	\N	f
 21454	1009	TEXT	understand.text2	Ce nombre comprend uniquement les espèces dites indigènes des territoires d'outre-mer, c’est-à-dire naturellement présentes sur les territoires. Il ne comprend pas les espèces introduites, volontairement ou involontairement, par les humains (animaux domestiques, plantes cultivées, etc.).\nCe nombre ne prend pas non plus en compte les espèces éteintes.	\N	\N	\N	f
 21201	1005	LINK	onb.link	Retrouvez les indicateurs sur le site de l’ONB	\N	\N	https://naturefrance.fr/indicateurs	f
 21202	1005	TEXT	inpn.description	L’INPN recense les espèces (animales, végétales et fongiques), les habitats naturels, les espaces protégés et le patrimoine géologique, en métropole et en outre-mer. L’ensemble des acteurs de l’environnement contribuent à la mise à jour régulière des informations sur le site de l’INPN dans le cadre du Système d’information de l’Inventaire national du patrimoine naturel (SINP). L’INPN met à disposition de tous des données de référence, validées par des réseaux d'experts. Le Muséum national d'Histoire naturelle en assure la responsabilité scientifique.	\N	\N	\N	f
 21203	1005	IMAGE	image	\N	1016	Serpent liane perroquet © Raphaël Gailhac	\N	f
 21204	1005	TEXT	questions.1.quote	Avec ses territoires d’outre-mer, la France a dont une responsabilité forte dans la conservation de la biodiversité mondiale.	\N	\N	\N	f
 19810	1021	TEXT	species.7.description	Le Tamarin des Hauts ([*Acacia heterophylla*](https://inpn.mnhn.fr/espece/cd_nom/705753\n)) se trouve principalement en forêt humide de montagne entre 1100 et 1700 mètres d'altitude. Il peut atteindre 25 mètres de haut mais il est vulnérable aux cyclones en raison de son enracinement peu profond. Il s’agit d’une espèce endémique de l’île.\n\nStatut dans la Liste rouge de la flore vasculaire de La Réunion : préoccupation mineure. 	\N	\N	\N	f
-20705	1004	TEXT	understand.paragraphs.0.title	Une liste mondiale des espèces les plus problématiques	\N	\N	\N	f
-20706	1004	TEXT	understand.keyword	Espèces	\N	\N	\N	f
-20707	1004	TEXT	ecogestures.title	Que puis-je faire pour éviter l’introduction et la dispersion d’espèces exotiques envahissantes ? 	\N	\N	\N	f
-20708	1004	IMAGE	presentation.image	\N	1014	Rascasse volante (Pterois volitans) dans les fonds sous-marins de Martinique © Alain Pibot / OFB	\N	f
-20709	1004	TEXT	understand.paragraphs.1.title	De la prévention aux actions de gestion	\N	\N	\N	f
-20710	1004	TEXT	understand.paragraphs.0.text	En 2007, l’Union internationale pour la conservation de la nature a publié [une liste de 100 espèces exotiques considérées comme les plus envahissantes du monde](https://portals.iucn.org/library/sites/library/files/documents/2000-126-Fr.pdf), c’est-à-dire celles avec le plus fort potentiel de dispersion et le plus lourd impact sur leur environnement d’accueil. On y trouve notamment le rat noir ([*Rattus rattus*](https://inpn.mnhn.fr/espece/cd_nom/61587)), introduit dans de nombreuses îles et responsable, entre autres, du déclin des populations de nombreuses espèces d’oiseau dans les outre-mer, ou encore le Miconia ([*Miconia calvescens*](https://inpn.mnhn.fr/espece/cd_nom/447324)), un arbre introduit à Tahiti en 1937 et aujourd’hui très répandu sur l’île où il remplace la végétation indigène. Ce dernier a également été introduit en Nouvelle-Calédonie et découvert récemment en Martinique et en Guadeloupe.  \n\nLes fourmis introduites sont également un important sujet de préoccupations. Plusieurs espèces fortement envahissantes se retrouvent dans les territoires d’outre-mer, telles que la Fourmi folle ([*Anoplolepsis gracilipes*](https://inpn.mnhn.fr/espece/cd_nom/264513)), la Fourmi à grosse-tête ([*Pheidole megacephala*](https://inpn.mnhn.fr/espece/cd_nom/219383)) ou encore la Fourmi de feu ([*Solenopsis invicta*](https://inpn.mnhn.fr/espece/cd_nom/532922)). Elles perturbent de nombreuses autres espèces (arthropodes, reptiles, oiseaux, mammifères), par leurs comportements agressifs et leurs modifications des habitats.	\N	\N	\N	f
-20711	1004	IMAGE	understand.image	\N	1027	Miconia calvescens © Forest & Kim Starr / CC BY 3.0 	\N	f
-20712	1004	TEXT	presentation.description	espèces sur les 100 considérées comme les plus envahissantes au monde se trouvent en outre-mer	\N	\N	\N	f
-20713	1004	TEXT	presentation.logoUrl	http://indicateurs-biodiversite.naturefrance.fr/fr/indicateurs/nombre-despeces-en-outremer-parmi-les-plus-envahissantes-au-monde	\N	\N	\N	f
 21205	1005	TEXT	questions.2.answer	De nombreux scientifiques alertent sur la crise de biodiversité actuelle, qui pourrait être la 6<sup>e</sup> extinction de masse à l’échelle des temps géologiques. En effet, le rythme actuel des disparitions d’espèces observé est 100 à 1000 fois supérieur au taux naturel de disparition ! On estime que près de la moitié des espèces vivantes pourrait disparaitre d’ici un siècle.\nLes activités humaines en sont les principales responsables. Cinq causes majeures sont identifiées, qui se conjuguent entre elles : destruction et fragmentation des milieux, surexploitation des espèces, pollutions, changements climatiques et introduction d’espèces exotiques envahissantes.	\N	\N	\N	f
 19811	1021	TEXT	species.8.description	Le Bois d’Ortie ([*Obetia ficifolia*](https://inpn.mnhn.fr/espece/cd_nom/706579\n)) est une espèce rare et endémique des Mascareigne, qu’on retrouve dans les forêts sèches et semi-sèches. Il doit son nom à sa capacité à provoquer des irritations de la peau, mais il est réputé des tisaneurs pour être un remède contre l’asthme. Il est également connu pour être l’hôte d’un papillon endémique, le *Salamis augustina augustina*, qui n’a cependant pas été observé depuis 2005, ce qui laisse à penser à sa disparition. Dans l’espoir de le voir réapparaitre, des plantations de bois d’Ortie sont réalisées notamment sur le massif de la Grande Chaloupe.\n\nStatut dans la Liste rouge de la flore vasculaire de La Réunion : en danger. 	\N	\N	\N	f
 19812	1021	TEXT	events.2.description	Dernière mention connue du Solitaire de la Réunion (*Threskiornis solitarius*) oiseau endémique	\N	\N	\N	f
@@ -894,10 +887,29 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19303	1020	IMAGE	species.9.image	\N	1203	Image manquante	\N	f
 19304	1020	TEXT	events.2.description	Création de la première aire protégée de l'archipel, l'îlot Leprédour	\N	\N	\N	f
 19305	1020	TEXT	events.3.description	Inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
+21958	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
+21959	1000	TEXT	carousel.title	Découvrez la biodiversité des outre-mer	\N	\N	\N	f
 19306	1020	IMAGE	identity.image	\N	1088	Île des Pins, Nouvelle-Calédonie © Sébastien Jermer/Unsplash	\N	f
 19307	1020	TEXT	events.7.description	Publication du Code de l'environnement de la Province des îles Loyauté	\N	\N	\N	f
 21206	1005	TEXT	questions.0.answer	La biodiversité, ou diversité biologique, désigne la diversité des formes de vie sur terre, c’est à dire l’ensemble du tissu vivant de la planète : plantes, animaux, champignons, bactéries, etc. Elle est le produit de la lente évolution du monde du vivant, depuis les premiers organismes connus datant de 3,5 milliards d’années.\nElle comprend 3 niveaux de définition :\n    • La diversité des écosystèmes, c’est-à-dire des milieux de vie : océans, prairies, forêts, etc. jusqu’à l’échelle d’un organisme ou d’une cellule !\n    • La diversité des espèces qui vivent dans ces milieux, et sont en relation les unes avec les autres ;\n    • La diversité génétique, c’est-à-dire la diversité des individus au sein de ces espèces.\nDe nombreux biens et services indispensables aux activités humaines en dépendent : nourriture, pollinisation, médicaments, matières premières, fertilisation des sols, épuration de l’eau, etc. 	\N	\N	\N	f
 21207	1005	TEXT	questions.0.quote	La biodiversité est encore largement méconnue : on connait seulement 1,8 million d’espèces sur une diversité estimée d’environ 100 millions d’espèces !	\N	\N	\N	f
+21960	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre 	\N	\N	\N	f
+21961	1000	TEXT	testimony.title	Une biodiversité unique mais fragile, protégeons-la !	\N	\N	\N	f
+21962	1000	IMAGE	testimony.image	\N	1002	Un agent de l’OFB en Guyane © Raphael Gailhac	\N	f
+21847	1012	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
+21848	1012	TEXT	understand.text2	Ces milieux ont une importance au regard des services écosystémiques qu’ils procurent aux humains : régulation des crues et des inondations, protection des côtes de l’érosion et des tempêtes, épuration des eaux...\nSi des phénomènes naturels tels que les cyclones peuvent impacter les mangroves, de nombreuses causes de leur dégradation ont une origine humaine : changement climatique, artificialisation, exploitation intensive de ses ressources (bois, chasse, etc.), dépôts d’ordures, déversement des eaux usées, pollutions, pression touristique, etc. 	\N	\N	\N	f
+21963	1000	IMAGE	carousel.images.1.image	\N	1260	Martinique © F. Lefevbre	\N	f
+21964	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
+21965	1000	TEXT	science.text	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.	\N	\N	\N	f
+21966	1000	TEXT	carousel.text	Partez à la rencontre des espèces et des écosystèmes des territoires français d’outre-mer. 	\N	\N	\N	f
+21967	1000	IMAGE	carousel.images.2.image	\N	1004	Dendrobate à ventre tacheté *Ranitomeya amazonica* © Raphaël Gailhac	\N	f
+21968	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
+21969	1000	IMAGE	science.image	\N	1251	 Observations de terrain à Saint-Pierre-et-Miquelon © Nathalie De Lacoste	\N	f
+21970	1000	TEXT	science.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
+21971	1000	TEXT	testimony.quote	Ces actions conjuguées entraînent un accroissement de la biodiversité, une amélioration de la qualité de l’eau, de l’air mais aussi de la qualité de vie.	\N	\N	\N	f
+21972	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
+21973	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
+21974	1000	IMAGE	carousel.images.0.image	\N	1258	Fonds marins Martinique ©  F. Lefevbre	\N	f
 19308	1020	TEXT	events.7.date	2016	\N	\N	\N	f
 19309	1020	TEXT	interests.locations.0.name	Le Parc naturel de la Mer de Corail 	\N	\N	\N	f
 19310	1020	TEXT	events.0.description	Dislocation du supercontinent Gondwana et séparation de la Nouvelle-Calédonie avec l’Australie et la Nouvelle-Zélande	\N	\N	\N	f
@@ -989,15 +1001,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19843	1021	TEXT	interests.locations.5.name	[La Réserve naturelle marine](http://www.reservemarinereunion.fr/)	\N	\N	\N	f
 19844	1021	TEXT	events.0.date	-2 à 3 millions d’années,	\N	\N	\N	f
 19845	1021	TEXT	identity.populationYear	2017	\N	\N	\N	f
-20013	1017	TEXT	presentation	Les activités humaines sont à l’origine du déclin de la biodiversité et la dégradation des écosystèmes. Aujourd’hui plus que jamais, il est nécessaire de remettre en question nos comportements et nos choix de consommation, au quotidien ou en voyage, chez soi ou en milieu naturel, pour mieux prendre soin de la biodiversité qui nous entoure. Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.  \n\nL’objectif du Compteur est de mettre en avant des écogestes adaptés aux contextes ultramarins.	\N	\N	\N	f
-20014	1017	IMAGE	image	\N	1073	© DR	\N	f
-20015	1017	TEXT	quote	Des actions concrètes pour agir dès maintenant et préserver cette biodiversité les espèces et les écosystèmes	\N	\N	\N	f
-20016	1017	TEXT	question	Qu’est-ce qu’un écogeste ? 	\N	\N	\N	f
-20017	1017	TEXT	answer	Les écogestes, ce sont tous ces changements de comportement individuels qui permettent de réduire son impact sur l’environnement. Faire attention à son utilisation énergétique, faire les bons choix de consommation, mieux gérer ses déchets, consommer moins de viande, etc. des plus petits gestes aux grands changements, chacun est acteur de la préservation de l’environnement et peut limiter son impact. La multiplication de ces comportements individuels peut entraîner des changements notables à plus grande échelle !\n\nTous ces gestes ne doivent pas faire oublier que de profonds changements de société seront nécessaire pour limiter les risques liés au déclin de la biodiversité et au changement climatique. Ils représentent des actions et des changements de comportements nécessaires, mais doivent être accompagnés de politiques environnementales à la hauteur des enjeux.	\N	\N	\N	f
-20018	1017	TEXT	other.title	Retrouvez d'autres écogestes sur	\N	\N	\N	f
-20019	1017	IMAGE	other.image	\N	1074	logo	\N	f
-20020	1017	TEXT	other.text	Biodiversité Tous Vivants !	\N	\N	\N	f
-20021	1017	TEXT	title	Adaptons nos comportement pour préserver la biodiversité	\N	\N	\N	f
+21975	1000	TEXT	presentation.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
+21976	1000	TEXT	carousel.territoriesButton	Découvrir les territoires	\N	\N	\N	f
+21977	1000	TEXT	testimony.text	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont des outils qui permettent de suivre différents paramètres de la biodiversité, pour renseigner de son évolution.	\N	\N	\N	f
 21211	1005	TEXT	onb.description	Depuis 2012, l’Observatoire national de la biodiversité, actuellement piloté par l’Office français pour la biodiversité (OFB), publie des indicateurs sur l’état de la biodiversité française, avec la contribution de nombreux partenaires. Ils sont régulièrement actualisés et enrichis.\nLe Compteur met en lumière les indicateurs de l’ONB qui concernent les outre-mer et contribue à la création de nouveaux indicateurs pour ces territoires.	\N	\N	\N	f
 19846	1021	IMAGE	species.5.image	\N	1191	Image manquante	\N	f
 19847	1021	TEXT	statistics.0.text	hectares de récifs coralliens protégés par la réserve marine	\N	\N	\N	f
@@ -1044,23 +1050,23 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21463	1009	TEXT	ecogestures.title	Comment préserver la biodiversité indigène ?	\N	\N	\N	f
 21464	1009	IMAGE	presentation.image	\N	1039	Cacique à queue jaune © Raphael Gailhac	\N	f
 21465	1009	TEXT	understand.paragraphs.1.title	Des mammifères terrestres peu nombreux sur les îles 	\N	\N	\N	f
-20731	1012	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
-20732	1012	TEXT	understand.text2	Ces milieux ont une importance au regard des services écosystémiques qu’ils procurent aux humains : régulation des crues et des inondations, protection des côtes de l’érosion et des tempêtes, épuration des eaux...\nSi des phénomènes naturels tels que les cyclones peuvent impacter les mangroves, de nombreuses causes de leur dégradation ont une origine humaine : changement climatique, artificialisation, exploitation intensive de ses ressources (bois, chasse, etc.), dépôts d’ordures, déversement des eaux usées, pollutions, pression touristique, etc. 	\N	\N	\N	f
-20733	1012	TEXT	understand.text1	La mangrove est un écosystème forestier constitué principalement d'arbres appelés palétuviers, et se trouvant dans la zone de balancement des marées. Espace de transition entre le milieu terrestre et le milieu marin, cet écosystème abrite de nombreuses espèces qui en sont dépendantes pour une partie ou la totalité de leur cycle de vie.\n\nOn trouve des mangroves dans tous les territoires tropicaux d’outre-mer français, à l’exception de l’île de La Réunion. Au total, on estime leur superficie à 91 096 ha, la grande majorité se trouvant en Guyane et en Nouvelle-Calédonie. Cependant, en Polynésie, cet écosystème n’est pas présent naturellement : une espèce de palétuvier, [*Rhizophora stylosa*](https://inpn.mnhn.fr/espece/cd_nom/447469), a été introduite volontairement dans les années 1930, et s’est ensuite propagée à l’ensemble des îles de la Société, au détriment de certains écosystèmes natifs. 	\N	\N	\N	f
-20734	1012	TEXT	territories.title	Surface couverte par la mangrove	\N	\N	\N	f
-20735	1012	TEXT	understand.title1	La mangrove, un écosystème protecteur	\N	\N	\N	f
-20736	1012	TEXT	understand.paragraphs.1.text	Un [Pôle relai dédié aux zones humides tropicales](https://www.pole-tropical.org/) (PRZHT) a été créé en 2012, pour constituer un réseau d’échanges entre tous les acteurs concernés par la gestion et la restauration des zones humides tropicales, dont les mangroves mais aussi les mares et les vallées alluviales, dans les trois grands bassins océaniques. Co-animé par le Comité français de l’Union internationale pour la conservation de la nature et le Conservatoire du littoral, sa mission est de mutualiser les connaissances, les bonnes pratiques et les savoir-faire.  \n  \nLe PRZHT coordonne également le [Réseau national d’observation et d’aide à la gestion des mangroves](https://www.pole-tropical.org/actions/les-actions-du-reseau-dobservation-des-mangroves/) (ROM), une initiative nationale créée en 2012. Il s’agit d’un réseau d’observateurs consacré spécifiquement à la conservation des mangroves des outre-mer français.  \n \nEn 2019, le ROM a développé une application smartphone pour permettre à tous de s’entrainer à reconnaitre les différentes espèces de palétuviers qui constituent la mangrove et à signaler les perturbations observées (déchets, défrichements, mortalités, etc.) ou les observations de faune. Chaque utilisateur peut ainsi devenir pleinement acteur de la protection des mangroves au sein de son territoire. Vous aussi, devenez observateurs en [téléchargeant l'application ROM](https://rom.pole-tropical.org/home). \n	\N	\N	\N	f
-20737	1012	TEXT	understand.title2	Des bénéfices pour l’Homme, mais un écosystème soumis à de nombreuses pressions 	\N	\N	\N	f
-20738	1012	TEXT	presentation.descriptionTerritories	des mangroves font l'objet de mesures de conservation	\N	\N	\N	f
-20739	1012	TEXT	understand.paragraphs.0.title	Des statuts de protection variés	\N	\N	\N	f
-20740	1012	TEXT	understand.keyword	mangroves	\N	\N	\N	f
-20741	1012	TEXT	ecogestures.title	Que puis-je faire pour aider à préserver les mangroves ? 	\N	\N	\N	f
-20742	1012	IMAGE	presentation.image	\N	1047	Palétuviers à Grand Cul-de-Sac marin, Guadeloupe © Gaëlle Vandersarren	\N	f
-20743	1012	TEXT	understand.paragraphs.1.title	Des réseaux d’échanges entre les territoires pour la conservation des mangroves	\N	\N	\N	f
-20744	1012	TEXT	understand.paragraphs.0.text	Il existe un éventail de dispositions juridiques permettant de protéger les mangroves, par exemple le classement en Zone humide d’importance internationale par la Convention de Ramsar ou les arrêtés de protection de biotope, et de nombreuses zones de mangroves sont présentes dans les aires protégées des territoires (parcs nationaux, parcs naturels régionaux, réserves naturelles, etc.). Cependant, toutes les mangroves protégées ne font pas forcément l’objet de mesures de gestion.\nCet indicateur donne la part de mangroves bénéficiant d'un gestionnaire identifié et d'un document de gestion établit dans un but de conservation. Dans le cadre de la loi pour la reconquête de la biodiversité du 9 août 2016, l’État français s'était fixé pour objectif que 60 % de la surface nationale des mangroves soit gérée à des fins de conservation d'ici à 2020, cet objectif n'a donc pas été atteint. 	\N	\N	\N	f
-20745	1012	IMAGE	understand.image	\N	1049	La mangrove est un écosystème protecteur pour les poissons © UICN	\N	f
-20746	1012	TEXT	presentation.description	des mangroves nationales font l’objet de mesures de conservation	\N	\N	\N	f
-20747	1012	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/surface-de-mangroves-faisant-lobjet-de-mesures-de-conservation	\N	\N	\N	f
+21978	1004	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
+21979	1004	TEXT	understand.text2	Ces espèces exotiques envahissantes perturbent les équilibres environnementaux en entrant en compétition avec les espèces locales (pour la nourriture, les sites de reproduction ou de repos, la lumière, etc.), par prédation, introduction de pathogènes, hybridation ou encore en modifiant les paramètres physico-chimiques des habitats.  Elles ont ainsi de lourds impacts sur les milieux et les espèces indigènes, en particulier dans les îles où elles sont à l'origine de nombreuses extinctions.\n\nOn trouve des espèces exotiques envahissantes dans tous les groupes taxonomiques : champignons, algues, plantes vasculaires, invertébrés, reptiles, oiseaux, poissons, mammifères, etc. et dans tous les milieux : terrestres, marins ou d'eaux douces.	\N	\N	\N	f
+21980	1004	TEXT	understand.text1	Une espèce exotique envahissante est une espèce introduite par l’Homme hors de son territoire d’origine et qui présente ensuite, sur son territoire d’introduction, une dispersion et un développement importants, engendrant des impacts environnementaux mais aussi sociaux et économiques. Ces introductions sont parfois volontaires (pour l’agriculture, l’ornementation, comme animaux de compagnie, etc.) ou involontaires (organismes présents dans les marchandises échangées internationalement, dans les eaux de ballast des bateaux, etc.).\n\nDe nombreuses espèces n’arrivent pas à s’adapter ou se reproduire dans leurs territoires d’introduction, cependant certaines trouvent au contraire des conditions favorables à leur développement et prolifèrent, profitant notamment de l’absence de leurs prédateurs ou parasites naturels. 	\N	\N	\N	f
+21981	1004	TEXT	territories.title	Nombre d'espèces présentes sur la liste des 100 espèces exotiques les plus envahissantes au monde 	\N	\N	\N	f
+21982	1004	TEXT	understand.title1	Des espèces introduites par l'Homme	\N	\N	\N	f
+21983	1004	TEXT	understand.paragraphs.1.text	Des processus de biosécurité (désinfection, inspections minutieuses, utilisation de chiens formés à la détection, etc.) sont mis en œuvre par les territoires afin de limiter les risques d’entrée de nouvelles espèces exotiques. Pour les espèces déjà installées, de nombreuses interventions sont réalisées pour tenter de limiter leur propagation et atténuer leurs impacts, voire dans certains cas de les éradiquer pour préserver l'équilibre des écosystèmes. \n  \nLe Comité français de l'Union internationale pour la conservation de la nature conduit depuis 2005 une [initiative sur les espèces exotiques envahissantes en outre-mer](https://especes-envahissantes-outremer.fr/) afin de favoriser les échanges et le partage d'expériences entre les gestionnaires des différents territoires.	\N	\N	\N	f
+21984	1004	TEXT	understand.title2	Une des principales causes d'érosion de la biodiversité dans les îles	\N	\N	\N	f
+21985	1004	TEXT	presentation.descriptionTerritories	espèces sur les 100 considérées comme les plus envahissantes au monde sont présentes sur le territoire	\N	\N	\N	f
+21986	1004	TEXT	understand.paragraphs.0.title	Une liste mondiale des espèces les plus problématiques	\N	\N	\N	f
+21987	1004	TEXT	understand.keyword	Espèces	\N	\N	\N	f
+21988	1004	TEXT	ecogestures.title	Que puis-je faire pour éviter l’introduction et la dispersion d’espèces exotiques envahissantes ? 	\N	\N	\N	f
+21989	1004	IMAGE	presentation.image	\N	1261	Poisson-lion (*Pterois volitans*) © Fabien Lefebvre	\N	f
+21990	1004	TEXT	understand.paragraphs.1.title	De la prévention aux actions de gestion	\N	\N	\N	f
+21991	1004	TEXT	understand.paragraphs.0.text	En 2007, l’Union internationale pour la conservation de la nature a publié [une liste de 100 espèces exotiques considérées comme les plus envahissantes du monde](https://portals.iucn.org/library/sites/library/files/documents/2000-126-Fr.pdf), c’est-à-dire celles avec le plus fort potentiel de dispersion et le plus lourd impact sur leur environnement d’accueil. On y trouve notamment le rat noir ([*Rattus rattus*](https://inpn.mnhn.fr/espece/cd_nom/61587)), introduit dans de nombreuses îles et responsable, entre autres, du déclin des populations de nombreuses espèces d’oiseau dans les outre-mer, ou encore le Miconia ([*Miconia calvescens*](https://inpn.mnhn.fr/espece/cd_nom/447324)), un arbre introduit à Tahiti en 1937 et aujourd’hui très répandu sur l’île où il remplace la végétation indigène. Ce dernier a également été introduit en Nouvelle-Calédonie et découvert récemment en Martinique et en Guadeloupe.  \n\nLes fourmis introduites sont également un important sujet de préoccupations. Plusieurs espèces fortement envahissantes se retrouvent dans les territoires d’outre-mer, telles que la Fourmi folle ([*Anoplolepsis gracilipes*](https://inpn.mnhn.fr/espece/cd_nom/264513)), la Fourmi à grosse-tête ([*Pheidole megacephala*](https://inpn.mnhn.fr/espece/cd_nom/219383)) ou encore la Fourmi de feu ([*Solenopsis invicta*](https://inpn.mnhn.fr/espece/cd_nom/532922)). Elles perturbent de nombreuses autres espèces (arthropodes, reptiles, oiseaux, mammifères), par leurs comportements agressifs et leurs modifications des habitats.	\N	\N	\N	f
+21992	1004	IMAGE	understand.image	\N	1027	Miconia calvescens © Forest & Kim Starr / CC BY 3.0 	\N	f
+21993	1004	TEXT	presentation.description	espèces sur les 100 considérées comme les plus envahissantes au monde se trouvent en outre-mer	\N	\N	\N	f
+21994	1004	TEXT	presentation.logoUrl	http://indicateurs-biodiversite.naturefrance.fr/fr/indicateurs/nombre-despeces-en-outremer-parmi-les-plus-envahissantes-au-monde	\N	\N	\N	f
 19857	1021	IMAGE	interests.locations.3.image	\N	1158	Tronc d’un arbre « bois de pomme » (*Syzygium borbonicum*), forêt de Mare Longue © Philippe Gourdain	\N	f
 19858	1021	TEXT	species.3.name	Le Petit Molosse de La Réunion	\N	\N	\N	f
 19859	1021	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
@@ -1298,6 +1304,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21505	1003	TEXT	header.population	2,8 millions	\N	\N	\N	f
 21506	1003	TEXT	header.species	85 117	\N	\N	\N	f
 21507	1003	TEXT	header.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines. Naviguez parmi les portraits biodiversité des différents territoires et découvrez l’histoire des espèces et des écosystèmes qui les peuplent, les enjeux de chaque territoire et les initiatives des acteurs locaux pour les préserver.	\N	\N	\N	f
+21849	1012	TEXT	understand.text1	La mangrove est un écosystème forestier constitué principalement d'arbres appelés palétuviers, et se trouvant dans la zone de balancement des marées. Espace de transition entre le milieu terrestre et le milieu marin, cet écosystème abrite de nombreuses espèces qui en sont dépendantes pour une partie ou la totalité de leur cycle de vie.\n\nOn trouve des mangroves dans tous les territoires tropicaux d’outre-mer français, à l’exception de l’île de La Réunion. Au total, on estime leur superficie à 91 096 ha, la grande majorité se trouvant en Guyane et en Nouvelle-Calédonie. Cependant, en Polynésie, cet écosystème n’est pas présent naturellement : une espèce de palétuvier, [*Rhizophora stylosa*](https://inpn.mnhn.fr/espece/cd_nom/447469), a été introduite volontairement dans les années 1930, et s’est ensuite propagée à l’ensemble des îles de la Société, au détriment de certains écosystèmes natifs. 	\N	\N	\N	f
+21850	1012	TEXT	territories.title	Surface couverte par la mangrove	\N	\N	\N	f
+21851	1012	TEXT	understand.title1	La mangrove, un écosystème protecteur	\N	\N	\N	f
 19633	1001	IMAGE	ecosystems.image	\N	1026	La pointe de la Grande Vigie © Annie Mason/Unsplash	\N	f
 19634	1001	TEXT	identity.species	10 279	\N	\N	\N	f
 19635	1001	TEXT	statistics.1.number	42 %	\N	\N	\N	f
@@ -1337,29 +1346,21 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19956	1022	TEXT	species.2.description	Le Lièvre américain ([*Lepus americanus*](https://inpn.mnhn.fr/espece/cd_nom/456604\n)) et le Lièvre arctique ([*Lepus arcticus*](https://inpn.mnhn.fr/espece/cd_nom/61707\n)) ont été introduits pour la chasse respectivement en 1881 et 1982. Présents sur les trois îles, ils occupent des milieux différents : le Lièvre américain se concentre dans les milieux forestiers, sur lesquels il exerce une pression non négligeable, tandis que le Lièvre arctique préfère la végétation de la toundra, formée d’arbustes à éricacées, de lichens et de mousses.  \n  \nStatut dans la Liste rouge mondiale : préoccupation mineure pour les deux espèces. 	\N	\N	\N	f
 19957	1022	TEXT	statistics.1.number	86 %  	\N	\N	\N	f
 19958	1022	TEXT	statistics.0.number	La seule 	\N	\N	\N	f
-21681	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
-21682	1000	TEXT	carousel.title	Découvrez la biodiversité des outre-mer	\N	\N	\N	f
-21683	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre 	\N	\N	\N	f
+21909	1017	TEXT	presentation	Les activités humaines sont à l’origine du déclin de la biodiversité et la dégradation des écosystèmes. Aujourd’hui plus que jamais, il est nécessaire de remettre en question nos comportements et nos choix de consommation, au quotidien ou en voyage, chez soi ou en milieu naturel, pour mieux prendre soin de la biodiversité qui nous entoure. Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.  \n\nL’objectif du Compteur est de mettre en avant des écogestes adaptés aux contextes ultramarins.	\N	\N	\N	f
+21910	1017	IMAGE	image	\N	1073	© DR	\N	f
+21911	1017	TEXT	quote	Des actions concrètes pour agir dès maintenant et préserver cette biodiversité les espèces et les écosystèmes	\N	\N	\N	f
+21912	1017	TEXT	question	Qu’est-ce qu’un écogeste ? 	\N	\N	\N	f
+21913	1017	TEXT	answer	Les écogestes, ce sont tous ces changements de comportement individuels qui permettent de réduire son impact sur l’environnement. Faire attention à son utilisation énergétique, faire les bons choix de consommation, mieux gérer ses déchets, consommer moins de viande, etc. des plus petits gestes aux grands changements, chacun est acteur de la préservation de l’environnement et peut limiter son impact. La multiplication de ces comportements individuels peut entraîner des changements notables à plus grande échelle !\n\nTous ces gestes ne doivent pas faire oublier que de profonds changements de société seront nécessaire pour limiter les risques liés au déclin de la biodiversité et au changement climatique. Ils représentent des actions et des changements de comportements nécessaires, mais doivent être accompagnés de politiques environnementales à la hauteur des enjeux.	\N	\N	\N	f
+21914	1017	TEXT	other.title	Retrouvez d'autres écogestes sur	\N	\N	\N	f
+21915	1017	IMAGE	other.image	\N	1257	logo	\N	f
+21916	1017	TEXT	other.text	Biodiversité Tous Vivants !	\N	\N	\N	f
+21917	1017	TEXT	title	Adaptons nos comportement pour préserver la biodiversité	\N	\N	\N	f
 19959	1022	TEXT	statistics.2.number	1 000	\N	\N	\N	f
 19960	1022	IMAGE	interests.locations.4.image	\N	1235	Saint-Pierre © Laurent Malthieux	\N	f
 19961	1022	TEXT	species.2.name	Les lièvres	\N	\N	\N	f
 19962	1022	TEXT	species.4.description	Le Sapin baumier ([*Abies balsamea*](https://inpn.mnhn.fr/espece/cd_nom/717022\n)) est le conifère dominant de la forêt boréale de Saint-Pierre-et-Miquelon (plus de 80% du peuplement). Caractéristique des forêts boréales nord-américaines, il est parfois accompagné d’autres conifères moins fréquents (Epicéa blanc, Epicéa noir, Mélèze laricin…). En plus de subir des attaques fréquentes de pestes forestières indigènes, il est actuellement menacé par un parasite introduit : le puceron lanigère ([*Adelges piceae*](https://inpn.mnhn.fr/espece/cd_nom/893616\n)).\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
 19963	1022	TEXT	ecosystems.ecosystems.0.name	Les landes et la toundra	\N	\N	\N	f
-21684	1000	TEXT	testimony.title	Une biodiversité unique mais fragile, protégeons-la !	\N	\N	\N	f
-21685	1000	IMAGE	testimony.image	\N	1002	Un agent de l’OFB en Guyane © Raphael Gailhac	\N	f
-21686	1000	IMAGE	carousel.images.1.image	\N	1001	Colibri huppé *Orthorhyncus cristatus* © Olivier Delzons	\N	f
-21687	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
-21688	1000	TEXT	science.text	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.	\N	\N	\N	f
-21689	1000	TEXT	carousel.text	Partez à la rencontre des espèces et des écosystèmes des territoires français d’outre-mer. 	\N	\N	\N	f
-21690	1000	IMAGE	carousel.images.2.image	\N	1004	Dendrobate à ventre tacheté *Ranitomeya amazonica* © Raphaël Gailhac	\N	f
-21691	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
-21692	1000	IMAGE	science.image	\N	1251	 Observations de terrain à Saint-Pierre-et-Miquelon © Nathalie De Lacoste	\N	f
-21693	1000	TEXT	science.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
 17628	1018	TEXT	secondActionName	Je donne de mon temps	\N	\N	\N	f
-21694	1000	TEXT	testimony.quote	Ces actions conjuguées entraînent un accroissement de la biodiversité, une amélioration de la qualité de l’eau, de l’air mais aussi de la qualité de vie.	\N	\N	\N	f
-21695	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
-21696	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
-21697	1000	IMAGE	carousel.images.0.image	\N	1000	Tortue verte *Chelonia mydas* ©  B. Guichard	\N	f
 19638	1001	TEXT	statistics.2.number	1989	\N	\N	\N	f
 19639	1001	TEXT	species.2.name	Le Gaïac	\N	\N	\N	f
 19640	1001	TEXT	species.8.name	La Tortue imbriquée	\N	\N	\N	f
@@ -1396,8 +1397,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21527	1013	TEXT	understand.text1	Plus de 80 % des nouvelles découvertes d'espèces chaque année en France sont réalisées dans les territoires d'outre-mer. Certaines de ces nouvelles descriptions sont issues d’expéditions scientifiques, par exemple celles menées en Guyane en 2014 et en Nouvelle-Calédonie entre 2016 et 2019 par le Muséum national d’Histoire naturelle dans le cadre de la campagne « [la Planète revisitée](https://www.mnhn.fr/fr/recherche-expertise/lieux/planete-revisitee) », mais d’autres sont également réalisées par des taxonomistes non-professionnels. Il peut s'agir également d'espèces déjà décrites dans des territoires frontaliers mais dont la présence n'avait pas encore été observée sur le territoire national. Dans la plupart des cas, il s’agit de petits organismes invertébrés et d’organismes marins (insectes, mollusques, crustacés, vers marins).   \n  \nLe chiffre présenté ici représente une moyenne du nombre de découvertes par an sur les trois dernières années. 	\N	\N	\N	f
 21528	1013	TEXT	territories.title	Nouvelles espèces décrites par an	\N	\N	\N	f
 21529	1013	TEXT	understand.title1	L'outre-mer : un vivier d'espèces à découvrir	\N	\N	\N	f
-21698	1000	TEXT	presentation.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
-21699	1000	TEXT	carousel.territoriesButton	Découvrir les territoires	\N	\N	\N	f
 19655	1001	IMAGE	species.1.image	\N	1009	*Macrobrachium carcinus* © Clinton & Charles Robertson / CC BY 2.0 	\N	f
 19656	1001	TEXT	ecosystems.ecosystems.1.name	Les plages	\N	\N	\N	f
 19657	1001	TEXT	events.2.date	1976	\N	\N	\N	f
@@ -1456,7 +1455,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21539	1013	IMAGE	understand.image	\N	1052	Tri à la loupe binoculaire d’échantillons récoltés sur le terrain ©  T. Magniez/MNHN/PNI	\N	f
 21540	1013	TEXT	presentation.description	nouvelles espèces décrites par an en outre-mer	\N	\N	\N	f
 21541	1013	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/docs/communication/livretInpn/Livret-INPN-especes-2020.pdf	\N	\N	\N	f
-21700	1000	TEXT	testimony.text	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont des outils qui permettent de suivre différents paramètres de la biodiversité, pour renseigner de son évolution.	\N	\N	\N	f
 21777	1010	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 21778	1010	TEXT	understand.text2	Chaque espèce est évaluée par un groupe d’experts selon des critères bien définis tels que la taille de la population, son aire de distribution ou encore la disparition de son habitat naturel, pour pouvoir lui attribuer une catégorie. \nLe chiffre présenté ici comprend les espèces classées dans les catégories « éteinte au niveau mondial », « éteinte à l’état sauvage », «&nbsp;disparue au niveau régional », « en danger critique d’extinction », « en danger » et «&nbsp;vulnérable » dans les Listes rouges réalisées en outre-mer.  \n\nIl faut noter qu’une espèce peut être classée menacée sur le territoire national mais pas à l’échelle mondiale si son statut est bon dans d’autres pays, cependant on trouve en outre-mer de nombreuses espèces [endémiques](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques) qui ne sont présentes nulle part ailleurs dans le monde.	\N	\N	\N	f
 21779	1010	TEXT	understand.text1	L'Union internationale pour la conservation de la nature (UICN) développe depuis 1964 un outil de référence permettant de mesurer l'état de conservation de la faune et de la flore mondiale : la Liste rouge. Les espèces y sont classifiées par catégories selon leur degré de vulnérabilité. Cela permet d'identifier les priorités d'action, les progrès accomplis ou les défis à relever pour la conservation des espèces.  \n  \nEn France, l'élaboration de la [Liste rouge nationale des espèces menacées](https://inpn.mnhn.fr/programme/listes-rouges-especes/presentation) est mise en œuvre depuis 2008 par le Muséum national d'Histoire naturelle, l'Office français de la biodiversité et le Comité français de l'UICN, en collaboration avec un large réseau d'experts.\n\n	\N	\N	\N	f
@@ -1529,23 +1527,21 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21555	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
 21556	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
 21557	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
-20831	1014	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
-20832	1014	TEXT	understand.text2	Cet indicateur présente l’évolution du recouvrement en corail vivant sur des stations réparties dans les différents territoires d’outre-mer. La situation est en réalité très hétérogène selon les collectivités : les récifs sont ainsi très dégradés en Martinique et Guadeloupe, mais beaucoup moins à Wallis-et-Futuna ou Mayotte. La situation est considérée comme stable pour 60 % des stations étudiées.  \n\nCet indicateur a cependant des limites, par exemple, le nombre de stations évaluées reste faible : on compte 82 stations évaluées sur plus de 600 existantes. De plus, il se base uniquement sur le caractère vivant du corail, mais pas sur les espèces de coraux présentes, ni les communautés associées (poissons, invertébrés). Des analyses plus complètes et plus fines sont nécessaires afin de bien comprendre l’évolution de l’état de santé des récifs coralliens.	\N	\N	\N	f
+21796	1014	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 19702	1001	IMAGE	species.6.image	\N	1172	Image manquante	\N	f
 19703	1001	TEXT	identity.highestPointName	La Soufrière	\N	\N	\N	f
 20201	1024	IMAGE	presentation.file	\N	1121	test	\N	f
 20202	1024	IMAGE	action.cards.2.icon	\N	1124	relaché	\N	f
-20833	1014	TEXT	understand.text1	Les récifs coralliens sont formés par des colonies de coraux, formées de polypes (petits organismes invertébrés de la même famille que les méduses) sécrétant un squelette calcaire, et vivant en symbiose avec des algues unicellulaires, les zooxanthelles, qui leur apportent des nutriments grâce à la photosynthèse.\nPoissons, crustacés, mollusques, concombres de mer, éponges... les récifs coralliens sont des écosystèmes extrêmement riches en biodiversité, ils représentent une zone de nourrissage, de refuge et de nurserie pour des milliers d'espèces marines.  \n \n10 % des récifs coralliens mondiaux sont situés dans les territoires d’outre-mer français, la France a donc une responsabilité importante à l’échelle mondiale sur la conservation des récifs coralliens.	\N	\N	\N	f
-20834	1014	TEXT	territories.title	Pourcentage de surface des récifs coralliens en diminution	\N	\N	\N	f
-20835	1014	TEXT	understand.title1	Le corail, constructeur du récif	\N	\N	\N	f
-20836	1014	TEXT	understand.paragraphs.1.text	Créée en 1999, l’[Initiative française pour les récifs coralliens (IFRECOR)](https://ifrecor.fr/) agit pour protection et la gestion durable des récifs coralliens et des écosystèmes associés (mangroves, herbiers) dans les collectivités françaises d’outre-mer. Chaque collectivité abritant des récifs coralliens possède un comité local rassemblant les acteurs concernés par la protection et la gestion durable de ces écosystèmes. L’initiative collective couvre diverses missions : réseau de surveillance de l’état de santé des récifs, échange d’expériences entre acteurs, sensibilisation des élus et du grand public, gestion intégrée des zones côtières en accord avec la population.  \n  \nDéclinaison française de l’Initiative internationale pour les récifs coralliens (ICRI), l’IFRECOR représente les territoires français au niveau international. Le secrétariat du comité national de l’IFRECOR est assuré par le ministère de l’écologie et par le ministère chargé de l’outre-mer.	\N	\N	\N	f
-20837	1014	TEXT	understand.title2	Un état de santé hétérogène selon les territoires	\N	\N	\N	f
-20838	1014	TEXT	presentation.descriptionTerritories	des récifs coralliens sont en diminution	\N	\N	\N	f
-20839	1014	TEXT	understand.paragraphs.0.title	Les coraux en danger 	\N	\N	\N	f
-20840	1014	TEXT	understand.keyword	corail	\N	\N	\N	f
-20841	1014	TEXT	ecogestures.title	Comment préserver les coraux à mon échelle ? 	\N	\N	\N	f
-20842	1014	IMAGE	presentation.image	\N	1053	Récif corallien, Parc naturel marin de Mayotte © Marine Dekenen / OFB	\N	f
-20843	1014	TEXT	understand.paragraphs.1.title	L’IFRECOR, une initiative pour préserver les récifs 	\N	\N	\N	f
+21797	1014	TEXT	understand.text2	Cet indicateur présente l’évolution du recouvrement en corail vivant sur des stations réparties dans les différents territoires d’outre-mer. La situation est en réalité très hétérogène selon les collectivités : les récifs sont ainsi très dégradés en Martinique et Guadeloupe, mais beaucoup moins à Wallis-et-Futuna ou Mayotte. La situation est considérée comme stable pour 60 % des stations étudiées.  \n\nCet indicateur a cependant des limites, par exemple, le nombre de stations évaluées reste faible : on compte 82 stations évaluées sur plus de 600 existantes. De plus, il se base uniquement sur le caractère vivant du corail, mais pas sur les espèces de coraux présentes, ni les communautés associées (poissons, invertébrés). Des analyses plus complètes et plus fines sont nécessaires afin de bien comprendre l’évolution de l’état de santé des récifs coralliens.	\N	\N	\N	f
+21798	1014	TEXT	understand.text1	Les récifs coralliens sont formés par des colonies de coraux, formées de polypes (petits organismes invertébrés de la même famille que les méduses) sécrétant un squelette calcaire, et vivant en symbiose avec des algues unicellulaires, les zooxanthelles, qui leur apportent des nutriments grâce à la photosynthèse.\nPoissons, crustacés, mollusques, concombres de mer, éponges... les récifs coralliens sont des écosystèmes extrêmement riches en biodiversité, ils représentent une zone de nourrissage, de refuge et de nurserie pour des milliers d'espèces marines.  \n \n10 % des récifs coralliens mondiaux sont situés dans les territoires d’outre-mer français, la France a donc une responsabilité importante à l’échelle mondiale sur la conservation des récifs coralliens.	\N	\N	\N	f
+21799	1014	TEXT	territories.title	Pourcentage de surface des récifs coralliens en diminution	\N	\N	\N	f
+21800	1014	TEXT	understand.title1	Le corail, constructeur du récif	\N	\N	\N	f
+21801	1014	TEXT	understand.paragraphs.1.text	Créée en 1999, l’[Initiative française pour les récifs coralliens (IFRECOR)](https://ifrecor.fr/) agit pour protection et la gestion durable des récifs coralliens, des herbiers et des mangroves dans les collectivités françaises d’outre-mer. Chaque collectivité abritant ces écosystèmes possède un comité local rassemblant les acteurs concernés par leur protection et leur gestion durable. L’initiative collective porte un plan d'action sur 5 ans qui couvre 6 axes stratégiques : planifier pour prévenir ; réduire les effets négatifs dus aux activités humaines, tout en assurant leur développement durable ; connaître et comprendre pour gérer ; informer et éduquer pour modifier les comportements ; développer les échanges et la coopération pour renforcer les synergies et valoriser les expériences. \n  \nDéclinaison française de l’Initiative internationale pour les récifs coralliens (ICRI), l’IFRECOR représente les territoires français au niveau international. Elle est présidée par les ministres de la transition écologique et des outre-mer, dont les services assurent le secrétariat.	\N	\N	\N	f
+21802	1014	TEXT	understand.title2	Un état de santé hétérogène selon les territoires	\N	\N	\N	f
+21803	1014	TEXT	presentation.descriptionTerritories	des récifs coralliens sont en diminution	\N	\N	\N	f
+21804	1014	TEXT	understand.paragraphs.0.title	Les coraux en danger 	\N	\N	\N	f
+21805	1014	TEXT	understand.keyword	corail	\N	\N	\N	f
+21806	1014	TEXT	ecogestures.title	Comment préserver les coraux à mon échelle ? 	\N	\N	\N	f
 21558	1019	TEXT	examples.projects.4.description	Relai guadeloupéen de l’Observatoire des vers luisants et lucioles, l’observatoire Ti bèt a limiè a commencé ses activités en 2019. Les participants sont invités à faire remonter leurs observations de plusieurs espèces d’insectes lumineux (lucioles et taupins), afin de mieux connaitre leur biologie et leur écologie, identifier les facteurs favorisant leur présence ou leur régression et sensibiliser la population à leur maintien.	\N	\N	\N	f
 21559	1019	IMAGE	images.1.image	\N	1079	© Steveprutz / CC BY 3.0	\N	f
 21560	1019	TEXT	examples.projects.3.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
@@ -1567,7 +1563,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20203	1024	TEXT	presentation.name	Je protège les milieux contre l’introduction d’espèces exotiques envahissantes	\N	\N	\N	f
 20204	1024	IMAGE	action.cards.0.icon	\N	1122	Planter	\N	f
 20205	1024	IMAGE	presentation.image	\N	1120	© Hans-Jörg Hellwig / CC BY-SA 3.0	\N	f
-20844	1014	TEXT	understand.paragraphs.0.text	Les coraux sont des organismes très fragiles : lorsqu’ils sont soumis à un stress, les polypes expulsent leurs algues, ce qui provoque le blanchissement du corail et finit par entrainer sa mort si cette situation est prolongée.\nDe nombreuses menaces pèsent sur les récifs coralliens : le changement climatique provoque l’augmentation de la température et l'acidification de l’eau, qui soumettent les coraux à un stress important. Les polluants issus des activités humaines, certaines techniques de pêche ou encore les activités touristiques ont également un lourd impact sur les récifs. Ces facteurs se conjuguent aux évènements naturels (cyclones, consommation massive par l’étoile de mer [*Acanthaster planci*](https://inpn.mnhn.fr/espece/cd_nom/444461)) et aggravent leurs effets.  \n\nLes coraux sont également très sensibles aux maladies, comme la maladie de la bande blanche ou la récente maladie corallienne liée à la perte de tissus (SCTLD), identifiée pour la première fois en Floride en 2014 et observée en Guadeloupe en 2020.	\N	\N	\N	f
 19972	1022	TEXT	identity.presentation	Au sud de l'île de Terre Neuve (Canada), l'archipel se compose de la petit île de Saint-Pierre, où se concentre la majorité de la population, et des îles de Miquelon et Langlade, plus sauvages et préservées. Situé à la confluence du courant froid du Labrador et des eaux plus chaudes du Gulf Stream, l'archipel présente une biodiversité unique en France et une myriade d'écosystèmes, dont la seule forêt boréale française, de très importantes populations d'oiseaux marins et une grande richesse sous-marine.	\N	\N	\N	f
 19973	1022	TEXT	identity.population	6 274	\N	\N	\N	f
 19974	1022	TEXT	species.3.name	Le Pluvier siffleur	\N	\N	\N	f
@@ -1625,9 +1620,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20228	1027	TEXT	understand.quote	256 espèces de végétaux sont menacées en Guadeloupe	\N	\N	\N	f
 20229	1027	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20230	1027	TEXT	action.cards.0.description	Je ne sors pas des sentiers balisés, ils sont là pour me permettre de ne pas abimer les milieux.	\N	\N	\N	f
-20845	1014	IMAGE	understand.image	\N	1054	Les récifs coralliens sont des communautés animales vivant en symbiose avec des algues microscopiques © Julie Molinier/OFB	\N	f
-20846	1014	TEXT	presentation.description	des récifs coralliens sont en diminution dans les territoires d'outre-mer	\N	\N	\N	f
-20847	1014	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/evolution-de-letat-des-recifs-coralliens	\N	\N	\N	f
+21807	1014	IMAGE	presentation.image	\N	1053	Récif corallien, Parc naturel marin de Mayotte © Marine Dekenen / OFB	\N	f
+21808	1014	TEXT	understand.paragraphs.1.title	L’IFRECOR, une initiative pour préserver les récifs 	\N	\N	\N	f
 21563	1019	TEXT	paragraphs.1.text	L’objet et les conditions de collecte des données sont très précisément définis, pour permettre l’exploitabilité des données et la réponse à une question précise. La nature du protocole va contraindre le type de public participant, mais cela peut inclure des débutants. Les données collectées peuvent également rejoindre bases de données collaboratives.\n	\N	\N	\N	f
 21564	1019	IMAGE	examples.projects.0.image	\N	1081	© Cynomana  / CC BY-SA 4.0 	\N	f
 21565	1019	IMAGE	examples.projects.3.image	\N	1083	© Reefcheck France 	\N	f
@@ -1660,6 +1654,22 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21592	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
 21593	1019	TEXT	examples.projects.2.target	Usagers de la mer, tous publics	\N	\N	\N	f
 21594	1019	IMAGE	header.background	\N	1075	Mont Orohena, Tahiti © Darko Cotoras	\N	f
+21809	1014	TEXT	understand.paragraphs.0.text	Les coraux sont des organismes très fragiles : lorsqu’ils sont soumis à un stress, les polypes expulsent leurs algues, ce qui provoque le blanchissement du corail et finit par entrainer sa mort si cette situation est prolongée.\nDe nombreuses menaces pèsent sur les récifs coralliens : le changement climatique provoque l’augmentation de la température et l'acidification de l’eau, qui soumettent les coraux à un stress important. Les polluants issus des activités humaines, certaines techniques de pêche ou encore les activités touristiques ont également un lourd impact sur les récifs. Ces facteurs se conjuguent aux évènements naturels (cyclones, consommation massive par l’étoile de mer [*Acanthaster planci*](https://inpn.mnhn.fr/espece/cd_nom/444461)) et aggravent leurs effets.  \n\nLes coraux sont également très sensibles aux maladies, comme la maladie de la bande blanche ou la récente maladie corallienne liée à la perte de tissus (SCTLD), identifiée pour la première fois en Floride en 2014 et observée en Guadeloupe en 2020.	\N	\N	\N	f
+21810	1014	IMAGE	understand.image	\N	1054	Les récifs coralliens sont des communautés animales vivant en symbiose avec des algues microscopiques © Julie Molinier/OFB	\N	f
+21811	1014	TEXT	presentation.description	des récifs coralliens sont en diminution dans les territoires d'outre-mer	\N	\N	\N	f
+21812	1014	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/evolution-de-letat-des-recifs-coralliens	\N	\N	\N	f
+21852	1012	TEXT	understand.paragraphs.1.text	Créé en 2012, le [Pôle-relais dédié aux zones humides tropicales](https://www.pole-tropical.org/) (PRZHT) constitue un réseau d’échanges entre les acteurs concernés par la conservation, la gestion et la valorisation des zones humides dans les territoires tropicaux français. Il anime, entre autres, le [Réseau national d’observation et d’aide à la gestion des mangroves](https://www.pole-tropical.org/actions/les-actions-du-reseau-dobservation-des-mangroves/) (ROM), l’un des 3 réseaux de suivi de l’[Initiative française pour les Récifs Coralliens (IFRECOR)](https://ifrecor.fr/). Officiellement lancé en 2017, ce réseau regroupe les gestionnaires de mangroves des territoires français concernés aux Antilles, en Guyane, et dans les océans Indien et Pacifique. \n \nEn 2019, le ROM a développé une application smartphone pour permettre à tous de s’entrainer à reconnaitre les différentes espèces de palétuviers qui constituent la mangrove et à signaler les perturbations observées dans les mangroves (déchets, défrichements, mortalités, etc.). Chaque utilisateur peut ainsi devenir pleinement acteur de la protection des mangroves au sein de son territoire.  \nVous aussi, devenez observateurs en [téléchargeant l'application ROM](https://rom.pole-tropical.org/home) !\n	\N	\N	\N	f
+21853	1012	TEXT	understand.title2	Des bénéfices pour l’Homme, mais un écosystème soumis à de nombreuses pressions 	\N	\N	\N	f
+21854	1012	TEXT	presentation.descriptionTerritories	des mangroves font l'objet de mesures de conservation	\N	\N	\N	f
+21855	1012	TEXT	understand.paragraphs.0.title	Des statuts de protection variés	\N	\N	\N	f
+21856	1012	TEXT	understand.keyword	mangroves	\N	\N	\N	f
+21857	1012	TEXT	ecogestures.title	Que puis-je faire pour aider à préserver les mangroves ? 	\N	\N	\N	f
+21858	1012	IMAGE	presentation.image	\N	1047	Palétuviers à Grand Cul-de-Sac marin, Guadeloupe © Gaëlle Vandersarren	\N	f
+21859	1012	TEXT	understand.paragraphs.1.title	Un réseau participatif pour signaler les perturbations dans les mangroves	\N	\N	\N	f
+21860	1012	TEXT	understand.paragraphs.0.text	Il existe un éventail de dispositions juridiques permettant de protéger les mangroves, par exemple le classement en Zone humide d’importance internationale par la Convention de Ramsar ou les arrêtés de protection de biotope, et de nombreuses zones de mangroves sont présentes dans les aires protégées des territoires (parcs nationaux, parcs naturels régionaux, réserves naturelles, etc.). Cependant, toutes les mangroves protégées ne font pas forcément l’objet de mesures de gestion.\nCet indicateur donne la part de mangroves bénéficiant d'un gestionnaire identifié et d'un document de gestion établit dans un but de conservation. Dans le cadre de la loi pour la reconquête de la biodiversité du 9 août 2016, l’État français s'était fixé pour objectif que 60 % de la surface nationale des mangroves soit gérée à des fins de conservation d'ici à 2020, cet objectif n'a donc pas été atteint. 	\N	\N	\N	f
+21861	1012	IMAGE	understand.image	\N	1049	La mangrove est un écosystème protecteur pour les poissons © UICN	\N	f
+21862	1012	TEXT	presentation.description	des mangroves nationales font l’objet de mesures de conservation	\N	\N	\N	f
+21863	1012	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/surface-de-mangroves-faisant-lobjet-de-mesures-de-conservation	\N	\N	\N	f
 \.
 
 
@@ -1688,7 +1698,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 1251, true);
+SELECT pg_catalog.setval('public.image_seq', 1261, true);
 
 
 --
@@ -1709,7 +1719,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1097, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 21795, true);
+SELECT pg_catalog.setval('public.page_element_seq', 21994, true);
 
 
 --
