@@ -17,7 +17,7 @@ services:
       - /apps/postgresql/setup:/docker-entrypoint-initdb.d
       - /apps/postgresql/data:/var/lib/postgresql/data
   diversity-app:
-    image: outils-patrinat.mnhn.fr/biom-preprod:latest
+    image: outils-patrinat.mnhn.fr/biom-release:latest
     container_name: diversity-app
     environment:
      - "DIVERSITY_IMAGES_DIRECTORY=/srv/diversity"
@@ -25,6 +25,8 @@ services:
      - "DIVERSITY_CONTACT_SUBJECT=[BIOM]"
      - "DIVERSITY_SECURITY_SECRET-KEY=8f6mLmz9XmFmmEaCAb+hzwCH91u4zUIQBbmqvvmZLPY="
      - "DIVERSITY_INDICATORS_BASE-URL=https://odata-indicateurs.mnhn.fr"
+     - "DIVERSITY_IMPORT_BASE-URL=https://preprod.biodiversite-outre-mer.fr/"
+     - "DIVERSITY_IMPORT_TOKEN=IMPORT_SOURCE_TOKEN"
      - "DIVERSITY_MATOMO_HOST=matomo.test.mnhn.fr"
      - "DIVERSITY_MATOMO_SITE-ID=7"
      - "SPRING_DATASOURCE_URL=jdbc:postgresql://biom-preprod.patnat.mnhn.fr/biom"
