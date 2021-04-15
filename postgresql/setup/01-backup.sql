@@ -621,6 +621,7 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 1278	image/jpeg	2U1A9150-Modifier.jpg
 1279	image/jpeg	DSC09469-Modifier.jpg
 1280	image/jpeg	IMG_3514.jpg
+1281	image/jpeg	logo_pnr_martinique.jpg
 \.
 
 
@@ -747,11 +748,12 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 
 COPY public.page (id, name, model_name, title) FROM stdin;
 1025	protection-faune	ecogesture	Respecter la faune sauvage
+1007	apropos	about	A propos
 1028	exploitation-especes-protegees	ecogesture	Préserver les espèces protégées 
+1000	accueil	home	Accueil
 1024	protection-contre-eee	ecogesture	Protection contre les EEE
 1027	protection-flore	ecogesture	Préserver la flore sauvage
 1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
-1018	ecogeste-agir	ecogesture-act	Encadré "agir pour la biodiversité" fiche écogeste
 1030	mentions-legales	legal-terms	Mentions légales
 1009	especes-inventoriees	indicator	Espèces indigènes
 1003	territoires	territories	Découvrez les outre-mer
@@ -761,7 +763,6 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1002	antilles	territory-zone	bassin antillais
 1029	s-investir-sur-le-terrain	ecogesture	S'investir sur le terrain
 1011	taux-boisement	indicator	Proportion de forêts
-1007	apropos	about	A propos
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
 1005	indicateurs	indicators	Tous les indicateurs
 1001	guadeloupe	territory	Guadeloupe
@@ -774,9 +775,9 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1026	limiation-plastique	ecogesture	Réduire les déchets et le plastique
 1017	ecogestes	ecogestures	Accueil écogestes
 1015	martinique	territory	Martinique
-1000	accueil	home	Accueil
 1021	reunion	territory	La Réunion
 1004	especes-exotiques-envahissantes	indicator	Espèces exotiques envahissantes 2
+1018	ecogeste-agir	ecogesture-act	Encadré "agir pour la biodiversité" fiche écogeste
 \.
 
 
@@ -785,6 +786,30 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 --
 
 COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, title) FROM stdin;
+24915	1007	IMAGE	partners.partners.1.logo	\N	1281	Parc naturel régional de la Martinique	\N	f
+24916	1007	TEXT	partners.partners.0.url	http://www.biodiversite-martinique.fr/	\N	\N	\N	f
+24917	1007	TEXT	goal2.quote	*Le Compteur constituera un signal d’alerte et donnera une visibilité forte et essentielle pour sensibiliser à l’évolution de la biodiversité.*  Livre bleu des outre-mer, 2018. 	\N	\N	\N	f
+24918	1007	TEXT	goal1.title	Partager la connaissance scientifique	\N	\N	\N	f
+24919	1007	IMAGE	goal2.quoteImage	\N	1031	Coq-de-roche © Raphaël Gailhac 	\N	f
+24920	1007	TEXT	goal2.description	De nombreuses actions locales sont mises en place afin de tenter de préserver les écosystèmes et les espèces. Donner de la visibilité aux acteurs locaux, partager les expériences et les réussites, au bénéfice de tous, c’est également l’un des objectifs du Compteur. 	\N	\N	\N	f
+24921	1007	TEXT	goal3.description	Chacun, à son échelle, peut agir pour préserver la biodiversité. Connaitre et appliquer des gestes simples, modifier ses habitudes et son comportement ou encore s’investir dans des programmes de sciences participatives, tout le monde est concerné par la préservation de la biodiversité. Le rôle du Compteur est d’accompagner les citoyens en partageant des informations claires et adaptées à tous les territoires, et en encourageant à se mobiliser.	\N	\N	\N	f
+24922	1007	TEXT	partners.partners.3.url	http://www.saint-pierre-et-miquelon.developpement-durable.gouv.fr/	\N	\N	\N	f
+24923	1007	TEXT	partners.title	Les partenaires	\N	\N	\N	f
+24924	1007	TEXT	goal1.description	Quelles sont les espèces présentes dans ce territoire ? Comment évoluent leurs populations ? Quel est l’état de santé des récifs coralliens ? Pour répondre à ces questions et bien d’autres, différents paramètres, appelés « indicateurs », sont mesurés par les scientifiques pour suivre l’évolution de l’état de la biodiversité. Le Compteur a pour mission de rendre compte de l’état de ces connaissances dans les territoires en s'appuyant notamment sur l'[ONB](https://naturefrance.fr/), l'[INPN](https://inpn.mnhn.fr/accueil/index) et les observatoires locaux. 	\N	\N	\N	f
+24925	1007	IMAGE	goal3.image	\N	1274	 © Observatoire Martiniquais de la biodiversité	\N	f
+24926	1007	TEXT	header.subtitle	C’est le Livre Bleu outre-mer, synthèse des travaux des Assises des outre-mer, qui propose en 2018 la création d’un Compteur de la biodiversité. Ce nouveau dispositif vient notamment enrichir le portail [Naturefrance](https://naturefrance.fr/) en présentant un focus sur les territoires ultramarins. Outil actualisé et pérenne, il favorisera la rencontre, la synergie des citoyens et des acteurs de la biodiversité.  \n  \nLa démarche est collaborative et partenariale avec les territoires, notamment pour relater les contextes culturels et mettre en avant des enjeux spécifiques. Des études, actuellement en cours, viennent compléter l’initiative : le premier panorama des programmes de sciences participatives dans les territoires, et une enquête sur la perception de la nature et l’utilisation des outils numériques. 	\N	\N	\N	f
+24927	1007	TEXT	header.title	Pourquoi un Compteur de la biodiversité en outre-mer ?	\N	\N	\N	f
+24928	1007	CHECKBOX	header.shadowed	true	\N	\N	\N	f
+24929	1007	TEXT	goal3.title	Encourager chacun à agir	\N	\N	\N	f
+24930	1007	TEXT	partners.partners.1.url	http://www.pn-martinique.com/	\N	\N	\N	f
+24931	1007	IMAGE	partners.partners.3.logo	\N	1272	DTAM Saint-Pierre et Miquelon	\N	f
+24932	1007	IMAGE	goal2.image	\N	1029	Tortue olivâtre, Guyane © Raphael Gailhac	\N	f
+24933	1007	IMAGE	goal1.image	\N	1030	Jaguar, Guyane © Raphaël Gailhac	\N	f
+24934	1007	IMAGE	partners.partners.2.logo	\N	1271	Criobe	\N	f
+24935	1007	TEXT	goal2.title	Valoriser les actions des territoires	\N	\N	\N	f
+24936	1007	TEXT	partners.partners.2.url	http://www.criobe.pf/	\N	\N	\N	f
+24937	1007	IMAGE	header.background	\N	1028	Monts Pito Hiti et Orohena, Tahiti © Jean-Yves Meyer	\N	f
+24938	1007	IMAGE	partners.partners.0.logo	\N	1273	Observatoire Martiniquais de la biodiversité	\N	f
 24652	1015	TEXT	ecosystems.ecosystems.1.description	Les forêts se trouvent principalement dans le nord, sur les massifs montagneux et difficilement accessibles des pitons du Carbet de la Montagne Pelée. On distingue plusieurs types de forêt présentant différents cortèges floristiques en fonction de l’altitude. On y trouve une importante diversité, notamment en espèces endémiques. 	\N	\N	\N	f
 24653	1015	TEXT	ecosystems.ecosystems.0.description	Couvrant 50 km de l’île, surtout dans le sud, les plages sont des lieux de ponte pour 3 espèces de tortues marines et sont également bordées par un cortège floristique intéressant : patates bord de mer, pois bord de mer, raisinier bord de mer… Cette végétation est toutefois fortement dégradée par les installations touristiques et l’importante fréquentation de certaines plages. 	\N	\N	\N	f
 24654	1015	TEXT	identity.highestPoint	1 397	\N	\N	\N	f
@@ -821,7 +846,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21453	1009	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
 21454	1009	TEXT	understand.text2	Ce nombre comprend uniquement les espèces dites indigènes des territoires d'outre-mer, c’est-à-dire naturellement présentes sur les territoires. Il ne comprend pas les espèces introduites, volontairement ou involontairement, par les humains (animaux domestiques, plantes cultivées, etc.).\nCe nombre ne prend pas non plus en compte les espèces éteintes.	\N	\N	\N	f
 22635	1024	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
-22636	1025	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22637	1026	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22638	1027	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22639	1028	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
@@ -850,40 +874,18 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19303	1020	IMAGE	species.9.image	\N	1203	Image manquante	\N	f
 19304	1020	TEXT	events.2.description	Création de la première aire protégée de l'archipel, l'îlot Leprédour	\N	\N	\N	f
 19305	1020	TEXT	events.3.description	Inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
-24736	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
-24737	1000	TEXT	carousel.title	Partez à la rencontre des espèces et des écosystèmes ultramarins	\N	\N	\N	f
 19306	1020	IMAGE	identity.image	\N	1088	Île des Pins, Nouvelle-Calédonie © Sébastien Jermer/Unsplash	\N	f
 19307	1020	TEXT	events.7.description	Publication du Code de l'environnement de la Province des îles Loyauté	\N	\N	\N	f
-24738	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre 	\N	\N	\N	f
-24739	1000	TEXT	testimony.title	Une biodiversité unique mais fragile, protégeons-la !	\N	\N	\N	f
-24740	1000	IMAGE	testimony.image	\N	1262	Agents de l’OFB en Guyane © Raphael Gailhac	\N	f
-24741	1000	IMAGE	carousel.images.1.image	\N	1260	Martinique © Fabien Lefebvre	\N	f
-24742	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
 21847	1012	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 21848	1012	TEXT	understand.text2	Ces milieux ont une importance au regard des services écosystémiques qu’ils procurent aux humains : régulation des crues et des inondations, protection des côtes de l’érosion et des tempêtes, épuration des eaux...\nSi des phénomènes naturels tels que les cyclones peuvent impacter les mangroves, de nombreuses causes de leur dégradation ont une origine humaine : changement climatique, artificialisation, exploitation intensive de ses ressources (bois, chasse, etc.), dépôts d’ordures, déversement des eaux usées, pollutions, pression touristique, etc. 	\N	\N	\N	f
-24743	1000	TEXT	science.text	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.	\N	\N	\N	f
-24744	1000	TEXT	carousel.text	Naviguez parmi les portraits biodiversité des territoires pour mieux comprendre les enjeux avec une sélection de repères et chiffres clés sur la nature.	\N	\N	\N	f
-24745	1000	CHECKBOX	carousel.images.0.shadowed	true	\N	\N	\N	f
-24746	1000	IMAGE	carousel.images.2.image	\N	1004	Dendrobate à ventre tacheté *Ranitomeya amazonica* © Raphaël Gailhac	\N	f
-24747	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
-24748	1000	CHECKBOX	carousel.images.1.shadowed	false	\N	\N	\N	f
-24749	1000	IMAGE	science.image	\N	1251	 Observations de terrain à Saint-Pierre-et-Miquelon © Nathalie De Lacoste	\N	f
-24750	1000	TEXT	science.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
-24751	1000	TEXT	testimony.quote	Ces actions conjuguées entraînent un accroissement de la biodiversité, une amélioration de la qualité de l’eau, de l’air mais aussi de la qualité de vie.	\N	\N	\N	f
-24752	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
-24753	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
-24754	1000	IMAGE	carousel.images.0.image	\N	1258	Fonds marins en Martinique © Fabien Lefebvre	\N	f
-24755	1000	TEXT	presentation.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
 19308	1020	TEXT	events.7.date	2016	\N	\N	\N	f
 19309	1020	TEXT	interests.locations.0.name	Le Parc naturel de la Mer de Corail 	\N	\N	\N	f
 19310	1020	TEXT	events.0.description	Dislocation du supercontinent Gondwana et séparation de la Nouvelle-Calédonie avec l’Australie et la Nouvelle-Zélande	\N	\N	\N	f
 19311	1020	TEXT	events.1.description	Arrivée des explorateurs Lapita par la mer : première occupation humaine du territoire	\N	\N	\N	f
 19312	1020	TEXT	events.8.description	Expédition naturaliste ["la Planète revisitée"](http://nouvellecaledonie.laplaneterevisitee.org/)	\N	\N	\N	f
 19313	1020	TEXT	events.9.description	Création du parc provincial de la Côte oubliée	\N	\N	\N	f
-24756	1000	TEXT	carousel.territoriesButton	Découvrir les territoires	\N	\N	\N	f
-24757	1000	CHECKBOX	carousel.images.2.shadowed	false	\N	\N	\N	f
 19314	1020	IMAGE	ecosystems.image	\N	1094	test	\N	f
-24758	1000	TEXT	testimony.text	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont des outils qui permettent de suivre différents paramètres de la biodiversité, pour renseigner de son évolution.	\N	\N	\N	f
+25008	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
 19315	1020	TEXT	identity.species	26 984	\N	\N	\N	f
 19316	1020	IMAGE	ecosystems.ecosystems.0.image	\N	1092	Forêt tropicale humide sur l’île de Lifou, Nouvelle-Calédonie © Benjamin Guichard / OFB	\N	f
 19317	1020	TEXT	species.11.description	A compléter	\N	\N	\N	f
@@ -894,6 +896,28 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19322	1020	TEXT	events.4.description	Publication des Codes de l'environnement des Provinces Sud et Nord	\N	\N	\N	f
 19323	1020	TEXT	events.5.description	Création du [Conservatoire d'espaces naturels](https://www.cen.nc/especes-envahissantes/presentation)	\N	\N	\N	f
 19324	1020	TEXT	interests.locations.2.name	La région des lacs du Grand Sud	\N	\N	\N	f
+25009	1000	TEXT	carousel.title	Partez à la rencontre des espèces et des écosystèmes ultramarins	\N	\N	\N	f
+25010	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre 	\N	\N	\N	f
+25011	1000	TEXT	testimony.title	Une biodiversité unique mais fragile, protégeons-la !	\N	\N	\N	f
+25012	1000	IMAGE	testimony.image	\N	1262	Agents de l’OFB en Guyane © Raphael Gailhac	\N	f
+25013	1000	IMAGE	carousel.images.1.image	\N	1260	Martinique © Fabien Lefebvre	\N	f
+25014	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
+25015	1000	TEXT	science.text	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.	\N	\N	\N	f
+25016	1000	TEXT	carousel.text	Naviguez parmi les portraits biodiversité des territoires pour mieux comprendre les enjeux avec une sélection de repères et chiffres clés sur la nature.	\N	\N	\N	f
+25017	1000	CHECKBOX	carousel.images.0.shadowed	true	\N	\N	\N	f
+25018	1000	IMAGE	carousel.images.2.image	\N	1004	Dendrobate à ventre tacheté *Ranitomeya amazonica* © Raphaël Gailhac	\N	f
+25019	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
+25020	1000	CHECKBOX	carousel.images.1.shadowed	false	\N	\N	\N	f
+25021	1000	IMAGE	science.image	\N	1251	 Observations de terrain à Saint-Pierre-et-Miquelon © Nathalie De Lacoste	\N	f
+25022	1000	TEXT	science.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
+25023	1000	TEXT	testimony.quote	Ces actions conjuguées entraînent un accroissement de la biodiversité, une amélioration de la qualité de l’eau, de l’air mais aussi de la qualité de vie.	\N	\N	\N	f
+25024	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
+25025	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
+25026	1000	IMAGE	carousel.images.0.image	\N	1258	Fonds marins en Martinique © Fabien Lefebvre	\N	f
+25027	1000	TEXT	presentation.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
+25028	1000	TEXT	carousel.territoriesButton	Découvrir les territoires	\N	\N	\N	f
+25029	1000	CHECKBOX	carousel.images.2.shadowed	false	\N	\N	\N	f
+25030	1000	TEXT	testimony.text	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont des outils qui permettent de suivre différents paramètres de la biodiversité, pour renseigner de son évolution.	\N	\N	\N	f
 24759	1021	TEXT	species.7.description	Le Tamarin des Hauts ([*Acacia heterophylla*](https://inpn.mnhn.fr/espece/cd_nom/705753\n)) se trouve principalement en forêt humide de montagne entre 1100 et 1700 mètres d'altitude. Il peut atteindre 25 mètres de haut mais il est vulnérable aux cyclones en raison de son enracinement peu profond. Il s’agit d’une espèce endémique de l’île.\n\nStatut dans la Liste rouge de la flore vasculaire de La Réunion : préoccupation mineure. 	\N	\N	\N	f
 23417	1001	TEXT	species.2.description	Le Gaïac ([*Guaiacum officinale*](https://inpn.mnhn.fr/espece/cd_nom/629786\n)) est un petit arbre des milieux secs, utilisé pour son bois très dense et son usage médicinal. Surexploité et victime de la destruction de son habitat, il est aujourd’hui considéré en danger d’extinction en Guadeloupe et il est protégé. Les derniers individus sont localisés dans la Réserve naturelle nationale des îlets de Petite Terre.\n\nStatut dans la Liste rouge de la flore vasculaire de Guadeloupe : en danger. 	\N	\N	\N	f
 23418	1001	TEXT	events.0.description	Premières traces d'occupation humaine en Guadeloupe	\N	\N	\N	f
@@ -1236,9 +1260,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 19408	1020	TEXT	identity.title	La Nouvelle-Calédonie,\nun hotspot de biodiversité dans le Pacifique	\N	\N	\N	f
 19409	1020	IMAGE	species.6.image	\N	1200	Image manquante	\N	f
 19410	1020	TEXT	interests.locations.1.name	Les lagons, inscrits au Patrimoine mondial de l'UNESCO 	\N	\N	\N	f
-22725	1018	TEXT	secondActionName	Je donne de mon temps	\N	\N	\N	f
-22726	1018	LINK	secondActionLink	Tous les programmes de sciences participatives	\N	\N	https://preprod.biodiversite-outre-mer.fr/sciences-participatives	f
-22727	1018	TEXT	description	Iorem ipsum	\N	\N	\N	f
 20111	1023	IMAGE	presentation.file	\N	1113	jeter ses déchets covid	\N	f
 20112	1023	IMAGE	action.cards.2.icon	\N	1116	Tri	\N	f
 20113	1023	TEXT	presentation.name	Je ne jette pas mes déchets dans la nature	\N	\N	\N	f
@@ -1251,20 +1272,11 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20120	1023	TEXT	action.cards.1.description	Si je suis fumeur, je ne jette jamais mon mégot dans la nature.\nJe peux acheter ou fabriquer un cendrier de poche à garder avec moi.	\N	\N	\N	f
 20121	1023	TEXT	presentation.description	Mégots, sacs plastiques, piles, canettes, vieux filets de pêche, carcasses de voitures… Sur terre comme en mer, tous ces déchets abandonnés dégradent les écosystèmes !	\N	\N	\N	f
 20122	1023	TEXT	action.title	Pour que mes déchets n’impactent pas les milieux 	\N	\N	\N	f
-22728	1018	TEXT	firstActionName	J'agis en ligne	\N	\N	\N	f
-22729	1018	LINK	firstActionLink	Je télécharge l'application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
-22730	1018	TEXT	title	Agir pour la biodiversité	\N	\N	\N	f
 19411	1020	IMAGE	species.0.image	\N	1091	*Sphaeropteris intermedia* © Benjamin Guichard / OFB	\N	f
 19412	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
 20123	1023	TEXT	understand.quote	A l’échelle mondiale, on estime que 8 millions de tonnes de plastique finissent chaque année dans les océans ! Et un mégot peut polluer à lui seul 500 litres d’eau.	\N	\N	\N	f
 20124	1023	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20125	1023	TEXT	action.cards.0.description	Je ne jette jamais mes déchets dans la nature. Si il n’y a pas de poubelles à proximité, je les conserve avec moi en attendant.	\N	\N	\N	f
-20141	1025	IMAGE	presentation.file	\N	1125	test 	\N	f
-20142	1025	IMAGE	action.cards.2.icon	\N	1129	chien	\N	f
-20143	1025	IMAGE	action.cards.3.icon	\N	1130	véto	\N	f
-20144	1025	TEXT	presentation.name	Je respecte la faune sauvage	\N	\N	\N	f
-20145	1025	IMAGE	action.cards.0.icon	\N	1127	distance	\N	f
-20146	1025	IMAGE	presentation.image	\N	1126	Iguane endémique des Petites Antilles © Fabien Lefebvre	\N	f
 19413	1020	TEXT	interests.locations.4.name	Le parc provincial de la Côte oubliée (*Woen Vùù – Pwa Pereeù*)	\N	\N	\N	f
 20126	1026	IMAGE	presentation.file	\N	1134	test	\N	f
 20127	1026	IMAGE	action.cards.2.icon	\N	1133	jetable	\N	f
@@ -1281,8 +1293,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20138	1026	TEXT	understand.quote	A l’échelle mondiale, un tiers des déchets plastiques se retrouve dans la nature. Seuls 9% des déchets plastiques sont recyclés dans le monde.	\N	\N	\N	f
 20139	1026	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20140	1026	TEXT	action.cards.0.description	Je refuse les sacs plastiques à usage unique, j'utilise des sacs réutilisables en tissus ou en matières naturelles.	\N	\N	\N	f
-20147	1025	TEXT	understand.text	Observer la faune dans son milieu naturel est une chance et une expérience formidable. Cependant, sur terre comme en mer, déranger un animal peut le mettre en péril en occasionnant un stress important et une dépense d’énergie inutile. Il risque également d’abandonner son nid ou ses petits, se blesser, être plus facilement à la merci d’un prédateur…\n\nLes conséquences sont d’autant plus importantes lorsqu’il s’agit d’espèces très menacées, pour laquelle la survie de chaque individu compte.\n\nL'impact des chiens peut être catastrophique pour la faune sensible des outre-mer, que ce soit par prédation ou par le stress qu'ils occasionnent (poursuite, aboiements, destruction de nids,...). En Nouvelle-Calédonie, ils ont joué un rôle non-négligeable dans le déclin de la population de Cagous.\nDans la plupart des espaces protégés, leur présence, même tenus en laisse n'est pas autorisée. 	\N	\N	\N	f
-20148	1025	IMAGE	action.cards.1.icon	\N	1128	bruits	\N	f
 24561	1015	TEXT	events.2.description	Dernière éruption de la Montagne Pelée	\N	\N	\N	f
 14286	1030	TEXT	paragraphs.2.text	**Outils de mesure d’audience**\nLe site utilise l’outil d’analyse Matomo. Les traceurs de mesures d’audience issus de Matomo ne nécessitent pas de recueil préalable du consentement de l’utilisateur du fait qu’ils servent uniquement à produire des données statistiques anonymes.\nPour en savoir plus :\nhttps://fr.matomo.org/privacy/\n\n**Politique de confidentialité et RGPD**\nLe Muséum national d’Histoire naturelle porte la plus grande attention à vos données à caractère personnel et s’engage à les protéger.\nIl s'engage à ce que la collecte et le traitement de données à caractère personnel, effectués à partir du présent site, soient conformes à la loi n°78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés ainsi qu’au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 applicable le 25 mai 2018. \n\n**Données personnelles**\nSauf stipulation contraire directement mentionnée, aucune donnée personnelle n’est collectée ni traitée sur le portail « Compteur de biodiversité outre-mer ».	\N	\N	\N	f
 14287	1030	TEXT	paragraphs.1.title	Conditions générales d’utilisation	\N	\N	\N	f
@@ -1340,8 +1350,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 24603	1015	TEXT	species.4.name	L'Ananas bois	\N	\N	\N	f
 24604	1015	TEXT	identity.area	1 128	\N	\N	\N	f
 24605	1015	TEXT	species.0.description	Le Matoutou Falaise ([*Caribena versicolor*](https://inpn.mnhn.fr/espece/cd_nom/845739\n)) est une mygale arboricole endémique de la Martinique. D’une envergure totale pouvant aller jusqu’à 15 cm, elle se caractérise par ses couleurs : abdomen rouge vif, pattes roses violacées et thorax bleuté. Prédatrice nocturne, elle se nourrit principalement d'insectes et est inoffensive pour les humains. Longtemps prélevée par les terrariophiles, l’espèce est protégée depuis 2017 au niveau national et sa détention est illicite.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
-22995	1007	IMAGE	partners.partners.1.logo	\N	1271	Criobe	\N	f
-22996	1007	TEXT	partners.partners.0.url	http://www.biodiversite-martinique.fr/	\N	\N	\N	f
 24606	1015	TEXT	identity.highestPointName	Montagne Pelée	\N	\N	\N	f
 24607	1015	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
 24608	1015	TEXT	species.7.description	Le Moqueur gorge-blanche ([*Ramphocinclus brachyurus*](https://inpn.mnhn.fr/espece/cd_nom/442316\n)) est un petit oiseau à la face dorsale foncée et la face ventrale blanche endémique de la Martinique et de Sainte-Lucie. Il se trouve uniquement dans les zones boisées de la Presqu’île de la Caravelle. Considéré en danger d’extinction en raison de la petite taille de la population, il est victime de la prédation par les espèces introduites et fait l’objet d’un programme de conservation dans le cadre du programme [LIFE BIODIV’OM](https://www.lifebiodivom.fr/especes/moqueur-gorge-blanche/).\n\nStatut dans la Liste rouge des oiseaux de Martinique : en danger critique. 	\N	\N	\N	f
@@ -1356,17 +1364,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 24876	1004	TEXT	territories.title	Nombre d'espèces présentes sur la liste des 100 espèces exotiques les plus envahissantes au monde 	\N	\N	\N	f
 24877	1004	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 24878	1004	TEXT	understand.title1	Des espèces introduites par l'Homme	\N	\N	\N	f
-22997	1007	TEXT	goal2.quote	*Le Compteur constituera un signal d’alerte et donnera une visibilité forte et essentielle pour sensibiliser à l’évolution de la biodiversité.*  Livre bleu des outre-mer, 2018. 	\N	\N	\N	f
-22998	1007	TEXT	goal1.title	Partager la connaissance scientifique	\N	\N	\N	f
-22999	1007	IMAGE	goal2.quoteImage	\N	1031	Coq-de-roche © Raphaël Gailhac 	\N	f
-23000	1007	TEXT	goal2.description	De nombreuses actions locales sont mises en place afin de tenter de préserver les écosystèmes et les espèces. Donner de la visibilité aux acteurs locaux, partager les expériences et les réussites, au bénéfice de tous, c’est également l’un des objectifs du Compteur. 	\N	\N	\N	f
-23001	1007	TEXT	goal3.description	Chacun, à son échelle, peut agir pour préserver la biodiversité. Connaitre et appliquer des gestes simples, modifier ses habitudes et son comportement ou encore s’investir dans des programmes de sciences participatives, tout le monde est concerné par la préservation de la biodiversité. Le rôle du Compteur est d’accompagner les citoyens en partageant des informations claires et adaptées à tous les territoires, et en encourageant à se mobiliser.	\N	\N	\N	f
-23002	1007	TEXT	partners.title	Les partenaires	\N	\N	\N	f
 24879	1004	TEXT	understand.paragraphs.1.text	Des processus de biosécurité (désinfection, inspections minutieuses, utilisation de chiens formés à la détection, etc.) sont mis en œuvre par les territoires afin de limiter les risques d’entrée de nouvelles espèces exotiques. Pour les espèces déjà installées, de nombreuses interventions sont réalisées pour tenter de limiter leur propagation et atténuer leurs impacts, voire dans certains cas de les éradiquer pour préserver l'équilibre des écosystèmes et sauvegarder des espèces endémiques menacées. \n  \nLe Comité français de l'Union internationale pour la conservation de la nature anime depuis 2005 le [Réseau Espèces exotiques envahissantes en outre-mer](https://especes-envahissantes-outremer.fr/) afin de favoriser les échanges et le partage d'expériences entre les gestionnaires des différents territoires.	\N	\N	\N	f
 24880	1004	TEXT	understand.title2	Une des principales causes d'érosion de la biodiversité dans les îles	\N	\N	\N	f
 24881	1004	TEXT	presentation.descriptionTerritories	espèces sur les 100 considérées comme les plus envahissantes au monde sont présentes sur le territoire	\N	\N	\N	f
-23003	1007	TEXT	goal1.description	Quelles sont les espèces présentes dans ce territoire ? Comment évoluent leurs populations ? Quel est l’état de santé des récifs coralliens ? Pour répondre à ces questions et bien d’autres, différents paramètres, appelés « indicateurs », sont mesurés par les scientifiques pour suivre l’évolution de l’état de la biodiversité. Le Compteur a pour mission de rendre compte de l’état de ces connaissances dans les territoires en s'appuyant notamment sur l'[ONB](https://naturefrance.fr/), l'[INPN](https://inpn.mnhn.fr/accueil/index) et les observatoires locaux. 	\N	\N	\N	f
-23004	1007	IMAGE	goal3.image	\N	1274	 © Observatoire Martiniquais de la biodiversité	\N	f
 24614	1015	TEXT	species.1.description	L’Iguane des Petites Antilles ou Iguane péyi ([*Iguana delicatissima*](https://inpn.mnhn.fr/espece/cd_nom/350755\n)) était autrefois présent sur tout le nord des Petites Antilles, depuis Anguilla jusqu’à la Martinique. Il a aujourd’hui disparu de nombreux territoires, et est considéré en danger critique d’extinction. Sa survie est menacée par l’introduction de l’Iguane commun ([*Iguana iguana*](https://inpn.mnhn.fr/espece/cd_nom/350756\n)) avec qui il ne doit pas être confondu. L’Iguane commun exotique se reconnait aux rayures sombres sur la queue et à sa grosse plaque ronde sur la joue, sous le tympan, que ne possèdent pas l’Iguane des Petites Antilles.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger critique.	\N	\N	\N	f
 24615	1015	TEXT	species.2.description	Le Lambi ([*Aliger gigas*](https://inpn.mnhn.fr/espece/cd_nom/972164\n)) est un mollusque dont la coquille imposante peut atteindre 30 cm et 1,5 kg. Victime de la surpêche pour sa chair et parfois l’usage décoratif de sa coquille, son exploitation est aujourd’hui strictement contrôlée. La Martinique en a fait son emblème officiel.  \n  \nStatut dans la Liste rouge mondiale : non évalué.   	\N	\N	\N	f
 24616	1015	TEXT	statistics.1.number	40	\N	\N	\N	f
@@ -1392,25 +1392,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 24627	1015	TEXT	events.0.date	1<sup>e</sup> siècle	\N	\N	\N	f
 24628	1015	TEXT	identity.populationYear	2017	\N	\N	\N	f
 24629	1015	IMAGE	species.5.image	\N	1277	*Thalassia testudinum* © Fabien Lefebvre	\N	f
-23005	1007	TEXT	header.subtitle	C’est le Livre Bleu outre-mer, synthèse des travaux des Assises des outre-mer, qui propose en 2018 la création d’un Compteur de la biodiversité. Ce nouveau dispositif vient notamment enrichir le portail [Naturefrance](https://naturefrance.fr/) en présentant un focus sur les territoires ultramarins. Outil actualisé et pérenne, il favorisera la rencontre, la synergie des citoyens et des acteurs de la biodiversité.  \n  \nLa démarche est collaborative et partenariale avec les territoires, notamment pour relater les contextes culturels et mettre en avant des enjeux spécifiques. Des études, actuellement en cours, viennent compléter l’initiative : le premier panorama des programmes de sciences participatives dans les territoires, et une enquête sur la perception de la nature et l’utilisation des outils numériques. 	\N	\N	\N	f
-23006	1007	TEXT	header.title	Pourquoi un Compteur de la biodiversité en outre-mer ?	\N	\N	\N	f
-23007	1007	CHECKBOX	header.shadowed	true	\N	\N	\N	f
-23008	1007	TEXT	goal3.title	Encourager chacun à agir	\N	\N	\N	f
-23009	1007	TEXT	partners.partners.1.url	http://www.criobe.pf/	\N	\N	\N	f
-23010	1007	IMAGE	goal2.image	\N	1029	Tortue olivâtre, Guyane © Raphael Gailhac	\N	f
-23011	1007	IMAGE	goal1.image	\N	1030	Jaguar, Guyane © Raphaël Gailhac	\N	f
 24630	1015	TEXT	statistics.0.text	Ilets répartis autour de l'île	\N	\N	\N	f
-23012	1007	IMAGE	partners.partners.2.logo	\N	1272	DTAM Saint-Pierre et Miquelon	\N	f
-23013	1007	TEXT	goal2.title	Valoriser les actions des territoires	\N	\N	\N	f
-23014	1007	TEXT	partners.partners.2.url	http://www.saint-pierre-et-miquelon.developpement-durable.gouv.fr/	\N	\N	\N	f
-23015	1007	IMAGE	header.background	\N	1028	Monts Pito Hiti et Orohena, Tahiti © Jean-Yves Meyer	\N	f
 24631	1015	TEXT	ecosystems.ecosystems.1.name	La forêt humide tropicale	\N	\N	\N	f
 24632	1015	TEXT	events.2.date	1929-1932	\N	\N	\N	f
 24633	1015	TEXT	identity.presentation	Au cœur de l’arc des Petites Antilles, la Martinique, baptisée *Ioünacaera* « l’île aux iguanes » par ses premiers occupants amérindiens, présente une grande diversité de paysages. Au nord, des forêts humides bien conservées entourent le volcan de la Montagne Pelée. Le sud, plus sec et d’une altitude plus faible, est plus peuplé et urbanisé. L'île est entourée de 48 îlets, répartis principalement sur la côte atlantique, sur lesquels on retrouve une végétation adaptée aux milieux très sec et qui accueillent de nombreux oiseaux nicheurs. 	\N	\N	\N	f
 24634	1015	TEXT	identity.population	372 594	\N	\N	\N	f
 24635	1015	TEXT	species.3.name	La Tortue verte	\N	\N	\N	f
 24636	1015	IMAGE	species.8.image	\N	1185	Image manquante	\N	f
-23016	1007	IMAGE	partners.partners.0.logo	\N	1273	Observatoire Martiniquais de la biodiversité	\N	f
 24637	1015	TEXT	species.0.name	Le Matoutou Falaise	\N	\N	\N	f
 24638	1015	TEXT	events.4.date	1995	\N	\N	\N	f
 24639	1015	IMAGE	interests.locations.2.image	\N	1058	L’Anse Meunier dans l’étang des Salines, Martinique © Hervé Nicolas / CC BY-SA 4.0 	\N	f
@@ -1427,15 +1415,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 24650	1015	TEXT	risks.risks.0.description	L’expansion démographique et l’urbanisation, surtout au centre et au sud de l’île, impactent les milieux naturels de la Martinique : défrichements, rejets domestiques, industriels et agricoles,…\n\nLes mangroves de l'île sont des milieux particulièrement sensibles et soumis à de fortes pressions anthropiques : aménagements, décharge, pollution, activité agricole. Un projet de réserve naturelle régionale est à l’œuvre concernant les mangroves de la baie de Génipa.\nLes coupes illégales de bois et le trafic d’espèces indigènes, du Lambi ou du Matoutou falaise par exemple, sont des problématiques importantes, et la règlementation existante est difficile à faire appliquer.\n\nDe nombreuses espèces indigènes sont menacées par les espèces exotiques introduites : rat, mangouste, Iguane commun, etc. En milieu marin, le Poisson-lion, espèce originaire de la région indo-pacifique qui a colonisé toute la Caraïbe, est un consommateur vorace de poissons qui ne connait pas de prédateurs et a une stratégie de reproduction très efficace. Il est considéré comme une menace majeure pour la biodiversité marine.  \n\nLes échouages de sargasses sont un phénomène naturel dont l’ampleur a considérablement augmenté ces dernières années. Les radeaux denses et les dépôts épais qu’elles forment sur les plages piègent de nombreuses espèces dont des tortues, et ont également un impact sanitaire et économique important.\n\nLa chlordécone, pesticide utilisé dans les bananeraies entre les années 1970 et 1990 a massivement pollué les milieux naturels de l’île. Si ces impacts sur la santé humaine commencent à être connus, peu de données sont disponibles sur ses conséquences sur les espèces. Cependant, des études ont montré une importante contamination des organismes marins côtiers ce qui a conduit à l'interdiction de la pêche dans tous les cours d'eau et sur une partie des zones côtières de l'île.  	\N	\N	\N	f
 24882	1004	TEXT	understand.paragraphs.0.title	Une liste mondiale des espèces les plus problématiques	\N	\N	\N	f
 24883	1004	TEXT	understand.keyword	Espèces	\N	\N	\N	f
-20149	1025	TEXT	action.cards.3.description	Si un animal me parait en détresse, avant toute action, je contacte un professionnel (centre de soin, gestionnaires de réserve) afin de connaitre la démarche la plus adaptée pour lui porter secours.	\N	\N	\N	f
-20150	1025	TEXT	action.cards.2.description	Je tiens mon chien en laisse et je respecte la règlementation dans les lieux où sa présence n’est pas autorisée.	\N	\N	\N	f
-20151	1025	TEXT	presentation.category	Sur terre et en mer	\N	\N	\N	f
-20152	1025	TEXT	action.cards.1.description	Je limite les bruits (cris, musique…) pour que ma présence reste discrète.  	\N	\N	\N	f
-20153	1025	TEXT	presentation.description	Pour ne pas perturber les occupants des milieux naturels, mieux vaut se faire discret et ne pas laisser de traces de son passage.	\N	\N	\N	f
-20154	1025	TEXT	action.title	Pour profiter de la nature sans déranger ses occupants 	\N	\N	\N	f
-20155	1025	TEXT	understand.quote	Une tortue en ponte est très sensible au dérangement, cela peut la conduire à abandonner son nid. 	\N	\N	\N	f
-20156	1025	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
-20157	1025	TEXT	action.cards.0.description	Je reste à distance des animaux sauvages que je rencontre et je ne cherche pas à les toucher	\N	\N	\N	f
 21525	1013	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
 21526	1013	TEXT	understand.text2	La taxonomie, ou taxinomie, est la science qui permet de décrire et de classer le vivant. L’espèce est l’unité taxonomique de base. Chaque espèce décrite est classée avec d’autres espèces aux caractéristiques communes au sein d’un même genre, puis d’une famille, d’un ordre, etc. Chaque espèce est identifiée par un nom scientifique latin en deux mots, par exemple *Pelecanus occidentalis* pour le Pelican brun. Cette dénomination en latin permet un référentiel mondial commun, car une même espèce peut posséder des dizaines de noms usuels différents (dits noms "vernaculaires") à travers le monde, selon les langues et les régions. 	\N	\N	\N	f
 21527	1013	TEXT	understand.text1	Plus de 80 % des nouvelles découvertes d'espèces chaque année en France sont réalisées dans les territoires d'outre-mer. Certaines de ces nouvelles descriptions sont issues d’expéditions scientifiques, par exemple celles menées en Guyane en 2014 et en Nouvelle-Calédonie entre 2016 et 2019 par le Muséum national d’Histoire naturelle dans le cadre de la campagne « [la Planète revisitée](https://www.mnhn.fr/fr/recherche-expertise/lieux/planete-revisitee) », mais d’autres sont également réalisées par des taxonomistes non-professionnels. Il peut s'agir également d'espèces déjà décrites dans des territoires frontaliers mais dont la présence n'avait pas encore été observée sur le territoire national. Dans la plupart des cas, il s’agit de petits organismes invertébrés et d’organismes marins (insectes, mollusques, crustacés, vers marins).   \n  \nLe chiffre présenté ici représente une moyenne du nombre de découvertes par an sur les trois dernières années. 	\N	\N	\N	f
@@ -1532,6 +1511,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 22453	1022	TEXT	events.4.description	Introduction volontaire du Lièvre d’Amérique pour la chasse	\N	\N	\N	f
 22454	1022	TEXT	events.5.description	Introduction du Cerf de Virginie en 1953 à des fins cynégétiques	\N	\N	\N	f
 22455	1022	TEXT	interests.locations.2.name	Le Grand Colombier	\N	\N	\N	f
+24891	1018	TEXT	secondActionName	Je donne de mon temps	\N	\N	\N	f
+24892	1018	LINK	secondActionLink	Découvrez les sciences participatives	\N	\N	https://preprod.biodiversite-outre-mer.fr/sciences-participatives	f
+24893	1018	TEXT	description	Iorem Ipsum	\N	\N	\N	f
 20177	1028	IMAGE	presentation.image	\N	1142	© Fabien Lefebvre	\N	f
 20178	1028	TEXT	understand.text	Bois précieux, espèces aux propriétés médicinales, chasse et pêche, nouveaux animaux de compagnie… L'exploitation illégale conduit à la réduction des populations de nombreuses espèces animales et végétales, voire à leur extinction, dans tous les territoires.\n\nLes tortues marines sont particulièrement victimes du braconnage, pour la consommation de leur viande. Si le phénomène est marqué à Mayotte, où plusieurs centaines de tortues sont encore braconnées chaque année lorsqu'elles viennent pondre sur les plages, on observe encore des captures illégales de tortues dans les collectivités des Caraïbes, en Guyane ou en Polynésie française.\n\nA La Réunion, des pêcheurs illégaux dans la Réserve marine sont régulièrement appréhendés de nuit avec des poissons et des langoustes. Sur terre, c'est notamment le Palmiste rouge, endémique du territoire, qui fait l'objet d'une exploitation illégale dans le Parc National.\nAutre exemple en Martinique, où les oursins blancs sont ramassés illégalement, parfois par centaines de kilos, alors que leur pêche n'est autorisée que quelques jours par an et uniquement réservée aux professionnels déclarés. En Guyane, oiseaux et reptiles font également l'objet de trafics.\n\nDes peines de prisons et de lourdes amendes sont régulièrement prononcées contre les braconniers. Pour ne pas conduire à l'extinction des espèces menacées, ne participons pas au trafic illégal d'espèces protégées.	\N	\N	\N	f
 20179	1028	IMAGE	action.cards.1.icon	\N	1144	informations	\N	f
@@ -1549,6 +1531,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21793	1010	TEXT	understand.paragraphs.2.text	De nombreux programmes sont mis en place pour tenter de protéger les espèces menacées. Ils visent à organiser des suivis des populations, mettre en œuvre des actions favorables à la restauration de ces populations ou de leur habitat, informer le public et les élus et faciliter l'intégration de la protection de ces espèces dans les politiques publiques.   \n\nParmi ces outils, on trouve notamment les [Plans nationaux d’actions](https://www.ecologie.gouv.fr/plans-nationaux-dactions-en-faveur-des-especes-menacees) qui concernent de nombreuses espèces d’outre-mer telles que l’Albatros d’Amsterdam (TAAF), le Gecko vert de Manapany et le Bois de Papaye (La Réunion), l’Iguane des Petites Antilles (Antilles françaises), les tortues marines (Antilles françaises, Guyane et océan Indien) ou encore le Crabier Blanc (Mayotte). \nLa Commission européenne soutient également des programmes de conservation des espèces et des habitats via son programme de financements LIFE, par exemple le [LIFE+ Pétrels](https://www.petrels.re/) (La Réunion), le [LIFE+ BIODIV'OM](https://www.lifebiodivom.fr/) (5 espèces et un habitat, 5 territoires concernés : Mayotte, Guyane, Saint-Martin, Martinique, La Réunion) ou encore le [LIFE+ Forêt Sèche](https://www.foretseche.re/) (La Réunion).  \n\nIl existe encore bien d'autres initiatives comme un Plan d’action pour la sauvegarde du Cagou (Nouvelle-Calédonie), le [Plan de conservation en faveur des puffins de l'île de La Réunion](http://www.reunion.developpement-durable.gouv.fr/IMG/pdf/pdc_puffins_ld_interactif.pdf) ou différents programmes de conservation des [oiseaux menacés de Polynésie française](https://www.manu.pf/nos-actions/).	\N	\N	\N	f
 21794	1010	TEXT	presentation.description	des espèces d’outre-mer sont considérées comme éteintes ou menacées	\N	\N	\N	f
 21795	1010	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/proportion-despeces-eteintes-ou-menacees-dans-la-liste-rouge-nationale	\N	\N	\N	f
+24894	1018	TEXT	firstActionName	J'agis en ligne	\N	\N	\N	f
+24895	1018	LINK	firstActionLink	Je télécharge l'application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
+24896	1018	TEXT	title	Agir pour la biodiversité	\N	\N	\N	f
 21542	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
 21543	1019	TEXT	examples.projects.2.subject	Espèces marines	\N	\N	\N	f
 21544	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
@@ -1565,17 +1550,32 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21555	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
 21556	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
 21557	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
+24897	1025	IMAGE	presentation.file	\N	1125	test 	\N	f
+24898	1025	CHECKBOX	presentation.shadowed	true	\N	\N	\N	f
 21796	1014	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 22456	1022	TEXT	ecosystems.ecosystems.3.description	Espèces pionnières et graminées colonisent ces milieux littoraux souvent fragilisés par les dégradations (travaux, incendies, pâturages). Espèce typique de ces milieux dunaires, l’oyat (ou Ammophile à ligule courte, *Ammophila breviligulata*) joue un rôle essentiel dans la fixation des dunes et limite l’érosion. En arrière dune, une grande diversité d’espèces indigènes, parfois très rares, cohabitent avec des graminées introduites et naturalisées.	\N	\N	\N	f
 22457	1022	TEXT	ecosystems.ecosystems.4.description	« *Les Laminaires sont à la mer ce que la forêt est à la terre* » Daniel Abraham, naturaliste de l'archipel.\n\nFormant de véritables forêts sous-marines, ces grandes algues brunes jouent un rôle très important dans l’équilibre de l’océan, formant un habitat pour de nombreuses espèces animales et végétales. Elles contiennent également des composants utilisés dans le monde en pharmacologie ou agro-alimentaire.	\N	\N	\N	f
 22458	1022	TEXT	ecosystems.ecosystems.4.name	Les forêts de laminaires	\N	\N	\N	f
 22459	1022	IMAGE	species.1.image	\N	1229	Macareux moine © Bruno Letournel	\N	f
 22460	1022	TEXT	events.5.date	1953	\N	\N	\N	f
+24899	1025	IMAGE	action.cards.2.icon	\N	1129	chien	\N	f
+24900	1025	IMAGE	action.cards.3.icon	\N	1130	véto	\N	f
+24901	1025	TEXT	presentation.name	Je respecte la faune sauvage	\N	\N	\N	f
+24902	1025	IMAGE	action.cards.0.icon	\N	1127	distance	\N	f
+24903	1025	IMAGE	presentation.image	\N	1126	Iguane endémique des Petites Antilles © Fabien Lefebvre	\N	f
+24904	1025	TEXT	understand.text	Observer la faune dans son milieu naturel est une chance et une expérience formidable. Cependant, sur terre comme en mer, déranger un animal peut le mettre en péril en occasionnant un stress important et une dépense d’énergie inutile. Il risque également d’abandonner son nid ou ses petits, se blesser, être plus facilement à la merci d’un prédateur…\n\nLes conséquences sont d’autant plus importantes lorsqu’il s’agit d’espèces très menacées, pour laquelle la survie de chaque individu compte.\n\nL'impact des chiens peut être catastrophique pour la faune sensible des outre-mer, que ce soit par prédation ou par le stress qu'ils occasionnent (poursuite, aboiements, destruction de nids,...). En Nouvelle-Calédonie, ils ont joué un rôle non-négligeable dans le déclin de la population de Cagous.\nDans la plupart des espaces protégés, leur présence, même tenus en laisse n'est pas autorisée. 	\N	\N	\N	f
+24905	1025	IMAGE	action.cards.1.icon	\N	1128	bruits	\N	f
+24906	1025	TEXT	action.cards.3.description	Si un animal me parait en détresse, avant toute action, je contacte un professionnel (centre de soin, gestionnaires de réserve) afin de connaitre la démarche la plus adaptée pour lui porter secours.	\N	\N	\N	f
+24907	1025	TEXT	action.cards.2.description	Je tiens mon chien en laisse et je respecte la règlementation dans les lieux où sa présence n’est pas autorisée.	\N	\N	\N	f
 20201	1024	IMAGE	presentation.file	\N	1121	test	\N	f
 20202	1024	IMAGE	action.cards.2.icon	\N	1124	relaché	\N	f
+24908	1025	TEXT	presentation.category	Sur terre et en mer	\N	\N	\N	f
+24909	1025	TEXT	action.cards.1.description	Je limite les bruits (cris, musique…) pour que ma présence reste discrète.  	\N	\N	\N	f
+24910	1025	TEXT	presentation.description	Pour ne pas perturber les occupants des milieux naturels, mieux vaut se faire discret et ne pas laisser de traces de son passage.	\N	\N	\N	f
 22461	1022	TEXT	identity.marineArea	12 300	\N	\N	\N	f
 22462	1022	TEXT	events.8.date	2007	\N	\N	\N	f
 22463	1022	IMAGE	interests.locations.0.image	\N	1217	Grand Barachois © Nathalie De Lacoste	\N	f
+24911	1025	TEXT	action.title	Pour profiter de la nature sans déranger ses occupants 	\N	\N	\N	f
 21797	1014	TEXT	understand.text2	Cet indicateur présente l’évolution du recouvrement en corail vivant sur des stations réparties dans les différents territoires d’outre-mer. La situation est en réalité très hétérogène selon les collectivités : les récifs sont ainsi très dégradés en Martinique et Guadeloupe, mais beaucoup moins à Wallis-et-Futuna ou Mayotte. La situation est considérée comme stable pour 60 % des stations étudiées.  \n\nCet indicateur a cependant des limites, par exemple, le nombre de stations évaluées reste faible : on compte 82 stations évaluées sur plus de 600 existantes. De plus, il se base uniquement sur le caractère vivant du corail, mais pas sur les espèces de coraux présentes, ni les communautés associées (poissons, invertébrés). Des analyses plus complètes et plus fines sont nécessaires afin de bien comprendre l’évolution de l’état de santé des récifs coralliens.	\N	\N	\N	f
 21798	1014	TEXT	understand.text1	Les récifs coralliens sont formés par des colonies de coraux, formées de polypes (petits organismes invertébrés de la même famille que les méduses) sécrétant un squelette calcaire, et vivant en symbiose avec des algues unicellulaires, les zooxanthelles, qui leur apportent des nutriments grâce à la photosynthèse.\nPoissons, crustacés, mollusques, concombres de mer, éponges... les récifs coralliens sont des écosystèmes extrêmement riches en biodiversité, ils représentent une zone de nourrissage, de refuge et de nurserie pour des milliers d'espèces marines.  \n \n10 % des récifs coralliens mondiaux sont situés dans les territoires d’outre-mer français, la France a donc une responsabilité importante à l’échelle mondiale sur la conservation des récifs coralliens.	\N	\N	\N	f
 21799	1014	TEXT	territories.title	Pourcentage de surface des récifs coralliens en diminution	\N	\N	\N	f
@@ -1601,6 +1601,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 22471	1022	TEXT	events.3.date	1866	\N	\N	\N	f
 22472	1022	IMAGE	ecosystems.ecosystems.3.image	\N	1220	Dunes de sable sur l'isthme © Nathalie de Lacoste	\N	f
 22473	1022	IMAGE	species.3.image	\N	1226	Pluvier siffleur en période de reproduction © Patrick Hacala	\N	f
+24912	1025	TEXT	understand.quote	Une tortue en ponte est très sensible au dérangement, cela peut la conduire à abandonner son nid. 	\N	\N	\N	f
+24913	1025	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
+24914	1025	TEXT	action.cards.0.description	Je reste à distance des animaux sauvages que je rencontre et je ne cherche pas à les toucher	\N	\N	\N	f
 22474	1022	TEXT	species.1.name	Le Macareux moine 	\N	\N	\N	f
 22475	1022	TEXT	species.7.name	Les Botryches	\N	\N	\N	f
 22476	1022	TEXT	interests.title	Lieux d’intérêt	\N	\N	\N	f
@@ -1756,7 +1759,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 1280, true);
+SELECT pg_catalog.setval('public.image_seq', 1281, true);
 
 
 --
@@ -1777,7 +1780,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1097, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 24890, true);
+SELECT pg_catalog.setval('public.page_element_seq', 25030, true);
 
 
 --
