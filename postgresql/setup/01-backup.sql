@@ -695,7 +695,6 @@ COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 --
 
 COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdin;
-1092	1000	NOUVELLE_CALEDONIE	38	
 1089	1000	MARTINIQUE	18	
 1094	1000	REUNION	34	
 1093	1000	POLYNESIE_FRANCAISE	36	
@@ -737,6 +736,7 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 1015	1002	SAINT_MARTIN	2234	
 1016	1002	SAINT_BARTHELEMY	2140	
 1013	1002	GUADELOUPE	10527	
+1092	1000	NOUVELLE_CALEDONIE	38	
 1012	1002	OUTRE_MER	88966	
 1020	1002	MAYOTTE	6162	
 1021	1002	SAINT_PIERRE_ET_MIQUELON	2112	
