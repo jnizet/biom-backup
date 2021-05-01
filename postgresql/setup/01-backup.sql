@@ -655,6 +655,22 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 1312	image/jpeg	mâle - 2U1A7970-2-Modifier.jpg
 1313	image/jpeg	mangrove G.Vandersarren.jpg
 1314	image/jpeg	2U1A9955.jpg
+1315	image/jpeg	Panie_christine Fort.jpg
+1316	image/jpeg	Côte oubliée_Martial Dosdane.jpg
+1317	image/jpeg	Cagou O. Gargominy.jpg
+1318	image/jpeg	Rhacodactylus_leachianus_Matthias_DEUSS.jpg
+1319	image/jpeg	Agathis_Vanessa Hequet.jpg
+1320	image/jpeg	Nereis_Nathalie Baillon.jpg
+1321	image/jpeg	Niaouli_Christine Fort.jpg
+1322	image/jpeg	Syzygium acre_Vanessa Hequet.jpg
+1323	image/jpeg	P. ornatus_Malik Oedin.jpg
+1324	image/jpeg	baleine_opération cetacés.jpg
+1325	image/jpeg	gymnocrinus-richeri_Pierre Lozouet.jpg
+1326	image/jpeg	Image à trouver.jpg
+1327	image/jpeg	Notou_Christine Fort.jpg
+1328	image/jpeg	Nautile_Claude Payri.jpg
+1329	image/jpeg	Maquis_Vanessa Hequet.jpg
+1330	image/jpeg	Forêt sèche_CEN.jpg
 \.
 
 
@@ -806,6 +822,7 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1009	especes-inventoriees	indicator	Espèces indigènes
 1003	territoires	territories	Découvrez les outre-mer
 1013	nouvelles-especes	indicator	Nouvelles espèces décrites
+1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
 1002	antilles	territory-zone	bassin antillais
 1029	s-investir-sur-le-terrain	ecogesture	S'investir sur le terrain
 1006	protection-recifs-coralliens	ecogesture	Protéger les récifs coralliens
@@ -816,7 +833,6 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1021	reunion	territory	La Réunion
 1023	ne-pas-jeter-dechets-nature	ecogesture	Je ne jette pas mes déchets dans la nature
 1026	limiation-plastique	ecogesture	Réduire les déchets et le plastique
-1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
 1015	martinique	territory	Martinique
 1017	ecogestes	ecogestures	Accueil écogestes
 1019	sciences-participatives	science	Sciences participatives
@@ -876,8 +892,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28001	1021	IMAGE	interests.locations.4.image	\N	1188	Image manquante	\N	f
 28002	1021	TEXT	species.2.name	La Baleine à bosse	\N	\N	\N	f
 28003	1021	TEXT	species.8.name	Le Bois d’Ortie	\N	\N	\N	f
-28289	1020	IMAGE	species.9.image	\N	1203	Image manquante	\N	f
-28290	1020	TEXT	events.2.description	Création de la première aire protégée de l'archipel, l'îlot Leprédour	\N	\N	\N	f
+30346	1020	IMAGE	species.9.image	\N	1322	*Syzygium acre* © Vanessa Hequet	\N	f
+30347	1020	TEXT	events.2.description	Création de la première aire protégée de l'archipel, l'îlot Leprédour	\N	\N	\N	f
 25790	1022	TEXT	events.2.description	Fermeture naturelle de l’isthme	\N	\N	\N	f
 25791	1022	TEXT	events.3.description	Première étude publiée sur la flore de Saint-Pierre et Miquelon (thèse de pharmacie d’Alphonse Gaulthier)	\N	\N	\N	f
 25792	1022	IMAGE	identity.image	\N	1109	L'étang du Bois brûlé © Nathalie de Lacoste	\N	f
@@ -908,8 +924,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 25817	1022	TEXT	species.6.name	La Linnée boréale	\N	\N	\N	f
 25818	1022	IMAGE	interests.locations.3.image	\N	1236	La Vallée du Milieu © Nathalie De Lacoste	\N	f
 25819	1022	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
-28291	1020	TEXT	events.3.description	Inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
-28292	1020	IMAGE	identity.image	\N	1088	Île des Pins, Nouvelle-Calédonie © Sébastien Jermer/Unsplash	\N	f
+30348	1020	TEXT	events.3.description	Inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
+30349	1020	IMAGE	identity.image	\N	1088	Île des Pins, Nouvelle-Calédonie © Sébastien Jermer/Unsplash	\N	f
 25820	1022	TEXT	interests.locations.3.name	La Vallée du Milieu	\N	\N	\N	f
 25821	1022	TEXT	statistics.1.text	des habitants de l'archipel résident à Saint-Pierre	\N	\N	\N	f
 25822	1022	TEXT	events.9.date	2017	\N	\N	\N	f
@@ -974,16 +990,18 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28024	1021	TEXT	identity.marineArea	318 300	\N	\N	\N	f
 21454	1009	TEXT	understand.text2	Ce nombre comprend uniquement les espèces dites indigènes des territoires d'outre-mer, c’est-à-dire naturellement présentes sur les territoires. Il ne comprend pas les espèces introduites, volontairement ou involontairement, par les humains (animaux domestiques, plantes cultivées, etc.).\nCe nombre ne prend pas non plus en compte les espèces éteintes.	\N	\N	\N	f
 22635	1024	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
-28293	1020	TEXT	events.7.description	Publication du Code de l'environnement de la Province des îles Loyauté	\N	\N	\N	f
+30350	1020	TEXT	events.7.description	Publication du Code de l'environnement de la Province des îles Loyauté	\N	\N	\N	f
 22637	1026	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22638	1027	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22639	1028	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 26445	1006	CHECKBOX	presentation.shadowed	true	\N	\N	\N	f
 22641	1017	CHECKBOX	shadowed	false	\N	\N	\N	f
-28294	1020	TEXT	events.7.date	2016	\N	\N	\N	f
-28295	1020	TEXT	interests.locations.0.name	Le Parc naturel de la Mer de Corail 	\N	\N	\N	f
-28296	1020	TEXT	events.0.description	Dislocation du supercontinent Gondwana et séparation de la Nouvelle-Calédonie avec l’Australie et la Nouvelle-Zélande	\N	\N	\N	f
-28297	1020	TEXT	events.1.description	Arrivée des explorateurs Lapita par la mer : première occupation humaine du territoire	\N	\N	\N	f
+30351	1020	TEXT	events.7.date	2016	\N	\N	\N	f
+30352	1020	TEXT	interests.locations.0.name	Le Parc naturel de la Mer de Corail 	\N	\N	\N	f
+30353	1020	TEXT	events.0.description	Dislocation du supercontinent Gondwana et séparation de la Nouvelle-Calédonie avec l’Australie et la Nouvelle-Zélande	\N	\N	\N	f
+30354	1020	TEXT	events.1.description	Arrivée des explorateurs Lapita par la mer : première occupation humaine du territoire	\N	\N	\N	f
+30355	1020	TEXT	events.8.description	Expédition naturaliste ["la Planète revisitée"](http://nouvellecaledonie.laplaneterevisitee.org/)	\N	\N	\N	f
+30356	1020	TEXT	events.9.description	Création du parc provincial de la Côte oubliée	\N	\N	\N	f
 22651	1009	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22653	1011	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22655	1013	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
@@ -1028,13 +1046,20 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28033	1021	TEXT	species.0.name	Le Gecko vert de Manapany	\N	\N	\N	f
 28034	1021	TEXT	events.4.date	2007	\N	\N	\N	f
 28035	1021	IMAGE	interests.locations.2.image	\N	1157	Vue sur le Piton de la Fournaise © Philippe Gourdain	\N	f
+30357	1020	IMAGE	ecosystems.image	\N	1094	test	\N	f
+30358	1020	TEXT	identity.species	26 984	\N	\N	\N	f
+30359	1020	IMAGE	ecosystems.ecosystems.0.image	\N	1092	Forêt tropicale humide sur l’île de Lifou, Nouvelle-Calédonie © Benjamin Guichard / OFB	\N	f
 25258	1010	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 25259	1010	TEXT	understand.text2	Chaque espèce est évaluée par un groupe d’experts selon des critères bien définis tels que la taille de la population, son aire de distribution ou encore la disparition de son habitat naturel, pour pouvoir lui attribuer une catégorie. \nLe chiffre présenté ici comprend les espèces classées dans les catégories « éteinte au niveau mondial », « éteinte à l’état sauvage », «&nbsp;disparue au niveau régional », « en danger critique d’extinction », « en danger » et «&nbsp;vulnérable » dans les Listes rouges réalisées en outre-mer.  \n\nIl faut noter qu’une espèce peut être classée menacée sur le territoire national mais pas à l’échelle mondiale si son statut est bon dans d’autres pays, cependant on trouve en outre-mer de nombreuses espèces [endémiques](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques) qui ne sont présentes nulle part ailleurs dans le monde.	\N	\N	\N	f
+30360	1020	TEXT	species.11.description	Au cours de l’hiver austral, les baleines à bosse ([*Megaptera novaeangliae*](https://www.endemia.nc/faune/fiche5266)) viennent se reproduire en Nouvelle-Calédonie. L’archipel abrite ainsi une petite population qui fréquente les eaux du lagon mais également les monts sous-marins peu profonds de la zone économique exclusive. Des études scientifiques visent à mieux comprendre la migration des baleines depuis et vers l’archipel et à évaluer la connectivité au sein du parc et avec les populations voisines, dans l’objectif d’estimer le statut de cette population pour contribuer à sa conservation.  \n\nStatut dans la Liste rouge mondiale : préoccupation mineure\n	\N	\N	\N	f
+30361	1020	TEXT	species.12.description	Sur les sept espèces de tortues marines présentes dans le monde, trois fréquentent régulièrement les eaux calédoniennes : la Tortue Verte (*Chelonia mydas*), la Tortue imbriquée (*Etretmochelys imbricata*) et la Tortue grosse tête ou Tortue caouanne (*Caretta caretta*). Un plan d’action est en place depuis fin 2018, pour contribuer activement à la conservation des tortues marines et de leurs habitats, à l’échelle locale, régionale et internationale.  \n\nStatut dans la Liste rouge mondiale\n*Chelonia mydas* : en danger\n*Etretmochelys imbricata* : en danger critique \n*Caretta caretta* : vulnérable	\N	\N	\N	f
 25260	1010	TEXT	understand.text1	L'Union internationale pour la conservation de la nature (UICN) développe depuis 1964 un outil de référence permettant de mesurer l'état de conservation de la faune et de la flore mondiale : la Liste rouge. Les espèces y sont classifiées par catégories selon leur degré de vulnérabilité. Cela permet d'identifier les priorités d'action, les progrès accomplis ou les défis à relever pour la conservation des espèces.  \n  \nEn France, l'élaboration de la [Liste rouge nationale des espèces menacées](https://inpn.mnhn.fr/programme/listes-rouges-especes/presentation) est mise en œuvre depuis 2008 par le Muséum national d'Histoire naturelle, l'Office français de la biodiversité et le [Comité français de l'UICN](https://uicn.fr/liste-rouge-france/), en collaboration avec un large réseau d'experts.\n\n	\N	\N	\N	f
 25261	1010	TEXT	territories.title	Pourcentage d'espèces menacées	\N	\N	\N	f
 25262	1010	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 25263	1010	TEXT	understand.title1	La Liste rouge de l'UICN	\N	\N	\N	f
 25264	1010	TEXT	understand.paragraphs.1.text	Selon l'IPBES*, les cinq facteurs directs de changement qui affectent la nature et qui ont les plus forts impacts à l’échelle mondiale sont, dans l'ordre : les changements d’usage des terres et de la mer, l'exploitation directe de certains organismes, le changement climatique, les pollutions et les espèces exotiques envahissantes. Les impacts de ces différents facteurs sont souvent liés et s'additionnent : l'installation de certaines espèces exotiques peut par exemple être facilitée par les changements climatiques. Dans les îles, les espèces exotiques envahissantes seraient le premier facteur de perte de biodiversité. \n\n*la Plateforme intergouvernementale scientifique et politique sur la biodiversité et les services écosystémiques (en anglais IPBES) est un groupement international d'experts de la biodiversité, créé sous l'égide de l'ONU en 2012. L'IPBES a publié le 6 mai 2019 [le premier rapport d'évaluation mondiale sur la biodiversité et les services écosystémiques](https://www.ipbes.net/news/Media-Release-Global-Assessment-Fr). 	\N	\N	\N	f
+30362	1020	TEXT	species.8.name	Le Niaouli	\N	\N	\N	f
+30363	1020	TEXT	species.14.description	Les nautiles sont considérés comme des fossiles vivants dont les ancêtres étaient proches des ammonites, éteintes à la fin de l’ère secondaire. Ils sont les seuls céphalopodes à posséder une coquille, comme les escargots. Habitants du fonds des océans, ils ont une durée de vie d'une vingtaine d'années et se caractérisent par une croissance lente et un faible taux de reproduction. \nSept espèces de nautiles sont aujourd’hui connues, dont [*Nautilus macromphalus*](https://endemia.nc/faune/fiche4911), qui est endémique à la Nouvelle-Calédonie.  \n  \nStatut dans la Liste rouge mondiale pour *Nautilus macromphalus* : non évalué. \n	\N	\N	\N	f
 25265	1010	TEXT	understand.title2	Plusieurs catégories de risque d’extinction	\N	\N	\N	f
 25266	1010	TEXT	presentation.descriptionTerritories	des espèces sont considérées comme éteintes ou menacées	\N	\N	\N	f
 25267	1010	TEXT	understand.paragraphs.0.title	Encore beaucoup d'évaluations à réaliser	\N	\N	\N	f
@@ -1044,7 +1069,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28777	1001	TEXT	events.6.description	La Guadeloupe obtient le label «&nbsp;Réserve de Biosphère&nbsp;» de l’UNESCO	\N	\N	\N	f
 28778	1001	TEXT	events.6.date	1993	\N	\N	\N	f
 28779	1001	TEXT	ecosystems.ecosystems.0.name	La forêt d’altitude	\N	\N	\N	f
-28298	1020	TEXT	events.8.description	Expédition naturaliste ["la Planète revisitée"](http://nouvellecaledonie.laplaneterevisitee.org/)	\N	\N	\N	f
+30364	1020	TEXT	events.6.description	Création du Parc marin de la mer de Corail ; Inscription des lacs du Grand Sud sur la liste des sites Ramsar	\N	\N	\N	f
 25270	1010	IMAGE	presentation.image	\N	1041	Albatros hurleur © Julie Tucoulet	\N	f
 25271	1010	TEXT	understand.paragraphs.1.title	Quelles menaces pèsent sur les espèces ?	\N	\N	\N	f
 28036	1021	IMAGE	ecosystems.ecosystems.2.image	\N	1195	Image manquante	\N	f
@@ -1058,61 +1083,63 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28044	1021	IMAGE	species.4.image	\N	1300	Pétrel de Barau © Jean-Philippe Siblet	\N	f
 28045	1021	IMAGE	species.7.image	\N	1193	Image manquante	\N	f
 28046	1021	TEXT	species.5.name	Les Fanjan	\N	\N	\N	f
-28299	1020	TEXT	events.9.description	Création du parc provincial de la Côte oubliée	\N	\N	\N	f
-28300	1020	IMAGE	ecosystems.image	\N	1094	test	\N	f
-28301	1020	TEXT	identity.species	26 984	\N	\N	\N	f
-28302	1020	IMAGE	ecosystems.ecosystems.0.image	\N	1092	Forêt tropicale humide sur l’île de Lifou, Nouvelle-Calédonie © Benjamin Guichard / OFB	\N	f
-28303	1020	TEXT	species.11.description	A compléter	\N	\N	\N	f
-28304	1020	TEXT	species.12.description	à compléter	\N	\N	\N	f
-28305	1020	TEXT	species.8.name	Le Niaouli	\N	\N	\N	f
-28306	1020	TEXT	events.6.description	Création du Parc marin de la mer de Corail ; Inscription des lacs du Grand Sud sur la liste des sites Ramsar	\N	\N	\N	f
-28307	1020	TEXT	events.6.date	2014	\N	\N	\N	f
-28308	1020	TEXT	events.4.description	Publication des Codes de l'environnement des Provinces Sud et Nord	\N	\N	\N	f
-28309	1020	TEXT	events.5.description	Création du [Conservatoire d'espaces naturels](https://www.cen.nc/especes-envahissantes/presentation)	\N	\N	\N	f
-28310	1020	TEXT	interests.locations.2.name	La région des lacs du Grand Sud	\N	\N	\N	f
-28311	1020	TEXT	ecosystems.ecosystems.3.description	Aussi dit « sclérophylle », ce type de forêt n’est plus présent que sur environ 175 km<sup>2</sup>, soit moins de 1 % du territoire et moins de 2 % de sa surface estimée d’origine. Localisées sur le littoral de la côte ouest, ces forêts très vulnérables, notamment aux aménagements agropastoraux, aux incendies et aux espèces exotiques envahissantes, abritent une biodiversité élevée avec un taux d'endémisme de 60 %.   \nLe [programme de conservation](https://www.cen.nc/foret-seche/presentation) des forêts sèches, mis en place en 2001, est aujourd'hui coordonné par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. 	\N	\N	\N	f
-28312	1020	TEXT	ecosystems.ecosystems.4.description	Forêt de bord de mer aux pieds dans l’eau, cette formation arborescente adaptée aux conditions de salinité des eaux, au manque d'oxygène et à l'instabilité des sols, est située en majorité sur la côte ouest du fait de vastes plaines propices à son installation. Elle couvre 258 km<sup>2</sup> sur l'ensemble de la Nouvelle-Calédonie.  \nProtection contre l’érosion, les tempêtes, la sédimentation dans le lagon, zone de nurserie pour de nombreux organismes, épuration de l’eau… les services rendus par cet écosystème sont nombreux et précieux.	\N	\N	\N	f
-28313	1020	TEXT	ecosystems.ecosystems.4.name	La mangrove	\N	\N	\N	f
-28314	1020	IMAGE	species.1.image	\N	1153	*Rhynochetos jubatus* © Pierre Fidenci / CC BY-SA 3.0	\N	f
-28315	1020	TEXT	species.10.description	à compléter	\N	\N	\N	f
-28316	1020	TEXT	events.5.date	2011	\N	\N	\N	f
-28317	1020	TEXT	identity.marineArea	1,4 million	\N	\N	\N	f
-28318	1020	TEXT	species.9.name	*Syzygium acre*	\N	\N	\N	f
-28319	1020	TEXT	events.8.date	2016-2019	\N	\N	\N	f
-28320	1020	IMAGE	interests.locations.0.image	\N	1089	Parc naturel de la Mer de Corail © Anne Littaye/ OFB	\N	f
-28321	1020	TEXT	species.6.name	Le Gecko géant	\N	\N	\N	f
-28322	1020	IMAGE	interests.locations.3.image	\N	1197	Image manquante	\N	f
-28323	1020	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
-28324	1020	TEXT	interests.locations.3.name	La réserve de nature sauvage du Mont Panié	\N	\N	\N	f
-28325	1020	TEXT	statistics.1.text	Plus grande barrière de corail au monde (1 600 km)	\N	\N	\N	f
-28326	1020	TEXT	events.9.date	2019	\N	\N	\N	f
+30365	1020	TEXT	species.13.description	Ces dernières décennies, la prospection biologique des milieux profonds notamment des monts sous-marins a permis la découverte de fossiles vivants. Parmi eux, un crinoïde ([*Neogymnochrinus richeri*](https://inpn.mnhn.fr/espece/cd_nom/647041)), de la famille des Sclerocrinidae,  datant du jurassique et supposée éteinte. Il a été retrouvé à la fin des années 80 sur la ride de Norflok.  \n  \nStatut dans la Liste rouge mondiale : non évalué. \n\n\n	\N	\N	\N	f
+30366	1020	TEXT	species.15.description	Plus gros pigeon arboricole du monde, le notou ([*Ducula goliath*](https://www.endemia.nc/faune/fiche71)) présente un plumage bleu gris, avec une pointe de pourpre sur les ailes, et ses yeux sont rouge vif. Il vit dans les forêts humides de la Grande Terre et contribue à sa régénération par dissémination des graines dont il se nourrit. Difficile à observer, il se repère toutefois facilement à son chant particulier, grave et sourd.  \n\nStatut dans la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
+30367	1020	TEXT	events.6.date	2014	\N	\N	\N	f
+30368	1020	TEXT	events.4.description	Publication des Codes de l'environnement des Provinces Sud et Nord	\N	\N	\N	f
+30369	1020	TEXT	events.5.description	Création du [Conservatoire d'espaces naturels](https://www.cen.nc/especes-envahissantes/presentation)	\N	\N	\N	f
+30370	1020	TEXT	interests.locations.2.name	La région des lacs du Grand Sud	\N	\N	\N	f
+30371	1020	TEXT	ecosystems.ecosystems.3.description	Aussi dit « sclérophylle », ce type de forêt n’est plus présent que sur environ 175 km<sup>2</sup>, soit moins de 1 % du territoire et moins de 2 % de sa surface estimée d’origine. Localisées sur le littoral de la côte ouest, ces forêts sont très vulnérables, notamment aux aménagements agropastoraux, aux incendies et aux espèces exotiques envahissantes. Elles abritent une biodiversité élevée avec un taux d'endémisme de 60 %.   \nUn [programme de conservation](https://www.cen.nc/foret-seche/presentation) des forêts sèches, initié en 2001, est aujourd'hui coordonné par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. 	\N	\N	\N	f
+30372	1020	TEXT	ecosystems.ecosystems.4.description	Forêt de bord de mer aux pieds dans l’eau, cette formation arborescente adaptée aux conditions de salinité des eaux, au manque d'oxygène et à l'instabilité des sols, est majoritairement située sur la côte ouest du fait de vastes plaines propices à son installation. Elle couvre 258 km<sup>2</sup> sur l'ensemble de l'archipel.  \n\nProtection contre l’érosion, les tempêtes, la sédimentation dans le lagon, zone de nurserie pour de nombreux organismes, épuration de l’eau : les services rendus par cet écosystème sont nombreux et précieux.	\N	\N	\N	f
+30373	1020	TEXT	ecosystems.ecosystems.4.name	La mangrove	\N	\N	\N	f
+30374	1020	IMAGE	species.14.image	\N	1328	Nautile © Claude Payri	\N	f
+30375	1020	IMAGE	species.1.image	\N	1317	*Rhynochetos jubatus* © Olivier Gargominy / INPN	\N	f
+30376	1020	TEXT	species.10.description	Sur les quatre espèces de roussettes (chauves-souris frugivores et nectarivores) présentes en Nouvelle-Calédonie, trois en sont endémiques. La Roussette rousse ([*Pteropus ornatus*](https://www.endemia.nc/faune/fiche1328) et celle du Pacifique ([*P. tonganus*](https://www.endemia.nc/faune/fiche1329)) sont également des espèces-gibiers très prisées, dont la chasse est réglementée. Elles constituent aussi les proies des chats harets. \nLe déclin actuel de ces espèces emblématiques pourrait également engendrer la perte des aspects culturels et des services écosystémiques associés, comme la dissémination des graines et la pollinisation. \n  \nStatuts dans la Liste rouge mondiale\n*Pteropus ornatus* (endémique) : vulnérable\n*Pteropus tonganus* : préoccupation mineure\n*Pteropus vetulus* (endémique): quasi-menacé\n*Notopteris neocaledonica* (endémique) : en danger	\N	\N	\N	f
+30377	1020	TEXT	events.5.date	2011	\N	\N	\N	f
+30378	1020	TEXT	identity.marineArea	1,4 million	\N	\N	\N	f
+30379	1020	TEXT	species.9.name	*Syzygium acre*	\N	\N	\N	f
+30380	1020	TEXT	events.8.date	2016-2019	\N	\N	\N	f
+30381	1020	IMAGE	interests.locations.0.image	\N	1089	Parc naturel de la Mer de Corail © Anne Littaye / OFB	\N	f
+30382	1020	TEXT	species.6.name	Le Gecko géant	\N	\N	\N	f
+30383	1020	IMAGE	interests.locations.3.image	\N	1315	Réserve du Mont Panié © Christine Fort	\N	f
+30384	1020	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
+30385	1020	TEXT	species.14.name	Les Nautiles	\N	\N	\N	f
+30386	1020	TEXT	interests.locations.3.name	La réserve de nature sauvage du Mont Panié	\N	\N	\N	f
+30387	1020	TEXT	species.15.name	Le notou	\N	\N	\N	f
+30388	1020	TEXT	statistics.1.text	Plus grande barrière de corail au monde (1 600 km)	\N	\N	\N	f
+30389	1020	TEXT	events.9.date	2019	\N	\N	\N	f
+30390	1020	IMAGE	species.4.image	\N	1198	Image manquante	\N	f
+30391	1020	IMAGE	species.12.image	\N	1245	Image manquante	\N	f
+30392	1020	TEXT	events.3.date	2008	\N	\N	\N	f
+30393	1020	IMAGE	ecosystems.ecosystems.3.image	\N	1330	Forêt sèche © CEN Nouvelle-Calédonie	\N	f
+30394	1020	IMAGE	species.3.image	\N	1239	*Laticauda sp.* © Hélène Udo	\N	f
+30395	1020	TEXT	species.1.name	Le Cagou	\N	\N	\N	f
+30396	1020	TEXT	species.7.name	La Sterne néreis	\N	\N	\N	f
+30397	1020	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
+30398	1020	TEXT	species.4.name	*Amborella trichopoda*	\N	\N	\N	f
+30399	1020	TEXT	identity.area	16 624	\N	\N	\N	f
+30400	1020	TEXT	species.0.description	[*Sphaeropteris intermedia*](https://www.endemia.nc/flore/fiche106) est une espèce de fougère arborescente endémique parmi les plus grandes au monde, qui peut atteindre 35 mètres de haut. Commune sur le territoire, cette plante est utilisée en médecine traditionnelle et son tronc très solide est également utilisé pour la sculpture ou la confection de sagaies.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure.  \nNom en langues kanak : Groubaï (drubéa)\n	\N	\N	\N	f
+30401	1020	TEXT	identity.highestPointName	Mont Panié	\N	\N	\N	f
+30402	1020	TEXT	ecosystems.ecosystems.2.name	Les maquis miniers	\N	\N	\N	f
 28047	1021	TEXT	risks.risks.0.description	Située au sein de l'un des 34 hauts lieux de la biodiversité mondiale (*"hotspot"*), l'environnement de l'île de la Réunion est exceptionnel. \nLa principale menace pour la biodiversité de l'île est la pression démographique, l’augmentation de la population entrainant le développement d’infrastructures et aménagements. La quasi-totalité des forêts de basse-altitude a déjà disparu et le littoral est particulièrement menacé par l’urbanisation, la pollution et la surfréquentation. La fréquence de ponte de tortues marines sur les plages de La Réunion est très faible et ces espèces sont également menacées par la pêche accidentelle et le braconnage. Hormis dans la [Réserve naturelle marine](http://www.reservemarinereunion.fr/), il n’existe aucun dispositif de protection ou de gestion des ressources dans la zone économique exclusive.  \n\nLes espèces exotiques envahissantes sont également une menace majeure. De nombreuses espèces végétales envahissent les milieux naturels, et les monocultures de Cryptomeria du Japon (*Cryptomeria japonica*) offrent des milieux favorables à l’envahissement par d’autres plantes exotiques. La lutte contre les rats et les chats harets est également un enjeu majeur de la conservation des oiseaux endémiques. Une [stratégie de lutte contre les espèces invasives](https://www.especesinvasives.re/strategie-de-lutte/la-strategie-reunionnaise/) est mise en place depuis 2010. Depuis le 1<sup>e</sup> avril 2019, un arrêté ministériel interdit tout usage d’une [liste de 150 plantes exotiques](http://www.reunion.developpement-durable.gouv.fr/IMG/pdf/0_defi_eee-outre-mer-la_reunion-web-br.pdf).  \n\nLa création du Parc national en 2007 et l'inscription au Patrimoine mondial de l'UNESCO en 2010 ont permis de renforcer la protection du patrimoine naturel de La Réunion. La mise en place d'une [Stratégie réunionnaise pour la biodiversité](http://www.reunion.developpement-durable.gouv.fr/IMG/pdf/SRB-2013-2020_cle093a71.pdf) depuis 2013 doit permettre d'intégrer la protection de la biodiversité dans les politiques publiques du territoire. De nombreux programmes de conservations ont été mis en place pour protéger les espèces patrimoniales (Plans nationaux d'actions, programmes LIFE+, etc.). \n	\N	\N	\N	f
 28048	1021	TEXT	events.3.date	1976	\N	\N	\N	f
-28327	1020	IMAGE	species.4.image	\N	1198	Image manquante	\N	f
-28328	1020	IMAGE	species.12.image	\N	1245	Image manquante	\N	f
-28329	1020	TEXT	events.3.date	2008	\N	\N	\N	f
-28330	1020	IMAGE	ecosystems.ecosystems.3.image	\N	1205	Image manquante	\N	f
-28331	1020	IMAGE	species.3.image	\N	1239	*Laticauda sp.* © Hélène Udo	\N	f
-28332	1020	TEXT	species.1.name	Le Cagou	\N	\N	\N	f
-28333	1020	TEXT	species.7.name	La Sterne néreis	\N	\N	\N	f
-28334	1020	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
-28335	1020	TEXT	species.4.name	*Amborella trichopoda*	\N	\N	\N	f
-28336	1020	TEXT	identity.area	16 624	\N	\N	\N	f
-28337	1020	TEXT	species.0.description	[*Sphaeropteris intermedia*](https://www.endemia.nc/flore/fiche106) est une espèce de fougère arborescente endémique parmi les plus grandes au monde, qui peut atteindre 35 mètres de haut. Commune sur le territoire, cette plante est utilisée en médecine traditionnelle et son tronc très solide est également utilisé pour la sculpture ou la confection de sagaies.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure.  \nNom en langues kanak : Groubaï (drubéa)\n	\N	\N	\N	f
-28338	1020	TEXT	identity.highestPointName	Mont Panié	\N	\N	\N	f
-28339	1020	TEXT	ecosystems.ecosystems.2.name	Les maquis miniers	\N	\N	\N	f
-28340	1020	TEXT	species.7.description	Ce petit oiseau marin présente un dos gris, un ventre blanc, une tête pourvue d'une calotte noire et un bec droit et pointu. Une sous-espèce de la Sterne néreis, ([*Sternula nereis exul*](https://www.endemia.nc/faune/fiche52)) niche sur les îlots de Nouvelle-Calédonie, notamment autour des îlots du Lagon Sud, des îlots de Koumac et aux îles Chesterfield. Ses faibles effectifs de populations en font une sous-espèce très menacée.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
-28341	1020	TEXT	species.8.description	Le Niaouli ([*Melaleuca quinquenervia*](https://www.endemia.nc/flore/fiche445)), est un arbre utilisé en médecine et pour la construction, que l’on retrouve dans les milieux ouverts et anthropisés. Il se développe particulièrement bien dans les zones touchées par les incendies en raison de ses propriétés ignifuges. Indigène en Nouvelle-Calédonie, cette espèce a été introduite dans d’autres territoires comme la Guyane où elle présente un profil envahissant.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure.  \nNoms en langues kanak : itachou (paicî), pichöö (xârâcùù), bé (drubéa)	\N	\N	\N	f
-28342	1020	IMAGE	species.2.image	\N	1240	*Dugong dugong* © Hélène Udo	\N	f
-28343	1020	TEXT	species.11.name	La Baleine à bosses	\N	\N	\N	f
+30403	1020	TEXT	species.7.description	Ce petit oiseau marin présente un dos gris, un ventre blanc, une tête pourvue d'une calotte noire et un bec droit et pointu. Une sous-espèce de la Sterne néreis, ([*Sternula nereis exul*](https://www.endemia.nc/faune/fiche52)) niche sur les îlots de Nouvelle-Calédonie, notamment dans le Lagon Sud, vers Koumac et aux îles Chesterfield. Cette sous-espèce est très menacée localement du fait de ses faibles effectifs de populations.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
+30404	1020	TEXT	species.8.description	Le Niaouli ([*Melaleuca quinquenervia*](https://www.endemia.nc/flore/fiche445)), est un arbre utilisé en médecine et pour la construction, que l’on retrouve dans les milieux ouverts et anthropisés. Il se développe particulièrement bien dans les zones touchées par les incendies en raison de ses propriétés ignifuges. Indigène en Nouvelle-Calédonie, cette espèce a été introduite dans d’autres territoires comme la Guyane où elle présente un profil envahissant.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure.  \nNoms en langues kanak : itachou (paicî), pichöö (xârâcùù), bé (drubéa)	\N	\N	\N	f
+30405	1020	IMAGE	species.13.image	\N	1325	*Neogymnochrinus richeri* © Pierre Lozouet / IRD	\N	f
+30406	1020	IMAGE	species.2.image	\N	1240	*Dugong dugong* © Hélène Udo	\N	f
+30407	1020	TEXT	species.11.name	La Baleine à bosses	\N	\N	\N	f
+30408	1020	IMAGE	ecosystems.ecosystems.4.image	\N	1206	Image manquante	\N	f
+30409	1020	TEXT	species.3.description	Sur les huit espèces de Tricots rayés ([*Laticauda sp.*](https://www.endemia.nc/faune/fiche1104)) connues au niveau mondial, deux sont présentes en Nouvelle-Calédonie dont une endémique. Largement répandues sur le territoire, ces serpents marins se nourrissent dans l’eau mais reviennent sur terre pour se reposer, digérer et pondre. Bien que porteurs d'un venin mortel, ils ne sont pas agressifs et au contraire plutôt craintifs. De fait, les morsures sont très rares.\n\nStatut dans la Liste rouge mondiale pour les deux espèces présentes en Nouvelle-Calédonie : préoccupation mineure. 	\N	\N	\N	f
+30410	1020	TEXT	species.1.description	Emblème de la Nouvelle-Calédonie, le Cagou ([*Rhynochetos jubatus*](https://www.endemia.nc/faune/fiche144)), est un oiseau endémique qui ne vole pas mais court très vite, et dont le cri ressemble à l’aboiement d’un chien. Il vit dans les forêts humides de moyenne et haute altitude. Cette espèce est intégralement protégée.\n\nStatut dans la Liste rouge mondiale : en danger.	\N	\N	\N	f
+30411	1020	TEXT	species.2.description	Le Dugong ([*Dugong dugong*](https://www.endemia.nc/faune/fiche5263)), aussi appelé « vache marine » est un mammifère marin herbivore qui passe la majeure partie de son temps à brouter les herbiers marins. Longtemps chassé et braconné, il est également vulnérable face à la dégradation des habitats marins et aux activités humaines. La population néo-calédonienne de dugongs est estimée à environ 700 individus. Un [plan d'action pour sa conservation](https://www.cen.nc/plan-actions-dugong) a été mis en place en 2010. Il est animé depuis 2017 par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. \n\nStatut dans la Liste rouge mondiale : vulnérable. 	\N	\N	\N	f
 27670	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
-28344	1020	IMAGE	ecosystems.ecosystems.4.image	\N	1206	Image manquante	\N	f
-28345	1020	TEXT	species.3.description	Les Tricots rayés ([*Laticauda sp.*](https://www.endemia.nc/faune/fiche1104)) regroupent plusieurs espèces de serpents marins. Ils se nourrissent dans l’eau mais reviennent sur terre pour se reposer, digérer et pondre. Bien que porteurs d'un venin mortel, ils ne sont pas agressifs et au contraire plutôt craintifs, les morsures sont donc très rares.\n\nStatut dans la Liste rouge mondiale pour les 3 espèces présentes en Nouvelle-Calédonie : préoccupation mineure. 	\N	\N	\N	f
-28346	1020	TEXT	species.1.description	Emblème de la Nouvelle-Calédonie, le Cagou ([*Rhynochetos jubatus*](https://www.endemia.nc/faune/fiche144)), est un oiseau endémique qui ne vole pas mais court très vite, et dont le cri ressemble à l’aboiement d’un chien. Il vit dans les forêts humides de moyenne et haute altitude. Cette espèce est intégralement protégée.\n\nStatut dans la Liste rouge mondiale : en danger.	\N	\N	\N	f
-28347	1020	TEXT	species.2.description	Le Dugong ([*Dugong dugong*](https://www.endemia.nc/faune/fiche5263)), aussi appelé « vache marine » est un mammifère marin herbivore qui passe la majeure partie de son temps à brouter les herbiers marins. Longtemps chassé et braconné, il est également vulnérable face à la dégradation des habitats marins et aux activités humaines. La population néo-calédonienne de dugongs est estimée à environ 700 individus. Depuis 2010, [un plan d'action pour la conservation du Dugong](https://www.cen.nc/plan-actions-dugong) a été mis en place, animé depuis 2017 par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. \n\nStatut dans la Liste rouge mondiale : vulnérable. 	\N	\N	\N	f
-28348	1020	TEXT	species.9.description	[*Syzygium acre*](https://www.endemia.nc/flore/fiche1027) est un arbre principalement observé dans le sud de la Grande Terre. Ses feuilles de très grande taille – parfois plus d’un mètre de long – sont rouge à mauve lorsqu’elles sont juvéniles. Sa floraison est caractéristique : les fleurs, d’une coloration rouge à rose, se trouvent par petits groupes le long du tronc.\n\nStatut dans la Liste rouge mondiale : en danger. 	\N	\N	\N	f
-28349	1020	TEXT	statistics.1.number	2e	\N	\N	\N	f
-28350	1020	TEXT	species.12.name	Les Tortues 	\N	\N	\N	f
+30412	1020	TEXT	species.9.description	[*Syzygium acre*](https://www.endemia.nc/flore/fiche1027) est un arbre cauliflore principalement observé dans le sud de la Grande Terre. Ses feuilles de très grande taille – parfois plus d’un mètre de long – sont rouge à mauve lorsqu’elles sont juvéniles. Sa floraison est caractéristique : les fleurs, d’une coloration rouge à rose, se trouvent par petits groupes le long du tronc.\n\nStatut dans la Liste rouge mondiale : en danger. 	\N	\N	\N	f
+30413	1020	TEXT	statistics.1.number	2e	\N	\N	\N	f
+30414	1020	TEXT	species.12.name	Les Tortues marines	\N	\N	\N	f
+30415	1020	TEXT	statistics.0.number	76%	\N	\N	\N	f
+30416	1020	TEXT	statistics.2.number	plus de 400 	\N	\N	\N	f
+30417	1020	IMAGE	interests.locations.4.image	\N	1316	Parc provincial de la Côte oubliée © Martial Dosdane	\N	f
+30418	1020	TEXT	species.2.name	Le Dugong	\N	\N	\N	f
 28049	1021	TEXT	ecosystems.ecosystems.2.description	Malgré leur faible étendue (12 km<sup>2</sup>, entre le Cap La Houssaye et Grand Bois), les récifs coralliens de La Réunion sont très riches et diversifiés. On y compte au moins 226 espèces de coraux, ainsi que plusieurs centaines d’espèces d’échinodermes, mollusques, crustacés et poissons, dont de nombreuses espèces endémiques. La plus grande partie de ces récifs sont protégés sous le statut de la [Réserve naturelle marine](http://www.reservemarinereunion.fr/).	\N	\N	\N	f
 28050	1021	IMAGE	ecosystems.ecosystems.3.image	\N	1196	Image manquante	\N	f
 28051	1021	IMAGE	species.3.image	\N	1306	*Mormopterus francoismoutoui* © Gildas Monnier / GCOI	\N	f
@@ -1127,18 +1154,16 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28060	1021	TEXT	risks.risks.0.name	Une pression démographique importante	\N	\N	\N	f
 28061	1021	IMAGE	interests.locations.1.image	\N	1156	Vue sur le cirque de Mafate © Céline Soyer	\N	f
 28062	1021	IMAGE	ecosystems.ecosystems.1.image	\N	1100	© Philippe Gourdain	\N	f
-28351	1020	TEXT	statistics.0.number	76%	\N	\N	\N	f
-28352	1020	IMAGE	interests.locations.4.image	\N	1224	Image manquante	\N	f
-28353	1020	TEXT	species.2.name	Le Dugong	\N	\N	\N	f
+30419	1020	TEXT	risks.risks.1.name	Une règlementation environnementale plurielle	\N	\N	\N	f
+30420	1020	TEXT	species.4.description	Arbuste des forêts humides,[*Amborella trichopoda*](https://www.endemia.nc/flore/fiche254) est considéré comme la plus ancienne des plantes à fleurs, d'où son surnom de « mère de toutes les fleurs ». Cette plante présente le même aspect qu’à son origine, évaluée à 135 millions d’années avant notre ère. Elle est endémique de Nouvelle-Calédonie.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure. 	\N	\N	\N	f
+30421	1020	TEXT	ecosystems.ecosystems.0.name	Les forêts denses humides	\N	\N	\N	f
 21455	1009	TEXT	understand.text1	Dispersés au sein de trois océans, les territoires d’outre-mer français sont répartis de la zone équatoriale à la zone polaire. Cette diversité de situations géographiques est à l’origine de la très grande diversité biologique trouvées au sein de ces collectivités. De plus, le caractère insulaire de la plupart des territoires (la Guyane excepté) explique le très haut taux d'[endémisme](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques) de la faune et de la flore. \n\nAinsi, la plupart des territoires ultramarins français sont situés dans des zones du globe mondialement reconnues comme étant particulièrement riches en espèces, appelées "points chauds" (*hotspots*). Le milieu marin d'outre-mer couvre également une superficie gigantesque : il représente plus de 3 % des mers et océans du monde, et compte 55 000 km<sup>2</sup> de récifs coralliens et lagons. \n\n\n	\N	\N	\N	f
 21456	1009	TEXT	territories.title	Nombre d'espèces indigènes	\N	\N	\N	f
 21457	1009	TEXT	understand.title1	Un patrimoine biologique exceptionnel en outre-mer	\N	\N	\N	f
-28354	1020	TEXT	risks.risks.1.name	Une règlementation environnementale plurielle	\N	\N	\N	f
+30422	1020	TEXT	species.5.description	Les Kaoris, sont des arbres de grande taille, dont le tronc peut atteindre un diamètre impressionnant. On peut ainsi observer un spécimen au tronc de 2,70 m de diamètre dans le parc de la Rivière Bleu.  \nLa répartition du Kaori du mont Panié ([*Agathis montana*](https://www.endemia.nc/flore/fiche55)) est restreinte à la forêt de nuage du massif du même nom, tandis que le Kaori de forêt ([*Agathis lanceolata*](https://www.endemia.nc/flore/fiche57)) s'observe du sud de la Grande Terre jusqu'à Poya, voir Touho en Province Nord. Une troisième espèce ([*Agathis ovata*])(https://www.endemia.nc/flore/fiche56) est cantonnée à la moitié Sud de la Grande Terre. \n\nStatut dans la Liste rouge mondiale pour *Agathis montana* : en danger critique ; pour *Agathis lanceolata* : vulnérable.  \nNoms en langues kanak : Kaori du Mt Panié : Dayu Biik (nemi) ; Kaori de forêt : mugé (xârâcùù)	\N	\N	\N	f
 25873	1022	TEXT	risks.risks.0.description	Les menaces pesant sur la biodiversité de Saint-Pierre-et-Miquelon sont nombreuses. Comme tous les territoires d’outre-mer, l’archipel subit la présence d’espèces exotiques envahissantes terrestres : le puceron lanigère (*Adelges piceae*), la Renouée du Japon (*Reynoutria japonica*) et le Séneçon Jacobée (*Jacobaea vulgaris*) sont les plus impactant.  \nLa forêt boréale, sous la pression combinée des herbivores introduits, des pathogènes et du réchauffement climatique, perd en moyenne une vingtaine d'hectares par an, et son état de conservation n'est guère rassurant. \n\nAu niveau marin, depuis l’effondrement des populations de morue des bancs de Terre-Neuve par la surpêche dans les années 70 à 90, la pression de la pêche a diminué, cependant la pêche au filet du Saumon Atlantique capture accidentellement de nombreux oiseaux, tortues et mammifères marins. Les espèces exotiques marines sont également une préoccupation, en particulier les populations de Crabe vert (*Carcinus maenas*), en augmentation.\n\nLa chasse est une question délicate sur l'archipel. Concernant les mammifères introduits, elle permet d'un côté leur régulation, mais de l'autre elle justifie également leur maintien. Quant à la chasse aux oiseaux migrateurs, elle peut freiner l'implantation de colonies nicheuses comme celles de l’Eider à duvet (*Somateria mollisima*).\n\nLe territoire est pour le moment le seul d’outre-mer français à ne disposer d’aucun dispositif de protection réglementaire (hormis les réserves de chasse et de faune sauvage). Après l'abandon d'un premier projet de Réserve naturelle du Grand Barachois au début des années 90, un projet de création de Réserve naturelle sur le Grand et le Petit Colombier a été lancé en 2007. Plaçant sous protection une surface terrestre de 47 ha et une zone maritime de 420 ha, il permettrait de préserver ce site de nidification remarquable. Malgré un avis favorable du Conseil national de protection de la nature, ce projet a été mal perçu par les populations locales qui craignaient des contraintes sur leurs activités traditionnelles, c’est pourquoi le projet est gelé pour le moment.\n\nSur l’archipel, 40 Zones naturelles d'intérêt écologique, faunistique et floristique (ZNIEFF), abritant au moins une espèce ou un habitat naturel remarquable ou rare, ont été délimitées. Cela couvre 89 % du territoire terrestre et traduit la richesse et la valeur écologique des écosystèmes de ces îles, toutefois ce statut n'engendre pas de protection juridique. Actuellement, seules des espèces de chauves-souris, de mammifères marins, d’oiseaux et de tortues marines bénéficient d’une protection réglementaire.\n	\N	\N	\N	f
-28355	1020	TEXT	species.4.description	Arbuste des forêts humides,[*Amborella trichopoda*](https://www.endemia.nc/flore/fiche254) est considéré comme la plus ancienne des plantes à fleurs, d'où son surnom de « mère de toutes les fleurs ». Cette plante présente le même aspect qu’à son origine, évaluée à 135 millions d’années avant notre ère. Elle est endémique de Nouvelle-Calédonie.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure. 	\N	\N	\N	f
 14284	1030	TEXT	paragraphs.0.title	Conception et édition	\N	\N	\N	f
 14285	1030	TEXT	paragraphs.1.text	**Informations contenues dans le site**\nLe portail Compteur de biodiversité outre-mer est un site informatif. \nIl a pour objectif de présenter la biodiversité des territoires ultra-marins français et des actions et initiatives menées pour la protection de ces écosystèmes.\nAucune information contenue sur le site ne saurait posséder ou être interprétée comme ayant une quelconque valeur contractuelle. Les textes à caractère scientifique publiés dans le site sont valables à la date de leur publication et ne sauraient engager leurs auteurs dans le futur.\nToute information contenue sur le site peut être modifiée, à tout moment sans préavis, par le Muséum national d’histoire naturelle. Les informations contenues sur le site ne constituent pas une offre de services ou de produits ni une sollicitation commerciale de quelque nature que ce soit, ni une recommandation ou un conseil. Le Muséum national d’histoire naturelle ne sera pas tenu responsable pour toute décision prise ou non sur la base d’une information contenue sur le site, ni pour l’utilisation qui pourrait en être faite par un tiers. Ces informations ne sauraient engager la responsabilité du Muséum national d’histoire naturelle.\n\n**Propriété intellectuelle**\nL’ensemble du site « Compteur de biodiversité outre-mer » relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle.\nTous les éléments présentés sur ce site (textes, photographies, vidéos, créations graphiques, illustrations) sont soumis à la législation relative au droit des informations publiques et sont couverts par le droit d'auteur. Ces éléments restent la propriété exclusive du Muséum national d’Histoire naturelle et/ou de ses auteurs.\nLa reproduction de tout ou partie de ce site sur un support électronique quel qu’il soit est formellement interdite sauf autorisation expresse du directeur de la publication. La reproduction de ce site sur un support papier est autorisée pour des fins personnelles, associatives ou professionnelles et sous réserve du respect des trois conditions suivantes :\n• gratuité de la diffusion ;\n• respect de l’intégrité des documents reproduits : pas de modification ni altération d’aucune sorte ;\n• citation claire et lisible de la source indiquant le nom "Muséum national d’Histoire naturelle", l’adresse internet du site web du MNHN : www.mnhn.fr et la mention : "© sur www.mnhn.fr - Reproduction interdite – Tous droits réservés".\nToutes diffusions ou utilisations à des fins commerciales ou publicitaires des informations sont strictement interdites. Pour d’autres utilisations envisagées, veuillez nous consulter.\n\n**Crédits photographiques**\nToutes les photographies présentes sur le site sont créditées de leurs auteurs et de la licence associée à leur utilisation si elle est mentionnée.\nLes contenus sous licence Creative Commons ont une mention spécifique avec le type de licence qui permet à l’utilisateur d’aller consulter les conditions d’utilisation de l’image concernée. \nExemple :\n(CC BY-NC-SA 3.0)	\N	\N	\N	f
-28356	1020	TEXT	ecosystems.ecosystems.0.name	Les forêts denses humides	\N	\N	\N	f
 21458	1009	TEXT	understand.paragraphs.1.text	Sur les quelques centaines d’espèces de mammifères indigènes recensés, la plupart des espèces terrestres se trouvent en Guyane. On y rencontre par exemple le jaguar, le paresseux à deux doigts et plusieurs espèces de primates. Très peu de mammifères terrestres sont naturellement présents sur les îles et il s’agit quasiment uniquement de chauves-souris. Les autres mammifères recensés sont des espèces marines comme les baleines, les dauphins et les phoques.\n\nDe nombreuses espèces de mammifères ont été introduites par l’homme sur les îles et sont devenues [envahissantes](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-exotiques-envahissantes) : chats, rats, souris, lapins, cerfs, chiens, chèvres… Ces introductions sont à l'origine de grandes perturbations pour les écosystème fragiles de ces territoires, et de l'extinction de nombreuses espèces. 	\N	\N	\N	f
 21459	1009	TEXT	understand.title2	Vous avez dit « espèce indigène » ? 	\N	\N	\N	f
 21460	1009	TEXT	presentation.descriptionTerritories	espèces sont indigènes sur le territoire	\N	\N	\N	f
@@ -1165,16 +1190,16 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 25883	1022	TEXT	identity.title	Saint-Pierre-et-Miquelon,  \ndes terres et des eaux riches en biodiversité	\N	\N	\N	f
 25884	1022	IMAGE	species.6.image	\N	1285	*Linnaea borealis* © Serge Muller	\N	f
 25885	1022	TEXT	interests.locations.1.name	L’isthme	\N	\N	\N	f
-28357	1020	TEXT	species.5.description	Les Kaoris, sont des arbres de grande taille, dont le tronc peut atteindre un diamètre impressionnant. La répartition du Kaori du mont Panié ([*Agathis montana*](https://www.endemia.nc/flore/fiche55)) est restreinte à la forêt de nuage du massif du même nom tandis que le Kaori de forêt ([*Agathis lanceolata*](https://www.endemia.nc/flore/fiche57)) se trouve au sud de la Grande Terre. Ce dernier, dont peut observer un spécimen au tronc de 2,70 m de diamètre dans le parc de la Rivière Bleu, a beaucoup souffert de l’exploitation de son bois.\n\nStatut dans la Liste rouge mondiale pour *Agathis montana* : en danger critique ; pour *Agathis lanceolata* : vulnérable.  \nNoms en langues kanak : Kaori du Mt Panié : Dayu Biik (nemi) ; Kaori de forêt : mugé (xârâcùù)	\N	\N	\N	f
-28358	1020	TEXT	species.6.description	Le Gecko géant de Nouvelle-Calédonie ([*Rhacodactylus leachianus*](https://www.endemia.nc/faune/fiche1024)) est le plus grand gecko au monde. D’un aspect massif, avec une queue courte et une peau plissée grise à brune, il peut atteindre 25,5 cm de long. Nocturne et arboricole, on le trouve dans les forêts humides.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
+30423	1020	TEXT	species.6.description	Le Gecko géant de Nouvelle-Calédonie ([*Rhacodactylus leachianus*](https://www.endemia.nc/faune/fiche1024)) est le plus grand gecko au monde. D’un aspect massif, avec une queue courte et une peau plissée grise à brune, il peut atteindre 25,5 cm de long. Nocturne et arboricole, on le rencontre dans les forêts humides, et en densité plus importante sur les îlots non envahis par les chats. Il est encore régulièrement braconné pour le marché de la terrariophilie.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
+30424	1020	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
 25886	1022	TEXT	statistics.2.text	hectares de lagune et de marais au Grand Barachois	\N	\N	\N	f
 25887	1022	IMAGE	species.0.image	\N	1227	Phoque veau-marin © Daniel Koelsch	\N	f
-28359	1020	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
-28360	1020	TEXT	events.0.date	Entre -100 et -55 millions d’années	\N	\N	\N	f
-28361	1020	TEXT	identity.populationYear	2017	\N	\N	\N	f
-28362	1020	IMAGE	species.5.image	\N	1199	Image manquante	\N	f
-28363	1020	TEXT	statistics.0.text	de la flore est endémique	\N	\N	\N	f
-28364	1020	TEXT	ecosystems.ecosystems.1.name	Les récifs coralliens et les lagons	\N	\N	\N	f
+30425	1020	TEXT	events.0.date	Entre -100 et -55 millions d’années	\N	\N	\N	f
+30426	1020	TEXT	identity.populationYear	2017	\N	\N	\N	f
+30427	1020	IMAGE	species.5.image	\N	1319	Kaori © Vanessa Hequet	\N	f
+30428	1020	TEXT	statistics.0.text	de la flore est endémique	\N	\N	\N	f
+30429	1020	TEXT	ecosystems.ecosystems.1.name	Les récifs coralliens et les lagons	\N	\N	\N	f
+30430	1020	TEXT	events.2.date	1940 	\N	\N	\N	f
 21466	1009	TEXT	understand.paragraphs.0.text	Au niveau floristique, les plantes à fleurs présentent le plus grand nombre d’espèces : on en compte 12 306 dans tout l'outre-mer. Mais ce ne sont pas les seules espèces végétales : on compte également plusieurs centaines d’espèces de mousse, de lichens ou encore d’algues.  \n\nDu côté de la faune, c’est chez les invertébrés que se trouve la plus grande diversité : on compte plus de 12 000 espèces de Coléoptères et plus de 8 000 espèces de papillons ! Les mollusques sont également un groupe très diversifié, représentés aussi bien en milieu marin qu’en milieu terrestre et en eaux douces.\nChez les vertébrés, on dénombre 5 046 espèces de poissons, 1 435 espèces d'oiseaux, 381 espèces de reptiles, 321 espèces de mammifères et 138 espèces pour les amphibiens.  \n\nCes chiffres sont en perpétuelle évolution à mesure de la progression des connaissances scientifiques, de [nouvelles espèces](https://preprod.biodiversite-outre-mer.fr/indicateurs/nouvelles-especes) sont découvertes chaque année. Une importante disparité est observée entre le nombre d'espèces terrestres et d'espèces marines répertoriées : près de 80 % des espèces inventoriées sont terrestres ou d'eau douce. Si cela traduit en partie une réalité biologique, cela illustre également la difficulté d'acquérir des connaissances sur les espèces marines. 	\N	\N	\N	f
 21467	1009	IMAGE	understand.image	\N	1040	Iguane des petites Antilles © Fabien Lefebvre	\N	f
 21468	1009	TEXT	presentation.description	espèces sont indigènes dans les outre-mer	\N	\N	\N	f
@@ -1204,43 +1229,38 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28073	1021	IMAGE	species.0.image	\N	1097	*Phelsuma inexpectata* © Philippe Gourdain	\N	f
 28074	1021	TEXT	events.1.date	-22 000 ans	\N	\N	\N	f
 28075	1021	TEXT	ecosystems.ecosystems.2.name	Les récifs coralliens	\N	\N	\N	f
-28365	1020	TEXT	events.2.date	1940 	\N	\N	\N	f
 25888	1022	TEXT	events.1.date	17<sup>e</sup> siècle 	\N	\N	\N	f
 28076	1021	TEXT	interests.locations.4.name	[L’étang de Saint-Paul](https://reserve-etangsaintpaul.fr/fr/accueil)	\N	\N	\N	f
-28366	1020	TEXT	identity.presentation	La Nouvelle-Calédonie se caractérise par le taux d'endémisme particulièrement élevé de sa flore (76 % d'espèces endémiques) et de sa faune terrestre, ainsi que l'existence d'écosystèmes terrestres remarquables : forêt humide, maquis minier, zones humides... La biodiversité marine est également d'une richesse exceptionnelle, l'archipel abritant notamment la seconde plus grande barrière récifale au monde. Cette richesse est reconnue au niveau international par l'inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO. 	\N	\N	\N	f
-28367	1020	TEXT	identity.population	271 407	\N	\N	\N	f
-28368	1020	TEXT	species.3.name	Les Tricots rayés	\N	\N	\N	f
-28369	1020	IMAGE	species.8.image	\N	1202	Image manquante	\N	f
-28370	1020	TEXT	species.0.name	*Sphaeropteris intermedia*	\N	\N	\N	f
-28371	1020	TEXT	events.4.date	2008-2009	\N	\N	\N	f
-28372	1020	IMAGE	interests.locations.2.image	\N	1238	Chutes de la Madeleine, Nouvelle-Calédonie © Hélène Udo	\N	f
-28373	1020	IMAGE	ecosystems.ecosystems.2.image	\N	1204	Image manquante	\N	f
-28374	1020	IMAGE	species.11.image	\N	1244	Image manquante	\N	f
-28375	1020	TEXT	interests.locations.0.description	Créé en 2014, dans le but de « *de protéger la biodiversité exceptionnelle de l’espace maritime de Nouvelle-Calédonie, tout en permettant un développement économique responsable et durable* », le [Parc naturel de la mer de Corail](https://mer-de-corail.gouv.nc/) couvre 1,3 millions de km<sup>2</sup>, soit l’ensemble de la zone économique exclusive de la Nouvelle-Calédonie. Elle intègre les récifs d’Entrecasteaux, remarquables par les importantes populations de tortues vertes et d’oiseaux marins qui s’y reproduisent en grand nombre.	\N	\N	\N	f
-28376	1020	TEXT	risks.risks.1.description	Une même thématique relève le plus souvent de compétences « croisées » entre divers acteurs institutionnels. Chaque Province réglemente, contrôle et veille à la bonne application des réglementations environnementales mises en œuvre localement, sur son propre domaine géographique. Chacune dispose de son propre Code de l’environnement.  \nLe gouvernement de la Nouvelle-Calédonie réglemente et exerce quant à lui un droit d'exploration, d’exploitation, de gestion et de conservation des ressources naturelles, biologiques et non biologiques sur l’ensemble de la zone économique exclusive.  \nPar ailleurs, toutes les questions relatives à l’environnement ne peuvent s’envisager sans y intégrer une dimension coutumière et culturelle composante spécifique forte du territoire. \n\nToutes ces réglementations sont évolutives et régulièrement mises à jour et complétées, avec une volonté de cohérence à souligner entre les différents acteurs impliqués.	\N	\N	\N	f
-28377	1020	TEXT	interests.locations.2.description	Cette région de 43 970 ha, [inscrite sur la Convention de Ramsar](https://www.province-sud.nc/information/lacs-grand-sud-inscrits-convention-ramsar) depuis 2014, se compose de forêts humides, de maquis miniers, de marais arbustifs et de rivières, ruisseaux et lacs intermittents et permanents, notamment le lac de Yaté. Elle abrite des espèces qui ne vivent nulle part ailleurs. Considérée comme le plus grand réservoir d’eau douce de Nouvelle-Calédonie, cette région repose sur un réseau d’eau souterrain original et complexe, unique au monde.	\N	\N	\N	f
-28378	1020	TEXT	interests.locations.1.description	Depuis juillet 2008, les lagons de Nouvelle-Calédonie sont inscrits sur la [Liste du patrimoine mondial de l’UNESCO](https://whc.unesco.org/fr/list/1115/) en raison de leur diversité exceptionnelle et de leur bon état de conservation. Ce bien "en série", c'est à dire composé de six zones géographiques distinctes a été le premier site ultra-marins à être reconnu comme tel. 	\N	\N	\N	f
-28379	1020	TEXT	ecosystems.ecosystems.3.name	Les forêts sèches	\N	\N	\N	f
-28380	1020	TEXT	identity.subtitle	Un endémisme remarquable	\N	\N	\N	f
-28381	1020	IMAGE	species.7.image	\N	1201	Image manquante	\N	f
-28382	1020	TEXT	species.5.name	Les Kaoris	\N	\N	\N	f
-28383	1020	TEXT	risks.risks.0.description	La Nouvelle-Calédonie présente une flore et une faune remarquables, avec des taux d'endémismes très élevés. Trois principales menaces pèsent sur cette biodiversité : les incendies de forêts, les activités minières et les espèces exotiques envahissantes. S'y ajoutent d'autres menaces anthropiques liées à l'aménagement du territoires ou encore les pollutions. \n\nForte de 25 à 30% des réserves mondiales de nickel, la Nouvelle-Calédonie a comme principale activité économique l'exploitation de ces ressources. Cette exploitation est cependant à l’origine d’impacts notables sur la biodiversité terrestre et marine (érosion, sur-sédimentation…). La réhabilitation des zones exploitées est également un enjeu important.  \n\nLes [incendies de forêt](https://www.oeil.nc/fr/causes/les-incendies) sont particulièrement dévastateurs sur le territoire. Les épisodes sont fréquents et les moyens de lutte limités au regard des enjeux environnementaux. Plusieurs dizaines de milliers d’hectares sont brûlés chaque année. Outre la destruction de la flore, les incendies favorisent la colonisation d’espèces exotiques envahissantes, dégradent la ressource en eau et menacent également les populations humaines.  \n\nLes espèces exotiques envahissantes impactent fortement tous les écosystèmes. Plus de 2 000 espèces végétales, plus de 500 invertébrés et une quarantaine de vertébrés ont ainsi été introduits sur le territoire (dont [36 des 100 espèces considérées comme parmi les plus envahissantes au monde](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-exotiques-envahissantes)). Une [stratégie de lutte pays](https://www.cen.nc/especes-envahissantes/presentation) contre les espèces exotiques envahissantes dans les espaces naturels de Nouvelle-Calédonie est en place depuis 2016.  \n\nA une toute autre échelle, l’impact des changements climatiques sur les écosystèmes calédoniens soulève également de nombreuses questions.\n\n	\N	\N	\N	f
-28384	1020	TEXT	ecosystems.ecosystems.2.description	Occupant un peu moins du quart de la surface du territoire, ces habitats ont une végétation très particulière du fait de la richesse du sol en minerais (fer, magnésium, nickel) et pauvre en éléments nutritifs. On en distingue plusieurs types en fonction de leur altitude. La richesse floristique exceptionnelle qu'ils abritent (1 170 espèces à 89 % endémiques) peut être menacée par le développement de projets miniers. La faune locale, adaptée aux conditions de vie difficile de ce milieu sec et rocailleux, compte principalement des insectes et des reptiles.	\N	\N	\N	f
-28385	1020	TEXT	species.10.name	Les Roussettes	\N	\N	\N	f
+30431	1020	TEXT	identity.presentation	La Nouvelle-Calédonie se caractérise par le taux d'endémisme particulièrement élevé de sa flore (76 % d'espèces endémiques) et de sa faune terrestre, ainsi que l'existence d'écosystèmes terrestres remarquables : forêt humide, maquis minier, zones humides... La biodiversité marine est également d'une richesse exceptionnelle avec plus de 20 000 espèces recensées, dont plus de 500 macroalgues, plus de 400 espèces de coraux, plus de 2 000 espèces de poissons et 30 espèces de mammifères marins. L'archipel abrite par ailleurs la seconde plus grande barrière récifale au monde, longue de 1 600 km et quasi-continue.  \nCette richesse est reconnue au niveau international par l'inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO ou encore des lacs du Grand Sud sur la liste Ramsar. 	\N	\N	\N	f
+30432	1020	TEXT	identity.population	271 407	\N	\N	\N	f
+30433	1020	TEXT	species.3.name	Les Tricots rayés	\N	\N	\N	f
+30434	1020	IMAGE	species.8.image	\N	1321	*Melaleuca quinquenervia* © Christine Fort	\N	f
+30435	1020	TEXT	species.0.name	*Sphaeropteris intermedia*	\N	\N	\N	f
+30436	1020	TEXT	events.4.date	2008-2009	\N	\N	\N	f
+30437	1020	IMAGE	interests.locations.2.image	\N	1238	Chutes de la Madeleine, Nouvelle-Calédonie © Hélène Udo	\N	f
+30438	1020	IMAGE	ecosystems.ecosystems.2.image	\N	1329	Maquis minier © Vanessa Hequet	\N	f
+30439	1020	IMAGE	species.11.image	\N	1324	Baleine à bosse © Opération Cétacé	\N	f
+30440	1020	IMAGE	species.15.image	\N	1327	*Ducula goliath* © Christine Fort	\N	f
+30441	1020	TEXT	interests.locations.0.description	Créé en 2014, dans le but de « *de protéger la biodiversité exceptionnelle de l’espace maritime de Nouvelle-Calédonie, tout en permettant un développement économique responsable et durable* », le [Parc naturel de la mer de Corail](https://mer-de-corail.gouv.nc/) couvre 1,3 millions de km<sup>2</sup>, soit l’ensemble de la zone économique exclusive de la Nouvelle-Calédonie. Elle intègre les récifs d’Entrecasteaux, remarquables par les importantes populations de tortues vertes et d’oiseaux marins qui s’y reproduisent en grand nombre.	\N	\N	\N	f
+30442	1020	TEXT	risks.risks.1.description	Une même thématique relève le plus souvent de compétences « croisées » entre divers acteurs institutionnels. Chaque Province réglemente, contrôle et veille à la bonne application des réglementations environnementales mises en œuvre localement, sur son propre domaine géographique. Chacune dispose de son propre Code de l’environnement.  \nLe gouvernement de la Nouvelle-Calédonie réglemente et exerce quant à lui un droit d'exploration, d’exploitation, de gestion et de conservation des ressources naturelles, biologiques et non biologiques sur l’ensemble de la zone économique exclusive.  \nPar ailleurs, toutes les questions relatives à l’environnement ne peuvent s’envisager sans y intégrer une dimension coutumière et culturelle composante spécifique forte du territoire. \n\nToutes ces réglementations sont évolutives et régulièrement mises à jour et complétées, avec une volonté de cohérence à souligner entre les différents acteurs impliqués.	\N	\N	\N	f
+30443	1020	TEXT	interests.locations.2.description	Cette région de 43 970 ha, [inscrite sur la Convention de Ramsar](https://www.province-sud.nc/information/lacs-grand-sud-inscrits-convention-ramsar) depuis 2014, se compose de forêts humides, de maquis miniers, de marais arbustifs et de rivières, ruisseaux et lacs intermittents et permanents, notamment le lac de Yaté. Elle abrite des espèces qui ne vivent nulle part ailleurs. Considérée comme le plus grand réservoir d’eau douce de Nouvelle-Calédonie, cette région repose sur un réseau d’eau souterrain original et complexe, unique au monde.	\N	\N	\N	f
+30444	1020	TEXT	interests.locations.1.description	Depuis juillet 2008, les lagons de Nouvelle-Calédonie sont inscrits sur la [Liste du patrimoine mondial de l’UNESCO](https://whc.unesco.org/fr/list/1115/) en raison de leur diversité exceptionnelle et de leur bon état de conservation. Ce bien "en série", c'est à dire composé de six zones géographiques distinctes a été le premier site ultra-marins à être reconnu comme tel. 	\N	\N	\N	f
+30445	1020	TEXT	ecosystems.ecosystems.3.name	Les forêts sèches	\N	\N	\N	f
+30446	1020	TEXT	identity.subtitle	Un endémisme terrestre remarquable et une diversité marine exceptionnelle	\N	\N	\N	f
+30447	1020	IMAGE	species.7.image	\N	1320	Sterne néréis © Nathalie Baillon	\N	f
+30448	1020	TEXT	species.5.name	Les Kaoris	\N	\N	\N	f
+30449	1020	TEXT	risks.risks.0.description	La Nouvelle-Calédonie présente une flore et une faune remarquables, avec des taux d'endémismes très élevés. Trois principales menaces pèsent sur cette biodiversité : les incendies de forêts, les activités minières et les espèces exotiques envahissantes. S'y ajoutent d'autres menaces anthropiques liées à l'aménagement du territoires ou encore les pollutions. \n\nForte de 25 à 30% des réserves mondiales de nickel, la Nouvelle-Calédonie a comme principale activité économique l'exploitation de ces ressources. Cette exploitation est cependant à l’origine d’impacts notables sur la biodiversité terrestre et marine (érosion, sur-sédimentation…). La réhabilitation des zones exploitées est également un enjeu important.  \n\nLes [incendies de forêt](https://www.oeil.nc/fr/causes/les-incendies) sont particulièrement dévastateurs sur le territoire. Les épisodes sont fréquents et les moyens de lutte limités au regard des enjeux environnementaux. Plusieurs dizaines de milliers d’hectares sont brûlés chaque année. Outre la destruction de la flore, les incendies favorisent la colonisation d’espèces exotiques envahissantes, dégradent la ressource en eau et menacent également les populations humaines.  \n\nLes espèces exotiques envahissantes impactent fortement tous les écosystèmes. Plus de 2 000 espèces végétales, plus de 500 invertébrés et une quarantaine de vertébrés ont ainsi été introduits sur le territoire (dont [36 des 100 espèces considérées comme parmi les plus envahissantes au monde](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-exotiques-envahissantes)). Une [stratégie de lutte pays](https://www.cen.nc/especes-envahissantes/presentation) contre les espèces exotiques envahissantes dans les espaces naturels de Nouvelle-Calédonie est en place depuis 2016.  \n\nA une toute autre échelle, l’impact des changements climatiques sur les écosystèmes calédoniens soulève également de nombreuses questions.\n\n	\N	\N	\N	f
 25889	1022	TEXT	interests.locations.4.name	Saint-Pierre	\N	\N	\N	f
 26460	1004	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 27673	1000	TEXT	testimony.title	Une biodiversité unique mais fragile, protégeons-la !	\N	\N	\N	f
 27674	1000	IMAGE	testimony.image	\N	1262	Saisie d'un anaconda détenu sans autorisation, agents de l’OFB Guyane © Raphael Gailhac	\N	f
-28386	1020	TEXT	ecosystems.ecosystems.1.description	La Nouvelle-Calédonie possède la 2ème plus grande barrière de corail du monde, longue de 1 600 km et quasi-continue. D'une superficie totale de 23 400 kms<sup>2</sup>, les récifs et lagons calédoniens sont parmi les plus étendus et les plus riches de la planète ! La diversité observée, aussi bien en termes d’espèces que de structures récifales, y est exceptionnelle. Le lagon Sud constitue est une zone de reproduction privilégiée pour la Baleine à bosse. Six zones de lagons sont classées au patrimoine mondial de l’UNESCO depuis 2008.	\N	\N	\N	f
-28387	1020	TEXT	ecosystems.ecosystems.0.description	Ces forêts dites « sempervirentes » couvrent un peu plus de 20 % du territoire, avec des massifs de plusieurs milliers d’hectares d’un seul tenant. Elles concentrent plus de 2000 espèces végétales donc 80 % endémiques, et offrent un habitat à une faune diversifiée : oiseaux, reptiles, chauve-souris, insectes… Elles sont cependant victimes de fortes dégradations (incendies, exploitation minière, espèces exotiques envahissantes…). 	\N	\N	\N	f
-28388	1020	TEXT	identity.highestPoint	1 628	\N	\N	\N	f
-28389	1020	TEXT	interests.locations.4.description	Situé sur la côte Sud-Est de la Grande Terre, entre Thio et Yaté, [ce parc provincial](https://www.province-sud.nc/aires-protegees/parc-cote-oubliee) créé en 2019 protège désormais 93 000 ha terrestres et 29 200 ha marins. Ce véritable trésor de biodiversité compte 98 % d’espèces végétales endémiques, des centaines d’espèces rares ou menacées, la moitié des forêts humides de la Nouvelle-Calédonie et un patrimoine culturel et immatériel précieux. Ce classement a par ailleurs induit le gel d’une centaine de titres miniers. \n	\N	\N	\N	f
-28390	1020	TEXT	risks.risks.0.name	Une richesse en biodiversité soumise à des fortes pressions 	\N	\N	\N	f
-28391	1020	IMAGE	interests.locations.1.image	\N	1090	Poisson-coffre dans les récifs d’Entrecasteaux © DR	\N	f
-28392	1020	IMAGE	ecosystems.ecosystems.1.image	\N	1093	La piscine naturelle de la baie d’Oro © Jeremy Zero/Unsplash	\N	f
-28393	1020	TEXT	interests.locations.3.description	Autour du point culminant de la Nouvelle-Calédonie, cette réserve de 5 400 hectares a été créée en 1950. Cette réserve botanique exceptionnelle se caractérise par une mosaïque de formations forestières abritant une faune et une flore remarquable : kaoris, palmiers du genre *Clinosperma*, oiseaux (Méliphage noir, Pétrel de Tahiti), papillons...	\N	\N	\N	f
-28394	1020	IMAGE	species.10.image	\N	1243	Image manquante	\N	f
-28395	1020	TEXT	identity.title	La Nouvelle-Calédonie,\nun hotspot de biodiversité dans le Pacifique	\N	\N	\N	f
+30450	1020	TEXT	ecosystems.ecosystems.2.description	Occupant un peu moins du quart de la surface du territoire, les maquis miniers présentent une végétation très particulière du fait de la richesse du sol en minerais (fer, magnésium, nickel) et de sa pauvreté en éléments nutritifs.  \nLa richesse floristique exceptionnelle qu'ils abritent (1 170 espèces à 89 % endémiques) peut être menacée par le développement de projets miniers et par les incendies. La faune locale, adaptée aux conditions de vie difficiles de ce milieu sec et rocailleux, compte principalement des insectes et des reptiles.	\N	\N	\N	f
+30451	1020	TEXT	species.10.name	Les Roussettes	\N	\N	\N	f
+30452	1020	TEXT	ecosystems.ecosystems.1.description	La Nouvelle-Calédonie possède la 2ème plus grande barrière de corail du monde, longue de 1 600 km et quasi-continue. D'une superficie totale de 23 400 kms<sup>2</sup>, les récifs et lagons calédoniens sont parmi les plus étendus et les plus riches de la planète. La diversité observée en termes d’espèces, d'habitats et de structures récifales, y est exceptionnelle.   \n\nChaque région et groupe d'île de la zone économique exclusive se caractérise par des assemblages uniques d'espèces et d'habitats coralliens. Ce constat renforce la nécessité de protection et de conservation du patrimoine naturel aussi bien à l'échelle locale qu'internationale. 	\N	\N	\N	f
+30453	1020	TEXT	species.13.name	*Neogymnochrinus richeri*	\N	\N	\N	f
+30454	1020	TEXT	ecosystems.ecosystems.0.description	Ces forêts dites « sempervirentes » couvrent un peu plus de 20 % du territoire, avec des massifs de plusieurs milliers d’hectares d’un seul tenant. Elles concentrent plus de 2 000 espèces végétales donc 80 % endémiques, et offrent un habitat à une faune diversifiée : oiseaux, reptiles, chauve-souris, insectes… Elles sont cependant victimes de fortes dégradations (incendies, exploitation minière, espèces exotiques envahissantes…). 	\N	\N	\N	f
+30455	1020	TEXT	identity.highestPoint	1 628	\N	\N	\N	f
+30456	1020	TEXT	interests.locations.4.description	Situé sur la côte Sud-Est de la Grande Terre, entre Thio et Yaté, ce [parc provincial](https://www.province-sud.nc/aires-protegees/parc-cote-oubliee) créé en 2019 protège désormais 93 000 ha terrestres et 29 200 ha marins. C'est un véritable trésor de biodiversité qui abrite 20 % des forêts humide du territoire, 82 % d’espèces végétales endémiques  et un patrimoine culturel et immatériel précieux. Ce classement a par ailleurs induit le gel d’une centaine de titres miniers. \n	\N	\N	\N	f
 26461	1004	TEXT	understand.text2	Ces espèces exotiques envahissantes perturbent les équilibres environnementaux en entrant en compétition avec les espèces locales (pour la nourriture, les sites de reproduction ou de repos, la lumière, etc.), par prédation, introduction de pathogènes, hybridation ou encore en modifiant les paramètres physico-chimiques des habitats.  Elles ont ainsi de lourds impacts sur les milieux et les espèces indigènes, en particulier dans les îles où elles sont à l'origine de nombreuses extinctions.\n\nOn trouve des espèces exotiques envahissantes dans tous les groupes taxonomiques : champignons, algues, plantes vasculaires, invertébrés, reptiles, oiseaux, poissons, mammifères, etc. et dans tous les milieux : terrestres, marins ou d'eaux douces.	\N	\N	\N	f
 26462	1004	TEXT	understand.text1	Une espèce exotique envahissante est une espèce introduite par l’Homme hors de son territoire d’origine et qui présente ensuite, sur son territoire d’introduction, une dispersion et un développement importants, engendrant des impacts environnementaux mais aussi sociaux et économiques. Ces introductions sont parfois volontaires (pour l’agriculture, l’ornementation, comme animaux de compagnie, etc.) ou involontaires (organismes présents dans les marchandises échangées internationalement, dans les eaux de ballast des bateaux, etc.).\n\nDe nombreuses espèces n’arrivent pas à s’adapter ou se reproduire dans leurs territoires d’introduction, cependant certaines trouvent au contraire des conditions favorables à leur développement et prolifèrent, profitant notamment de l’absence de leurs prédateurs ou parasites naturels. 	\N	\N	\N	f
 26463	1004	TEXT	territories.title	Nombre d'espèces présentes sur la liste des 100 espèces exotiques les plus envahissantes au monde 	\N	\N	\N	f
@@ -1252,10 +1272,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 26468	1004	TEXT	presentation.descriptionTerritories	espèces sur les 100 considérées comme les plus envahissantes au monde sont présentes sur le territoire	\N	\N	\N	f
 26469	1004	TEXT	understand.paragraphs.0.title	Une liste mondiale des espèces les plus problématiques	\N	\N	\N	f
 26470	1004	TEXT	understand.keyword	Espèces	\N	\N	\N	f
-28396	1020	IMAGE	species.6.image	\N	1200	Image manquante	\N	f
-28397	1020	TEXT	interests.locations.1.name	Les lagons, inscrits au Patrimoine mondial de l'UNESCO 	\N	\N	\N	f
-28398	1020	IMAGE	species.0.image	\N	1091	*Sphaeropteris intermedia* © Benjamin Guichard / OFB	\N	f
-28399	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
+30457	1020	TEXT	risks.risks.0.name	Une richesse en biodiversité soumise à des fortes pressions 	\N	\N	\N	f
+30458	1020	IMAGE	interests.locations.1.image	\N	1090	Poisson-coffre dans les récifs d’Entrecasteaux © DR	\N	f
+30459	1020	IMAGE	ecosystems.ecosystems.1.image	\N	1093	La piscine naturelle de la baie d’Oro © Jeremy Zero/Unsplash	\N	f
 27675	1000	IMAGE	carousel.images.1.image	\N	1260	Canal de Beauregard, Martinique © Fabien Lefebvre	\N	f
 27676	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
 27677	1000	TEXT	science.text	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.	\N	\N	\N	f
@@ -1276,7 +1295,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 27689	1000	TEXT	presentation.text	Les territoires d’outre-mer présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
 27690	1000	TEXT	carousel.territoriesButton	Découvrir les territoires	\N	\N	\N	f
 27691	1000	CHECKBOX	carousel.images.2.shadowed	false	\N	\N	\N	f
-28400	1020	TEXT	interests.locations.4.name	Le parc provincial de la Côte oubliée (*Woen Vùù – Pwa Pereeù*)	\N	\N	\N	f
 28783	1001	TEXT	events.5.description	Création du Parc national de Guadeloupe	\N	\N	\N	f
 28784	1001	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
 26471	1004	TEXT	ecogestures.title	Que puis-je faire pour éviter l’introduction et la dispersion d’espèces exotiques envahissantes ? 	\N	\N	\N	f
@@ -1286,6 +1304,15 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 26475	1004	IMAGE	understand.image	\N	1027	Miconia calvescens © Forest & Kim Starr / CC BY 3.0 	\N	f
 26476	1004	TEXT	presentation.description	espèces sur les 100 considérées comme les plus envahissantes au monde se trouvent en outre-mer	\N	\N	\N	f
 26477	1004	TEXT	presentation.logoUrl	http://indicateurs-biodiversite.naturefrance.fr/fr/indicateurs/nombre-despeces-en-outremer-parmi-les-plus-envahissantes-au-monde	\N	\N	\N	f
+30460	1020	TEXT	interests.locations.3.description	Autour du point culminant de la Nouvelle-Calédonie (1 627 m), cette réserve de 5 400 hectares a été créée en 1950. Cette réserve botanique exceptionnelle se caractérise par une mosaïque de formations forestières abritant une faune et une flore remarquable : kaoris, palmiers du genre *Clinosperma*, oiseaux (Méliphage noir, Pétrel de Tahiti), papillons...	\N	\N	\N	f
+30461	1020	IMAGE	species.10.image	\N	1323	*Pteropus ornatus* © Malik Oedin / IAC	\N	f
+30462	1020	TEXT	identity.title	La Nouvelle-Calédonie,\nun hotspot de biodiversité dans le Pacifique	\N	\N	\N	f
+30463	1020	IMAGE	species.6.image	\N	1318	*Rhacodactylus leachianus* © Matthias Deuss	\N	f
+30464	1020	TEXT	interests.locations.1.name	Les lagons, inscrits au Patrimoine mondial de l'UNESCO 	\N	\N	\N	f
+30465	1020	TEXT	statistics.2.text	espèces de coraux 	\N	\N	\N	f
+30466	1020	IMAGE	species.0.image	\N	1091	*Sphaeropteris intermedia* © Benjamin Guichard / OFB	\N	f
+30467	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
+30468	1020	TEXT	interests.locations.4.name	Le parc provincial de la Côte oubliée (*Woen Vùù – Pwa Pereeù*)	\N	\N	\N	f
 28401	1015	TEXT	events.2.description	Dernière éruption de la Montagne Pelée	\N	\N	\N	f
 28402	1015	TEXT	events.3.description	Création du Parc naturel régional de Martinique et de la Réserve naturelle nationale de la presqu'île de la Caravelle	\N	\N	\N	f
 28403	1015	IMAGE	identity.image	\N	1284	La Montagne Pelée depuis la mer © Fabien Lefebvre	\N	f
@@ -1801,7 +1828,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 1314, true);
+SELECT pg_catalog.setval('public.image_seq', 1330, true);
 
 
 --
@@ -1822,7 +1849,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1107, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 28847, true);
+SELECT pg_catalog.setval('public.page_element_seq', 30468, true);
 
 
 --
