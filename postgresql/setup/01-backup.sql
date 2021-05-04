@@ -671,6 +671,19 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 1328	image/jpeg	Nautile_Claude Payri.jpg
 1329	image/jpeg	Maquis_Vanessa Hequet.jpg
 1330	image/jpeg	Forêt sèche_CEN.jpg
+1331	image/jpeg	Amborella_Vanessa Hequet.jpg
+1332	image/jpeg	Tortue bwara.jpg
+1333	image/jpeg	Image à trouver.jpg
+1334	image/jpeg	Cantharellus noumaea Grégory Lasne.jpg
+1335	image/jpeg	la-malavoune-la-campagne-en-shimaore-11d2daae-2b99-4f49-80a0-616e5e0c54e9(1).jpg
+1336	image/jpeg	Herbier Claude Payri.jpg
+1337	image/jpeg	Image à trouver.jpg
+1338	image/jpeg	Image à trouver.jpg
+1339	image/jpeg	mangrove_Christine-Fort.JPG
+1340	image/jpeg	cabane-dobservation,-sentier-du-site-de-nidification-du-coq-de-roche-9a6b9865-f967-4cd0-b8f6-d59a654fe502.jpg
+1341	image/jpeg	37370.jpg
+1342	image/jpeg	cabane-dobservation,-sentier-du-site-de-nidification-du-coq-de-roche-9a6b9865-f967-4cd0-b8f6-d59a654fe502_copie.jpg
+1343	image/jpeg	mission-dinventaire-du-mont-itoupe-67e621f9-ff4f-49b2-867c-b2a2d5c8c17a.jpg
 \.
 
 
@@ -684,9 +697,9 @@ COPY public.indicator (id, slug, biom_id, is_rounded) FROM stdin;
 1000	especes-exotiques-envahissantes	8ba9fc7e-12e9-4c7b-93b3-5b83af14a13d	t
 1001	especes-endemiques	9493c8d0-0dfe-43d4-bbf6-d3c5f99f54d5	f
 1007	recifs-coralliens	a2f912ab-19e6-4394-b3c8-57035e21e24e	t
-1002	especes-inventoriees	b14bdecd-5a1d-4594-8303-5d6618bb2d0a	f
-1006	nouvelles-especes	d880a1c3-bf90-46c5-b224-a46958529adf	f
 1005	conservation-mangroves	94128379-c202-4ad6-b358-0c8d46bdb500	t
+1002	especes-inventoriees	b14bdecd-5a1d-4594-8303-5d6618bb2d0a	t
+1006	nouvelles-especes	d880a1c3-bf90-46c5-b224-a46958529adf	t
 \.
 
 
@@ -700,9 +713,9 @@ COPY public.indicator_category (indicator_id, category_id) FROM stdin;
 1000	1000
 1001	1001
 1007	1003
+1005	1003
 1002	1001
 1006	1001
-1005	1003
 \.
 
 
@@ -713,6 +726,8 @@ COPY public.indicator_category (indicator_id, category_id) FROM stdin;
 COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 1005	1002
 1005	1005
+1002	1007
+1006	1007
 1004	1006
 1004	1005
 1003	1006
@@ -723,8 +738,6 @@ COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 1001	1000
 1001	1005
 1007	1001
-1002	1007
-1006	1007
 \.
 
 
@@ -733,71 +746,71 @@ COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 --
 
 COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdin;
-1088	1000	GUADELOUPE	17	
-1092	1000	NOUVELLE_CALEDONIE	38	
-1095	1000	MAYOTTE	19	
-1091	1000	SAINT_BARTHELEMY	11	
 1096	1000	SAINT_PIERRE_ET_MIQUELON	7	
-1093	1000	POLYNESIE_FRANCAISE	36	
 1089	1000	MARTINIQUE	18	
 1094	1000	REUNION	34	
 1090	1000	SAINT_MARTIN	11	
+1092	1000	NOUVELLE_CALEDONIE	38	
+1095	1000	MAYOTTE	19	
+1091	1000	SAINT_BARTHELEMY	11	
+1093	1000	POLYNESIE_FRANCAISE	36	
 1097	1005	OUTRE_MER	25.21552908	%
-1071	1001	GUYANE	2551	
-1049	1001	OUTRE_MER	17846	
-1075	1001	MAYOTTE	335	
-1052	1001	NOUVELLE_CALEDONIE	8673	
-1072	1001	SAINT_BARTHELEMY	70	
-1050	1001	GUADELOUPE	1399	
 1054	1001	SAINT_PIERRE_ET_MIQUELON	0	
-1073	1001	POLYNESIE_FRANCAISE	2673	
+1050	1001	GUADELOUPE	1399	
 1051	1001	MARTINIQUE	700	
 1053	1001	REUNION	1558	
 1074	1001	SAINT_MARTIN	63	
-1086	1003	GUYANE	11.11842105	%
-1081	1003	OUTRE_MER	19.6979807	%
+1052	1001	NOUVELLE_CALEDONIE	8673	
+1071	1001	GUYANE	2551	
+1075	1001	MAYOTTE	335	
+1072	1001	SAINT_BARTHELEMY	70	
+1049	1001	OUTRE_MER	17846	
+1073	1001	POLYNESIE_FRANCAISE	2673	
 1082	1003	GUADELOUPE	28.63712677	%
-1085	1003	MAYOTTE	35.92505855	%
 1083	1003	MARTINIQUE	19.40384829	%
 1084	1003	REUNION	34.23298707	%
-1034	1007	OUTRE_MER	29.26829268	%
-1077	1007	MAYOTTE	30	%
+1086	1003	GUYANE	11.11842105	%
+1085	1003	MAYOTTE	35.92505855	%
+1081	1003	OUTRE_MER	19.6979807	%
 1035	1007	GUADELOUPE	60	%
-1037	1007	NOUVELLE_CALEDONIE	18.51851852	%
 1036	1007	MARTINIQUE	50	%
 1038	1007	REUNION	21.42857143	%
 1076	1007	SAINT_MARTIN	33.33333333	%
-1012	1002	OUTRE_MER	88966	
-1020	1002	MAYOTTE	6162	
-1016	1002	SAINT_BARTHELEMY	2140	
-1017	1002	NOUVELLE_CALEDONIE	28092	
-1013	1002	GUADELOUPE	10527	
+1037	1007	NOUVELLE_CALEDONIE	18.51851852	%
+1077	1007	MAYOTTE	30	%
+1034	1007	OUTRE_MER	29.26829268	%
 1021	1002	SAINT_PIERRE_ET_MIQUELON	2112	
-1018	1002	POLYNESIE_FRANCAISE	11776	
+1013	1002	GUADELOUPE	10527	
 1014	1002	MARTINIQUE	7422	
 1019	1002	REUNION	10915	
 1015	1002	SAINT_MARTIN	2234	
-1104	1006	GUYANE	179.6666667	
-1033	1006	OUTRE_MER	583.3333333	
-1099	1006	MAYOTTE	6.333333333	
-1100	1006	NOUVELLE_CALEDONIE	281.6666667	
+1017	1002	NOUVELLE_CALEDONIE	28092	
+1020	1002	MAYOTTE	6162	
+1016	1002	SAINT_BARTHELEMY	2140	
+1012	1002	OUTRE_MER	88966	
+1018	1002	POLYNESIE_FRANCAISE	11776	
 1101	1006	GUADELOUPE	23	
+1100	1006	NOUVELLE_CALEDONIE	281.6666667	
+1104	1006	GUYANE	179.6666667	
+1099	1006	MAYOTTE	6.333333333	
+1033	1006	OUTRE_MER	583.3333333	
+1088	1000	GUADELOUPE	17	
 1087	1000	OUTRE_MER	60	
-1105	1006	SAINT_BARTHELEMY	0.333333333	
 1098	1006	SAINT_PIERRE_ET_MIQUELON	0	
-1106	1006	POLYNESIE_FRANCAISE	49.66666667	
 1107	1006	MARTINIQUE	29	
 1103	1006	REUNION	13.33333333	
 1102	1006	SAINT_MARTIN	1.333333333	
-1043	1004	OUTRE_MER	84.64046368	%
-1080	1004	MAYOTTE	15.78947368	%
-1046	1004	NOUVELLE_CALEDONIE	45.78774617	%
+1105	1006	SAINT_BARTHELEMY	0.333333333	
+1106	1006	POLYNESIE_FRANCAISE	49.66666667	
 1044	1004	GUADELOUPE	42.26190476	%
-1078	1004	SAINT_BARTHELEMY	0	%
 1048	1004	SAINT_PIERRE_ET_MIQUELON	13.04347826	%
-1079	1004	POLYNESIE_FRANCAISE	42.34972678	%
 1045	1004	MARTINIQUE	46.22641509	%
 1047	1004	REUNION	35.2	%
+1046	1004	NOUVELLE_CALEDONIE	45.78774617	%
+1080	1004	MAYOTTE	15.78947368	%
+1078	1004	SAINT_BARTHELEMY	0	%
+1043	1004	OUTRE_MER	84.64046368	%
+1079	1004	POLYNESIE_FRANCAISE	42.34972678	%
 \.
 
 
@@ -807,7 +820,6 @@ COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdi
 
 COPY public.page (id, name, model_name, title) FROM stdin;
 1025	protection-faune	ecogesture	Respecter la faune sauvage
-1007	apropos	about	A propos
 1014	recifs-coralliens	indicator	Récifs coralliens
 1028	exploitation-especes-protegees	ecogesture	Préserver les espèces protégées 
 1008	especes-endemiques	indicator	Espèces endémiques
@@ -815,27 +827,28 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1027	protection-flore	ecogesture	Préserver la flore sauvage
 1012	conservation-mangroves	indicator	Conservation des mangroves d'outre-mer
 1001	guadeloupe	territory	Guadeloupe
-1016	agir-ensemble	act	Agir ensemble
 1010	especes-menacees	indicator	Espèces éteintes et menacées
 1030	mentions-legales	legal-terms	Mentions légales
 1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
 1009	especes-inventoriees	indicator	Espèces indigènes
 1003	territoires	territories	Découvrez les outre-mer
-1013	nouvelles-especes	indicator	Nouvelles espèces décrites
-1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
+1016	agir-ensemble	act	Agir ensemble
 1002	antilles	territory-zone	bassin antillais
 1029	s-investir-sur-le-terrain	ecogesture	S'investir sur le terrain
 1006	protection-recifs-coralliens	ecogesture	Protéger les récifs coralliens
 1004	especes-exotiques-envahissantes	indicator	Espèces exotiques envahissantes 2
 1011	taux-boisement	indicator	Proportion de forêts
 1005	indicateurs	indicators	Tous les indicateurs
+1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
+1007	apropos	about	A propos
+1019	sciences-participatives	science	Sciences participatives
+1013	nouvelles-especes	indicator	Nouvelles espèces décrites
 1000	accueil	home	Accueil
 1021	reunion	territory	La Réunion
 1023	ne-pas-jeter-dechets-nature	ecogesture	Je ne jette pas mes déchets dans la nature
 1026	limiation-plastique	ecogesture	Réduire les déchets et le plastique
 1015	martinique	territory	Martinique
 1017	ecogestes	ecogestures	Accueil écogestes
-1019	sciences-participatives	science	Sciences participatives
 1018	ecogeste-agir	ecogesture-act	Encadré "agir pour la biodiversité" fiche écogeste
 \.
 
@@ -845,30 +858,6 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 --
 
 COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, title) FROM stdin;
-24915	1007	IMAGE	partners.partners.1.logo	\N	1281	Parc naturel régional de la Martinique	\N	f
-24916	1007	TEXT	partners.partners.0.url	http://www.biodiversite-martinique.fr/	\N	\N	\N	f
-24917	1007	TEXT	goal2.quote	*Le Compteur constituera un signal d’alerte et donnera une visibilité forte et essentielle pour sensibiliser à l’évolution de la biodiversité.*  Livre bleu des outre-mer, 2018. 	\N	\N	\N	f
-24918	1007	TEXT	goal1.title	Partager la connaissance scientifique	\N	\N	\N	f
-24919	1007	IMAGE	goal2.quoteImage	\N	1031	Coq-de-roche © Raphaël Gailhac 	\N	f
-24920	1007	TEXT	goal2.description	De nombreuses actions locales sont mises en place afin de tenter de préserver les écosystèmes et les espèces. Donner de la visibilité aux acteurs locaux, partager les expériences et les réussites, au bénéfice de tous, c’est également l’un des objectifs du Compteur. 	\N	\N	\N	f
-24921	1007	TEXT	goal3.description	Chacun, à son échelle, peut agir pour préserver la biodiversité. Connaitre et appliquer des gestes simples, modifier ses habitudes et son comportement ou encore s’investir dans des programmes de sciences participatives, tout le monde est concerné par la préservation de la biodiversité. Le rôle du Compteur est d’accompagner les citoyens en partageant des informations claires et adaptées à tous les territoires, et en encourageant à se mobiliser.	\N	\N	\N	f
-24922	1007	TEXT	partners.partners.3.url	http://www.saint-pierre-et-miquelon.developpement-durable.gouv.fr/	\N	\N	\N	f
-24923	1007	TEXT	partners.title	Les partenaires	\N	\N	\N	f
-24924	1007	TEXT	goal1.description	Quelles sont les espèces présentes dans ce territoire ? Comment évoluent leurs populations ? Quel est l’état de santé des récifs coralliens ? Pour répondre à ces questions et bien d’autres, différents paramètres, appelés « indicateurs », sont mesurés par les scientifiques pour suivre l’évolution de l’état de la biodiversité. Le Compteur a pour mission de rendre compte de l’état de ces connaissances dans les territoires en s'appuyant notamment sur l'[ONB](https://naturefrance.fr/), l'[INPN](https://inpn.mnhn.fr/accueil/index) et les observatoires locaux. 	\N	\N	\N	f
-24925	1007	IMAGE	goal3.image	\N	1274	 © Observatoire Martiniquais de la biodiversité	\N	f
-24926	1007	TEXT	header.subtitle	C’est le Livre Bleu outre-mer, synthèse des travaux des Assises des outre-mer, qui propose en 2018 la création d’un Compteur de la biodiversité. Ce nouveau dispositif vient notamment enrichir le portail [Naturefrance](https://naturefrance.fr/) en présentant un focus sur les territoires ultramarins. Outil actualisé et pérenne, il favorisera la rencontre, la synergie des citoyens et des acteurs de la biodiversité.  \n  \nLa démarche est collaborative et partenariale avec les territoires, notamment pour relater les contextes culturels et mettre en avant des enjeux spécifiques. Des études, actuellement en cours, viennent compléter l’initiative : le premier panorama des programmes de sciences participatives dans les territoires, et une enquête sur la perception de la nature et l’utilisation des outils numériques. 	\N	\N	\N	f
-24927	1007	TEXT	header.title	Pourquoi un Compteur de la biodiversité en outre-mer ?	\N	\N	\N	f
-24928	1007	CHECKBOX	header.shadowed	true	\N	\N	\N	f
-24929	1007	TEXT	goal3.title	Encourager chacun à agir	\N	\N	\N	f
-24930	1007	TEXT	partners.partners.1.url	http://www.pn-martinique.com/	\N	\N	\N	f
-24931	1007	IMAGE	partners.partners.3.logo	\N	1272	DTAM Saint-Pierre et Miquelon	\N	f
-24932	1007	IMAGE	goal2.image	\N	1029	Tortue olivâtre, Guyane © Raphael Gailhac	\N	f
-24933	1007	IMAGE	goal1.image	\N	1030	Jaguar, Guyane © Raphaël Gailhac	\N	f
-24934	1007	IMAGE	partners.partners.2.logo	\N	1271	Criobe	\N	f
-24935	1007	TEXT	goal2.title	Valoriser les actions des territoires	\N	\N	\N	f
-24936	1007	TEXT	partners.partners.2.url	http://www.criobe.pf/	\N	\N	\N	f
-24937	1007	IMAGE	header.background	\N	1028	Monts Pito Hiti et Orohena, Tahiti © Jean-Yves Meyer	\N	f
-24938	1007	IMAGE	partners.partners.0.logo	\N	1273	Observatoire Martiniquais de la biodiversité	\N	f
 27981	1021	TEXT	species.7.description	Le Tamarin des Hauts ([*Acacia heterophylla*](https://inpn.mnhn.fr/espece/cd_nom/705753\n)) se trouve principalement en forêt humide de montagne entre 1100 et 1700 mètres d'altitude. Il peut atteindre 25 mètres de haut mais il est vulnérable aux cyclones en raison de son enracinement peu profond. Il s’agit d’une espèce endémique de l’île.\n\nStatut dans la Liste rouge de la flore vasculaire de La Réunion : préoccupation mineure. 	\N	\N	\N	f
 27982	1021	TEXT	species.8.description	Le Bois d’Ortie ([*Obetia ficifolia*](https://inpn.mnhn.fr/espece/cd_nom/706579\n)) est une espèce rare et endémique des Mascareigne, qu’on retrouve dans les forêts sèches et semi-sèches. Il doit son nom à sa capacité à provoquer des irritations de la peau, mais il est réputé des tisaneurs pour être un remède contre l’asthme. Il est également connu pour être l’hôte d’un papillon endémique, le *Salamis augustina augustina*, qui n’a cependant pas été observé depuis 2005, ce qui laisse à penser à sa disparition. Dans l’espoir de le voir réapparaitre, des plantations de bois d’Ortie sont réalisées notamment sur le massif de la Grande Chaloupe.\n\nStatut dans la Liste rouge de la flore vasculaire de La Réunion : en danger. 	\N	\N	\N	f
 27983	1021	TEXT	events.2.description	Dernière mention connue du Solitaire de la Réunion ([*Threskiornis solitarius*](https://inpn.mnhn.fr/espece/cd_nom/432588)) oiseau endémique	\N	\N	\N	f
@@ -892,8 +881,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28001	1021	IMAGE	interests.locations.4.image	\N	1188	Image manquante	\N	f
 28002	1021	TEXT	species.2.name	La Baleine à bosse	\N	\N	\N	f
 28003	1021	TEXT	species.8.name	Le Bois d’Ortie	\N	\N	\N	f
-30346	1020	IMAGE	species.9.image	\N	1322	*Syzygium acre* © Vanessa Hequet	\N	f
-30347	1020	TEXT	events.2.description	Création de la première aire protégée de l'archipel, l'îlot Leprédour	\N	\N	\N	f
+31160	1020	IMAGE	species.9.image	\N	1322	*Syzygium acre* © Vanessa Hequet	\N	f
+31161	1020	TEXT	events.2.description	Création de la première aire protégée de l'archipel, l'îlot Leprédour	\N	\N	\N	f
 25790	1022	TEXT	events.2.description	Fermeture naturelle de l’isthme	\N	\N	\N	f
 25791	1022	TEXT	events.3.description	Première étude publiée sur la flore de Saint-Pierre et Miquelon (thèse de pharmacie d’Alphonse Gaulthier)	\N	\N	\N	f
 25792	1022	IMAGE	identity.image	\N	1109	L'étang du Bois brûlé © Nathalie de Lacoste	\N	f
@@ -924,8 +913,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 25817	1022	TEXT	species.6.name	La Linnée boréale	\N	\N	\N	f
 25818	1022	IMAGE	interests.locations.3.image	\N	1236	La Vallée du Milieu © Nathalie De Lacoste	\N	f
 25819	1022	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
-30348	1020	TEXT	events.3.description	Inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
-30349	1020	IMAGE	identity.image	\N	1088	Île des Pins, Nouvelle-Calédonie © Sébastien Jermer/Unsplash	\N	f
+31162	1020	TEXT	events.3.description	Inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
+31163	1020	IMAGE	identity.image	\N	1088	Île des Pins, Nouvelle-Calédonie © Sébastien Jermer / Unsplash	\N	f
 25820	1022	TEXT	interests.locations.3.name	La Vallée du Milieu	\N	\N	\N	f
 25821	1022	TEXT	statistics.1.text	des habitants de l'archipel résident à Saint-Pierre	\N	\N	\N	f
 25822	1022	TEXT	events.9.date	2017	\N	\N	\N	f
@@ -937,17 +926,17 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 25828	1022	TEXT	species.7.name	Les Botryches	\N	\N	\N	f
 25829	1022	TEXT	interests.title	Lieux d’intérêt	\N	\N	\N	f
 25830	1022	TEXT	species.4.name	Le Sapin baumier	\N	\N	\N	f
-25227	1016	TEXT	science.project.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
-25228	1016	TEXT	header.title	Agir ensemble pour préserver la biodiversité remarquable des outre-mer	\N	\N	\N	f
-25229	1016	CHECKBOX	header.shadowed	false	\N	\N	\N	f
-25230	1016	IMAGE	science.project.image	\N	1282	Image manquante	\N	f
-25231	1016	TEXT	science.title	Les sciences participatives	\N	\N	\N	f
-25232	1016	TEXT	science.project.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré. Le projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. 	\N	\N	\N	f
-25233	1016	TEXT	science.subtitle	Les sciences participatives permettent à tous les curieux de la nature, du débutant à l’expérimenté, de contribuer à l'amélioration des connaissances sur la biodiversité en fournissant aux scientifiques un grand nombre de données de terrain.	\N	\N	\N	f
-25234	1016	TEXT	ecogestures.title	Découvrez les écogestes	\N	\N	\N	f
-25235	1016	IMAGE	header.background	\N	1071	Manapany, La Réunion © Philippe Gourdain / OFB	\N	f
-25236	1016	TEXT	header.subtitle	Réfléchir à son impact, changer ses habitudes, participer à la progression des connaissances sur les espèces et les espaces, donner de son temps dans des actions de terrain : chacun, à son échelle, peut agir et s’investir pour la préservation de la biodiversité de son territoire.	\N	\N	\N	f
-25237	1016	TEXT	ecogestures.subtitle	Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.	\N	\N	\N	f
+31164	1020	TEXT	events.7.description	Publication du Code de l'environnement de la Province des îles Loyauté	\N	\N	\N	f
+31165	1020	TEXT	events.7.date	2016	\N	\N	\N	f
+31166	1020	TEXT	interests.locations.0.name	Le Parc naturel de la Mer de Corail 	\N	\N	\N	f
+31167	1020	TEXT	events.0.description	Dislocation du supercontinent Gondwana et séparation de la Nouvelle-Calédonie avec l’Australie et la Nouvelle-Zélande	\N	\N	\N	f
+31168	1020	TEXT	events.1.description	Arrivée des explorateurs Lapita par la mer : première occupation humaine du territoire	\N	\N	\N	f
+31169	1020	TEXT	events.8.description	Expédition naturaliste ["la Planète revisitée"](http://nouvellecaledonie.laplaneterevisitee.org/)	\N	\N	\N	f
+31170	1020	TEXT	events.9.description	Création du parc provincial de la Côte oubliée	\N	\N	\N	f
+31171	1020	IMAGE	ecosystems.image	\N	1094	test	\N	f
+31172	1020	TEXT	identity.species	26 984	\N	\N	\N	f
+31173	1020	IMAGE	ecosystems.ecosystems.0.image	\N	1092	Forêt tropicale humide sur l’île de Lifou, Nouvelle-Calédonie © Benjamin Guichard / OFB	\N	f
+31174	1020	TEXT	species.11.description	Au cours de l’hiver austral, les baleines à bosse ([*Megaptera novaeangliae*](https://www.endemia.nc/faune/fiche5266)) viennent se reproduire en Nouvelle-Calédonie. L’archipel abrite ainsi une petite population qui fréquente les eaux du lagon mais également les monts sous-marins peu profonds de la zone économique exclusive. Des études scientifiques visent à mieux comprendre la migration des baleines depuis et vers l’archipel et à évaluer la connectivité au sein du parc et avec les populations voisines, dans l’objectif d’estimer le statut de cette population pour contribuer à sa conservation.  \n\nStatut dans la Liste rouge mondiale : préoccupation mineure\n	\N	\N	\N	f
 25831	1022	TEXT	identity.area	242	\N	\N	\N	f
 25832	1022	TEXT	species.0.description	Une vingtaine d'espèces de mammifères marins fréquentent les eaux de Saint-Pierre et Miquelon, dont deux espèces de phoques : le Phoque veau-marin ([*Phoca vitulina*](https://inpn.mnhn.fr/espece/cd_nom/60811)) et le Phoque gris ([*Halichoerus grypus*](https://inpn.mnhn.fr/espece/cd_nom/60776)). C’est sur les bancs de sable de la lagune du Grand Barachois qu’ils se regroupent en plus grand nombre, mais peuvent être observés partout sur les côtes de l’archipel.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure pour les deux espèces. 	\N	\N	\N	f
 25833	1022	TEXT	identity.highestPointName	Morne de la Grande Montagne	\N	\N	\N	f
@@ -961,6 +950,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 25841	1022	TEXT	species.2.description	Le Lièvre américain ([*Lepus americanus*](https://inpn.mnhn.fr/espece/cd_nom/456604\n)) et le Lièvre arctique ([*Lepus arcticus*](https://inpn.mnhn.fr/espece/cd_nom/61707\n)) ont été introduits pour la chasse respectivement en 1881 et 1982. Présents sur les trois îles, ils occupent des milieux différents : le Lièvre américain se concentre dans les milieux forestiers, sur lesquels il exerce une pression non négligeable, tandis que le Lièvre arctique préfère la végétation de la toundra, formée d’arbustes à éricacées, de lichens et de mousses.  \n  \nStatut dans la Liste rouge mondiale : préoccupation mineure pour les deux espèces. 	\N	\N	\N	f
 25842	1022	TEXT	statistics.1.number	86 %  	\N	\N	\N	f
 25843	1022	TEXT	statistics.0.number	La seule 	\N	\N	\N	f
+31175	1020	TEXT	ecosystems.ecosystems.6.name	Les grandes algueraies à Sargasses	\N	\N	\N	f
 28004	1021	TEXT	species.4.description	Le Pétrel de Barau ([*Pterodroma baraui*](https://inpn.mnhn.fr/espece/cd_nom/215079\n)), également appelé « Taille Vent », est un oiseau endémique nichant dans des terriers à même le sol, en haute altitude sur les contreforts du Piton des Neiges. Victimes de la prédation par les rats et les chats, de nombreux jeunes sont également désorientés par les éclairages publics lors de leur premier envol et s’échouent en milieu urbain. En danger d’extinction, l’espèce fait l’objet d’un plan de conservation [LIFE+ Pétrels](https://www.petrels.re/).\n\nStatut dans la Liste rouge des oiseaux de La Réunion : en danger. 	\N	\N	\N	f
 28005	1021	TEXT	events.6.description	Découverte du premier site de nidification du [Pétrel noir de Bourbon](https://www.petrels.re/les-especes/petrel-noir-de-bourbon/) ([*Pseudobulweria aterrima*](https://inpn.mnhn.fr/espece/cd_nom/442280)), oiseau endémique encore mal connu	\N	\N	\N	f
 28006	1021	TEXT	events.6.date	2016	\N	\N	\N	f
@@ -990,21 +980,15 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28024	1021	TEXT	identity.marineArea	318 300	\N	\N	\N	f
 21454	1009	TEXT	understand.text2	Ce nombre comprend uniquement les espèces dites indigènes des territoires d'outre-mer, c’est-à-dire naturellement présentes sur les territoires. Il ne comprend pas les espèces introduites, volontairement ou involontairement, par les humains (animaux domestiques, plantes cultivées, etc.).\nCe nombre ne prend pas non plus en compte les espèces éteintes.	\N	\N	\N	f
 22635	1024	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
-30350	1020	TEXT	events.7.description	Publication du Code de l'environnement de la Province des îles Loyauté	\N	\N	\N	f
+31176	1020	TEXT	species.12.description	Sur les sept espèces de tortues marines présentes dans le monde, trois fréquentent régulièrement les eaux calédoniennes : la Tortue Verte (*Chelonia mydas*), la Tortue imbriquée (*Etretmochelys imbricata*) et la Tortue grosse tête ou Tortue caouanne (*Caretta caretta*). Un plan d’action est en place depuis fin 2018, pour contribuer activement à la conservation des tortues marines et de leurs habitats, à l’échelle locale, régionale et internationale.  \n\nStatut dans la Liste rouge mondiale\n*Chelonia mydas* : en danger\n*Etretmochelys imbricata* : en danger critique \n*Caretta caretta* : vulnérable	\N	\N	\N	f
 22637	1026	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22638	1027	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22639	1028	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 26445	1006	CHECKBOX	presentation.shadowed	true	\N	\N	\N	f
 22641	1017	CHECKBOX	shadowed	false	\N	\N	\N	f
-30351	1020	TEXT	events.7.date	2016	\N	\N	\N	f
-30352	1020	TEXT	interests.locations.0.name	Le Parc naturel de la Mer de Corail 	\N	\N	\N	f
-30353	1020	TEXT	events.0.description	Dislocation du supercontinent Gondwana et séparation de la Nouvelle-Calédonie avec l’Australie et la Nouvelle-Zélande	\N	\N	\N	f
-30354	1020	TEXT	events.1.description	Arrivée des explorateurs Lapita par la mer : première occupation humaine du territoire	\N	\N	\N	f
-30355	1020	TEXT	events.8.description	Expédition naturaliste ["la Planète revisitée"](http://nouvellecaledonie.laplaneterevisitee.org/)	\N	\N	\N	f
-30356	1020	TEXT	events.9.description	Création du parc provincial de la Côte oubliée	\N	\N	\N	f
+31177	1020	TEXT	species.8.name	Le Niaouli	\N	\N	\N	f
 22651	1009	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 22653	1011	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
-22655	1013	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 25847	1022	TEXT	species.4.description	Le Sapin baumier ([*Abies balsamea*](https://inpn.mnhn.fr/espece/cd_nom/717022\n)) est le conifère dominant de la forêt boréale de Saint-Pierre-et-Miquelon (plus de 80% du peuplement). Caractéristique des forêts boréales nord-américaines, il est parfois accompagné d’autres conifères moins fréquents (Epicéa blanc, Epicéa noir, Mélèze laricin…). En plus de subir des attaques fréquentes de pestes forestières indigènes, il est actuellement menacé par un parasite introduit : le puceron lanigère ([*Adelges piceae*](https://inpn.mnhn.fr/espece/cd_nom/893616\n)).\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
 25848	1022	TEXT	ecosystems.ecosystems.0.name	Les landes et la toundra	\N	\N	\N	f
 25849	1022	TEXT	species.5.description	La Diapensine de Laponie ([*Diapensia lapponica*](https://inpn.mnhn.fr/espece/cd_nom/761885\n)) est une plante typique de la toundra arctico-alpine de l’archipel. Sa forme en coussinet est adaptée aux conditions climatiques très ventées de ce milieu.\n\nStatut dans la Liste rouge mondiale : espèce non évaluée. 	\N	\N	\N	f
@@ -1046,30 +1030,31 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28033	1021	TEXT	species.0.name	Le Gecko vert de Manapany	\N	\N	\N	f
 28034	1021	TEXT	events.4.date	2007	\N	\N	\N	f
 28035	1021	IMAGE	interests.locations.2.image	\N	1157	Vue sur le Piton de la Fournaise © Philippe Gourdain	\N	f
-30357	1020	IMAGE	ecosystems.image	\N	1094	test	\N	f
-30358	1020	TEXT	identity.species	26 984	\N	\N	\N	f
-30359	1020	IMAGE	ecosystems.ecosystems.0.image	\N	1092	Forêt tropicale humide sur l’île de Lifou, Nouvelle-Calédonie © Benjamin Guichard / OFB	\N	f
+31178	1020	TEXT	species.14.description	Les nautiles sont considérés comme des fossiles vivants dont les ancêtres étaient proches des ammonites, éteintes à la fin de l’ère secondaire. Ils sont les seuls céphalopodes à posséder une coquille, comme les escargots. Habitants du fonds des océans, ils ont une durée de vie d'une vingtaine d'années et se caractérisent par une croissance lente et un faible taux de reproduction. \nSept espèces de nautiles sont aujourd’hui connues, dont [*Nautilus macromphalus*](https://endemia.nc/faune/fiche4911), qui est endémique à la Nouvelle-Calédonie.  \n  \nStatut dans la Liste rouge mondiale pour *Nautilus macromphalus* : non évalué. \n	\N	\N	\N	f
+31179	1020	TEXT	events.6.description	Création du Parc marin de la mer de Corail ; Inscription des lacs du Grand Sud sur la liste des sites Ramsar	\N	\N	\N	f
+31180	1020	TEXT	species.13.description	Ces dernières décennies, la prospection biologique des milieux profonds notamment des monts sous-marins a permis la découverte de fossiles vivants. Parmi eux, un crinoïde ([*Neogymnochrinus richeri*](https://inpn.mnhn.fr/espece/cd_nom/647041)), de la famille des Sclerocrinidae,  datant du jurassique et supposée éteinte. Il a été retrouvé à la fin des années 80 sur la ride de Norflok.  \n  \nStatut dans la Liste rouge mondiale : non évalué. \n\n\n	\N	\N	\N	f
 25258	1010	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 25259	1010	TEXT	understand.text2	Chaque espèce est évaluée par un groupe d’experts selon des critères bien définis tels que la taille de la population, son aire de distribution ou encore la disparition de son habitat naturel, pour pouvoir lui attribuer une catégorie. \nLe chiffre présenté ici comprend les espèces classées dans les catégories « éteinte au niveau mondial », « éteinte à l’état sauvage », «&nbsp;disparue au niveau régional », « en danger critique d’extinction », « en danger » et «&nbsp;vulnérable » dans les Listes rouges réalisées en outre-mer.  \n\nIl faut noter qu’une espèce peut être classée menacée sur le territoire national mais pas à l’échelle mondiale si son statut est bon dans d’autres pays, cependant on trouve en outre-mer de nombreuses espèces [endémiques](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques) qui ne sont présentes nulle part ailleurs dans le monde.	\N	\N	\N	f
-30360	1020	TEXT	species.11.description	Au cours de l’hiver austral, les baleines à bosse ([*Megaptera novaeangliae*](https://www.endemia.nc/faune/fiche5266)) viennent se reproduire en Nouvelle-Calédonie. L’archipel abrite ainsi une petite population qui fréquente les eaux du lagon mais également les monts sous-marins peu profonds de la zone économique exclusive. Des études scientifiques visent à mieux comprendre la migration des baleines depuis et vers l’archipel et à évaluer la connectivité au sein du parc et avec les populations voisines, dans l’objectif d’estimer le statut de cette population pour contribuer à sa conservation.  \n\nStatut dans la Liste rouge mondiale : préoccupation mineure\n	\N	\N	\N	f
-30361	1020	TEXT	species.12.description	Sur les sept espèces de tortues marines présentes dans le monde, trois fréquentent régulièrement les eaux calédoniennes : la Tortue Verte (*Chelonia mydas*), la Tortue imbriquée (*Etretmochelys imbricata*) et la Tortue grosse tête ou Tortue caouanne (*Caretta caretta*). Un plan d’action est en place depuis fin 2018, pour contribuer activement à la conservation des tortues marines et de leurs habitats, à l’échelle locale, régionale et internationale.  \n\nStatut dans la Liste rouge mondiale\n*Chelonia mydas* : en danger\n*Etretmochelys imbricata* : en danger critique \n*Caretta caretta* : vulnérable	\N	\N	\N	f
+31181	1020	TEXT	species.15.description	Plus gros pigeon arboricole du monde, le notou ([*Ducula goliath*](https://www.endemia.nc/faune/fiche71)) présente un plumage bleu gris, avec une pointe de pourpre sur les ailes, et ses yeux sont rouge vif. Il vit dans les forêts humides de la Grande Terre et contribue à sa régénération par dissémination des graines dont il se nourrit. Difficile à observer, il se repère toutefois facilement à son chant particulier, grave et sourd.  \n\nStatut dans la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
+31182	1020	TEXT	events.6.date	2014	\N	\N	\N	f
 25260	1010	TEXT	understand.text1	L'Union internationale pour la conservation de la nature (UICN) développe depuis 1964 un outil de référence permettant de mesurer l'état de conservation de la faune et de la flore mondiale : la Liste rouge. Les espèces y sont classifiées par catégories selon leur degré de vulnérabilité. Cela permet d'identifier les priorités d'action, les progrès accomplis ou les défis à relever pour la conservation des espèces.  \n  \nEn France, l'élaboration de la [Liste rouge nationale des espèces menacées](https://inpn.mnhn.fr/programme/listes-rouges-especes/presentation) est mise en œuvre depuis 2008 par le Muséum national d'Histoire naturelle, l'Office français de la biodiversité et le [Comité français de l'UICN](https://uicn.fr/liste-rouge-france/), en collaboration avec un large réseau d'experts.\n\n	\N	\N	\N	f
 25261	1010	TEXT	territories.title	Pourcentage d'espèces menacées	\N	\N	\N	f
 25262	1010	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 25263	1010	TEXT	understand.title1	La Liste rouge de l'UICN	\N	\N	\N	f
 25264	1010	TEXT	understand.paragraphs.1.text	Selon l'IPBES*, les cinq facteurs directs de changement qui affectent la nature et qui ont les plus forts impacts à l’échelle mondiale sont, dans l'ordre : les changements d’usage des terres et de la mer, l'exploitation directe de certains organismes, le changement climatique, les pollutions et les espèces exotiques envahissantes. Les impacts de ces différents facteurs sont souvent liés et s'additionnent : l'installation de certaines espèces exotiques peut par exemple être facilitée par les changements climatiques. Dans les îles, les espèces exotiques envahissantes seraient le premier facteur de perte de biodiversité. \n\n*la Plateforme intergouvernementale scientifique et politique sur la biodiversité et les services écosystémiques (en anglais IPBES) est un groupement international d'experts de la biodiversité, créé sous l'égide de l'ONU en 2012. L'IPBES a publié le 6 mai 2019 [le premier rapport d'évaluation mondiale sur la biodiversité et les services écosystémiques](https://www.ipbes.net/news/Media-Release-Global-Assessment-Fr). 	\N	\N	\N	f
-30362	1020	TEXT	species.8.name	Le Niaouli	\N	\N	\N	f
-30363	1020	TEXT	species.14.description	Les nautiles sont considérés comme des fossiles vivants dont les ancêtres étaient proches des ammonites, éteintes à la fin de l’ère secondaire. Ils sont les seuls céphalopodes à posséder une coquille, comme les escargots. Habitants du fonds des océans, ils ont une durée de vie d'une vingtaine d'années et se caractérisent par une croissance lente et un faible taux de reproduction. \nSept espèces de nautiles sont aujourd’hui connues, dont [*Nautilus macromphalus*](https://endemia.nc/faune/fiche4911), qui est endémique à la Nouvelle-Calédonie.  \n  \nStatut dans la Liste rouge mondiale pour *Nautilus macromphalus* : non évalué. \n	\N	\N	\N	f
+31183	1020	TEXT	events.4.description	Publication des Codes de l'environnement des Provinces Sud et Nord	\N	\N	\N	f
+31184	1020	TEXT	events.5.description	Création du [Conservatoire d'espaces naturels](https://www.cen.nc/especes-envahissantes/presentation)	\N	\N	\N	f
 25265	1010	TEXT	understand.title2	Plusieurs catégories de risque d’extinction	\N	\N	\N	f
 25266	1010	TEXT	presentation.descriptionTerritories	des espèces sont considérées comme éteintes ou menacées	\N	\N	\N	f
 25267	1010	TEXT	understand.paragraphs.0.title	Encore beaucoup d'évaluations à réaliser	\N	\N	\N	f
 25268	1010	TEXT	understand.keyword	menaces	\N	\N	\N	f
 25269	1010	TEXT	ecogestures.title	Que puis-je faire pour protéger les espèces menacées ?	\N	\N	\N	f
+31185	1020	TEXT	interests.locations.2.name	La région des lacs du Grand Sud	\N	\N	\N	f
 28776	1001	TEXT	species.4.description	Les Anolis sont des lézards communément observés sur tout le territoire. Ce terme regroupe plusieurs espèces et sous-espèces endémiques de la Guadeloupe et de ses dépendances, comme l'Anolis de Marie-Galante [*Ctenonotus ferreus*](https://inpn.mnhn.fr/espece/cd_nom/654829). Chaque île, voire presque chaque îlet des Antilles, possède une population d’anolis qui se différencie par ses couleurs et sa morphologie. Ils sont tous protégés.  \n  \nStatut dans la Liste rouge mondiale pour *Ctenonotus ferreus* : non évalué.	\N	\N	\N	f
 28777	1001	TEXT	events.6.description	La Guadeloupe obtient le label «&nbsp;Réserve de Biosphère&nbsp;» de l’UNESCO	\N	\N	\N	f
 28778	1001	TEXT	events.6.date	1993	\N	\N	\N	f
 28779	1001	TEXT	ecosystems.ecosystems.0.name	La forêt d’altitude	\N	\N	\N	f
-30364	1020	TEXT	events.6.description	Création du Parc marin de la mer de Corail ; Inscription des lacs du Grand Sud sur la liste des sites Ramsar	\N	\N	\N	f
+30609	1016	TEXT	science.project.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
 25270	1010	IMAGE	presentation.image	\N	1041	Albatros hurleur © Julie Tucoulet	\N	f
 25271	1010	TEXT	understand.paragraphs.1.title	Quelles menaces pèsent sur les espèces ?	\N	\N	\N	f
 28036	1021	IMAGE	ecosystems.ecosystems.2.image	\N	1195	Image manquante	\N	f
@@ -1083,63 +1068,65 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28044	1021	IMAGE	species.4.image	\N	1300	Pétrel de Barau © Jean-Philippe Siblet	\N	f
 28045	1021	IMAGE	species.7.image	\N	1193	Image manquante	\N	f
 28046	1021	TEXT	species.5.name	Les Fanjan	\N	\N	\N	f
-30365	1020	TEXT	species.13.description	Ces dernières décennies, la prospection biologique des milieux profonds notamment des monts sous-marins a permis la découverte de fossiles vivants. Parmi eux, un crinoïde ([*Neogymnochrinus richeri*](https://inpn.mnhn.fr/espece/cd_nom/647041)), de la famille des Sclerocrinidae,  datant du jurassique et supposée éteinte. Il a été retrouvé à la fin des années 80 sur la ride de Norflok.  \n  \nStatut dans la Liste rouge mondiale : non évalué. \n\n\n	\N	\N	\N	f
-30366	1020	TEXT	species.15.description	Plus gros pigeon arboricole du monde, le notou ([*Ducula goliath*](https://www.endemia.nc/faune/fiche71)) présente un plumage bleu gris, avec une pointe de pourpre sur les ailes, et ses yeux sont rouge vif. Il vit dans les forêts humides de la Grande Terre et contribue à sa régénération par dissémination des graines dont il se nourrit. Difficile à observer, il se repère toutefois facilement à son chant particulier, grave et sourd.  \n\nStatut dans la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
-30367	1020	TEXT	events.6.date	2014	\N	\N	\N	f
-30368	1020	TEXT	events.4.description	Publication des Codes de l'environnement des Provinces Sud et Nord	\N	\N	\N	f
-30369	1020	TEXT	events.5.description	Création du [Conservatoire d'espaces naturels](https://www.cen.nc/especes-envahissantes/presentation)	\N	\N	\N	f
-30370	1020	TEXT	interests.locations.2.name	La région des lacs du Grand Sud	\N	\N	\N	f
-30371	1020	TEXT	ecosystems.ecosystems.3.description	Aussi dit « sclérophylle », ce type de forêt n’est plus présent que sur environ 175 km<sup>2</sup>, soit moins de 1 % du territoire et moins de 2 % de sa surface estimée d’origine. Localisées sur le littoral de la côte ouest, ces forêts sont très vulnérables, notamment aux aménagements agropastoraux, aux incendies et aux espèces exotiques envahissantes. Elles abritent une biodiversité élevée avec un taux d'endémisme de 60 %.   \nUn [programme de conservation](https://www.cen.nc/foret-seche/presentation) des forêts sèches, initié en 2001, est aujourd'hui coordonné par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. 	\N	\N	\N	f
-30372	1020	TEXT	ecosystems.ecosystems.4.description	Forêt de bord de mer aux pieds dans l’eau, cette formation arborescente adaptée aux conditions de salinité des eaux, au manque d'oxygène et à l'instabilité des sols, est majoritairement située sur la côte ouest du fait de vastes plaines propices à son installation. Elle couvre 258 km<sup>2</sup> sur l'ensemble de l'archipel.  \n\nProtection contre l’érosion, les tempêtes, la sédimentation dans le lagon, zone de nurserie pour de nombreux organismes, épuration de l’eau : les services rendus par cet écosystème sont nombreux et précieux.	\N	\N	\N	f
-30373	1020	TEXT	ecosystems.ecosystems.4.name	La mangrove	\N	\N	\N	f
-30374	1020	IMAGE	species.14.image	\N	1328	Nautile © Claude Payri	\N	f
-30375	1020	IMAGE	species.1.image	\N	1317	*Rhynochetos jubatus* © Olivier Gargominy / INPN	\N	f
-30376	1020	TEXT	species.10.description	Sur les quatre espèces de roussettes (chauves-souris frugivores et nectarivores) présentes en Nouvelle-Calédonie, trois en sont endémiques. La Roussette rousse ([*Pteropus ornatus*](https://www.endemia.nc/faune/fiche1328) et celle du Pacifique ([*P. tonganus*](https://www.endemia.nc/faune/fiche1329)) sont également des espèces-gibiers très prisées, dont la chasse est réglementée. Elles constituent aussi les proies des chats harets. \nLe déclin actuel de ces espèces emblématiques pourrait également engendrer la perte des aspects culturels et des services écosystémiques associés, comme la dissémination des graines et la pollinisation. \n  \nStatuts dans la Liste rouge mondiale\n*Pteropus ornatus* (endémique) : vulnérable\n*Pteropus tonganus* : préoccupation mineure\n*Pteropus vetulus* (endémique): quasi-menacé\n*Notopteris neocaledonica* (endémique) : en danger	\N	\N	\N	f
-30377	1020	TEXT	events.5.date	2011	\N	\N	\N	f
-30378	1020	TEXT	identity.marineArea	1,4 million	\N	\N	\N	f
-30379	1020	TEXT	species.9.name	*Syzygium acre*	\N	\N	\N	f
-30380	1020	TEXT	events.8.date	2016-2019	\N	\N	\N	f
-30381	1020	IMAGE	interests.locations.0.image	\N	1089	Parc naturel de la Mer de Corail © Anne Littaye / OFB	\N	f
-30382	1020	TEXT	species.6.name	Le Gecko géant	\N	\N	\N	f
-30383	1020	IMAGE	interests.locations.3.image	\N	1315	Réserve du Mont Panié © Christine Fort	\N	f
-30384	1020	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
-30385	1020	TEXT	species.14.name	Les Nautiles	\N	\N	\N	f
-30386	1020	TEXT	interests.locations.3.name	La réserve de nature sauvage du Mont Panié	\N	\N	\N	f
-30387	1020	TEXT	species.15.name	Le notou	\N	\N	\N	f
-30388	1020	TEXT	statistics.1.text	Plus grande barrière de corail au monde (1 600 km)	\N	\N	\N	f
-30389	1020	TEXT	events.9.date	2019	\N	\N	\N	f
-30390	1020	IMAGE	species.4.image	\N	1198	Image manquante	\N	f
-30391	1020	IMAGE	species.12.image	\N	1245	Image manquante	\N	f
-30392	1020	TEXT	events.3.date	2008	\N	\N	\N	f
-30393	1020	IMAGE	ecosystems.ecosystems.3.image	\N	1330	Forêt sèche © CEN Nouvelle-Calédonie	\N	f
-30394	1020	IMAGE	species.3.image	\N	1239	*Laticauda sp.* © Hélène Udo	\N	f
-30395	1020	TEXT	species.1.name	Le Cagou	\N	\N	\N	f
-30396	1020	TEXT	species.7.name	La Sterne néreis	\N	\N	\N	f
-30397	1020	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
-30398	1020	TEXT	species.4.name	*Amborella trichopoda*	\N	\N	\N	f
-30399	1020	TEXT	identity.area	16 624	\N	\N	\N	f
-30400	1020	TEXT	species.0.description	[*Sphaeropteris intermedia*](https://www.endemia.nc/flore/fiche106) est une espèce de fougère arborescente endémique parmi les plus grandes au monde, qui peut atteindre 35 mètres de haut. Commune sur le territoire, cette plante est utilisée en médecine traditionnelle et son tronc très solide est également utilisé pour la sculpture ou la confection de sagaies.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure.  \nNom en langues kanak : Groubaï (drubéa)\n	\N	\N	\N	f
-30401	1020	TEXT	identity.highestPointName	Mont Panié	\N	\N	\N	f
-30402	1020	TEXT	ecosystems.ecosystems.2.name	Les maquis miniers	\N	\N	\N	f
+30610	1016	TEXT	header.title	Agir ensemble pour préserver la biodiversité remarquable des outre-mer	\N	\N	\N	f
+30611	1016	CHECKBOX	header.shadowed	false	\N	\N	\N	f
+30612	1016	IMAGE	science.project.image	\N	1282	Image manquante	\N	f
+30613	1016	TEXT	science.title	Les sciences participatives	\N	\N	\N	f
+30614	1016	TEXT	science.project.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré. Le projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. 	\N	\N	\N	f
+30615	1016	TEXT	science.subtitle	Les sciences participatives permettent à tous les curieux de la nature, du débutant à l’expérimenté, de contribuer à l'amélioration des connaissances sur la biodiversité en fournissant aux scientifiques un grand nombre de données de terrain.	\N	\N	\N	f
+30616	1016	TEXT	ecogestures.title	Découvrez les écogestes	\N	\N	\N	f
+30617	1016	IMAGE	header.background	\N	1335	Agricultrices, Mayotte © Bertrand Fanonnel	\N	f
+30618	1016	TEXT	header.subtitle	Réfléchir à son impact, changer ses habitudes, participer à la progression des connaissances sur les espèces et les espaces, donner de son temps dans des actions de terrain : chacun, à son échelle, peut agir et s’investir pour la préservation de la biodiversité de son territoire.	\N	\N	\N	f
+30619	1016	TEXT	ecogestures.subtitle	Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.	\N	\N	\N	f
+31186	1020	TEXT	ecosystems.ecosystems.3.description	Aussi dit « sclérophylle », ce type de forêt n’est plus présent que sur environ 175 km<sup>2</sup>, soit moins de 1 % du territoire et moins de 2 % de sa surface estimée d’origine. Localisées sur le littoral de la côte ouest, ces forêts sont très vulnérables, notamment aux aménagements agropastoraux, aux incendies et aux espèces exotiques envahissantes. Elles abritent une biodiversité élevée avec un taux d'endémisme de 60 %.   \nUn [programme de conservation](https://www.cen.nc/foret-seche/presentation) des forêts sèches, initié en 2001, est aujourd'hui coordonné par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. 	\N	\N	\N	f
+31187	1020	TEXT	ecosystems.ecosystems.4.description	Forêt de bord de mer aux pieds dans l’eau, cette formation arborescente adaptée aux conditions de salinité des eaux, au manque d'oxygène et à l'instabilité des sols, est majoritairement située sur la côte ouest du fait de vastes plaines propices à son installation. Elle couvre 258 km<sup>2</sup> sur l'ensemble de l'archipel.  \n\nProtection contre l’érosion, les tempêtes, la sédimentation dans le lagon, zone de nurserie pour de nombreux organismes, épuration de l’eau : les services rendus par cet écosystème sont nombreux et précieux.	\N	\N	\N	f
+31188	1020	TEXT	ecosystems.ecosystems.4.name	La mangrove	\N	\N	\N	f
+31189	1020	TEXT	ecosystems.ecosystems.5.description	Exposées aux activités humaines et vulnérables, ces prairies sous-marines occupent près de 940 km² de zones côtières peu profondes. On y compte 11 espèces de phanérogames marines parmi les 70 connues au niveau mondial. \nHabitat et source de nourriture pour de nombreuses espèces (dugong, tortues…), ces herbiers revêtent également une importance socio-économique en abritant diverses espèces pêchées, telles que les holothuries. En outre, elles protègent le littoral en fixant les sédiments et joueraient un rôle important dans la régulation du climat (stockage de carbone). \n	\N	\N	\N	f
+31190	1020	TEXT	ecosystems.ecosystems.7.name	Les fonds de baie envasées	\N	\N	\N	f
+31191	1020	TEXT	ecosystems.ecosystems.7.description	Le long du littoral de la Grande Terre se trouvent des baies protégées, aux fonds constitués de sédiments fins, souvent vaseux. Certains sont chargés en terre rouge provenant des sols naturellement délavés, d'autres ont une charge terrigène accrue par les activités humaines. \nUne communauté de coraux spéciale vit dans ces habitats singuliers, comme l’espèce endémique, *Cantharellus noumeae* ou *Acropora tortuosa*, produisant du mucus qui piège les sédiments ou encore *Catalaphyllia jardinei*, qui étale ses polypes mous et colorés.\n	\N	\N	\N	f
+31192	1020	IMAGE	species.14.image	\N	1328	Nautile © Claude Payri	\N	f
+31193	1020	TEXT	ecosystems.ecosystems.6.description	Forêts sous-marines, ces formations d’algues brunes où dominent les sargasses colonisent les dalles rocheuses du fond des lagons et forment une canopée d’une hauteur de plus d’un mètre sous la surface de l’eau. \nVéritables oasis, ces algueraies jouent un rôle essentiel pour le cycle biologique de différentes espèces animales, de micro et macroalgues. \nEncore mal connues, ces zones de transition écologique entre les zones littorales et récifales représentent un enjeu important pour le fonctionnement des récifs et lagons.\n	\N	\N	\N	f
+31194	1020	IMAGE	ecosystems.ecosystems.5.image	\N	1336	Claude Payri	\N	f
+31195	1020	IMAGE	species.1.image	\N	1317	*Rhynochetos jubatus* © Olivier Gargominy / INPN	\N	f
+31196	1020	TEXT	species.10.description	Sur les quatre espèces de roussettes (chauves-souris frugivores et nectarivores) présentes en Nouvelle-Calédonie, trois en sont endémiques. La Roussette rousse ([*Pteropus ornatus*](https://www.endemia.nc/faune/fiche1328) et celle du Pacifique ([*P. tonganus*](https://www.endemia.nc/faune/fiche1329)) sont également des espèces-gibiers très prisées, dont la chasse est réglementée. Elles constituent aussi les proies des chats harets. \nLe déclin actuel de ces espèces emblématiques pourrait également engendrer la perte des aspects culturels et des services écosystémiques associés, comme la dissémination des graines et la pollinisation. \n  \nStatuts dans la Liste rouge mondiale\n*Pteropus ornatus* (endémique) : vulnérable\n*Pteropus tonganus* : préoccupation mineure\n*Pteropus vetulus* (endémique): quasi-menacé\n*Notopteris neocaledonica* (endémique) : en danger	\N	\N	\N	f
+31197	1020	TEXT	events.5.date	2011	\N	\N	\N	f
+31198	1020	TEXT	identity.marineArea	1,4 million	\N	\N	\N	f
+31199	1020	TEXT	species.9.name	*Syzygium acre*	\N	\N	\N	f
+31200	1020	TEXT	events.8.date	2016-2019	\N	\N	\N	f
+31201	1020	IMAGE	interests.locations.0.image	\N	1089	Parc naturel de la Mer de Corail © Anne Littaye / OFB	\N	f
+31202	1020	TEXT	species.6.name	Le Gecko géant	\N	\N	\N	f
+31203	1020	IMAGE	interests.locations.3.image	\N	1315	Réserve du Mont Panié © Christine Fort	\N	f
+31204	1020	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
+31205	1020	TEXT	species.14.name	Les Nautiles	\N	\N	\N	f
+31206	1020	TEXT	interests.locations.3.name	La réserve de nature sauvage du Mont Panié	\N	\N	\N	f
+31207	1020	TEXT	species.15.name	Le notou	\N	\N	\N	f
+31208	1020	TEXT	statistics.1.text	Plus grande barrière de corail au monde (1 600 km)	\N	\N	\N	f
 28047	1021	TEXT	risks.risks.0.description	Située au sein de l'un des 34 hauts lieux de la biodiversité mondiale (*"hotspot"*), l'environnement de l'île de la Réunion est exceptionnel. \nLa principale menace pour la biodiversité de l'île est la pression démographique, l’augmentation de la population entrainant le développement d’infrastructures et aménagements. La quasi-totalité des forêts de basse-altitude a déjà disparu et le littoral est particulièrement menacé par l’urbanisation, la pollution et la surfréquentation. La fréquence de ponte de tortues marines sur les plages de La Réunion est très faible et ces espèces sont également menacées par la pêche accidentelle et le braconnage. Hormis dans la [Réserve naturelle marine](http://www.reservemarinereunion.fr/), il n’existe aucun dispositif de protection ou de gestion des ressources dans la zone économique exclusive.  \n\nLes espèces exotiques envahissantes sont également une menace majeure. De nombreuses espèces végétales envahissent les milieux naturels, et les monocultures de Cryptomeria du Japon (*Cryptomeria japonica*) offrent des milieux favorables à l’envahissement par d’autres plantes exotiques. La lutte contre les rats et les chats harets est également un enjeu majeur de la conservation des oiseaux endémiques. Une [stratégie de lutte contre les espèces invasives](https://www.especesinvasives.re/strategie-de-lutte/la-strategie-reunionnaise/) est mise en place depuis 2010. Depuis le 1<sup>e</sup> avril 2019, un arrêté ministériel interdit tout usage d’une [liste de 150 plantes exotiques](http://www.reunion.developpement-durable.gouv.fr/IMG/pdf/0_defi_eee-outre-mer-la_reunion-web-br.pdf).  \n\nLa création du Parc national en 2007 et l'inscription au Patrimoine mondial de l'UNESCO en 2010 ont permis de renforcer la protection du patrimoine naturel de La Réunion. La mise en place d'une [Stratégie réunionnaise pour la biodiversité](http://www.reunion.developpement-durable.gouv.fr/IMG/pdf/SRB-2013-2020_cle093a71.pdf) depuis 2013 doit permettre d'intégrer la protection de la biodiversité dans les politiques publiques du territoire. De nombreux programmes de conservations ont été mis en place pour protéger les espèces patrimoniales (Plans nationaux d'actions, programmes LIFE+, etc.). \n	\N	\N	\N	f
 28048	1021	TEXT	events.3.date	1976	\N	\N	\N	f
-30403	1020	TEXT	species.7.description	Ce petit oiseau marin présente un dos gris, un ventre blanc, une tête pourvue d'une calotte noire et un bec droit et pointu. Une sous-espèce de la Sterne néreis, ([*Sternula nereis exul*](https://www.endemia.nc/faune/fiche52)) niche sur les îlots de Nouvelle-Calédonie, notamment dans le Lagon Sud, vers Koumac et aux îles Chesterfield. Cette sous-espèce est très menacée localement du fait de ses faibles effectifs de populations.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
-30404	1020	TEXT	species.8.description	Le Niaouli ([*Melaleuca quinquenervia*](https://www.endemia.nc/flore/fiche445)), est un arbre utilisé en médecine et pour la construction, que l’on retrouve dans les milieux ouverts et anthropisés. Il se développe particulièrement bien dans les zones touchées par les incendies en raison de ses propriétés ignifuges. Indigène en Nouvelle-Calédonie, cette espèce a été introduite dans d’autres territoires comme la Guyane où elle présente un profil envahissant.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure.  \nNoms en langues kanak : itachou (paicî), pichöö (xârâcùù), bé (drubéa)	\N	\N	\N	f
-30405	1020	IMAGE	species.13.image	\N	1325	*Neogymnochrinus richeri* © Pierre Lozouet / IRD	\N	f
-30406	1020	IMAGE	species.2.image	\N	1240	*Dugong dugong* © Hélène Udo	\N	f
-30407	1020	TEXT	species.11.name	La Baleine à bosses	\N	\N	\N	f
-30408	1020	IMAGE	ecosystems.ecosystems.4.image	\N	1206	Image manquante	\N	f
-30409	1020	TEXT	species.3.description	Sur les huit espèces de Tricots rayés ([*Laticauda sp.*](https://www.endemia.nc/faune/fiche1104)) connues au niveau mondial, deux sont présentes en Nouvelle-Calédonie dont une endémique. Largement répandues sur le territoire, ces serpents marins se nourrissent dans l’eau mais reviennent sur terre pour se reposer, digérer et pondre. Bien que porteurs d'un venin mortel, ils ne sont pas agressifs et au contraire plutôt craintifs. De fait, les morsures sont très rares.\n\nStatut dans la Liste rouge mondiale pour les deux espèces présentes en Nouvelle-Calédonie : préoccupation mineure. 	\N	\N	\N	f
-30410	1020	TEXT	species.1.description	Emblème de la Nouvelle-Calédonie, le Cagou ([*Rhynochetos jubatus*](https://www.endemia.nc/faune/fiche144)), est un oiseau endémique qui ne vole pas mais court très vite, et dont le cri ressemble à l’aboiement d’un chien. Il vit dans les forêts humides de moyenne et haute altitude. Cette espèce est intégralement protégée.\n\nStatut dans la Liste rouge mondiale : en danger.	\N	\N	\N	f
-30411	1020	TEXT	species.2.description	Le Dugong ([*Dugong dugong*](https://www.endemia.nc/faune/fiche5263)), aussi appelé « vache marine » est un mammifère marin herbivore qui passe la majeure partie de son temps à brouter les herbiers marins. Longtemps chassé et braconné, il est également vulnérable face à la dégradation des habitats marins et aux activités humaines. La population néo-calédonienne de dugongs est estimée à environ 700 individus. Un [plan d'action pour sa conservation](https://www.cen.nc/plan-actions-dugong) a été mis en place en 2010. Il est animé depuis 2017 par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. \n\nStatut dans la Liste rouge mondiale : vulnérable. 	\N	\N	\N	f
+31209	1020	TEXT	events.9.date	2019	\N	\N	\N	f
+31210	1020	IMAGE	species.4.image	\N	1331	*Amborella trichopoda* © Vanessa Hequet	\N	f
+31211	1020	IMAGE	species.12.image	\N	1332	Tortue ? © Bwara	\N	f
+31212	1020	TEXT	events.3.date	2008	\N	\N	\N	f
+31213	1020	IMAGE	ecosystems.ecosystems.3.image	\N	1330	Forêt sèche © CEN Nouvelle-Calédonie	\N	f
+31214	1020	IMAGE	species.3.image	\N	1239	*Laticauda sp.* © Hélène Udo	\N	f
+31215	1020	TEXT	species.1.name	Le Cagou	\N	\N	\N	f
+31216	1020	TEXT	species.7.name	La Sterne néreis	\N	\N	\N	f
+31217	1020	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
+31218	1020	TEXT	species.16.description	Le Corbeau calédonien ([*Corvus moneduloides*](https://www.endemia.nc/faune/fiche159)) est un oiseau commun, endémique, familier des forêts mais fréquentant également les milieux plus ouverts. Il est surtout réputé pour son intelligence, puisqu’il est capable de fabriquer et d’utiliser des outils, notamment pour attraper ses proies dans la cavité des arbres.  \n\nStatut dans la Liste rouge mondiale : préoccupation mineure. \n	\N	\N	\N	f
+31219	1020	TEXT	species.4.name	*Amborella trichopoda*	\N	\N	\N	f
+31220	1020	TEXT	identity.area	16 624	\N	\N	\N	f
+31221	1020	TEXT	species.0.description	[*Sphaeropteris intermedia*](https://www.endemia.nc/flore/fiche106) est une espèce de fougère arborescente endémique parmi les plus grandes au monde, qui peut atteindre 35 mètres de haut. Commune sur le territoire, cette plante est utilisée en médecine traditionnelle et son tronc très solide est également utilisé pour la sculpture ou la confection de sagaies.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure.  \nNom en langues kanak : Groubaï (drubéa)\n	\N	\N	\N	f
+31222	1020	TEXT	identity.highestPointName	Mont Panié	\N	\N	\N	f
+31223	1020	TEXT	ecosystems.ecosystems.2.name	Les maquis miniers	\N	\N	\N	f
+31224	1020	TEXT	ecosystems.ecosystems.5.name	Les herbiers de phanérogames marines	\N	\N	\N	f
 27670	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
-30412	1020	TEXT	species.9.description	[*Syzygium acre*](https://www.endemia.nc/flore/fiche1027) est un arbre cauliflore principalement observé dans le sud de la Grande Terre. Ses feuilles de très grande taille – parfois plus d’un mètre de long – sont rouge à mauve lorsqu’elles sont juvéniles. Sa floraison est caractéristique : les fleurs, d’une coloration rouge à rose, se trouvent par petits groupes le long du tronc.\n\nStatut dans la Liste rouge mondiale : en danger. 	\N	\N	\N	f
-30413	1020	TEXT	statistics.1.number	2e	\N	\N	\N	f
-30414	1020	TEXT	species.12.name	Les Tortues marines	\N	\N	\N	f
-30415	1020	TEXT	statistics.0.number	76%	\N	\N	\N	f
-30416	1020	TEXT	statistics.2.number	plus de 400 	\N	\N	\N	f
-30417	1020	IMAGE	interests.locations.4.image	\N	1316	Parc provincial de la Côte oubliée © Martial Dosdane	\N	f
-30418	1020	TEXT	species.2.name	Le Dugong	\N	\N	\N	f
+31225	1020	TEXT	species.7.description	Ce petit oiseau marin présente un dos gris, un ventre blanc, une tête pourvue d'une calotte noire et un bec droit et pointu. Une sous-espèce de la Sterne néreis, ([*Sternula nereis exul*](https://www.endemia.nc/faune/fiche52)) niche sur les îlots de Nouvelle-Calédonie, notamment dans le Lagon Sud, vers Koumac et aux îles Chesterfield. Cette sous-espèce est très menacée localement du fait de ses faibles effectifs de populations.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
+31226	1020	TEXT	species.8.description	Le Niaouli ([*Melaleuca quinquenervia*](https://www.endemia.nc/flore/fiche445)), est un arbre utilisé en médecine et pour la construction, que l’on retrouve dans les milieux ouverts et anthropisés. Il se développe particulièrement bien dans les zones touchées par les incendies en raison de ses propriétés ignifuges. Indigène en Nouvelle-Calédonie, cette espèce a été introduite dans d’autres territoires comme la Guyane où elle présente un profil envahissant.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure.  \nNoms en langues kanak : itachou (paicî), pichöö (xârâcùù), bé (drubéa)	\N	\N	\N	f
+31227	1020	IMAGE	species.13.image	\N	1325	*Neogymnochrinus richeri* © Pierre Lozouet / IRD	\N	f
+31228	1020	IMAGE	species.2.image	\N	1240	*Dugong dugong* © Hélène Udo	\N	f
+31229	1020	TEXT	species.11.name	La Baleine à bosses	\N	\N	\N	f
+31230	1020	IMAGE	ecosystems.ecosystems.4.image	\N	1339	 Mangrove © Christine Fort	\N	f
+31231	1020	TEXT	species.3.description	Sur les huit espèces de Tricots rayés ([*Laticauda sp.*](https://www.endemia.nc/faune/fiche1104)) connues au niveau mondial, deux sont présentes en Nouvelle-Calédonie dont une endémique. Largement répandues sur le territoire, ces serpents marins se nourrissent dans l’eau mais reviennent sur terre pour se reposer, digérer et pondre. Bien que porteurs d'un venin mortel, ils ne sont pas agressifs et au contraire plutôt craintifs. De fait, les morsures sont très rares.\n\nStatut dans la Liste rouge mondiale pour les deux espèces présentes en Nouvelle-Calédonie : préoccupation mineure. 	\N	\N	\N	f
 28049	1021	TEXT	ecosystems.ecosystems.2.description	Malgré leur faible étendue (12 km<sup>2</sup>, entre le Cap La Houssaye et Grand Bois), les récifs coralliens de La Réunion sont très riches et diversifiés. On y compte au moins 226 espèces de coraux, ainsi que plusieurs centaines d’espèces d’échinodermes, mollusques, crustacés et poissons, dont de nombreuses espèces endémiques. La plus grande partie de ces récifs sont protégés sous le statut de la [Réserve naturelle marine](http://www.reservemarinereunion.fr/).	\N	\N	\N	f
 28050	1021	IMAGE	ecosystems.ecosystems.3.image	\N	1196	Image manquante	\N	f
 28051	1021	IMAGE	species.3.image	\N	1306	*Mormopterus francoismoutoui* © Gildas Monnier / GCOI	\N	f
@@ -1154,14 +1141,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28060	1021	TEXT	risks.risks.0.name	Une pression démographique importante	\N	\N	\N	f
 28061	1021	IMAGE	interests.locations.1.image	\N	1156	Vue sur le cirque de Mafate © Céline Soyer	\N	f
 28062	1021	IMAGE	ecosystems.ecosystems.1.image	\N	1100	© Philippe Gourdain	\N	f
-30419	1020	TEXT	risks.risks.1.name	Une règlementation environnementale plurielle	\N	\N	\N	f
-30420	1020	TEXT	species.4.description	Arbuste des forêts humides,[*Amborella trichopoda*](https://www.endemia.nc/flore/fiche254) est considéré comme la plus ancienne des plantes à fleurs, d'où son surnom de « mère de toutes les fleurs ». Cette plante présente le même aspect qu’à son origine, évaluée à 135 millions d’années avant notre ère. Elle est endémique de Nouvelle-Calédonie.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure. 	\N	\N	\N	f
-30421	1020	TEXT	ecosystems.ecosystems.0.name	Les forêts denses humides	\N	\N	\N	f
+31232	1020	TEXT	species.1.description	Emblème de la Nouvelle-Calédonie, le Cagou ([*Rhynochetos jubatus*](https://www.endemia.nc/faune/fiche144)), est un oiseau endémique qui ne vole pas mais court très vite, et dont le cri ressemble à l’aboiement d’un chien. Il vit dans les forêts humides de moyenne et haute altitude. Cette espèce est intégralement protégée.\n\nStatut dans la Liste rouge mondiale : en danger.	\N	\N	\N	f
 21455	1009	TEXT	understand.text1	Dispersés au sein de trois océans, les territoires d’outre-mer français sont répartis de la zone équatoriale à la zone polaire. Cette diversité de situations géographiques est à l’origine de la très grande diversité biologique trouvées au sein de ces collectivités. De plus, le caractère insulaire de la plupart des territoires (la Guyane excepté) explique le très haut taux d'[endémisme](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-endemiques) de la faune et de la flore. \n\nAinsi, la plupart des territoires ultramarins français sont situés dans des zones du globe mondialement reconnues comme étant particulièrement riches en espèces, appelées "points chauds" (*hotspots*). Le milieu marin d'outre-mer couvre également une superficie gigantesque : il représente plus de 3 % des mers et océans du monde, et compte 55 000 km<sup>2</sup> de récifs coralliens et lagons. \n\n\n	\N	\N	\N	f
 21456	1009	TEXT	territories.title	Nombre d'espèces indigènes	\N	\N	\N	f
 21457	1009	TEXT	understand.title1	Un patrimoine biologique exceptionnel en outre-mer	\N	\N	\N	f
-30422	1020	TEXT	species.5.description	Les Kaoris, sont des arbres de grande taille, dont le tronc peut atteindre un diamètre impressionnant. On peut ainsi observer un spécimen au tronc de 2,70 m de diamètre dans le parc de la Rivière Bleu.  \nLa répartition du Kaori du mont Panié ([*Agathis montana*](https://www.endemia.nc/flore/fiche55)) est restreinte à la forêt de nuage du massif du même nom, tandis que le Kaori de forêt ([*Agathis lanceolata*](https://www.endemia.nc/flore/fiche57)) s'observe du sud de la Grande Terre jusqu'à Poya, voir Touho en Province Nord. Une troisième espèce ([*Agathis ovata*])(https://www.endemia.nc/flore/fiche56) est cantonnée à la moitié Sud de la Grande Terre. \n\nStatut dans la Liste rouge mondiale pour *Agathis montana* : en danger critique ; pour *Agathis lanceolata* : vulnérable.  \nNoms en langues kanak : Kaori du Mt Panié : Dayu Biik (nemi) ; Kaori de forêt : mugé (xârâcùù)	\N	\N	\N	f
 25873	1022	TEXT	risks.risks.0.description	Les menaces pesant sur la biodiversité de Saint-Pierre-et-Miquelon sont nombreuses. Comme tous les territoires d’outre-mer, l’archipel subit la présence d’espèces exotiques envahissantes terrestres : le puceron lanigère (*Adelges piceae*), la Renouée du Japon (*Reynoutria japonica*) et le Séneçon Jacobée (*Jacobaea vulgaris*) sont les plus impactant.  \nLa forêt boréale, sous la pression combinée des herbivores introduits, des pathogènes et du réchauffement climatique, perd en moyenne une vingtaine d'hectares par an, et son état de conservation n'est guère rassurant. \n\nAu niveau marin, depuis l’effondrement des populations de morue des bancs de Terre-Neuve par la surpêche dans les années 70 à 90, la pression de la pêche a diminué, cependant la pêche au filet du Saumon Atlantique capture accidentellement de nombreux oiseaux, tortues et mammifères marins. Les espèces exotiques marines sont également une préoccupation, en particulier les populations de Crabe vert (*Carcinus maenas*), en augmentation.\n\nLa chasse est une question délicate sur l'archipel. Concernant les mammifères introduits, elle permet d'un côté leur régulation, mais de l'autre elle justifie également leur maintien. Quant à la chasse aux oiseaux migrateurs, elle peut freiner l'implantation de colonies nicheuses comme celles de l’Eider à duvet (*Somateria mollisima*).\n\nLe territoire est pour le moment le seul d’outre-mer français à ne disposer d’aucun dispositif de protection réglementaire (hormis les réserves de chasse et de faune sauvage). Après l'abandon d'un premier projet de Réserve naturelle du Grand Barachois au début des années 90, un projet de création de Réserve naturelle sur le Grand et le Petit Colombier a été lancé en 2007. Plaçant sous protection une surface terrestre de 47 ha et une zone maritime de 420 ha, il permettrait de préserver ce site de nidification remarquable. Malgré un avis favorable du Conseil national de protection de la nature, ce projet a été mal perçu par les populations locales qui craignaient des contraintes sur leurs activités traditionnelles, c’est pourquoi le projet est gelé pour le moment.\n\nSur l’archipel, 40 Zones naturelles d'intérêt écologique, faunistique et floristique (ZNIEFF), abritant au moins une espèce ou un habitat naturel remarquable ou rare, ont été délimitées. Cela couvre 89 % du territoire terrestre et traduit la richesse et la valeur écologique des écosystèmes de ces îles, toutefois ce statut n'engendre pas de protection juridique. Actuellement, seules des espèces de chauves-souris, de mammifères marins, d’oiseaux et de tortues marines bénéficient d’une protection réglementaire.\n	\N	\N	\N	f
+31233	1020	TEXT	species.2.description	Le Dugong ([*Dugong dugong*](https://www.endemia.nc/faune/fiche5263)), aussi appelé « vache marine » est un mammifère marin herbivore qui passe la majeure partie de son temps à brouter les herbiers marins. Longtemps chassé et braconné, il est également vulnérable face à la dégradation des habitats marins et aux activités humaines. La population néo-calédonienne de dugongs est estimée à environ 700 individus. Un [plan d'action pour sa conservation](https://www.cen.nc/plan-actions-dugong) a été mis en place en 2010. Il est animé depuis 2017 par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. \n\nStatut dans la Liste rouge mondiale : vulnérable. 	\N	\N	\N	f
 14284	1030	TEXT	paragraphs.0.title	Conception et édition	\N	\N	\N	f
 14285	1030	TEXT	paragraphs.1.text	**Informations contenues dans le site**\nLe portail Compteur de biodiversité outre-mer est un site informatif. \nIl a pour objectif de présenter la biodiversité des territoires ultra-marins français et des actions et initiatives menées pour la protection de ces écosystèmes.\nAucune information contenue sur le site ne saurait posséder ou être interprétée comme ayant une quelconque valeur contractuelle. Les textes à caractère scientifique publiés dans le site sont valables à la date de leur publication et ne sauraient engager leurs auteurs dans le futur.\nToute information contenue sur le site peut être modifiée, à tout moment sans préavis, par le Muséum national d’histoire naturelle. Les informations contenues sur le site ne constituent pas une offre de services ou de produits ni une sollicitation commerciale de quelque nature que ce soit, ni une recommandation ou un conseil. Le Muséum national d’histoire naturelle ne sera pas tenu responsable pour toute décision prise ou non sur la base d’une information contenue sur le site, ni pour l’utilisation qui pourrait en être faite par un tiers. Ces informations ne sauraient engager la responsabilité du Muséum national d’histoire naturelle.\n\n**Propriété intellectuelle**\nL’ensemble du site « Compteur de biodiversité outre-mer » relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle.\nTous les éléments présentés sur ce site (textes, photographies, vidéos, créations graphiques, illustrations) sont soumis à la législation relative au droit des informations publiques et sont couverts par le droit d'auteur. Ces éléments restent la propriété exclusive du Muséum national d’Histoire naturelle et/ou de ses auteurs.\nLa reproduction de tout ou partie de ce site sur un support électronique quel qu’il soit est formellement interdite sauf autorisation expresse du directeur de la publication. La reproduction de ce site sur un support papier est autorisée pour des fins personnelles, associatives ou professionnelles et sous réserve du respect des trois conditions suivantes :\n• gratuité de la diffusion ;\n• respect de l’intégrité des documents reproduits : pas de modification ni altération d’aucune sorte ;\n• citation claire et lisible de la source indiquant le nom "Muséum national d’Histoire naturelle", l’adresse internet du site web du MNHN : www.mnhn.fr et la mention : "© sur www.mnhn.fr - Reproduction interdite – Tous droits réservés".\nToutes diffusions ou utilisations à des fins commerciales ou publicitaires des informations sont strictement interdites. Pour d’autres utilisations envisagées, veuillez nous consulter.\n\n**Crédits photographiques**\nToutes les photographies présentes sur le site sont créditées de leurs auteurs et de la licence associée à leur utilisation si elle est mentionnée.\nLes contenus sous licence Creative Commons ont une mention spécifique avec le type de licence qui permet à l’utilisateur d’aller consulter les conditions d’utilisation de l’image concernée. \nExemple :\n(CC BY-NC-SA 3.0)	\N	\N	\N	f
 21458	1009	TEXT	understand.paragraphs.1.text	Sur les quelques centaines d’espèces de mammifères indigènes recensés, la plupart des espèces terrestres se trouvent en Guyane. On y rencontre par exemple le jaguar, le paresseux à deux doigts et plusieurs espèces de primates. Très peu de mammifères terrestres sont naturellement présents sur les îles et il s’agit quasiment uniquement de chauves-souris. Les autres mammifères recensés sont des espèces marines comme les baleines, les dauphins et les phoques.\n\nDe nombreuses espèces de mammifères ont été introduites par l’homme sur les îles et sont devenues [envahissantes](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-exotiques-envahissantes) : chats, rats, souris, lapins, cerfs, chiens, chèvres… Ces introductions sont à l'origine de grandes perturbations pour les écosystème fragiles de ces territoires, et de l'extinction de nombreuses espèces. 	\N	\N	\N	f
@@ -1190,16 +1175,18 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 25883	1022	TEXT	identity.title	Saint-Pierre-et-Miquelon,  \ndes terres et des eaux riches en biodiversité	\N	\N	\N	f
 25884	1022	IMAGE	species.6.image	\N	1285	*Linnaea borealis* © Serge Muller	\N	f
 25885	1022	TEXT	interests.locations.1.name	L’isthme	\N	\N	\N	f
-30423	1020	TEXT	species.6.description	Le Gecko géant de Nouvelle-Calédonie ([*Rhacodactylus leachianus*](https://www.endemia.nc/faune/fiche1024)) est le plus grand gecko au monde. D’un aspect massif, avec une queue courte et une peau plissée grise à brune, il peut atteindre 25,5 cm de long. Nocturne et arboricole, on le rencontre dans les forêts humides, et en densité plus importante sur les îlots non envahis par les chats. Il est encore régulièrement braconné pour le marché de la terrariophilie.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
-30424	1020	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
+31234	1020	TEXT	species.9.description	[*Syzygium acre*](https://www.endemia.nc/flore/fiche1027) est un arbre cauliflore principalement observé dans le sud de la Grande Terre. Ses feuilles de très grande taille – parfois plus d’un mètre de long – sont rouge à mauve lorsqu’elles sont juvéniles. Sa floraison est caractéristique : les fleurs, d’une coloration rouge à rose, se trouvent par petits groupes le long du tronc.\n\nStatut dans la Liste rouge mondiale : en danger. 	\N	\N	\N	f
+31235	1020	TEXT	statistics.1.number	2e	\N	\N	\N	f
 25886	1022	TEXT	statistics.2.text	hectares de lagune et de marais au Grand Barachois	\N	\N	\N	f
 25887	1022	IMAGE	species.0.image	\N	1227	Phoque veau-marin © Daniel Koelsch	\N	f
-30425	1020	TEXT	events.0.date	Entre -100 et -55 millions d’années	\N	\N	\N	f
-30426	1020	TEXT	identity.populationYear	2017	\N	\N	\N	f
-30427	1020	IMAGE	species.5.image	\N	1319	Kaori © Vanessa Hequet	\N	f
-30428	1020	TEXT	statistics.0.text	de la flore est endémique	\N	\N	\N	f
-30429	1020	TEXT	ecosystems.ecosystems.1.name	Les récifs coralliens et les lagons	\N	\N	\N	f
-30430	1020	TEXT	events.2.date	1940 	\N	\N	\N	f
+31236	1020	TEXT	species.12.name	Les Tortues marines	\N	\N	\N	f
+31237	1020	TEXT	statistics.0.number	76%	\N	\N	\N	f
+31238	1020	TEXT	statistics.2.number	plus de 400 	\N	\N	\N	f
+31239	1020	IMAGE	interests.locations.4.image	\N	1316	Parc provincial de la Côte oubliée © Martial Dosdane	\N	f
+31240	1020	TEXT	species.2.name	Le Dugong	\N	\N	\N	f
+31241	1020	TEXT	risks.risks.1.name	Une règlementation environnementale plurielle	\N	\N	\N	f
+31242	1020	TEXT	species.4.description	Arbuste des forêts humides,[*Amborella trichopoda*](https://www.endemia.nc/flore/fiche254) est un taxon relique, considéré comme la plus ancienne des plantes à fleurs, son origine étant évaluée à 135 millions d’années avant notre ère. Elle est endémique de Nouvelle-Calédonie.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure. 	\N	\N	\N	f
+31243	1020	TEXT	ecosystems.ecosystems.0.name	Les forêts denses humides	\N	\N	\N	f
 21466	1009	TEXT	understand.paragraphs.0.text	Au niveau floristique, les plantes à fleurs présentent le plus grand nombre d’espèces : on en compte 12 306 dans tout l'outre-mer. Mais ce ne sont pas les seules espèces végétales : on compte également plusieurs centaines d’espèces de mousse, de lichens ou encore d’algues.  \n\nDu côté de la faune, c’est chez les invertébrés que se trouve la plus grande diversité : on compte plus de 12 000 espèces de Coléoptères et plus de 8 000 espèces de papillons ! Les mollusques sont également un groupe très diversifié, représentés aussi bien en milieu marin qu’en milieu terrestre et en eaux douces.\nChez les vertébrés, on dénombre 5 046 espèces de poissons, 1 435 espèces d'oiseaux, 381 espèces de reptiles, 321 espèces de mammifères et 138 espèces pour les amphibiens.  \n\nCes chiffres sont en perpétuelle évolution à mesure de la progression des connaissances scientifiques, de [nouvelles espèces](https://preprod.biodiversite-outre-mer.fr/indicateurs/nouvelles-especes) sont découvertes chaque année. Une importante disparité est observée entre le nombre d'espèces terrestres et d'espèces marines répertoriées : près de 80 % des espèces inventoriées sont terrestres ou d'eau douce. Si cela traduit en partie une réalité biologique, cela illustre également la difficulté d'acquérir des connaissances sur les espèces marines. 	\N	\N	\N	f
 21467	1009	IMAGE	understand.image	\N	1040	Iguane des petites Antilles © Fabien Lefebvre	\N	f
 21468	1009	TEXT	presentation.description	espèces sont indigènes dans les outre-mer	\N	\N	\N	f
@@ -1231,36 +1218,42 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28075	1021	TEXT	ecosystems.ecosystems.2.name	Les récifs coralliens	\N	\N	\N	f
 25888	1022	TEXT	events.1.date	17<sup>e</sup> siècle 	\N	\N	\N	f
 28076	1021	TEXT	interests.locations.4.name	[L’étang de Saint-Paul](https://reserve-etangsaintpaul.fr/fr/accueil)	\N	\N	\N	f
-30431	1020	TEXT	identity.presentation	La Nouvelle-Calédonie se caractérise par le taux d'endémisme particulièrement élevé de sa flore (76 % d'espèces endémiques) et de sa faune terrestre, ainsi que l'existence d'écosystèmes terrestres remarquables : forêt humide, maquis minier, zones humides... La biodiversité marine est également d'une richesse exceptionnelle avec plus de 20 000 espèces recensées, dont plus de 500 macroalgues, plus de 400 espèces de coraux, plus de 2 000 espèces de poissons et 30 espèces de mammifères marins. L'archipel abrite par ailleurs la seconde plus grande barrière récifale au monde, longue de 1 600 km et quasi-continue.  \nCette richesse est reconnue au niveau international par l'inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO ou encore des lacs du Grand Sud sur la liste Ramsar. 	\N	\N	\N	f
-30432	1020	TEXT	identity.population	271 407	\N	\N	\N	f
-30433	1020	TEXT	species.3.name	Les Tricots rayés	\N	\N	\N	f
-30434	1020	IMAGE	species.8.image	\N	1321	*Melaleuca quinquenervia* © Christine Fort	\N	f
-30435	1020	TEXT	species.0.name	*Sphaeropteris intermedia*	\N	\N	\N	f
-30436	1020	TEXT	events.4.date	2008-2009	\N	\N	\N	f
-30437	1020	IMAGE	interests.locations.2.image	\N	1238	Chutes de la Madeleine, Nouvelle-Calédonie © Hélène Udo	\N	f
-30438	1020	IMAGE	ecosystems.ecosystems.2.image	\N	1329	Maquis minier © Vanessa Hequet	\N	f
-30439	1020	IMAGE	species.11.image	\N	1324	Baleine à bosse © Opération Cétacé	\N	f
-30440	1020	IMAGE	species.15.image	\N	1327	*Ducula goliath* © Christine Fort	\N	f
-30441	1020	TEXT	interests.locations.0.description	Créé en 2014, dans le but de « *de protéger la biodiversité exceptionnelle de l’espace maritime de Nouvelle-Calédonie, tout en permettant un développement économique responsable et durable* », le [Parc naturel de la mer de Corail](https://mer-de-corail.gouv.nc/) couvre 1,3 millions de km<sup>2</sup>, soit l’ensemble de la zone économique exclusive de la Nouvelle-Calédonie. Elle intègre les récifs d’Entrecasteaux, remarquables par les importantes populations de tortues vertes et d’oiseaux marins qui s’y reproduisent en grand nombre.	\N	\N	\N	f
-30442	1020	TEXT	risks.risks.1.description	Une même thématique relève le plus souvent de compétences « croisées » entre divers acteurs institutionnels. Chaque Province réglemente, contrôle et veille à la bonne application des réglementations environnementales mises en œuvre localement, sur son propre domaine géographique. Chacune dispose de son propre Code de l’environnement.  \nLe gouvernement de la Nouvelle-Calédonie réglemente et exerce quant à lui un droit d'exploration, d’exploitation, de gestion et de conservation des ressources naturelles, biologiques et non biologiques sur l’ensemble de la zone économique exclusive.  \nPar ailleurs, toutes les questions relatives à l’environnement ne peuvent s’envisager sans y intégrer une dimension coutumière et culturelle composante spécifique forte du territoire. \n\nToutes ces réglementations sont évolutives et régulièrement mises à jour et complétées, avec une volonté de cohérence à souligner entre les différents acteurs impliqués.	\N	\N	\N	f
-30443	1020	TEXT	interests.locations.2.description	Cette région de 43 970 ha, [inscrite sur la Convention de Ramsar](https://www.province-sud.nc/information/lacs-grand-sud-inscrits-convention-ramsar) depuis 2014, se compose de forêts humides, de maquis miniers, de marais arbustifs et de rivières, ruisseaux et lacs intermittents et permanents, notamment le lac de Yaté. Elle abrite des espèces qui ne vivent nulle part ailleurs. Considérée comme le plus grand réservoir d’eau douce de Nouvelle-Calédonie, cette région repose sur un réseau d’eau souterrain original et complexe, unique au monde.	\N	\N	\N	f
-30444	1020	TEXT	interests.locations.1.description	Depuis juillet 2008, les lagons de Nouvelle-Calédonie sont inscrits sur la [Liste du patrimoine mondial de l’UNESCO](https://whc.unesco.org/fr/list/1115/) en raison de leur diversité exceptionnelle et de leur bon état de conservation. Ce bien "en série", c'est à dire composé de six zones géographiques distinctes a été le premier site ultra-marins à être reconnu comme tel. 	\N	\N	\N	f
-30445	1020	TEXT	ecosystems.ecosystems.3.name	Les forêts sèches	\N	\N	\N	f
-30446	1020	TEXT	identity.subtitle	Un endémisme terrestre remarquable et une diversité marine exceptionnelle	\N	\N	\N	f
-30447	1020	IMAGE	species.7.image	\N	1320	Sterne néréis © Nathalie Baillon	\N	f
-30448	1020	TEXT	species.5.name	Les Kaoris	\N	\N	\N	f
-30449	1020	TEXT	risks.risks.0.description	La Nouvelle-Calédonie présente une flore et une faune remarquables, avec des taux d'endémismes très élevés. Trois principales menaces pèsent sur cette biodiversité : les incendies de forêts, les activités minières et les espèces exotiques envahissantes. S'y ajoutent d'autres menaces anthropiques liées à l'aménagement du territoires ou encore les pollutions. \n\nForte de 25 à 30% des réserves mondiales de nickel, la Nouvelle-Calédonie a comme principale activité économique l'exploitation de ces ressources. Cette exploitation est cependant à l’origine d’impacts notables sur la biodiversité terrestre et marine (érosion, sur-sédimentation…). La réhabilitation des zones exploitées est également un enjeu important.  \n\nLes [incendies de forêt](https://www.oeil.nc/fr/causes/les-incendies) sont particulièrement dévastateurs sur le territoire. Les épisodes sont fréquents et les moyens de lutte limités au regard des enjeux environnementaux. Plusieurs dizaines de milliers d’hectares sont brûlés chaque année. Outre la destruction de la flore, les incendies favorisent la colonisation d’espèces exotiques envahissantes, dégradent la ressource en eau et menacent également les populations humaines.  \n\nLes espèces exotiques envahissantes impactent fortement tous les écosystèmes. Plus de 2 000 espèces végétales, plus de 500 invertébrés et une quarantaine de vertébrés ont ainsi été introduits sur le territoire (dont [36 des 100 espèces considérées comme parmi les plus envahissantes au monde](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-exotiques-envahissantes)). Une [stratégie de lutte pays](https://www.cen.nc/especes-envahissantes/presentation) contre les espèces exotiques envahissantes dans les espaces naturels de Nouvelle-Calédonie est en place depuis 2016.  \n\nA une toute autre échelle, l’impact des changements climatiques sur les écosystèmes calédoniens soulève également de nombreuses questions.\n\n	\N	\N	\N	f
+31244	1020	TEXT	species.5.description	Les Kaoris, sont des arbres de grande taille, dont le tronc peut atteindre un diamètre impressionnant. On peut ainsi observer un spécimen au tronc de 2,70 m de diamètre dans le parc de la Rivière Bleu.  \nLa répartition du Kaori du mont Panié ([*Agathis montana*](https://www.endemia.nc/flore/fiche55)) est restreinte à la forêt de nuage du massif du même nom, tandis que le Kaori de forêt ([*Agathis lanceolata*](https://www.endemia.nc/flore/fiche57)) s'observe du sud de la Grande Terre jusqu'à Poya, voir Touho en Province Nord. Une troisième espèce ([*Agathis ovata*](https://www.endemia.nc/flore/fiche56)) est cantonnée à la moitié Sud de la Grande Terre. \n\nStatut dans la Liste rouge mondiale pour *Agathis montana* : en danger critique ; pour *Agathis lanceolata* : vulnérable.  \nNoms en langues kanak : Kaori du Mt Panié : Dayu Biik (nemi) ; Kaori de forêt : mugé (xârâcùù)	\N	\N	\N	f
+31245	1020	TEXT	species.6.description	Le Gecko géant de Nouvelle-Calédonie ([*Rhacodactylus leachianus*](https://www.endemia.nc/faune/fiche1024)) est le plus grand gecko au monde. D’un aspect massif, avec une queue courte et une peau plissée grise à brune, il peut atteindre 25,5 cm de long. Nocturne et arboricole, on le rencontre dans les forêts humides, et en densité plus importante sur les îlots non envahis par les chats. Il est encore régulièrement braconné pour le marché de la terrariophilie.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
+31246	1020	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
+31247	1020	TEXT	events.0.date	Entre -100 et -55 millions d’années	\N	\N	\N	f
+31248	1020	TEXT	identity.populationYear	2017	\N	\N	\N	f
+31249	1020	IMAGE	species.5.image	\N	1319	Kaori © Vanessa Hequet	\N	f
+31250	1020	TEXT	statistics.0.text	de la flore est endémique	\N	\N	\N	f
+31251	1020	TEXT	ecosystems.ecosystems.1.name	Les récifs coralliens et les lagons	\N	\N	\N	f
+31252	1020	TEXT	events.2.date	1940 	\N	\N	\N	f
+31253	1020	TEXT	identity.presentation	La Nouvelle-Calédonie se caractérise par le taux d'endémisme particulièrement élevé de sa flore (76 % d'espèces endémiques) et de sa faune terrestre, ainsi que l'existence d'écosystèmes terrestres remarquables : forêt humide, maquis minier, zones humides... La biodiversité marine est également d'une richesse exceptionnelle avec plus de 20 000 espèces recensées, dont plus de 500 macroalgues, plus de 400 espèces de coraux, plus de 2 000 espèces de poissons et 30 espèces de mammifères marins. L'archipel abrite par ailleurs la seconde plus grande barrière récifale au monde, longue de 1 600 km et quasi-continue.  \nCette richesse est reconnue au niveau international par l'inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO ou encore des lacs du Grand Sud sur la liste Ramsar. 	\N	\N	\N	f
+31254	1020	TEXT	identity.population	271 407	\N	\N	\N	f
+31255	1020	TEXT	species.3.name	Les Tricots rayés	\N	\N	\N	f
+31256	1020	IMAGE	species.8.image	\N	1321	*Melaleuca quinquenervia* © Christine Fort	\N	f
+31257	1020	TEXT	species.0.name	*Sphaeropteris intermedia*	\N	\N	\N	f
+31258	1020	TEXT	events.4.date	2008-2009	\N	\N	\N	f
+31259	1020	IMAGE	interests.locations.2.image	\N	1238	Chutes de la Madeleine, Nouvelle-Calédonie © Hélène Udo	\N	f
+31260	1020	IMAGE	ecosystems.ecosystems.2.image	\N	1329	Maquis minier © Vanessa Hequet	\N	f
+31261	1020	IMAGE	species.11.image	\N	1324	Baleine à bosse © Opération Cétacé	\N	f
+31262	1020	IMAGE	species.15.image	\N	1327	*Ducula goliath* © Christine Fort	\N	f
+31263	1020	TEXT	interests.locations.0.description	Créé en 2014, dans le but de « *de protéger la biodiversité exceptionnelle de l’espace maritime de Nouvelle-Calédonie, tout en permettant un développement économique responsable et durable* », le [Parc naturel de la mer de Corail](https://mer-de-corail.gouv.nc/) couvre 1,3 millions de km<sup>2</sup>, soit l’ensemble de la zone économique exclusive de la Nouvelle-Calédonie. Elle intègre les récifs d’Entrecasteaux, remarquables par les importantes populations de tortues vertes et d’oiseaux marins qui s’y reproduisent en grand nombre.	\N	\N	\N	f
+31264	1020	IMAGE	ecosystems.ecosystems.6.image	\N	1337	Image manquante	\N	f
+31265	1020	TEXT	risks.risks.1.description	Une même thématique relève le plus souvent de compétences « croisées » entre divers acteurs institutionnels. Chaque Province réglemente, contrôle et veille à la bonne application des réglementations environnementales mises en œuvre localement, sur son propre domaine géographique. Chacune dispose de son propre Code de l’environnement.  \nLe gouvernement de la Nouvelle-Calédonie réglemente et exerce quant à lui un droit d'exploration, d’exploitation, de gestion et de conservation des ressources naturelles, biologiques et non biologiques sur l’ensemble de la zone économique exclusive.  \nPar ailleurs, toutes les questions relatives à l’environnement ne peuvent s’envisager sans y intégrer une dimension coutumière et culturelle composante spécifique forte du territoire. \n\nToutes ces réglementations sont évolutives et régulièrement mises à jour et complétées, avec une volonté de cohérence à souligner entre les différents acteurs impliqués.  \nDans ce cadre, et au-delà des actions menées directement par les gestionnaires, d’autres acteurs publics et privés interviennent activement sur le terrain avec pour objectif la préservation de l’environnement (instituts de recherche, chambres consulaires, agences, GIP, associations, ONG).	\N	\N	\N	f
+31266	1020	TEXT	interests.locations.2.description	Cette région de 43 970 ha, [inscrite sur la Convention de Ramsar](https://www.province-sud.nc/information/lacs-grand-sud-inscrits-convention-ramsar) depuis 2014, se compose de forêts humides, de maquis miniers, de marais arbustifs et de rivières, ruisseaux et lacs intermittents et permanents, notamment le lac de Yaté. Elle abrite des espèces qui ne vivent nulle part ailleurs. Considérée comme le plus grand réservoir d’eau douce de Nouvelle-Calédonie, cette région repose sur un réseau d’eau souterrain original et complexe, unique au monde.	\N	\N	\N	f
 25889	1022	TEXT	interests.locations.4.name	Saint-Pierre	\N	\N	\N	f
 26460	1004	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 27673	1000	TEXT	testimony.title	Une biodiversité unique mais fragile, protégeons-la !	\N	\N	\N	f
 27674	1000	IMAGE	testimony.image	\N	1262	Saisie d'un anaconda détenu sans autorisation, agents de l’OFB Guyane © Raphael Gailhac	\N	f
-30450	1020	TEXT	ecosystems.ecosystems.2.description	Occupant un peu moins du quart de la surface du territoire, les maquis miniers présentent une végétation très particulière du fait de la richesse du sol en minerais (fer, magnésium, nickel) et de sa pauvreté en éléments nutritifs.  \nLa richesse floristique exceptionnelle qu'ils abritent (1 170 espèces à 89 % endémiques) peut être menacée par le développement de projets miniers et par les incendies. La faune locale, adaptée aux conditions de vie difficiles de ce milieu sec et rocailleux, compte principalement des insectes et des reptiles.	\N	\N	\N	f
-30451	1020	TEXT	species.10.name	Les Roussettes	\N	\N	\N	f
-30452	1020	TEXT	ecosystems.ecosystems.1.description	La Nouvelle-Calédonie possède la 2ème plus grande barrière de corail du monde, longue de 1 600 km et quasi-continue. D'une superficie totale de 23 400 kms<sup>2</sup>, les récifs et lagons calédoniens sont parmi les plus étendus et les plus riches de la planète. La diversité observée en termes d’espèces, d'habitats et de structures récifales, y est exceptionnelle.   \n\nChaque région et groupe d'île de la zone économique exclusive se caractérise par des assemblages uniques d'espèces et d'habitats coralliens. Ce constat renforce la nécessité de protection et de conservation du patrimoine naturel aussi bien à l'échelle locale qu'internationale. 	\N	\N	\N	f
-30453	1020	TEXT	species.13.name	*Neogymnochrinus richeri*	\N	\N	\N	f
-30454	1020	TEXT	ecosystems.ecosystems.0.description	Ces forêts dites « sempervirentes » couvrent un peu plus de 20 % du territoire, avec des massifs de plusieurs milliers d’hectares d’un seul tenant. Elles concentrent plus de 2 000 espèces végétales donc 80 % endémiques, et offrent un habitat à une faune diversifiée : oiseaux, reptiles, chauve-souris, insectes… Elles sont cependant victimes de fortes dégradations (incendies, exploitation minière, espèces exotiques envahissantes…). 	\N	\N	\N	f
-30455	1020	TEXT	identity.highestPoint	1 628	\N	\N	\N	f
-30456	1020	TEXT	interests.locations.4.description	Situé sur la côte Sud-Est de la Grande Terre, entre Thio et Yaté, ce [parc provincial](https://www.province-sud.nc/aires-protegees/parc-cote-oubliee) créé en 2019 protège désormais 93 000 ha terrestres et 29 200 ha marins. C'est un véritable trésor de biodiversité qui abrite 20 % des forêts humide du territoire, 82 % d’espèces végétales endémiques  et un patrimoine culturel et immatériel précieux. Ce classement a par ailleurs induit le gel d’une centaine de titres miniers. \n	\N	\N	\N	f
+31267	1020	TEXT	interests.locations.1.description	Depuis juillet 2008, les lagons de Nouvelle-Calédonie sont inscrits sur la [Liste du patrimoine mondial de l’UNESCO](https://whc.unesco.org/fr/list/1115/) en raison de leur diversité exceptionnelle et de leur bon état de conservation. Ce bien "en série", c'est à dire composé de six zones géographiques distinctes a été le premier site ultra-marins à être reconnu comme tel. 	\N	\N	\N	f
+31268	1020	TEXT	ecosystems.ecosystems.3.name	Les forêts sèches	\N	\N	\N	f
+31269	1020	TEXT	identity.subtitle	Un endémisme terrestre remarquable et une diversité marine exceptionnelle	\N	\N	\N	f
+31270	1020	IMAGE	species.7.image	\N	1320	Sterne néréis © Nathalie Baillon	\N	f
+31271	1020	TEXT	species.5.name	Les Kaoris	\N	\N	\N	f
+31272	1020	TEXT	risks.risks.0.description	La Nouvelle-Calédonie présente une flore et une faune remarquables, avec des taux d'endémismes très élevés. Trois principales menaces pèsent sur cette biodiversité : les incendies de forêts, les activités minières et les espèces exotiques envahissantes. S'y ajoutent d'autres menaces anthropiques liées à l'aménagement du territoires ou encore les pollutions. \n\nForte de 25 à 30% des réserves mondiales de nickel, la Nouvelle-Calédonie a comme principale activité économique l'exploitation de ces ressources. Cette exploitation est cependant à l’origine d’impacts notables sur la biodiversité terrestre et marine (érosion, sur-sédimentation…). La réhabilitation des zones exploitées est également un enjeu important.  \n\nLes [incendies de forêt](https://www.oeil.nc/fr/causes/les-incendies) sont particulièrement dévastateurs sur le territoire. Les épisodes sont fréquents et les moyens de lutte limités au regard des enjeux environnementaux. Plusieurs dizaines de milliers d’hectares sont brûlés chaque année. Outre la destruction de la flore, les incendies favorisent la colonisation d’espèces exotiques envahissantes, dégradent la ressource en eau et menacent également les populations humaines.  \n\nLes espèces exotiques envahissantes impactent fortement tous les écosystèmes. Plus de 2 000 espèces végétales, plus de 500 invertébrés et une quarantaine de vertébrés ont ainsi été introduits sur le territoire (dont [36 des 100 espèces considérées comme parmi les plus envahissantes au monde](https://preprod.biodiversite-outre-mer.fr/indicateurs/especes-exotiques-envahissantes)). Une [stratégie de lutte pays](https://www.cen.nc/especes-envahissantes/presentation) contre les espèces exotiques envahissantes dans les espaces naturels de Nouvelle-Calédonie est en place depuis 2016.  \n\nA une toute autre échelle, l’impact des changements climatiques sur les écosystèmes calédoniens soulève également de nombreuses questions.\n\n	\N	\N	\N	f
+31273	1020	TEXT	ecosystems.ecosystems.2.description	Occupant un peu moins du quart de la surface du territoire, les maquis miniers présentent une végétation très particulière du fait de la richesse du sol en minerais (fer, magnésium, nickel) et de sa pauvreté en éléments nutritifs.  \nLa richesse floristique exceptionnelle qu'ils abritent (1 170 espèces à 89 % endémiques) peut être menacée par le développement de projets miniers et par les incendies. La faune locale, adaptée aux conditions de vie difficiles de ce milieu sec et rocailleux, compte principalement des insectes et des reptiles.	\N	\N	\N	f
+31274	1020	TEXT	species.10.name	Les Roussettes	\N	\N	\N	f
+31275	1020	TEXT	ecosystems.ecosystems.1.description	La Nouvelle-Calédonie possède la 2ème plus grande barrière de corail du monde, longue de 1 600 km et quasi-continue. D'une superficie totale de 23 400 kms<sup>2</sup>, les récifs et lagons calédoniens sont parmi les plus étendus et les plus riches de la planète. La diversité observée en termes d’espèces, d'habitats et de structures récifales, y est exceptionnelle.   \n\nChaque région et groupe d'île de la zone économique exclusive se caractérise par des assemblages uniques d'espèces et d'habitats coralliens. Ce constat renforce la nécessité de protection et de conservation du patrimoine naturel aussi bien à l'échelle locale qu'internationale. 	\N	\N	\N	f
 26461	1004	TEXT	understand.text2	Ces espèces exotiques envahissantes perturbent les équilibres environnementaux en entrant en compétition avec les espèces locales (pour la nourriture, les sites de reproduction ou de repos, la lumière, etc.), par prédation, introduction de pathogènes, hybridation ou encore en modifiant les paramètres physico-chimiques des habitats.  Elles ont ainsi de lourds impacts sur les milieux et les espèces indigènes, en particulier dans les îles où elles sont à l'origine de nombreuses extinctions.\n\nOn trouve des espèces exotiques envahissantes dans tous les groupes taxonomiques : champignons, algues, plantes vasculaires, invertébrés, reptiles, oiseaux, poissons, mammifères, etc. et dans tous les milieux : terrestres, marins ou d'eaux douces.	\N	\N	\N	f
 26462	1004	TEXT	understand.text1	Une espèce exotique envahissante est une espèce introduite par l’Homme hors de son territoire d’origine et qui présente ensuite, sur son territoire d’introduction, une dispersion et un développement importants, engendrant des impacts environnementaux mais aussi sociaux et économiques. Ces introductions sont parfois volontaires (pour l’agriculture, l’ornementation, comme animaux de compagnie, etc.) ou involontaires (organismes présents dans les marchandises échangées internationalement, dans les eaux de ballast des bateaux, etc.).\n\nDe nombreuses espèces n’arrivent pas à s’adapter ou se reproduire dans leurs territoires d’introduction, cependant certaines trouvent au contraire des conditions favorables à leur développement et prolifèrent, profitant notamment de l’absence de leurs prédateurs ou parasites naturels. 	\N	\N	\N	f
 26463	1004	TEXT	territories.title	Nombre d'espèces présentes sur la liste des 100 espèces exotiques les plus envahissantes au monde 	\N	\N	\N	f
@@ -1272,9 +1265,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 26468	1004	TEXT	presentation.descriptionTerritories	espèces sur les 100 considérées comme les plus envahissantes au monde sont présentes sur le territoire	\N	\N	\N	f
 26469	1004	TEXT	understand.paragraphs.0.title	Une liste mondiale des espèces les plus problématiques	\N	\N	\N	f
 26470	1004	TEXT	understand.keyword	Espèces	\N	\N	\N	f
-30457	1020	TEXT	risks.risks.0.name	Une richesse en biodiversité soumise à des fortes pressions 	\N	\N	\N	f
-30458	1020	IMAGE	interests.locations.1.image	\N	1090	Poisson-coffre dans les récifs d’Entrecasteaux © DR	\N	f
-30459	1020	IMAGE	ecosystems.ecosystems.1.image	\N	1093	La piscine naturelle de la baie d’Oro © Jeremy Zero/Unsplash	\N	f
+31276	1020	TEXT	species.13.name	*Neogymnochrinus richeri*	\N	\N	\N	f
+31277	1020	TEXT	species.16.name	Le Corbeau calédonien	\N	\N	\N	f
 27675	1000	IMAGE	carousel.images.1.image	\N	1260	Canal de Beauregard, Martinique © Fabien Lefebvre	\N	f
 27676	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
 27677	1000	TEXT	science.text	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.	\N	\N	\N	f
@@ -1304,15 +1296,23 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 26475	1004	IMAGE	understand.image	\N	1027	Miconia calvescens © Forest & Kim Starr / CC BY 3.0 	\N	f
 26476	1004	TEXT	presentation.description	espèces sur les 100 considérées comme les plus envahissantes au monde se trouvent en outre-mer	\N	\N	\N	f
 26477	1004	TEXT	presentation.logoUrl	http://indicateurs-biodiversite.naturefrance.fr/fr/indicateurs/nombre-despeces-en-outremer-parmi-les-plus-envahissantes-au-monde	\N	\N	\N	f
-30460	1020	TEXT	interests.locations.3.description	Autour du point culminant de la Nouvelle-Calédonie (1 627 m), cette réserve de 5 400 hectares a été créée en 1950. Cette réserve botanique exceptionnelle se caractérise par une mosaïque de formations forestières abritant une faune et une flore remarquable : kaoris, palmiers du genre *Clinosperma*, oiseaux (Méliphage noir, Pétrel de Tahiti), papillons...	\N	\N	\N	f
-30461	1020	IMAGE	species.10.image	\N	1323	*Pteropus ornatus* © Malik Oedin / IAC	\N	f
-30462	1020	TEXT	identity.title	La Nouvelle-Calédonie,\nun hotspot de biodiversité dans le Pacifique	\N	\N	\N	f
-30463	1020	IMAGE	species.6.image	\N	1318	*Rhacodactylus leachianus* © Matthias Deuss	\N	f
-30464	1020	TEXT	interests.locations.1.name	Les lagons, inscrits au Patrimoine mondial de l'UNESCO 	\N	\N	\N	f
-30465	1020	TEXT	statistics.2.text	espèces de coraux 	\N	\N	\N	f
-30466	1020	IMAGE	species.0.image	\N	1091	*Sphaeropteris intermedia* © Benjamin Guichard / OFB	\N	f
-30467	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
-30468	1020	TEXT	interests.locations.4.name	Le parc provincial de la Côte oubliée (*Woen Vùù – Pwa Pereeù*)	\N	\N	\N	f
+31278	1020	TEXT	ecosystems.ecosystems.0.description	Ces forêts dites « sempervirentes » couvrent un peu plus de 20 % du territoire, avec des massifs de plusieurs milliers d’hectares d’un seul tenant. Elles concentrent plus de 2 000 espèces végétales donc 80 % endémiques, et offrent un habitat à une faune diversifiée : oiseaux, reptiles, chauve-souris, insectes… Elles sont cependant victimes de fortes dégradations (incendies, exploitation minière, espèces exotiques envahissantes…). 	\N	\N	\N	f
+31279	1020	TEXT	identity.highestPoint	1 628	\N	\N	\N	f
+31280	1020	TEXT	interests.locations.4.description	Situé sur la côte Sud-Est de la Grande Terre, entre Thio et Yaté, ce [parc provincial](https://www.province-sud.nc/aires-protegees/parc-cote-oubliee) créé en 2019 protège désormais 93 000 ha terrestres et 29 200 ha marins. C'est un véritable trésor de biodiversité qui abrite 20 % des forêts humide du territoire, 82 % d’espèces végétales endémiques  et un patrimoine culturel et immatériel précieux. Ce classement a par ailleurs induit le gel d’une centaine de titres miniers. \n	\N	\N	\N	f
+31281	1020	TEXT	risks.risks.0.name	Une richesse en biodiversité soumise à des fortes pressions 	\N	\N	\N	f
+31282	1020	IMAGE	interests.locations.1.image	\N	1090	Poisson-coffre dans les récifs d’Entrecasteaux © DR	\N	f
+31283	1020	IMAGE	ecosystems.ecosystems.1.image	\N	1093	La piscine naturelle de la baie d’Oro © Jeremy Zero/Unsplash	\N	f
+31284	1020	TEXT	interests.locations.3.description	Autour du point culminant de la Nouvelle-Calédonie (1 627 m), cette réserve de 5 400 hectares a été créée en 1950. Cette réserve botanique exceptionnelle se caractérise par une mosaïque de formations forestières abritant une faune et une flore remarquable : kaoris, palmiers du genre *Clinosperma*, oiseaux (Méliphage noir, Pétrel de Tahiti), papillons...	\N	\N	\N	f
+31285	1020	IMAGE	species.10.image	\N	1323	*Pteropus ornatus* © Malik Oedin / IAC	\N	f
+31286	1020	TEXT	identity.title	La Nouvelle-Calédonie,\nun hotspot de biodiversité dans le Pacifique	\N	\N	\N	f
+31287	1020	IMAGE	species.16.image	\N	1333	Image manquante	\N	f
+31288	1020	IMAGE	species.6.image	\N	1318	*Rhacodactylus leachianus* © Matthias Deuss	\N	f
+31289	1020	TEXT	interests.locations.1.name	Les lagons, inscrits au Patrimoine mondial de l'UNESCO 	\N	\N	\N	f
+31290	1020	TEXT	statistics.2.text	espèces de coraux 	\N	\N	\N	f
+31291	1020	IMAGE	species.0.image	\N	1091	*Sphaeropteris intermedia* © Benjamin Guichard / OFB	\N	f
+31292	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
+31293	1020	IMAGE	ecosystems.ecosystems.7.image	\N	1338	Image manquante	\N	f
+31294	1020	TEXT	interests.locations.4.name	Le parc provincial de la Côte oubliée (*Woen Vùù – Pwa Pereeù*)	\N	\N	\N	f
 28401	1015	TEXT	events.2.description	Dernière éruption de la Montagne Pelée	\N	\N	\N	f
 28402	1015	TEXT	events.3.description	Création du Parc naturel régional de Martinique et de la Réserve naturelle nationale de la presqu'île de la Caravelle	\N	\N	\N	f
 28403	1015	IMAGE	identity.image	\N	1284	La Montagne Pelée depuis la mer © Fabien Lefebvre	\N	f
@@ -1366,9 +1366,20 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28451	1015	IMAGE	ecosystems.ecosystems.4.image	\N	1267	Récif de Martinique © Fabien Lefebvre	\N	f
 28452	1015	TEXT	species.3.description	La Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338\n)) est l’une des cinq espèces de tortues marines qui fréquentent les eaux de Martinique. Si elle est régulièrement observable dans l’eau, en alimentation sur les herbiers, elle ne pond que rarement sur les plages de Martinique. Comme toutes les espèces de tortues marines, elle est menacée d'extinction, notamment en raison des captures accidentelles dans les filets de pêche et la dégradation des sites de ponte. Le dérangement répété par les baigneurs peut également occasionner une forte dépense d’énergie pour les tortues, c’est pourquoi il est recommandé de garder une distance minimum de quelques mètres et de ne pas tenter de les toucher.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger critique. 	\N	\N	\N	f
 28453	1015	TEXT	statistics.3.number	2 000	\N	\N	\N	f
+31295	1007	IMAGE	partners.partners.1.logo	\N	1281	Parc naturel régional de la Martinique	\N	f
+31296	1007	TEXT	partners.partners.0.url	http://www.biodiversite-martinique.fr/	\N	\N	\N	f
+31297	1007	TEXT	goal2.quote	*Le Compteur constituera un signal d’alerte et donnera une visibilité forte et essentielle pour sensibiliser à l’évolution de la biodiversité.*  Livre bleu des outre-mer, 2018. 	\N	\N	\N	f
+31298	1007	TEXT	goal1.title	Partager la connaissance scientifique	\N	\N	\N	f
+31299	1007	IMAGE	goal2.quoteImage	\N	1031	Coq-de-roche © Raphaël Gailhac 	\N	f
 27692	1000	TEXT	testimony.text	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont des outils qui permettent de suivre différents paramètres de la biodiversité, pour renseigner de son évolution.	\N	\N	\N	f
 28454	1015	TEXT	species.1.description	L’Iguane des Petites Antilles ou Iguane péyi ([*Iguana delicatissima*](https://inpn.mnhn.fr/espece/cd_nom/350755\n)) était autrefois présent sur tout le nord des Petites Antilles, depuis Anguilla jusqu’à la Martinique. Il a aujourd’hui disparu de nombreux territoires, et est considéré en danger critique d’extinction. Sa survie est menacée par l’introduction de l’Iguane commun ([*Iguana iguana*](https://inpn.mnhn.fr/espece/cd_nom/350756\n)) avec qui il ne doit pas être confondu. L’Iguane commun exotique se reconnait aux rayures sombres sur la queue et à sa grosse plaque ronde sur la joue, sous le tympan, que ne possèdent pas l’Iguane des Petites Antilles.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger critique.	\N	\N	\N	f
 28455	1015	TEXT	species.2.description	Le Lambi ([*Aliger gigas*](https://inpn.mnhn.fr/espece/cd_nom/972164\n)) est un mollusque dont la coquille imposante peut atteindre 30 cm et 1,5 kg. Victime de la surpêche pour sa chair et parfois l’usage décoratif de sa coquille, son exploitation est aujourd’hui strictement contrôlée. La Martinique en a fait son emblème officiel.  \n  \nStatut dans la Liste rouge mondiale : non évalué.   	\N	\N	\N	f
+31300	1007	TEXT	goal2.description	De nombreuses actions locales sont mises en place afin de tenter de préserver les écosystèmes et les espèces. Donner de la visibilité aux acteurs locaux, partager les expériences et les réussites, au bénéfice de tous, c’est également l’un des objectifs du Compteur. 	\N	\N	\N	f
+31301	1007	TEXT	goal3.description	Chacun, à son échelle, peut agir pour préserver la biodiversité. Connaitre et appliquer des gestes simples, modifier ses habitudes et son comportement ou encore s’investir dans des programmes de sciences participatives, tout le monde est concerné par la préservation de la biodiversité. Le rôle du Compteur est d’accompagner les citoyens en partageant des informations claires et adaptées à tous les territoires, et en encourageant à se mobiliser.	\N	\N	\N	f
+31302	1007	TEXT	partners.partners.3.url	http://www.saint-pierre-et-miquelon.developpement-durable.gouv.fr/	\N	\N	\N	f
+31303	1007	TEXT	partners.title	Partenariats et collaborations 	\N	\N	\N	f
+31304	1007	TEXT	goal1.description	Quelles sont les espèces présentes dans ce territoire ? Comment évoluent leurs populations ? Quel est l’état de santé des récifs coralliens ? Pour répondre à ces questions et bien d’autres, différents paramètres, appelés « indicateurs », sont mesurés par les scientifiques pour suivre l’évolution de l’état de la biodiversité. Le Compteur a pour mission de rendre compte de l’état de ces connaissances dans les territoires en s'appuyant notamment sur l'[ONB](https://naturefrance.fr/), l'[INPN](https://inpn.mnhn.fr/accueil/index) et les observatoires locaux. 	\N	\N	\N	f
+31305	1007	IMAGE	goal3.image	\N	1274	 © Observatoire Martiniquais de la biodiversité	\N	f
 28456	1015	TEXT	statistics.1.number	40	\N	\N	\N	f
 28457	1015	TEXT	statistics.0.number	48	\N	\N	\N	f
 28458	1015	TEXT	statistics.2.number	2/3	\N	\N	\N	f
@@ -1494,33 +1505,52 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28635	1014	TEXT	territories.title	Pourcentage de surface des récifs coralliens en diminution	\N	\N	\N	f
 28636	1014	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 28637	1014	TEXT	understand.title1	Le corail, constructeur du récif	\N	\N	\N	f
-28507	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
-28508	1019	TEXT	examples.projects.2.subject	Espèces marines	\N	\N	\N	f
-28509	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
-28510	1019	TEXT	examples.projects.0.title	La photo-identification des tortues marines à La Réunion	\N	\N	\N	f
-28511	1019	TEXT	examples.projects.0.subject	Suivi individuel des tortues marines	\N	\N	\N	f
-28512	1019	LINK	examples.projects.3.more	En savoir plus	\N	\N	https://www.facebook.com/paladalik/	f
-28513	1019	TEXT	examples.projects.4.subject	Insectes lumineux	\N	\N	\N	f
-28514	1019	TEXT	examples.projects.3.title	Le Réseau d’observation des récifs coralliens (RORC) de Nouvelle-Calédonie	\N	\N	\N	f
-28515	1019	TEXT	examples.projects.1.actor	Groupe d’étude et de protection des oiseaux de Guyane (GEPOG)	\N	\N	\N	f
-28516	1019	IMAGE	examples.projects.1.image	\N	1082	Tangara évêque © P. Ingremeau 	\N	f
-28517	1019	IMAGE	examples.projects.4.image	\N	1248	Image provisoire	\N	f
-28518	1019	TEXT	paragraphs.0.text	Certains programmes se basent sur l’application d’un **protocole précis** (durée d’observation, distance couverte, nombre de points d’écoute, etc.). Ils nécessitent souvent une formation à la méthode et une implication sérieuse et régulière, car la qualité des données récoltées dépend de la bonne mise en œuvre du protocole. C’est le cas par exemple du Suivi temporel des oiseaux communs (STOC).\n\nD’autres programmes proposent de **faire remonter les observations ponctuelles ciblant une ou plusieurs espèces spécifiques**, parfois à une période précise ou sur un espace délimité. Par exemple les programmes de photo-identification de tortues ou de mammifères marins.\n\nLes signalements opportunistes permettent de faire remonter des observations occasionnelles, **comme des évènements inhabituels**, ou sur des espèces, une période ou un site non-ciblés. 	\N	\N	\N	f
-28519	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
-28520	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
-28521	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
-28522	1019	TEXT	examples.projects.4.description	Relai guadeloupéen de l’Observatoire des vers luisants et lucioles, l’observatoire Ti bèt a limiè a commencé ses activités en 2019. Les participants sont invités à faire remonter leurs observations de plusieurs espèces d’insectes lumineux (lucioles et taupins), afin de mieux connaitre leur biologie et leur écologie, identifier les facteurs favorisant leur présence ou leur régression et sensibiliser la population à leur maintien.	\N	\N	\N	f
-28523	1019	IMAGE	images.1.image	\N	1291	Observation des oiseaux marins à Mayotte © Fanny Cautain / OFB	\N	f
-28524	1019	TEXT	examples.projects.3.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
-28525	1019	TEXT	examples.projects.2.actor	Parc marin de Mayotte	\N	\N	\N	f
-28526	1019	LINK	examples.projects.4.more	En savoir plus	\N	\N	https://www.anbaloup-la.fr/observatoire-lucioles/	f
-28527	1019	TEXT	paragraphs.1.text	La plupart des programmes permettent d’alimenter des bases de données collaboratives. Certains projets sont adossés à des programmes de recherche et visent à répondre à une question précise. D’autres mettent en avant en premier lieu un fort objectif de pédagogie, d’acquisition de connaissances et de sensibilisation à la démarche scientifique des observateurs.\n	\N	\N	\N	f
-28528	1019	IMAGE	examples.projects.0.image	\N	1081	© Cynomana  / CC BY-SA 4.0 	\N	f
-28529	1019	IMAGE	examples.projects.3.image	\N	1083	© Reefcheck France 	\N	f
-28530	1019	TEXT	examples.projects.3.target	Plongeurs, apnéistes. Formation nécessaire. 	\N	\N	\N	f
-28531	1019	TEXT	paragraphs.2.title	Un état des lieux en cours	\N	\N	\N	f
-28532	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages réguliers le long de parcours prédéfinis	\N	\N	\N	f
-28533	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
+31481	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
+31482	1019	TEXT	examples.projects.2.subject	Espèces marines	\N	\N	\N	f
+31483	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
+31484	1019	TEXT	examples.projects.0.title	La photo-identification des tortues marines à La Réunion	\N	\N	\N	f
+31485	1019	TEXT	examples.projects.0.subject	Suivi individuel des tortues marines	\N	\N	\N	f
+31486	1019	LINK	examples.projects.3.more	En savoir plus	\N	\N	https://www.facebook.com/paladalik/	f
+31487	1019	TEXT	examples.projects.4.subject	Insectes lumineux	\N	\N	\N	f
+31488	1019	TEXT	examples.projects.3.title	Le Réseau d’observation des récifs coralliens (RORC) de Nouvelle-Calédonie	\N	\N	\N	f
+31489	1019	TEXT	examples.projects.1.actor	Groupe d’étude et de protection des oiseaux de Guyane (GEPOG)	\N	\N	\N	f
+31490	1019	IMAGE	examples.projects.1.image	\N	1082	Tangara évêque © P. Ingremeau 	\N	f
+31491	1019	IMAGE	images.2.image	\N	1341	Sensibilisation à la biodiversité des récifs de Mayotte © Fanny Cautain / OFB	\N	f
+31492	1019	IMAGE	examples.projects.4.image	\N	1248	Image provisoire	\N	f
+31493	1019	TEXT	paragraphs.0.text	Certains programmes se basent sur l’application d’un **protocole précis** (durée d’observation, distance couverte, nombre de points d’écoute, etc.). Ils nécessitent souvent une formation à la méthode et une implication sérieuse et régulière, car la qualité des données récoltées dépend de la bonne mise en œuvre du protocole. C’est le cas par exemple du Suivi temporel des oiseaux communs (STOC).\n\nD’autres programmes proposent de **faire remonter les observations ponctuelles ciblant une ou plusieurs espèces spécifiques**, parfois à une période précise ou sur un espace délimité. Par exemple les programmes de photo-identification de tortues ou de mammifères marins.\n\nLes signalements opportunistes permettent de faire remonter des observations occasionnelles, **comme des évènements inhabituels**, ou sur des espèces, une période ou un site non-ciblés. 	\N	\N	\N	f
+31494	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
+31495	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
+31496	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
+31497	1019	TEXT	examples.projects.4.description	Relai guadeloupéen de l’Observatoire des vers luisants et lucioles, l’observatoire Ti bèt a limiè a commencé ses activités en 2019. Les participants sont invités à faire remonter leurs observations de plusieurs espèces d’insectes lumineux (lucioles et taupins), afin de mieux connaitre leur biologie et leur écologie, identifier les facteurs favorisant leur présence ou leur régression et sensibiliser la population à leur maintien.	\N	\N	\N	f
+31498	1019	IMAGE	images.1.image	\N	1291	Observation des oiseaux marins à Mayotte © Fanny Cautain / OFB	\N	f
+31499	1019	TEXT	examples.projects.3.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
+31500	1019	TEXT	examples.projects.2.actor	Parc marin de Mayotte	\N	\N	\N	f
+31501	1019	LINK	examples.projects.4.more	En savoir plus	\N	\N	https://www.anbaloup-la.fr/observatoire-lucioles/	f
+31502	1019	TEXT	paragraphs.1.text	La plupart des programmes permettent d’alimenter des bases de données collaboratives. Certains projets sont adossés à des programmes de recherche et visent à répondre à une question précise. D’autres mettent en avant en premier lieu un fort objectif de pédagogie, d’acquisition de connaissances et de sensibilisation à la démarche scientifique des observateurs.\n	\N	\N	\N	f
+31503	1019	IMAGE	examples.projects.0.image	\N	1081	© Cynomana  / CC BY-SA 4.0 	\N	f
+31504	1019	IMAGE	examples.projects.3.image	\N	1083	© Reefcheck France 	\N	f
+31505	1019	TEXT	examples.projects.3.target	Plongeurs, apnéistes. Formation nécessaire. 	\N	\N	\N	f
+31506	1019	TEXT	paragraphs.2.title	Un état des lieux en cours	\N	\N	\N	f
+31507	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages réguliers le long de parcours prédéfinis	\N	\N	\N	f
+31508	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
+31509	1019	TEXT	examples.projects.1.description	Débuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et La Réunion, le STOC-Guyane a pour but de suivre les variations d'abondances d'oiseaux communs sur le long terme pour évaluer l'impact des activités humaines. Le programme demande une implication régulière et nécessite une formation au protocole utilisé et la reconnaissance des espèces. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
+31510	1019	IMAGE	images.0.image	\N	1078	© U.S. Fish and Wildlife Service Southeast Region / CC BY 2.0	\N	f
+31511	1019	TEXT	examples.projects.1.target	Ornithologues amateurs ou professionnels (à titre bénévole). Formation nécessaire. 	\N	\N	\N	f
+31512	1019	TEXT	examples.projects.0.target	Plongeurs, apnéistes, pratiquant la photo sous-marine	\N	\N	\N	f
+31513	1019	TEXT	examples.projects.3.subject	Suivi de l’état de santé des récifs de Nouvelle-Calédonie	\N	\N	\N	f
+31514	1019	TEXT	header.subtitle	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.  \n\nFaune, flore, milieu marin ou terrestre, observation ponctuelle ou programme protocolé, trouvez le programme qui vous correspond et contribuez au développement des connaissances !	\N	\N	\N	f
+31515	1019	LINK	examples.projects.1.more	En savoir plus	\N	\N	http://www.gepog.org/Nos-actions/Milieux-terrestres/Suivi-Temporel-des-Oiseaux-Communs-STOC-EPS	f
+31516	1019	TEXT	examples.projects.2.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
+31517	1019	TEXT	header.title	C'est quoi les sciences participatives ?	\N	\N	\N	f
+31518	1019	IMAGE	examples.projects.2.image	\N	1247	Image provisoire	\N	f
+31519	1019	CHECKBOX	header.shadowed	true	\N	\N	\N	f
+31520	1019	TEXT	paragraphs.1.title	Différents objectifs	\N	\N	\N	f
+31521	1019	TEXT	presentation.description	Le terme « sciences participatives » regroupe des programmes acquisition d’informations et de données scientifiques en impliquant une participation active des citoyens. Les observations sont réalisées de manière bénévole, le plus souvent par des non-professionnels. Dans certains cas, une formation au préalable est nécessaire, mais de nombreux programmes sont accessibles sans connaissances naturalistes poussées. 	\N	\N	\N	f
+31522	1019	TEXT	examples.projects.3.actor	Association Pala Dalik	\N	\N	\N	f
+31523	1019	TEXT	paragraphs.2.text	L’équipe du Compteur mène actuellement une étude pour **recenser tous les programmes de sciences participatives dans les territoires ultramarins**. Ces résultats seront disponibles prochainement afin de vous proposer un panorama complet des programmes auxquels vous pouvez participer. 	\N	\N	\N	f
+31524	1019	TEXT	examples.projects.4.title	Ti bèt a limiè, l’Observatoire des lucioles en Guadeloupe	\N	\N	\N	f
+31525	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
+31526	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
 21909	1017	TEXT	presentation	Les activités humaines sont à l’origine du déclin de la biodiversité et la dégradation des écosystèmes. Aujourd’hui plus que jamais, il est nécessaire de remettre en question nos comportements et nos choix de consommation, au quotidien ou en voyage, chez soi ou en milieu naturel, pour mieux prendre soin de la biodiversité qui nous entoure. Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.  \n\nL’objectif du Compteur est de mettre en avant des écogestes adaptés aux contextes ultramarins.	\N	\N	\N	f
 21910	1017	IMAGE	image	\N	1073	© DR	\N	f
 21911	1017	TEXT	quote	Des actions concrètes pour agir dès maintenant et préserver cette biodiversité les espèces et les écosystèmes	\N	\N	\N	f
@@ -1530,6 +1560,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 21915	1017	IMAGE	other.image	\N	1257	logo	\N	f
 21916	1017	TEXT	other.text	Biodiversité Tous Vivants !	\N	\N	\N	f
 21917	1017	TEXT	title	Adaptons nos comportement pour préserver la biodiversité	\N	\N	\N	f
+31527	1019	TEXT	paragraphs.0.title	Différents types de programmes 	\N	\N	\N	f
+31528	1019	TEXT	examples.projects.4.actor	An ba loup-la	\N	\N	\N	f
+31529	1019	TEXT	application.subtitle	J'agis en ligne	\N	\N	\N	f
+31530	1019	TEXT	examples.projects.4.target	Tous publics	\N	\N	\N	f
+31531	1019	TEXT	examples.projects.1.title	Le Suivi temporel des oiseaux communs (STOC) en Guyane	\N	\N	\N	f
+31532	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
 28814	1001	TEXT	interests.locations.1.description	Entre Basse-Terre et Grande-Terre, cette baie est un véritable réservoir de biodiversité. Côté mer, des herbiers de phanérogames sont entourés par le récif corallien le plus long des Petites Antilles (39 km). Côté terre, la baie est bordée par des mangroves, des forêts marécageuses et marais herbacés sur plus de 5 000 ha. 	\N	\N	\N	f
 28815	1001	TEXT	ecosystems.ecosystems.3.name	Les mangroves	\N	\N	\N	f
 28816	1001	TEXT	statistics.1.text	du territoire couvert par la forêt	\N	\N	\N	f
@@ -1538,11 +1574,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28819	1001	IMAGE	species.4.image	\N	1305	*Ctenonotus ferreus* © Aurélien Miralles	\N	f
 28820	1001	IMAGE	species.7.image	\N	1173	Image manquante	\N	f
 28821	1001	TEXT	species.5.name	Le Palmier ti-koko	\N	\N	\N	f
-21525	1013	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
-21526	1013	TEXT	understand.text2	La taxonomie, ou taxinomie, est la science qui permet de décrire et de classer le vivant. L’espèce est l’unité taxonomique de base. Chaque espèce décrite est classée avec d’autres espèces aux caractéristiques communes au sein d’un même genre, puis d’une famille, d’un ordre, etc. Chaque espèce est identifiée par un nom scientifique latin en deux mots, par exemple *Pelecanus occidentalis* pour le Pelican brun. Cette dénomination en latin permet un référentiel mondial commun, car une même espèce peut posséder des dizaines de noms usuels différents (dits noms "vernaculaires") à travers le monde, selon les langues et les régions. 	\N	\N	\N	f
-21527	1013	TEXT	understand.text1	Plus de 80 % des nouvelles découvertes d'espèces chaque année en France sont réalisées dans les territoires d'outre-mer. Certaines de ces nouvelles descriptions sont issues d’expéditions scientifiques, par exemple celles menées en Guyane en 2014 et en Nouvelle-Calédonie entre 2016 et 2019 par le Muséum national d’Histoire naturelle dans le cadre de la campagne « [la Planète revisitée](https://www.mnhn.fr/fr/recherche-expertise/lieux/planete-revisitee) », mais d’autres sont également réalisées par des taxonomistes non-professionnels. Il peut s'agir également d'espèces déjà décrites dans des territoires frontaliers mais dont la présence n'avait pas encore été observée sur le territoire national. Dans la plupart des cas, il s’agit de petits organismes invertébrés et d’organismes marins (insectes, mollusques, crustacés, vers marins).   \n  \nLe chiffre présenté ici représente une moyenne du nombre de découvertes par an sur les trois dernières années. 	\N	\N	\N	f
-21528	1013	TEXT	territories.title	Nouvelles espèces décrites par an	\N	\N	\N	f
-21529	1013	TEXT	understand.title1	L'outre-mer : un vivier d'espèces à découvrir	\N	\N	\N	f
+31533	1019	TEXT	examples.projects.2.target	Usagers de la mer, tous publics	\N	\N	\N	f
+31534	1019	IMAGE	header.background	\N	1342	 © Pierre-Olivier Jay	\N	f
 23017	1005	LINK	onb.link	Retrouvez les indicateurs sur le site de l’ONB	\N	\N	https://naturefrance.fr/indicateurs	f
 23018	1005	TEXT	inpn.description	L’INPN recense les espèces (animales, végétales et fongiques), les habitats naturels, les espaces protégés et le patrimoine géologique, en métropole et en outre-mer. L’ensemble des acteurs de l’environnement contribuent à la mise à jour régulière des informations sur le site de l’INPN dans le cadre du Système d’information de l’Inventaire national du patrimoine naturel (SINP). L’INPN met à disposition de tous des données de référence, validées par des réseaux d'experts. Le Muséum national d'Histoire naturelle en assure la responsabilité scientifique.	\N	\N	\N	f
 23019	1005	IMAGE	image	\N	1016	Serpent liane perroquet © Raphaël Gailhac	\N	f
@@ -1550,14 +1583,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 23021	1005	TEXT	questions.2.answer	De nombreux scientifiques alertent sur la crise de biodiversité actuelle, qui pourrait être la 6<sup>e</sup> extinction de masse à l’échelle des temps géologiques. En effet, le rythme actuel des disparitions d’espèces observé est 100 à 1000 fois supérieur au taux naturel de disparition ! On estime que près de la moitié des espèces vivantes pourrait disparaitre d’ici un siècle.\nLes activités humaines en sont les principales responsables. Cinq causes majeures sont identifiées, qui se conjuguent entre elles : destruction et fragmentation des milieux, surexploitation des espèces, pollutions, changements climatiques et introduction d’espèces exotiques envahissantes.	\N	\N	\N	f
 23022	1005	TEXT	questions.0.answer	La biodiversité, ou diversité biologique, désigne la diversité des formes de vie sur terre, c’est à dire l’ensemble du tissu vivant de la planète : plantes, animaux, champignons, bactéries, etc. Elle est le produit de la lente évolution du monde du vivant, depuis les premiers organismes connus datant de 3,5 milliards d’années.\nElle comprend 3 niveaux de définition :\n    • La diversité des écosystèmes, c’est-à-dire des milieux de vie : océans, prairies, forêts, etc. jusqu’à l’échelle d’un organisme ou d’une cellule !\n    • La diversité des espèces qui vivent dans ces milieux, et sont en relation les unes avec les autres ;\n    • La diversité génétique, c’est-à-dire la diversité des individus au sein de ces espèces.\nDe nombreux biens et services indispensables aux activités humaines en dépendent : nourriture, pollinisation, médicaments, matières premières, fertilisation des sols, épuration de l’eau, etc. 	\N	\N	\N	f
 23023	1005	TEXT	questions.0.quote	La biodiversité est encore largement méconnue : on connait seulement 1,8 million d’espèces sur une diversité estimée d’environ 100 millions d’espèces !	\N	\N	\N	f
-21530	1013	TEXT	understand.paragraphs.1.text	Les estimations actuelles du nombre d'espèces présentes sur Terre oscillent entre 8 et 10 millions (hors bactéries), et seules un peu plus de 2 millions d'espèces ont été décrites à ce jour. A l’échelle mondiale, environ 20 000 nouvelles espèces sont décrites chaque année. Cette tâche titanesque est complexifiée par le manque de spécialistes qui s’y consacrent, en particulier chez les invertébrés. \nCependant, le travail de description morphologique est désormais accompagné de l’utilisation d’analyses ADN qui permettent de distinguer des espèces « cryptiques » c’est-à-dire très semblables morphologiquement mais en réalité différentes génétiquement, ce qui peut par exemple expliquer des différences d’adaptations aux conditions environnementales.	\N	\N	\N	f
-21531	1013	TEXT	understand.title2	La taxonomie : la science de la description du vivant	\N	\N	\N	f
-21532	1013	TEXT	presentation.descriptionTerritories	nouvelles espèces ont été décrites par an	\N	\N	\N	f
-21533	1013	TEXT	understand.paragraphs.0.title	Quelques exemples de découvertes récentes	\N	\N	\N	f
-21534	1013	TEXT	understand.keyword	especes	\N	\N	\N	f
-21535	1013	TEXT	ecogestures.title	Comment aider à la progression des connaissances scientifiques ?	\N	\N	\N	f
-21536	1013	IMAGE	presentation.image	\N	1050	© Fabien Lefebvre	\N	f
-21537	1013	TEXT	understand.paragraphs.1.title	Encore un grand nombre d’espèces inconnues	\N	\N	\N	f
 20797	1011	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 20798	1011	TEXT	understand.text2	On qualifie de primaire, ou vierge, une forêt où aucune trace d’activité humaine (défrichement, exploitation, fragmentation), passée ou présente, n’est clairement visible et où les processus écologiques ne sont pas perturbés. A l’échelle mondiale, on estime que plus de 80 % des forêts primaires ont disparu, remplacées par des forêts secondaires moins riches écologiquement, et les reliquats sont de plus en plus réduits et fragmentés.  \n\nAvec plus de 90 % de forêts encore intactes, la Guyane présente l’un des territoires les plus vastes de forêts primaires encore préservées.\n	\N	\N	\N	f
 20799	1011	TEXT	understand.text1	Les forêts primaires et autres écosystèmes forestiers des outre-mer présentent une biodiversité considérable. Les territoires ultramarins sont cependant très hétérogènes dans leur couverture forestière et leurs caractéristiques : des forêts tropicales humides de Guyane qui couvrent la quasi-totalité du territoire aux forêts boréales de conifères de Saint-Pierre-et-Miquelon, chaque territoire possède une couverture forestière et une biodiversité qui lui est propre. Seules les îles subantarctiques et la Terre Adélie ne présentent pas de forêts sur leurs territoires. 	\N	\N	\N	f
@@ -1579,10 +1604,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20811	1011	IMAGE	understand.image	\N	1046	Forêt de Morne-Rouge, Martinique ©  G. Gigot	\N	f
 20812	1011	TEXT	presentation.description	du territoire d’outre-mer est occupé par des forêts	\N	\N	\N	f
 20813	1011	TEXT	presentation.logoUrl	https://naturefrance.fr/indicateurs/taux-de-boisement-dans-les-outre-mer	\N	\N	\N	f
-21538	1013	TEXT	understand.paragraphs.0.text	Parmi les espèces récemment décrites dans les territoires d’outre-mer français, se trouvent par exemple une nouvelle espèce de grenouille, la Rainette *Boana courtoisae* en Guyane, un serpent fouisseur, *Madatyphlops eudelini*, à Mayotte ou encore *[Psychotria paulae](https://inpn.mnhn.fr/espece/cd_nom/851490)*, une plante extrêmement rare, endémique de Tahiti (Polynésie française).  \n  \nCes découvertes sont parfois réalisées parmi les spécimens conservés dans des musées, collectés depuis longtemps sans avoir été correctement identifiés. Malheureusement, il arrive qu’il s’agisse d’espèces déjà éteintes dans la nature, c’est par exemple le cas en Guadeloupe du lézard  *Leiocephalus roquetus* décrit en 2021. 	\N	\N	\N	f
-21539	1013	IMAGE	understand.image	\N	1052	Tri à la loupe binoculaire d’échantillons récoltés sur le terrain ©  T. Magniez/MNHN/PNI	\N	f
-21540	1013	TEXT	presentation.description	nouvelles espèces décrites par an en outre-mer	\N	\N	\N	f
-21541	1013	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/docs/communication/livretInpn/Livret-INPN-especes-2020.pdf	\N	\N	\N	f
 23024	1005	TEXT	questions.1.answer	La majorité des territoires d’outre-mer français sont situés dans des régions particulièrement riches en espèces, notamment en espèces endémiques, ce qu’on appelle des points chauds de la biodiversité (« Hotspots » en anglais) (Nouvelle-Calédonie, Antilles, Mayotte, La Réunion, Wallis et Futuna, Polynésie française). Avec la Guyane, la France possède une partie du plus grand massif forestier de la planète, l’Amazonie, et les territoires français réunissent 10 % des récifs coralliens répartis dans trois océans. Certains territoires isolés comme les îles subantarctiques abritent une faune et une flore adaptées à des climats extrêmes. 	\N	\N	\N	f
 23025	1005	TEXT	inpn.title	L'Inventaire national du patrimoine naturel	\N	\N	\N	f
 23026	1005	TEXT	questions.2.question	La biodiversité menacée	\N	\N	\N	f
@@ -1607,6 +1628,24 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 23037	1005	TEXT	questions.2.quote	L'érosion de la biodiversité est une menace pour l'avenir de l'humanité.	\N	\N	\N	f
 23038	1005	TEXT	understand.title	Les indicateurs, des outils pour évaluer la biodiversité	\N	\N	\N	f
 23039	1005	TEXT	questions.1.question	Les outre-mer, des points chauds de biodiversité	\N	\N	\N	f
+31571	1013	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
+31572	1013	TEXT	understand.text2	La taxonomie, ou taxinomie, est la science qui permet de décrire et de classer le vivant. L’espèce est l’unité taxonomique de base. Chaque espèce décrite est classée avec d’autres espèces aux caractéristiques communes au sein d’un même genre, puis d’une famille, d’un ordre, etc. Chaque espèce est identifiée par un nom scientifique latin en deux mots, par exemple *Pelecanus occidentalis* pour le Pelican brun. Cette dénomination en latin permet un référentiel mondial commun, car une même espèce peut posséder des dizaines de noms usuels différents (dits noms "vernaculaires") à travers le monde, selon les langues et les régions. 	\N	\N	\N	f
+31573	1013	TEXT	understand.text1	Plus de 80 % des nouvelles découvertes d'espèces chaque année en France sont réalisées dans les territoires d'outre-mer. Certaines de ces nouvelles descriptions sont issues d’expéditions scientifiques, par exemple celles menées en Guyane en 2014 et en Nouvelle-Calédonie entre 2016 et 2019 par le Muséum national d’Histoire naturelle dans le cadre de la campagne « [la Planète revisitée](https://www.mnhn.fr/fr/recherche-expertise/lieux/planete-revisitee) », mais d’autres sont également réalisées par des taxonomistes non-professionnels. Il peut s'agir également d'espèces déjà décrites dans des territoires frontaliers mais dont la présence n'avait pas encore été observée sur le territoire national. Dans la plupart des cas, il s’agit de petits organismes invertébrés et d’organismes marins (insectes, mollusques, crustacés, vers marins).   \n  \nLe chiffre présenté ici représente une moyenne du nombre de découvertes par an sur les trois dernières années. 	\N	\N	\N	f
+31574	1013	TEXT	territories.title	Nouvelles espèces décrites par an	\N	\N	\N	f
+31575	1013	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
+31576	1013	TEXT	understand.title1	L'outre-mer : un vivier d'espèces à découvrir	\N	\N	\N	f
+31577	1013	TEXT	understand.paragraphs.1.text	Les estimations actuelles du nombre d'espèces présentes sur Terre oscillent entre 8 et 10 millions (hors bactéries), et seules un peu plus de 2 millions d'espèces ont été décrites à ce jour. A l’échelle mondiale, environ 20 000 nouvelles espèces sont décrites chaque année. Cette tâche titanesque est complexifiée par le manque de spécialistes qui s’y consacrent, en particulier chez les invertébrés. \nCependant, le travail de description morphologique est désormais accompagné de l’utilisation d’analyses ADN qui permettent de distinguer des espèces « cryptiques » c’est-à-dire très semblables morphologiquement mais en réalité différentes génétiquement, ce qui peut par exemple expliquer des différences d’adaptations aux conditions environnementales.	\N	\N	\N	f
+31578	1013	TEXT	understand.title2	La taxonomie : la science de la description du vivant	\N	\N	\N	f
+31579	1013	TEXT	presentation.descriptionTerritories	nouvelles espèces ont été décrites par an	\N	\N	\N	f
+31580	1013	TEXT	understand.paragraphs.0.title	Quelques exemples de découvertes récentes	\N	\N	\N	f
+31581	1013	TEXT	understand.keyword	especes	\N	\N	\N	f
+31582	1013	TEXT	ecogestures.title	Comment aider à la progression des connaissances scientifiques ?	\N	\N	\N	f
+31583	1013	IMAGE	presentation.image	\N	1050	© Fabien Lefebvre	\N	f
+31584	1013	TEXT	understand.paragraphs.1.title	Encore un grand nombre d’espèces inconnues	\N	\N	\N	f
+31585	1013	TEXT	understand.paragraphs.0.text	Parmi les espèces récemment décrites dans les territoires d’outre-mer français, se trouvent par exemple une nouvelle espèce de grenouille, la Rainette *Boana courtoisae* en Guyane, un serpent fouisseur, *Madatyphlops eudelini*, à Mayotte ou encore *[Psychotria paulae](https://inpn.mnhn.fr/espece/cd_nom/851490)*, une plante extrêmement rare, endémique de Tahiti (Polynésie française).  \n  \nCes découvertes sont parfois réalisées parmi les spécimens conservés dans des musées, collectés depuis longtemps sans avoir été correctement identifiés. Malheureusement, il arrive qu’il s’agisse d’espèces déjà éteintes dans la nature, c’est par exemple le cas en Guadeloupe du lézard  *Leiocephalus roquetus* décrit en 2021. 	\N	\N	\N	f
+31586	1013	IMAGE	understand.image	\N	1343	Tri d’échantillons récoltés sur le terrain en Guyane © Guillaume Feuillet 	\N	f
+31587	1013	TEXT	presentation.description	nouvelles espèces décrites par an en outre-mer	\N	\N	\N	f
+31588	1013	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/docs/communication/livretInpn/Livret-INPN-especes-2020.pdf	\N	\N	\N	f
 24891	1018	TEXT	secondActionName	Je donne de mon temps	\N	\N	\N	f
 24892	1018	LINK	secondActionLink	Découvrez les sciences participatives	\N	\N	https://preprod.biodiversite-outre-mer.fr/sciences-participatives	f
 24893	1018	TEXT	description	Iorem Ipsum	\N	\N	\N	f
@@ -1659,9 +1698,22 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 24909	1025	TEXT	action.cards.1.description	Je limite les bruits (cris, musique…) pour que ma présence reste discrète.  	\N	\N	\N	f
 24910	1025	TEXT	presentation.description	Pour ne pas perturber les occupants des milieux naturels, mieux vaut se faire discret et ne pas laisser de traces de son passage.	\N	\N	\N	f
 24911	1025	TEXT	action.title	Pour profiter de la nature sans déranger ses occupants 	\N	\N	\N	f
+31306	1007	TEXT	header.subtitle	C’est le Livre Bleu outre-mer, synthèse des travaux des Assises des outre-mer, qui propose en 2018 la création d’un Compteur de la biodiversité. Ce nouveau dispositif vient notamment enrichir le portail [Naturefrance](https://naturefrance.fr/) en présentant un focus sur les territoires ultramarins. Outil actualisé et pérenne, il favorisera la rencontre, la synergie des citoyens et des acteurs de la biodiversité.  \n  \nLa démarche est collaborative et partenariale avec les territoires, notamment pour relater les contextes culturels et mettre en avant des enjeux spécifiques. Des études, actuellement en cours, viennent compléter l’initiative : le premier panorama des programmes de sciences participatives dans les territoires, et une enquête sur la perception de la nature et l’utilisation des outils numériques. 	\N	\N	\N	f
+31307	1007	TEXT	header.title	Pourquoi un Compteur de la biodiversité en outre-mer ?	\N	\N	\N	f
+31308	1007	CHECKBOX	header.shadowed	true	\N	\N	\N	f
+31309	1007	TEXT	goal3.title	Encourager chacun à agir	\N	\N	\N	f
+31310	1007	TEXT	partners.partners.1.url	http://www.pn-martinique.com/	\N	\N	\N	f
+31311	1007	IMAGE	partners.partners.3.logo	\N	1272	DTAM Saint-Pierre et Miquelon	\N	f
+31312	1007	IMAGE	goal2.image	\N	1029	Tortue olivâtre, Guyane © Raphael Gailhac	\N	f
+31313	1007	IMAGE	goal1.image	\N	1030	Jaguar, Guyane © Raphaël Gailhac	\N	f
 24912	1025	TEXT	understand.quote	Une tortue en ponte est très sensible au dérangement, cela peut la conduire à abandonner son nid. 	\N	\N	\N	f
 24913	1025	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 24914	1025	TEXT	action.cards.0.description	Je reste à distance des animaux sauvages que je rencontre et je ne cherche pas à les toucher	\N	\N	\N	f
+31314	1007	IMAGE	partners.partners.2.logo	\N	1271	Criobe	\N	f
+31315	1007	TEXT	goal2.title	Valoriser les actions des territoires	\N	\N	\N	f
+31316	1007	TEXT	partners.partners.2.url	http://www.criobe.pf/	\N	\N	\N	f
+31317	1007	IMAGE	header.background	\N	1028	Monts Pito Hiti et Orohena, Tahiti © Jean-Yves Meyer	\N	f
+31318	1007	IMAGE	partners.partners.0.logo	\N	1273	Observatoire Martiniquais de la biodiversité	\N	f
 20203	1024	TEXT	presentation.name	Je protège les milieux contre l’introduction d’espèces exotiques envahissantes	\N	\N	\N	f
 20204	1024	IMAGE	action.cards.0.icon	\N	1122	Planter	\N	f
 20205	1024	IMAGE	presentation.image	\N	1120	© Hans-Jörg Hellwig / CC BY-SA 3.0	\N	f
@@ -1696,32 +1748,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20228	1027	TEXT	understand.quote	256 espèces de végétaux sont menacées en Guadeloupe	\N	\N	\N	f
 20229	1027	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20230	1027	TEXT	action.cards.0.description	Je ne sors pas des sentiers balisés, ils sont là pour me permettre de ne pas abimer les milieux.	\N	\N	\N	f
-28534	1019	TEXT	examples.projects.1.description	Débuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et La Réunion, le STOC-Guyane a pour but de suivre les variations d'abondances d'oiseaux communs sur le long terme pour évaluer l'impact des activités humaines. Le programme demande une implication régulière et nécessite une formation au protocole utilisé et la reconnaissance des espèces. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
-28535	1019	IMAGE	images.0.image	\N	1078	© U.S. Fish and Wildlife Service Southeast Region / CC BY 2.0	\N	f
-28536	1019	TEXT	examples.projects.1.target	Ornithologues amateurs ou professionnels (à titre bénévole). Formation nécessaire. 	\N	\N	\N	f
-28537	1019	TEXT	examples.projects.0.target	Plongeurs, apnéistes, pratiquant la photo sous-marine	\N	\N	\N	f
-28538	1019	TEXT	examples.projects.3.subject	Suivi de l’état de santé des récifs de Nouvelle-Calédonie	\N	\N	\N	f
-28539	1019	TEXT	header.subtitle	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.  \n\nFaune, flore, milieu marin ou terrestre, observation ponctuelle ou programme protocolé, trouvez le programme qui vous correspond et contribuez au développement des connaissances !	\N	\N	\N	f
-28540	1019	LINK	examples.projects.1.more	En savoir plus	\N	\N	http://www.gepog.org/Nos-actions/Milieux-terrestres/Suivi-Temporel-des-Oiseaux-Communs-STOC-EPS	f
-28541	1019	TEXT	examples.projects.2.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
-28542	1019	TEXT	header.title	C'est quoi les sciences participatives ?	\N	\N	\N	f
-28543	1019	IMAGE	examples.projects.2.image	\N	1247	Image provisoire	\N	f
-28544	1019	CHECKBOX	header.shadowed	false	\N	\N	\N	f
-28545	1019	TEXT	paragraphs.1.title	Différents objectifs	\N	\N	\N	f
-28546	1019	TEXT	presentation.description	Le terme « sciences participatives » regroupe des programmes acquisition d’informations et de données scientifiques en impliquant une participation active des citoyens. Les observations sont réalisées de manière bénévole, le plus souvent par des non-professionnels. Dans certains cas, une formation au préalable est nécessaire, mais de nombreux programmes sont accessibles sans connaissances naturalistes poussées. 	\N	\N	\N	f
-28547	1019	TEXT	examples.projects.3.actor	Association Pala Dalik	\N	\N	\N	f
-28548	1019	TEXT	paragraphs.2.text	L’équipe du Compteur mène actuellement une étude pour **recenser tous les programmes de sciences participatives dans les territoires ultramarins**. Ces résultats seront disponibles prochainement afin de vous proposer un panorama complet des programmes auxquels vous pouvez participer. 	\N	\N	\N	f
-28549	1019	TEXT	examples.projects.4.title	Ti bèt a limiè, l’Observatoire des lucioles en Guadeloupe	\N	\N	\N	f
-28550	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
-28551	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
-28552	1019	TEXT	paragraphs.0.title	Différents types de programmes 	\N	\N	\N	f
-28553	1019	TEXT	examples.projects.4.actor	An ba loup-la	\N	\N	\N	f
-28554	1019	TEXT	application.subtitle	J'agis en ligne	\N	\N	\N	f
-28555	1019	TEXT	examples.projects.4.target	Tous publics	\N	\N	\N	f
-28556	1019	TEXT	examples.projects.1.title	Le Suivi temporel des oiseaux communs (STOC) en Guyane	\N	\N	\N	f
-28557	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
-28558	1019	TEXT	examples.projects.2.target	Usagers de la mer, tous publics	\N	\N	\N	f
-28559	1019	IMAGE	header.background	\N	1308	Mont Orohena, Tahiti © Darko Cotoras	\N	f
 28740	1012	TEXT	understand.paragraphs.1.text	Créé en 2012, le [Pôle-relais dédié aux zones humides tropicales](https://www.pole-tropical.org/) (PRZHT) constitue un réseau d’échanges entre les acteurs concernés par la conservation, la gestion et la valorisation des zones humides dans les territoires tropicaux français. Il anime, entre autres, le [Réseau national d’observation et d’aide à la gestion des mangroves](https://www.pole-tropical.org/actions/les-actions-du-reseau-dobservation-des-mangroves/) (ROM), l’un des 3 réseaux de suivi de l’[Initiative française pour les Récifs Coralliens (IFRECOR)](https://ifrecor.fr/). Officiellement lancé en 2017, ce réseau regroupe les gestionnaires de mangroves des territoires français concernés aux Antilles, en Guyane, et dans les océans Indien et Pacifique. \n \nEn 2019, le ROM a développé une application smartphone pour permettre à tous de s’entrainer à reconnaitre les différentes espèces de palétuviers qui constituent la mangrove et à signaler les perturbations observées dans les mangroves (déchets, défrichements, mortalités, etc.). Chaque utilisateur peut ainsi devenir pleinement acteur de la protection des mangroves au sein de son territoire.  \nVous aussi, devenez observateurs en [téléchargeant l'application ROM](https://rom.pole-tropical.org/home) !\n	\N	\N	\N	f
 28741	1012	TEXT	understand.title2	Des bénéfices pour l’Homme, mais un écosystème soumis à de nombreuses pressions 	\N	\N	\N	f
 28742	1012	TEXT	presentation.descriptionTerritories	des mangroves font l'objet de mesures de conservation	\N	\N	\N	f
@@ -1828,7 +1854,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 1330, true);
+SELECT pg_catalog.setval('public.image_seq', 1343, true);
 
 
 --
@@ -1849,7 +1875,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1107, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 30468, true);
+SELECT pg_catalog.setval('public.page_element_seq', 31588, true);
 
 
 --
