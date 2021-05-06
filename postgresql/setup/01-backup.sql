@@ -684,6 +684,10 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 1341	image/jpeg	37370.jpg
 1342	image/jpeg	cabane-dobservation,-sentier-du-site-de-nidification-du-coq-de-roche-9a6b9865-f967-4cd0-b8f6-d59a654fe502_copie.jpg
 1343	image/jpeg	mission-dinventaire-du-mont-itoupe-67e621f9-ff4f-49b2-867c-b2a2d5c8c17a.jpg
+1344	image/jpeg	24771.jpg
+1345	image/jpeg	24771.jpg
+1346	image/jpeg	Aspisoma ignitum Julien Touroult.jpg
+1347	image/jpeg	Conure cuivré Raphael Gailhac.jpg
 \.
 
 
@@ -746,71 +750,14 @@ COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 --
 
 COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdin;
-1096	1000	SAINT_PIERRE_ET_MIQUELON	7	
-1089	1000	MARTINIQUE	18	
-1094	1000	REUNION	34	
-1090	1000	SAINT_MARTIN	11	
-1092	1000	NOUVELLE_CALEDONIE	38	
-1095	1000	MAYOTTE	19	
-1091	1000	SAINT_BARTHELEMY	11	
-1093	1000	POLYNESIE_FRANCAISE	36	
 1097	1005	OUTRE_MER	25.21552908	%
-1054	1001	SAINT_PIERRE_ET_MIQUELON	0	
-1050	1001	GUADELOUPE	1399	
-1051	1001	MARTINIQUE	700	
-1053	1001	REUNION	1558	
-1074	1001	SAINT_MARTIN	63	
-1052	1001	NOUVELLE_CALEDONIE	8673	
-1071	1001	GUYANE	2551	
-1075	1001	MAYOTTE	335	
-1072	1001	SAINT_BARTHELEMY	70	
 1049	1001	OUTRE_MER	17846	
-1073	1001	POLYNESIE_FRANCAISE	2673	
-1082	1003	GUADELOUPE	28.63712677	%
-1083	1003	MARTINIQUE	19.40384829	%
-1084	1003	REUNION	34.23298707	%
-1086	1003	GUYANE	11.11842105	%
-1085	1003	MAYOTTE	35.92505855	%
 1081	1003	OUTRE_MER	19.6979807	%
-1035	1007	GUADELOUPE	60	%
-1036	1007	MARTINIQUE	50	%
-1038	1007	REUNION	21.42857143	%
-1076	1007	SAINT_MARTIN	33.33333333	%
-1037	1007	NOUVELLE_CALEDONIE	18.51851852	%
-1077	1007	MAYOTTE	30	%
 1034	1007	OUTRE_MER	29.26829268	%
-1021	1002	SAINT_PIERRE_ET_MIQUELON	2112	
-1013	1002	GUADELOUPE	10527	
-1014	1002	MARTINIQUE	7422	
-1019	1002	REUNION	10915	
-1015	1002	SAINT_MARTIN	2234	
-1017	1002	NOUVELLE_CALEDONIE	28092	
-1020	1002	MAYOTTE	6162	
-1016	1002	SAINT_BARTHELEMY	2140	
 1012	1002	OUTRE_MER	88966	
-1018	1002	POLYNESIE_FRANCAISE	11776	
-1101	1006	GUADELOUPE	23	
-1100	1006	NOUVELLE_CALEDONIE	281.6666667	
-1104	1006	GUYANE	179.6666667	
-1099	1006	MAYOTTE	6.333333333	
 1033	1006	OUTRE_MER	583.3333333	
-1088	1000	GUADELOUPE	17	
 1087	1000	OUTRE_MER	60	
-1098	1006	SAINT_PIERRE_ET_MIQUELON	0	
-1107	1006	MARTINIQUE	29	
-1103	1006	REUNION	13.33333333	
-1102	1006	SAINT_MARTIN	1.333333333	
-1105	1006	SAINT_BARTHELEMY	0.333333333	
-1106	1006	POLYNESIE_FRANCAISE	49.66666667	
-1044	1004	GUADELOUPE	42.26190476	%
-1048	1004	SAINT_PIERRE_ET_MIQUELON	13.04347826	%
-1045	1004	MARTINIQUE	46.22641509	%
-1047	1004	REUNION	35.2	%
-1046	1004	NOUVELLE_CALEDONIE	45.78774617	%
-1080	1004	MAYOTTE	15.78947368	%
-1078	1004	SAINT_BARTHELEMY	0	%
 1043	1004	OUTRE_MER	84.64046368	%
-1079	1004	POLYNESIE_FRANCAISE	42.34972678	%
 \.
 
 
@@ -839,16 +786,16 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1005	indicateurs	indicators	Tous les indicateurs
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
 1007	apropos	about	A propos
-1019	sciences-participatives	science	Sciences participatives
 1013	nouvelles-especes	indicator	Nouvelles espèces décrites
 1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
 1000	accueil	home	Accueil
 1015	martinique	territory	Martinique
-1016	agir-ensemble	act	Agir ensemble
 1017	ecogestes	ecogestures	Accueil écogestes
 1021	reunion	territory	La Réunion
+1016	agir-ensemble	act	Agir ensemble
 1023	ne-pas-jeter-dechets-nature	ecogesture	Je ne jette pas mes déchets dans la nature
 1026	limiation-plastique	ecogesture	Réduire les déchets et le plastique
+1019	sciences-participatives	science	Sciences participatives
 1018	ecogeste-agir	ecogesture-act	Encadré "agir pour la biodiversité" fiche écogeste
 \.
 
@@ -1232,9 +1179,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28073	1021	IMAGE	species.0.image	\N	1097	*Phelsuma inexpectata* © Philippe Gourdain	\N	f
 28074	1021	TEXT	events.1.date	-22 000 ans	\N	\N	\N	f
 28075	1021	TEXT	ecosystems.ecosystems.2.name	Les récifs coralliens	\N	\N	\N	f
-31815	1016	TEXT	science.project.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
-31816	1016	TEXT	header.title	Agir ensemble pour préserver la biodiversité remarquable des outre-mer	\N	\N	\N	f
-31817	1016	CHECKBOX	header.shadowed	true	\N	\N	\N	f
 28076	1021	TEXT	interests.locations.4.name	[L’étang de Saint-Paul](https://reserve-etangsaintpaul.fr/fr/accueil)	\N	\N	\N	f
 31244	1020	TEXT	species.5.description	Les Kaoris, sont des arbres de grande taille, dont le tronc peut atteindre un diamètre impressionnant. On peut ainsi observer un spécimen au tronc de 2,70 m de diamètre dans le parc de la Rivière Bleu.  \nLa répartition du Kaori du mont Panié ([*Agathis montana*](https://www.endemia.nc/flore/fiche55)) est restreinte à la forêt de nuage du massif du même nom, tandis que le Kaori de forêt ([*Agathis lanceolata*](https://www.endemia.nc/flore/fiche57)) s'observe du sud de la Grande Terre jusqu'à Poya, voir Touho en Province Nord. Une troisième espèce ([*Agathis ovata*](https://www.endemia.nc/flore/fiche56)) est cantonnée à la moitié Sud de la Grande Terre. \n\nStatut dans la Liste rouge mondiale pour *Agathis montana* : en danger critique ; pour *Agathis lanceolata* : vulnérable.  \nNoms en langues kanak : Kaori du Mt Panié : Dayu Biik (nemi) ; Kaori de forêt : mugé (xârâcùù)	\N	\N	\N	f
 31245	1020	TEXT	species.6.description	Le Gecko géant de Nouvelle-Calédonie ([*Rhacodactylus leachianus*](https://www.endemia.nc/faune/fiche1024)) est le plus grand gecko au monde. D’un aspect massif, avec une queue courte et une peau plissée grise à brune, il peut atteindre 25,5 cm de long. Nocturne et arboricole, on le rencontre dans les forêts humides, et en densité plus importante sur les îlots non envahis par les chats. Il est encore régulièrement braconné pour le marché de la terrariophilie.\n\nStatut dans la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
@@ -1259,8 +1203,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 31264	1020	IMAGE	ecosystems.ecosystems.6.image	\N	1337	Image manquante	\N	f
 31265	1020	TEXT	risks.risks.1.description	Une même thématique relève le plus souvent de compétences « croisées » entre divers acteurs institutionnels. Chaque Province réglemente, contrôle et veille à la bonne application des réglementations environnementales mises en œuvre localement, sur son propre domaine géographique. Chacune dispose de son propre Code de l’environnement.  \nLe gouvernement de la Nouvelle-Calédonie réglemente et exerce quant à lui un droit d'exploration, d’exploitation, de gestion et de conservation des ressources naturelles, biologiques et non biologiques sur l’ensemble de la zone économique exclusive.  \nPar ailleurs, toutes les questions relatives à l’environnement ne peuvent s’envisager sans y intégrer une dimension coutumière et culturelle composante spécifique forte du territoire. \n\nToutes ces réglementations sont évolutives et régulièrement mises à jour et complétées, avec une volonté de cohérence à souligner entre les différents acteurs impliqués.  \nDans ce cadre, et au-delà des actions menées directement par les gestionnaires, d’autres acteurs publics et privés interviennent activement sur le terrain avec pour objectif la préservation de l’environnement (instituts de recherche, chambres consulaires, agences, GIP, associations, ONG).	\N	\N	\N	f
 31266	1020	TEXT	interests.locations.2.description	Cette région de 43 970 ha, [inscrite sur la Convention de Ramsar](https://www.province-sud.nc/information/lacs-grand-sud-inscrits-convention-ramsar) depuis 2014, se compose de forêts humides, de maquis miniers, de marais arbustifs et de rivières, ruisseaux et lacs intermittents et permanents, notamment le lac de Yaté. Elle abrite des espèces qui ne vivent nulle part ailleurs. Considérée comme le plus grand réservoir d’eau douce de Nouvelle-Calédonie, cette région repose sur un réseau d’eau souterrain original et complexe, unique au monde.	\N	\N	\N	f
-31818	1016	IMAGE	science.project.image	\N	1282	Image manquante	\N	f
-31819	1016	TEXT	science.title	Les sciences participatives	\N	\N	\N	f
 26460	1004	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 31267	1020	TEXT	interests.locations.1.description	Depuis juillet 2008, les lagons de Nouvelle-Calédonie sont inscrits sur la [Liste du patrimoine mondial de l’UNESCO](https://whc.unesco.org/fr/list/1115/) en raison de leur diversité exceptionnelle et de leur bon état de conservation. Ce bien "en série", c'est à dire composé de six zones géographiques distinctes a été le premier site ultra-marins à être reconnu comme tel. 	\N	\N	\N	f
 31268	1020	TEXT	ecosystems.ecosystems.3.name	Les forêts sèches	\N	\N	\N	f
@@ -1313,27 +1255,44 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 31292	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
 31293	1020	IMAGE	ecosystems.ecosystems.7.image	\N	1338	Image manquante	\N	f
 31294	1020	TEXT	interests.locations.4.name	Le parc provincial de la Côte oubliée (*Woen Vùù – Pwa Pereeù*)	\N	\N	\N	f
-31820	1016	TEXT	science.project.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré. Le projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. 	\N	\N	\N	f
-31821	1016	TEXT	science.subtitle	Les sciences participatives permettent à tous les curieux de la nature, du débutant à l’expérimenté, de contribuer à l'amélioration des connaissances sur la biodiversité en fournissant aux scientifiques un grand nombre de données de terrain.	\N	\N	\N	f
-31822	1016	TEXT	ecogestures.title	Découvrez les écogestes	\N	\N	\N	f
-31823	1016	IMAGE	header.background	\N	1335	Agricultrices, Mayotte © Bertrand Fanonnel	\N	f
-31824	1016	TEXT	header.subtitle	Réfléchir à son impact, changer ses habitudes, participer à la progression des connaissances sur les espèces et les espaces, donner de son temps dans des actions de terrain : chacun, à son échelle, peut agir et s’investir pour la préservation de la biodiversité de son territoire.	\N	\N	\N	f
-31825	1016	TEXT	ecogestures.subtitle	Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.	\N	\N	\N	f
 31295	1007	IMAGE	partners.partners.1.logo	\N	1281	Parc naturel régional de la Martinique	\N	f
 31296	1007	TEXT	partners.partners.0.url	http://www.biodiversite-martinique.fr/	\N	\N	\N	f
 31297	1007	TEXT	goal2.quote	*Le Compteur constituera un signal d’alerte et donnera une visibilité forte et essentielle pour sensibiliser à l’évolution de la biodiversité.*  Livre bleu des outre-mer, 2018. 	\N	\N	\N	f
 31298	1007	TEXT	goal1.title	Partager la connaissance scientifique	\N	\N	\N	f
 31299	1007	IMAGE	goal2.quoteImage	\N	1031	Coq-de-roche © Raphaël Gailhac 	\N	f
+31975	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
+31976	1019	TEXT	examples.projects.2.subject	Espèces marines	\N	\N	\N	f
+31977	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
 31300	1007	TEXT	goal2.description	De nombreuses actions locales sont mises en place afin de tenter de préserver les écosystèmes et les espèces. Donner de la visibilité aux acteurs locaux, partager les expériences et les réussites, au bénéfice de tous, c’est également l’un des objectifs du Compteur. 	\N	\N	\N	f
 31301	1007	TEXT	goal3.description	Chacun, à son échelle, peut agir pour préserver la biodiversité. Connaitre et appliquer des gestes simples, modifier ses habitudes et son comportement ou encore s’investir dans des programmes de sciences participatives, tout le monde est concerné par la préservation de la biodiversité. Le rôle du Compteur est d’accompagner les citoyens en partageant des informations claires et adaptées à tous les territoires, et en encourageant à se mobiliser.	\N	\N	\N	f
 31302	1007	TEXT	partners.partners.3.url	http://www.saint-pierre-et-miquelon.developpement-durable.gouv.fr/	\N	\N	\N	f
 31303	1007	TEXT	partners.title	Partenariats et collaborations 	\N	\N	\N	f
 31304	1007	TEXT	goal1.description	Quelles sont les espèces présentes dans ce territoire ? Comment évoluent leurs populations ? Quel est l’état de santé des récifs coralliens ? Pour répondre à ces questions et bien d’autres, différents paramètres, appelés « indicateurs », sont mesurés par les scientifiques pour suivre l’évolution de l’état de la biodiversité. Le Compteur a pour mission de rendre compte de l’état de ces connaissances dans les territoires en s'appuyant notamment sur l'[ONB](https://naturefrance.fr/), l'[INPN](https://inpn.mnhn.fr/accueil/index) et les observatoires locaux. 	\N	\N	\N	f
 31305	1007	IMAGE	goal3.image	\N	1274	 © Observatoire Martiniquais de la biodiversité	\N	f
+31978	1019	TEXT	examples.projects.0.title	La photo-identification des tortues marines à La Réunion	\N	\N	\N	f
+31979	1019	TEXT	examples.projects.0.subject	Suivi individuel des tortues marines	\N	\N	\N	f
+31980	1019	LINK	examples.projects.3.more	En savoir plus	\N	\N	https://www.facebook.com/paladalik/	f
+31981	1019	TEXT	examples.projects.4.subject	Insectes lumineux	\N	\N	\N	f
+31982	1019	TEXT	examples.projects.3.title	Le Réseau d’observation des récifs coralliens (RORC) de Nouvelle-Calédonie	\N	\N	\N	f
+31983	1019	TEXT	examples.projects.1.actor	Groupe d’étude et de protection des oiseaux de Guyane (GEPOG)	\N	\N	\N	f
+31984	1019	IMAGE	examples.projects.1.image	\N	1347	Conure cuivré, Guyane © Raphael Gailhac	\N	f
+31985	1019	IMAGE	images.2.image	\N	1341	Sensibilisation à la biodiversité des récifs de Mayotte © Fanny Cautain / OFB	\N	f
+31986	1019	IMAGE	examples.projects.4.image	\N	1346	*Aspisoma ignitum* © Julien Touroult / INPN 	\N	f
+31987	1019	TEXT	paragraphs.0.text	Certains programmes se basent sur l’application d’un **protocole précis** (durée d’observation, distance couverte, nombre de points d’écoute, etc.). Ils nécessitent souvent une formation à la méthode et une implication sérieuse et régulière, car la qualité des données récoltées dépend de la bonne mise en œuvre du protocole. C’est le cas par exemple du Suivi temporel des oiseaux communs (STOC).\n\nD’autres programmes proposent de **faire remonter les observations ponctuelles ciblant une ou plusieurs espèces spécifiques**, parfois à une période précise ou sur un espace délimité. Par exemple les programmes de photo-identification de tortues ou de mammifères marins.\n\nLes signalements opportunistes permettent de faire remonter des observations occasionnelles, **comme des évènements inhabituels**, ou sur des espèces, une période ou un site non-ciblés. 	\N	\N	\N	f
+31988	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
+31989	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
+31990	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
 28785	1001	TEXT	interests.locations.2.name	La Réserve naturelle nationale des îles de Petite Terre	\N	\N	\N	f
 28786	1001	TEXT	ecosystems.ecosystems.3.description	En Guadeloupe, les mangroves se trouvent principalement en bordure du Grand et du Petit Cul-de-Sac marin et à Marie-Galante. On distingue 3 types de mangroves : la mangrove de bord de mer à la salinité constante est le territoire du Palétuvier rouge (*Rhizophora mangle*) ; la mangrove arbustive à une dizaine de mètres du rivage, où la salinité est extrême, où les Palétuviers noirs (*Avicennia germinans* et *A. schaueriana*) abondent ; la mangrove haute, au-delà, où l’on trouve Palétuviers blancs et gris (*Laguncularia racemosa* et *Conocarpus erectus*). On y trouve de nombreuses espèces de crabes et d’oiseaux. 	\N	\N	\N	f
+31991	1019	TEXT	examples.projects.4.description	Relai guadeloupéen de l’Observatoire des vers luisants et lucioles, l’observatoire Ti bèt a limiè a commencé ses activités en 2019. Les participants sont invités à faire remonter leurs observations de plusieurs espèces d’insectes lumineux (lucioles et taupins), afin de mieux connaitre leur biologie et leur écologie, identifier les facteurs favorisant leur présence ou leur régression et sensibiliser la population à leur maintien.	\N	\N	\N	f
+31992	1019	IMAGE	images.1.image	\N	1291	Observation des oiseaux marins à Mayotte © Fanny Cautain / OFB	\N	f
+31993	1019	TEXT	examples.projects.3.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
+31994	1019	TEXT	examples.projects.2.actor	Parc marin de Mayotte	\N	\N	\N	f
 28787	1001	TEXT	events.10.date	2020 - 2029	\N	\N	\N	f
 28788	1001	TEXT	events.0.date	-3000 ans	\N	\N	\N	f
+31995	1019	LINK	examples.projects.4.more	En savoir plus	\N	\N	https://www.anbaloup-la.fr/observatoire-lucioles/	f
+31996	1019	TEXT	paragraphs.1.text	La plupart des programmes permettent d’alimenter des bases de données collaboratives. Certains projets sont adossés à des programmes de recherche et visent à répondre à une question précise. D’autres mettent en avant en premier lieu un fort objectif de pédagogie, d’acquisition de connaissances et de sensibilisation à la démarche scientifique des observateurs.\n	\N	\N	\N	f
+31997	1019	IMAGE	examples.projects.0.image	\N	1081	© Cynomana  / CC BY-SA 4.0 	\N	f
 20111	1023	IMAGE	presentation.file	\N	1113	jeter ses déchets covid	\N	f
 20112	1023	IMAGE	action.cards.2.icon	\N	1116	Tri	\N	f
 20113	1023	TEXT	presentation.name	Je ne jette pas mes déchets dans la nature	\N	\N	\N	f
@@ -1346,6 +1305,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20120	1023	TEXT	action.cards.1.description	Si je suis fumeur, je ne jette jamais mon mégot dans la nature.\nJe peux acheter ou fabriquer un cendrier de poche à garder avec moi.	\N	\N	\N	f
 20121	1023	TEXT	presentation.description	Mégots, sacs plastiques, piles, canettes, vieux filets de pêche, carcasses de voitures… Sur terre comme en mer, tous ces déchets abandonnés dégradent les écosystèmes !	\N	\N	\N	f
 20122	1023	TEXT	action.title	Pour que mes déchets n’impactent pas les milieux 	\N	\N	\N	f
+31998	1019	IMAGE	examples.projects.3.image	\N	1083	© Reefcheck France 	\N	f
+31999	1019	TEXT	examples.projects.3.target	Plongeurs, apnéistes. Formation nécessaire. 	\N	\N	\N	f
+32000	1019	TEXT	paragraphs.2.title	Un état des lieux en cours	\N	\N	\N	f
+32001	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages réguliers le long de parcours prédéfinis	\N	\N	\N	f
 28789	1001	TEXT	identity.populationYear	2017	\N	\N	\N	f
 28790	1001	IMAGE	species.5.image	\N	1171	Image manquante	\N	f
 20123	1023	TEXT	understand.quote	A l’échelle mondiale, on estime que 8 millions de tonnes de plastique finissent chaque année dans les océans ! Et un mégot peut polluer à lui seul 500 litres d’eau.	\N	\N	\N	f
@@ -1359,6 +1322,25 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28796	1001	TEXT	identity.marineArea	90 000	\N	\N	\N	f
 28797	1001	TEXT	events.8.date	2012	\N	\N	\N	f
 28798	1001	TEXT	identity.presentation	Formée de deux îles principales, Basse-Terre et Grande-Terre, séparées par un bras de mer et entourées de plusieurs dépendances et d’îlets, la Guadeloupe, en raison de sa taille, son altitude, sa géologie et la diversité de ses paysages, est le territoire le plus riche en espèces, notamment endémiques, des Petites Antilles.  	\N	\N	\N	f
+32002	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
+32003	1019	TEXT	examples.projects.1.description	Débuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et La Réunion, le STOC-Guyane a pour but de suivre les variations d'abondances d'oiseaux communs sur le long terme pour évaluer l'impact des activités humaines. Le programme demande une implication régulière et nécessite une formation au protocole utilisé et la reconnaissance des espèces. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
+32004	1019	IMAGE	images.0.image	\N	1078	© U.S. Fish and Wildlife Service Southeast Region / CC BY 2.0	\N	f
+32005	1019	TEXT	examples.projects.1.target	Ornithologues amateurs ou professionnels (à titre bénévole). Formation nécessaire. 	\N	\N	\N	f
+32006	1019	TEXT	examples.projects.0.target	Plongeurs, apnéistes, pratiquant la photo sous-marine	\N	\N	\N	f
+32007	1019	TEXT	examples.projects.3.subject	Suivi de l’état de santé des récifs de Nouvelle-Calédonie	\N	\N	\N	f
+32008	1019	TEXT	header.subtitle	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.  \n\nFaune, flore, milieu marin ou terrestre, observation ponctuelle ou programme protocolé, trouvez le programme qui vous correspond et contribuez au développement des connaissances !	\N	\N	\N	f
+32009	1019	LINK	examples.projects.1.more	En savoir plus	\N	\N	http://www.gepog.org/Nos-actions/Milieux-terrestres/Suivi-Temporel-des-Oiseaux-Communs-STOC-EPS	f
+32010	1019	TEXT	examples.projects.2.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
+32011	1019	TEXT	header.title	C'est quoi les sciences participatives ?	\N	\N	\N	f
+32012	1019	IMAGE	examples.projects.2.image	\N	1344	Plongeur à Mayotte © Alexandra Gigou / OFB	\N	f
+32013	1019	CHECKBOX	header.shadowed	true	\N	\N	\N	f
+32014	1019	TEXT	paragraphs.1.title	Différents objectifs	\N	\N	\N	f
+32015	1019	TEXT	presentation.description	Le terme « sciences participatives » regroupe des programmes acquisition d’informations et de données scientifiques en impliquant une participation active des citoyens. Les observations sont réalisées de manière bénévole, le plus souvent par des non-professionnels. Dans certains cas, une formation au préalable est nécessaire, mais de nombreux programmes sont accessibles sans connaissances naturalistes poussées. 	\N	\N	\N	f
+32016	1019	TEXT	examples.projects.3.actor	Association Pala Dalik	\N	\N	\N	f
+32017	1019	TEXT	paragraphs.2.text	L’équipe du Compteur mène actuellement une étude pour **recenser tous les programmes de sciences participatives dans les territoires ultramarins**. Ces résultats seront disponibles prochainement afin de vous proposer un panorama complet des programmes auxquels vous pouvez participer. 	\N	\N	\N	f
+32018	1019	TEXT	examples.projects.4.title	Ti bèt a limiè, l’Observatoire des lucioles en Guadeloupe	\N	\N	\N	f
+32019	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
+32020	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
 20126	1026	IMAGE	presentation.file	\N	1134	test	\N	f
 20127	1026	IMAGE	action.cards.2.icon	\N	1133	jetable	\N	f
 20128	1026	TEXT	presentation.name	Je réduis mes déchets et limite ma consommation de plastique	\N	\N	\N	f
@@ -1374,6 +1356,14 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 20138	1026	TEXT	understand.quote	A l’échelle mondiale, un tiers des déchets plastiques se retrouve dans la nature. Seuls 9% des déchets plastiques sont recyclés dans le monde.	\N	\N	\N	f
 20139	1026	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 20140	1026	TEXT	action.cards.0.description	Je refuse les sacs plastiques à usage unique, j'utilise des sacs réutilisables en tissus ou en matières naturelles.	\N	\N	\N	f
+32021	1019	TEXT	paragraphs.0.title	Différents types de programmes 	\N	\N	\N	f
+32022	1019	TEXT	examples.projects.4.actor	An ba loup-la	\N	\N	\N	f
+32023	1019	TEXT	application.subtitle	J'agis en ligne	\N	\N	\N	f
+32024	1019	TEXT	examples.projects.4.target	Tous publics	\N	\N	\N	f
+32025	1019	TEXT	examples.projects.1.title	Le Suivi temporel des oiseaux communs (STOC) en Guyane	\N	\N	\N	f
+32026	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
+32027	1019	TEXT	examples.projects.2.target	Usagers de la mer, tous publics	\N	\N	\N	f
+32028	1019	IMAGE	header.background	\N	1342	 © Pierre-Olivier Jay	\N	f
 28799	1001	IMAGE	interests.locations.0.image	\N	1006	Rivière dans le Parc national de Guadeloupe © Filo gèn' / CC BY-SA 4.0	\N	f
 28800	1001	TEXT	species.6.name	Le Palétuvier rouge	\N	\N	\N	f
 14286	1030	TEXT	paragraphs.2.text	**Outils de mesure d’audience**\nLe site utilise l’outil d’analyse Matomo. Les traceurs de mesures d’audience issus de Matomo ne nécessitent pas de recueil préalable du consentement de l’utilisateur du fait qu’ils servent uniquement à produire des données statistiques anonymes.\nPour en savoir plus :\nhttps://fr.matomo.org/privacy/\n\n**Politique de confidentialité et RGPD**\nLe Muséum national d’Histoire naturelle porte la plus grande attention à vos données à caractère personnel et s’engage à les protéger.\nIl s'engage à ce que la collecte et le traitement de données à caractère personnel, effectués à partir du présent site, soient conformes à la loi n°78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés ainsi qu’au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 applicable le 25 mai 2018. \n\n**Données personnelles**\nSauf stipulation contraire directement mentionnée, aucune donnée personnelle n’est collectée ni traitée sur le portail « Compteur de biodiversité outre-mer ».	\N	\N	\N	f
@@ -1404,58 +1394,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28635	1014	TEXT	territories.title	Pourcentage de surface des récifs coralliens en diminution	\N	\N	\N	f
 28636	1014	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 28637	1014	TEXT	understand.title1	Le corail, constructeur du récif	\N	\N	\N	f
-31481	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
-31482	1019	TEXT	examples.projects.2.subject	Espèces marines	\N	\N	\N	f
-31483	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
-31484	1019	TEXT	examples.projects.0.title	La photo-identification des tortues marines à La Réunion	\N	\N	\N	f
-31485	1019	TEXT	examples.projects.0.subject	Suivi individuel des tortues marines	\N	\N	\N	f
-31486	1019	LINK	examples.projects.3.more	En savoir plus	\N	\N	https://www.facebook.com/paladalik/	f
-31487	1019	TEXT	examples.projects.4.subject	Insectes lumineux	\N	\N	\N	f
-31488	1019	TEXT	examples.projects.3.title	Le Réseau d’observation des récifs coralliens (RORC) de Nouvelle-Calédonie	\N	\N	\N	f
-31489	1019	TEXT	examples.projects.1.actor	Groupe d’étude et de protection des oiseaux de Guyane (GEPOG)	\N	\N	\N	f
-31490	1019	IMAGE	examples.projects.1.image	\N	1082	Tangara évêque © P. Ingremeau 	\N	f
-31491	1019	IMAGE	images.2.image	\N	1341	Sensibilisation à la biodiversité des récifs de Mayotte © Fanny Cautain / OFB	\N	f
-31492	1019	IMAGE	examples.projects.4.image	\N	1248	Image provisoire	\N	f
-31493	1019	TEXT	paragraphs.0.text	Certains programmes se basent sur l’application d’un **protocole précis** (durée d’observation, distance couverte, nombre de points d’écoute, etc.). Ils nécessitent souvent une formation à la méthode et une implication sérieuse et régulière, car la qualité des données récoltées dépend de la bonne mise en œuvre du protocole. C’est le cas par exemple du Suivi temporel des oiseaux communs (STOC).\n\nD’autres programmes proposent de **faire remonter les observations ponctuelles ciblant une ou plusieurs espèces spécifiques**, parfois à une période précise ou sur un espace délimité. Par exemple les programmes de photo-identification de tortues ou de mammifères marins.\n\nLes signalements opportunistes permettent de faire remonter des observations occasionnelles, **comme des évènements inhabituels**, ou sur des espèces, une période ou un site non-ciblés. 	\N	\N	\N	f
-31494	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
-31495	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
-31496	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
-31497	1019	TEXT	examples.projects.4.description	Relai guadeloupéen de l’Observatoire des vers luisants et lucioles, l’observatoire Ti bèt a limiè a commencé ses activités en 2019. Les participants sont invités à faire remonter leurs observations de plusieurs espèces d’insectes lumineux (lucioles et taupins), afin de mieux connaitre leur biologie et leur écologie, identifier les facteurs favorisant leur présence ou leur régression et sensibiliser la population à leur maintien.	\N	\N	\N	f
-31498	1019	IMAGE	images.1.image	\N	1291	Observation des oiseaux marins à Mayotte © Fanny Cautain / OFB	\N	f
-31499	1019	TEXT	examples.projects.3.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
-31500	1019	TEXT	examples.projects.2.actor	Parc marin de Mayotte	\N	\N	\N	f
-31501	1019	LINK	examples.projects.4.more	En savoir plus	\N	\N	https://www.anbaloup-la.fr/observatoire-lucioles/	f
-31502	1019	TEXT	paragraphs.1.text	La plupart des programmes permettent d’alimenter des bases de données collaboratives. Certains projets sont adossés à des programmes de recherche et visent à répondre à une question précise. D’autres mettent en avant en premier lieu un fort objectif de pédagogie, d’acquisition de connaissances et de sensibilisation à la démarche scientifique des observateurs.\n	\N	\N	\N	f
-31503	1019	IMAGE	examples.projects.0.image	\N	1081	© Cynomana  / CC BY-SA 4.0 	\N	f
-31504	1019	IMAGE	examples.projects.3.image	\N	1083	© Reefcheck France 	\N	f
-31505	1019	TEXT	examples.projects.3.target	Plongeurs, apnéistes. Formation nécessaire. 	\N	\N	\N	f
-31506	1019	TEXT	paragraphs.2.title	Un état des lieux en cours	\N	\N	\N	f
-31507	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages réguliers le long de parcours prédéfinis	\N	\N	\N	f
-31508	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
-31509	1019	TEXT	examples.projects.1.description	Débuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et La Réunion, le STOC-Guyane a pour but de suivre les variations d'abondances d'oiseaux communs sur le long terme pour évaluer l'impact des activités humaines. Le programme demande une implication régulière et nécessite une formation au protocole utilisé et la reconnaissance des espèces. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
-31510	1019	IMAGE	images.0.image	\N	1078	© U.S. Fish and Wildlife Service Southeast Region / CC BY 2.0	\N	f
-31511	1019	TEXT	examples.projects.1.target	Ornithologues amateurs ou professionnels (à titre bénévole). Formation nécessaire. 	\N	\N	\N	f
-31512	1019	TEXT	examples.projects.0.target	Plongeurs, apnéistes, pratiquant la photo sous-marine	\N	\N	\N	f
-31513	1019	TEXT	examples.projects.3.subject	Suivi de l’état de santé des récifs de Nouvelle-Calédonie	\N	\N	\N	f
-31514	1019	TEXT	header.subtitle	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.  \n\nFaune, flore, milieu marin ou terrestre, observation ponctuelle ou programme protocolé, trouvez le programme qui vous correspond et contribuez au développement des connaissances !	\N	\N	\N	f
-31515	1019	LINK	examples.projects.1.more	En savoir plus	\N	\N	http://www.gepog.org/Nos-actions/Milieux-terrestres/Suivi-Temporel-des-Oiseaux-Communs-STOC-EPS	f
-31516	1019	TEXT	examples.projects.2.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
-31517	1019	TEXT	header.title	C'est quoi les sciences participatives ?	\N	\N	\N	f
-31518	1019	IMAGE	examples.projects.2.image	\N	1247	Image provisoire	\N	f
-31519	1019	CHECKBOX	header.shadowed	true	\N	\N	\N	f
-31520	1019	TEXT	paragraphs.1.title	Différents objectifs	\N	\N	\N	f
-31521	1019	TEXT	presentation.description	Le terme « sciences participatives » regroupe des programmes acquisition d’informations et de données scientifiques en impliquant une participation active des citoyens. Les observations sont réalisées de manière bénévole, le plus souvent par des non-professionnels. Dans certains cas, une formation au préalable est nécessaire, mais de nombreux programmes sont accessibles sans connaissances naturalistes poussées. 	\N	\N	\N	f
-31522	1019	TEXT	examples.projects.3.actor	Association Pala Dalik	\N	\N	\N	f
-31523	1019	TEXT	paragraphs.2.text	L’équipe du Compteur mène actuellement une étude pour **recenser tous les programmes de sciences participatives dans les territoires ultramarins**. Ces résultats seront disponibles prochainement afin de vous proposer un panorama complet des programmes auxquels vous pouvez participer. 	\N	\N	\N	f
-31524	1019	TEXT	examples.projects.4.title	Ti bèt a limiè, l’Observatoire des lucioles en Guadeloupe	\N	\N	\N	f
-31525	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
-31526	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
-31527	1019	TEXT	paragraphs.0.title	Différents types de programmes 	\N	\N	\N	f
-31528	1019	TEXT	examples.projects.4.actor	An ba loup-la	\N	\N	\N	f
-31529	1019	TEXT	application.subtitle	J'agis en ligne	\N	\N	\N	f
-31530	1019	TEXT	examples.projects.4.target	Tous publics	\N	\N	\N	f
-31531	1019	TEXT	examples.projects.1.title	Le Suivi temporel des oiseaux communs (STOC) en Guyane	\N	\N	\N	f
-31532	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
 28814	1001	TEXT	interests.locations.1.description	Entre Basse-Terre et Grande-Terre, cette baie est un véritable réservoir de biodiversité. Côté mer, des herbiers de phanérogames sont entourés par le récif corallien le plus long des Petites Antilles (39 km). Côté terre, la baie est bordée par des mangroves, des forêts marécageuses et marais herbacés sur plus de 5 000 ha. 	\N	\N	\N	f
 28815	1001	TEXT	ecosystems.ecosystems.3.name	Les mangroves	\N	\N	\N	f
 28816	1001	TEXT	statistics.1.text	du territoire couvert par la forêt	\N	\N	\N	f
@@ -1464,8 +1402,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 28819	1001	IMAGE	species.4.image	\N	1305	*Ctenonotus ferreus* © Aurélien Miralles	\N	f
 28820	1001	IMAGE	species.7.image	\N	1173	Image manquante	\N	f
 28821	1001	TEXT	species.5.name	Le Palmier ti-koko	\N	\N	\N	f
-31533	1019	TEXT	examples.projects.2.target	Usagers de la mer, tous publics	\N	\N	\N	f
-31534	1019	IMAGE	header.background	\N	1342	 © Pierre-Olivier Jay	\N	f
 31846	1017	TEXT	presentation	Les activités humaines sont à l’origine du déclin de la biodiversité et la dégradation des écosystèmes. Aujourd’hui plus que jamais, il est nécessaire de remettre en question nos comportements et nos choix de consommation, au quotidien ou en voyage, chez soi ou en milieu naturel, pour mieux prendre soin de la biodiversité qui nous entoure. Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.  \n\nL’objectif du Compteur est de mettre en avant des écogestes adaptés aux contextes ultramarins.	\N	\N	\N	f
 31847	1017	IMAGE	image	\N	1073	© DR	\N	f
 31848	1017	TEXT	quote	Des actions concrètes pour agir dès maintenant et préserver cette biodiversité les espèces et les écosystèmes	\N	\N	\N	f
@@ -1745,6 +1681,17 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 31683	1022	IMAGE	species.0.image	\N	1227	Phoque veau-marin © Daniel Koelsch	\N	f
 31684	1022	TEXT	events.1.date	17<sup>e</sup> siècle 	\N	\N	\N	f
 31685	1022	TEXT	interests.locations.4.name	Saint-Pierre	\N	\N	\N	f
+31910	1016	TEXT	science.project.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
+31911	1016	TEXT	header.title	Agir ensemble pour préserver la biodiversité remarquable des outre-mer	\N	\N	\N	f
+31912	1016	CHECKBOX	header.shadowed	true	\N	\N	\N	f
+31913	1016	IMAGE	science.project.image	\N	1345	Plongeur à Mayotte © Alexandra Gigou / OFB	\N	f
+31914	1016	TEXT	science.title	Les sciences participatives	\N	\N	\N	f
+31915	1016	TEXT	science.project.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré. Le projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. 	\N	\N	\N	f
+31916	1016	TEXT	science.subtitle	Les sciences participatives permettent à tous les curieux de la nature, du débutant à l’expérimenté, de contribuer à l'amélioration des connaissances sur la biodiversité en fournissant aux scientifiques un grand nombre de données de terrain.	\N	\N	\N	f
+31917	1016	TEXT	ecogestures.title	Découvrez les écogestes	\N	\N	\N	f
+31918	1016	IMAGE	header.background	\N	1335	Agricultrices, Mayotte © Bertrand Fanonnel	\N	f
+31919	1016	TEXT	header.subtitle	Réfléchir à son impact, changer ses habitudes, participer à la progression des connaissances sur les espèces et les espaces, donner de son temps dans des actions de terrain : chacun, à son échelle, peut agir et s’investir pour la préservation de la biodiversité de son territoire.	\N	\N	\N	f
+31920	1016	TEXT	ecogestures.subtitle	Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.	\N	\N	\N	f
 28740	1012	TEXT	understand.paragraphs.1.text	Créé en 2012, le [Pôle-relais dédié aux zones humides tropicales](https://www.pole-tropical.org/) (PRZHT) constitue un réseau d’échanges entre les acteurs concernés par la conservation, la gestion et la valorisation des zones humides dans les territoires tropicaux français. Il anime, entre autres, le [Réseau national d’observation et d’aide à la gestion des mangroves](https://www.pole-tropical.org/actions/les-actions-du-reseau-dobservation-des-mangroves/) (ROM), l’un des 3 réseaux de suivi de l’[Initiative française pour les Récifs Coralliens (IFRECOR)](https://ifrecor.fr/). Officiellement lancé en 2017, ce réseau regroupe les gestionnaires de mangroves des territoires français concernés aux Antilles, en Guyane, et dans les océans Indien et Pacifique. \n \nEn 2019, le ROM a développé une application smartphone pour permettre à tous de s’entrainer à reconnaitre les différentes espèces de palétuviers qui constituent la mangrove et à signaler les perturbations observées dans les mangroves (déchets, défrichements, mortalités, etc.). Chaque utilisateur peut ainsi devenir pleinement acteur de la protection des mangroves au sein de son territoire.  \nVous aussi, devenez observateurs en [téléchargeant l'application ROM](https://rom.pole-tropical.org/home) !\n	\N	\N	\N	f
 28741	1012	TEXT	understand.title2	Des bénéfices pour l’Homme, mais un écosystème soumis à de nombreuses pressions 	\N	\N	\N	f
 28742	1012	TEXT	presentation.descriptionTerritories	des mangroves font l'objet de mesures de conservation	\N	\N	\N	f
@@ -1851,7 +1798,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 1343, true);
+SELECT pg_catalog.setval('public.image_seq', 1347, true);
 
 
 --
@@ -1872,7 +1819,7 @@ SELECT pg_catalog.setval('public.indicator_value_seq', 1107, true);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 31855, true);
+SELECT pg_catalog.setval('public.page_element_seq', 32028, true);
 
 
 --
