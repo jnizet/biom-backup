@@ -28,7 +28,7 @@ services:
      - "DIVERSITY_IMPORT_BASE-URL=https://preprod.biodiversite-outre-mer.fr/"
      - "DIVERSITY_IMPORT_TOKEN=IMPORT_SOURCE_TOKEN"
      - "DIVERSITY_MATOMO_HOST=matomo.mnhn.fr"
-     - "DIVERSITY_MATOMO_SITE-ID=7"
+     - "DIVERSITY_MATOMO_SITE-ID=47"
      - "SPRING_DATASOURCE_URL=jdbc:postgresql://biom-prod.patnat.mnhn.fr/biom"
      - "SPRING_DATASOURCE_USERNAME=biom"
      - "SPRING_DATASOURCE_PASSWORD=beaN3xHl31d1mXhJSe30xmwmsFnnMpQv"
