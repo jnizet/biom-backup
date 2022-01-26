@@ -60,3 +60,17 @@ dump-release-db:
     SERVER_URL: $BIOM_PREPROD_SERVER_URL 
     BRANCH_NAME: release
   extends: .dump-db
+
+dump-prod-db:
+  only:
+    refs:
+      - schedules
+    variables:
+      - $ENV == "prod"
+  environment:
+    name: prod
+    url: https://"$BIOM_PROD_SERVER_URL"
+  variables:
+    SERVER_URL: $BIOM_PROD_SERVER_URL 
+    BRANCH_NAME: prod
+  extends: .dump-db
