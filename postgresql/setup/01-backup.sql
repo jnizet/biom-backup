@@ -2001,98 +2001,98 @@ COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 --
 
 COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdin;
-1636	1003	GUADELOUPE	28.63712677	%
 1643	1003	GUYANE	11.11842105	%
-1639	1003	REUNION	34.23298707	%
 1640	1003	MAYOTTE	35.92505855	%
 1635	1003	OUTRE_MER	19.6979807	%
-1637	1003	MARTINIQUE	19.40384829	%
 1641	1003	ILES_SUBANTARCTIQUES	31.03448276	%
 1638	1003	POLYNESIE_FRANCAISE	63	%
+1639	1003	REUNION	34.23298707	%
+1636	1003	GUADELOUPE	28.63712677	%
+1637	1003	MARTINIQUE	19.40384829	%
 1644	1003	TERRE_ADELIE	46.15384615	%
 1642	1003	ILES_EPARSES	22.22222222	%
-1553	1007	GUADELOUPE	60	%
+1560	1007	MAYOTTE	30	%
+1552	1007	OUTRE_MER	29.26829268	%
+1557	1007	POLYNESIE_FRANCAISE	40	%
+1556	1007	NOUVELLE_CALEDONIE	18.51851852	%
+1555	1007	SAINT_MARTIN	33.33333333	%
 1558	1007	WALLIS_ET_FUTUNA	25	%
 1559	1007	REUNION	21.42857143	%
-1560	1007	MAYOTTE	30	%
-1556	1007	NOUVELLE_CALEDONIE	18.51851852	%
-1552	1007	OUTRE_MER	29.26829268	%
+1553	1007	GUADELOUPE	60	%
 1554	1007	MARTINIQUE	50	%
-1557	1007	POLYNESIE_FRANCAISE	40	%
-1555	1007	SAINT_MARTIN	33.33333333	%
-1602	1002	GUADELOUPE	10527	
+1601	1002	OUTRE_MER	88966	
+1611	1002	ILES_SUBANTARCTIQUES	2613	
 1609	1002	REUNION	10915	
 1603	1002	MARTINIQUE	7422	
-1611	1002	ILES_SUBANTARCTIQUES	2613	
-1601	1002	OUTRE_MER	88966	
 1605	1002	SAINT_BARTHELEMY	2140	
-1620	1006	GUADELOUPE	21.3333333333333	
-1632	1006	GUYANE	177.666666666667	
-1627	1006	REUNION	17.3333333333333	
+1602	1002	GUADELOUPE	10527	
 1628	1006	MAYOTTE	9.33333333333333	
-1624	1006	NOUVELLE_CALEDONIE	219.333333333333	
-1631	1006	CLIPPERTON	15	
-1621	1006	MARTINIQUE	38.6666666666667	
+1619	1006	OUTRE_MER	546.333333333333	
 1629	1006	ILES_SUBANTARCTIQUES	2.66666666666667	
+1631	1006	CLIPPERTON	15	
+1622	1006	SAINT_MARTIN	1	
+1624	1006	NOUVELLE_CALEDONIE	219.333333333333	
+1627	1006	REUNION	17.3333333333333	
+1621	1006	MARTINIQUE	38.6666666666667	
+1630	1006	ILES_EPARSES	4	
+1632	1006	GUYANE	177.666666666667	
 1625	1006	POLYNESIE_FRANCAISE	51	
 1633	1006	SAINT_PIERRE_ET_MIQUELON	0	
-1630	1006	ILES_EPARSES	4	
-1622	1006	SAINT_MARTIN	1	
-1626	1006	WALLIS_ET_FUTUNA	5	
-1619	1006	OUTRE_MER	546.333333333333	
-1634	1006	TERRE_ADELIE	4	
 1623	1006	SAINT_BARTHELEMY	0.666666666666667	
-1547	1004	WALLIS_ET_FUTUNA	42.85714286	%
-1550	1004	GUYANE	98.64110653	%
+1626	1006	WALLIS_ET_FUTUNA	5	
+1620	1006	GUADELOUPE	21.3333333333333	
+1634	1006	TERRE_ADELIE	4	
 1549	1004	MAYOTTE	15.78947368	%
-1545	1004	NOUVELLE_CALEDONIE	45.78774617	%
+1550	1004	GUYANE	98.64110653	%
 1540	1004	OUTRE_MER	84.64046368	%
-1546	1004	POLYNESIE_FRANCAISE	42.34972678	%
-1544	1004	SAINT_BARTHELEMY	0	%
 1551	1004	SAINT_PIERRE_ET_MIQUELON	13.04347826	%
+1546	1004	POLYNESIE_FRANCAISE	42.34972678	%
 1543	1004	SAINT_MARTIN	20	%
-1599	1000	GUYANE	11	
-1589	1000	GUADELOUPE	17	
-1596	1000	REUNION	34	
+1544	1004	SAINT_BARTHELEMY	0	%
+1545	1004	NOUVELLE_CALEDONIE	45.78774617	%
+1547	1004	WALLIS_ET_FUTUNA	42.85714286	%
 1597	1000	MAYOTTE	19	
-1593	1000	NOUVELLE_CALEDONIE	38	
-1598	1000	CLIPPERTON	1	
-1590	1000	MARTINIQUE	18	
-1594	1000	POLYNESIE_FRANCAISE	36	
-1600	1000	SAINT_PIERRE_ET_MIQUELON	7	
-1591	1000	SAINT_MARTIN	11	
-1595	1000	WALLIS_ET_FUTUNA	26	
 1588	1000	OUTRE_MER	60	
+1598	1000	CLIPPERTON	1	
+1591	1000	SAINT_MARTIN	11	
+1593	1000	NOUVELLE_CALEDONIE	38	
+1596	1000	REUNION	34	
+1590	1000	MARTINIQUE	18	
+1599	1000	GUYANE	11	
+1600	1000	SAINT_PIERRE_ET_MIQUELON	7	
+1594	1000	POLYNESIE_FRANCAISE	36	
 1592	1000	SAINT_BARTHELEMY	11	
+1595	1000	WALLIS_ET_FUTUNA	26	
+1589	1000	GUADELOUPE	17	
 1587	1005	OUTRE_MER	25.21552908	%
-1646	1001	GUADELOUPE	1399	
-1658	1001	GUYANE	2551	
-1653	1001	REUNION	1558	
 1654	1001	MAYOTTE	335	
-1650	1001	NOUVELLE_CALEDONIE	8673	
-1657	1001	CLIPPERTON	16	
-1647	1001	MARTINIQUE	700	
-1655	1001	ILES_SUBANTARCTIQUES	199	
-1651	1001	POLYNESIE_FRANCAISE	2673	
-1659	1001	SAINT_PIERRE_ET_MIQUELON	0	
-1656	1001	ILES_EPARSES	38	
-1648	1001	SAINT_MARTIN	63	
-1652	1001	WALLIS_ET_FUTUNA	29	
 1645	1001	OUTRE_MER	17846	
-1660	1001	TERRE_ADELIE	2	
+1655	1001	ILES_SUBANTARCTIQUES	199	
+1657	1001	CLIPPERTON	16	
+1648	1001	SAINT_MARTIN	63	
+1650	1001	NOUVELLE_CALEDONIE	8673	
+1653	1001	REUNION	1558	
+1647	1001	MARTINIQUE	700	
+1656	1001	ILES_EPARSES	38	
+1658	1001	GUYANE	2551	
+1659	1001	SAINT_PIERRE_ET_MIQUELON	0	
+1651	1001	POLYNESIE_FRANCAISE	2673	
 1649	1001	SAINT_BARTHELEMY	70	
-1614	1002	GUYANE	28940	
+1652	1001	WALLIS_ET_FUTUNA	29	
+1646	1001	GUADELOUPE	1399	
+1660	1001	TERRE_ADELIE	2	
 1610	1002	MAYOTTE	6162	
-1606	1002	NOUVELLE_CALEDONIE	28092	
 1613	1002	CLIPPERTON	915	
-1607	1002	POLYNESIE_FRANCAISE	11776	
-1615	1002	SAINT_PIERRE_ET_MIQUELON	2112	
-1612	1002	ILES_EPARSES	2042	
 1604	1002	SAINT_MARTIN	2234	
+1606	1002	NOUVELLE_CALEDONIE	28092	
+1612	1002	ILES_EPARSES	2042	
+1614	1002	GUYANE	28940	
+1615	1002	SAINT_PIERRE_ET_MIQUELON	2112	
+1607	1002	POLYNESIE_FRANCAISE	11776	
 1608	1002	WALLIS_ET_FUTUNA	2691	
 1616	1002	TERRE_ADELIE	1007	
-1541	1004	GUADELOUPE	42.26190476	%
 1548	1004	REUNION	35.2	%
+1541	1004	GUADELOUPE	42.26190476	%
 1542	1004	MARTINIQUE	46.22641509	%
 \.
 
@@ -2172,10 +2172,10 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1000	accueil	home	Compteur Biodiversité Outre-mer
 1028	exploitation-especes-protegees	ecogesture	Préserver les espèces protégées 
 1038	guyane	territory	Guyane
+1048	iles-eparses	territory	Iles Eparses
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
 1015	martinique	territory	Martinique
 1005	indicateurs	indicators	Tous les indicateurs
-1048	iles-eparses	territory	Iles Eparses
 1047	agents-OFB-Guyane	report	Terrain agents OFB Guyane
 1040	polynesie	territory	Polynésie française
 \.
@@ -2202,34 +2202,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 32538	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
 32539	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
 32540	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
-67349	1048	TEXT	events.2.description	Cartographie de l'archipel des Glorieuses par Mr. Du Guilly	\N	\N	\N	f
-67350	1048	TEXT	events.3.description	Naufrage de l'*Utile* à Tromelin	\N	\N	\N	f
-67351	1048	IMAGE	species.2.image	\N	2481	*Chelonia mydas* - Tortue verte © Maxime Amy - TAAF	\N	f
-67352	1048	IMAGE	identity.image	\N	2473	Couple de fous à pieds rouges © Nelly Gravier - TAAF	\N	f
-67353	1048	TEXT	species.3.description	On trouve sur les différentes îles Éparses quinze espèces de reptiles terrestres. Il s'agit de scinques (lézards de la famille des Scincidés) et de geckos (famille des Gekkonidés). Certaines espèces ont probablement été introduites, mais cinq sont endémiques : deux d'Europa, deux de Juan de Nova et une aux Glorieuses. Ces populations fragiles sont menacées par les prédateurs introduits (chats, rats, souris).  \n  \nStatuts sur la Liste rouge des reptiles des îles Éparses, pour les cinq espèces endémiques :\n[*Cryptoblepharus caudatus*](https://inpn.mnhn.fr/espece/cd_nom/785476), *Lygodactylus insularis* et [*Flexiseps valhallae*](https://inpn.mnhn.fr/espece/cd_nom/902180) : en danger critique d'extinction\n[*Cryptoblepharus gloriosus gloriosus*](https://inpn.mnhn.fr/espece/cd_nom/714621) : vulnérable\n[*Cryptoblepharus bitaeniatus*](https://inpn.mnhn.fr/espece/cd_nom/712368) : quasi-menacée.	\N	\N	\N	f
-67354	1048	TEXT	events.7.description	Classement d'Europa en site Ramsar	\N	\N	\N	f
-67355	1048	TEXT	statistics.3.number	637 hectares	\N	\N	\N	f
-67356	1048	TEXT	events.7.date	2011	\N	\N	\N	f
-67357	1048	TEXT	interests.locations.0.name	L'archipel des Glorieuses	\N	\N	\N	f
-67358	1048	TEXT	species.1.description	Le Filao ([*Casuarina equisetifolia*](https://inpn.mnhn.fr/espece/cd_nom/456837)) est un arbre aux rameaux filiforme qui pousse sur les sols sablonneux chargés en sel. Il peut atteindre une hauteur de 30 m, et bien qu'il ressemble à un pin, ce n'est pas un conifère. Ses fruits sont de petites billes formées de cônes à écailles pointues qui renferment les graines.  \n  \nOriginaire d'Asie du Sud-est et d'Australie, le Filao a été introduit à Europa, Juan de Nova et Grande Glorieuse, où il s’avère envahissant et modifie l’écosystème dans lequel il se développe, notamment car il libère des substances qui rendent le sol infertile pour les autres espèces. 	\N	\N	\N	f
-67359	1048	TEXT	species.2.description	Cinq des sept espèces de tortues marines se retrouvent dans l’océan Indien et les îles Éparses sont des sites majeurs pour leur alimentation et pour la reproduction de la Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338)) et la Tortue imbriquée ([*Eretmochelys imbricata*](https://inpn.mnhn.fr/espece/cd_nom/77347)), en particulier Europa, où 2&nbsp;000 à 10&nbsp;000 femelles viennent pondre chaque année.\nUne même femelle revient pondre plusieurs fois dans la même saison, à quelques jours d'intervalle. A chaque fois, elle déposera entre 100 et 200 œufs, qui mettrons 8 à 10 semaines à éclore. \nGrandes migratrices, les tortues marines sont des espèces fortement menacées par les activités humaines : destruction de leurs habitats (sites de ponte et d'alimentation), prises accidentelles de pêche, collisions avec les engins motorisés et pollutions. Protégées, elles sont cependant toujours largement braconnées à travers le monde. \n\nStatut sur la Liste rouge des reptiles des îles Éparses : \nTortue imbriquée : en danger critique\nTortue verte : en danger.	\N	\N	\N	f
-67360	1048	TEXT	events.0.description	Découverte de Juan de Nova par le navigateur du même nom, qu'il baptise d'abord *Agalega* (La Galicienne)	\N	\N	\N	f
-67361	1048	TEXT	events.1.description	Découverte probable d'Europa	\N	\N	\N	f
-67362	1048	TEXT	events.8.description	Création du Parc naturel marin des Glorieuses	\N	\N	\N	f
-67363	1048	TEXT	events.9.description	Création de la Réserve naturelle nationale des Glorieuses	\N	\N	\N	f
-67364	1048	IMAGE	ecosystems.image	\N	2484	Émergence de jeunes tortues marines à Europa © Florent Bignon - TAAF	\N	f
-67365	1048	TEXT	identity.species	2 042	\N	\N	\N	f
-67366	1048	TEXT	statistics.1.number	200 km<sup>2</sup>	\N	\N	\N	f
-67367	1048	IMAGE	ecosystems.ecosystems.0.image	\N	2489	Récif des Glorieuses © Hendrik Sauvignet - OFB	\N	f
-67368	1048	TEXT	statistics.0.number	6 %	\N	\N	\N	f
-67369	1048	TEXT	statistics.2.number	Des milliers	\N	\N	\N	f
-67370	1048	IMAGE	interests.locations.4.image	\N	2479	Vue aérienne de Bassas da India © Stephanie Legeron - TAAF	\N	f
 63865	1001	TEXT	events.2.description	La Guadeloupe devient française	\N	\N	\N	f
 63866	1001	TEXT	events.3.description	Disparition du Lamantin des Caraïbes ([*Trichechus manatus*](https://inpn.mnhn.fr/espece/cd_nom/821122)) des eaux de Guadeloupe	\N	\N	\N	f
 63867	1001	IMAGE	identity.image	\N	2273	Pointe des Colibris © Olivier Delzon	\N	f
-67371	1048	TEXT	zoom.title	Quelques repères dans les îles Éparses 	\N	\N	\N	f
-67372	1048	TEXT	species.2.name	Les Tortues marines	\N	\N	\N	f
-67373	1048	TEXT	species.4.description	Phaétons à brin rouge ou à bec jaune, Fou à pied rouge, Fou masqué, Frégate Ariel et Frégate Pacifique, sternes, puffins, noddis… il est difficile de résumer la diversité d’oiseaux marins qui peuplent les îles Éparses ! D’autant plus qu’on y trouve des sous-espèces endémiques. Pour certaines de ces espèces, Europa abrite les plus grandes colonies de l’océan Indien, c'est le cas par exemple pour la Sterne fuligineuse ([*Onychoprion fuscatus*](https://inpn.mnhn.fr/espece/cd_nom/528760)) dont les effectifs se comptent en millions d’individus.  \nLes îles Éparses hébergent également des espèces d'oiseaux terrestres, comme l'Aigrette Dimorphe ([*Egretta dimorpha*](https://inpn.mnhn.fr/espece/cd_nom/528811)) à Europa ou le Bulbul de Madagascar ([*Hypsipetes madagascariensis*](https://inpn.mnhn.fr/espece/cd_nom/418749)) aux Glorieuses. Europa est également l'une des 4 seules îles au monde où niche le Crabier blanc ([*Ardeola idae*](https://inpn.mnhn.fr/espece/cd_nom/418710)), un héron fortement menacé à l'échelle mondiale. \n\n	\N	\N	\N	f
+68359	1048	TEXT	events.2.description	Cartographie de l'archipel des Glorieuses par Mr. Du Guilly	\N	\N	\N	f
+68360	1048	TEXT	events.3.description	Naufrage de l'*Utile* à Tromelin	\N	\N	\N	f
+68361	1048	IMAGE	species.2.image	\N	2481	*Chelonia mydas* - Tortue verte © Maxime Amy - TAAF	\N	f
+68362	1048	IMAGE	identity.image	\N	2473	Couple de fous à pieds rouges © Nelly Gravier - TAAF	\N	f
 63868	1001	TEXT	events.7.description	La Guadeloupe obtient le label «&nbsp;Réserve de Biosphère&nbsp;» de l’UNESCO	\N	\N	\N	f
 63869	1001	TEXT	events.7.date	1993	\N	\N	\N	f
 63870	1001	TEXT	interests.locations.0.name	Le Parc national de la Guadeloupe	\N	\N	\N	f
@@ -2275,10 +2254,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 35065	1017	IMAGE	image	\N	1073	© DR	\N	f
 35066	1017	TEXT	quote	Des actions concrètes pour agir dès maintenant et préserver cette biodiversité les espèces et les écosystèmes	\N	\N	\N	f
 35067	1017	TEXT	question	Qu’est-ce qu’un écogeste ? 	\N	\N	\N	f
-67374	1048	TEXT	events.6.description	Implantation d'une station météorologique permanente sur Tromelin	\N	\N	\N	f
-67375	1048	TEXT	zoom.callToAction	Cliquez sur la carte thématique pour vous repérer en un coup d'œil !	\N	\N	\N	f
-67376	1048	TEXT	events.6.date	1954	\N	\N	\N	f
-67377	1048	TEXT	ecosystems.ecosystems.0.name	Les récifs coralliens	\N	\N	\N	f
 63889	1001	TEXT	identity.marineArea	90 000	\N	\N	\N	f
 63890	1001	TEXT	events.8.date	2010	\N	\N	\N	f
 63891	1001	IMAGE	interests.locations.0.image	\N	2265	Rivière Corossol, Parc national de Guadeloupe © Claire Roussel / OFB	\N	f
@@ -2294,8 +2269,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 63901	1001	IMAGE	species.3.image	\N	2276	*Dynastes hercules* © Vincent Prié / Caracol	\N	f
 63902	1001	IMAGE	zoom.map	\N	2267	Carte Guadeloupe	\N	f
 63903	1001	TEXT	species.1.name	Les Ouassous	\N	\N	\N	f
-67378	1048	TEXT	events.4.description	Prise de possession des Glorieuses par la France	\N	\N	\N	f
+68363	1048	TEXT	species.3.description	On trouve sur les différentes îles Éparses quinze espèces de reptiles terrestres. Il s'agit de scinques (lézards de la famille des Scincidés) et de geckos (famille des Gekkonidés). Certaines espèces ont probablement été introduites, mais cinq sont endémiques : deux d'Europa, deux de Juan de Nova et une aux Glorieuses. Ces populations fragiles sont menacées par les prédateurs introduits (chats, rats, souris).  \n  \nStatuts sur la Liste rouge des reptiles des îles Éparses, pour les cinq espèces endémiques :\n[*Cryptoblepharus caudatus*](https://inpn.mnhn.fr/espece/cd_nom/785476), [*Lygodactylus insularis*](https://inpn.mnhn.fr/espece/cd_nom/976758) et [*Flexiseps valhallae*](https://inpn.mnhn.fr/espece/cd_nom/902180) : en danger critique d'extinction\n[*Cryptoblepharus gloriosus gloriosus*](https://inpn.mnhn.fr/espece/cd_nom/714621) : vulnérable\n[*Cryptoblepharus bitaeniatus*](https://inpn.mnhn.fr/espece/cd_nom/712368) : quasi-menacée.	\N	\N	\N	f
 35654	1007	TEXT	goal2.title	Valoriser les actions des territoires	\N	\N	\N	f
+68364	1048	TEXT	events.7.description	Classement d'Europa en site Ramsar	\N	\N	\N	f
+68365	1048	TEXT	statistics.3.number	637 hectares	\N	\N	\N	f
+68366	1048	TEXT	events.7.date	2011	\N	\N	\N	f
+68367	1048	TEXT	interests.locations.0.name	L'archipel des Glorieuses	\N	\N	\N	f
+68368	1048	TEXT	species.1.description	Le Filao ([*Casuarina equisetifolia*](https://inpn.mnhn.fr/espece/cd_nom/456837)) est un arbre aux rameaux filiforme qui pousse sur les sols sablonneux chargés en sel. Il peut atteindre une hauteur de 30 m, et bien qu'il ressemble à un pin, ce n'est pas un conifère. Ses fruits sont de petites billes formées de cônes à écailles pointues qui renferment les graines.  \n  \nOriginaire d'Asie du Sud-est et d'Australie, le Filao a été introduit à Europa, Juan de Nova et Grande Glorieuse, où il s’avère envahissant et modifie l’écosystème dans lequel il se développe, notamment car il libère des substances qui rendent le sol infertile pour les autres espèces. 	\N	\N	\N	f
 35655	1007	TEXT	partners.partners.2.url	http://www.criobe.pf/	\N	\N	\N	f
 63904	1001	TEXT	species.7.name	La Tortue imbriquée	\N	\N	\N	f
 63905	1001	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
@@ -2323,34 +2303,18 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 40097	1027	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 40098	1027	TEXT	action.cards.0.description	Je ne sors pas des sentiers balisés, ils sont là pour me permettre de ne pas abimer les milieux.	\N	\N	\N	f
 64719	1020	IMAGE	species.9.image	\N	2463	*Syzygium acre* © Vanessa Hequet	\N	f
-67379	1048	TEXT	events.5.description	Rattachement de Juan de Nova, Bassas da India et Europa à la France	\N	\N	\N	f
-67380	1048	CHECKBOX	identity.shadowed	true	\N	\N	\N	f
-67381	1048	TEXT	interests.locations.2.name	Juan de Nova	\N	\N	\N	f
-67382	1048	TEXT	ecosystems.ecosystems.3.description	Aux Glorieuses, ces herbiers de phanérogames (plantes à fleurs) marines s’étendent sur une superficie de 36 km<sup>2</sup>. Ils représentent une zone d'alimentation, de refuge et de nurserie pour de nombreuses espèces, en particulier les tortues vertes et imbriquées. \n	\N	\N	\N	f
-67383	1048	TEXT	statistics.3.text	de mangroves à Europa	\N	\N	\N	f
-67384	1048	TEXT	events.0.date	1501	\N	\N	\N	f
-67385	1048	TEXT	identity.populationYear	-	\N	\N	\N	f
-67386	1048	TEXT	statistics.0.text	des eaux sous juridiction française	\N	\N	\N	f
-67387	1048	IMAGE	species.1.image	\N	2478	*Casuarina equisetifolia* © Jean Hivert - TAAF	\N	f
-67388	1048	TEXT	ecosystems.ecosystems.1.name	Les mangroves lagonaires d'Europa	\N	\N	\N	f
-67389	1048	TEXT	events.2.date	1751	\N	\N	\N	f
-67390	1048	TEXT	events.5.date	1897	\N	\N	\N	f
-67391	1048	TEXT	identity.marineArea	634 853	\N	\N	\N	f
-67392	1048	TEXT	events.8.date	2012	\N	\N	\N	f
-67393	1048	TEXT	identity.presentation	Dans le canal du Mozambique, entre 10° et 25° de latitude sud, se répartissent l’archipel des Glorieuses, les îles Juan de Nova et Europa, et l’atoll de Bassas da India. Au nord de La Réunion, l’île de Tromelin complète cet ensemble de territoires français regroupés sous le nom d’îles Éparses, intégrés au sein des Terres australes et antarctiques françaises (TAAF).\nSi la surface terrestre cumulée de ces îles est réduite, elles permettent à la France de détenir un important territoire maritime sous sa juridiction. L’isolement et la faible occupation humaine permettent aux îles Éparses d’abriter une biodiversité remarquable au regard de leur petite taille. Elles hébergent notamment de grandes colonies d’oiseaux marin, des récifs coralliens dans un excellent état de conservation et sont des sites de pontes privilégiés pour les tortues marines.	\N	\N	\N	f
-67394	1048	IMAGE	interests.locations.0.image	\N	2480	Ile du Lys, archipel des Glorieuses © Hendrik Sauvignet - Office français de la biodiversité	\N	f
-67395	1048	TEXT	identity.population	0	\N	\N	\N	f
-67396	1048	IMAGE	interests.locations.3.image	\N	2477	Vue aérienne d'Europa © TAAF	\N	f
-67397	1048	TEXT	species.3.name	Les reptiles terrestres	\N	\N	\N	f
-67398	1048	TEXT	risks.title	Enjeux et menaces 	\N	\N	\N	f
+68369	1048	TEXT	species.2.description	Cinq des sept espèces de tortues marines se retrouvent dans l’océan Indien et les îles Éparses sont des sites majeurs pour leur alimentation et pour la reproduction de la Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338)) et la Tortue imbriquée ([*Eretmochelys imbricata*](https://inpn.mnhn.fr/espece/cd_nom/77347)), en particulier Europa, où 2&nbsp;000 à 10&nbsp;000 femelles viennent pondre chaque année.\nUne même femelle revient pondre plusieurs fois dans la même saison, à quelques jours d'intervalle. A chaque fois, elle déposera entre 100 et 200 œufs, qui mettrons 8 à 10 semaines à éclore. \nGrandes migratrices, les tortues marines sont des espèces fortement menacées par les activités humaines : destruction de leurs habitats (sites de ponte et d'alimentation), prises accidentelles de pêche, collisions avec les engins motorisés et pollutions. Protégées, elles sont cependant toujours largement braconnées à travers le monde. \n\nStatut sur la Liste rouge des reptiles des îles Éparses : \nTortue imbriquée : en danger critique\nTortue verte : en danger.	\N	\N	\N	f
+68370	1048	TEXT	events.0.description	Découverte de Juan de Nova par le navigateur du même nom, qu'il baptise d'abord *Agalega* (La Galicienne)	\N	\N	\N	f
 63911	1001	TEXT	species.7.description	La Tortue imbriquée ([*Eretmochelys imbricata*](https://inpn.mnhn.fr/espece/cd_nom/77347\n)) est l’une des trois espèces de tortues marines qui viennent pondre sur les plages de Guadeloupe. Les tortues marines sont menacées entre autres par les captures accidentelles de pêche, les collisions, l’ingestion de déchets, le braconnage ou encore la destruction de leurs sites d’alimentation. Toutes les espèces de tortues sont protégées, et le réseau des tortues marines de Guadeloupe présente une [charte de bonne conduite à respecter en présence de tortues](http://www.tortuesmarinesguadeloupe.org/les-tortues-marines/la-charte-de-bonne-conduite/) pour les préserver.\n\nStatut dans la Liste rouge mondiale : en danger critique.  	\N	\N	\N	f
 64288	1021	TEXT	events.2.description	Prise de possession française sous le nom d'*île Bourbon*	\N	\N	\N	f
-67399	1048	TEXT	species.0.name	Le Veloutier	\N	\N	\N	f
-67400	1048	TEXT	events.4.date	1892	\N	\N	\N	f
-67401	1048	IMAGE	interests.locations.2.image	\N	2476	Vue aérienne de Juan de Nova © Stephanie Legeron - TAAF	\N	f
-67402	1048	IMAGE	ecosystems.ecosystems.2.image	\N	2486	Sansouïres d'Europa © B. Navez - Wikimedia commons	\N	f
-67403	1048	TEXT	interests.locations.3.name	Europa	\N	\N	\N	f
-67404	1048	TEXT	interests.locations.0.description	A l’entrée nord du canal du Mozambique, l’archipel regroupe quatre îles et rochers : Grande Glorieuse, l’île du Lys, les roches Vertes et le rocher du Sud. La biodiversité végétale est importante sur Grande Glorieuse, mais c’est surtout la richesse des récifs qui font des Glorieuses un point chaud de biodiversité, en particulier sur le banc du Geyser. L’ensemble des eaux de l’archipel a été classé en Parc naturel marin en 2012, puis en 2021 le Parc naturel marin a été remplacé par une Réserve naturelle nationale couvrant l’ensemble des îles de l’archipel et des eaux attenantes.	\N	\N	\N	f
+68371	1048	TEXT	events.1.description	Découverte probable d'Europa	\N	\N	\N	f
+68372	1048	TEXT	events.8.description	Création du Parc naturel marin des Glorieuses	\N	\N	\N	f
+68373	1048	TEXT	events.9.description	Création de la Réserve naturelle nationale des Glorieuses	\N	\N	\N	f
+68374	1048	IMAGE	ecosystems.image	\N	2484	Émergence de jeunes tortues marines à Europa © Florent Bignon - TAAF	\N	f
+68375	1048	TEXT	identity.species	2 042	\N	\N	\N	f
+68376	1048	TEXT	statistics.1.number	200 km<sup>2</sup>	\N	\N	\N	f
+68377	1048	IMAGE	ecosystems.ecosystems.0.image	\N	2489	Récif des Glorieuses © Hendrik Sauvignet - OFB	\N	f
+68378	1048	TEXT	statistics.0.number	6 %	\N	\N	\N	f
 32542	1019	IMAGE	images.1.image	\N	1352	Observations à la longue vue à Saint-Pierre et Miquelon © Nathalie De Lacoste	\N	f
 63912	1001	TEXT	species.8.description	Aussi appelé Tapeur ou Toto bois, le Pic de Guadeloupe ([*Melanerpes herminieri*](https://inpn.mnhn.fr/espece/cd_nom/442063)) est le seul oiseau endémique de Guadeloupe et seul pic sédentaire des Petites Antilles. Il vit dans les milieux forestiers où il se nourrit principalement d'insectes qu'il trouve sous l'écorce du bois mort. De coloration noire, avec la gorge et l'abdomen rouge, on peut le reconnaitre à l'oreille au son caractéristique du tambourinage rapide que le mâle effectue sur les troncs pour parader et marquer son territoire.  \n\nStatut dans la Liste rouge des oiseaux de Guadeloupe : quasi-menacé. 	\N	\N	\N	f
 63913	1001	IMAGE	species.2.image	\N	2266	*Guaiacum officinale* © César Delnatte	\N	f
@@ -2382,7 +2346,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 63938	1001	TEXT	events.4.date	19<sup>e</sup> siècle	\N	\N	\N	f
 63939	1001	IMAGE	interests.locations.2.image	\N	2268	Les îles de la Petite Terre, avec vue sur la Désirade © Olivier Delzons	\N	f
 63940	1001	TEXT	events.11.date	2020 - 2029	\N	\N	\N	f
+68379	1048	TEXT	statistics.2.number	Des milliers	\N	\N	\N	f
 63941	1001	IMAGE	ecosystems.ecosystems.2.image	\N	2279	La cascade aux écrevisses dans la forêt humide de Guadeloupe © Daniel Öberg/Unsplash	\N	f
+68380	1048	IMAGE	interests.locations.4.image	\N	2479	Vue aérienne de Bassas da India © Stephanie Legeron - TAAF	\N	f
 32543	1019	TEXT	examples.projects.3.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
 32544	1019	TEXT	examples.projects.2.actor	Parc marin de Mayotte	\N	\N	\N	f
 32545	1019	LINK	examples.projects.4.more	En savoir plus	\N	\N	https://www.anbaloup-la.fr/observatoire-lucioles/	f
@@ -2413,13 +2379,28 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 63958	1001	IMAGE	ecosystems.ecosystems.1.image	\N	2284	Plage de Grande Anse © Amandine Escarguel / OFB	\N	f
 63959	1001	TEXT	interests.locations.3.description	La réserve a été créée en 2011 pour préserver le patrimoine géologique exceptionnel de l’île de la Désirade, où l’on observe les très rares traces des prémices de la formation de la plaque tectonique des Caraïbes. L’île abrite également une végétation particulière avec plusieurs espèces rares dont le Cactus tête à l’Anglais ([*Melocactus intortus*](https://inpn.mnhn.fr/espece/cd_nom/447021)), ainsi que de nombreuses espèces d’oiseaux marins. 	\N	\N	\N	f
 63960	1001	TEXT	identity.title	La Guadeloupe,  \n« l’île aux belles eaux »	\N	\N	\N	f
+68381	1048	TEXT	zoom.title	Quelques repères dans les îles Éparses 	\N	\N	\N	f
+68382	1048	TEXT	species.2.name	Les Tortues marines	\N	\N	\N	f
+68383	1048	TEXT	species.4.description	Phaétons à brin rouge ou à bec jaune, Fou à pied rouge, Fou masqué, Frégate Ariel et Frégate Pacifique, sternes, puffins, noddis… il est difficile de résumer la diversité d’oiseaux marins qui peuplent les îles Éparses ! D’autant plus qu’on y trouve des sous-espèces endémiques. Pour certaines de ces espèces, Europa abrite les plus grandes colonies de l’océan Indien, c'est le cas par exemple pour la Sterne fuligineuse ([*Onychoprion fuscatus*](https://inpn.mnhn.fr/espece/cd_nom/528760)) dont les effectifs se comptent en millions d’individus.  \nLes îles Éparses hébergent également des espèces d'oiseaux terrestres, comme l'Aigrette Dimorphe ([*Egretta dimorpha*](https://inpn.mnhn.fr/espece/cd_nom/528811)) à Europa ou le Bulbul de Madagascar ([*Hypsipetes madagascariensis*](https://inpn.mnhn.fr/espece/cd_nom/418749)) aux Glorieuses. Europa est également l'une des 4 seules îles au monde où niche le Crabier blanc ([*Ardeola idae*](https://inpn.mnhn.fr/espece/cd_nom/418710)), un héron fortement menacé à l'échelle mondiale. \n\n	\N	\N	\N	f
 36707	1029	IMAGE	presentation.file	\N	1465	Affiche écogeste	\N	f
 36708	1029	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 36709	1029	TEXT	presentation.name	Je m'investis sur le terrain	\N	\N	\N	f
 36710	1029	IMAGE	action.cards.0.icon	\N	1150	jumelles	\N	f
 36711	1029	IMAGE	presentation.image	\N	1361	Sensibilisation aux oiseaux marins de Mayotte animée par le Gepomay © Fanny Cautain / OFB	\N	f
+68384	1048	TEXT	events.6.description	Implantation d'une station météorologique permanente sur Tromelin	\N	\N	\N	f
+68385	1048	TEXT	zoom.callToAction	Cliquez sur la carte thématique pour vous repérer en un coup d'œil !	\N	\N	\N	f
+68386	1048	TEXT	events.6.date	1954	\N	\N	\N	f
+68387	1048	TEXT	ecosystems.ecosystems.0.name	Les récifs coralliens	\N	\N	\N	f
+68388	1048	TEXT	events.4.description	Prise de possession des Glorieuses par la France	\N	\N	\N	f
+68389	1048	TEXT	events.5.description	Rattachement de Juan de Nova, Bassas da India et Europa à la France	\N	\N	\N	f
+68390	1048	CHECKBOX	identity.shadowed	true	\N	\N	\N	f
+68391	1048	TEXT	interests.locations.2.name	Juan de Nova	\N	\N	\N	f
+68392	1048	TEXT	ecosystems.ecosystems.3.description	Aux Glorieuses, ces herbiers de phanérogames (plantes à fleurs) marines s’étendent sur une superficie de 36 km<sup>2</sup>. Ils représentent une zone d'alimentation, de refuge et de nurserie pour de nombreuses espèces, en particulier les tortues vertes et imbriquées. \n	\N	\N	\N	f
+68393	1048	TEXT	statistics.3.text	de mangroves à Europa	\N	\N	\N	f
+68394	1048	TEXT	events.0.date	1501	\N	\N	\N	f
 32551	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages réguliers le long de parcours prédéfinis	\N	\N	\N	f
 32552	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
+68395	1048	TEXT	identity.populationYear	-	\N	\N	\N	f
 63961	1001	IMAGE	species.6.image	\N	2274	*Rhizophora mangle* © Benjamin Guichard	\N	f
 63962	1001	TEXT	interests.locations.1.name	La baie de Grand Cul-de-Sac marin	\N	\N	\N	f
 40301	1016	TEXT	science.project.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
@@ -2433,10 +2414,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 40309	1016	IMAGE	header.background	\N	1335	Agricultrices, Mayotte © Bertrand Fanonnel	\N	f
 40310	1016	TEXT	header.subtitle	Réfléchir à son impact, changer ses habitudes, participer à la progression des connaissances sur les espèces et les espaces, donner de son temps dans des actions de terrain : chacun, à son échelle, peut agir et s’investir pour la préservation de la biodiversité de son territoire.  \n  \nLa troisième Stratégie nationale pour la biodiversité engage les territoires français pour la prochaine décennie à enrayer le déclin de la biodiversité. Des concertations citoyennes se déroulerons au cours de l'année 2021. Participez et retrouvez toutes les informations sur [biodiversité.gouv.fr](https://biodiversite.gouv.fr/).	\N	\N	\N	f
 40311	1016	TEXT	ecogestures.subtitle	Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.	\N	\N	\N	f
-67405	1048	TEXT	interests.locations.2.description	Cette île de 6 km de long sur 1,6 km de large est entourée par une barrière corallienne délimitant un vaste lagon (200 km<sup>2</sup>). L’île a été fortement modifiée par l’exploitation du phosphate issu de la transformation du guano (fientes d’oiseaux), entre 1900 et 1972. Des habitations et des cultures y avaient été aménagées. Malgré l’impact de cette présence humaine, la biodiversité terrestre, en particulier la végétation, demeure riche.	\N	\N	\N	f
-67406	1048	TEXT	interests.locations.1.description	Cette petite île coralienne d’un kilomètre carré en forme d’amande est soumise à des conditions environnementales difficiles : nombreux cyclones, recouvrement par les vagues en cas de houle, forte salinité… C’est un lieu de ponte important pour les tortues vertes (entre 1 000 et 2 000 femelles par an). \nL’histoire de l’île a été marquée par l’échouage de l’*Utile*, un navire français transportant des esclaves, à la fin du 18<sup>e</sup> siècle. L’équipage parvint à rallier Madagascar sur une embarcation de fortune, abandonnant 60 esclaves à leur sort malgré la promesse de venir les chercher. Quinze ans plus tard, le chevalier de Tromelin, qui donna son nom à l’île, récupéra seulement huit survivants : sept femmes et un enfant. \n	\N	\N	\N	f
-67407	1048	TEXT	ecosystems.ecosystems.3.name	Les herbiers sous-marins	\N	\N	\N	f
-67408	1048	TEXT	statistics.1.text	de lagon à Europa	\N	\N	\N	f
 36712	1029	TEXT	understand.text	On estime que seule 30% des espèces de faune et de flore présentes en outre-mer sont bien répertoriées. Les études pour suivre les espèces nécessitent beaucoup de temps d'observation, c’est pourquoi en multipliant les observateurs, on peut accumuler un plus grand nombre de données. De nombreux programmes de sciences participatives sont ainsi mis en place afin de permettre à chacun d'apporter sa pierre à l'édifice de la connaissance en faisant remonter ses observations. Certains programmes ont développé des applications mobiles accessibles directement depuis un smartphone. \n\nDans le cadre du Compteur de biodiversité outre-mer, une étude est actuellement en cours pour recenser tous ces programmes. Lorsque cet état des lieux sera terminé, le Compteur présentera un annuaire vous permettant de sélectionner les programmes qui vous correspondent en fonction de votre territoire et vos centres d'intérêt.\n\nDe nombreuses structures locales et associations font régulièrement appel à des bénévoles, par exemple pour participer à des opérations de restauration des milieux : arrachages de plantes exotiques envahissantes, plantations d'espèces indigènes, ramassages de déchets,... Des sorties découvertes sont également régulièrement organisées par les acteurs locaux afin d'en savoir plus sur les écosystèmes et leurs habitants, tout en les respectant.\n\n	\N	\N	\N	f
 36713	1029	IMAGE	action.cards.1.icon	\N	1149	réseau	\N	f
 63963	1001	TEXT	statistics.2.text	Création du premier parc national d’outre-mer	\N	\N	\N	f
@@ -2449,11 +2426,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 36717	1029	TEXT	action.title	Pour contribuer activement à la connaissance et la préservation de la biodiversité :	\N	\N	\N	f
 36718	1029	TEXT	understand.quote	À ce jour il existe plus d'une centaine de programmes de sciences participatifs actifs réparti sur les territoires d'outre-mer.	\N	\N	\N	f
 63965	1001	TEXT	events.1.date	1493	\N	\N	\N	f
-67409	1048	TEXT	events.9.date	2021	\N	\N	\N	f
-67410	1048	TEXT	identity.subtitle	Une biodiversité remarquable sur des îles de petite taille	\N	\N	\N	f
-67411	1048	IMAGE	species.4.image	\N	2482	*Onychoprion fuscatus* - Sterne fuligineuse © Maxime Amy - TAAF	\N	f
-67412	1048	TEXT	risks.risks.0.description	Insularité, isolement, faible occupation humaine, ces caractères permettent aux îles Éparses d’abriter une biodiversité remarquable au regard de leur petite taille, en particulier d’impressionnantes colonies d’oiseaux marins et des récifs coralliens dans un état de conservation quasiment intact. Cependant, elles ne sont pas exemptes d'impacts des activités humaines et sont soumises aux menaces des changements globaux. \n  \nPlusieurs espèces non-indigènes ont été introduites sur les îles, volontairement ou involontairement, par les explorateurs. On y compte ainsi six espèces de mammifères et six espèces d’oiseaux naturalisés, mais aussi de nombreuses espèces végétales, des reptiles ou encore des insectes. Si les conséquences de la présence de certaines espèces introduites sont encore méconnues, l’impact des mammifères prédateurs est lui avéré : les chats et les rats déciment les colonies d’oiseaux. Pour y remédier, les agents des TAAF mènent des campagnes de dératisation, notamment à Tromelin, où leur l’effet a été nettement observable : les effectifs des populations ont augmenté et plusieurs espèces qui n’étaient plus observées sont revenu nicher, comme la Gygis blanche ([*Gygis alba*](https://inpn.mnhn.fr/espece/cd_nom/440187)) et le Noddi brun ([*Anous stolidus*](https://inpn.mnhn.fr/espece/cd_nom/199379)) .  \n  \nL’administration des Terres australes et antarctiques françaises s’est engagée aux cotés de La Réunion et de Mayotte pour la préservation des tortues marines, fortement menacées, par la mise en place d’un [Plan national d’action](https://taaf.fr/missions-et-activites/protection-de-lenvironnement/conservation-des-iles-eparses/le-plan-national-daction-en-faveur-des-tortues-marines/). Ses principaux objectifs : lutter contre le braconnage et les impacts de la pêche, préserver les sites de ponte (notamment contre les espèces introduites), préserver les herbiers de nourrissage et approfondir les connaissances scientifiques sur les tortues.  \n\nDu fait de leur richesse en poissons pélagiques (marlins, espadons, thons, bonites), les eaux de l’océan Indien sont parcourues par des flottilles industrielles de pêche. Dans les eaux sous juridiction françaises autour des îles Éparses, la pêche est autorisée mais règlementée, et certaines espèces comme le Thon albacore ([*Thunnus albacares*](https://inpn.mnhn.fr/espece/cd_nom/70412)) font l’objet de limitations de captures en raison du mauvais état estimé des stocks. Des observateurs de pêche sont embarqués à bord des bateaux de pêche afin de veiller au respect de ces règlementations et rapporter à l’Institut de Recherche et développement ([IRD](https://www.ird.fr/)) des données scientifiques pour étudier les populations de ces poissons. \n \n**Pour en savoir plus** : visitez le site des [Terres australes et antarctiques françaises](https://taaf.fr/collectivites/presentation-des-territoires/les-iles-eparses/) et consultez le [livret d'identification de la faune des îles Éparses](https://taaf.fr/ressources-pedagogiques/le-livret-didentification-de-la-faune-des-taaf/). \n	\N	\N	\N	f
-67413	1048	TEXT	events.3.date	31 juillet 1761	\N	\N	\N	f
 68177	1013	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
 32553	1019	TEXT	examples.projects.1.description	Débuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et La Réunion, le STOC-Guyane a pour but de suivre les variations d'abondances d'oiseaux communs sur le long terme pour évaluer l'impact des activités humaines. Le programme demande une implication régulière et nécessite une formation au protocole utilisé et la reconnaissance des espèces. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
 32554	1019	IMAGE	images.0.image	\N	1291	Observation des oiseaux marins à Mayotte © Fanny Cautain / OFB	\N	f
@@ -2462,33 +2434,11 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 32557	1019	TEXT	examples.projects.3.subject	Suivi de l’état de santé des récifs de Nouvelle-Calédonie	\N	\N	\N	f
 36719	1029	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 36720	1029	TEXT	action.cards.0.description	Je rejoins les réseaux de sciences participatives afin de faire remonter mes observations (annuaire prochainement disponible).	\N	\N	\N	f
-67414	1048	TEXT	ecosystems.ecosystems.2.description	Ces habitats de zone humide qui couvrent 65 hectares sur les plaines autour du lagon et de la mangrove d’Europa sont composés d’une végétation adaptée aux milieux salins et qui se développe sur des sédiments d’origine corallienne. On y trouve notamment des salicornes ([*Caroxylon littorale*](https://inpn.mnhn.fr/espece/cd_nom/899430)).\n	\N	\N	\N	f
-67415	1048	IMAGE	ecosystems.ecosystems.3.image	\N	2483	Tortue verte au dessus d'un herbier de phanérogames marines © Hendrik Sauvignet - OFB	\N	f
-67416	1048	IMAGE	species.3.image	\N	2485	*Cryptoblepharus caudatus* - Scinque aux yeux de serpent de Juan de Nova © Louis Dorémus - TAAF	\N	f
-67417	1048	IMAGE	zoom.map	\N	2548	Cartographie îles Eparses	\N	f
-67418	1048	TEXT	species.1.name	Le Filao	\N	\N	\N	f
-67419	1048	TEXT	interests.title	Les différentes îles et archipels	\N	\N	\N	f
-67420	1048	TEXT	ecosystems.ecosystems.1.description	Europa abrite les derniers reliquats de mangrove du sud-ouest de l'océan Indien dans un état de conservation exceptionnel. Cet écosystème primaire couvre 725 hectares autour du lagon. Il représente notamment un habitat favorable pour l'alimentation et le développement des tortues juvéniles et de certaines espèces de requins.	\N	\N	\N	f
-67421	1048	TEXT	ecosystems.ecosystems.0.description	Les îles Éparses totalisent près de 800 km² de superficies récifales, qu'on trouve autour des îles et sur certains monts sous-marins éloignés comme le banc du Geyser (dans la ZEE des Glorieuses). Ces récifs coralliens abritent une biodiversité riche et diversifiée, avec 3 656 espèces recensées à ce jour : coraux, poissons, éponges, mollusques, crustacés, échinodermes, etc.  \nL'ensemble des récifs coralliens des îles Éparses présente un bon état de santé. Les pentes externes affichent des taux de recouvrement en corail vivant important, allant jusqu'à 80 % à Europa, où l'on retrouve une diversité et une biomasse en poissons récifaux exceptionnelle.	\N	\N	\N	f
-67422	1048	TEXT	identity.highestPoint	14	\N	\N	\N	f
-67423	1048	TEXT	interests.locations.4.description	Cet atoll circulaire d’environ 10 km de diamètre est formé par un récif dont la quasi-totalité est immergée à marée haute, ce qui empêche tout développement terrestre. La richesse de Bassas da India se trouve donc dans ses eaux, elle est cependant mal connue en raison de ces conditions d’accès difficiles.  	\N	\N	\N	f
-67424	1048	TEXT	risks.risks.0.name	Des îles préservées, mais sous la pression des espèces introduites et des changements globaux	\N	\N	\N	f
-67425	1048	IMAGE	interests.locations.1.image	\N	2475	Vue aérienne de Tromelin © Nelly Gravier - TAAF	\N	f
-67426	1048	IMAGE	ecosystems.ecosystems.1.image	\N	2488	Tortue dans une mangrove à Europa © Bruno Marie - TAAF	\N	f
-67427	1048	TEXT	interests.locations.3.description	Cette île est la plus grande des îles Éparses (31&nbsp;km<sup>2</sup>). Elle est entourée de récifs frangeants, et abrite, au nord-est, un petit lagon entouré par une mangrove. Le reste de la végétation se divise entre une forêt sèche au nord et une plaine herbacée au sud. Europa présente l’avifaune marine la plus diversifiée des îles Éparses : 8 espèces nicheuses dont une sous-espèce endémique (le Phaéton à bec jaune d’Europa, [*Phaeton lepturus europae*](https://inpn.mnhn.fr/espece/cd_nom/785477)). C’est également le site de ponte de tortues vertes le plus important de l’océan Indien, avec plusieurs milliers de pontes par an.	\N	\N	\N	f
-67428	1048	TEXT	identity.title	Les îles Éparses,  \nchapelet d'îles autour de Madagascar	\N	\N	\N	f
-67429	1048	TEXT	species.4.name	Les oiseaux	\N	\N	\N	f
-67430	1048	TEXT	identity.area	43	\N	\N	\N	f
-67431	1048	TEXT	species.0.description	Le Veloutier ([*Heliotropium foertherianum*](https://inpn.mnhn.fr/espece/cd_nom/446830)) est un arbuste qui compose l’essentiel de la maigre végétation de Tromelin. Il doit son nom à la texture veloutée de ses feuilles, et est utilisé par les oiseaux (fous à pieds rouges et gygis) comme support de nidification.  \n  \nStatut sur la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
-67432	1048	TEXT	identity.highestPointName	sur l'île Glorieuse, non nommé	\N	\N	\N	f
-67433	1048	TEXT	interests.locations.1.name	Tromelin	\N	\N	\N	f
-67434	1048	TEXT	statistics.2.text	de pontes de tortues marines par an	\N	\N	\N	f
-67435	1048	IMAGE	species.0.image	\N	2487	*Heliotropium foertherianum* © Florent Bignon - TAAF	\N	f
-67436	1048	TEXT	events.1.date	16<sup>e</sup> siècle	\N	\N	\N	f
-67437	1048	TEXT	ecosystems.ecosystems.2.name	Les sansouïres et les steppes salées d'Europa 	\N	\N	\N	f
-67438	1048	TEXT	interests.locations.4.name	Bassas da India	\N	\N	\N	f
+68396	1048	TEXT	statistics.0.text	des eaux sous juridiction française	\N	\N	\N	f
+68397	1048	IMAGE	species.1.image	\N	2478	*Casuarina equisetifolia* © Jean Hivert - TAAF	\N	f
 64291	1021	TEXT	events.7.description	Découverte du premier site de nidification du [Pétrel noir de Bourbon](https://www.petrels.re/les-especes/petrel-noir-de-bourbon/) ([*Pseudobulweria aterrima*](https://inpn.mnhn.fr/espece/cd_nom/442280)), oiseau endémique encore mal connu	\N	\N	\N	f
 64292	1021	TEXT	events.7.date	2016	\N	\N	\N	f
+68398	1048	TEXT	ecosystems.ecosystems.1.name	Les mangroves lagonaires d'Europa	\N	\N	\N	f
 67439	1047	TEXT	body.photos.3.description	« Prise dans un filet de pêche, cette tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338)) a pu être secourue à temps. Les filets laissés sans surveillance sont de véritables pièges pour de nombreuses espèces qui ne sont pas ciblées par les pêcheurs. »	\N	\N	\N	f
 67440	1047	IMAGE	body.photos.1.photo	\N	2259	Raphaël Gailhac - OFB 	\N	f
 67441	1047	TEXT	body.photos.2.description	« Les plages de Guyane comptent parmi les plus importants sites de pontes au monde pour les tortues marines. Ces deux jeunes tortues olivâtres ([*Lepidochelys olivacea*](https://inpn.mnhn.fr/espece/cd_nom/77360)) émergent de leur nid après une cinquantaine de jours d’incubation des œufs dans le sable. » 	\N	\N	\N	f
@@ -2552,6 +2502,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68350	1000	TEXT	carousel.carouselElements.2.text	Naviguez parmi les portraits biodiversité des territoires pour mieux comprendre les enjeux avec une sélection de repères et de chiffres clés sur la nature.	\N	\N	\N	f
 68351	1000	IMAGE	science.image	\N	2569	Vonvon (*Xylocopa fimbriata*) butinant des fleurs de Glisérya (*Gliricidia sepium*) © Eddy Dumbardon-Martial	\N	f
 68352	1000	TEXT	science.title	« Il faut amener les gens à s’intéresser aux insectes pollinisateurs de Martinique »	\N	\N	\N	f
+68399	1048	TEXT	events.2.date	1751	\N	\N	\N	f
+68400	1048	TEXT	events.5.date	1897	\N	\N	\N	f
+68401	1048	TEXT	identity.marineArea	634 853	\N	\N	\N	f
+68402	1048	TEXT	events.8.date	2012	\N	\N	\N	f
 68178	1013	TEXT	understand.text2	La taxonomie, ou taxinomie, est la science qui permet de décrire et de classer le vivant. L’espèce est l’unité taxonomique de base. Chaque espèce décrite est classée avec d’autres espèces aux caractéristiques communes au sein d’un même genre, puis d’une famille, d’un ordre, etc. Chaque espèce est identifiée par un nom scientifique latin en deux mots, par exemple [*Pelecanus occidentalis*](https://inpn.mnhn.fr/espece/cd_nom/442189) pour le Pélican brun. Cette dénomination en latin permet un référentiel mondial commun, car une même espèce peut posséder des dizaines de noms usuels différents (dits noms «&nbsp;vernaculaires&nbsp;») à travers le monde, selon les langues et les régions. 	\N	\N	\N	f
 68179	1013	TEXT	understand.text1	Plus de 80 % des nouvelles découvertes d'espèces chaque année en France sont réalisées dans les territoires d'outre-mer. Certaines de ces nouvelles descriptions sont issues d’expéditions scientifiques, par exemple celles menées en Guyane en 2014 et en Nouvelle-Calédonie entre 2016 et 2019 par le Muséum national d’Histoire naturelle dans le cadre de la campagne « [la Planète revisitée](https://www.mnhn.fr/fr/recherche-expertise/lieux/planete-revisitee) », mais d’autres sont également réalisées par des taxonomistes non-professionnels. Il peut s'agir également d'espèces déjà décrites dans des territoires frontaliers mais dont la présence n'avait pas encore été observée sur le territoire national. Dans la plupart des cas, il s’agit de petits organismes invertébrés et d’organismes marins (insectes, mollusques, crustacés, vers marins).   \n  \nLe chiffre présenté ici représente une moyenne du nombre de découvertes par an sur les trois dernières années. 	\N	\N	\N	f
 68180	1013	TEXT	territories.title	Nouvelles espèces décrites par an	\N	\N	\N	f
@@ -2571,13 +2525,36 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64301	1021	TEXT	species.8.name	Le Papangue	\N	\N	\N	f
 68189	1013	TEXT	ecogestures.title	Comment aider à la progression des connaissances scientifiques ?	\N	\N	\N	f
 68190	1013	IMAGE	presentation.image	\N	2061	© Fabien Lefebvre	\N	f
+68403	1048	TEXT	identity.presentation	Dans le canal du Mozambique, entre 10° et 25° de latitude sud, se répartissent l’archipel des Glorieuses, les îles Juan de Nova et Europa, et l’atoll de Bassas da India. Au nord de La Réunion, l’île de Tromelin complète cet ensemble de territoires français regroupés sous le nom d’îles Éparses, intégrés au sein des Terres australes et antarctiques françaises (TAAF).\nSi la surface terrestre cumulée de ces îles est réduite, elles permettent à la France de détenir un important territoire maritime sous sa juridiction. L’isolement et la faible occupation humaine permettent aux îles Éparses d’abriter une biodiversité remarquable au regard de leur petite taille. Elles hébergent notamment de grandes colonies d’oiseaux marin, des récifs coralliens dans un excellent état de conservation et sont des sites de pontes privilégiés pour les tortues marines.	\N	\N	\N	f
+68404	1048	IMAGE	interests.locations.0.image	\N	2480	Ile du Lys, archipel des Glorieuses © Hendrik Sauvignet - Office français de la biodiversité	\N	f
+68405	1048	TEXT	identity.population	0	\N	\N	\N	f
+68406	1048	IMAGE	interests.locations.3.image	\N	2477	Vue aérienne d'Europa © TAAF	\N	f
+68407	1048	TEXT	species.3.name	Les reptiles terrestres	\N	\N	\N	f
+68408	1048	TEXT	risks.title	Enjeux et menaces 	\N	\N	\N	f
+68409	1048	TEXT	species.0.name	Le Veloutier	\N	\N	\N	f
+68410	1048	TEXT	events.4.date	1892	\N	\N	\N	f
 32567	1019	TEXT	paragraphs.2.text	L’équipe du Compteur mène actuellement une étude pour **recenser tous les programmes de sciences participatives dans les territoires ultramarins**. Ces résultats seront disponibles prochainement afin de vous proposer un panorama complet des programmes auxquels vous pouvez participer. 	\N	\N	\N	f
 32568	1019	TEXT	examples.projects.4.title	Ti bèt a limiè, l’Observatoire des lucioles en Guadeloupe	\N	\N	\N	f
 32569	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
+68411	1048	IMAGE	interests.locations.2.image	\N	2476	Vue aérienne de Juan de Nova © Stephanie Legeron - TAAF	\N	f
+68412	1048	IMAGE	ecosystems.ecosystems.2.image	\N	2486	Sansouïres d'Europa © B. Navez - Wikimedia commons	\N	f
+68413	1048	TEXT	interests.locations.3.name	Europa	\N	\N	\N	f
+68414	1048	TEXT	interests.locations.0.description	A l’entrée nord du canal du Mozambique, l’archipel regroupe quatre îles et rochers : Grande Glorieuse, l’île du Lys, les roches Vertes et le rocher du Sud. La biodiversité végétale est importante sur Grande Glorieuse, mais c’est surtout la richesse des récifs qui font des Glorieuses un point chaud de biodiversité, en particulier sur le banc du Geyser. L’ensemble des eaux de l’archipel a été classé en Parc naturel marin en 2012, puis en 2021 le Parc naturel marin a été remplacé par une Réserve naturelle nationale couvrant l’ensemble des îles de l’archipel et des eaux attenantes.	\N	\N	\N	f
+68415	1048	TEXT	interests.locations.2.description	Cette île de 6 km de long sur 1,6 km de large est entourée par une barrière corallienne délimitant un vaste lagon (200 km<sup>2</sup>). L’île a été fortement modifiée par l’exploitation du phosphate issu de la transformation du guano (fientes d’oiseaux), entre 1900 et 1972. Des habitations et des cultures y avaient été aménagées. Malgré l’impact de cette présence humaine, la biodiversité terrestre, en particulier la végétation, demeure riche.	\N	\N	\N	f
+68416	1048	TEXT	interests.locations.1.description	Cette petite île coralienne d’un kilomètre carré en forme d’amande est soumise à des conditions environnementales difficiles : nombreux cyclones, recouvrement par les vagues en cas de houle, forte salinité… C’est un lieu de ponte important pour les tortues vertes (entre 1 000 et 2 000 femelles par an). \nL’histoire de l’île a été marquée par l’échouage de l’*Utile*, un navire français transportant des esclaves, à la fin du 18<sup>e</sup> siècle. L’équipage parvint à rallier Madagascar sur une embarcation de fortune, abandonnant 60 esclaves à leur sort malgré la promesse de venir les chercher. Quinze ans plus tard, le chevalier de Tromelin, qui donna son nom à l’île, récupéra seulement huit survivants : sept femmes et un enfant. \n	\N	\N	\N	f
+68417	1048	TEXT	ecosystems.ecosystems.3.name	Les herbiers sous-marins	\N	\N	\N	f
 64302	1021	TEXT	events.6.description	Publication des Listes rouges de la Faune et de la Flore de La Réunion ; Inscription des cirques au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
 64723	1020	TEXT	events.7.description	Publication du Code de l'environnement de la Province des îles Loyauté	\N	\N	\N	f
 1799	1002	TEXT	description	Les Antilles sont un « point chaud » de la biodiversité mondiale. Si chacun des quatre territoires français du bassin a son identité et ses spécificités, les acteurs locaux collaborent autour de problématiques partagées. 	\N	\N	\N	f
+68418	1048	TEXT	statistics.1.text	de lagon à Europa	\N	\N	\N	f
 64303	1021	TEXT	events.6.date	2010	\N	\N	\N	f
+68419	1048	TEXT	events.9.date	2021	\N	\N	\N	f
+68420	1048	TEXT	identity.subtitle	Une biodiversité remarquable sur des îles de petite taille	\N	\N	\N	f
+68421	1048	IMAGE	species.4.image	\N	2482	*Onychoprion fuscatus* - Sterne fuligineuse © Maxime Amy - TAAF	\N	f
+68422	1048	TEXT	risks.risks.0.description	Insularité, isolement, faible occupation humaine, ces caractères permettent aux îles Éparses d’abriter une biodiversité remarquable au regard de leur petite taille, en particulier d’impressionnantes colonies d’oiseaux marins et des récifs coralliens dans un état de conservation quasiment intact. Cependant, elles ne sont pas exemptes d'impacts des activités humaines et sont soumises aux menaces des changements globaux. \n  \nPlusieurs espèces non-indigènes ont été introduites sur les îles, volontairement ou involontairement, par les explorateurs. On y compte ainsi six espèces de mammifères et six espèces d’oiseaux naturalisés, mais aussi de nombreuses espèces végétales, des reptiles ou encore des insectes. Si les conséquences de la présence de certaines espèces introduites sont encore méconnues, l’impact des mammifères prédateurs est lui avéré : les chats et les rats déciment les colonies d’oiseaux. Pour y remédier, les agents des TAAF mènent des campagnes de dératisation, notamment à Tromelin, où leur l’effet a été nettement observable : les effectifs des populations ont augmenté et plusieurs espèces qui n’étaient plus observées sont revenu nicher, comme la Gygis blanche ([*Gygis alba*](https://inpn.mnhn.fr/espece/cd_nom/440187)) et le Noddi brun ([*Anous stolidus*](https://inpn.mnhn.fr/espece/cd_nom/199379)) .  \n  \nL’administration des Terres australes et antarctiques françaises s’est engagée aux cotés de La Réunion et de Mayotte pour la préservation des tortues marines, fortement menacées, par la mise en place d’un [Plan national d’action](https://taaf.fr/missions-et-activites/protection-de-lenvironnement/conservation-des-iles-eparses/le-plan-national-daction-en-faveur-des-tortues-marines/). Ses principaux objectifs : lutter contre le braconnage et les impacts de la pêche, préserver les sites de ponte (notamment contre les espèces introduites), préserver les herbiers de nourrissage et approfondir les connaissances scientifiques sur les tortues.  \n\nDu fait de leur richesse en poissons pélagiques (marlins, espadons, thons, bonites), les eaux de l’océan Indien sont parcourues par des flottilles industrielles de pêche. Dans les eaux sous juridiction françaises autour des îles Éparses, la pêche est autorisée mais règlementée, et certaines espèces comme le Thon albacore ([*Thunnus albacares*](https://inpn.mnhn.fr/espece/cd_nom/70412)) font l’objet de limitations de captures en raison du mauvais état estimé des stocks. Des observateurs de pêche sont embarqués à bord des bateaux de pêche afin de veiller au respect de ces règlementations et rapporter à l’Institut de Recherche et développement ([IRD](https://www.ird.fr/)) des données scientifiques pour étudier les populations de ces poissons. \n \n**Pour en savoir plus** : visitez le site des [Terres australes et antarctiques françaises](https://taaf.fr/collectivites/presentation-des-territoires/les-iles-eparses/) et consultez le [livret d'identification de la faune des îles Éparses](https://taaf.fr/ressources-pedagogiques/le-livret-didentification-de-la-faune-des-taaf/). \n	\N	\N	\N	f
+68423	1048	TEXT	events.3.date	31 juillet 1761	\N	\N	\N	f
+68424	1048	TEXT	ecosystems.ecosystems.2.description	Ces habitats de zone humide qui couvrent 65 hectares sur les plaines autour du lagon et de la mangrove d’Europa sont composés d’une végétation adaptée aux milieux salins et qui se développe sur des sédiments d’origine corallienne. On y trouve notamment des salicornes ([*Caroxylon littorale*](https://inpn.mnhn.fr/espece/cd_nom/899430)).\n	\N	\N	\N	f
+68425	1048	IMAGE	ecosystems.ecosystems.3.image	\N	2483	Tortue verte au dessus d'un herbier de phanérogames marines © Hendrik Sauvignet - OFB	\N	f
 64304	1021	TEXT	events.4.description	Publication des premiers volumes de La Flore des Mascareignes, avec la contribution du botaniste Thérésien Cadet.	\N	\N	\N	f
 64305	1021	TEXT	events.5.description	Création du Parc national de La Réunion ; Création de la Réserve naturelle marine	\N	\N	\N	f
 64306	1021	TEXT	interests.locations.2.name	Le massif de la Fournaise	\N	\N	\N	f
@@ -2601,11 +2578,27 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64315	1021	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
 64316	1021	TEXT	interests.locations.3.name	La forêt de Mare-Longue	\N	\N	\N	f
 64317	1021	TEXT	statistics.1.text	Création du Parc national de La Réunion	\N	\N	\N	f
+68426	1048	IMAGE	species.3.image	\N	2485	*Cryptoblepharus caudatus* - Scinque aux yeux de serpent de Juan de Nova © Louis Dorémus - TAAF	\N	f
+68427	1048	IMAGE	zoom.map	\N	2548	Cartographie îles Eparses	\N	f
+68428	1048	TEXT	species.1.name	Le Filao	\N	\N	\N	f
 66514	1039	TEXT	events.2.description	Plus anciennes traces d’occupations humaine de Mayotte	\N	\N	\N	f
 66515	1039	TEXT	events.3.description	Ratification du traité de cession de Mayotte à la France	\N	\N	\N	f
 64318	1021	IMAGE	species.4.image	\N	2368	*Pterodroma baraui* © Jean-Philippe Siblet	\N	f
 64319	1021	TEXT	events.3.date	1708	\N	\N	\N	f
 64320	1021	IMAGE	species.3.image	\N	2367	*Mormopterus francoismoutoui* © Gildas Monnier / GCOI	\N	f
+68429	1048	TEXT	interests.title	Les différentes îles et archipels	\N	\N	\N	f
+68430	1048	TEXT	ecosystems.ecosystems.1.description	Europa abrite les derniers reliquats de mangrove du sud-ouest de l'océan Indien dans un état de conservation exceptionnel. Cet écosystème primaire couvre 725 hectares autour du lagon. Il représente notamment un habitat favorable pour l'alimentation et le développement des tortues juvéniles et de certaines espèces de requins.	\N	\N	\N	f
+68431	1048	TEXT	ecosystems.ecosystems.0.description	Les îles Éparses totalisent près de 800 km² de superficies récifales, qu'on trouve autour des îles et sur certains monts sous-marins éloignés comme le banc du Geyser (dans la ZEE des Glorieuses). Ces récifs coralliens abritent une biodiversité riche et diversifiée, avec 3 656 espèces recensées à ce jour : coraux, poissons, éponges, mollusques, crustacés, échinodermes, etc.  \nL'ensemble des récifs coralliens des îles Éparses présente un bon état de santé. Les pentes externes affichent des taux de recouvrement en corail vivant important, allant jusqu'à 80 % à Europa, où l'on retrouve une diversité et une biomasse en poissons récifaux exceptionnelle.	\N	\N	\N	f
+68432	1048	TEXT	identity.highestPoint	14	\N	\N	\N	f
+68433	1048	TEXT	interests.locations.4.description	Cet atoll circulaire d’environ 10 km de diamètre est formé par un récif dont la quasi-totalité est immergée à marée haute, ce qui empêche tout développement terrestre. La richesse de Bassas da India se trouve donc dans ses eaux, elle est cependant mal connue en raison de ces conditions d’accès difficiles.  	\N	\N	\N	f
+68434	1048	TEXT	risks.risks.0.name	Des îles préservées, mais sous la pression des espèces introduites et des changements globaux	\N	\N	\N	f
+68435	1048	IMAGE	interests.locations.1.image	\N	2475	Vue aérienne de Tromelin © Nelly Gravier - TAAF	\N	f
+68436	1048	IMAGE	ecosystems.ecosystems.1.image	\N	2488	Tortue dans une mangrove à Europa © Bruno Marie - TAAF	\N	f
+68437	1048	TEXT	interests.locations.3.description	Cette île est la plus grande des îles Éparses (31&nbsp;km<sup>2</sup>). Elle est entourée de récifs frangeants, et abrite, au nord-est, un petit lagon entouré par une mangrove. Le reste de la végétation se divise entre une forêt sèche au nord et une plaine herbacée au sud. Europa présente l’avifaune marine la plus diversifiée des îles Éparses : 8 espèces nicheuses dont une sous-espèce endémique (le Phaéton à bec jaune d’Europa, [*Phaeton lepturus europae*](https://inpn.mnhn.fr/espece/cd_nom/785477)). C’est également le site de ponte de tortues vertes le plus important de l’océan Indien, avec plusieurs milliers de pontes par an.	\N	\N	\N	f
+68438	1048	TEXT	identity.title	Les îles Éparses,  \nchapelet d'îles autour de Madagascar	\N	\N	\N	f
+68439	1048	TEXT	species.4.name	Les oiseaux	\N	\N	\N	f
+68440	1048	TEXT	identity.area	43	\N	\N	\N	f
+68441	1048	TEXT	species.0.description	Le Veloutier ([*Heliotropium foertherianum*](https://inpn.mnhn.fr/espece/cd_nom/446830)) est un arbuste qui compose l’essentiel de la maigre végétation de Tromelin. Il doit son nom à la texture veloutée de ses feuilles, et est utilisé par les oiseaux (fous à pieds rouges et gygis) comme support de nidification.  \n  \nStatut sur la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
 64321	1021	IMAGE	zoom.map	\N	2352	Carte La Réunion	\N	f
 64322	1021	TEXT	species.1.name	L'Échenilleur de La Réunion	\N	\N	\N	f
 64323	1021	TEXT	species.7.name	Le Bois d’Ortie	\N	\N	\N	f
@@ -2616,6 +2609,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64725	1020	TEXT	interests.locations.0.name	Le Parc naturel de la Mer de Corail 	\N	\N	\N	f
 64726	1020	TEXT	events.0.description	Dislocation du supercontinent Gondwana et séparation de la Nouvelle-Calédonie avec l’Australie et la Nouvelle-Zélande	\N	\N	\N	f
 64727	1020	TEXT	events.1.description	Arrivée des explorateurs Lapita par la mer : première occupation humaine du territoire	\N	\N	\N	f
+68442	1048	TEXT	identity.highestPointName	sur l'île Glorieuse, non nommé	\N	\N	\N	f
+68443	1048	TEXT	interests.locations.1.name	Tromelin	\N	\N	\N	f
+68444	1048	TEXT	statistics.2.text	de pontes de tortues marines par an	\N	\N	\N	f
+68445	1048	IMAGE	species.0.image	\N	2487	*Heliotropium foertherianum* © Florent Bignon - TAAF	\N	f
+68446	1048	TEXT	events.1.date	16<sup>e</sup> siècle	\N	\N	\N	f
+68447	1048	TEXT	ecosystems.ecosystems.2.name	Les sansouïres et les steppes salées d'Europa 	\N	\N	\N	f
+68448	1048	TEXT	interests.locations.4.name	Bassas da India	\N	\N	\N	f
 32570	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
 32571	1019	TEXT	paragraphs.0.title	Différents types de programmes 	\N	\N	\N	f
 32572	1019	TEXT	examples.projects.4.actor	An ba loup-la	\N	\N	\N	f
@@ -4183,7 +4183,7 @@ SELECT pg_catalog.setval('public.media_category_seq', 1000, false);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 68358, true);
+SELECT pg_catalog.setval('public.page_element_seq', 68448, true);
 
 
 --
