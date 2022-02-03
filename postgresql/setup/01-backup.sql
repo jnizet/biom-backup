@@ -2001,99 +2001,99 @@ COPY public.indicator_ecogesture (indicator_id, ecogesture_id) FROM stdin;
 --
 
 COPY public.indicator_value (id, indicator_id, territory, value, unit) FROM stdin;
-1643	1003	GUYANE	11.11842105	%
-1640	1003	MAYOTTE	35.92505855	%
-1635	1003	OUTRE_MER	19.6979807	%
-1641	1003	ILES_SUBANTARCTIQUES	31.03448276	%
-1638	1003	POLYNESIE_FRANCAISE	63	%
 1639	1003	REUNION	34.23298707	%
-1636	1003	GUADELOUPE	28.63712677	%
-1637	1003	MARTINIQUE	19.40384829	%
+1643	1003	GUYANE	11.11842105	%
+1641	1003	ILES_SUBANTARCTIQUES	31.03448276	%
 1644	1003	TERRE_ADELIE	46.15384615	%
 1642	1003	ILES_EPARSES	22.22222222	%
-1560	1007	MAYOTTE	30	%
-1552	1007	OUTRE_MER	29.26829268	%
-1557	1007	POLYNESIE_FRANCAISE	40	%
-1556	1007	NOUVELLE_CALEDONIE	18.51851852	%
-1555	1007	SAINT_MARTIN	33.33333333	%
-1558	1007	WALLIS_ET_FUTUNA	25	%
+1640	1003	MAYOTTE	35.92505855	%
+1638	1003	POLYNESIE_FRANCAISE	63	%
+1635	1003	OUTRE_MER	19.6979807	%
+1636	1003	GUADELOUPE	28.63712677	%
+1637	1003	MARTINIQUE	19.40384829	%
 1559	1007	REUNION	21.42857143	%
+1560	1007	MAYOTTE	30	%
+1557	1007	POLYNESIE_FRANCAISE	40	%
+1552	1007	OUTRE_MER	29.26829268	%
+1556	1007	NOUVELLE_CALEDONIE	18.51851852	%
+1558	1007	WALLIS_ET_FUTUNA	25	%
+1555	1007	SAINT_MARTIN	33.33333333	%
 1553	1007	GUADELOUPE	60	%
 1554	1007	MARTINIQUE	50	%
-1601	1002	OUTRE_MER	88966	
-1611	1002	ILES_SUBANTARCTIQUES	2613	
-1609	1002	REUNION	10915	
-1603	1002	MARTINIQUE	7422	
 1605	1002	SAINT_BARTHELEMY	2140	
+1609	1002	REUNION	10915	
+1611	1002	ILES_SUBANTARCTIQUES	2613	
+1601	1002	OUTRE_MER	88966	
 1602	1002	GUADELOUPE	10527	
-1628	1006	MAYOTTE	9.33333333333333	
-1619	1006	OUTRE_MER	546.333333333333	
-1629	1006	ILES_SUBANTARCTIQUES	2.66666666666667	
-1631	1006	CLIPPERTON	15	
-1622	1006	SAINT_MARTIN	1	
-1624	1006	NOUVELLE_CALEDONIE	219.333333333333	
-1627	1006	REUNION	17.3333333333333	
-1621	1006	MARTINIQUE	38.6666666666667	
-1630	1006	ILES_EPARSES	4	
-1632	1006	GUYANE	177.666666666667	
-1625	1006	POLYNESIE_FRANCAISE	51	
-1633	1006	SAINT_PIERRE_ET_MIQUELON	0	
+1603	1002	MARTINIQUE	7422	
 1623	1006	SAINT_BARTHELEMY	0.666666666666667	
+1627	1006	REUNION	17.3333333333333	
+1632	1006	GUYANE	177.666666666667	
+1633	1006	SAINT_PIERRE_ET_MIQUELON	0	
+1634	1006	TERRE_ADELIE	4	
+1628	1006	MAYOTTE	9.33333333333333	
+1622	1006	SAINT_MARTIN	1	
+1631	1006	CLIPPERTON	15	
+1629	1006	ILES_SUBANTARCTIQUES	2.66666666666667	
+1630	1006	ILES_EPARSES	4	
+1625	1006	POLYNESIE_FRANCAISE	51	
+1619	1006	OUTRE_MER	546.333333333333	
+1624	1006	NOUVELLE_CALEDONIE	219.333333333333	
 1626	1006	WALLIS_ET_FUTUNA	5	
 1620	1006	GUADELOUPE	21.3333333333333	
-1634	1006	TERRE_ADELIE	4	
-1549	1004	MAYOTTE	15.78947368	%
-1550	1004	GUYANE	98.64110653	%
-1540	1004	OUTRE_MER	84.64046368	%
-1551	1004	SAINT_PIERRE_ET_MIQUELON	13.04347826	%
-1546	1004	POLYNESIE_FRANCAISE	42.34972678	%
-1543	1004	SAINT_MARTIN	20	%
+1621	1006	MARTINIQUE	38.6666666666667	
 1544	1004	SAINT_BARTHELEMY	0	%
+1551	1004	SAINT_PIERRE_ET_MIQUELON	13.04347826	%
+1550	1004	GUYANE	98.64110653	%
+1549	1004	MAYOTTE	15.78947368	%
+1546	1004	POLYNESIE_FRANCAISE	42.34972678	%
+1540	1004	OUTRE_MER	84.64046368	%
 1545	1004	NOUVELLE_CALEDONIE	45.78774617	%
 1547	1004	WALLIS_ET_FUTUNA	42.85714286	%
-1597	1000	MAYOTTE	19	
-1588	1000	OUTRE_MER	60	
-1598	1000	CLIPPERTON	1	
-1591	1000	SAINT_MARTIN	11	
-1593	1000	NOUVELLE_CALEDONIE	38	
-1596	1000	REUNION	34	
-1590	1000	MARTINIQUE	18	
-1599	1000	GUYANE	11	
-1600	1000	SAINT_PIERRE_ET_MIQUELON	7	
-1594	1000	POLYNESIE_FRANCAISE	36	
+1543	1004	SAINT_MARTIN	20	%
 1592	1000	SAINT_BARTHELEMY	11	
+1596	1000	REUNION	34	
+1600	1000	SAINT_PIERRE_ET_MIQUELON	7	
+1599	1000	GUYANE	11	
+1597	1000	MAYOTTE	19	
+1591	1000	SAINT_MARTIN	11	
+1598	1000	CLIPPERTON	1	
+1594	1000	POLYNESIE_FRANCAISE	36	
+1588	1000	OUTRE_MER	60	
+1593	1000	NOUVELLE_CALEDONIE	38	
 1595	1000	WALLIS_ET_FUTUNA	26	
 1589	1000	GUADELOUPE	17	
+1590	1000	MARTINIQUE	18	
 1587	1005	OUTRE_MER	25.21552908	%
-1654	1001	MAYOTTE	335	
-1645	1001	OUTRE_MER	17846	
-1655	1001	ILES_SUBANTARCTIQUES	199	
-1657	1001	CLIPPERTON	16	
-1648	1001	SAINT_MARTIN	63	
-1650	1001	NOUVELLE_CALEDONIE	8673	
-1653	1001	REUNION	1558	
-1647	1001	MARTINIQUE	700	
-1656	1001	ILES_EPARSES	38	
-1658	1001	GUYANE	2551	
-1659	1001	SAINT_PIERRE_ET_MIQUELON	0	
-1651	1001	POLYNESIE_FRANCAISE	2673	
 1649	1001	SAINT_BARTHELEMY	70	
+1653	1001	REUNION	1558	
+1659	1001	SAINT_PIERRE_ET_MIQUELON	0	
+1658	1001	GUYANE	2551	
+1660	1001	TERRE_ADELIE	2	
+1654	1001	MAYOTTE	335	
+1648	1001	SAINT_MARTIN	63	
+1657	1001	CLIPPERTON	16	
+1655	1001	ILES_SUBANTARCTIQUES	199	
+1656	1001	ILES_EPARSES	38	
+1651	1001	POLYNESIE_FRANCAISE	2673	
+1645	1001	OUTRE_MER	17846	
+1650	1001	NOUVELLE_CALEDONIE	8673	
 1652	1001	WALLIS_ET_FUTUNA	29	
 1646	1001	GUADELOUPE	1399	
-1660	1001	TERRE_ADELIE	2	
-1610	1002	MAYOTTE	6162	
-1613	1002	CLIPPERTON	915	
-1604	1002	SAINT_MARTIN	2234	
-1606	1002	NOUVELLE_CALEDONIE	28092	
-1612	1002	ILES_EPARSES	2042	
-1614	1002	GUYANE	28940	
+1647	1001	MARTINIQUE	700	
 1615	1002	SAINT_PIERRE_ET_MIQUELON	2112	
-1607	1002	POLYNESIE_FRANCAISE	11776	
-1608	1002	WALLIS_ET_FUTUNA	2691	
+1614	1002	GUYANE	28940	
 1616	1002	TERRE_ADELIE	1007	
+1610	1002	MAYOTTE	6162	
+1604	1002	SAINT_MARTIN	2234	
+1613	1002	CLIPPERTON	915	
+1612	1002	ILES_EPARSES	2042	
+1607	1002	POLYNESIE_FRANCAISE	11776	
+1606	1002	NOUVELLE_CALEDONIE	28092	
+1608	1002	WALLIS_ET_FUTUNA	2691	
 1548	1004	REUNION	35.2	%
-1541	1004	GUADELOUPE	42.26190476	%
 1542	1004	MARTINIQUE	46.22641509	%
+1541	1004	GUADELOUPE	42.26190476	%
 \.
 
 
@@ -2170,11 +2170,11 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1021	reunion	territory	La Réunion
 1046	media	Accueil médias	Médias
 1028	exploitation-especes-protegees	ecogesture	Préserver les espèces protégées 
-1038	guyane	territory	Guyane
 1048	iles-eparses	territory	Iles Eparses
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
 1015	martinique	territory	Martinique
 1000	accueil	home	Compteur Biodiversité Outre-mer
+1038	guyane	territory	Guyane
 1005	indicateurs	indicators	Tous les indicateurs
 1047	agents-OFB-Guyane	report	Terrain agents OFB Guyane
 1040	polynesie	territory	Polynésie française
@@ -2786,12 +2786,19 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68486	1000	TEXT	testimony.text	L'équipe du Compteur travaille avec ses partenaires sur le développement de nouveaux indicateurs pour enrichir les données disponibles. Des travaux sont également menés sur la perception de la nature et le rapport aux outils numériques. 	\N	\N	\N	f
 68487	1000	CHECKBOX	carousel.carouselElements.0.shadowed	true	\N	\N	\N	f
 68488	1000	IMAGE	carousel.carouselElements.1.image	\N	2577	A la découverte des lucioles de Guadeloupe et de leur milieu de vie © Aline M. - An ba loup-la	\N	f
+68489	1038	TEXT	events.2.description	Abolition définitive de l'esclavage en France	\N	\N	\N	f
+68490	1038	TEXT	events.3.description	Ouverture du bagne de Guyane, lieu de déportation pour les condamnés aux travaux forcés jusqu’en 1946	\N	\N	\N	f
+68491	1038	IMAGE	identity.image	\N	2397	Rivière Inini © Pascale Roche - Office français de la biodiversité	\N	f
+68492	1038	TEXT	events.7.description	Création du Groupe d'étude et de protection des oiseaux de Guyane ([GEPOG](http://www.gepog.org/))	\N	\N	\N	f
 67846	1040	TEXT	interests.locations.7.description	En marquisien *Fenua Enata*, la « Terre des Hommes », les Marquises regroupent 14 îles aux reliefs escarpés qui ne sont pas entourées par un récif de corail. Les écosystèmes marins des Marquises sont particulièrement riches en nutriments d’où la présence et l’abondance d’espèces remarquables comme les cétacés. La candidature des Marquises à l’inscription au patrimoine naturel et culturel de l’UNESCO est en cours d’instruction.	\N	\N	\N	f
 67902	1050	TEXT	body.titre_question.0.paragraph.paragraphText	<strong>La forêt sèche recèle une biodiversité élevée et de nombreuses espèces endémiques. Elle est le lieu de vie d’une faune très variée et joue un rôle de transition entre les forêts du littoral et les forêts humides de la chaîne centrale</strong>. Pour préserver sa biodiversité remarquable et son rôle écologique fort, les acteurs du territoire se mobilisent ! Neuf partenaires (État, Gouvernement de la Nouvelle-Calédonie, province Nord, province Sud, IAC, IRD, UNC, WWF-France et CIE*) sont engagés depuis 2001 pour sa protection et sa restauration, notamment à travers le *Programme de Conservation des Forêts Sèches* (PCFS), coordonné depuis 2012 par le Pôle Forêt Sèche du Conservatoire d’espaces naturels de Nouvelle-Calédonie (CEN).  \n<br>\nPour informer, mais aussi faciliter et encourager les actions de protection et de restauration écologique, le CEN, ses membres et partenaires <strong>s’attachent à diffuser au plus grand nombre les connaissances et données disponibles </strong>. Les enjeux sont importants, c’est pourquoi le CEN et la Direction du numérique et de la modernisation du Gouvernement de la Nouvelle-Calédonie (DINUM) ont développé un [tableau de bord numérique](http://carto.cen-foret-seche.georep.nc/) spécialement dédié à ce sujet.\n<br>	\N	\N	\N	f
 40379	1006	TEXT	understand.quote	La grande barrière de corail de Nouvelle-Calédonie est la deuxième plus grande au monde, après celle se trouvant sur la côte est de l'Australie.	\N	\N	\N	f
 40380	1006	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 40381	1006	TEXT	action.cards.0.description	En bateau, je jette l'ancre sur des zones sableuses, et non pas à proximité de récifs ou d'herbiers. 	\N	\N	\N	f
 67903	1050	TEXT	presentation.name	Un tableau de bord dédié aux forêts sèches de Nouvelle-Calédonie	\N	\N	\N	f
+68493	1038	TEXT	events.7.date	1993 	\N	\N	\N	f
+68494	1038	TEXT	interests.locations.0.name	Le Parc Amazonien de Guyane	\N	\N	\N	f
+68495	1038	TEXT	events.0.description	Premières traces d’occupation humaine dans les Guyanes	\N	\N	\N	f
 40382	1018	TEXT	secondActionName	Je donne de mon temps	\N	\N	\N	f
 40383	1018	LINK	secondActionLink	Découvrez les sciences participatives	\N	\N	/sciences-participatives	f
 40384	1018	TEXT	description	Envie d’agir ? Signalez vos observations depuis votre smartphone ou participez à un programme de sciences participatives ! 	\N	\N	\N	f
@@ -2842,6 +2849,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66562	1039	TEXT	identity.highestPointName	Mont Bénara	\N	\N	\N	f
 66563	1039	TEXT	ecosystems.ecosystems.2.name	Les mangroves 	\N	\N	\N	f
 66564	1039	TEXT	species.7.description	On trouve sept espèces de palétuviers dans les mangroves de Mayotte. La plus commune est le palétuvier rouge, ([*Rhizophora mucronata*](https://inpn.mnhn.fr/espece/cd_nom/447468)), qui couvre 80 % des mangroves. Il se reconnait à ses racines en échasses et sa feuille lancéolée qui présente une pointe à son extrémité. \nOn trouve également le Palétuvier gros poumon ([*Bruguiera gymnorhiza*](https://inpn.mnhn.fr/espece/cd_nom/809530)) aux racines en forme de genou ou encore le Palétuvier blanc ([*Avicennia marina*](https://inpn.mnhn.fr/espece/cd_nom/672495)), le plus tolérant aux fortes concentrations en sel, qui doit son nom à la face inférieure blanche de ses feuilles.\nIls se répartissent dans les mangroves en fonction de différents paramètres tels que la salinité, la nature des sols ou les niveaux d’eau. \n\nStatuts sur la Liste rouge de la flore vasculaire de Mayotte :\n*Rhizophora mucronata* : quasi menacée. \n*Bruguiera gymnorhiza* : vulnérable. \n*Avicennia marina* : préoccupation mineure.\n	\N	\N	\N	f
+68496	1038	TEXT	events.1.description	Premières implantations européennes	\N	\N	\N	f
+68497	1038	TEXT	events.8.description	Construction du barrage de Petit Saut	\N	\N	\N	f
+68498	1038	TEXT	events.9.description	Création de la Réserve naturelle nationale des Nouragues	\N	\N	\N	f
+68499	1038	IMAGE	ecosystems.image	\N	2415	Couple de Hoazins huppés © Gwen Quérel / RNN Kaw-Roura	\N	f
 66965	1043	TEXT	body.bodyElements.6.questionAnswer.response	Certaines relations très spécialisées sont emblématiques. La pollinisation des Passiflores (fruits de la passion) par exemple ne peut pas être réalisée par l’abeille mellifère, celle-ci étant incapable d’atteindre l’étamine de la fleur du fait de sa taille. Une seule abeille peut y accéder : le vonvon ([*Xylocopa fimbriata*](https://inpn.mnhn.fr/espece/cd_nom/754400)), un xylocope très célèbre chez nous. **Autrefois très commune, l’espèce a beaucoup régressé**. Une des raisons est liée à la disparition des maisons en bois sur l’île, dans lesquelles le vonvon construisait ses nids. Avec la modernisation de l’habitat et la généralisation de matériaux à base d’aluminium et de béton, il a «&nbsp;déserté&nbsp;» les villes pour se «&nbsp;réfugier&nbsp;» en forêt.  \nHormis quelques exemples comme celui-ci, **on connait encore mal les relations entre les fleurs et les insectes dans les Antilles**. En Martinique les grandes cultures sont celles de la banane et de la canne à sucre qui ne dépendent pas de la pollinisation des insectes, d’où l’absence de travaux de recherche et de sensibilisation autour des problématiques liés aux pollinisateurs contrairement à ce qui existe ailleurs dans le monde. 	\N	\N	\N	f
 66966	1043	TEXT	presentation.name	« Il faut amener les gens à s’intéresser aux insectes pollinisateurs de Martinique » 	\N	\N	\N	f
 66967	1043	TEXT	presentation.author	Hugo Struna	\N	\N	\N	f
@@ -2857,6 +2868,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 67906	1050	IMAGE	presentation.image	\N	2551	Forêt sèche de Malhec © Conservatoire d'espaces naturels de Nouvelle-Calédonie	\N	f
 67907	1050	TEXT	presentation.author	Mélanie Boissenin 	\N	\N	\N	f
 67908	1050	TEXT	presentation.date	13/12/22	\N	\N	\N	f
+68500	1038	TEXT	identity.species	27 794	\N	\N	\N	f
+68501	1038	IMAGE	ecosystems.ecosystems.0.image	\N	2417	Forêt dense humide © Sylvain Santelli - 97px	\N	f
+68502	1038	TEXT	zoom.title	Quelques repères en Guyane	\N	\N	\N	f
+68503	1038	TEXT	events.6.description	Création de la Réserve naturelle nationale de l’île du Grand Connétable	\N	\N	\N	f
+68504	1038	TEXT	events.6.date	1992	\N	\N	\N	f
+68505	1038	TEXT	events.4.description	Départementalisation de la Guyane	\N	\N	\N	f
 37433	1025	IMAGE	action.cards.0.icon	\N	1127	distance	\N	f
 37434	1025	IMAGE	presentation.image	\N	1126	Iguane endémique des Petites Antilles © Fabien Lefebvre	\N	f
 66975	1043	TEXT	body.bodyElements.0.questionAnswer.response	Contrairement à ce qu’on pourrait penser, ce n’est pas très éloigné de ce qu’on retrouve en métropole. Les principaux groupes y sont présents : les Hyménoptères, les Diptères, les Coléoptères, les Lépidoptères. Il y a tout de même quelques différences. **La première est la faible diversité spécifique. Les îles sont des territoires exigus, isolés, peu d’espèces ont pu s’y établir.** Contrairement à la Guyane par exemple, qui jouit d’une faune et d’une flore extrêmement abondante en raison de sa situation continentale. En revanche, les îles se distinguent par un endémisme très élevé mais qui reste variable selon les groupes d’insectes. **Sur 18 espèces d’abeilles connues de Martinique, 8 sont endémiques, en tous cas à notre connaissance.** Si la plupart de ces espèces sont présentes dans plusieurs îles de l’archipel, certaines ne vivent que sur une seule d’entre elles ! Nous avons une forte responsabilité à l’échelle du monde du fait de nos espèces endémiques. Mais au risque de vous décevoir, il y a peu d’espèces spectaculaires quand bien même nous serions dans une région tropicale. Les espèces communes sont même en moyenne plus petites que sur le continent, ceci étant lié à des ressources plus limitées.	\N	\N	\N	f
@@ -2901,18 +2918,30 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 62440	1005	TEXT	questions.0.quote	La biodiversité est encore largement méconnue : on connait seulement 1,8 million d’espèces sur une diversité estimée d’environ 100 millions d’espèces !	\N	\N	\N	f
 62441	1005	TEXT	questions.1.answer	La majorité des territoires d’outre-mer français sont situés dans des régions particulièrement riches en espèces, notamment en espèces endémiques, ce qu’on appelle des points chauds de la biodiversité (« Hotspots » en anglais) (Nouvelle-Calédonie, Antilles, Mayotte, La Réunion, Wallis et Futuna, Polynésie française). Avec la Guyane, la France possède une partie du plus grand massif forestier de la planète, l’Amazonie, et les territoires français réunissent 10 % des récifs coralliens répartis dans trois océans. Certains territoires isolés comme les îles subantarctiques abritent une faune et une flore adaptées à des climats extrêmes. 	\N	\N	\N	f
 62442	1005	TEXT	inpn.title	L'Inventaire national du patrimoine naturel	\N	\N	\N	f
+68506	1038	TEXT	events.5.description	Création du Centre spatial guyanais à Kourou	\N	\N	\N	f
 62443	1005	TEXT	questions.2.question	La biodiversité menacée	\N	\N	\N	f
 37458	1026	TEXT	action.title	Pour commencer à réduire mes déchets : 	\N	\N	\N	f
 37459	1026	TEXT	understand.quote	A l’échelle mondiale, un tiers des déchets plastiques se retrouve dans la nature. Seuls 9% des déchets plastiques sont recyclés dans le monde.	\N	\N	\N	f
 37460	1026	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 37461	1026	TEXT	action.cards.0.description	Je refuse les sacs plastiques à usage unique, j'utilise des sacs réutilisables en tissus ou en matières naturelles.	\N	\N	\N	f
+68507	1038	TEXT	statistics.4.text	de poissons d'eau douce et saumâtre	\N	\N	\N	f
 64741	1020	TEXT	species.15.description	Plus gros pigeon arboricole du monde, le Notou ([*Ducula goliath*](https://www.endemia.nc/faune/fiche71)) présente un plumage bleu gris, avec une pointe de pourpre sur les ailes, et ses yeux sont rouge vif. Il vit dans les forêts humides de la Grande Terre et contribue à sa régénération par dissémination des graines dont il se nourrit. Difficile à observer, il se repère toutefois facilement à son chant particulier, grave et sourd.  \n\nStatut dans la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
 64742	1020	TEXT	events.6.date	2014	\N	\N	\N	f
 66565	1039	TEXT	species.8.description	Le Namoulohna ([*Foetidia comorensis*](https://inpn.mnhn.fr/espece/cd_nom/807350)) est un arbre endémique de Mayotte, extrêmement rare&nbsp;: il n’est connu que d’une unique station de 600 m<sup>2</sup> avec environ 80 individus dénombrés en 2017. Connue depuis longtemps par les villageois locaux, elle n’a été décrite pour la science qu’en 2011. Menacée entre autres par les défrichements pour l’installation de cultures vivrières et le pâturage des animaux domestiques, l’espèce figure sur la liste des espèces protégée de Mayotte et un important travail de sensibilisation est mené autour de sa préservation.  \n  \nStatut sur la Liste rouge de la flore vasculaire de Mayotte : en danger critique.	\N	\N	\N	f
+68508	1038	TEXT	interests.locations.2.name	Les Nouragues	\N	\N	\N	f
+68509	1038	TEXT	ecosystems.ecosystems.3.description	Les savanes de Guyane occupent très peu d’espace : seulement 0,3% du territoire. Ce sont des milieux ouverts herbacés, avec quelques arbres ou arbustes plus ou moins isolés, qui se trouvent répartis sur une fine bande le long de la côte, entre la forêt et les zones de marais, sur les plaines basses de sédiments argilo-sableux. Malgré leur faible étendue, elles représentent un milieu remarquable pour la biodiversité : elles abritent 16 % de la flore guyanaise et la végétation y est très spécialisée. \nLes savanes sont menacées par l’expansion démographique, ainsi que l’introduction de deux arbres envahissants, l’[*Acacia mangium*](https://inpn.mnhn.fr/espece/cd_nom/447341) et le Niaouli ([*Melaleuca quinquenervia*](https://inpn.mnhn.fr/espece/cd_nom/447400)) qui entrainent la fermeture du milieu. Depuis 2011, le Groupe d’étude et de protection des oiseaux de Guyane (GEPOG) mène des actions pour la [conservation des savanes de Guyane](https://www.savanes.fr/), dont la lutte contre les espèces végétales envahissantes, d’abord dans le cadre du programme LIFE+ Cap DOM, puis du LIFE+ BIODIV’OM.	\N	\N	\N	f
+68510	1038	TEXT	ecosystems.ecosystems.4.description	De nombreuses zones humides se situent le long du trait de côte, en retrait des mangroves et en bordure des savanes. Des marais herbacés aux forêts marécageuses, on trouve une diversité de formations végétales qui abritent une faune importante, notamment des caïmans noirs, de nombreuses espèces de poissons d’eau douce ou saumâtre, des crustacés, de nombreux oiseaux en particulier des limicoles et des rapaces ou encore le remarquable Hoazin huppé ([*Opisthocomus hoazin*](https://inpn.mnhn.fr/espece/cd_nom/442155)).	\N	\N	\N	f
+68511	1038	TEXT	ecosystems.ecosystems.4.name	Les marais et les forêts marécageuses	\N	\N	\N	f
+68512	1038	TEXT	statistics.3.text	d'oiseaux	\N	\N	\N	f
 67911	1050	TEXT	body.titre_question.4.paragraph.paragraphText	<strong>Des onglets offrent l’accès aux informations disponibles selon 7 thèmes </strong> : la protection, la gestion, la restauration active, les menaces, le suivi, la sensibilisation, et la synthèse de ces données. Chaque onglet met en avant les données sous plusieurs formes : carte, graphique, jauge, chiffre, texte, image. On peut par exemple visualiser en un clic le nombre d’hectares reboisés (51,3 ha), la surface de forêt sèche classée en aire protégées (seulement 0,6 %) ou encore le nombre de sites faisant l’objet de suivis et d’études (8 sites de suivis de la dynamique forestière, 23 sites d’études ponctuelles).  \nUne liste déroulante en haut à droite de l’interface permet en un clic d’actualiser l’ensemble des indicateurs pour une emprise géographique donnée. <strong>Il est ainsi possible de consulter les données relatives à toute la Nouvelle-Calédonie, à une Province, ou à une commune</strong>.   \n<br>\nPour le grand public, le tableau de bord des forêts sèches se veut être <strong>une interface synthétique pour l’affichage rapide des principales informations sur chaque thème</strong>. Pour les professionnels, il permet de visualiser les données disponibles et peut constituer un outil d’aide à la décision.<br>\n<br>\nCe « tableau de bord des forêts sèches » bénéficiera de mises à jour annuelles en fonction des nouvelles connaissances acquises, de la définition de nouveaux indicateurs et de la remontée d’informations du réseau de partenaires.<br>\n	\N	\N	\N	f
 67912	1050	TEXT	body.introduction	La forêt sèche, ou sclérophylle, est l’écosystème le plus menacé de disparition en Nouvelle-Calédonie. Il ne subsiste aujourd’hui que 175 km² de forêt sèche morcelée de l’extrême Nord au Sud-ouest de la Grande Terre, soit l’équivalent d’environ 2 % seulement de la surface d'origine de ces forêts qui recouvraient la Nouvelle-Calédonie.	\N	\N	\N	f
 67913	1050	IMAGE	body.titre_question.3.image.imageElement	\N	2552	Aperçu de l'onglet de synthèse du tableau de bord numérique 	\N	f
+68513	1038	TEXT	events.10.date	1996	\N	\N	\N	f
 66566	1039	IMAGE	species.2.image	\N	2389	*Eulemur fulvus* © Emmanuel Broeks	\N	f
+68514	1038	IMAGE	species.1.image	\N	2402	*Dendrobates tinctorius* © Raphaël Gailhac - OFB	\N	f
+68515	1038	TEXT	events.5.date	1964	\N	\N	\N	f
+68516	1038	TEXT	identity.marineArea	131 506	\N	\N	\N	f
+68517	1038	TEXT	events.8.date	1994	\N	\N	\N	f
 35068	1017	TEXT	answer	Les écogestes, ce sont tous ces changements de comportement individuels qui permettent de réduire son impact sur l’environnement. Faire attention à son utilisation énergétique, faire les bons choix de consommation, mieux gérer ses déchets, consommer moins de viande, etc. des plus petits gestes aux grands changements, chacun est acteur de la préservation de l’environnement et peut limiter son impact. La multiplication de ces comportements individuels peut entraîner des changements notables à plus grande échelle !\n\nTous ces gestes ne doivent pas faire oublier que de profonds changements de société seront nécessaire pour limiter les risques liés au déclin de la biodiversité et au changement climatique. Ils représentent des actions et des changements de comportements nécessaires, mais doivent être accompagnés de politiques environnementales à la hauteur des enjeux.  \nLa troisième Stratégie nationale pour la biodiversité engage les territoires français pour la prochaine décennie à enrayer le déclin de la biodiversité. Des concertations territoriales citoyennes se déroulerons au cours de l'année 2021. Participez et retrouvez toutes les informations sur [biodiversité.gouv.fr](https://biodiversite.gouv.fr/)	\N	\N	\N	f
 66986	1043	TEXT	body.bodyElements.7.questionAnswer.response	De façon objective, nous n’avons pas assez de recul sur l’évolution de la faune entomologique en Martinique. Et il n’y a jamais eu de suivis de pollinisateurs. On connait en revanche les menaces qui pèsent sur ces insectes. **D’abord l’urbanisation et plus généralement les activités humaines qui empiètent sur les espaces forestiers**. En métropole, ce sont certains écosystèmes ouverts d’intérêt écologique comme les prairies naturelles qui régressent alors que chez nous ce sont les forêts. **Problème : les espèces endémiques sont souvent inféodées aux espaces forestiers**. Donc les habitats se réduisent. Concernant les pesticides, souci majeur à l’échelle mondiale, on ne sait pas grand-chose, mais des études sont en cours pour évaluer l’exposition de la faune locale à ces produits.<br>\n<br>\nDe manière plus subjective, je pense que la pente que nous prenons a de quoi inquiéter. Déjà au niveau paysager la régression des forêts et l’ouverture des milieux perturbent les écosystèmes. Je vois se généraliser des espèces végétales invasives, essentiellement des graminées, comme l’[herbe de guinée](https://inpn.mnhn.fr/espece/cd_nom/672415), qui prennent le dessus sur les plantes à fleurs. Cela implique une modification de la ressource florale disponible pour les insectes pollinisateurs dans certains milieux. Dans quelle mesure&nbsp;? On n’en sait rien. **Il est donc nécessaire de mener des études sur les relations «&nbsp;insectes-plantes à fleurs&nbsp;», en tenant compte des particularités de nos territoires.** Aborder ce sujet impose une vision transversale, sur les plantes, les insectes, mais aussi l’écologie et la gestion. <br>	\N	\N	\N	f
 67914	1050	TEXT	body.titre_question.6.paragraph.paragraphText	**Institut Agronomique neo-Calédonien (IAC), Institut de Recherche pour le Développement (IRD), Université de la Nouvelle-Calédonie (UNC), Fonds mondial pour la nature (WWF) et Centre d’Initiation à l’Environnement (CIE).*	\N	\N	\N	f
@@ -2926,10 +2955,15 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68201	1041	IMAGE	species.9.image	\N	1740	*Anatalanta aptera* © TAAF 	\N	f
 68202	1041	TEXT	events.2.description	Émergence des îles Saint-Paul et Amsterdam	\N	\N	\N	f
 68203	1041	TEXT	events.3.description	Découverte des îles Saint-Paul et Amsterdam par le navigateur Sébastian Del Cano et les compagnons de Magellan	\N	\N	\N	f
+68518	1038	IMAGE	interests.locations.0.image	\N	2400	Vue aérienne sur le territoire du Parc national © Guillaume Feuillet, PAG	\N	f
+68519	1038	TEXT	species.6.name	Le Palmier pinot	\N	\N	\N	f
+68520	1038	IMAGE	interests.locations.3.image	\N	2399	Plage d'Awala-Yalimapo © Raphaël Gailhac - OFB	\N	f
 62444	1005	TEXT	onb.description	Depuis 2012, l’Observatoire national de la biodiversité, actuellement piloté par l’Office français pour la biodiversité (OFB), publie des indicateurs sur l’état de la biodiversité française, avec la contribution de nombreux partenaires. Ils sont régulièrement actualisés et enrichis.\nLe Compteur met en lumière les indicateurs de l’ONB qui concernent les outre-mer et contribue à la création de nouveaux indicateurs pour ces territoires.	\N	\N	\N	f
 62445	1005	TEXT	understand.description	La conservation de la biodiversité dépend de sa connaissance et de la compréhension des phénomènes qui l’impactent. Les indicateurs sont développés à partir de données de suivis et de mesures sur le terrain, et permettent de suivre l’évolution de l’état de santé de la biodiversité et de l’environnement. Ils sont utilisés pour définir des stratégies de gestion ou encore mesurer l'efficacité des plans de gestion d'espèces menacées.  Cependant, ils connaissent des limites par manque de données disponibles, manque de moyens de recherche ou parce que certains paramètres sont très complexes à évaluer.	\N	\N	\N	f
 62446	1005	TEXT	title	Compter la biodiversité : oui, mais comment ? 	\N	\N	\N	f
 62447	1005	TEXT	onb.title	L’Observatoire national de la biodiversité	\N	\N	\N	f
+68521	1038	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
+68522	1038	TEXT	interests.locations.3.name	Les plages d'Awala-Yalimapo	\N	\N	\N	f
 62448	1005	TEXT	presentation	Les indicateurs sont des outils qui permettent de décrire différentes composantes de la biodiversité et ainsi mesurer son évolution dans le temps. De nombreux paramètres sont étudiés : taille des populations, état de santé des écosystèmes, taux de pollutions, etc. Ils renseignent ainsi l’état de la biodiversité à un instant précis, mais également l’état des connaissances et des moyens scientifiques actuels. Avec ses collaborateurs, le Compteur vise aussi à développer de nouveaux indicateurs ou chiffres clés sur la biodiversité ultramarine, qui viendront peu à peu enrichir le dispositif.	\N	\N	\N	f
 68204	1041	IMAGE	species.2.image	\N	1735	*Eudyptes chrysolophus* © Julie Tucoulet	\N	f
 68205	1041	IMAGE	identity.image	\N	1702	Vallée de la Hébé, île de la Possession, Crozet © Julie Tucoulet	\N	f
@@ -2945,6 +2979,19 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66995	1044	TEXT	interviewee.presentation	Marilou Hircq, ingénieure au CNRS, coordinatrice du projet BUG	\N	\N	\N	f
 66996	1044	TEXT	body.bodyElements.6.questionAnswer.response	Nous avons réalisé des protocoles de collecte simplifiés que les élèves mettent en place dans l’enceinte de l’école, avec l’enseignant. Les fourmis sont récupérées à l’aide d’une pince souple puis mises dans un tube contenant de l’éthanol dilué. Une fois prélevés, on les passe sous la loupe binoculaire pour une séance d’observation minutieuse. Pour les champignons, on collecte simplement un peu de terre dans un sachet. Les chercheurs se chargeront ensuite de déterminer les espèces présentes grâce à la détection d’ADN. Mais la pratique ne s’arrête pas là ! L’idée est que les élèves reproduisent l’échantillonnage chez eux, afin d’accroître de nombre d’échantillons dans toute la commune. Nous récupérons ensuite tous les échantillons pour analyse. **J’ai en ce moment en ma possession des organismes provenant de tout le territoire, dans des milieux très diversifiés.** Certains ont été prélevés dans de petites communes très isolées comme Camopi au bord fleuve, accessible qu’en pirogue il y a encore peu de temps. Il y a aussi les grandes villes comme Kourou, Saint-Laurent-du-Maroni ou Cayenne. Des villes côtières, forestières. Des maisons, des appartements de centre-ville. En quatre mois, nous avons reçu pas loin de 500 échantillons issus de 11 communes. **Grâce aux élèves nous allons découvrir une biodiversité encore inconnue en Guyane.**	\N	\N	\N	f
 66997	1044	TEXT	presentation.name	"Grâce aux élèves, nous allons découvrir une biodiversité encore inconnue en Guyane"	\N	\N	\N	f
+68523	1038	TEXT	events.12.date	2006	\N	\N	\N	f
+68524	1038	TEXT	statistics.1.text	espèces d'arbres	\N	\N	\N	f
+68525	1038	TEXT	events.9.date	1995	\N	\N	\N	f
+68526	1038	IMAGE	species.4.image	\N	2407	*Pteronura brasiliensis* © Fabien Lefebvre	\N	f
+68527	1038	TEXT	events.3.date	1852	\N	\N	\N	f
+68528	1038	IMAGE	ecosystems.ecosystems.3.image	\N	2412	Savanes de Guyane © Bernard G. - 97px	\N	f
+68529	1038	IMAGE	species.3.image	\N	2401	*Panthera onca* © Raphaël Gailhac - OFB	\N	f
+68530	1038	IMAGE	zoom.map	\N	2398	Carte Guyane	\N	f
+68531	1038	TEXT	species.1.name	Le Dendrobate à tapirer	\N	\N	\N	f
+68532	1038	TEXT	species.7.name	Le Fromager	\N	\N	\N	f
+68533	1038	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
+68534	1038	TEXT	species.4.name	Les loutres	\N	\N	\N	f
+68535	1038	TEXT	identity.area	83 846	\N	\N	\N	f
 62449	1005	TEXT	quote	Documenter et présenter l’évolution de la biodiversité, c’est permettre à chacun de prendre conscience des enjeux et des menaces.	\N	\N	\N	f
 62450	1005	CHECKBOX	shadowed	false	\N	\N	\N	f
 62451	1005	IMAGE	understand.image	\N	1362	Fakarava, Polynésie française © Franck Mazeas	\N	f
@@ -2953,10 +3000,20 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 62454	1005	TEXT	questions.2.quote	L'érosion de la biodiversité est une menace pour l'avenir de l'humanité.	\N	\N	\N	f
 62455	1005	TEXT	understand.title	Les indicateurs, des outils pour évaluer l'état de la biodiversité	\N	\N	\N	f
 62456	1005	TEXT	questions.1.question	Les outre-mer, des points chauds de biodiversité	\N	\N	\N	f
+68536	1038	TEXT	species.0.description	Atteignant jusqu’à 17 cm de long, le Titan ([*Titanus giganteus*](https://inpn.mnhn.fr/espece/cd_nom/758743)) est le plus grand coléoptère du monde. On connait cependant peu de choses sur sa biologie : si les mâles sont attirés par la lumière, ce n’est pas le cas des femelles qui sont rarement observées. On suppose que les larves se développent dans le sol, au niveau des racines ou des souches, et consomment du bois décomposé.  \nCe longicorne attire particulièrement les collectionneurs, c’est pourquoi depuis le 25 juillet 2019, il existe un quota limitant l’exportation à un spécimen par personne et par an.\nL’inventaire des insectes de Guyane est encore largement incomplet. Si la diversité des insectes est très importante, l’abondance de chaque espèce est généralement faible, ce qui rend leur recensement complexe.  \n  \nStatut sur la Liste rouge mondiale : non évalué.	\N	\N	\N	f
+68537	1038	TEXT	identity.highestPointName	Montagne Bellevue	\N	\N	\N	f
+68538	1038	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
+68539	1038	TEXT	species.7.description	Le Fromager ([*Ceiba pentandra*](https://inpn.mnhn.fr/espece/cd_nom/447007)) est un arbre géant largement répandu dans les forêts humides d’Amérique, d’Afrique et d’Asie. Très imposant, il peut atteindre plusieurs dizaines de mètres de haut et développe des contreforts avec l’âge. Son tronc lisse est pourvu de nombreuses épines coniques. Un individu particulièrement imposant (50 m de haut pour 40 m de circonférence) est observable dans le village de Saül. \nEn Guyane comme dans toute l’Amérique tropicale, cet arbre majestueux tient une place importante dans la cosmogonie de nombreux peuples, il est lié au chamanisme et est réputé habité par des esprits puissants et parfois dangereux. Ses contreforts sont appréciés par les Wayana pour faire des ciels de cases (disque rond occupant le faîte de leur maison ronde communautaire).\n\nStatut sur la Liste rouge mondiale : préoccupation mineure.\n	\N	\N	\N	f
+68540	1038	IMAGE	species.2.image	\N	2403	*Ramphastos tucanus* © Raphaël Gailhac - OFB	\N	f
+68541	1038	IMAGE	ecosystems.ecosystems.4.image	\N	2416	Rivière et marais de Kaw © Pierre-Olivier Jay - 97px	\N	f
+68542	1038	TEXT	species.3.description	Solitaire et discret, le Jaguar ([*Panthera onca*](https://inpn.mnhn.fr/espece/cd_nom/443623)) est présent sur tout le département. Le félin tacheté est menacé par la destruction et la fragmentation de son habitat, la raréfaction des proies et le braconnage, bien que les populations soient considérées plutôt en bon état sur le territoire guyanais. \nIl tient une place importante dans les cultures amérindiennes, bushinenguées et créole. Souvent lié au chamanisme, et il représente également un personnage un peu lourdaud et pataud dans les contes populaires guyanais.\nLes attaques de ce carnivore sur les animaux domestiques, en particulier les chiens, sont relativement fréquentes en milieu péri-urbain. Un [guide pour une coexistence homme-jaguar](https://guyane.ofb.fr/wp-content/uploads/2021/04/OFB_LivretJaguar_MAJ_032020.pdf) est proposé par l’Office français de la biodiversité pour diminuer ces conflits. \n\nStatut sur la Liste rouge des mammifères de Guyane : quasi-menacé. \n	\N	\N	\N	f
+68543	1038	TEXT	statistics.3.number	Près de 700 espèces	\N	\N	\N	f
 66568	1039	TEXT	species.3.description	Cette plante ([*Cananga odorata*](https://inpn.mnhn.fr/espece/cd_nom/446902)) introduite à la fin du 18e siècle depuis l’Asie du Sud-est est devenue un emblème de l’île. L’arbre présente une écorce grise, et est généralement taillé pour rester à hauteur de cueillette, soit 2 à 3 m de haut alors qu’il peut atteindre 25 -30 m en milieu naturel. La floraison peut s’observer plusieurs fois par an. Les fleurs, très odoriférantes, présentent six longs pétales jaunes. On en extrait par distillation une huile essentielle très utilisée en cosmétique et en parfumerie.\n  \nStatut sur la Liste rouge mondiale : non évalué. \n	\N	\N	\N	f
 66569	1039	TEXT	statistics.3.number	24 espèces	\N	\N	\N	f
 66570	1039	TEXT	species.1.description	Sur les 16 espèces présentes dans les eaux du territoire, [*Octopus cyanea*](https://inpn.mnhn.fr/espece/cd_nom/527348) est le plus grand : il peut dépasser 1 m de long et peser jusqu’à 8kg. Ordinairement de couleur brun-rouge, il change de couleur pour se camoufler dans son environnement. On le retrouve sur les zones récifales où il se cache dans des trous. \nCes mollusques céphalopodes sont remarquablement intelligents, capables d’utiliser des outils et disposent d’une impressionnante mémoire. Leur cycle de vie est court, entre 12 et 24 mois. Les mâles déclinent à la suite de la reproduction et les femelles meurent quelques jours après l’éclosion des œufs.  \nTrès appréciés à Mayotte, les poulpes sont pêchés à pied sur les platiers à marée basse. Pour préserver la ressource, des réserves de pêche sont mise en place à l’initiative de la population locale, la pêche est alors temporairement interdite afin de permettre aux poulpes de se reproduire.  \n\nStatut sur la Liste rouge mondiale pour *Octopus cyanea* : préoccupation mineure.\n	\N	\N	\N	f
+68544	1038	TEXT	statistics.4.number	Plus de 500 espèces	\N	\N	\N	f
 64746	1020	TEXT	ecosystems.ecosystems.3.description	Aussi dit « sclérophylle », ce type de forêt n’est plus présent que sur environ 175 km<sup>2</sup>, soit moins de 1 % du territoire et moins de 2&nbsp;% de sa surface estimée d’origine. Localisées sur le littoral de la côte ouest, ces forêts sont très vulnérables, notamment aux aménagements agropastoraux, aux incendies et aux espèces exotiques envahissantes. Elles abritent une biodiversité élevée avec un taux d'endémisme de 60 %.   \nUn [programme de conservation](https://www.cen.nc/foret-seche/les-forets-seches-en-nc) des forêts sèches, initié en 2001, est aujourd'hui coordonné par le Conservatoire d'espaces naturels de Nouvelle-Calédonie. 	\N	\N	\N	f
+68545	1038	TEXT	species.1.description	Le Dendrobate à tapirer ([*Dendrobates tinctorius*](https://inpn.mnhn.fr/espece/cd_nom/436851)) est un amphibien présentant des variations de coloration allant du bleu au jaune, plus ou moins maculé de noir. Il vit principalement au sol mais on peut également l’observer dans les arbres. \nLes glandes présentes dans sa peau sécrètent un poison toxique, qui la protègent des prédateurs. Pour l’homme, elle n’est dangereuse que si le mucus qui la recouvre entre en contact avec une plaie ou des muqueuses. Les Amérindiens en faisaient une préparation qu’ils appliquaient sur des plumes d’oiseaux vertes pour leur donner une coloration jaune ou rouge et dont ils faisaient des parures. \nLe Dendrobate à tapirer est inscrit sur la liste des amphibiens de Guyane protégés sur l’ensemble du territoire national.\n  \nStatut sur la Liste rouge des amphibiens de Guyane : préoccupation mineure. 	\N	\N	\N	f
 66571	1039	TEXT	species.2.description	Ce lémurien est considéré comme une sous-espèce ou une variété du Lémur fauve de Madagascar ([*Eulemur fulvus*](https://inpn.mnhn.fr/espece/cd_nom/418673)). Il aurait été introduit par l’homme à Mayotte il y a plusieurs siècles. Il possède un pelage variant du beige au roux avec une tête noire et des yeux orangés. Vivant en groupe dans les zones forestières et se nourrissant principalement de fruits, la dégradation et la diminution de son habitat peuvent le pousser à s’approcher des zones habitées et consommer les productions fruitières ce qui crée des conflits avec les agriculteurs. L’espèce est protégée à Mayotte.  \n\nStatut sur la Liste rouge mondiale : vulnérable.\n	\N	\N	\N	f
 66572	1039	TEXT	statistics.1.number	300 espèces	\N	\N	\N	f
 66573	1039	TEXT	statistics.0.number	1 100 km<sup>2</sup>	\N	\N	\N	f
@@ -2985,6 +3042,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66596	1039	TEXT	species.0.name	Le Crabier blanc 	\N	\N	\N	f
 66597	1039	TEXT	events.4.date	1976	\N	\N	\N	f
 66598	1039	IMAGE	interests.locations.2.image	\N	2375	Mont Choungui vu du nord © Frédéric Ducarme	\N	f
+68546	1038	TEXT	species.2.description	Sept espèces de toucan, oiseaux à grand bec de la famille des Ramphastidés, sont présentes en Guyane. Le Toucan ariel ([*Ramphastos vitellinus*](https://inpn.mnhn.fr/espece/cd_nom/442312)) et le Toucan à bec rouge ([*Ramphastos tucanus*](https://inpn.mnhn.fr/espece/cd_nom/442311)) sont communément observés, notamment en fin de saison des pluies, où ils viennent dans la partie côtière s’alimenter sur les palmiers en fruits. Le Toucan toco ([*Ramphastos toco*](https://inpn.mnhn.fr/espece/cd_nom/442310)) est le plus grand représentant de cette famille. Caractérisé par son bec orange, il est plus rare et observable uniquement au nord du département. C’est la seule espèce de toucan intégralement protégée.  \nMalgré sa taille, la structure du bec des toucans est très légère et solide, formée de kératine et renforcée par des os poreux très légers.  \n\nStatut sur la Liste rouge des oiseaux de Guyane : \nToucan ariel : préoccupation mineure. \nToucan à bec rouge : préoccupation mineure. \nToucan toco : en danger. \n	\N	\N	\N	f
+68547	1038	TEXT	statistics.1.number	Plus de 1 800	\N	\N	\N	f
+68548	1038	TEXT	statistics.0.number	96 %	\N	\N	\N	f
+68549	1038	TEXT	statistics.2.number	600 km<sup>2</sup>	\N	\N	\N	f
+68550	1038	IMAGE	interests.locations.4.image	\N	2411	Lac Pali, dans les marais de Kaw © Andréa Poiret	\N	f
+68551	1038	TEXT	species.2.name	Les toucans	\N	\N	\N	f
 40051	1023	IMAGE	presentation.file	\N	1496	affiche écogeste jeter ses déchets	\N	f
 40052	1023	CHECKBOX	presentation.shadowed	true	\N	\N	\N	f
 40053	1023	IMAGE	action.cards.2.icon	\N	1116	Tri	\N	f
@@ -3000,6 +3063,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 40063	1023	TEXT	action.title	Pour que mes déchets n’impactent pas les milieux 	\N	\N	\N	f
 40064	1023	TEXT	understand.quote	A l’échelle mondiale, on estime que 8 millions de tonnes de plastique finissent chaque année dans les océans ! Et un mégot peut polluer à lui seul 500 litres d’eau.	\N	\N	\N	f
 40065	1023	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
+68552	1038	TEXT	risks.risks.1.name	Le fléau de l’orpaillage illégal	\N	\N	\N	f
 64747	1020	TEXT	ecosystems.ecosystems.4.description	Forêt de bord de mer aux pieds dans l’eau, cette formation arborescente adaptée aux conditions de salinité des eaux, au manque d'oxygène et à l'instabilité des sols, est majoritairement située sur la côte ouest du fait de vastes plaines propices à son installation. Elle couvre 258 km<sup>2</sup> sur l'ensemble de l'archipel.  \n\nProtection contre l’érosion, les tempêtes, la sédimentation dans le lagon, zone de nurserie pour de nombreux organismes, épuration de l’eau : les services rendus par cet écosystème sont nombreux et précieux.	\N	\N	\N	f
 64748	1020	TEXT	ecosystems.ecosystems.4.name	La mangrove	\N	\N	\N	f
 66599	1039	IMAGE	ecosystems.ecosystems.2.image	\N	2395	Mangrove de Kawéni © Fanny Cautain / Office français de la biodiversité	\N	f
@@ -3012,6 +3076,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64750	1020	TEXT	ecosystems.ecosystems.7.name	Les fonds de baie envasés	\N	\N	\N	f
 64751	1020	TEXT	ecosystems.ecosystems.7.description	Le long du littoral de la Grande Terre se trouvent des baies protégées, aux fonds constitués de sédiments fins, souvent vaseux. Certains sont chargés en terre rouge provenant des sols naturellement délavés, d'autres ont une charge terrigène accrue par les activités humaines.  \n   \nUne communauté de coraux spéciale vit dans ces habitats singuliers, comme l’espèce endémique, [*Cantharellus noumeae*](https://inpn.mnhn.fr/espece/cd_nom/445124) ou [*Acropora tortuosa*](https://inpn.mnhn.fr/espece/cd_nom/445206), qui produit du mucus piégeant les sédiments ou encore [*Catalaphyllia jardinei*](https://endemia.nc/faune/fiche8114), qui étale ses polypes mous et colorés.\n	\N	\N	\N	f
 64752	1020	IMAGE	species.14.image	\N	2459	*Nautilus sp.* © Claude Payri	\N	f
+68553	1038	TEXT	species.4.description	Deux espèces de loutres, la Loutre géante ([*Pteronura brasiliensis*](https://inpn.mnhn.fr/espece/cd_nom/443628)) et la Loutre commune ([*Lontra longicaudis*](https://inpn.mnhn.fr/espece/cd_nom/443627)) vivent dans les cours d’eau et sur les berges de Guyane. La première, de grande taille (jusqu’au 1,80 m de long), vit en groupes familiaux tandis que la seconde, plus petite, est souvent solitaire. \nConsommatrices de poissons et très sensibles à la dégradation des habitats, les loutres peuvent être considérées comme des indicatrices de la qualité des écosystèmes aquatiques. La Loutre géante a fait l’objet d’une chasse intensive pour sa peau au siècle dernier, ce qui l’a conduite au bord de l’extinction au début des années 1970. Les deux espèces sont intégralement protégées mais leur habitat est fortement impacté par l’orpaillage. \n\nStatut sur la Liste rouge des mammifères de Guyane :\nLoutre géante : en danger. \nLoutre commune : préoccupation mineure. \n	\N	\N	\N	f
+68554	1038	TEXT	zoom.callToAction	Cliquez sur la carte thématique pour vous repérer en un coup d'œil ! 	\N	\N	\N	f
+68555	1038	TEXT	ecosystems.ecosystems.0.name	La forêt humide	\N	\N	\N	f
 68210	1041	TEXT	species.1.description	Avec une envergure pouvant atteindre 3,7 m, l’Albatros hurleur ([*Diomedea exulans*](https://inpn.mnhn.fr/espece/cd_nom/988)) est le plus grand oiseau au monde. Ses longues ailes rendent son envol un peu difficile mais elles lui permettent de planer sans effort sur de grandes distances. Il ne revient sur terre qu’une fois tous les 2 ans pour la saison de reproduction. L’Albatros d’Amsterdam ([*Diomedea amsterdamensis*](https://inpn.mnhn.fr/espece/cd_nom/669383)) est endémique strict de l’île Amsterdam et se reproduit uniquement sur un haut plateau de l’île, le Plateau des Tourbières. La petite taille de sa population, estimée à 210-220 individus, en fait une des espèces d’oiseaux les plus rares au monde, en danger critique d’extinction. Un plan national d’actions vise à sa préservation, sur terre comme en mer. Les 2/3 de la population mondiale d’Albatros à bec jaune ([*Thalassarche carteri*](https://inpn.mnhn.fr/espece/cd_nom/713021)) se reproduisent dans les Terres australes françaises. Sur la seule île Amsterdam, on trouve la plus grande colonie au monde concentrée sur les falaises d’Entrecasteaux, qui représente 60 % de la population mondiale.\nD’autres espèces d’albatros nichent dans les terres australes, comme l’Albatros à sourcils noirs ([*Thalassarche melanophris*](https://inpn.mnhn.fr/espece/cd_nom/442424)) ou l’Albatros fuligineux ([*Phoebetria fusca*](https://inpn.mnhn.fr/espece/cd_nom/442214)).  \n\nStatut sur la Liste rouge des oiseaux des TAAF : \nAlbatros hurleur : en danger critique. \nAlbatros d’Amsterdam : en danger critique.\nAlbatros à bec jaune : en danger.\n	\N	\N	\N	f
 66600	1039	TEXT	events.10.description	Création de la Réserve naturelle nationale des forêts de Mayotte	\N	\N	\N	f
 66601	1039	TEXT	interests.locations.0.description	Situé dans le lagon à l’est de Grande Terre, l’îlot Mbouzi est classé en Réserve naturelle nationale depuis 2007 afin de préserver sa relique de forêt sèche primaire, qui abrite des plantes remarquables et protégées dont le rare Ebène de Bernier ([*Diospyros bernieriana*](https://inpn.mnhn.fr/espece/cd_nom/967608)). On y trouve également la sous-espèce du Foudi des Comores endémique de Mayotte ([*Foudia eminentissima algondae*](https://inpn.mnhn.fr/espece/cd_nom/418756)). La réserve comprend une partie marine de 60 hectares qui abrite des communautés coralliennes remarquables. Elle est gérée par l’association les [Naturalistes de Mayotte](https://www.naturalistesmayotte.fr/).	\N	\N	\N	f
@@ -3103,6 +3170,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64810	1020	TEXT	identity.populationYear	2017	\N	\N	\N	f
 64811	1020	IMAGE	species.5.image	\N	2468	*Agathis sp.* © Vanessa Hequet	\N	f
 64812	1020	TEXT	statistics.0.text	de la flore est endémique	\N	\N	\N	f
+68556	1038	TEXT	species.5.description	Les plages de Guyane comptent parmi les plus importants sites de ponte de tortues marines au monde. Elles accueillent principalement trois espèces : la Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338)), la Tortue olivâtre ([*Lepidochelys olivacea*]) et la Tortue luth ([*Dermochelys coriacea*](https://inpn.mnhn.fr/espece/cd_nom/77367)). \nLa Tortue luth est la plus grosse espèce de tortue marine au monde, avec un poids moyen de 450 kg pour une taille de près d’1,60 mètre et elle se nourrit essentiellement de méduses. Contrairement aux autres tortues marines, elle ne possède pas d’écailles mais une dossière en cuir très épais, qui lui permet de plonger plus profondément que les autres espèces. Grandes migratrices, les tortues luths remontent jusqu’au nord de l’Atlantique. \nDe nombreuses menaces pèsent sur les tortues marines : braconnage, prises accidentelles dans les filets de pêche, prédation par des chiens errants, collisions avec des bateaux. En Guyane, il semble que les pontes de Tortue luth se raréfient ces dernières années. L’Office français de la biodiversité anime le plan national d’action Tortues marine en Guyane et coordonne l’ensemble des acteurs liés à leur protection. \n\nStatut sur la Liste rouge des reptiles de Guyane française : en danger\n	\N	\N	\N	f
 67949	1012	TEXT	ecogestures.title	Que puis-je faire pour aider à préserver les mangroves ? 	\N	\N	\N	f
 67950	1012	IMAGE	presentation.image	\N	1047	Palétuviers, baie de Grand Cul-de-Sac marin, Guadeloupe © Gaëlle Vandersarren	\N	f
 66605	1039	TEXT	interests.locations.1.description	Créé en janvier 2010, le [Parc naturel marin de Mayotte](https://www.parc-marin-mayotte.fr/) englobe le lagon et l’ensemble de la zone économique exclusive (ZEE), soit près de 70 000 kms<sup>2</sup>. Il est géré par l’Office français de la biodiversité. L'objectif du Parc est de concilier la préservation de la biodiversité marine et le développement durable des activités maritimes à Mayotte. Parmi leurs activités, les agents du parc veillent à faire respecter les règlementations de pêche, sensibiliser la population et les élus et réaliser des études et des suivis pour mieux connaitre le milieu marin. 	\N	\N	\N	f
@@ -3180,6 +3248,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68228	1041	TEXT	events.6.date	1955	\N	\N	\N	f
 68229	1041	TEXT	ecosystems.ecosystems.0.name	NA	\N	\N	\N	f
 68230	1041	TEXT	species.5.description	L’Azorelle ([*Azorella selago*](https://inpn.mnhn.fr/espece/cd_nom/721433)) est une plante à fleur à croissance très lente qui forme des coussins denses sur les étendues pierreuses de Kerguelen et Crozet. Un individu met 100 à 200 ans pour atteindre un mètre de diamètre ! A Kerguelen, les tapis d’Azorelle ont été fortement dégradés par les lapins introduits et ne sont aujourd’hui visibles que sur les îles et îlots où l’herbivore n’est pas présent.  \n  \nStatut sur la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
+68557	1038	TEXT	species.6.description	Également nommé wassaï (ou açaï), le Palmier pinot ([*Euterpe olaracea*](https://inpn.mnhn.fr/espece/cd_nom/731659)) produit des fruits de couleur violet très foncé utilisés pour de nombreux usages (jus, huile, poudre). Ils poussent en grappes le long du tronc qui peut s’élever jusqu’à 20 m de hauteur, et sont également consommés par la faune sauvage. Ces palmiers sont particulièrement présents en zones marécageuses où ils peuvent former de véritables « pinotières ».\nUtilisées depuis des siècles par les peuples d’Amazonie, les fruits du wassaï font désormais l’objet d’un intérêt mondial sur les marchés de l’alimentation, la cosmétique et la médecine. \n\nStatut sur la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
 64840	1020	TEXT	ecosystems.ecosystems.0.description	Ces forêts dites « sempervirentes » couvrent un peu plus de 20&nbsp;% du territoire, avec des massifs de plusieurs milliers d’hectares d’un seul tenant. Elles concentrent plus de 2 000 espèces végétales donc 80&nbsp;% endémiques, et offrent un habitat à une faune diversifiée : oiseaux, reptiles, chauve-souris, insectes… Elles sont cependant victimes de fortes dégradations (incendies, exploitation minière, espèces exotiques envahissantes…). 	\N	\N	\N	f
 64841	1020	TEXT	identity.highestPoint	1 628	\N	\N	\N	f
 64842	1020	TEXT	interests.locations.4.description	Situé sur la côte Sud-Est de la Grande Terre, entre Thio et Yaté, ce [parc provincial](https://www.province-sud.nc/aires-protegees/parc-cote-oubliee) créé en 2019 protège désormais 93 000 ha terrestres et 29 200 ha marins. C'est un véritable trésor de biodiversité qui abrite 20 % des forêts humide du territoire, 82 % d’espèces végétales endémiques  et un patrimoine culturel et immatériel précieux. Ce classement a par ailleurs induit le gel d’une centaine de titres miniers. \n	\N	\N	\N	f
@@ -3197,6 +3266,25 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64854	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
 64855	1020	IMAGE	ecosystems.ecosystems.7.image	\N	2469	Espèces coralliennes spécifiques des fonds de baie envasés © F. Benzoni / IRD	\N	f
 64856	1020	TEXT	interests.locations.4.name	Le parc provincial de la Côte oubliée (*Woen Vùù – Pwa Pereeù*)	\N	\N	\N	f
+68558	1038	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
+68559	1038	TEXT	events.0.date	-13 000 ans	\N	\N	\N	f
+68560	1038	TEXT	identity.populationYear	2019	\N	\N	\N	f
+68561	1038	IMAGE	species.5.image	\N	2404	*Dermochelys coriacea* © Raphaël Gailhac - OFB	\N	f
+68562	1038	TEXT	events.13.date	2007	\N	\N	\N	f
+68563	1038	TEXT	statistics.0.text	du territoire est recouvert de forêts	\N	\N	\N	f
+68564	1038	TEXT	ecosystems.ecosystems.1.name	Les inselbergs	\N	\N	\N	f
+68565	1038	TEXT	events.2.date	1844	\N	\N	\N	f
+68566	1038	TEXT	identity.presentation	Située entre le Brésil et le Suriname, la Guyane est le plus vaste territoire d’outre-mer français, et le seul non insulaire. Il est en majorité recouvert de forêts tropicales humides, excepté sur la bande côtière où se trouve une mosaïque d’habitats plus ou moins ouverts : plages, mangroves, savanes, forêts marécageuses et marais. Il est difficile de résumer la diversité des espèces guyanaises tant elle est vaste, aussi bien chez la faune que la flore, et une grande partie est encore largement méconnue. Un hectare de forêt peut abriter plus de 300 espèces d’arbres, soit plus d’espèces qu’il n’y en a dans toute l’Europe continentale, et la diversité totale des insectes de Guyane est estimée à plus de 100 000 espèces. Bien que les milieux guyanais soient encore relativement préservés des activités humaines, certaines pressions, dont l’orpaillage, sont très préoccupantes.	\N	\N	\N	f
+68567	1038	TEXT	identity.population	296 711	\N	\N	\N	f
+68568	1038	TEXT	species.3.name	Le Jaguar	\N	\N	\N	f
+68569	1038	TEXT	risks.risks.2.name	De vastes zones protégées, une gestion en concertation avec les communautés autochtones	\N	\N	\N	f
+68570	1038	TEXT	species.0.name	Le Titan	\N	\N	\N	f
+68571	1038	TEXT	events.4.date	1946	\N	\N	\N	f
+68572	1038	IMAGE	interests.locations.2.image	\N	2406	Dispositif d'étude de la canopée dans la réserve des Nouragues © Pierre-Olivier Jay - 97px	\N	f
+68573	1038	TEXT	events.11.date	1998	\N	\N	\N	f
+68574	1038	IMAGE	ecosystems.ecosystems.2.image	\N	2410	Mangrove sur le littoral de Guyane © Olivier Tostain - 97px	\N	f
+68575	1038	TEXT	events.10.description	Création de la Réserve naturelle nationale de la Trinité	\N	\N	\N	f
+68576	1038	TEXT	events.11.description	Création des réserves naturelles nationales de l’Amana et de Kaw-Roura	\N	\N	\N	f
 64857	1015	TEXT	events.2.description	Dernière éruption de la Montagne Pelée	\N	\N	\N	f
 64858	1015	TEXT	events.3.description	Création du Parc naturel régional de Martinique et de la Réserve naturelle nationale de la presqu'île de la Caravelle	\N	\N	\N	f
 64859	1015	IMAGE	identity.image	\N	2285	La Montagne Pelée depuis la mer © Fabien Lefebvre	\N	f
@@ -3209,6 +3297,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64866	1015	TEXT	events.9.description	Création du [Parc naturel marin de Martinique](https://www.parc-marin-martinique.fr/)	\N	\N	\N	f
 64867	1015	IMAGE	ecosystems.image	\N	2304	La Monnaie Caraïbes à ocelle (*Cyphoma gibbosum*), un mollusque présent dans les eaux de Martinique © Fabien Lefebvre	\N	f
 64868	1015	TEXT	identity.species	7 009	\N	\N	\N	f
+68577	1038	TEXT	interests.locations.0.description	Créé en 2007, le [Parc amazonien de Guyane](https://www.parc-amazonien-guyane.fr/fr) s’étend sur 40 % du territoire (34 000 km<sup>2</sup>) dans la partie sud de la Guyane. Il représente le plus vaste parc national de France et de l’Union européenne. Il a pour vocation de préserver la biodiversité exceptionnelle du massif forestier ainsi que les patrimoines culturels et les modes de vie traditionnels des populations, notamment amérindiennes et bushinenguées, vivant sur le territoire. 	\N	\N	\N	f
 67815	1040	TEXT	risks.risks.1.description	En raison de leur isolement, les écosystèmes de Polynésie française s’avèrent particulièrement vulnérables aux espèces introduites envahissantes. De nombreuses espèces très invasives sont à l’origine de régressions de populations chez la faune et la flore indigène. Le Miconia ([*Miconia calvescens*](https://inpn.mnhn.fr/espece/cd_nom/447324)), introduit en 1937 dans un jardin botanique à Tahiti, remplace les espèces végétales indigènes et endémiques et entraine l’appauvrissement des forêts humides des vallées et de montagne jusqu’à 1 300 m d’altitude. Surnommé «&nbsp;le cancer vert&nbsp;», il recouvre désormais deux tiers des forêts de Tahiti et a été introduit dans d’autres îles de la Société et des Marquises. D’autres espèces végétales, comme le Tulipier du Gabon ([*Spathodea campanulata*](https://inpn.mnhn.fr/espece/cd_nom/448228)), sont également préoccupantes en raison de leur expansion.  \n  \nComme dans de nombreux milieux insulaires à travers le globe, l’introduction des rats a des conséquences désastreuses pour les écosystèmes, en particulier pour les oiseaux dont les œufs sont prédatés, mais aussi pour la flore indigène, car les rats, en consommant les plantules et les graines, perturbent la régénération naturelle des forêts. Les chats harets (chats domestiques retournés à l’état sauvage) sont également une menace importante pour la biodiversité des îles de Polynésie française. Les études récentes montrent une forte prédation sur les oiseaux, dont des espèces endémiques aux Marquises, et les reptiles. D’autres espèces animales introduites, comme les fourmis (Petite fourmi de feu ([*Wasmannia auropunctata*](https://inpn.mnhn.fr/espece/cd_nom/532927)), Grande fourmi folle ([*Anopolepis gracilipes*](https://inpn.mnhn.fr/espece/cd_nom/264513)) etc.) ou des oiseaux (Merle des Moluques ([*Acridotheres tristis*](https://inpn.mnhn.fr/espece/cd_nom/601183)), Bulbul à ventre rouge ([*Pycnonotus cafer*](https://inpn.mnhn.fr/espece/cd_nom/432746)), Busard de Gould ([*Circus approximans*](https://inpn.mnhn.fr/espece/cd_nom/432707)), etc.) ont également un fort impact sur la biodiversité terrestre des îles de Polynésie française.  \n\nSi des actions sont entreprises pour lutter contre ces espèces dans les îles où elles ont été introduites, il s’agit également d’éviter leur dissémination sur des îles où elles ne sont pas encore présentes, en mettant en place des mesures de biosécurité (chiens détecteurs, inspections, interdiction de déplacer de la terre d’une île à l’autre…). L’introduction d’espèces non existantes sur le territoire de la Polynésie française est interdite. \n	\N	\N	\N	f
 67816	1040	TEXT	interests.locations.2.description	Tahiti est la plus grande et la plus haute île de Polynésie française, c'est également la plus peuplée. Elle est la seule à posséder des sommets de plus de 1 300 m d'altitude, dont trois à plus de 2&nbsp;000&nbsp;m. On y trouve des zones de forêts naturelles avec une végétation subalpine unique en Polynésie française et dans les îles océaniques du Pacifique sud. 	\N	\N	\N	f
 67817	1040	TEXT	events.12.description	Création de l'aire marine protégée *Te Tainui Atea*	\N	\N	\N	f
@@ -3289,10 +3378,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64918	1015	TEXT	species.2.name	Le Lambi	\N	\N	\N	f
 64919	1015	TEXT	risks.risks.1.name	Des préoccupations communes aux territoires antillais	\N	\N	\N	f
 67008	1044	TEXT	body.bodyElements.5.citation.citationElement	L’idée est que les élèves reproduisent l’échantillonnage chez eux, afin d’accroître de nombre d’échantillons dans toute la commune.	\N	\N	\N	f
+68578	1038	TEXT	risks.risks.2.description	Le territoire est riche en aires protégées, parmi les plus vastes de France. Outre le parc amazonien de Guyane qui couvre le sud de la Guyane, on compte six réserves naturelles nationales (Marais de Kaw-Roura, Mont Grand Matoury, Trinité, Amana, Grand Connétable et Nouragues) et une réserve naturelle régionale (Trésor). Trois zones humides sont classées au protocole de Ramsar (Basse Mana, les marais de Kaw et l’estuaire des fleuves Sinnamary et Iracoubo) et on compte également 14 000 ha protégés par le Conservatoire du littoral. La Guyane compte également deux réserves biologiques intégrales : la réserve de Petites Montagnes Tortue et la réserve de Lucifer Dékou-Dékou. La création d’une réserve biologique dirigée est en cours.\n\nLa conciliation de la préservation de la biodiversité avec le respect des modes de vie et des traditions des populations est un enjeu fort en Guyane. Le Parc national et l’OFB ont par exemple mené un programme d’étude pour mieux connaître les pratiques de chasse, évaluer l’état de conservation des gibiers et ainsi construire avec les communautés locales des modes de gestion adaptées. \n	\N	\N	\N	f
+68579	1038	TEXT	events.13.description	Création du Parc national Amazonien de Guyane	\N	\N	\N	f
+68580	1038	TEXT	risks.risks.1.description	La richesse du sol guyanais en ressources aurifères attire les convoitises. L’exploitation illégale, qui a explosé en Guyane ces dernières années, est un fléau pour la biodiversité que les actions de lutte ne réussissent pas à endiguer et qui n’épargne pas les espaces protégés.\n\nMalgré son interdiction en 2006, le mercure continue d’être utilisé par les *garimpeiros* (chercheurs d'or clandestins)pour amalgamer l’or et pollue durablement les cours d’eau et les organismes aquatiques que consomment les populations locales. Les taux de contamination observés chez ces populations sont élevés. Les eaux sont également impactées par le défrichement non raisonné de la forêt qui favorise l’érosion et le lessivage des sols, ils deviennent alors trop turbides et pauvres en oxygènes pour la faune et la flore aquatiques. Aux impacts sur l’environnement s’ajoutent d’importants problèmes humains, de misère sociale, de violence et de conflits avec les populations locales. \n\nDepuis 2008, l’opération Harpie implique de nombreux acteurs du territoire (armée, police, justice, douanes, ONF, PAG) dans des interventions qui visent notamment à bloquer l’acheminement du matériel, et procéder à des saisies et des arrestations. Ce problème complexe nécessite une coopération à l’échelle régionale, les orpailleurs clandestins et le matériel provenant majoritairement des pays limitrophes. Cette opération a permis de contenir le phénomène à l'échelle globale. En 2021, les sanctions pénales encourues par les orpailleurs illégaux ont été renforcées dans le cadre de la nouvelle loi Climat. Le renforcement de la traçabilité de l’or serait également nécessaire.\n\nSi l’activité des exploitants aurifères déclarés est encadrée par des dispositions visant à limiter ses conséquences, elle reste cependant impactante pour les milieux naturels. De plus, l’émergence de projets d’exploitation de l’or à l’échelle industrielle pose d’importante préoccupations. Le projet très controversé de la Montagne d’or à fait l’objet d’une importante opposition de la population locale et des associations environnementales. Il a pour le moment été abandonné mais la prolongation des concessions fait l’objet d’une procédure judiciaire toujours en cours.  \n	\N	\N	\N	f
 68231	1041	TEXT	species.6.description	Le Chou de Kerguelen ([*Pringlea antiscorbutica*](https://inpn.mnhn.fr/espece/cd_nom/721546)) est une plante vivace dont les feuilles ovales poussent en rosette. Il se rencontre dans des milieux divers et est capable de s’adapter à différentes contraintes : à basse altitude en milieu côtier il présente une forte résistance aux embruns ; à très haute altitude (entre 700 – 1000 m), il résiste au gel, et peut se développer sur des plateaux rocheux ou en falaise. Comme les autres plantes de la famille des Brassicacées, il est riche en vitamine C et a pu être historiquement consommé par les marins pour lutter contre le scorbut. A Kerguelen, ses populations ont été fortement réduites suite à l’introduction des lapins sur l’île.\nContrairement à ce que son nom laisse à penser, cette espèce emblématique de la zone subantarctique n’est pas uniquement présente à Kerguelen mais se trouve également à Crozet et dans les îles Marion, Heard, Prince Edwards et Mac Donald.  \n  \nStatut sur la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
-64503	1038	TEXT	events.2.description	Abolition définitive de l'esclavage en France	\N	\N	\N	f
-64504	1038	TEXT	events.3.description	Ouverture du bagne de Guyane, lieu de déportation pour les condamnés aux travaux forcés jusqu’en 1946	\N	\N	\N	f
-64505	1038	IMAGE	identity.image	\N	2397	Rivière Inini © Pascale Roche / Office français de la biodiversité	\N	f
 64183	1031	IMAGE	species.9.image	\N	2344	*Broussonetia papyrifera* © J-Y. H. Meyer, Délégation à la Recherche de la Polynésie française	\N	f
 64184	1031	TEXT	events.2.description	Traces des premiers habitants de l'archipel, la civilisation Lapita	\N	\N	\N	f
 64185	1031	TEXT	events.3.description	Première arrivée des européens dans l'archipel	\N	\N	\N	f
@@ -3341,9 +3430,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64228	1031	TEXT	identity.highestPointName	Mont Puke (Futuna)	\N	\N	\N	f
 64229	1031	TEXT	ecosystems.ecosystems.2.name	La mangrove	\N	\N	\N	f
 64230	1031	TEXT	species.7.description	Deux espèces de palétuvier sont présentes dans les mangroves de Wallis. L'espèce la plus commune, [*Rhizophora samoensis*](https://inpn.mnhn.fr/espece/cd_nom/672293), présente des racines en échasses tandis que la seconde espèce, [*Bruguiera gymnorhiza*](https://inpn.mnhn.fr/espece/cd_nom/809530\n), possède des racines coudées émergeant du sol, appelées pneumatophores. L'écorce sombre de cette dernière, riche en tanins, est utilisée en artisanat pour teindre les tissus.  \n\nStatut sur la liste rouge mondiale : \n*Rhizophora samoensis* : quasi-menacée.\n*Bruguiera gymnorhiza* : préoccupation mineure.\n\nNoms locaux : *Bruguiera gymnorhiza* : togo, tongo (futunien, wallisien)\n	\N	\N	\N	f
-64506	1038	TEXT	events.7.description	Création du Groupe d'étude et de protection des oiseaux de Guyane ([GEPOG](http://www.gepog.org/))	\N	\N	\N	f
-64507	1038	TEXT	events.7.date	1993 	\N	\N	\N	f
-64508	1038	TEXT	interests.locations.0.name	Le Parc Amazonien de Guyane	\N	\N	\N	f
 67009	1042	TEXT	body.bodyElements.0.questionAnswer.question	Pouvez-vous nous présenter l’association et ses différentes missions ? 	\N	\N	\N	f
 67010	1042	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 67011	1042	IMAGE	body.bodyElements.4.image.imageElement	\N	2247	Carapace de tortue verte femelle braconnée sur la plage de Papani © *Oulanga Na Nyamba*	\N	f
@@ -3366,7 +3452,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68234	1041	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
 68235	1041	TEXT	interests.locations.2.name	Les îles Saint-Paul et Amsterdam	\N	\N	\N	f
 68236	1041	TEXT	events.0.date	-40 millions d’années	\N	\N	\N	f
-64509	1038	TEXT	events.0.description	Premières traces d’occupation humaine dans les Guyanes	\N	\N	\N	f
 61777	1028	IMAGE	presentation.file	\N	1485	affiche écogeste exploitation espèces protégées	\N	f
 61778	1028	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 61779	1028	IMAGE	action.cards.2.icon	\N	1145	bagages	\N	f
@@ -3408,7 +3493,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68238	1041	IMAGE	species.5.image	\N	1723	*Azorella selago* © Julie Tucoulet	\N	f
 68239	1041	TEXT	statistics.0.text	d'oiseaux marins	\N	\N	\N	f
 68240	1041	IMAGE	species.1.image	\N	1721	*Diomedea exulans* © Julie Tucoulet	\N	f
-64510	1038	TEXT	events.1.description	Premières implantations européennes	\N	\N	\N	f
 68241	1041	TEXT	events.2.date	-100 000 ans	\N	\N	\N	f
 68242	1041	TEXT	events.5.date	12 février 1772	\N	\N	\N	f
 68243	1041	TEXT	identity.marineArea	1 655 098 	\N	\N	\N	f
@@ -3417,21 +3501,15 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64231	1031	TEXT	species.8.description	Le faux-tabac ([*Heliotropium foertherianum*](https://inpn.mnhn.fr/espece/cd_nom/446830\n)) est un petit arbre indigène, présent dans de nombreuses îles du Pacifique sud, très commun en forêt littorale. Ses feuilles sont utilisées en médecine traditionnelle pour traiter les effets de la ciguatera, intoxication alimentaire induite par la consommation de poissons contaminés par une toxine produite par des micro-algues.  \n  \nStatut sur la Liste rouge mondiale : préoccupation mineure.\n\nNoms locaux : tauhuni, sinu (futunien)\n	\N	\N	\N	f
 64232	1031	IMAGE	species.2.image	\N	2336	*Cheilinus undulatus* © Matthieu Junker	\N	f
 64233	1031	IMAGE	ecosystems.ecosystems.4.image	\N	2347	Plongeur étudiant les herbiers sous-marins © Sandrine Job	\N	f
-64511	1038	TEXT	events.8.description	Construction du barrage de Petit Saut	\N	\N	\N	f
-64512	1038	TEXT	events.9.description	Création de la Réserve naturelle nationale des Nouragues	\N	\N	\N	f
-64513	1038	IMAGE	ecosystems.image	\N	2415	Couple de Hoazins huppés © Gwen Quérel / RNN Kaw-Roura	\N	f
-64514	1038	TEXT	identity.species	27 794	\N	\N	\N	f
-64515	1038	IMAGE	ecosystems.ecosystems.0.image	\N	2417	Forêt dense humide © Sylvain Santelli	\N	f
-64516	1038	TEXT	zoom.title	Quelques repères en Guyane	\N	\N	\N	f
-64517	1038	TEXT	events.6.description	Création de la Réserve naturelle nationale de l’île du Grand Connétable	\N	\N	\N	f
-64518	1038	TEXT	events.6.date	1992	\N	\N	\N	f
-64519	1038	TEXT	events.4.description	Départementalisation de la Guyane	\N	\N	\N	f
-64520	1038	TEXT	events.5.description	Création du Centre spatial guyanais à Kourou	\N	\N	\N	f
-64521	1038	TEXT	statistics.4.text	de poissons d'eau douce et saumâtre	\N	\N	\N	f
-64522	1038	TEXT	interests.locations.2.name	Les Nouragues	\N	\N	\N	f
-64523	1038	TEXT	ecosystems.ecosystems.3.description	Les savanes de Guyane occupent très peu d’espace : seulement 0,3% du territoire. Ce sont des milieux ouverts herbacés, avec quelques arbres ou arbustes plus ou moins isolés, qui se trouvent répartis sur une fine bande le long de la côte, entre la forêt et les zones de marais, sur les plaines basses de sédiments argilo-sableux. Malgré leur faible étendue, elles représentent un milieu remarquable pour la biodiversité : elles abritent 16 % de la flore guyanaise et la végétation y est très spécialisée. \nLes savanes sont menacées par l’expansion démographique, ainsi que l’introduction de deux arbres envahissants, l’[*Acacia mangium*](https://inpn.mnhn.fr/espece/cd_nom/447341) et le Niaouli ([*Melaleuca quinquenervia*](https://inpn.mnhn.fr/espece/cd_nom/447400)) qui entrainent la fermeture du milieu. Depuis 2011, le Groupe d’étude et de protection des oiseaux de Guyane (GEPOG) mène des actions pour la [conservation des savanes de Guyane](https://www.savanes.fr/), dont la lutte contre les espèces végétales envahissantes, d’abord dans le cadre du programme LIFE+ Cap DOM, puis du LIFE+ BIODIV’OM.	\N	\N	\N	f
-64524	1038	TEXT	ecosystems.ecosystems.4.description	De nombreuses zones humides se situent le long du trait de côte, en retrait des mangroves et en bordure des savanes. Des marais herbacés aux forêts marécageuses, on trouve une diversité de formations végétales qui abritent une faune importante, notamment des caïmans noirs, de nombreuses espèces de poissons d’eau douce ou saumâtre, des crustacés, de nombreux oiseaux en particulier des limicoles et des rapaces ou encore le remarquable Hoazin huppé ([*Opisthocomus hoazin*](https://inpn.mnhn.fr/espece/cd_nom/442155)).	\N	\N	\N	f
-64525	1038	TEXT	ecosystems.ecosystems.4.name	Les marais et les forêts marécageuses	\N	\N	\N	f
+68581	1038	TEXT	interests.locations.2.description	Créée en 1995, la [Réserve naturelle nationale des Nouragues](http://www.nouragues.fr/) protège 105 800 hectares de forêt, un réseau hydrographique dense avec une grande diversité d’habitats (criques, rivières, sauts rocheux) et des inselbergs. Elle porte le nom des amérindiens qui vivaient dans cette zone jusqu’au 18<sup>e</sup> siècle. La réserve accueille une station de recherche scientifique gérée par le CNRS, qui permet l’étude des écosystèmes de forêts tropicales à long terme. 	\N	\N	\N	f
+68582	1038	TEXT	events.12.description	Création de la réserve naturelle nationale du Mont Grand Matoury	\N	\N	\N	f
+68583	1038	TEXT	interests.locations.1.description	A 15 km au large de l’estuaire de l’Approuague, les îles du Grand et du Petit Connétable sont le seul site de reproduction pour les oiseaux marins de la côte amazonienne. Le site accueille chaque année plusieurs dizaines de milliers d’individus qui viennent y nidifier : sternes (dont 1/3 des effectifs mondiaux de la [Sterne de Cayenne](https://inpn.mnhn.fr/espece/cd_nom/626905)), frégates superbes, mouettes atricilles et noddis bruns. Le site est classé Réserve naturelle nationale depuis 1992. Le périmètre de la réserve s’étend sur plus de 7&nbsp;000 ha marins autour des îles, permettant la conservation d’espèces marines menacées comme le [Mérou géant](https://inpn.mnhn.fr/espece/cd_nom/419226).	\N	\N	\N	f
+68584	1038	TEXT	ecosystems.ecosystems.3.name	Les savanes	\N	\N	\N	f
+68585	1038	TEXT	identity.subtitle	Une diversité biologique exceptionnelle	\N	\N	\N	f
+68586	1038	IMAGE	species.7.image	\N	2409	*Ceiba pentandra* © Jean-Christophe Marsy	\N	f
+68587	1038	TEXT	species.5.name	La Tortue Luth	\N	\N	\N	f
+68588	1038	TEXT	risks.risks.0.description	La richesse des écosystèmes de Guyane est impressionnante, aussi bien en vertébrés qu’en invertébrés, et surtout en végétaux. La diversité floristique a une répartition assez hétérogène : un petit nombre d’espèces est représenté par un grand nombre d’individus alors qu’un grand nombre d’espèces n’est représenté que par quelques individus. Relativement peu d’espèces sont endémiques strictes du territoire, la plupart se retrouvent également sur le reste du plateau des Guyanes. On peut cependant noter un endémisme important au niveau des poissons d’eau douce (35 à 40 % des espèces) dont la répartition peut parfois être très limitée.  \n\nIl n’y a pas de récifs coralliens dans les eaux de Guyane, les côtes sont instables en raison des apports de sédiments de l’Amazone qui forment des bancs de vase se déplaçant de 900 m environ par an, colonisés par la mangrove. Cependant, bien que sans originalité, les eaux guyanaises sont riches en poissons et abritent plusieurs espèces de requins dont le requin Pèlerin et le Grand requin marteau, ainsi qu’une vingtaine d’espèces de cétacés. \n\nLa Guyane est peu densément peuplée, et la majorité de la population se concentre sur la bordure atlantique. Bien que la forêt reste peu impactée, notamment au regard des pays voisins (Brésil), de nouvelles routes ouvrent des accès à des zones autrefois préservées. L’augmentation rapide de la démographie et les nouveaux aménagements qui l’accompagnent sont l’une des causes majeures de dégradation des milieux, en particulier sur le littoral.  \n\nL’espace maritime guyanais reste peu exploré. La pêche illégale pratiquée par les pêcheurs venus du Suriname et du Brésil impacte les stocks de poissons guyanais et les filets utilisés sont une cause de mortalité importante pour les tortues et les mammifères marins. \n\nLa règlementation du Code de l’environnement concernant la chasse ne s’applique pas en Guyane. Le permis de chasser n’est obligatoire que depuis janvier 2020. Le braconnage et le non-respect des règles de chasse (quotas, espèces chassables mais non commercialisables, périodes de chasse) sont des infractions régulièrement observées qui impactent la survie des espèces menacées. \n \nConstruit en 1994 sur le Sinnamary pour combler les besoins en électricité de la population guyanaise, le barrage de Petit Saut a eu un fort impact sur l’équilibre écologique de la région. La retenue d’eau de 365 km<sup>2</sup> ainsi créée a inondé brutalement la forêt, et la dégradation progressive de la matière organique immergée provoque des rejets de gaz (dioxyde de carbone, méthane, sulfure d’hydrogène) et une anoxie de l’eau, néfaste aux organismes aquatiques. Ces paramètres sont encore étudiés aujourd’hui afin de suivre l’impact de la construction du barrage à long terme.\n	\N	\N	\N	f
+68589	1038	TEXT	ecosystems.ecosystems.2.description	Les mangroves sont des forêts localisées le long du littoral et des estuaires, dans la zone de balancement des marées. Elles sont formées principalement de palétuviers, des arbres aux racines en échasses, qui s’accommodent des conditions de vie en eaux saumâtres et dans des sols pauvres en oxygène. À l’interface entre le milieu marin et le milieu terrestre,\nelles ont un rôle très important pour la biodiversité et accueillent de nombreuses espèces de poissons, crustacés et oiseaux et ont un rôle de nurserie pour la faune marine. \nEn Guyane, les mangroves du littoral sont mobiles : elles se développent sur les bancs de vase issus de l’Amazone, qui se déplacent d’est en ouest suivant le courant équatorial.\n	\N	\N	\N	f
 64234	1031	TEXT	species.3.description	La Roussette du Pacifique ([*Pteropus tonganus*](https://inpn.mnhn.fr/espece/cd_nom/459607)) est une espèce de chauve-souris commune sur les trois îles. Elle joue un rôle clef dans la dissémination des gros fruits charnus de végétaux indigènes et donc dans la dynamique forestière. Si l’espèce n’est pas considérée comme menacée dans l'archipel, la pression de chasse sur les roussettes peut être importante. \n  \nStatut sur la Liste rouge mondiale : préoccupation mineure. 	\N	\N	\N	f
 64235	1031	TEXT	species.1.description	L’archipel compterait environ une quinzaine de reptiles indigènes, en majorité des lézards, mais un serpent indigène, le Boa du Pacifique ([*Candoia bibroni*](https://inpn.mnhn.fr/espece/cd_nom/456357)), est présent sur Alofi.  \n  \nStatut sur la Liste rouge mondiale : préoccupation mineure	\N	\N	\N	f
 64236	1031	TEXT	species.2.description	648 espèces de poissons récifaux et lagonaires sont inventoriés dans les eaux de Wallis, dont le Napoléon ([*Cheilinus undulatus*](https://inpn.mnhn.fr/espece/cd_nom/423718*)). C'est l’un des plus grands poissons osseux des récifs coralliens, il peut atteindre plus de 2 m de long. L’espèce présente un hermaphrodisme successif appelée « protogynie » : les individus sont d’abord des femelles puis deviennent des mâles au cours de leur vie (autour de 15 ans selon les estimations). Le mâle est reconnaissable à sa bosse sur le front. Le Napoléon est le seul poisson marin figurant sur la liste des espèces protégées de Wallis-et-Futuna.  \n  \nStatut sur la Liste rouge mondiale : en danger.	\N	\N	\N	f
@@ -3449,19 +3527,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64248	1031	CHECKBOX	identity.shadowed	true	\N	\N	\N	f
 64249	1031	TEXT	events.0.date	-22 millions d'années	\N	\N	\N	f
 64250	1031	TEXT	identity.populationYear	2018	\N	\N	\N	f
-64526	1038	TEXT	statistics.3.text	d'oiseaux	\N	\N	\N	f
-64527	1038	TEXT	events.10.date	1996	\N	\N	\N	f
-64528	1038	IMAGE	species.1.image	\N	2402	*Dendrobates tinctorius* © Raphaël Gailhac	\N	f
-64529	1038	TEXT	events.5.date	1964	\N	\N	\N	f
-64530	1038	TEXT	identity.marineArea	131 506	\N	\N	\N	f
-64531	1038	TEXT	events.8.date	1994	\N	\N	\N	f
-64532	1038	IMAGE	interests.locations.0.image	\N	2400	Vue aérienne sur le territoire du Parc national © Guillaume Feuillet, PAG	\N	f
-64533	1038	TEXT	species.6.name	Le Palmier pinot	\N	\N	\N	f
 64920	1015	TEXT	species.4.description	L’Ananas bois ([*Aechmea reclinata*](https://inpn.mnhn.fr/espece/cd_nom/629022\n)) a été décrit pour la première fois en 1999 par une équipe du Parc naturel régional. Endémique de Martinique, cette espèce n’a été observée qu’en arrière-mangrove de Genipa et sur la montagne du Vauclin. Peu après sa découverte, une grande part de son aire de répartition a été défrichée illégalement pour y planter de la canne à sucre, mettant en péril cette espèce tout juste inventoriée.\n\nStatut dans la Liste rouge de la flore vasculaire de Martinique : en danger critique. 	\N	\N	\N	f
 64921	1015	TEXT	zoom.callToAction	Cliquez sur la carte thématique pour vous repérer en un coup d'œil ! 	\N	\N	\N	f
 64922	1015	TEXT	ecosystems.ecosystems.0.name	Les plages	\N	\N	\N	f
 68010	1014	TEXT	understand.paragraphs.1.text	Créée en 1999, l’[Initiative française pour les récifs coralliens (IFRECOR)](https://ifrecor.fr/) agit pour la protection et la gestion durable des récifs coralliens, des herbiers et des mangroves dans les collectivités françaises d’outre-mer. Chaque collectivité abritant ces écosystèmes possède un comité local rassemblant les acteurs concernés par leur protection et leur gestion durable. L’initiative collective porte un plan d'action sur 5 ans qui couvre 6 axes stratégiques : planifier pour prévenir ; réduire les effets négatifs dus aux activités humaines, tout en assurant leur développement durable ; connaître et comprendre pour gérer ; informer et éduquer pour modifier les comportements ; développer les échanges et la coopération pour renforcer les synergies et valoriser les expériences. \n  \nDéclinaison française de l’Initiative internationale pour les récifs coralliens (ICRI), l’IFRECOR représente les territoires français au niveau international. Elle est présidée par les ministres de la transition écologique et des outre-mer, dont les services assurent le secrétariat.	\N	\N	\N	f
 68011	1014	TEXT	understand.title2	Un état de santé hétérogène selon les territoires	\N	\N	\N	f
+68590	1038	TEXT	ecosystems.ecosystems.1.description	De l’allemand « *insel* » : île et « *berg* » : montagne, ces sommets granitiques dénudés émergeant de la forêt amazonienne sont aussi appelés « savane-roches ». La roche nue est colonisée par des cyanobactéries, algues bleues microscopiques, qui vont par la suite permettre l’installation des plantes vasculaires. On trouve sur les inselbergs de nombreuses espèces végétales caractéristiques dites lithophytes, adaptées aux conditions drastiques de sécheresse et fort ensoleillement, relictuelles des périodes de climat plus sec dans le bassin amazonien. En raison de leur isolement, certains inselbergs abritent des espèces endémiques. On compte environ 200 inselbergs en Guyane, en majorité dans le sud, le plus haut culminant à 740&nbsp;m.  	\N	\N	\N	f
 62713	1005	LINK	understand.article	aucun	\N	\N	aucun	f
 64251	1031	IMAGE	species.5.image	\N	2351	*Cyrtandra futunae* © J-Y. H. Meyer, Délégation à la Recherche de la Polynésie française	\N	f
 64252	1031	TEXT	statistics.0.text	îlots dans le lagon autour de Wallis	\N	\N	\N	f
@@ -3499,28 +3570,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64275	1031	TEXT	ecosystems.ecosystems.1.description	Le mot *Toafa*, « désert » en wallisien, reflète la pauvreté floristique de cette lande due aux feux répétés, où se trouve principalement des fougères ([*Dicranopteris linearis*](https://inpn.mnhn.fr/espece/cd_nom/448035)).   \nPour restaurer ces habitats dégradés, des plantations de Pin des Caraïbes ([*Pinus caribaea*](https://inpn.mnhn.fr/espece/cd_nom/446369)), une espèce exotique, ont été mises en place dans les années 1970. Une recolonisation du sous-bois par les espèces indigènes est observée dans les pinèdes non entretenues. Les pins des Caraïbes apparaissent cependant moins résistants aux cyclones que les espèces indigènes.	\N	\N	\N	f
 64276	1031	TEXT	ecosystems.ecosystems.0.description	Si la forêt dense occupait autrefois la quasi-totalité des îles, elle a aujourd’hui quasiment disparu de Wallis, hormis dans quelques zones peu accessibles. Elle est mieux conservée sur Futuna en raison du relief accidenté, bien que grignotée peu à peu par le défrichement pour les cultures. Sur Alofi, elle est encore relativement bien préservée, mais fait malgré tout l’objet d’exploitation par les agriculteurs de Futuna.	\N	\N	\N	f
 64277	1031	TEXT	identity.highestPoint	524	\N	\N	\N	f
-64534	1038	IMAGE	interests.locations.3.image	\N	2399	Plage d'Awala-Yalimapo © Raphaël Gailhac	\N	f
-64535	1038	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
-64536	1038	TEXT	interests.locations.3.name	Les plages d'Awala-Yalimapo	\N	\N	\N	f
-64537	1038	TEXT	events.12.date	2006	\N	\N	\N	f
-64538	1038	TEXT	statistics.1.text	espèces d'arbres	\N	\N	\N	f
-64539	1038	TEXT	events.9.date	1995	\N	\N	\N	f
-64540	1038	IMAGE	species.4.image	\N	2407	*Pteronura brasiliensis* © Fabien Lefebvre	\N	f
-64541	1038	TEXT	events.3.date	1852	\N	\N	\N	f
-64542	1038	IMAGE	ecosystems.ecosystems.3.image	\N	2412	Savanes de Guyane © Bernard G.	\N	f
-64543	1038	IMAGE	species.3.image	\N	2401	*Panthera onca* © Raphaël Gailhac	\N	f
-64544	1038	IMAGE	zoom.map	\N	2398	Carte Guyane	\N	f
-64545	1038	TEXT	species.1.name	Le Dendrobate à tapirer	\N	\N	\N	f
-64546	1038	TEXT	species.7.name	Le Fromager	\N	\N	\N	f
-64547	1038	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
-64548	1038	TEXT	species.4.name	Les loutres	\N	\N	\N	f
-64549	1038	TEXT	identity.area	83 846	\N	\N	\N	f
-64550	1038	TEXT	species.0.description	Atteignant jusqu’à 17 cm de long, le Titan ([*Titanus giganteus*](https://inpn.mnhn.fr/espece/cd_nom/758743)) est le plus grand coléoptère du monde. On connait cependant peu de choses sur sa biologie : si les mâles sont attirés par la lumière, ce n’est pas le cas des femelles qui sont rarement observées. On suppose que les larves se développent dans le sol, au niveau des racines ou des souches, et consomment du bois décomposé.  \nCe longicorne attire particulièrement les collectionneurs, c’est pourquoi depuis le 25 juillet 2019, il existe un quota limitant l’exportation à un spécimen par personne et par an.\nL’inventaire des insectes de Guyane est encore largement incomplet. Si la diversité des insectes est très importante, l’abondance de chaque espèce est généralement faible, ce qui rend leur recensement complexe.  \n  \nStatut sur la Liste rouge mondiale : non évalué.	\N	\N	\N	f
-64551	1038	TEXT	identity.highestPointName	Montagne Bellevue	\N	\N	\N	f
-64552	1038	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
-64553	1038	TEXT	species.7.description	Le Fromager ([*Ceiba pentandra*](https://inpn.mnhn.fr/espece/cd_nom/447007)) est un arbre géant largement répandu dans les forêts humides d’Amérique, d’Afrique et d’Asie. Très imposant, il peut atteindre plusieurs dizaines de mètres de haut et développe des contreforts avec l’âge. Son tronc lisse est pourvu de nombreuses épines coniques. Un individu particulièrement imposant (50 m de haut pour 40 m de circonférence) est observable dans le village de Saül. \nEn Guyane comme dans toute l’Amérique tropicale, cet arbre majestueux tient une place importante dans la cosmogonie de nombreux peuples, il est lié au chamanisme et est réputé habité par des esprits puissants et parfois dangereux. Ses contreforts sont appréciés par les Wayana pour faire des ciels de cases (disque rond occupant le faîte de leur maison ronde communautaire).\n\nStatut sur la Liste rouge mondiale : préoccupation mineure.\n	\N	\N	\N	f
-64554	1038	IMAGE	species.2.image	\N	2403	*Ramphastos tucanus* © Raphaël Gailhac	\N	f
-64555	1038	IMAGE	ecosystems.ecosystems.4.image	\N	2416	Rivière et marais de Kaw © Pierre-Olivier Jay	\N	f
 64923	1015	TEXT	species.5.description	L’Herbe à Tortue ([*Thalassia testudinum*](https://inpn.mnhn.fr/espece/cd_nom/627263)) est une plante marine qui compose les herbiers de phanérogames sous-marins, souvent accompagnée de l’Herbe à Lamentin ([*Syringodium filiforme*](https://inpn.mnhn.fr/espece/cd_nom/627259)). Son aire de répartition couvre l’ensemble des Caraïbes, et de nombreuses espèces marines s’en nourrissent. L'introduction d'une espèce exotique de phanérogame, [*Halophila stipulacea*](https://inpn.mnhn.fr/espece/cd_nom/368620), signalée depuis 2006 dans les eaux martiniquaises, représente une potentielle menace pour ces herbiers indigènes. Des études sont en cours pour suivre son expansion et mesurer ses impacts sur les communautés marines. \n\nStatut dans la Liste rouge mondiale : préoccupation mineure.\n	\N	\N	\N	f
 64924	1015	TEXT	species.6.description	Serpent endémique venimeux, le Trigonocéphale ([*Bothrops lanceolatus*](https://inpn.mnhn.fr/espece/cd_nom/439142\n)) a été victime de sa mauvaise réputation bien que peu d’accidents aient été à déplorer et qu’un anti-venin existe. Des primes à la capture ont longtemps existé et dans les années 1980, la Petite mangouste indienne ([*Urva auropunctata*](https://inpn.mnhn.fr/espece/cd_nom/850071/)) a été introduite depuis l'Inde dans le but de le combattre, cependant le serpent étant nocturne et la mangouste diurne, celle-ci s’est rabattue sur la consommation d'autres espèces indigènes. Le trigonocéphale est aujourd’hui rare sur l’île.\n\nStatut dans la Liste rouge des reptiles de Martinique : en danger. 	\N	\N	\N	f
 64925	1015	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
@@ -3595,26 +3644,26 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64281	1031	TEXT	interests.locations.3.description	La plus petite île du groupe n’est habitée à l’année que par une seule personne mais fréquentée quasiment quotidiennement par les agriculteurs de Futuna. D’origine corallienne, elle est majoritairement recouverte par une forêt relativement bien conservée, malgré un défrichement de plus en plus important pour les cultures et le bois de construction.	\N	\N	\N	f
 64282	1031	TEXT	identity.title	Wallis-et-Futuna,  \nun archipel au cœur du Pacifique  	\N	\N	\N	f
 64283	1031	IMAGE	species.6.image	\N	2341	Fruits d'*Aglaia samoaensis* © J-Y. H. Meyer, Délégation à la Recherche de la Polynésie française	\N	f
+68591	1038	TEXT	ecosystems.ecosystems.0.description	La forêt humide tropicale couvre plus de 80 % du territoire de la Guyane et la diversité floristique y est exceptionnelle. Malgré une apparente uniformité, elle recèle de nombreuses variations de type en fonction de la prépondérance de certaines grandes familles botaniques et de facteurs physico-chimiques multiples, comme l’altitude, la nature du sol ou la pluviométrie. \nDans le sous-bois, les plantes développent des stratégies leur permettant de vivre avec peu de lumière tandis qu’au sommet, la canopée s’étend à 30 à 40 m du sol. L’humidité ambiante favorise le développement de mousses et de lichens qui s’installent parfois à la surface des feuilles, et de champignons qui jouent un rôle écologique important. \nLes chablis (chutes naturelles d’arbres, dus à des évènements climatiques comme les fortes pluies) permettent une régénération naturelle de la forêt en ouvrant des clairières qui permettent l’arrivée de la lumière dans le sous-bois et favorisent certaines espèces dites pionnières à la croissante extrêmement rapide.\n	\N	\N	\N	f
+68592	1038	TEXT	identity.highestPoint	851	\N	\N	\N	f
 64284	1031	TEXT	interests.locations.1.name	Les rivières de Futuna	\N	\N	\N	f
 64285	1031	TEXT	statistics.2.text	espèces de plantes vasculaires indigènes	\N	\N	\N	f
 64286	1031	IMAGE	species.0.image	\N	2335	Dessin d'*Alopecoenas stairi* © J. Wolf	\N	f
 64287	1031	TEXT	events.1.date	-2 millions d'années	\N	\N	\N	f
-64556	1038	TEXT	species.3.description	Solitaire et discret, le Jaguar ([*Panthera onca*](https://inpn.mnhn.fr/espece/cd_nom/443623)) est présent sur tout le département. Le félin tacheté est menacé par la destruction et la fragmentation de son habitat, la raréfaction des proies et le braconnage, bien que les populations soient considérées plutôt en bon état sur le territoire guyanais. \nIl tient une place importante dans les cultures amérindiennes, bushinenguées et créole. Souvent lié au chamanisme, et il représente également un personnage un peu lourdaud et pataud dans les contes populaires guyanais.\nLes attaques de ce carnivore sur les animaux domestiques, en particulier les chiens, sont relativement fréquentes en milieu péri-urbain. Un [guide pour une coexistence homme-jaguar](https://guyane.ofb.fr/wp-content/uploads/2021/04/OFB_LivretJaguar_MAJ_032020.pdf) est proposé par l’Office français de la biodiversité pour diminuer ces conflits. \n\nStatut sur la Liste rouge des mammifères de Guyane : quasi-menacé. \n	\N	\N	\N	f
-64557	1038	TEXT	statistics.3.number	Près de 700 espèces	\N	\N	\N	f
-64558	1038	TEXT	statistics.4.number	Plus de 500 espèces	\N	\N	\N	f
-64559	1038	TEXT	species.1.description	Le Dendrobate à tapirer ([*Dendrobates tinctorius*](https://inpn.mnhn.fr/espece/cd_nom/436851)) est un amphibien présentant des variations de coloration allant du bleu au jaune, plus ou moins maculé de noir. Il vit principalement au sol mais on peut également l’observer dans les arbres. \nLes glandes présentes dans sa peau sécrètent un poison toxique, qui la protègent des prédateurs. Pour l’homme, elle n’est dangereuse que si le mucus qui la recouvre entre en contact avec une plaie ou des muqueuses. Les Amérindiens en faisaient une préparation qu’ils appliquaient sur des plumes d’oiseaux vertes pour leur donner une coloration jaune ou rouge et dont ils faisaient des parures. \nLe Dendrobate à tapirer est inscrit sur la liste des amphibiens de Guyane protégés sur l’ensemble du territoire national.\n  \nStatut sur la Liste rouge des amphibiens de Guyane : préoccupation mineure. 	\N	\N	\N	f
-64560	1038	TEXT	species.2.description	Sept espèces de toucan, oiseaux à grand bec de la famille des Ramphastidés, sont présentes en Guyane. Le Toucan ariel ([*Ramphastos vitellinus*](https://inpn.mnhn.fr/espece/cd_nom/442312)) et le Toucan à bec rouge ([*Ramphastos tucanus*](https://inpn.mnhn.fr/espece/cd_nom/442311)) sont communément observés, notamment en fin de saison des pluies, où ils viennent dans la partie côtière s’alimenter sur les palmiers en fruits. Le Toucan toco ([*Ramphastos toco*](https://inpn.mnhn.fr/espece/cd_nom/442310)) est le plus grand représentant de cette famille. Caractérisé par son bec orange, il est plus rare et observable uniquement au nord du département. C’est la seule espèce de toucan intégralement protégée.  \nMalgré sa taille, la structure du bec des toucans est très légère et solide, formée de kératine et renforcée par des os poreux très légers.  \n\nStatut sur la Liste rouge des oiseaux de Guyane : \nToucan ariel : préoccupation mineure. \nToucan à bec rouge : préoccupation mineure. \nToucan toco : en danger. \n	\N	\N	\N	f
-64561	1038	TEXT	statistics.1.number	Plus de 1 800	\N	\N	\N	f
-64562	1038	TEXT	statistics.0.number	96 %	\N	\N	\N	f
-64563	1038	TEXT	statistics.2.number	600 km<sup>2</sup>	\N	\N	\N	f
-64564	1038	IMAGE	interests.locations.4.image	\N	2411	Lac Pali, dans les marais de Kaw © Andréa Poiret	\N	f
-64565	1038	TEXT	species.2.name	Les toucans	\N	\N	\N	f
-64566	1038	TEXT	risks.risks.1.name	Le fléau de l’orpaillage illégal	\N	\N	\N	f
-64567	1038	TEXT	species.4.description	Deux espèces de loutres, la Loutre géante ([*Pteronura brasiliensis*](https://inpn.mnhn.fr/espece/cd_nom/443628)) et la Loutre commune ([*Lontra longicaudis*](https://inpn.mnhn.fr/espece/cd_nom/443627)) vivent dans les cours d’eau et sur les berges de Guyane. La première, de grande taille (jusqu’au 1,80 m de long), vit en groupes familiaux tandis que la seconde, plus petite, est souvent solitaire. \nConsommatrices de poissons et très sensibles à la dégradation des habitats, les loutres peuvent être considérées comme des indicatrices de la qualité des écosystèmes aquatiques. La Loutre géante a fait l’objet d’une chasse intensive pour sa peau au siècle dernier, ce qui l’a conduite au bord de l’extinction au début des années 1970. Les deux espèces sont intégralement protégées mais leur habitat est fortement impacté par l’orpaillage. \n\nStatut sur la Liste rouge des mammifères de Guyane :\nLoutre géante : en danger. \nLoutre commune : préoccupation mineure. \n	\N	\N	\N	f
-64568	1038	TEXT	zoom.callToAction	Cliquez sur la carte thématique pour vous repérer en un coup d'œil ! 	\N	\N	\N	f
-64569	1038	TEXT	ecosystems.ecosystems.0.name	La forêt humide	\N	\N	\N	f
 68025	1009	SELECT	presentation.sourceSelect	inpn	\N	\N	\N	f
 68026	1009	TEXT	understand.text2	Ce nombre comprend uniquement les espèces dites indigènes des territoires d'outre-mer, c’est-à-dire naturellement présentes sur les territoires. Il ne comprend pas les espèces introduites, volontairement ou involontairement, par les humains (animaux domestiques, plantes cultivées, etc.).\nCe nombre ne prend pas non plus en compte les espèces éteintes.	\N	\N	\N	f
+68593	1038	TEXT	interests.locations.4.description	Sur la côte sud-est de la Guyane, cette zone de marais et forêts marécageuses est accessible uniquement par voie fluviale. On y trouve des espèces remarquables comme le [Caïman noir](https://inpn.mnhn.fr/espece/cd_nom/443974) et le [Lamantin](https://inpn.mnhn.fr/espece/cd_nom/821122/), et une très grande diversité d’oiseaux, dont le [Coq-de-roche](https://inpn.mnhn.fr/espece/cd_nom/442329/) et la [Harpie féroce](https://inpn.mnhn.fr/espece/cd_nom/441972). Cette vaste zone humide est classée Réserve naturelle nationale depuis 1998.	\N	\N	\N	f
+68594	1038	TEXT	risks.risks.0.name	Une biodiversité préservée, mais des impacts humains en expansion	\N	\N	\N	f
+68595	1038	IMAGE	interests.locations.1.image	\N	2405	Comptages d'oiseaux au Grand Connétable © Réserve naturelle du Grand Connétable	\N	f
+68596	1038	IMAGE	ecosystems.ecosystems.1.image	\N	2414	Inselberg de la roche Koutou © Olivier Tostain - 97px	\N	f
+68597	1038	TEXT	interests.locations.3.description	Situées à l’extrémité nord-ouest la Guyane, le long du littoral à proximité de l’embouchure du fleuve Maroni, les plages d’Awala-Yalimapo sont l’un des sites les plus importants au monde pour la ponte des tortues marines, principalement pour les tortues luths, vertes et olivâtres. Ces plages sont protégées au sein de la Réserve naturelle nationale de l’Amana qui s’étend jusqu’à l’embouchure de la rivière Organabo et couvre 14 800 ha de plages, mangroves, marais et savanes. 	\N	\N	\N	f
+68598	1038	TEXT	identity.title	La Guyane,  \nun trésor vert	\N	\N	\N	f
+68599	1038	IMAGE	species.6.image	\N	2413	*Euterpe olaracea* © Cesar Delnatte - INPN	\N	f
+68600	1038	TEXT	interests.locations.1.name	Les îles du Grand et du Petit Connétable	\N	\N	\N	f
+68601	1038	TEXT	statistics.2.text	de mangroves	\N	\N	\N	f
+68602	1038	IMAGE	species.0.image	\N	2408	*Titanus giganteus* © Julien Touroult - INPN	\N	f
+68603	1038	TEXT	events.1.date	16<sup>e</sup> siècle 	\N	\N	\N	f
+68604	1038	TEXT	interests.locations.4.name	Les marais de Kaw-Roura	\N	\N	\N	f
 56515	1003	TEXT	header.title	À la découverte des outre-mer	\N	\N	\N	f
 56516	1003	TEXT	header.population	2,8 millions	\N	\N	\N	f
 56517	1003	TEXT	header.species	88 966	\N	\N	\N	f
@@ -3639,30 +3688,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68044	1009	IMAGE	understand.image	\N	2018	Iguane des petites Antilles, Martinique © Fabien Lefebvre	\N	f
 68045	1009	TEXT	presentation.description	espèces sont indigènes dans les outre-mer	\N	\N	\N	f
 68046	1009	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/espece/indicateur	\N	\N	\N	f
-64570	1038	TEXT	species.5.description	Les plages de Guyane comptent parmi les plus importants sites de ponte de tortues marines au monde. Elles accueillent principalement trois espèces : la Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338)), la Tortue olivâtre ([*Lepidochelys olivacea*]) et la Tortue luth ([*Dermochelys coriacea*](https://inpn.mnhn.fr/espece/cd_nom/77367)). \nLa Tortue luth est la plus grosse espèce de tortue marine au monde, avec un poids moyen de 450 kg pour une taille de près d’1,60 mètre et elle se nourrit essentiellement de méduses. Contrairement aux autres tortues marines, elle ne possède pas d’écailles mais une dossière en cuir très épais, qui lui permet de plonger plus profondément que les autres espèces. Grandes migratrices, les tortues luths remontent jusqu’au nord de l’Atlantique. \nDe nombreuses menaces pèsent sur les tortues marines : braconnage, prises accidentelles dans les filets de pêche, prédation par des chiens errants, collisions avec des bateaux. En Guyane, il semble que les pontes de Tortue luth se raréfient ces dernières années. L’Office français de la biodiversité anime le plan national d’action Tortues marine en Guyane et coordonne l’ensemble des acteurs liés à leur protection. \n\nStatut sur la Liste rouge des reptiles de Guyane française : en danger\n	\N	\N	\N	f
-64571	1038	TEXT	species.6.description	Également nommé wassaï (ou açaï), le Palmier pinot ([*Euterpe olaracea*](https://inpn.mnhn.fr/espece/cd_nom/731659)) produit des fruits de couleur violet très foncé utilisés pour de nombreux usages (jus, huile, poudre). Ils poussent en grappes le long du tronc qui peut s’élever jusqu’à 20 m de hauteur, et sont également consommés par la faune sauvage. Ces palmiers sont particulièrement présents en zones marécageuses où ils peuvent former de véritables « pinotières ».\nUtilisées depuis des siècles par les peuples d’Amazonie, les fruits du wassaï font désormais l’objet d’un intérêt mondial sur les marchés de l’alimentation, la cosmétique et la médecine. \n\nStatut sur la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
-64572	1038	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
-64573	1038	TEXT	events.0.date	-13 000 ans	\N	\N	\N	f
-64574	1038	TEXT	identity.populationYear	2019	\N	\N	\N	f
-64575	1038	IMAGE	species.5.image	\N	2404	*Dermochelys coriacea* © Raphaël Gailhac	\N	f
-64576	1038	TEXT	events.13.date	2007	\N	\N	\N	f
-64577	1038	TEXT	statistics.0.text	du territoire est recouvert de forêts	\N	\N	\N	f
-64578	1038	TEXT	ecosystems.ecosystems.1.name	Les inselbergs	\N	\N	\N	f
-64579	1038	TEXT	events.2.date	1844	\N	\N	\N	f
-64580	1038	TEXT	identity.presentation	Située entre le Brésil et le Suriname, la Guyane est le plus vaste territoire d’outre-mer français, et le seul non insulaire. Il est en majorité recouvert de forêts tropicales humides, excepté sur la bande côtière où se trouve une mosaïque d’habitats plus ou moins ouverts : plages, mangroves, savanes, forêts marécageuses et marais. Il est difficile de résumer la diversité des espèces guyanaises tant elle est vaste, aussi bien chez la faune que la flore, et une grande partie est encore largement méconnue. Un hectare de forêt peut abriter plus de 300 espèces d’arbres, soit plus d’espèces qu’il n’y en a dans toute l’Europe continentale, et la diversité totale des insectes de Guyane est estimée à plus de 100 000 espèces. Bien que les milieux guyanais soient encore relativement préservés des activités humaines, certaines pressions, dont l’orpaillage, sont très préoccupantes.	\N	\N	\N	f
-64581	1038	TEXT	identity.population	296 711	\N	\N	\N	f
-64582	1038	TEXT	species.3.name	Le Jaguar	\N	\N	\N	f
-64583	1038	TEXT	risks.risks.2.name	De vastes zones protégées, une gestion en concertation avec les communautés autochtones	\N	\N	\N	f
-64584	1038	TEXT	species.0.name	Le Titan	\N	\N	\N	f
-64585	1038	TEXT	events.4.date	1946	\N	\N	\N	f
-64586	1038	IMAGE	interests.locations.2.image	\N	2406	Dispositif d'étude de la canopée dans la réserve des Nouragues © Pierre-Olivier Jay	\N	f
-64587	1038	TEXT	events.11.date	1998	\N	\N	\N	f
-64588	1038	IMAGE	ecosystems.ecosystems.2.image	\N	2410	Mangrove sur le littoral de Guyane © Olivier Tostain	\N	f
-64589	1038	TEXT	events.10.description	Création de la Réserve naturelle nationale de la Trinité	\N	\N	\N	f
-64590	1038	TEXT	events.11.description	Création des réserves naturelles nationales de l’Amana et de Kaw-Roura	\N	\N	\N	f
-64591	1038	TEXT	interests.locations.0.description	Créé en 2007, le [Parc amazonien de Guyane](https://www.parc-amazonien-guyane.fr/fr) s’étend sur 40 % du territoire (34 000 km<sup>2</sup>) dans la partie sud de la Guyane. Il représente le plus vaste parc national de France et de l’Union européenne. Il a pour vocation de préserver la biodiversité exceptionnelle du massif forestier ainsi que les patrimoines culturels et les modes de vie traditionnels des populations, notamment amérindiennes et bushinenguées, vivant sur le territoire. 	\N	\N	\N	f
-64592	1038	TEXT	risks.risks.2.description	Le territoire est riche en aires protégées, parmi les plus vastes de France. Outre le parc amazonien de Guyane qui couvre le sud de la Guyane, on compte six réserves naturelles nationales (Marais de Kaw-Roura, Mont Grand Matoury, Trinité, Amana, Grand Connétable et Nouragues) et une réserve naturelle régionale (Trésor). Trois zones humides sont classées au protocole de Ramsar (Basse Mana, les marais de Kaw et l’estuaire des fleuves Sinnamary et Iracoubo) et on compte également 14 000 ha protégés par le Conservatoire du littoral. La Guyane compte également deux réserves biologiques intégrales : la réserve de Petites Montagnes Tortue et la réserve de Lucifer Dékou-Dékou. La création d’une réserve biologique dirigée est en cours.\n\nLa conciliation de la préservation de la biodiversité avec le respect des modes de vie et des traditions des populations est un enjeu fort en Guyane. Le Parc national et l’OFB ont par exemple mené un programme d’étude pour mieux connaître les pratiques de chasse, évaluer l’état de conservation des gibiers et ainsi construire avec les communautés locales des modes de gestion adaptées. \n	\N	\N	\N	f
-64593	1038	TEXT	events.13.description	Création du Parc national Amazonien de Guyane	\N	\N	\N	f
 66728	1022	TEXT	events.2.description	Fermeture naturelle de l’isthme	\N	\N	\N	f
 66729	1022	TEXT	events.3.description	Première étude publiée sur la flore de Saint-Pierre et Miquelon (thèse de pharmacie d’Alphonse Gaulthier)	\N	\N	\N	f
 66730	1022	IMAGE	identity.image	\N	2428	L'étang du Bois brûlé © Nathalie de Lacoste	\N	f
@@ -3727,7 +3752,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66789	1022	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
 66790	1022	TEXT	events.0.date	1535	\N	\N	\N	f
 66791	1022	TEXT	identity.populationYear	2017	\N	\N	\N	f
-64594	1038	TEXT	risks.risks.1.description	La richesse du sol guyanais en ressources aurifères attire les convoitises. L’exploitation illégale, qui a explosé en Guyane ces dernières années, est un fléau pour la biodiversité que les actions de lutte ne réussissent pas à endiguer et qui n’épargne pas les espaces protégés.\n\nMalgré son interdiction en 2006, le mercure continue d’être utilisé par les *garimpeiros* (chercheurs d'or clandestins)pour amalgamer l’or et pollue durablement les cours d’eau et les organismes aquatiques que consomment les populations locales. Les taux de contamination observés chez ces populations sont élevés. Les eaux sont également impactées par le défrichement non raisonné de la forêt qui favorise l’érosion et le lessivage des sols, ils deviennent alors trop turbides et pauvres en oxygènes pour la faune et la flore aquatiques. Aux impacts sur l’environnement s’ajoutent d’importants problèmes humains, de misère sociale, de violence et de conflits avec les populations locales. \n\nDepuis 2008, l’opération Harpie implique de nombreux acteurs du territoire (armée, police, justice, douanes, ONF, PAG) dans des interventions qui visent notamment à bloquer l’acheminement du matériel, et procéder à des saisies et des arrestations. Ce problème complexe nécessite une coopération à l’échelle régionale, les orpailleurs clandestins et le matériel provenant majoritairement des pays limitrophes. Cette opération a permis de contenir le phénomène à l'échelle globale. En 2021, les sanctions pénales encourues par les orpailleurs illégaux ont été renforcées dans le cadre de la nouvelle loi Climat. Le renforcement de la traçabilité de l’or serait également nécessaire.\n\nSi l’activité des exploitants aurifères déclarés est encadrée par des dispositions visant à limiter ses conséquences, elle reste cependant impactante pour les milieux naturels. De plus, l’émergence de projets d’exploitation de l’or à l’échelle industrielle pose d’importante préoccupations. Le projet très controversé de la Montagne d’or à fait l’objet d’une importante opposition de la population locale et des associations environnementales. Il a pour le moment été abandonné mais la prolongation des concessions fait l’objet d’une procédure judiciaire toujours en cours.  \n	\N	\N	\N	f
 66792	1022	IMAGE	species.5.image	\N	2430	Diapensine de Laponie © DTAM 975	\N	f
 66793	1022	TEXT	statistics.0.text	forêt boréale française	\N	\N	\N	f
 66794	1022	TEXT	ecosystems.ecosystems.1.name	Les marais tourbeux et les tourbières	\N	\N	\N	f
@@ -3740,30 +3764,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66801	1022	TEXT	events.4.date	1881	\N	\N	\N	f
 66802	1022	IMAGE	interests.locations.2.image	\N	2420	L'îlot du Grand Colombier © Nathalie De Lacoste	\N	f
 66803	1022	IMAGE	ecosystems.ecosystems.2.image	\N	2436	Forêt boréale © DTAM 975	\N	f
-64595	1038	TEXT	interests.locations.2.description	Créée en 1995, la [Réserve naturelle nationale des Nouragues](http://www.nouragues.fr/) protège 105 800 hectares de forêt, un réseau hydrographique dense avec une grande diversité d’habitats (criques, rivières, sauts rocheux) et des inselbergs. Elle porte le nom des amérindiens qui vivaient dans cette zone jusqu’au 18<sup>e</sup> siècle. La réserve accueille une station de recherche scientifique gérée par le CNRS, qui permet l’étude des écosystèmes de forêts tropicales à long terme. 	\N	\N	\N	f
-64596	1038	TEXT	events.12.description	Création de la réserve naturelle nationale du Mont Grand Matoury	\N	\N	\N	f
-64597	1038	TEXT	interests.locations.1.description	A 15 km au large de l’estuaire de l’Approuague, les îles du Grand et du Petit Connétable sont le seul site de reproduction pour les oiseaux marins de la côte amazonienne. Le site accueille chaque année plusieurs dizaines de milliers d’individus qui viennent y nidifier : sternes (dont 1/3 des effectifs mondiaux de la [Sterne de Cayenne](https://inpn.mnhn.fr/espece/cd_nom/626905)), frégates superbes, mouettes atricilles et noddis bruns. Le site est classé Réserve naturelle nationale depuis 1992. Le périmètre de la réserve s’étend sur plus de 7&nbsp;000 ha marins autour des îles, permettant la conservation d’espèces marines menacées comme le [Mérou géant](https://inpn.mnhn.fr/espece/cd_nom/419226).	\N	\N	\N	f
-64598	1038	TEXT	ecosystems.ecosystems.3.name	Les savanes	\N	\N	\N	f
-64599	1038	TEXT	identity.subtitle	Une diversité biologique exceptionnelle	\N	\N	\N	f
-64600	1038	IMAGE	species.7.image	\N	2409	*Ceiba pentandra* © Jean-Christophe Marsy	\N	f
-64601	1038	TEXT	species.5.name	La Tortue Luth	\N	\N	\N	f
-64602	1038	TEXT	risks.risks.0.description	La richesse des écosystèmes de Guyane est impressionnante, aussi bien en vertébrés qu’en invertébrés, et surtout en végétaux. La diversité floristique a une répartition assez hétérogène : un petit nombre d’espèces est représenté par un grand nombre d’individus alors qu’un grand nombre d’espèces n’est représenté que par quelques individus. Relativement peu d’espèces sont endémiques strictes du territoire, la plupart se retrouvent également sur le reste du plateau des Guyanes. On peut cependant noter un endémisme important au niveau des poissons d’eau douce (35 à 40 % des espèces) dont la répartition peut parfois être très limitée.  \n\nIl n’y a pas de récifs coralliens dans les eaux de Guyane, les côtes sont instables en raison des apports de sédiments de l’Amazone qui forment des bancs de vase se déplaçant de 900 m environ par an, colonisés par la mangrove. Cependant, bien que sans originalité, les eaux guyanaises sont riches en poissons et abritent plusieurs espèces de requins dont le requin Pèlerin et le Grand requin marteau, ainsi qu’une vingtaine d’espèces de cétacés. \n\nLa Guyane est peu densément peuplée, et la majorité de la population se concentre sur la bordure atlantique. Bien que la forêt reste peu impactée, notamment au regard des pays voisins (Brésil), de nouvelles routes ouvrent des accès à des zones autrefois préservées. L’augmentation rapide de la démographie et les nouveaux aménagements qui l’accompagnent sont l’une des causes majeures de dégradation des milieux, en particulier sur le littoral.  \n\nL’espace maritime guyanais reste peu exploré. La pêche illégale pratiquée par les pêcheurs venus du Suriname et du Brésil impacte les stocks de poissons guyanais et les filets utilisés sont une cause de mortalité importante pour les tortues et les mammifères marins. \n\nLa règlementation du Code de l’environnement concernant la chasse ne s’applique pas en Guyane. Le permis de chasser n’est obligatoire que depuis janvier 2020. Le braconnage et le non-respect des règles de chasse (quotas, espèces chassables mais non commercialisables, périodes de chasse) sont des infractions régulièrement observées qui impactent la survie des espèces menacées. \n \nConstruit en 1994 sur le Sinnamary pour combler les besoins en électricité de la population guyanaise, le barrage de Petit Saut a eu un fort impact sur l’équilibre écologique de la région. La retenue d’eau de 365 km<sup>2</sup> ainsi créée a inondé brutalement la forêt, et la dégradation progressive de la matière organique immergée provoque des rejets de gaz (dioxyde de carbone, méthane, sulfure d’hydrogène) et une anoxie de l’eau, néfaste aux organismes aquatiques. Ces paramètres sont encore étudiés aujourd’hui afin de suivre l’impact de la construction du barrage à long terme.\n	\N	\N	\N	f
-64603	1038	TEXT	ecosystems.ecosystems.2.description	Les mangroves sont des forêts localisées le long du littoral et des estuaires, dans la zone de balancement des marées. Elles sont formées principalement de palétuviers, des arbres aux racines en échasses, qui s’accommodent des conditions de vie en eaux saumâtres et dans des sols pauvres en oxygène. À l’interface entre le milieu marin et le milieu terrestre,\nelles ont un rôle très important pour la biodiversité et accueillent de nombreuses espèces de poissons, crustacés et oiseaux et ont un rôle de nurserie pour la faune marine. \nEn Guyane, les mangroves du littoral sont mobiles : elles se développent sur les bancs de vase issus de l’Amazone, qui se déplacent d’est en ouest suivant le courant équatorial.\n	\N	\N	\N	f
-64604	1038	TEXT	ecosystems.ecosystems.1.description	De l’allemand « *insel* » : île et « *berg* » : montagne, ces sommets granitiques dénudés émergeant de la forêt amazonienne sont aussi appelés « savane-roches ». La roche nue est colonisée par des cyanobactéries, algues bleues microscopiques, qui vont par la suite permettre l’installation des plantes vasculaires. On trouve sur les inselbergs de nombreuses espèces végétales caractéristiques dites lithophytes, adaptées aux conditions drastiques de sécheresse et fort ensoleillement, relictuelles des périodes de climat plus sec dans le bassin amazonien. En raison de leur isolement, certains inselbergs abritent des espèces endémiques. On compte environ 200 inselbergs en Guyane, en majorité dans le sud, le plus haut culminant à 740&nbsp;m.  	\N	\N	\N	f
-64605	1038	TEXT	ecosystems.ecosystems.0.description	La forêt humide tropicale couvre plus de 80 % du territoire de la Guyane et la diversité floristique y est exceptionnelle. Malgré une apparente uniformité, elle recèle de nombreuses variations de type en fonction de la prépondérance de certaines grandes familles botaniques et de facteurs physico-chimiques multiples, comme l’altitude, la nature du sol ou la pluviométrie. \nDans le sous-bois, les plantes développent des stratégies leur permettant de vivre avec peu de lumière tandis qu’au sommet, la canopée s’étend à 30 à 40 m du sol. L’humidité ambiante favorise le développement de mousses et de lichens qui s’installent parfois à la surface des feuilles, et de champignons qui jouent un rôle écologique important. \nLes chablis (chutes naturelles d’arbres, dus à des évènements climatiques comme les fortes pluies) permettent une régénération naturelle de la forêt en ouvrant des clairières qui permettent l’arrivée de la lumière dans le sous-bois et favorisent certaines espèces dites pionnières à la croissante extrêmement rapide.\n	\N	\N	\N	f
-64606	1038	TEXT	identity.highestPoint	851	\N	\N	\N	f
-64607	1038	TEXT	interests.locations.4.description	Sur la côte sud-est de la Guyane, cette zone de marais et forêts marécageuses est accessible uniquement par voie fluviale. On y trouve des espèces remarquables comme le [Caïman noir](https://inpn.mnhn.fr/espece/cd_nom/443974) et le [Lamantin](https://inpn.mnhn.fr/espece/cd_nom/821122/), et une très grande diversité d’oiseaux, dont le [Coq-de-roche](https://inpn.mnhn.fr/espece/cd_nom/442329/) et la [Harpie féroce](https://inpn.mnhn.fr/espece/cd_nom/441972). Cette vaste zone humide est classée Réserve naturelle nationale depuis 1998.	\N	\N	\N	f
-64608	1038	TEXT	risks.risks.0.name	Une biodiversité préservée, mais des impacts humains en expansion	\N	\N	\N	f
-64609	1038	IMAGE	interests.locations.1.image	\N	2405	Comptages d'oiseaux au Grand Connétable © Réserve naturelle du Grand Connétable	\N	f
-64610	1038	IMAGE	ecosystems.ecosystems.1.image	\N	2414	Inselberg de la roche Koutou © Olivier Tostain	\N	f
-64611	1038	TEXT	interests.locations.3.description	Situées à l’extrémité nord-ouest la Guyane, le long du littoral à proximité de l’embouchure du fleuve Maroni, les plages d’Awala-Yalimapo sont l’un des sites les plus importants au monde pour la ponte des tortues marines, principalement pour les tortues luths, vertes et olivâtres. Ces plages sont protégées au sein de la Réserve naturelle nationale de l’Amana qui s’étend jusqu’à l’embouchure de la rivière Organabo et couvre 14 800 ha de plages, mangroves, marais et savanes. 	\N	\N	\N	f
-64612	1038	TEXT	identity.title	La Guyane,  \nun trésor vert	\N	\N	\N	f
-64613	1038	IMAGE	species.6.image	\N	2413	*Euterpe olaracea* © Cesar Delnatte	\N	f
-64614	1038	TEXT	interests.locations.1.name	Les îles du Grand et du Petit Connétable	\N	\N	\N	f
-64615	1038	TEXT	statistics.2.text	de mangroves	\N	\N	\N	f
-64616	1038	IMAGE	species.0.image	\N	2408	*Titanus giganteus* © Julien Touroult	\N	f
-64617	1038	TEXT	events.1.date	16<sup>e</sup> siècle 	\N	\N	\N	f
-64618	1038	TEXT	interests.locations.4.name	Les marais de Kaw-Roura	\N	\N	\N	f
 66804	1022	TEXT	interests.locations.0.description	Cette lagune de 1 000 ha est bordée de marais et communique avec la mer par un goulet au sud-est. La lagune et les marais qui la bordent sont d’une importante richesse tant faunistique que floristique. Ses bancs de sable accueillent notamment la plus importante colonie reproductrice de phoques veaux-marins du territoire français. Un plan de gestion du site a été validé en 2011 visant à y protéger les espaces naturels remarquables tout en assurant autant que possible leur ouverture au public.	\N	\N	\N	f
 66805	1022	TEXT	interests.locations.2.description	Cet ilot situé au nord de l’île de Saint-Pierre est un site de nidification remarquable. Il accueille une grande part des populations d’oiseaux marins nicheuses de l’archipel, voire la totalité des couples pour certaines espèces comme l’Océanite cul-blanc ([*Hydrobates leucorhous*](https://inpn.mnhn.fr/espece/cd_nom/790986)) ou le Macareux moine ([*Fratercula arctica*](https://inpn.mnhn.fr/espece/cd_nom/3402)). Pour ces deux espèces, il s’agit de colonies parmi les plus importantes au niveau mondial. 	\N	\N	\N	f
 66806	1022	TEXT	interests.locations.1.description	Cette bande de sable de 12 km de long relie les îles de Miquelon et Langlade depuis la fin du 18<sup>e</sup> siècle. Les dunes colonisées par la végétation sont désormais longées par une piste permettant d'accéder à l'île de Langlade, habitée uniquement en période estivale.	\N	\N	\N	f
@@ -4183,7 +4183,7 @@ SELECT pg_catalog.setval('public.media_category_seq', 1000, false);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 68488, true);
+SELECT pg_catalog.setval('public.page_element_seq', 68604, true);
 
 
 --
