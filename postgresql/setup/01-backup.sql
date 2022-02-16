@@ -1289,6 +1289,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2544	image/jpeg	copy-1908
 2567	image/jpeg	copy-1835
 2586	image/jpeg	copy-1347
+2598	image/jpeg	copy-1835
+2601	image/jpeg	copy-1956
 1866	image/jpeg	copy-1229
 1867	image/jpeg	copy-1223
 1868	image/jpeg	copy-1228
@@ -1464,6 +1466,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2568	image/jpeg	copy-1832
 2578	image/jpeg	copy-1344
 2587	image/jpeg	copy-1424
+2599	image/jpeg	copy-1497
+2604	image/jpeg	copy-1835
 2008	image/jpeg	copy-1692
 2013	image/jpeg	copy-1772
 2287	image/jpeg	copy-1059
@@ -1499,6 +1503,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2558	image/png	copy-1928
 2569	image/jpeg	copy-1925
 2579	image/jpeg	copy-1291
+2588	image/jpeg	copy-1950
+2605	image/jpeg	copy-1954
 2009	image/jpeg	copy-1754
 2010	image/jpeg	copy-1693
 2012	image/jpeg	copy-1750
@@ -1538,6 +1544,10 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2559	image/png	copy-1933
 2570	image/jpeg	copy-1497
 2580	image/jpeg	copy-1346
+2589	image/jpeg	copy-1949
+2592	image/jpeg	copy-1954
+2596	image/jpeg	copy-1955
+2606	image/jpeg	copy-1957
 2011	image/jpeg	copy-1746
 2015	image/jpeg	copy-1742
 2017	image/jpeg	copy-1690
@@ -1707,6 +1717,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2572	image/jpeg	copy-1900
 2576	image/jpeg	projet pédagogique ecole.jpg
 2581	image/jpeg	copy-1081
+2590	image/jpeg	copy-1951
+2594	image/jpeg	copy-1956
 2154	image/jpeg	copy-1842
 2290	image/jpeg	copy-1280
 2298	image/jpeg	copy-1298
@@ -1740,6 +1752,7 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2563	image/png	copy-1932
 2573	image/png	copy-1896
 2582	image/jpeg	copy-1352
+2591	image/jpeg	copy-1953
 2156	image/jpeg	copy-1286
 2157	image/jpeg	copy-1236
 2159	image/jpeg	copy-1841
@@ -1773,6 +1786,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2574	image/jpeg	copy-1895
 2577	image/jpeg	projet pédagogique ecole.jpg
 2583	image/jpeg	copy-1342
+2593	image/jpeg	copy-1832
+2602	image/jpeg	copy-1837
 2158	image/jpeg	copy-1285
 2294	image/jpeg	copy-1287
 2306	image/jpeg	copy-1270
@@ -1802,6 +1817,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2571	image/png	BIOM_TerresAustrales_janv2022.png
 2575	image/jpeg	copy-1897
 2584	image/jpeg	copy-1083
+2595	image/jpeg	copy-1837
+2603	image/jpeg	copy-1955
 2160	image/jpeg	copy-1843
 2295	image/jpeg	copy-1385
 2300	image/jpeg	copy-1307
@@ -1835,6 +1852,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2543	image/jpeg	copy-1913
 2566	image/jpeg	copy-1924
 2585	image/jpeg	copy-1341
+2597	image/jpeg	copy-1954
+2600	image/jpeg	copy-1832
 2162	image/jpeg	copy-1844
 2163	image/jpeg	copy-1622
 2164	image/jpeg	copy-1622
@@ -2162,6 +2181,7 @@ COPY public.media_category_relation (media_page_id, category_id) FROM stdin;
 1050	1009
 1044	1006
 1051	1007
+1052	1017
 \.
 
 
@@ -2192,19 +2212,21 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1025	protection-faune	ecogesture	Respecter la faune sauvage
 1027	protection-flore	ecogesture	Préserver la flore sauvage
 1039	mayotte	territory	Mayotte
+1052	Synthèse étude sciences participatives	article	synthese résultats etude sciences participatives outre-mer
 1022	saint-pierre-et-miquelon	territory	Saint-Pierre-et-Miquelon
 1045	terre-adelie	territory	La Terre Adélie
 1041	iles-subantarctiques	territory	Les Terres Australes françaises 
 1051	Ti bet a limie	interview	Ti bet a limie 
 1043	Entretien Eddy Dumbardon-Martial - Pollinisateurs Caravelle	interview	Entretien Eddy Dumbardon - Martial
+1000	accueil	home	Compteur Biodiversité Outre-mer
 1044	Entretien avec Marilou Hircq - BUG	interview	Entretien avec Marilou Hircq - BUG
 1042	Entretien avec Jeanne Wagner	interview	Entretien avec Jeanne Wagner
 1031	wallis-et-futuna	territory	Wallis-et-Futuna
 1021	reunion	territory	La Réunion
 1046	media	Accueil médias	Médias
+1019	sciences-participatives	science	Sciences participatives
 1048	iles-eparses	territory	Iles Eparses
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
-1000	accueil	home	Compteur Biodiversité Outre-mer
 1038	guyane	territory	Guyane
 1047	agents-OFB-Guyane	report	Terrain agents OFB Guyane
 1013	nouvelles-especes	indicator	Nouvelles espèces décrites
@@ -2212,7 +2234,6 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1007	apropos	about	A propos
 1005	indicateurs	indicators	Tous les indicateurs
 1016	agir-ensemble	act	Agir ensemble
-1019	sciences-participatives	science	Sciences participatives
 1030	mentions-legales	legal-terms	Mentions légales
 1004	especes-exotiques-envahissantes	indicator	Espèces exotiques envahissantes 2
 1012	conservation-mangroves	indicator	Conservation des mangroves d'outre-mer
@@ -2436,26 +2457,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64721	1020	TEXT	events.3.description	Inscription des lagons de Nouvelle-Calédonie au Patrimoine mondial de l'UNESCO	\N	\N	\N	f
 67460	1047	IMAGE	body.photos.3.photo	\N	2253	Raphaël Gailhac - OFB 	\N	f
 67461	1047	TEXT	photograph.presentation	Raphaël Gailhac	\N	\N	\N	f
-68860	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
-68861	1019	TEXT	examples.projects.2.subject	Espèces marines	\N	\N	\N	f
-68862	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
-68863	1019	TEXT	examples.projects.0.title	La photo-identification des tortues marines à La Réunion	\N	\N	\N	f
 64293	1021	TEXT	interests.locations.0.name	Le Parc national de La Réunion	\N	\N	\N	f
 64294	1021	TEXT	events.0.description	Emergence de l’île	\N	\N	\N	f
 64295	1021	TEXT	events.1.description	Dernière éruption du Piton des Neiges	\N	\N	\N	f
 64722	1020	IMAGE	identity.image	\N	2443	Baie d'Oro, Île des Pins, Nouvelle-Calédonie © Hélène Udo / OFB	\N	f
-68864	1019	TEXT	examples.projects.0.subject	Suivi individuel des tortues marines	\N	\N	\N	f
-68865	1019	LINK	examples.projects.3.more	En savoir plus	\N	\N	https://www.facebook.com/paladalik/	f
-68866	1019	TEXT	examples.projects.4.subject	Insectes lumineux	\N	\N	\N	f
-68867	1019	TEXT	examples.projects.3.title	Le Réseau d’observation des récifs coralliens (RORC) de Nouvelle-Calédonie	\N	\N	\N	f
-68868	1019	TEXT	examples.projects.1.actor	Groupe d’étude et de protection des oiseaux de Guyane (GEPOG)	\N	\N	\N	f
-68869	1019	IMAGE	examples.projects.1.image	\N	2586	Conure cuivré, Guyane © Raphael Gailhac - OFB	\N	f
-68870	1019	IMAGE	images.2.image	\N	2585	Sensibilisation à la biodiversité des récifs de Mayotte © Fanny Cautain - OFB	\N	f
-68871	1019	IMAGE	examples.projects.4.image	\N	2580	*Aspisoma ignitum* © Julien Touroult - INPN 	\N	f
-68872	1019	TEXT	paragraphs.0.text	Certains programmes se basent sur l’application d’un **protocole précis** (durée d’observation, distance couverte, nombre de points d’écoute, etc.). Ils nécessitent souvent une formation à la méthode et une implication sérieuse et régulière, car la qualité des données récoltées dépend de la bonne mise en œuvre du protocole. C’est le cas par exemple du Suivi temporel des oiseaux communs (STOC).\n\nD’autres programmes proposent de **faire remonter les observations ponctuelles ciblant une ou plusieurs espèces spécifiques**, parfois à une période précise ou sur un espace délimité. Par exemple les programmes de photo-identification de tortues ou de mammifères marins.\n\nLes signalements opportunistes permettent de faire remonter des observations occasionnelles, **comme des évènements inhabituels**, ou sur des espèces, une période ou un site non-ciblés. 	\N	\N	\N	f
-68873	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
-68874	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
-68875	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
 67462	1047	IMAGE	body.photos.5.photo	\N	2258	Raphaël Gailhac - OFB 	\N	f
 37510	1024	IMAGE	presentation.file	\N	1471	affiche écogeste introduction eee	\N	f
 67463	1047	TEXT	body.introduction	Raphael Gailhac est agent au service départemental de Guyane de l’Office français de la biodiversité depuis 2017. L’essentiel de son travail repose sur des missions de police de l’environnement : lutte contre le commerce et la détention illégales d'espèces, police de la chasse, assistance aux réserves naturelles, protection des milieux dans le cadre de la police de l'eau et infractions liées à la pêche maritime. Il nous emmène avec lui et ses collègues sur quelques-unes de leurs interventions. 	\N	\N	\N	f
@@ -2466,31 +2471,16 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 67834	1040	TEXT	risks.risks.0.name	Un lien indissociable entre nature et culture mais une biodiversité vulnérable	\N	\N	\N	f
 67835	1040	IMAGE	interests.locations.1.image	\N	2501	Forêt de Raiatea, Société © Céline Soyer	\N	f
 67836	1040	IMAGE	ecosystems.ecosystems.1.image	\N	2511	Prairie à *Paspalum vaginatum* à Huahine © Jean-Yves H. Meyer - Délégation à la Recherche de la Polynésie française	\N	f
-68876	1019	TEXT	examples.projects.4.description	Relai guadeloupéen de l’Observatoire des vers luisants et lucioles, l’observatoire Ti bèt a limiè a commencé ses activités en 2019. Les participants sont invités à faire remonter leurs observations de plusieurs espèces d’insectes lumineux (lucioles et taupins), afin de mieux connaitre leur biologie et leur écologie, identifier les facteurs favorisant leur présence ou leur régression et sensibiliser la population à leur maintien.	\N	\N	\N	f
-68877	1019	IMAGE	images.1.image	\N	2582	Observations à la longue vue à Saint-Pierre et Miquelon © Nathalie De Lacoste	\N	f
 68399	1048	TEXT	events.2.date	1751	\N	\N	\N	f
 68400	1048	TEXT	events.5.date	1897	\N	\N	\N	f
 68401	1048	TEXT	identity.marineArea	634 853	\N	\N	\N	f
 68402	1048	TEXT	events.8.date	2012	\N	\N	\N	f
-68878	1019	TEXT	examples.projects.3.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
-68879	1019	TEXT	examples.projects.2.actor	Parc marin de Mayotte	\N	\N	\N	f
-68880	1019	LINK	examples.projects.4.more	En savoir plus	\N	\N	https://www.anbaloup-la.fr/observatoire-lucioles/	f
-68881	1019	TEXT	paragraphs.1.text	La plupart des programmes permettent d’alimenter des bases de données collaboratives. Certains projets sont adossés à des programmes de recherche et visent à répondre à une question précise. D’autres mettent en avant en premier lieu un fort objectif de pédagogie, d’acquisition de connaissances et de sensibilisation à la démarche scientifique des observateurs.\n	\N	\N	\N	f
-68882	1019	IMAGE	examples.projects.0.image	\N	2581	© Cynomana  / CC BY-SA 4.0 	\N	f
-68883	1019	IMAGE	examples.projects.3.image	\N	2584	© Reefcheck France 	\N	f
-68884	1019	TEXT	examples.projects.3.target	Plongeurs, apnéistes. Formation nécessaire. 	\N	\N	\N	f
-68885	1019	TEXT	paragraphs.2.title	Un état des lieux des programmes ultramarins	\N	\N	\N	f
-68886	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages réguliers le long de parcours prédéfinis	\N	\N	\N	f
-68887	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
-68888	1019	TEXT	examples.projects.1.description	Débuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et La Réunion, le STOC-Guyane a pour but de suivre les variations d'abondances d'oiseaux communs sur le long terme pour évaluer l'impact des activités humaines. Le programme demande une implication régulière et nécessite une formation au protocole utilisé et la reconnaissance des espèces. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
 64296	1021	TEXT	events.8.description	Publication de la Liste rouge des coraux de l’Océan Indien	\N	\N	\N	f
 64297	1021	IMAGE	ecosystems.image	\N	2370	Éruption du Piton de la Fournaise en 2018 © Fabrice H.	\N	f
 64298	1021	TEXT	identity.species	10 463	\N	\N	\N	f
 64299	1021	IMAGE	ecosystems.ecosystems.0.image	\N	2369	Forêts au cirque de Salazie © Alexandre Clair	\N	f
 64300	1021	TEXT	zoom.title	Quelques repères à La Réunion	\N	\N	\N	f
 64301	1021	TEXT	species.8.name	Le Papangue	\N	\N	\N	f
-68889	1019	IMAGE	images.0.image	\N	2579	Observation des oiseaux marins à Mayotte © Fanny Cautain - OFB	\N	f
-68890	1019	TEXT	examples.projects.1.target	Ornithologues amateurs ou professionnels (à titre bénévole). Formation nécessaire. 	\N	\N	\N	f
 68403	1048	TEXT	identity.presentation	Dans le canal du Mozambique, entre 10° et 25° de latitude sud, se répartissent l’archipel des Glorieuses, les îles Juan de Nova et Europa, et l’atoll de Bassas da India. Au nord de La Réunion, l’île de Tromelin complète cet ensemble de territoires français regroupés sous le nom d’îles Éparses, intégrés au sein des Terres australes et antarctiques françaises (TAAF).\nSi la surface terrestre cumulée de ces îles est réduite, elles permettent à la France de détenir un important territoire maritime sous sa juridiction. L’isolement et la faible occupation humaine permettent aux îles Éparses d’abriter une biodiversité remarquable au regard de leur petite taille. Elles hébergent notamment de grandes colonies d’oiseaux marin, des récifs coralliens dans un excellent état de conservation et sont des sites de pontes privilégiés pour les tortues marines.	\N	\N	\N	f
 68404	1048	IMAGE	interests.locations.0.image	\N	2480	Ile du Lys, archipel des Glorieuses © Hendrik Sauvignet - Office français de la biodiversité	\N	f
 68405	1048	TEXT	identity.population	0	\N	\N	\N	f
@@ -2499,17 +2489,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68408	1048	TEXT	risks.title	Enjeux et menaces 	\N	\N	\N	f
 68409	1048	TEXT	species.0.name	Le Veloutier	\N	\N	\N	f
 68410	1048	TEXT	events.4.date	1892	\N	\N	\N	f
-68891	1019	TEXT	examples.projects.0.target	Plongeurs, apnéistes, pratiquant la photo sous-marine	\N	\N	\N	f
-68892	1019	TEXT	examples.projects.3.subject	Suivi de l’état de santé des récifs de Nouvelle-Calédonie	\N	\N	\N	f
-68893	1019	TEXT	header.subtitle	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.  \n\nFaune, flore, milieu marin ou terrestre, observation ponctuelle ou programme protocolé, trouvez le programme qui vous correspond et contribuez au développement des connaissances !	\N	\N	\N	f
 68411	1048	IMAGE	interests.locations.2.image	\N	2476	Vue aérienne de Juan de Nova © Stephanie Legeron - TAAF	\N	f
 68412	1048	IMAGE	ecosystems.ecosystems.2.image	\N	2486	Sansouïres d'Europa © B. Navez - Wikimedia commons	\N	f
 68413	1048	TEXT	interests.locations.3.name	Europa	\N	\N	\N	f
 68798	1013	IMAGE	understand.image	\N	2062	Tri d’échantillons récoltés sur le terrain en Guyane © Guillaume Feuillet - 97px	\N	f
 68799	1013	TEXT	presentation.description	nouvelles espèces décrites par an en outre-mer	\N	\N	\N	f
 68800	1013	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/docs/communication/livretInpn/Livret-INPN-especes-2021.pdf	\N	\N	\N	f
-68894	1019	LINK	examples.projects.1.more	En savoir plus	\N	\N	http://www.gepog.org/Nos-actions/Milieux-terrestres/Suivi-Temporel-des-Oiseaux-Communs-STOC-EPS	f
-68895	1019	TEXT	examples.projects.2.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
 68414	1048	TEXT	interests.locations.0.description	A l’entrée nord du canal du Mozambique, l’archipel regroupe quatre îles et rochers : Grande Glorieuse, l’île du Lys, les roches Vertes et le rocher du Sud. La biodiversité végétale est importante sur Grande Glorieuse, mais c’est surtout la richesse des récifs qui font des Glorieuses un point chaud de biodiversité, en particulier sur le banc du Geyser. L’ensemble des eaux de l’archipel a été classé en Parc naturel marin en 2012, puis en 2021 le Parc naturel marin a été remplacé par une Réserve naturelle nationale couvrant l’ensemble des îles de l’archipel et des eaux attenantes.	\N	\N	\N	f
 68415	1048	TEXT	interests.locations.2.description	Cette île de 6 km de long sur 1,6 km de large est entourée par une barrière corallienne délimitant un vaste lagon (200 km<sup>2</sup>). L’île a été fortement modifiée par l’exploitation du phosphate issu de la transformation du guano (fientes d’oiseaux), entre 1900 et 1972. Des habitations et des cultures y avaient été aménagées. Malgré l’impact de cette présence humaine, la biodiversité terrestre, en particulier la végétation, demeure riche.	\N	\N	\N	f
 68416	1048	TEXT	interests.locations.1.description	Cette petite île coralienne d’un kilomètre carré en forme d’amande est soumise à des conditions environnementales difficiles : nombreux cyclones, recouvrement par les vagues en cas de houle, forte salinité… C’est un lieu de ponte important pour les tortues vertes (entre 1 000 et 2 000 femelles par an). \nL’histoire de l’île a été marquée par l’échouage de l’*Utile*, un navire français transportant des esclaves, à la fin du 18<sup>e</sup> siècle. L’équipage parvint à rallier Madagascar sur une embarcation de fortune, abandonnant 60 esclaves à leur sort malgré la promesse de venir les chercher. Quinze ans plus tard, le chevalier de Tromelin, qui donna son nom à l’île, récupéra seulement huit survivants : sept femmes et un enfant. \n	\N	\N	\N	f
@@ -2526,25 +2511,15 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68423	1048	TEXT	events.3.date	31 juillet 1761	\N	\N	\N	f
 68424	1048	TEXT	ecosystems.ecosystems.2.description	Ces habitats de zone humide qui couvrent 65 hectares sur les plaines autour du lagon et de la mangrove d’Europa sont composés d’une végétation adaptée aux milieux salins et qui se développe sur des sédiments d’origine corallienne. On y trouve notamment des salicornes ([*Caroxylon littorale*](https://inpn.mnhn.fr/espece/cd_nom/899430)).\n	\N	\N	\N	f
 68425	1048	IMAGE	ecosystems.ecosystems.3.image	\N	2483	Tortue verte au dessus d'un herbier de phanérogames marines © Hendrik Sauvignet - OFB	\N	f
-68896	1019	TEXT	header.title	C'est quoi les sciences participatives ?	\N	\N	\N	f
-68897	1019	IMAGE	examples.projects.2.image	\N	2578	Plongeur à Mayotte © Alexandra Gigou - OFB	\N	f
 64304	1021	TEXT	events.4.description	Publication des premiers volumes de La Flore des Mascareignes, avec la contribution du botaniste Thérésien Cadet.	\N	\N	\N	f
 64305	1021	TEXT	events.5.description	Création du Parc national de La Réunion ; Création de la Réserve naturelle marine	\N	\N	\N	f
 64306	1021	TEXT	interests.locations.2.name	Le massif de la Fournaise	\N	\N	\N	f
 64307	1021	IMAGE	interests.locations.6.image	\N	2353	Hauteurs du massif de la Roche Écrite © Laurent Echiniscus	\N	f
 64308	1021	IMAGE	species.1.image	\N	2355	*Lalage newtoni* © Jean-Philippe Siblet	\N	f
 64309	1021	TEXT	events.5.date	2007	\N	\N	\N	f
-68898	1019	CHECKBOX	header.shadowed	true	\N	\N	\N	f
-68899	1019	TEXT	paragraphs.1.title	Différents objectifs	\N	\N	\N	f
-68900	1019	TEXT	presentation.description	Le terme « sciences participatives » regroupe des programmes acquisition d’informations et de données scientifiques en impliquant une participation active des citoyens. Les observations sont réalisées de manière bénévole, le plus souvent par des non-professionnels. Dans certains cas, une formation au préalable est nécessaire, mais de nombreux programmes sont accessibles sans connaissances naturalistes poussées. 	\N	\N	\N	f
-68901	1019	TEXT	examples.projects.3.actor	Association Pala Dalik	\N	\N	\N	f
-68902	1019	TEXT	paragraphs.2.text	Les équipes du Compteur et de [Vigie Nature](https://www.vigienature.fr/) ont mené conjointement une étude pour **dresser le premier panorama des programmes de sciences participatives dans les territoires ultramarins**. Retrouvez les résultats de cet état des lieux dans [le rapport téléchargeable](https://inpn.mnhn.fr/docs-web/docs/download/398569).  \n  \nL'annuaire des programmes recensés sera prochainement disponible sur le site du Compteur. 	\N	\N	\N	f
-68903	1019	TEXT	examples.projects.4.title	Ti bèt a limiè, l’Observatoire des lucioles en Guadeloupe	\N	\N	\N	f
 64310	1021	TEXT	identity.marineArea	318 300	\N	\N	\N	f
 64311	1021	TEXT	events.8.date	2020	\N	\N	\N	f
 64312	1021	IMAGE	interests.locations.0.image	\N	2360	Parc national de La Réunion © Rémy Poncet	\N	f
-68904	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
-68905	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
 64313	1021	TEXT	species.6.name	Le Tamarin des Hauts	\N	\N	\N	f
 64314	1021	IMAGE	interests.locations.3.image	\N	2354	Tronc d’un arbre Bois de pomme à Mare Longue © Philippe Gourdain	\N	f
 64315	1021	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
@@ -2588,14 +2563,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68446	1048	TEXT	events.1.date	16<sup>e</sup> siècle	\N	\N	\N	f
 68447	1048	TEXT	ecosystems.ecosystems.2.name	Les sansouïres et les steppes salées d'Europa 	\N	\N	\N	f
 68448	1048	TEXT	interests.locations.4.name	Bassas da India	\N	\N	\N	f
-68906	1019	TEXT	paragraphs.0.title	Différents types de programmes 	\N	\N	\N	f
-68907	1019	TEXT	examples.projects.4.actor	An ba loup-la	\N	\N	\N	f
-68908	1019	TEXT	application.subtitle	J'agis en ligne	\N	\N	\N	f
-68909	1019	TEXT	examples.projects.4.target	Tous publics	\N	\N	\N	f
-68910	1019	TEXT	examples.projects.1.title	Le Suivi temporel des oiseaux communs (STOC) en Guyane	\N	\N	\N	f
-68911	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
-68912	1019	TEXT	examples.projects.2.target	Usagers de la mer, tous publics	\N	\N	\N	f
-68913	1019	IMAGE	header.background	\N	2583	 Observateur en forêt, Guyane © Pierre-Olivier Jay - 97px	\N	f
 68914	1030	TEXT	paragraphs.0.title	Conception et édition	\N	\N	\N	f
 69200	1015	TEXT	events.2.description	Dernière éruption de la Montagne Pelée	\N	\N	\N	f
 69201	1015	TEXT	events.3.description	Création du Parc naturel régional de Martinique et de la Réserve naturelle nationale de la presqu'île de la Caravelle	\N	\N	\N	f
@@ -2651,7 +2618,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64364	1021	TEXT	interests.locations.0.description	Créé en 2007, [le Parc national](http://www.reunion-parcnational.fr/fr) englobe la partie centrale des deux massifs volcaniques de l'île : celui du Piton des Neiges, le plus ancien avec les trois cirques, et celui du Piton de la Fournaise. La zone cœur de parc couvre 42 % de la superficie de l’île.	\N	\N	\N	f
 64365	1021	TEXT	interests.locations.2.description	Le tiers sud-est de l’île est occupé par le Piton de la Fournaise, l’un des volcans les plus actifs du monde, de type effusif. Ses coulées de laves refroidies sont progressivement recolonisées par la végétation, lichens et fougères tout d'abord, puis plantes vasculaires.	\N	\N	\N	f
 64366	1021	TEXT	interests.locations.1.description	Inscrits au patrimoine mondial de l’UNESCO en 2010, les trois cirques entourent le sommet de l’île : le Piton des Neiges. Chacun possède une identité particulière. Mafate n’est desservi par aucune route, Salazie est plus exposé aux précipitations tandis que Cilaos est plus sec.	\N	\N	\N	f
-68449	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
 64367	1021	TEXT	identity.subtitle	Deux volcans et un relief escarpé	\N	\N	\N	f
 64368	1021	IMAGE	species.7.image	\N	2358	*Obetia ficifolia* © Caroline Robert / PN La Réunion	\N	f
 64369	1021	TEXT	species.5.name	Les Fanjan	\N	\N	\N	f
@@ -2660,11 +2626,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64734	1020	TEXT	ecosystems.ecosystems.6.name	Les grandes algueraies à Sargasses	\N	\N	\N	f
 66516	1039	IMAGE	identity.image	\N	2388	Agricultrices à Mayotte © Bertrand Fanonnel	\N	f
 66517	1039	TEXT	events.7.description	Création du Parc naturel marin de Mayotte	\N	\N	\N	f
-68450	1000	TEXT	testimony.title	Des études inédites sur la biodiversité des outre-mer	\N	\N	\N	f
-68451	1000	TEXT	carousel.carouselElements.3.title	20 % d'espèces menacées 	\N	\N	\N	f
-68452	1000	IMAGE	carousel.carouselElements.4.image	\N	2567	Plantation de palétuviers par les scolaires du village Utufua, Wallis-et-Futuna © Angelina Tofili	\N	f
-68453	1000	LINK	carousel.carouselElements.4.button	Découvrir les écogestes	\N	\N	/ecogestes	f
-68454	1000	IMAGE	carousel.carouselElements.2.image	\N	2564	Noddis noirs (*Anous minutus*), Wallis-et-Futuna © Tristan Berr	\N	f
 66518	1039	TEXT	events.7.date	2010	\N	\N	\N	f
 66519	1039	TEXT	interests.locations.0.name	L’îlot Mbouzi 	\N	\N	\N	f
 40366	1006	IMAGE	presentation.file	\N	1487	affiche écogeste protection récifs	\N	f
@@ -2681,11 +2642,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66524	1039	IMAGE	ecosystems.image	\N	2391	Pêcheur sur une pirogue dans la mangrove © Fanny Cautain / Office français de la biodiversité	\N	f
 66525	1039	TEXT	identity.species	6 039	\N	\N	\N	f
 66526	1039	IMAGE	ecosystems.ecosystems.0.image	\N	2390	Forêt de Tchaourembo © Guillaume Viscardi - CBN Mascarin	\N	f
-68455	1000	CHECKBOX	carousel.carouselElements.2.shadowed	true	\N	\N	\N	f
-68456	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
-68457	1000	TEXT	science.text	Rencontre avec Eddy Dumbardon-Martial, qui tente de mettre en lumière les insectes pollinisateurs, une faune encore mal connue en Martinique et pourtant d’une haute valeur patrimoniale.	\N	\N	\N	f
-68458	1000	TEXT	carousel.carouselElements.0.title	"On peut visualiser en un clic le nombre d’hectares reboisés"	\N	\N	\N	f
-68459	1000	IMAGE	carousel.carouselElements.0.image	\N	2566	Forêt sèche de Malhec © Conservatoire d'espaces naturels de Nouvelle-Calédonie	\N	f
 66527	1039	TEXT	zoom.title	Quelques repères à Mayotte	\N	\N	\N	f
 37512	1024	IMAGE	action.cards.2.icon	\N	1124	relaché	\N	f
 37513	1024	TEXT	presentation.name	Je protège les milieux contre l’introduction d’espèces exotiques envahissantes	\N	\N	\N	f
@@ -2697,7 +2653,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66528	1039	TEXT	species.8.name	Le Namoulohna	\N	\N	\N	f
 66529	1039	TEXT	events.6.description	Ouverture de l’antenne de Mayotte du Conservatoire botanique national de Mascarin à Coconi	\N	\N	\N	f
 66530	1039	TEXT	events.6.date	2009	\N	\N	\N	f
-68460	1000	TEXT	carousel.carouselElements.1.title	« Quand on sensibilise aux lucioles, on sensibilise aussi à tous les autres insectes »	\N	\N	\N	f
 40372	1006	TEXT	understand.text	Les récifs coralliens sont un écosystème très riche : ils abritent plus d’un tiers des espèces marines connues pour lesquelles ils représentent notamment une zone de nourricerie pour les juvéniles (poissons, crustacés, etc.). Ils forment également une barrière naturelle contre la houle, protégeant la côte lors des tempêtes.\n\nIls sont particulièrement fragiles, et [de nombreux facteurs les menacent](/indicateurs/recifs-coralliens) : le changement climatique, qui entrainent entre autres une augmentation de la température et une acidification des océans, les pollutions, des maladies virales ou bactériennes ou encore la destruction directe pour construire des infrastructures humaines. Par exemple, à Mayotte, le prolongement de la piste d'atterrissage de l'aéroport nécessiterait la destruction d'une importante zone de récifs.\n\nAu-delà de ces pressions globales, les activités de loisirs en mer pèsent également sur la santé des récifs. L’ancrage sauvage peut détériorer les récifs et les herbiers sous-marins. La toxicité pour l’environnement marin des composants de crèmes solaires, qui se dissolvent dans l’eau lors de la baignade, est de plus en plus étudiée et documentée. En plongée, un choc sur les coraux, ou même le simple fait de les toucher leur est néfaste, et cela peut contribuer à la propagation de maladies du corail. Les prélèvements, même de coraux déjà morts, sont préjudiciables pour l’environnement marin et sont rigoureusement interdits dans tous les territoires. 	\N	\N	\N	f
 40373	1006	IMAGE	action.cards.1.icon	\N	1021	Crème solaire	\N	f
 40374	1006	TEXT	action.cards.2.description	En plongée ou en snorkeling, je fais attention à ne pas toucher les coraux et je ne prélève rien. 	\N	\N	\N	f
@@ -2706,9 +2661,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 40377	1006	TEXT	presentation.description	Les récifs coralliens sont soumis à de multiples pressions, et les activités de loisirs en mer (plaisance, plongée, pêche, baignade…) peuvent participer à leur dégradation.  Prenons soin de ces écosystèmes particulièrement riches, mais fragiles. 	\N	\N	\N	f
 40378	1006	TEXT	action.title	Pour profiter de la mer sans impacter les récifs	\N	\N	\N	f
 64374	1021	TEXT	interests.locations.5.description	Créée en 2007, cette aire marine protégée couvre 3 500 hectares sur un linéaire de 40 km sur la côte ouest de l’île. Les activités nautiques, dont la pêche, y sont règlementées et dans les zones dites « sanctuaires », toute présence humaine est interdite quel qu’en soit le motif. 	\N	\N	\N	f
-68461	1000	LINK	carousel.carouselElements.0.button	Lire l'article	\N	\N	media/article/Tableau%20de%20bord%20forêts%20sèches	f
-68462	1000	LINK	carousel.carouselElements.1.button	Lire l'entretien	\N	\N	media/interview/Ti%20bet%20a%20limie	f
-68463	1000	TEXT	testimony.quote	Dans le cadre du projet de Compteur, le premier état des lieux des programmes de sciences participatives dans les outre-mer est en cours de réalisation. 	\N	\N	\N	f
 64375	1021	TEXT	ecosystems.ecosystems.0.description	Il existe plusieurs types de forêts et de cortèges floristiques répartis en fonction de l’altitude et de la pluviométrie. Elles se situent particulièrement dans l’est et le sud de l’île, moins urbanisés. On y trouve une grande diversité végétale : mousses, fougères, orchidées, arbres et arbustes, etc.	\N	\N	\N	f
 37516	1024	TEXT	understand.text	Les espèces introduites par l’homme hors de leur territoire d’origine peuvent se développer de manière importante dans leur milieu d’introduction et [menacer la biodiversité locale](/indicateurs/especes-exotiques-envahissantes). Certaines espèces peuvent également avoir des conséquences économiques et sanitaires importantes.\n\nDes animaux de compagnie qui s'échappent ou sont lâchés volontairement dans la nature lorsque leurs propriétaires ne souhaitent pas les garder, c'est l'origine de l'introduction de nombreuses espèces animales exotiques aujourd'hui problématiques, par exemple les Tortues de Floride et autres reptiles, les poissons d'aquarium comme le Guppy ou le Poisson-zèbre ou encore des oiseaux comme le Bulbul Orphée ou le Rossignol du Japon.\n\nDes nombreuses espèces végétales importées ont été plantées dans les parcs et les  jardins pour leur intérêt esthétique, mais certaines n'ont pas tardé à se disperser largement dans les milieux naturels, et à entrer en compétition avec les espèces végétales locales.\n\nDes règlementations, plus ou moins strictes selon les territoires, existent désormais pour limiter l'introduction d'espèces potentiellement envahissantes, en particulier sur les territoires insulaires.	\N	\N	\N	f
 37517	1024	IMAGE	action.cards.1.icon	\N	1396	aquarium	\N	f
@@ -2720,30 +2672,19 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64376	1021	TEXT	identity.highestPoint	3 071	\N	\N	\N	f
 66531	1039	TEXT	events.4.description	Référendum d'autodétermination : la population de Mayotte choisit de rester française	\N	\N	\N	f
 66532	1039	TEXT	events.5.description	Création de la Réserve naturelle nationale de l'îlot M'Bouzi	\N	\N	\N	f
-68464	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
-68465	1000	LINK	carousel.carouselElements.2.button	Découvrir les territoires	\N	\N	/territoires	f
-68466	1000	LINK	carousel.carouselElements.3.button	Consulter l'indicateur	\N	\N	/indicateurs/especes-menacees	f
-68467	1000	TEXT	presentation.text	Les territoires d’outre-mer français présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
-68468	1000	TEXT	carousel.carouselElements.4.text	Consultez les écogestes et adaptez vos habitudes pour réduire votre impact sur la biodiversité.	\N	\N	\N	f
-68469	1000	CHECKBOX	carousel.carouselElements.4.shadowed	true	\N	\N	\N	f
 37523	1024	TEXT	understand.quote	La Tortue de Floride, considérée comme l'une des 100 espèces les plus envahissantes du monde, est présente en milieu naturel dans quasiment tous les territoires d'outre-mer français (à l'exception de Saint-Pierre et Miquelon, Wallis et Futuna, et les TAAF)	\N	\N	\N	f
 37524	1024	TEXT	understand.title	Comprendre l'écogeste	\N	\N	\N	f
 37525	1024	TEXT	action.cards.0.description	Je me renseigne sur les espèces végétales que je souhaite planter dans mon jardin et je privilégie d’utiliser des espèces locales. Je respecte la règlementation sur l'interdiction d'introduction d'espèces sur mon territoire.	\N	\N	\N	f
-68470	1000	TEXT	carousel.carouselElements.1.text	La structure guadeloupéenne *An ba loup-la* (« sous la loupe » en créole antillais) anime le programme *Ti bet a limiè*, l’Observatoire des lucioles de Guadeloupe. L’objectif ? Recueillir des données sur ces insectes méconnus, mais aussi sensibiliser le public au rôle écologique des insectes et aux perturbations des milieux dont ils sont victimes.	\N	\N	\N	f
 66533	1039	TEXT	interests.locations.2.name	Le Mont Choungui	\N	\N	\N	f
 64377	1021	TEXT	interests.locations.4.description	Réserve naturelle nationale, cette zone humide de 447 hectares est également inscrite à la convention internationale Ramsar. Le site présente une valeur faunistique forte, avec de nombreuses espèces patrimoniales (oiseaux, poissons, macro-crustacés, insectes) malgré la présence d’espèces introduites.	\N	\N	\N	f
 64378	1021	TEXT	risks.risks.0.name	Une pression démographique importante	\N	\N	\N	f
 64379	1021	IMAGE	interests.locations.1.image	\N	2364	Vue sur le cirque de Mafate © Céline Soyer	\N	f
 64380	1021	IMAGE	ecosystems.ecosystems.1.image	\N	2362	Grand Natte *Mimusops balata* dans la forêt sèche © B. Navez	\N	f
-68471	1000	IMAGE	carousel.carouselElements.3.image	\N	2568	 Rainette de Gaucher (*Dendropsophus gaucheri*), Guyane © Raphael Gailhac - Office français de la biodiversité	\N	f
 64381	1021	TEXT	interests.locations.3.description	Vestige de forêt humide primaire de basse altitude du sud sauvage, cette forêt a poussé sur une ancienne coulée de lave. Aujourd’hui réduite à une centaine d’hectares, elle abrite une richesse remarquable en espèces végétales, dont de nombreuses espèces endémiques. Si elle est encore dans un bon état de conservation, la disparition de la faune qui disséminait les graines (oiseaux, tortues géantes, chauves-souris) empêche sa régénération naturelle. 	\N	\N	\N	f
-68472	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre la biodiversité	\N	\N	\N	f
 64382	1021	TEXT	identity.title	La Réunion,  \npoint chaud de l’océan Indien	\N	\N	\N	f
 64383	1021	IMAGE	species.6.image	\N	2363	*Acacia heterophylla* © B. Navez	\N	f
 64384	1021	TEXT	interests.locations.1.name	Les cirques de Mafate, Cilaos et Salazie	\N	\N	\N	f
 64385	1021	TEXT	statistics.2.text	de plantes vasculaires indigènes	\N	\N	\N	f
-68473	1000	IMAGE	testimony.image	\N	2570	Saisie d'un anaconda par des agents de l’OFB, Guyane © Raphael Gailhac	\N	f
-68474	1000	TEXT	carousel.carouselElements.4.title	Tous acteurs de la préservation de la biodiversité	\N	\N	\N	f
 67901	1050	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 69209	1015	TEXT	events.9.description	Création du [Parc naturel marin de Martinique](https://www.parc-marin-martinique.fr/)	\N	\N	\N	f
 69210	1015	IMAGE	ecosystems.image	\N	2304	La Monnaie Caraïbes à ocelle (*Cyphoma gibbosum*), Martinique © Fabien Lefebvre - Association ACWAA	\N	f
@@ -2756,8 +2697,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66964	1043	TEXT	interviewee.presentation	Eddy Dumbardon-Martial, naturaliste et spécialiste des diptères, membre de Martinique Entomologie	\N	\N	\N	f
 69211	1015	TEXT	identity.species	7 009	\N	\N	\N	f
 69212	1015	IMAGE	ecosystems.ecosystems.0.image	\N	2300	Plage de Martinique © Antoine Forget - OFB	\N	f
-68475	1000	LINK	science.more	Lire l'entretien	\N	\N	/media/interview/Entretien%20Eddy%20Dumbardon-Martial%20-%20Pollinisateurs%20Caravelle	f
-68476	1000	CHECKBOX	carousel.carouselElements.1.shadowed	true	\N	\N	\N	f
 67837	1040	TEXT	interests.locations.3.description	Situées au sud-ouest de la Polynésie française, les Australes regroupent 7 petites îles, dont Rapa, avec une richesse floristique et faunistique parmi les plus extraordinaires du monde.	\N	\N	\N	f
 67838	1040	TEXT	identity.title	La Polynésie française,  \nun bien commun peuplé d'espèces emblématiques et remarquables	\N	\N	\N	f
 67839	1040	TEXT	interests.locations.7.name	Les Marquises	\N	\N	\N	f
@@ -2774,18 +2713,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69217	1015	TEXT	events.4.description	Création de la Réserve naturelle nationale des îlets de Sainte Anne	\N	\N	\N	f
 68915	1030	TEXT	paragraphs.1.text	**Informations contenues dans le site**\nLe portail Compteur de biodiversité outre-mer est un site informatif. \nIl a pour objectif de présenter la biodiversité des territoires ultra-marins français et des actions et initiatives menées pour la protection de ces écosystèmes.\nAucune information contenue sur le site ne saurait posséder ou être interprétée comme ayant une quelconque valeur contractuelle. Les textes à caractère scientifique publiés dans le site sont valables à la date de leur publication et ne sauraient engager leurs auteurs dans le futur.\nToute information contenue sur le site peut être modifiée, à tout moment sans préavis, par le Muséum national d’histoire naturelle. Les informations contenues sur le site ne constituent pas une offre de services ou de produits ni une sollicitation commerciale de quelque nature que ce soit, ni une recommandation ou un conseil. Le Muséum national d’histoire naturelle ne sera pas tenu responsable pour toute décision prise ou non sur la base d’une information contenue sur le site, ni pour l’utilisation qui pourrait en être faite par un tiers. Ces informations ne sauraient engager la responsabilité du Muséum national d’histoire naturelle.\n\n**Propriété intellectuelle**\nL’ensemble du site « Compteur de biodiversité outre-mer » relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle.\nTous les éléments présentés sur ce site (textes, photographies, vidéos, créations graphiques, illustrations) sont soumis à la législation relative au droit des informations publiques et sont couverts par le droit d'auteur. Ces éléments restent la propriété exclusive du Muséum national d’Histoire naturelle et/ou de ses auteurs.\nLa reproduction de tout ou partie de ce site sur un support électronique quel qu’il soit est formellement interdite sauf autorisation expresse du directeur de la publication. La reproduction de ce site sur un support papier est autorisée pour des fins personnelles, associatives ou professionnelles et sous réserve du respect des trois conditions suivantes :\n• gratuité de la diffusion ;\n• respect de l’intégrité des documents reproduits : pas de modification ni altération d’aucune sorte ;\n• citation claire et lisible de la source indiquant le nom "Muséum national d’Histoire naturelle", l’adresse internet du site web du MNHN : www.mnhn.fr et la mention : "© sur www.mnhn.fr - Reproduction interdite – Tous droits réservés".\nToutes diffusions ou utilisations à des fins commerciales ou publicitaires des informations sont strictement interdites. Pour d’autres utilisations envisagées, veuillez nous consulter.\n\n**Crédits photographiques**\nToutes les photographies présentes sur le site sont créditées de leurs auteurs et de la licence associée à leur utilisation si elle est mentionnée.\nLes contenus sous licence Creative Commons ont une mention spécifique avec le type de licence qui permet à l’utilisateur d’aller consulter les conditions d’utilisation de l’image concernée. \nExemple :\n(CC BY-NC-SA 3.0)	\N	\N	\N	f
 68916	1030	TEXT	paragraphs.2.text	**Outils de mesure d’audience**\nLe site utilise l’outil d’analyse Matomo. Les traceurs de mesures d’audience issus de Matomo ne nécessitent pas de recueil préalable du consentement de l’utilisateur du fait qu’ils servent uniquement à produire des données statistiques anonymes.\nPour en savoir plus :\nhttps://fr.matomo.org/privacy/\n\n**Politique de confidentialité et RGPD**\nLe Muséum national d’Histoire naturelle porte la plus grande attention à vos données à caractère personnel et s’engage à les protéger.\nIl s'engage à ce que la collecte et le traitement de données à caractère personnel, effectués à partir du présent site, soient conformes à la loi n°78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés ainsi qu’au Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 applicable le 25 mai 2018. \n\n**Données personnelles**\nSauf stipulation contraire directement mentionnée, aucune donnée personnelle n’est collectée ni traitée sur le portail « Compteur de biodiversité outre-mer ».	\N	\N	\N	f
-68477	1000	TEXT	carousel.carouselElements.3.text	Dans les territoires d’outre-mer, 20 % des espèces sont considérées comme éteintes ou en danger d’extinction selon la Liste rouge des espèces menacées. Comment ce chiffre est-il calculé ? Quelles sont les menaces qui pèsent sur les espèces ? Quelles actions sont mises en place pour les préserver ? 	\N	\N	\N	f
-68478	1000	TEXT	carousel.carouselElements.0.text	La forêt sèche, ou sclérophylle, est l’écosystème le plus menacé de disparition en Nouvelle-Calédonie. Pour informer, faciliter et encourager les actions de protection et de restauration écologique, un tableau de bord des forêts sèches de Nouvelle-Calédonie est en ligne depuis début 2021. 	\N	\N	\N	f
-68479	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
-68480	1000	TEXT	carousel.carouselElements.2.text	Naviguez parmi les portraits biodiversité des territoires pour mieux comprendre les enjeux avec une sélection de repères et de chiffres clés sur la nature.	\N	\N	\N	f
-68481	1000	IMAGE	science.image	\N	2569	Vonvon (*Xylocopa fimbriata*) butinant des fleurs de Glisérya (*Gliricidia sepium*) © Eddy Dumbardon-Martial	\N	f
-68482	1000	TEXT	science.title	« Il faut amener les gens à s’intéresser aux insectes pollinisateurs de Martinique »	\N	\N	\N	f
-68483	1000	CHECKBOX	carousel.carouselElements.3.shadowed	true	\N	\N	\N	f
-68484	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
-68485	1000	TEXT	carousel.carouselElements.2.title	Partez à la rencontre des espèces et des écosystèmes ultramarins	\N	\N	\N	f
-68486	1000	TEXT	testimony.text	L'équipe du Compteur travaille avec ses partenaires sur le développement de nouveaux indicateurs pour enrichir les données disponibles. Des travaux sont également menés sur la perception de la nature et le rapport aux outils numériques. 	\N	\N	\N	f
-68487	1000	CHECKBOX	carousel.carouselElements.0.shadowed	true	\N	\N	\N	f
-68488	1000	IMAGE	carousel.carouselElements.1.image	\N	2577	A la découverte des lucioles de Guadeloupe et de leur milieu de vie © Aline M. - An ba loup-la	\N	f
 68917	1030	TEXT	paragraphs.1.title	Conditions générales d’utilisation	\N	\N	\N	f
 68918	1030	TEXT	title	Mentions légales	\N	\N	\N	f
 68489	1038	TEXT	events.2.description	Abolition définitive de l'esclavage en France	\N	\N	\N	f
@@ -2963,6 +2890,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68533	1038	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
 68534	1038	TEXT	species.4.name	Les loutres	\N	\N	\N	f
 68535	1038	TEXT	identity.area	83 846	\N	\N	\N	f
+69462	1052	TEXT	body.titre_question.1.citation.citationElement	Qu’est-ce que les sciences participatives ?	\N	\N	\N	f
+69463	1052	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
+69464	1052	TEXT	body.titre_question.0.paragraph.paragraphText	Et l’enjeu est de taille ! Au moins 80% de la biodiversité française se situerait dans les territoires d’Outre-mer ! <strong> Un premier panorama, permettant l’inventaire et la caractérisation de ces activités de sciences participatives, vient d’être publié</strong>. Quelques 145 programmes de sciences participatives ont été identifiés. Nous vous proposons, ici, une synthèse de ce panorama pour en exposer les principales caractéristiques, mais aussi, les enjeux, difficultés et opportunités, liées au déploiement des Sciences Participatives dans les Outre-mer.	\N	\N	\N	f
+69465	1052	TEXT	presentation.name	Panorama des programmes de sciences participatives ultramarins : les résultats 	\N	\N	\N	f
 68536	1038	TEXT	species.0.description	Atteignant jusqu’à 17 cm de long, le Titan ([*Titanus giganteus*](https://inpn.mnhn.fr/espece/cd_nom/758743)) est le plus grand coléoptère du monde. On connait cependant peu de choses sur sa biologie : si les mâles sont attirés par la lumière, ce n’est pas le cas des femelles qui sont rarement observées. On suppose que les larves se développent dans le sol, au niveau des racines ou des souches, et consomment du bois décomposé.  \nCe longicorne attire particulièrement les collectionneurs, c’est pourquoi depuis le 25 juillet 2019, il existe un quota limitant l’exportation à un spécimen par personne et par an.\nL’inventaire des insectes de Guyane est encore largement incomplet. Si la diversité des insectes est très importante, l’abondance de chaque espèce est généralement faible, ce qui rend leur recensement complexe.  \n  \nStatut sur la Liste rouge mondiale : non évalué.	\N	\N	\N	f
 68537	1038	TEXT	identity.highestPointName	Montagne Bellevue	\N	\N	\N	f
 68538	1038	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
@@ -3063,10 +2994,19 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 67003	1044	TEXT	presentation.date	09/11/2021	\N	\N	\N	f
 67004	1044	IMAGE	interviewee.photo	\N	2237	Marilou Hircq	\N	f
 67005	1044	TEXT	body.introduction	En Guyane, on ne s’intéresse pas qu’aux caïmans et aux jaguars ! Le projet BUG (Biodiversité Urbaine de Guyane) mobilise des centaines d’élèves depuis janvier pour inventorier les fourmis et les champignons. A l’école et chez eux.  \n  \nMarilou Hircq, ingénieure au CNRS, coordonne ce projet de sciences participatives unique dans cette région d’Outre-mer.	\N	\N	\N	f
+69466	1052	TEXT	body.titre_question.5.citation.citationElement	Quelles sont les caractéristiques d’un programme de Sciences participatives dans les Outre-mer ?	\N	\N	\N	f
+69467	1052	IMAGE	presentation.image	\N	2591	 Observateur en forêt, Guyane © Pierre-Olivier Jay - 97px	\N	f
 68212	1041	TEXT	species.9.description	La mouche [*Anatalanta aptera*](https://inpn.mnhn.fr/espece/cd_nom/782785), endémique de la région subantarctique, a une étrange particularité : elle n’a pas d’ailes ! Ce caractère morphologique est une adaptation aux conditions climatiques rigoureuses des Terres australes françaises et leurs vents forts et constants, ainsi qu’à l’absence de prédateurs natifs.  \n\nStatut sur la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
 68213	1041	TEXT	events.0.description	Émergence de l’archipel Kerguelen 	\N	\N	\N	f
 68214	1041	TEXT	events.1.description	Émergence de l’archipel Crozet	\N	\N	\N	f
 68215	1041	TEXT	events.8.description	Classement des Terres et mers australes au Patrimoine mondial de l’UNESCO	\N	\N	\N	f
+69468	1052	TEXT	presentation.author	Marine Didier et Jessica Coulon	\N	\N	\N	f
+69469	1052	TEXT	body.titre_question.13.citation.citationElement	Conclusions et recommandations principales du rapport	\N	\N	\N	f
+69470	1052	TEXT	presentation.date	15/02/2022	\N	\N	\N	f
+69471	1052	IMAGE	body.titre_question.4.image.imageElement	\N	2589	*	\N	f
+69472	1052	TEXT	body.titre_question.3.citation.citationElement	Où retrouve-t-on les programmes de sciences participatives ultramarins ? 	\N	\N	\N	f
+69473	1052	IMAGE	body.titre_question.7.image.imageElement	\N	2588	*	\N	f
+69474	1052	IMAGE	body.titre_question.11.image.imageElement	\N	2590	*	\N	f
 64753	1020	TEXT	ecosystems.ecosystems.6.description	Forêts sous-marines, ces formations d’algues brunes où dominent les sargasses colonisent les dalles rocheuses du fond des lagons et forment une canopée d’une hauteur de plus d’un mètre sous la surface de l’eau. \nVéritables oasis, ces algueraies jouent un rôle essentiel pour le cycle biologique de différentes espèces animales, de micro et macroalgues. \nEncore mal connues, ces zones de transition écologique entre les zones littorales et récifales représentent un enjeu important pour le fonctionnement des récifs et lagons.\n	\N	\N	\N	f
 64754	1020	IMAGE	ecosystems.ecosystems.5.image	\N	2466	Herbier de phanérogames © Claude Payri	\N	f
 64755	1020	IMAGE	species.1.image	\N	2442	*Rhynochetos jubatus* © Olivier Gargominy / INPN	\N	f
@@ -3094,6 +3034,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64777	1020	TEXT	species.7.name	La Sterne néreis	\N	\N	\N	f
 64778	1020	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
 64779	1020	TEXT	species.16.description	Le Corbeau calédonien ([*Corvus moneduloides*](https://www.endemia.nc/faune/fiche159)) est un oiseau commun, endémique, familier des forêts mais fréquentant également les milieux plus ouverts. Il est surtout réputé pour son intelligence, puisqu’il est capable de fabriquer et d’utiliser des outils, notamment pour attraper ses proies dans la cavité des arbres.  \n\nStatut dans la Liste rouge mondiale : préoccupation mineure. \n	\N	\N	\N	f
+69475	1052	TEXT	body.titre_question.9.citation.citationElement	Les sciences participatives dans les outre-mer : forces, faiblesses, menaces et opportunités	\N	\N	\N	f
+69476	1052	TEXT	body.titre_question.12.paragraph.paragraphText	<strong>Les menaces</strong><br> \n<strong>Peu de financements dédiés.</strong> Beaucoup de programmes fonctionnent sans budget dédié ou en utilisant une petite partie de subventions acquises pour d’autres projets. L’interruption d’un financement, même temporaire, implique l'arrêt de suivis et donc une rupture dans la saisie des données, ce qui fragilise leur valorisation. Aussi, dans de petits territoires, l'attribution de financements peut vite devenir une affaire personnelle, faite de connivence ou de frictions, tant sont fortes les interconnexions entre acteurs associatifs et institutionnels.  <br> \n<strong>Des programmes particulièrement affectionnés par les métropolitains ?</strong> Ce sont eux, caractérisés par leur mobilité, que l’on retrouve principalement comme observateurs ou bénévoles. Cette situation peut remettre en question la pérennité de structures associatives et même influer sur les relations avec les partenaires institutionnels (équipes territoriales, gestionnaires d’espaces naturels) eux-mêmes soumis à ces mouvements de personnel.  \n<br>\n<strong>Les opportunités</strong>  \n<strong>Développer des outils communs :</strong> plateforme commune, base de données en ligne… une proportion non négligeable des données issues de sciences participatives dans les Outre-mer n’est pas suffisamment valorisée. Mettre en commun et standardiser les données serait pertinent pour en faire un usage scientifique et constituerait une opportunité de valorisation supplémentaire des programmes.<br> \n<strong>Etendre l’aire d’un réseau à l’échelle régionale :</strong> en adaptant des programmes à différents territoires (même internationaux) et en homogénéisant les protocoles, lorsque c’est faisable, il serait possible d’obtenir des tendances et des indicateurs régionaux (notamment pour les espèces migratrices).<br> \n	\N	\N	\N	f
+69477	1052	TEXT	body.introduction	Rapporter des observations de requins ou de raies, surveiller l’état de santé de coraux, ou encore compter des lucioles: autant d’activités qui composent les Sciences Participatives dans les Outre-mer. Les citoyens ultramarins participent à l’aide de ces programmes et à l’instar de leurs compatriotes hexagonaux, à une meilleure compréhension de la biodiversité française. 	\N	\N	\N	f
 64780	1020	TEXT	species.4.name	*Amborella trichopoda*	\N	\N	\N	f
 64781	1020	TEXT	identity.area	16 624	\N	\N	\N	f
 64782	1020	TEXT	species.0.description	[*Sphaeropteris intermedia*](https://www.endemia.nc/flore/fiche106) est une espèce de fougère arborescente endémique parmi les plus grandes au monde, elle peut atteindre 35 mètres de haut. Commune sur le territoire, cette plante est utilisée en médecine traditionnelle et son tronc très solide est également utilisé pour la sculpture ou la confection de sagaies.\n\nStatut dans la Liste rouge mondiale : Préoccupation mineure.  \nNom en langues kanak : Groubaï (drubéa).\n	\N	\N	\N	f
@@ -3186,6 +3129,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66608	1039	IMAGE	species.7.image	\N	2383	*Bruguiera gymnorhiza* © Vincent Boullet	\N	f
 66609	1039	TEXT	species.5.name	Les dauphins	\N	\N	\N	f
 68217	1041	TEXT	identity.species	2 378 	\N	\N	\N	f
+69478	1052	TEXT	body.titre_question.2.paragraph.paragraphText	Les sciences participatives sont définies comme une forme de production scientifique à laquelle <strong> des citoyens, qu’ils soient naturalistes, ou simples amoureux de la nature, écoliers, ou encore retraités, participent de manière active</strong> . Les programmes de sciences participatives sont un moyen d’acquérir des données sur des espèces de faune, de flore et même de fonge, très utiles aux chercheurs pour répondre à des questionnements scientifiques. Elles permettent aussi aux citoyens de développer leurs connaissances sur la biodiversité en général et les moyens de la préserver.  \n<br> \nSimples et accessibles au plus grand nombre, <strong>les données de base nécessaires</strong> pour valider une observation de sciences participatives sont : la date, l’heure, la localisation, si possible le nom de l’espèce, parfois aussi, une photo.\nDepuis une décennie, <strong>dans tous les territoires ultramarins, on observe un véritable essor des programmes de Sciences participatives</strong>.<br> 	\N	\N	\N	f
+69479	1052	TEXT	body.titre_question.14.paragraph.paragraphText	L’étude conclut qu’il serait pertinent de développer et promouvoir des programmes qui visent <strong>à sensibiliser la jeunesse des territoires ultra marins.</strong> Bien que les jeunes et scolaires soient très représentés dans les Outre-mer, il n’existe pas beaucoup de programmes qui permettent à ce public d’aller sur le terrain, de mettre la tête sous l’eau, d’observer la nature et de se questionner sur son environnement.  \n<br> \nDe plus, parmi les actions promouvant la protection de la nature et qui fonctionnent très bien dans les Outre-mer, on trouve <strong>les opérations de ramassage de déchets.</strong> Ce type d'action remporte un vrai succès auprès de tous les publics (locaux, métropolitains, touristes). Il serait pertinent de s’adosser à ce genre d’activité pour promouvoir des programmes de sciences participatives et d’acquisition de connaissances sur la nature.  \n<br> \nEnfin, <strong>favoriser l’interconnaissance des acteurs et des programmes sur un territoire et encourager une dynamique de structuration en réseau</strong>, permettrait d’élaborer une vraie réflexion sur la création de méthodes et outils communs. Cela faciliterait également le dialogue avec le collectif national des sciences participatives-biodiversité, notamment pour le développement d’un indicateur sciences participatives dans les Outre-mer.  \n<br>\n<strong>Pour en savoir plus : </strong>téléchargez [le rapport *Premier panorama des sciences participatives dans les territoires d’Outre-mer. Inventaire et caractérisation*.](https://inpn.mnhn.fr/docs-web/docs/download/398569).   \nUn annuaire des programmes de sciences participatives en outre-mer est à venir prochainement sur le site du Compteur biodiversité outre-mer. <br>	\N	\N	\N	f
+69480	1052	TEXT	body.titre_question.8.paragraph.paragraphText	<strong>Le financement des programmes </strong>  \nCe sont <strong>les services de l’Etat</strong> qui permettent de financer le plus de programmes, même si certaines associations parviennent à faire vivre leurs programmes sur fonds propres.  \n<br> \n<strong>Le public cible</strong>  \nLa moitié des programmes enquêtés concerne <strong>un public large</strong>, cependant, étant donné qu’une grande partie de ces programmes porte sur le milieu marin, les usagers de la mer (souvent les plongeurs sous-marins) sont particulièrement sollicités.      \nOn note également que <strong>la plupart des observateurs et bénévoles proviennent de France hexagonale.</strong> Appelés "métropolitains" dans les Outre-mer, ils s’installent pour raisons professionnelles dans un territoire ultra-marin, pour une durée courte, allant souvent d’une à cinq années.  \n<br> \n<strong>Le type d'observations</strong>  \n<strong>Une majorité des observations est faite de manière opportuniste et en autonomie.</strong> Les programmes qui utilisent un protocole scientifique ne représentent que 33% de l’ensemble enquêté.	\N	\N	\N	f
 68218	1041	TEXT	statistics.1.number	672 969 km<sup>2</sup>	\N	\N	\N	f
 68219	1041	IMAGE	ecosystems.ecosystems.0.image	\N	1700	NA	\N	f
 68220	1041	TEXT	statistics.0.number	47 espèces	\N	\N	\N	f
@@ -3236,6 +3182,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68574	1038	IMAGE	ecosystems.ecosystems.2.image	\N	2410	Mangrove sur le littoral de Guyane © Olivier Tostain - 97px	\N	f
 68575	1038	TEXT	events.10.description	Création de la Réserve naturelle nationale de la Trinité	\N	\N	\N	f
 68576	1038	TEXT	events.11.description	Création des réserves naturelles nationales de l’Amana et de Kaw-Roura	\N	\N	\N	f
+69481	1052	TEXT	body.titre_question.6.paragraph.paragraphText	<strong>Les porteurs </strong>  \nLes structures porteuses sont, à une écrasante majorité, <strong>des associations</strong>, même si l’on peut également retrouver des gestionnaires d’espaces naturels, des établissements publics et de recherche, des services de l’Etat (surtout intéressés par les Espèces Exotiques Envahissantes, pour ces derniers).  \n<br> \n<strong>Les thèmes </strong>  \n<strong>61% des programmes enquêtés portent sur le milieu marin</strong>, principalement sur la protection des tortues marines, l’observation de mammifères marins ou bien de raies et requins, mais aussi la surveillance des récifs coralliens. On trouve également des programmes terrestres permettant par exemple l’observation d’insectes et d’araignées, ou bien encore, la signalisation de déchets encombrants la mangrove. <strong>4 programmes seulement, sur l’ensemble enquêté, portent sur la flore.</strong>\n<br>  \n<strong>Des programmes locaux</strong>  \n<strong>La majorité des programmes sont issus d’initiatives locales.</strong> On trouve dans une moindre mesure des programmes adaptés de l’hexagone, comme les programmes de suivi des oiseaux « STOC », ou certains réseaux d’échouage. \n<br> 	\N	\N	\N	f
 68577	1038	TEXT	interests.locations.0.description	Créé en 2007, le [Parc amazonien de Guyane](https://www.parc-amazonien-guyane.fr/fr) s’étend sur 40 % du territoire (34 000 km<sup>2</sup>) dans la partie sud de la Guyane. Il représente le plus vaste parc national de France et de l’Union européenne. Il a pour vocation de préserver la biodiversité exceptionnelle du massif forestier ainsi que les patrimoines culturels et les modes de vie traditionnels des populations, notamment amérindiennes et bushinenguées, vivant sur le territoire. 	\N	\N	\N	f
 68922	1004	TEXT	understand.text2	Ces espèces exotiques envahissantes perturbent les équilibres environnementaux en entrant en compétition avec les espèces locales (pour la nourriture, les sites de reproduction ou de repos, la lumière, etc.), par prédation, introduction de pathogènes, hybridation ou encore en modifiant les paramètres physico-chimiques des habitats.  Elles ont ainsi de lourds impacts sur les milieux et les espèces indigènes, en particulier dans les îles où elles sont à l'origine de nombreuses extinctions.\n\nOn trouve des espèces exotiques envahissantes dans tous les groupes taxonomiques : champignons, algues, plantes vasculaires, invertébrés, reptiles, oiseaux, poissons, mammifères, etc. et dans tous les milieux : terrestres, marins ou d'eaux douces.	\N	\N	\N	f
 67815	1040	TEXT	risks.risks.1.description	En raison de leur isolement, les écosystèmes de Polynésie française s’avèrent particulièrement vulnérables aux espèces introduites envahissantes. De nombreuses espèces très invasives sont à l’origine de régressions de populations chez la faune et la flore indigène. Le Miconia ([*Miconia calvescens*](https://inpn.mnhn.fr/espece/cd_nom/447324)), introduit en 1937 dans un jardin botanique à Tahiti, remplace les espèces végétales indigènes et endémiques et entraine l’appauvrissement des forêts humides des vallées et de montagne jusqu’à 1 300 m d’altitude. Surnommé «&nbsp;le cancer vert&nbsp;», il recouvre désormais deux tiers des forêts de Tahiti et a été introduit dans d’autres îles de la Société et des Marquises. D’autres espèces végétales, comme le Tulipier du Gabon ([*Spathodea campanulata*](https://inpn.mnhn.fr/espece/cd_nom/448228)), sont également préoccupantes en raison de leur expansion.  \n  \nComme dans de nombreux milieux insulaires à travers le globe, l’introduction des rats a des conséquences désastreuses pour les écosystèmes, en particulier pour les oiseaux dont les œufs sont prédatés, mais aussi pour la flore indigène, car les rats, en consommant les plantules et les graines, perturbent la régénération naturelle des forêts. Les chats harets (chats domestiques retournés à l’état sauvage) sont également une menace importante pour la biodiversité des îles de Polynésie française. Les études récentes montrent une forte prédation sur les oiseaux, dont des espèces endémiques aux Marquises, et les reptiles. D’autres espèces animales introduites, comme les fourmis (Petite fourmi de feu ([*Wasmannia auropunctata*](https://inpn.mnhn.fr/espece/cd_nom/532927)), Grande fourmi folle ([*Anopolepis gracilipes*](https://inpn.mnhn.fr/espece/cd_nom/264513)) etc.) ou des oiseaux (Merle des Moluques ([*Acridotheres tristis*](https://inpn.mnhn.fr/espece/cd_nom/601183)), Bulbul à ventre rouge ([*Pycnonotus cafer*](https://inpn.mnhn.fr/espece/cd_nom/432746)), Busard de Gould ([*Circus approximans*](https://inpn.mnhn.fr/espece/cd_nom/432707)), etc.) ont également un fort impact sur la biodiversité terrestre des îles de Polynésie française.  \n\nSi des actions sont entreprises pour lutter contre ces espèces dans les îles où elles ont été introduites, il s’agit également d’éviter leur dissémination sur des îles où elles ne sont pas encore présentes, en mettant en place des mesures de biosécurité (chiens détecteurs, inspections, interdiction de déplacer de la terre d’une île à l’autre…). L’introduction d’espèces non existantes sur le territoire de la Polynésie française est interdite. \n	\N	\N	\N	f
@@ -3266,11 +3213,30 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66627	1039	TEXT	interests.locations.4.name	La Baie de Bouéni	\N	\N	\N	f
 67006	1044	TEXT	body.bodyElements.7.questionAnswer.response	**J’ai déjà pu identifier 107 espèces et 39 genres.** Certaines étaient attendues, d'autres non. **Certaines de ces espèces ne viennent pas de Guyane et ont un fort potentiel envahissant.** Pour le sol, un ingénieur en bioinformatique est en train d’extraire l’ADN présent dans les échantillons. Nous attendons les résultats. Après le traitement de ces données, on pourra commencer à envisager différents types d’exploitations. Une cartographie des espèces est prévue, probablement des articles sur les espèces envahissantes. Ces données pourront servir d’expertise de terrain aux gestionnaires et décideurs s’ils souhaitent mettre en place des mesures de gestion au sein de leur commune. Le programme devrait aussi évoluer dans les mois qui viennent. Nous allons publier très prochainement notre site web ([www.biodiversiteguyane.cnrs.fr](https://biodiversiteguyane.cnrs.fr/)), participer à des évènements, l’objectif étant de capter aussi un public non scolaire.   \n**Notre objectif fin 2022, date de clôture du projet, serait de parvenir à 3000 échantillons.** C’est un idéal. Reste la sensibilisation de la population, l’autre grand volet du programme. Nous avons déjà fait du chemin. Il paraît que la nièce d’une collègue devenue passionnée à la suite du programme, raconte des histoires de fourmis à toute sa famille. Elle a étonné tout le monde en prononçant le nom d’une espèce qui passait à la télé. **Une petite anecdote – parmi d’autres - qui font penser que notre travail porte ses fruits.**	\N	\N	\N	f
 67007	1044	TEXT	body.bodyElements.8.paragraph.paragraphText	**Pour en savoir plus,** contactez Marilou Hircq [marilou.hircq@ecofog.gf](marilou.hircq@ecofog.gf).	\N	\N	\N	f
+69482	1052	TEXT	body.titre_question.10.paragraph.paragraphText	<strong>Les forces </strong> <br> \n<strong>Des données parfois uniques !</strong> Pour certaines espèces protégées, rares ou méconnues, les observations permettent de compléter des jeux de données déjà existants ou sont même parfois la seule source d’informations.<br> \n<strong>Des espèces à fort capital sympathie </strong>: raies, tortues, oiseaux endémiques rares… S’intéresser à certaines espèces emblématiques, parfois mystérieuses, est un véritable atout pour les programmes qui y sont dédiés et qui deviennent par ce biais, bien plus attrayants pour le public.   \n<br> \n<strong>Les faiblesses </strong> <br> \n<strong>L’absence ou le peu d’animation de réseau !</strong> Il faut des moyens pour garantir une animation solide et continue, qui permette aux observateurs d’avoir des retours sur leur implication et qui mette en confiance les membres du réseau. Les difficultés d’animation peuvent aussi entraîner des manques en termes de communication : les programmes et structures ne se font pas assez connaître et donc restreignent leur utilisation, de fait, à un nombre de participants limité.<br> \n<strong>Une assise scientifique parfois trop légère</strong>. Les données opportunistes peuvent être une source d’informations intéressantes, cependant, le manque de rigueur scientifique du processus peut restreindre leur utilisation et leur valorisation. Il peut être intéressant de proposer de mettre en place différents niveaux d’observation, ou bien d’appliquer un protocole léger, mais validé scientifiquement.  \n<br> \n	\N	\N	\N	f
+69483	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
+69484	1000	TEXT	testimony.title	Des études inédites sur la biodiversité des outre-mer	\N	\N	\N	f
+69485	1000	TEXT	carousel.carouselElements.3.title	20 % d'espèces menacées 	\N	\N	\N	f
+69486	1000	IMAGE	carousel.carouselElements.4.image	\N	2604	Plantation de palétuviers par les scolaires du village Utufua, Wallis-et-Futuna © Angelina Tofili	\N	f
+69487	1000	LINK	carousel.carouselElements.4.button	Découvrir les écogestes	\N	\N	/ecogestes	f
+69488	1000	IMAGE	carousel.carouselElements.2.image	\N	2602	Noddis noirs (*Anous minutus*), Wallis-et-Futuna © Tristan Berr	\N	f
+69489	1000	CHECKBOX	carousel.carouselElements.2.shadowed	true	\N	\N	\N	f
+69490	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
+69491	1000	TEXT	science.text	La forêt sèche, ou sclérophylle, est l’écosystème le plus menacé de disparition en Nouvelle-Calédonie. Pour informer, faciliter et encourager les actions de protection et de restauration écologique, un tableau de bord des forêts sèches de Nouvelle-Calédonie est en ligne depuis début 2021. 	\N	\N	\N	f
+69492	1000	TEXT	carousel.carouselElements.0.title	Panorama des programmes de sciences participatives ultramarins : les résultats	\N	\N	\N	f
 67008	1044	TEXT	body.bodyElements.5.citation.citationElement	L’idée est que les élèves reproduisent l’échantillonnage chez eux, afin d’accroître de nombre d’échantillons dans toute la commune.	\N	\N	\N	f
 68578	1038	TEXT	risks.risks.2.description	Le territoire est riche en aires protégées, parmi les plus vastes de France. Outre le parc amazonien de Guyane qui couvre le sud de la Guyane, on compte six réserves naturelles nationales (Marais de Kaw-Roura, Mont Grand Matoury, Trinité, Amana, Grand Connétable et Nouragues) et une réserve naturelle régionale (Trésor). Trois zones humides sont classées au protocole de Ramsar (Basse Mana, les marais de Kaw et l’estuaire des fleuves Sinnamary et Iracoubo) et on compte également 14 000 ha protégés par le Conservatoire du littoral. La Guyane compte également deux réserves biologiques intégrales : la réserve de Petites Montagnes Tortue et la réserve de Lucifer Dékou-Dékou. La création d’une réserve biologique dirigée est en cours.\n\nLa conciliation de la préservation de la biodiversité avec le respect des modes de vie et des traditions des populations est un enjeu fort en Guyane. Le Parc national et l’OFB ont par exemple mené un programme d’étude pour mieux connaître les pratiques de chasse, évaluer l’état de conservation des gibiers et ainsi construire avec les communautés locales des modes de gestion adaptées. \n	\N	\N	\N	f
 68579	1038	TEXT	events.13.description	Création du Parc national Amazonien de Guyane	\N	\N	\N	f
 68580	1038	TEXT	risks.risks.1.description	La richesse du sol guyanais en ressources aurifères attire les convoitises. L’exploitation illégale, qui a explosé en Guyane ces dernières années, est un fléau pour la biodiversité que les actions de lutte ne réussissent pas à endiguer et qui n’épargne pas les espaces protégés.\n\nMalgré son interdiction en 2006, le mercure continue d’être utilisé par les *garimpeiros* (chercheurs d'or clandestins)pour amalgamer l’or et pollue durablement les cours d’eau et les organismes aquatiques que consomment les populations locales. Les taux de contamination observés chez ces populations sont élevés. Les eaux sont également impactées par le défrichement non raisonné de la forêt qui favorise l’érosion et le lessivage des sols, ils deviennent alors trop turbides et pauvres en oxygènes pour la faune et la flore aquatiques. Aux impacts sur l’environnement s’ajoutent d’importants problèmes humains, de misère sociale, de violence et de conflits avec les populations locales. \n\nDepuis 2008, l’opération Harpie implique de nombreux acteurs du territoire (armée, police, justice, douanes, ONF, PAG) dans des interventions qui visent notamment à bloquer l’acheminement du matériel, et procéder à des saisies et des arrestations. Ce problème complexe nécessite une coopération à l’échelle régionale, les orpailleurs clandestins et le matériel provenant majoritairement des pays limitrophes. Cette opération a permis de contenir le phénomène à l'échelle globale. En 2021, les sanctions pénales encourues par les orpailleurs illégaux ont été renforcées dans le cadre de la nouvelle loi Climat. Le renforcement de la traçabilité de l’or serait également nécessaire.\n\nSi l’activité des exploitants aurifères déclarés est encadrée par des dispositions visant à limiter ses conséquences, elle reste cependant impactante pour les milieux naturels. De plus, l’émergence de projets d’exploitation de l’or à l’échelle industrielle pose d’importante préoccupations. Le projet très controversé de la Montagne d’or à fait l’objet d’une importante opposition de la population locale et des associations environnementales. Il a pour le moment été abandonné mais la prolongation des concessions fait l’objet d’une procédure judiciaire toujours en cours.  \n	\N	\N	\N	f
+69493	1000	IMAGE	carousel.carouselElements.0.image	\N	2603	Observateur en forêt, Guyane © Pierre-Olivier Jay - 97px	\N	f
+69494	1000	TEXT	carousel.carouselElements.1.title	« Quand on sensibilise aux lucioles, on sensibilise aussi à tous les autres insectes »	\N	\N	\N	f
+69495	1000	LINK	carousel.carouselElements.0.button	Lire l'article	\N	\N	media/article/Synthèse%20étude%20sciences%20participatives	f
 68231	1041	TEXT	species.6.description	Le Chou de Kerguelen ([*Pringlea antiscorbutica*](https://inpn.mnhn.fr/espece/cd_nom/721546)) est une plante vivace dont les feuilles ovales poussent en rosette. Il se rencontre dans des milieux divers et est capable de s’adapter à différentes contraintes : à basse altitude en milieu côtier il présente une forte résistance aux embruns ; à très haute altitude (entre 700 – 1000 m), il résiste au gel, et peut se développer sur des plateaux rocheux ou en falaise. Comme les autres plantes de la famille des Brassicacées, il est riche en vitamine C et a pu être historiquement consommé par les marins pour lutter contre le scorbut. A Kerguelen, ses populations ont été fortement réduites suite à l’introduction des lapins sur l’île.\nContrairement à ce que son nom laisse à penser, cette espèce emblématique de la zone subantarctique n’est pas uniquement présente à Kerguelen mais se trouve également à Crozet et dans les îles Marion, Heard, Prince Edwards et Mac Donald.  \n  \nStatut sur la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
+69496	1000	LINK	carousel.carouselElements.1.button	Lire l'entretien	\N	\N	media/interview/Ti%20bet%20a%20limie	f
+69497	1000	TEXT	testimony.quote	Dans le cadre du projet de Compteur, le premier état des lieux des programmes de sciences participatives dans les outre-mer a été mené. Consultez [la synthèse des résultats](media/article/Synthèse%20étude%20sciences%20participatives). 	\N	\N	\N	f
+69498	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
+69499	1000	LINK	carousel.carouselElements.2.button	Découvrir les territoires	\N	\N	/territoires	f
+69500	1000	LINK	carousel.carouselElements.3.button	Consulter l'indicateur	\N	\N	/indicateurs/especes-menacees	f
 64183	1031	IMAGE	species.9.image	\N	2344	*Broussonetia papyrifera* © J-Y. H. Meyer, Délégation à la Recherche de la Polynésie française	\N	f
 64184	1031	TEXT	events.2.description	Traces des premiers habitants de l'archipel, la civilisation Lapita	\N	\N	\N	f
 64185	1031	TEXT	events.3.description	Première arrivée des européens dans l'archipel	\N	\N	\N	f
@@ -3340,6 +3306,22 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68234	1041	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
 68235	1041	TEXT	interests.locations.2.name	Les îles Saint-Paul et Amsterdam	\N	\N	\N	f
 68236	1041	TEXT	events.0.date	-40 millions d’années	\N	\N	\N	f
+69501	1000	TEXT	presentation.text	Les territoires d’outre-mer français présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
+69502	1000	TEXT	carousel.carouselElements.4.text	Consultez les écogestes et adaptez vos habitudes pour réduire votre impact sur la biodiversité.	\N	\N	\N	f
+69503	1000	CHECKBOX	carousel.carouselElements.4.shadowed	true	\N	\N	\N	f
+69504	1000	TEXT	carousel.carouselElements.1.text	La structure guadeloupéenne *An ba loup-la* (« sous la loupe » en créole antillais) anime le programme *Ti bet a limiè*, l’Observatoire des lucioles de Guadeloupe. L’objectif ? Recueillir des données sur ces insectes méconnus, mais aussi sensibiliser le public au rôle écologique des insectes et aux perturbations des milieux dont ils sont victimes.	\N	\N	\N	f
+69505	1000	IMAGE	carousel.carouselElements.3.image	\N	2600	 Rainette de Gaucher (*Dendropsophus gaucheri*), Guyane © Raphael Gailhac - Office français de la biodiversité	\N	f
+69506	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre la biodiversité	\N	\N	\N	f
+69507	1000	IMAGE	testimony.image	\N	2606	Suivi des récifs coralliens à Wallis-et-Futuna © Sandrine Job	\N	f
+69508	1000	TEXT	carousel.carouselElements.4.title	Tous acteurs de la préservation de la biodiversité	\N	\N	\N	f
+69509	1000	LINK	science.more	Lire l'article	\N	\N	media/article/Tableau%20de%20bord%20forêts%20sèches	f
+69510	1000	CHECKBOX	carousel.carouselElements.1.shadowed	true	\N	\N	\N	f
+69511	1000	TEXT	carousel.carouselElements.3.text	Dans les territoires d’outre-mer, 20 % des espèces sont considérées comme éteintes ou en danger d’extinction selon la Liste rouge des espèces menacées. Comment ce chiffre est-il calculé ? Quelles sont les menaces qui pèsent sur les espèces ? Quelles actions sont mises en place pour les préserver ? 	\N	\N	\N	f
+69512	1000	TEXT	carousel.carouselElements.0.text	Rapporter des observations de requins ou de raies, surveiller l’état de santé de coraux, ou encore compter des lucioles: autant d’activités qui composent les Sciences Participatives dans les Outre-mer. Un premier panorama, permettant l’inventaire et la caractérisation de ces activités vient d’être publié, nous en proposons ici une synthèse.  	\N	\N	\N	f
+69513	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
+69514	1000	TEXT	carousel.carouselElements.2.text	Naviguez parmi les portraits biodiversité des territoires pour mieux comprendre les enjeux avec une sélection de repères et de chiffres clés sur la nature.	\N	\N	\N	f
+69515	1000	IMAGE	science.image	\N	2605	Forêt sèche de Malhec © Conservatoire d'espaces naturels de Nouvelle-Calédonie	\N	f
+69516	1000	TEXT	science.title	"On peut visualiser en un clic le nombre d’hectares reboisés"	\N	\N	\N	f
 67025	1042	TEXT	body.bodyElements.15.questionAnswer.response	**Notre association est très ouverte aux bénévoles !** Malgré le nombre de salariés qui augmente, on fonctionne avec beaucoup de bénévoles locaux. Nous avons aussi souvent des stagiaires. On préfère que les gens viennent pour de longues périodes pour s’adapter au contexte et être formés. Ça peut être sur l’ensemble des missions : suivis, actions de présence sur les plages, sensibilisation. Aujourd’hui nous avons un réseau d’une bonne trentaine de bénévoles qui sont présents tous les jours, et de nombreux adhérents qui participent aux sorties ou qui sont sympathisants. **Il y a une bonne cohésion et une bonne entente entre les bénévoles et les salariés. On est preneurs de toute aide !**	\N	\N	\N	f
 67026	1042	TEXT	body.bodyElements.17.paragraph.paragraphText	**Retrouvez plus d’informations sur [le site de l’association](https://oulangananyamba.com/) et suivez les actualités sur le Facebook d'[*Oulanga Na Nyamba*](https://www.facebook.com/OulangaNaNyamba976). Contact : [contact@oulangananyamba.com](contact@oulangananyamba.com)**	\N	\N	\N	f
 67027	1042	TEXT	body.bodyElements.3.paragraph.paragraphText	**Le deuxième axe de travail, c’est la protection**. La plus grande problématique pour les tortues marines à Mayotte, c’est le braconnage. Une femelle sur dix qui vient pondre est braconnée, c'est énorme et pas du tout soutenable pour les populations de tortues ! La vente de chair de tortue est très lucrative. **C’est une vision à court terme pour ceux qui braconnent**, ils ne regardent pas les conséquences alors qu'il n'y aura peut-être plus de tortues pour leurs enfants.  \n  \nNous avons une grande équipe avec notamment des services civiques qui sont présents sur les différentes plages où il y a le plus de braconnage. Leur présence peut dissuader les braconniers et ils peuvent alerter la gendarmerie. **Et comme nous sommes une association agrée protection de l’environnement, nous pouvons porter plainte et on se constitue partie civile au tribunal pour tous les cas de braconnage**.	\N	\N	\N	f
@@ -3348,6 +3330,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 67030	1042	TEXT	body.bodyElements.0.questionAnswer.response	*Oulanga Na Nyamba* existe **depuis plus de 20 ans**, c'est une association localement très ancrée, nous travaillons avec beaucoup de partenaires, qui nous font confiance, et on sent que nos projets sont pris au sérieux. Il y a eu une belle évolution ces dernières années : nous sommes passés d’une salariée en 2018 à 8 salariés en 2021.  \n<br>\nNous avons plusieurs axes de travail : **le premier c’est la sensibilisation au sujet de l’environnement et des tortues marines**. On essaye de faire des animations adaptées aux publics partout où on le peut, notamment auprès des jeunes, des scolaires. Nous faisons aussi des formations auprès d’acteurs locaux, aussi bien dans des petites associations que pour les communes par exemple. On forme des ambassadeurs pour avoir des relais qui nous permettent de diffuser les informations encore plus loin. 	\N	\N	\N	f
 67031	1042	TEXT	body.bodyElements.10.questionAnswer.response	Déjà, **ne pas manger de tortue et ne pas braconner**. On a fait des enquêtes à ce sujet, même si c’est aussi pour le goût, **c’est surtout sous l’influence de la société et des amis que la viande est consommée**. 	\N	\N	\N	f
 68237	1041	TEXT	identity.populationYear	-	\N	\N	\N	f
+69517	1000	CHECKBOX	carousel.carouselElements.3.shadowed	true	\N	\N	\N	f
 67032	1042	IMAGE	presentation.image	\N	2246	Tortue verte juvénile dans la Vasière des Badamiers à Mayotte © François-Elie Paute, *Oulanga Na Nyamba*	\N	f
 67033	1042	TEXT	body.bodyElements.14.paragraph.paragraphText	Il faut aussi bien **gérer ses déchets et ne pas polluer, ne pas abimer les habitats**. La plus grosse partie des impacts sur le milieu marin, c’est au niveau terrestre qu’on peut les résoudre. **Le défrichement provoque l’envasement du lagon et les constructions en bord de plage engendrent de la pollution lumineuse ou sont destructeurs d’habitats de tortue**. Les touristes peuvent choisir des logements écotouristiques, pour avoir un impact positif. Nous organisons aussi pas mal d’évènement de nettoyage par rapport à la lutte contre les pollutions.	\N	\N	\N	f
 67034	1042	IMAGE	body.bodyElements.16.image.imageElement	\N	2245	Membres de l'association © *Oulanga Na Nyamba*	\N	f
@@ -3356,6 +3339,11 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 67037	1042	IMAGE	interviewee.photo	\N	2243	logo Oulanga Na Nyamba	\N	f
 67038	1042	TEXT	body.introduction	En shimaoré, *Oulanga Na Nyamba* signifie «&nbsp;Environnement et Tortues&nbsp;». L'association œuvre depuis 1998 pour la préservation de la biodiversité mahoraise, en particulier des tortues marines et de leurs habitats.  \n  \nÀ Mayotte, la Tortue verte et la Tortue imbriquée se reproduisent et s’alimentent, et d’autres espèces sont observées occasionnellement. Toutes les tortues marines sont menacées d’extinction.  \n   \nRencontre avec Jeanne Wagner, la directrice de l'association. \n	\N	\N	\N	f
 67039	1042	TEXT	body.bodyElements.7.questionAnswer.response	On travaille dessus depuis 2015, **c’est un projet multi-partenarial, attendu par tous les acteurs de l’environnement, du tourisme et par les élus qui nous appuient**. C’est un projet très attractif et aussi très utile pour les tortues.	\N	\N	\N	f
+69518	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
+69519	1000	TEXT	carousel.carouselElements.2.title	Partez à la rencontre des espèces et des écosystèmes ultramarins	\N	\N	\N	f
+69520	1000	TEXT	testimony.text	L'équipe du Compteur travaille avec ses partenaires sur le développement de nouveaux indicateurs pour enrichir les données disponibles. Des travaux sont également menés sur la perception de la nature et le rapport aux outils numériques. 	\N	\N	\N	f
+69521	1000	CHECKBOX	carousel.carouselElements.0.shadowed	true	\N	\N	\N	f
+69522	1000	IMAGE	carousel.carouselElements.1.image	\N	2601	A la découverte des lucioles de Guadeloupe et de leur milieu de vie © Aline M. - An ba loup-la	\N	f
 68238	1041	IMAGE	species.5.image	\N	1723	*Azorella selago* © Julie Tucoulet	\N	f
 68239	1041	TEXT	statistics.0.text	d'oiseaux marins	\N	\N	\N	f
 68240	1041	IMAGE	species.1.image	\N	1721	*Diomedea exulans* © Julie Tucoulet	\N	f
@@ -3412,7 +3400,20 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69246	1015	TEXT	species.0.description	Le Matoutou Falaise ([*Caribena versicolor*](https://inpn.mnhn.fr/espece/cd_nom/845739\n)) est une mygale arboricole endémique de la Martinique. D’une envergure totale pouvant aller jusqu’à 15 cm, elle se caractérise par ses couleurs : abdomen rouge vif, pattes roses violacées et thorax bleuté. Prédatrice nocturne, elle se nourrit principalement d'insectes et est inoffensive pour les humains. Longtemps prélevée par les terrariophiles, l’espèce est protégée depuis 2017 au niveau national et sa détention est illicite.  \n  \nStatut dans la Liste rouge mondiale : non évalué. 	\N	\N	\N	f
 69247	1015	TEXT	identity.highestPointName	Montagne Pelée	\N	\N	\N	f
 69248	1015	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
+69523	1019	TEXT	presentation.title	Faire progresser ensemble les connaissances	\N	\N	\N	f
+69524	1019	TEXT	examples.projects.2.subject	Espèces marines	\N	\N	\N	f
+69525	1019	TEXT	examples.title	Quelques exemples de programmes participatifs	\N	\N	\N	f
+69526	1019	TEXT	examples.projects.0.title	La photo-identification des tortues marines à La Réunion	\N	\N	\N	f
+69527	1019	TEXT	examples.projects.0.subject	Suivi individuel des tortues marines	\N	\N	\N	f
+69528	1019	LINK	examples.projects.3.more	En savoir plus	\N	\N	https://www.facebook.com/paladalik/	f
+69529	1019	TEXT	examples.projects.4.subject	Insectes lumineux	\N	\N	\N	f
 68590	1038	TEXT	ecosystems.ecosystems.1.description	De l’allemand « *insel* » : île et « *berg* » : montagne, ces sommets granitiques dénudés émergeant de la forêt amazonienne sont aussi appelés « savane-roches ». La roche nue est colonisée par des cyanobactéries, algues bleues microscopiques, qui vont par la suite permettre l’installation des plantes vasculaires. On trouve sur les inselbergs de nombreuses espèces végétales caractéristiques dites lithophytes, adaptées aux conditions drastiques de sécheresse et fort ensoleillement, relictuelles des périodes de climat plus sec dans le bassin amazonien. En raison de leur isolement, certains inselbergs abritent des espèces endémiques. On compte environ 200 inselbergs en Guyane, en majorité dans le sud, le plus haut culminant à 740&nbsp;m.  	\N	\N	\N	f
+69530	1019	TEXT	examples.projects.3.title	Le Réseau d’observation des récifs coralliens (RORC) de Nouvelle-Calédonie	\N	\N	\N	f
+69531	1019	TEXT	examples.projects.1.actor	Groupe d’étude et de protection des oiseaux de Guyane (GEPOG)	\N	\N	\N	f
+69532	1019	IMAGE	examples.projects.1.image	\N	2586	Conure cuivré, Guyane © Raphael Gailhac - OFB	\N	f
+69533	1019	IMAGE	images.2.image	\N	2585	Sensibilisation à la biodiversité des récifs de Mayotte © Fanny Cautain - OFB	\N	f
+69534	1019	IMAGE	examples.projects.4.image	\N	2580	*Aspisoma ignitum* © Julien Touroult - INPN 	\N	f
+69535	1019	TEXT	paragraphs.0.text	Certains programmes se basent sur l’application d’un **protocole précis** (durée d’observation, distance couverte, nombre de points d’écoute, etc.). Ils nécessitent souvent une formation à la méthode et une implication sérieuse et régulière, car la qualité des données récoltées dépend de la bonne mise en œuvre du protocole. C’est le cas par exemple du Suivi temporel des oiseaux communs (STOC).\n\nD’autres programmes proposent de **faire remonter les observations ponctuelles ciblant une ou plusieurs espèces spécifiques**, parfois à une période précise ou sur un espace délimité. Par exemple les programmes de photo-identification de tortues ou de mammifères marins.\n\nLes signalements opportunistes permettent de faire remonter des observations occasionnelles, **comme des évènements inhabituels**, ou sur des espèces, une période ou un site non-ciblés. 	\N	\N	\N	f
 64251	1031	IMAGE	species.5.image	\N	2351	*Cyrtandra futunae* © J-Y. H. Meyer, Délégation à la Recherche de la Polynésie française	\N	f
 64252	1031	TEXT	statistics.0.text	îlots dans le lagon autour de Wallis	\N	\N	\N	f
 64253	1031	TEXT	ecosystems.ecosystems.1.name	La lande à *toafa*	\N	\N	\N	f
@@ -3429,6 +3430,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64264	1031	TEXT	interests.locations.0.description	Le plus grand et le plus profond des cinq lacs de Wallis est issu de l’effondrement d’une ancienne caldeira. Il s’étend sur 400 m de diamètre et 80 m de profondeur et est entouré de parois verticales de plus de 30 m de hauteur. La forêt aux abords du lac, qui abrite de nombreux oiseaux et des roussettes, était autrefois protégée par un *Vao Tapu*, c’est-à-dire considérée comme taboue ou sacrée. 	\N	\N	\N	f
 64265	1031	TEXT	risks.risks.2.description	L’archipel dispose d’un Code de l’environnement depuis 2007 et d’une Stratégie biodiversité depuis 2016. Le territoire ne compte pas d’aires protégées sur sens strict pour le moment, mais des réserves coutumières dites zones *Tapu* ont autrefois existé, par exemple au lac Lalolalo. Des volontés de créer des zones protégées existent, notamment concernant Alofi.\n  \nLe territoire de Wallis-et-Futuna participe au [programme PROTEGE](https://protege.spc.int/fr), projet de coopération régionale mis en œuvre par la Communauté du Pacifique (CPS) et le Programme régional océanien de l’environnement (PROE) pour une durée de 4 ans (2018-2022). Il vise à promouvoir le développement économique durable et résilient face aux changements climatiques des Pays et territoires d’outre-mer européens du Pacifique (PTOM) et concerne également la Nouvelle-Calédonie et la Polynésie française. Le programme s’articule autour de quatre volets : agriculture et foresterie, pêche côtière et aquaculture, eau et espèces envahissantes.\n	\N	\N	\N	f
 64266	1031	TEXT	risks.risks.1.description	Au moins 416 espèces de plantes ont été introduites dans l'archipel, notamment comme ornementales dans les jardins. Parmi elles, plus de 150 sont considérées naturalisées, c’est-à-dire qu’elles se reproduisent sans intervention humaine, ce qui est beaucoup compte tenu de la petite taille du territoire. Les perturbations anthropiques ou naturelles (feux, déboisement, cyclone, etc.) peuvent faciliter leur installation et leur prolifération au détriment des plantes indigènes.  \n  \nLes lianes [*Merramia peltata*](https://inpn.mnhn.fr/espece/cd_nom/848283) et [*Mikania scandens*](https://inpn.mnhn.fr/espece/cd_nom/448111), ainsi que l’arbuste [*Clidemia hirta*](https://inpn.mnhn.fr/espece/cd_nom/912564), sont particulièrement envahissantes comme dans de nombreuses îles du Pacifique.\nAu niveau de la faune, rats, fourmis (dont la Petite fourmi de feu [*Wasmannia auropunctata*](https://inpn.mnhn.fr/espece/cd_nom/532927)), escargots et oiseaux introduits sont également problématiques, ainsi que les cochons, chats et chiens féraux qui peuvent avoir des impacts écologiques importants, en particulier sur les îlots de Wallis.	\N	\N	\N	f
+69536	1019	TEXT	examples.projects.2.description	S’appuyer sur les observations de tous les usagers de la mer pour mieux comprendre le milieu marin mahorais, c’est l’objectif du programme TsiÔno, « J’ai vu » en shimaoré.  \nLe projet vise à préciser les inventaires des espèces et leur répartition, suivre les habitudes de certains individus pour 6 espèces cibles (dont la Baleine à bosse et le Dugong) et alerter sur la présence de phénomènes anormaux, comme la prolifération d’espèces envahissantes ou le blanchissement de coraux. Des supports pédagogiques permettent aux observateurs de s’exercer à la reconnaissance des espèces du lagon. 	\N	\N	\N	f
+69537	1019	LINK	examples.projects.2.more	En savoir plus	\N	\N	https://www.tsiono.fr/ 	f
+69538	1019	TEXT	examples.projects.0.description	Développé par Kelonia, l’observatoire des tortues marines de La Réunion, pour contribuer à la compréhension de la biologie des tortues marines, ce programme invite les plongeurs à envoyer photos et observations du comportement des individus rencontrées. L'identification de chaque tortue repose sur la configuration unique des écailles de sa tête.	\N	\N	\N	f
 64267	1031	TEXT	interests.locations.2.description	Sur plus de 200 km<sup>2</sup> s’étend un ensemble varié et très riche de formations récifales et d’herbiers sous-marins, ainsi que 19 îlots boisés où se reproduisent des tortues marines et de nombreuses espèces d’oiseaux marins. La barrière récifale est interrompue par quatre passes : trois à l’ouest et une au sud. 	\N	\N	\N	f
 64268	1031	TEXT	interests.locations.1.description	Au contraire de Wallis qui n’en possède aucune, le relief de Futuna est parcouru de plusieurs rivières qui abritent une faune d’eau douce dont plusieurs espèces de gobies endémiques, et sont pour le moment exemptes de poissons introduits.	\N	\N	\N	f
 64269	1031	TEXT	ecosystems.ecosystems.3.name	Les récifs coralliens	\N	\N	\N	f
@@ -3451,11 +3455,49 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69013	1009	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 69014	1009	TEXT	visual.subtitle	Visualisez le nombre d'espèces décrites en outre-mer par groupe biologique	\N	\N	\N	f
 69015	1009	TEXT	understand.title1	Un patrimoine biologique exceptionnel en outre-mer	\N	\N	\N	f
+69539	1019	TEXT	examples.projects.4.description	Relai guadeloupéen de l’Observatoire des vers luisants et lucioles, l’observatoire Ti bèt a limiè a commencé ses activités en 2019. Les participants sont invités à faire remonter leurs observations de plusieurs espèces d’insectes lumineux (lucioles et taupins), afin de mieux connaitre leur biologie et leur écologie, identifier les facteurs favorisant leur présence ou leur régression et sensibiliser la population à leur maintien.	\N	\N	\N	f
+69540	1019	IMAGE	images.1.image	\N	2582	Observations à la longue vue à Saint-Pierre et Miquelon © Nathalie De Lacoste	\N	f
+69541	1019	TEXT	examples.projects.3.description	Sur les côtes néo-calédoniennes, plus de 80 stations coraliennes sont suivies annuellement selon une méthodologie appliquée par le réseau international [Reef Check](https://www.reefcheck.fr). Les observations protocolées sont réalisées sur quatre compartiments de l'environnement récifal (habitats, poissons, macro-invertébrés et perturbations du récif) pour évaluer sont état de santé. L'association Pala Dalik assure l’animation, la coordination et la formation des participants sur l'ensemble des trois provinces. 	\N	\N	\N	f
+69542	1019	TEXT	examples.projects.2.actor	Parc marin de Mayotte	\N	\N	\N	f
+69543	1019	LINK	examples.projects.4.more	En savoir plus	\N	\N	https://www.anbaloup-la.fr/observatoire-lucioles/	f
+69544	1019	TEXT	paragraphs.1.text	La plupart des programmes permettent d’alimenter des bases de données collaboratives. Certains projets sont adossés à des programmes de recherche et visent à répondre à une question précise. D’autres mettent en avant en premier lieu un fort objectif de pédagogie, d’acquisition de connaissances et de sensibilisation à la démarche scientifique des observateurs.\n	\N	\N	\N	f
+69545	1019	IMAGE	examples.projects.0.image	\N	2581	© Cynomana  / CC BY-SA 4.0 	\N	f
+69546	1019	IMAGE	examples.projects.3.image	\N	2584	© Reefcheck France 	\N	f
+69547	1019	TEXT	examples.projects.3.target	Plongeurs, apnéistes. Formation nécessaire. 	\N	\N	\N	f
+69548	1019	TEXT	paragraphs.2.title	Un état des lieux des programmes ultramarins	\N	\N	\N	f
+69549	1019	TEXT	examples.projects.1.subject	Suivi des populations d’oiseaux communs par échantillonnages réguliers le long de parcours prédéfinis	\N	\N	\N	f
+69550	1019	LINK	application.downloadLink	Je télécharge l’application INPN Espèces	\N	\N	https://inpn.mnhn.fr/informations/inpn-especes	f
+69551	1019	TEXT	examples.projects.1.description	Débuté en 2012 dans le cadre du Life+ CapDOM, conjointement avec la Martinique et La Réunion, le STOC-Guyane a pour but de suivre les variations d'abondances d'oiseaux communs sur le long terme pour évaluer l'impact des activités humaines. Le programme demande une implication régulière et nécessite une formation au protocole utilisé et la reconnaissance des espèces. A ce jour, près de cinquante parcours sont échantillonnés annuellement et au total, plus de 50 000 données ont été collectées.	\N	\N	\N	f
+69552	1019	IMAGE	images.0.image	\N	2579	Observation des oiseaux marins à Mayotte © Fanny Cautain - OFB	\N	f
+69553	1019	TEXT	examples.projects.1.target	Ornithologues amateurs ou professionnels (à titre bénévole). Formation nécessaire. 	\N	\N	\N	f
+69554	1019	TEXT	examples.projects.0.target	Plongeurs, apnéistes, pratiquant la photo sous-marine	\N	\N	\N	f
+69555	1019	TEXT	examples.projects.3.subject	Suivi de l’état de santé des récifs de Nouvelle-Calédonie	\N	\N	\N	f
+69556	1019	TEXT	header.subtitle	Enrichir ses propres connaissances et développer son sens de l’observation tout en participant à la progression et l'amélioration des connaissances scientifiques pour préserver la biodiversité, c’est le pari des sciences participatives.  \n\nFaune, flore, milieu marin ou terrestre, observation ponctuelle ou programme protocolé, trouvez le programme qui vous correspond et contribuez au développement des connaissances !	\N	\N	\N	f
+69557	1019	LINK	examples.projects.1.more	En savoir plus	\N	\N	http://www.gepog.org/Nos-actions/Milieux-terrestres/Suivi-Temporel-des-Oiseaux-Communs-STOC-EPS	f
+69558	1019	TEXT	examples.projects.2.title	TsiÔno, le réseau des observateurs du milieu marin mahorais	\N	\N	\N	f
+69559	1019	TEXT	header.title	C'est quoi les sciences participatives ?	\N	\N	\N	f
+69560	1019	IMAGE	examples.projects.2.image	\N	2578	Plongeur à Mayotte © Alexandra Gigou - OFB	\N	f
 68943	1012	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 68944	1012	TEXT	understand.text2	Ces milieux ont une importance au regard des services écosystémiques qu’ils procurent aux humains : régulation des crues et des inondations, protection des côtes de l’érosion et des tempêtes, épuration des eaux...\nSi des phénomènes naturels tels que les cyclones peuvent impacter les mangroves, de nombreuses causes de leur dégradation ont une origine humaine : changement climatique, artificialisation, exploitation intensive de ses ressources (bois, chasse, etc.), dépôts d’ordures, déversement des eaux usées, pollutions, pression touristique, etc. 	\N	\N	\N	f
+69561	1019	CHECKBOX	header.shadowed	true	\N	\N	\N	f
+69562	1019	TEXT	paragraphs.1.title	Différents objectifs	\N	\N	\N	f
+69563	1019	TEXT	presentation.description	Le terme « sciences participatives » regroupe des programmes acquisition d’informations et de données scientifiques en impliquant une participation active des citoyens. Les observations sont réalisées de manière bénévole, le plus souvent par des non-professionnels. Dans certains cas, une formation au préalable est nécessaire, mais de nombreux programmes sont accessibles sans connaissances naturalistes poussées. 	\N	\N	\N	f
+69564	1019	TEXT	examples.projects.3.actor	Association Pala Dalik	\N	\N	\N	f
+69565	1019	TEXT	paragraphs.2.text	Les équipes du Compteur et de [Vigie Nature](https://www.vigienature.fr/) ont mené conjointement une étude pour **dresser le premier panorama des programmes de sciences participatives dans les territoires ultramarins**. Consultez [la synthèse des résultats de cet état des lieux](media/article/Synthèse%20étude%20sciences%20participatives) et téléchargez [le rapport](https://inpn.mnhn.fr/docs-web/docs/download/398569).\n  \nL'annuaire des programmes recensés sera prochainement disponible sur le site du Compteur. 	\N	\N	\N	f
 64278	1031	TEXT	risks.risks.0.name	Des pressions sur le lagon et les forêts 	\N	\N	\N	f
 64279	1031	IMAGE	interests.locations.1.image	\N	2332	Rivière de Futuna © Jairo Talalua	\N	f
 64280	1031	IMAGE	ecosystems.ecosystems.1.image	\N	2346	Lande à *Toafa* © Jean-Yves H. Meyer, Délégation à la Recherche de la Polynésie française	\N	f
+69566	1019	TEXT	examples.projects.4.title	Ti bèt a limiè, l’Observatoire des lucioles en Guadeloupe	\N	\N	\N	f
+69567	1019	TEXT	examples.projects.0.actor	Kelonia	\N	\N	\N	f
+69568	1019	TEXT	application.title	Agir pour la science depuis son smartphone, c’est possible !	\N	\N	\N	f
+69569	1019	TEXT	paragraphs.0.title	Différents types de programmes 	\N	\N	\N	f
+69570	1019	TEXT	examples.projects.4.actor	An ba loup-la	\N	\N	\N	f
+69571	1019	TEXT	application.subtitle	J'agis en ligne	\N	\N	\N	f
+69572	1019	TEXT	examples.projects.4.target	Tous publics	\N	\N	\N	f
+69573	1019	TEXT	examples.projects.1.title	Le Suivi temporel des oiseaux communs (STOC) en Guyane	\N	\N	\N	f
+69574	1019	LINK	examples.projects.0.more	En savoir plus	\N	\N	https://museesreunion.fr/kelonia/actualites-et-savoirs-de-kelonia/la-photo-identification-des-tortues-marines/?fbclid=IwAR0W8NGqRTa20a8	f
+69575	1019	TEXT	examples.projects.2.target	Usagers de la mer, tous publics	\N	\N	\N	f
+69576	1019	IMAGE	header.background	\N	2583	 Observateur en forêt, Guyane © Pierre-Olivier Jay - 97px	\N	f
 68246	1041	TEXT	identity.presentation	Fjords, glaciers, falaises, cratères, vallées à la végétation rase… Les Terres Australes françaises– aussi appelées îles subantarctiques - fascinent par leur isolement et leur nature brute et inhospitalière. Au sud de l’océan Indien entre les 40<sup>e</sup> rugissants et les 50<sup>e</sup> hurlants, ces îles volcaniques balayées par les vents présentent des paysages exceptionnels et abritent l’une des plus fortes concentrations et diversités d’oiseaux marins au monde. Leurs eaux sont également très riches, accueillant de nombreux mammifères marins qui viennent s’y nourrir. Ces îles sont classées en Réserve naturelle nationale depuis 2006 et inscrites sur la Liste du Patrimoine mondial de l’Unesco depuis 2019. 	\N	\N	\N	f
 68247	1041	IMAGE	interests.locations.0.image	\N	1741	Albatros nicheur et falaises de Crozet © Julie Tucoulet	\N	f
 68248	1041	TEXT	species.6.name	Le Chou de Kerguelen	\N	\N	\N	f
@@ -4186,7 +4228,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 2587, true);
+SELECT pg_catalog.setval('public.image_seq', 2606, true);
 
 
 --
@@ -4221,14 +4263,14 @@ SELECT pg_catalog.setval('public.media_category_seq', 1000, false);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 69360, true);
+SELECT pg_catalog.setval('public.page_element_seq', 69576, true);
 
 
 --
 -- Name: page_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_seq', 1051, true);
+SELECT pg_catalog.setval('public.page_seq', 1052, true);
 
 
 --
