@@ -1299,6 +1299,11 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2660	image/jpeg	copy-1957
 2671	image/jpeg	copy-2056
 2679	image/jpeg	copy-1957
+2690	image/png	copy-2079
+2699	image/jpeg	copy-2072
+2704	image/jpeg	copy-2074
+2705	image/jpeg	copy-2058
+2708	image/jpeg	copy-2039
 1866	image/jpeg	copy-1229
 1867	image/jpeg	copy-1223
 1868	image/jpeg	copy-1228
@@ -1485,6 +1490,9 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2673	image/jpeg	copy-1837
 2681	image/png	copy-2043
 2686	image/jpeg	copy-2056
+2691	image/jpeg	copy-2069
+2701	image/jpeg	copy-2077
+2711	image/jpeg	copy-1957
 2008	image/jpeg	copy-1692
 2013	image/jpeg	copy-1772
 2287	image/jpeg	copy-1059
@@ -1530,6 +1538,9 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2664	image/jpeg	copy-2046
 2675	image/jpeg	copy-2033
 2682	image/jpeg	copy-2053
+2692	image/jpeg	copy-2073
+2700	image/jpeg	copy-2078
+2709	image/jpeg	copy-1835
 2009	image/jpeg	copy-1754
 2010	image/jpeg	copy-1693
 2012	image/jpeg	copy-1750
@@ -1582,6 +1593,9 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2665	image/png	copy-2043
 2676	image/jpeg	copy-2039
 2683	image/jpeg	copy-2046
+2693	image/jpeg	copy-2066
+2702	image/jpeg	copy-2076
+2707	image/jpeg	copy-1837
 2011	image/jpeg	copy-1746
 2015	image/jpeg	copy-1742
 2017	image/jpeg	copy-1690
@@ -1766,6 +1780,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2672	image/jpeg	copy-2058
 2680	image/jpeg	copy-2059
 2684	image/jpeg	copy-2054
+2694	image/jpeg	copy-2071
+2703	image/jpeg	copy-2075
 2154	image/jpeg	copy-1842
 2290	image/jpeg	copy-1280
 2298	image/jpeg	copy-1298
@@ -1812,6 +1828,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2667	image/jpeg	copy-2054
 2674	image/jpeg	copy-1832
 2685	image/jpeg	copy-2050
+2695	image/jpeg	copy-2067
+2710	image/jpeg	copy-1832
 2156	image/jpeg	copy-1286
 2157	image/jpeg	copy-1236
 2159	image/jpeg	copy-1841
@@ -1855,6 +1873,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2668	image/jpeg	copy-2050
 2677	image/jpeg	copy-1835
 2687	image/jpeg	copy-2051
+2696	image/jpeg	copy-2065
+2706	image/jpeg	copy-2080
 2158	image/jpeg	copy-1285
 2294	image/jpeg	copy-1287
 2306	image/jpeg	copy-1270
@@ -1894,6 +1914,7 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2669	image/jpeg	copy-2051
 2678	image/jpeg	copy-2040
 2688	image/jpeg	copy-2057
+2697	image/jpeg	copy-2068
 2160	image/jpeg	copy-1843
 2295	image/jpeg	copy-1385
 2300	image/jpeg	copy-1307
@@ -1937,6 +1958,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2657	image/jpeg	copy-1837
 2670	image/jpeg	copy-2057
 2689	image/jpeg	copy-2044
+2698	image/jpeg	copy-2070
+2712	image/jpeg	copy-2081
 2162	image/jpeg	copy-1844
 2163	image/jpeg	copy-1622
 2164	image/jpeg	copy-1622
@@ -2269,6 +2292,7 @@ COPY public.media_category_relation (media_page_id, category_id) FROM stdin;
 1055	1010
 1044	1006
 1049	1008
+1056	1009
 \.
 
 
@@ -2283,8 +2307,10 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1023	ne-pas-jeter-dechets-nature	ecogesture	Je ne jette pas mes déchets dans la nature
 1008	especes-endemiques	indicator	Espèces endémiques
 1050	Tableau de bord forêts sèches	article	Tableau de bord forets seches
+1000	accueil	home	Compteur Biodiversité Outre-mer
 1003	territoires	territories	Découvrez les outre-mer
 1014	recifs-coralliens	indicator	Récifs coralliens
+1056	Cétacés Nouvelle-Calédonie	report	Mammifères marins de Nouvelle-Calédonie
 1010	especes-menacees	indicator	Espèces éteintes et menacées
 1011	taux-boisement	indicator	Proportion de forêts
 1001	guadeloupe	territory	Guadeloupe
@@ -2297,7 +2323,6 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1046	media	Accueil médias	Médias
 1045	terre-adelie	territory	La Terre Adélie
 1051	Ti bet a limie	interview	Ti bet a limie 
-1000	accueil	home	Compteur Biodiversité Outre-mer
 1043	Entretien Eddy Dumbardon-Martial - Pollinisateurs Caravelle	interview	Entretien Eddy Dumbardon - Martial
 1044	Entretien avec Marilou Hircq - BUG	interview	Entretien avec Marilou Hircq - BUG
 1042	Entretien avec Jeanne Wagner	interview	Entretien avec Jeanne Wagner
@@ -2344,6 +2369,11 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70417	1016	TEXT	science.subtitle	Les sciences participatives permettent à tous les curieux de la nature, du débutant à l’expérimenté, de contribuer à l'amélioration des connaissances sur la biodiversité en fournissant aux scientifiques un grand nombre de données de terrain.	\N	\N	\N	f
 70418	1016	TEXT	ecogestures.title	Découvrez les écogestes	\N	\N	\N	f
 70419	1016	IMAGE	header.background	\N	1335	Agricultrices, Mayotte © Bertrand Fanonnel - 97px	\N	f
+70868	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
+70869	1000	TEXT	testimony.title	Des études inédites sur la biodiversité des outre-mer	\N	\N	\N	f
+70870	1000	TEXT	carousel.carouselElements.3.title	Partez à la rencontre des espèces et des écosystèmes ultramarins	\N	\N	\N	f
+70871	1000	IMAGE	carousel.carouselElements.4.image	\N	2710	 Rainette de Gaucher (*Dendropsophus gaucheri*), Guyane © Raphael Gailhac - Office français de la biodiversité	\N	f
+70872	1000	LINK	carousel.carouselElements.4.button	Consulter l'indicateur	\N	\N	/indicateurs/especes-menacees	f
 68825	1005	LINK	onb.link	Retrouvez les indicateurs sur le site de l’ONB	\N	\N	https://naturefrance.fr/indicateurs	f
 68826	1005	TEXT	inpn.description	L’INPN recense les espèces (animales, végétales et fongiques), les habitats naturels, les espaces protégés et le patrimoine géologique, en métropole et en outre-mer. L’ensemble des acteurs de l’environnement contribuent à la mise à jour régulière des informations sur le site de l’INPN dans le cadre du Système d’information de l’Inventaire national du patrimoine naturel (SINP). L’INPN met à disposition de tous des données de référence, validées par des réseaux d'experts. Le Muséum national d'Histoire naturelle en assure la responsabilité scientifique.	\N	\N	\N	f
 68827	1005	IMAGE	image	\N	1016	Serpent liane perroquet, *Leptophis ahaetulla*, Guyane © Raphaël Gailhac - OFB	\N	f
@@ -2356,6 +2386,21 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69331	1025	TEXT	presentation.name	Je respecte la faune sauvage	\N	\N	\N	f
 69332	1025	IMAGE	action.cards.0.icon	\N	1127	distance	\N	f
 69333	1025	IMAGE	presentation.image	\N	1126	Iguane endémique des Petites Antilles © Fabien Lefebvre - Association ACWAA	\N	f
+70873	1000	LINK	carousel.carouselElements.5.button	Découvrir les écogestes	\N	\N	/ecogestes	f
+70874	1000	IMAGE	carousel.carouselElements.2.image	\N	2708	© Bruno Marie	\N	f
+70875	1000	CHECKBOX	carousel.carouselElements.2.shadowed	true	\N	\N	\N	f
+70876	1000	CHECKBOX	carousel.carouselElements.5.shadowed	true	\N	\N	\N	f
+70877	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
+70878	1000	TEXT	science.text	Le système de compagnonnage mis en place par le programme Te Me Um permet aux acteurs de la préservation de la biodiversité ultramarine d’échanger leurs expériences sur le terrain, et ainsi de se former ou se perfectionner par une rencontre. Présentation de ce dispositif original à travers les expériences de la Société d’étude ornithologique de La Réunion (SEOR).	\N	\N	\N	f
+70879	1000	TEXT	carousel.carouselElements.5.title	Tous acteurs de la préservation de la biodiversité	\N	\N	\N	f
+70880	1000	TEXT	carousel.carouselElements.0.title	A la rencontre des mammifères marins de Nouvelle-Calédonie	\N	\N	\N	f
+70881	1000	IMAGE	carousel.carouselElements.0.image	\N	2706	Rassemblement de Dugongs, Nouvelle-Calédonie © Martial Dosdane	\N	f
+70882	1000	TEXT	carousel.carouselElements.1.title	« A La Réunion, il ne reste que deux reptiles endémiques »	\N	\N	\N	f
+70883	1000	LINK	carousel.carouselElements.0.button	Voir le reportage	\N	\N	media/report/Cétacés%20Nouvelle-Calédonie	f
+70884	1000	LINK	carousel.carouselElements.1.button	Lire l'entretien	\N	\N	/media/interview/Geckos%20Nature%20Ocean%20Indien	f
+70885	1000	TEXT	testimony.quote	Dans le cadre du projet de Compteur, le premier état des lieux des programmes de sciences participatives dans les outre-mer a été mené. Consultez [la synthèse des résultats](media/article/Synthèse%20étude%20sciences%20participatives). 	\N	\N	\N	f
+70886	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
+70887	1000	LINK	carousel.carouselElements.2.button	Voir le reportage	\N	\N	/media/report/Faune%20TAAF	f
 69334	1025	TEXT	understand.text	Observer la faune dans son milieu naturel est une chance et une expérience formidable. Cependant, sur terre comme en mer, déranger un animal peut le mettre en péril en occasionnant un stress important et une dépense d’énergie inutile. Il risque également d’abandonner son nid ou ses petits, se blesser, être plus facilement à la merci d’un prédateur…\n\nLes conséquences sont d’autant plus importantes lorsqu’il s’agit d’espèces très menacées, pour laquelle la survie de chaque individu compte.\n\nL'impact des chiens peut être catastrophique pour la faune sensible des outre-mer, que ce soit par prédation ou par le stress qu'ils occasionnent (poursuite, aboiements, destruction de nids,...). En Nouvelle-Calédonie, ils ont joué un rôle non-négligeable dans le déclin de la population de Cagous.\nDans la plupart des espaces protégés, leur présence, même tenus en laisse n'est pas autorisée. 	\N	\N	\N	f
 69335	1025	IMAGE	action.cards.1.icon	\N	1128	bruits	\N	f
 69336	1025	TEXT	action.cards.3.description	Si un animal me parait en détresse, avant toute action, je contacte un professionnel (centre de soin, gestionnaires de réserve) afin de connaitre la démarche la plus adaptée pour lui porter secours.	\N	\N	\N	f
@@ -2373,8 +2418,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68360	1048	TEXT	events.3.description	Naufrage de l'*Utile* à Tromelin	\N	\N	\N	f
 69620	1052	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 70421	1016	TEXT	ecogestures.subtitle	Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.	\N	\N	\N	f
+70946	1056	TEXT	body.photos.3.description	« En Nouvelle-Calédonie, la Baleine à bosse fait l’objet d’un suivi scientifique depuis plus de 25 ans. Des photographies et des biopsies (prélèvements de tissus à l’aide d’une arbalète) sont collectées depuis des embarcations légères qui permettent d’approcher les baleines à bosse en mer à une dizaine de mètres. Plus de 1 700 individus différents ont ainsi fait l’objet d’un suivi individualisé au cours des dernières décennies afin de suivre leur histoire de vie et de mieux comprendre l’évolution de la population. »	\N	\N	\N	f
 68361	1048	IMAGE	species.2.image	\N	2481	*Chelonia mydas* - Tortue verte © Maxime Amy - TAAF	\N	f
 68362	1048	IMAGE	identity.image	\N	2473	Couple de fous à pieds rouges © Nelly Gravier - TAAF	\N	f
+70947	1056	IMAGE	body.photos.1.photo	\N	2695	© Martial Dosdane	\N	f
 68784	1013	TEXT	visual.subtitle	Visualisez l'évolution du nombre de nouvelles espèces décrites par année	\N	\N	\N	f
 68785	1013	TEXT	understand.title1	L'outre-mer : un vivier d'espèces à découvrir	\N	\N	\N	f
 68786	1013	TEXT	understand.paragraphs.1.text	Les estimations actuelles du nombre d'espèces présentes sur Terre oscillent entre 8 et 10 millions (hors bactéries), et seules un peu plus de 2 millions d'espèces ont été décrites à ce jour. A l’échelle mondiale, environ 20 000 nouvelles espèces sont décrites chaque année. Cette tâche titanesque est complexifiée par le manque de spécialistes qui s’y consacrent, en particulier chez les invertébrés.  \n  \nCependant, le travail de description morphologique est désormais accompagné de l’utilisation d’analyses ADN qui permettent de distinguer des espèces « cryptiques » c’est-à-dire très semblables morphologiquement mais en réalité différentes génétiquement, ce qui peut par exemple expliquer des différences d’adaptations aux conditions environnementales.	\N	\N	\N	f
@@ -2407,6 +2454,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69621	1052	TEXT	body.titre_question.0.paragraph.paragraphText	Et l’enjeu est de taille ! Au moins 80% de la biodiversité française se situerait dans les territoires d’Outre-mer ! <strong> Un premier panorama, permettant l’inventaire et la caractérisation de ces activités de sciences participatives, vient d’être publié</strong>. Quelques 145 programmes de sciences participatives ont été identifiés. Nous vous proposons, ici, une synthèse de ce panorama pour en exposer les principales caractéristiques, mais aussi, les enjeux, difficultés et opportunités, liées au déploiement des Sciences Participatives dans les Outre-mer.	\N	\N	\N	f
 69622	1052	TEXT	presentation.name	Panorama des programmes de sciences participatives ultramarins : les résultats 	\N	\N	\N	f
 69623	1052	TEXT	body.titre_question.5.citation.citationElement	Quelles sont les caractéristiques d’un programme de Sciences participatives dans les Outre-mer ?	\N	\N	\N	f
+70948	1056	TEXT	body.photos.2.description	« La migration de la Baleine à bosse ([*Megaptera novaeangliae*](https://inpn.mnhn.fr/espece/cd_nom/60867)) rythme le calendrier kanak ; son arrivée indique qu’il est temps de préparer les champs où sera planté l’igname, ce tubercule important dans la tradition locale. D’abord étudiée dans le lagon sud de la Nouvelle-Calédonie, cette espèce a montré qu’elle pouvait également apprécier les eaux du large : le déploiement de balises satellitaires et les campagnes en mer des scientifiques ont mis en évidence des regroupements de baleines autour de certains monts sous-marins peu profonds du Parc naturel de la mer de Corail. »	\N	\N	\N	f
+70949	1056	TEXT	body.photos.4.description	« On pense souvent, à tort, que la Baleine à bosse est le seul rorqual à visiter les eaux de Nouvelle-Calédonie. En réalité, huit espèces de rorquals y sont recensées ! Le Petit Rorqual pygmée ([*Balaenoptera acutorostrata subspecies*](https://inpn.mnhn.fr/espece/cd_nom/60856)) est la plus petite espèce. Il fait partie des rares cétacés fréquentant les lagons. Discret et rapide, il n’est pas toujours facile à observer. On connait peu de choses sur sa distribution en Nouvelle-Calédonie, mais l’observation de jeunes animaux laisse supposer qu’il s’y reproduit. »	\N	\N	\N	f
+70950	1056	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
+70951	1056	TEXT	body.photos.1.description	« En saison fraîche, des rassemblements de dugongs comptant plusieurs dizaines d’individus sont régulièrement observés à l’extérieur du récif barrière qui entoure la Grande Terre. La raison de ces rassemblements fait l’objet de plusieurs hypothèses : il est possible que cela soit dû au comportement de thermorégulation de ces animaux, qui préfèrent les eaux océaniques plus chaudes que celles du lagon à cette période, ou que ces regroupements leurs permettent de se protéger des prédateurs (principalement le Requin tigre ([*Galeocerdo cuvier*](https://inpn.mnhn.fr/espece/cd_nom/361617))) en naviguant à l’extérieur du récif barrière pour se déplacer d’une zone lagonaire à une autre. »	\N	\N	\N	f
 69624	1052	IMAGE	presentation.image	\N	2614	 Observateur en forêt, Guyane © Pierre-Olivier Jay - 97px	\N	f
 69625	1052	TEXT	presentation.author	Marine Didier et Jessica Coulon	\N	\N	\N	f
 69626	1052	TEXT	body.titre_question.13.citation.citationElement	Conclusions et recommandations principales du rapport	\N	\N	\N	f
@@ -2417,12 +2468,23 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69631	1052	IMAGE	body.titre_question.11.image.imageElement	\N	2613	*	\N	f
 69632	1052	TEXT	body.titre_question.9.citation.citationElement	Les sciences participatives dans les outre-mer : forces, faiblesses, menaces et opportunités	\N	\N	\N	f
 68363	1048	TEXT	species.3.description	On trouve sur les différentes îles Éparses quinze espèces de reptiles terrestres. Il s'agit de scinques (lézards de la famille des Scincidés) et de geckos (famille des Gekkonidés). Certaines espèces ont probablement été introduites, mais cinq sont endémiques : deux d'Europa, deux de Juan de Nova et une aux Glorieuses. Ces populations fragiles sont menacées par les prédateurs introduits (chats, rats, souris).  \n  \nStatuts sur la Liste rouge des reptiles des îles Éparses, pour les cinq espèces endémiques :\n[*Cryptoblepharus caudatus*](https://inpn.mnhn.fr/espece/cd_nom/785476), [*Lygodactylus insularis*](https://inpn.mnhn.fr/espece/cd_nom/976758) et [*Flexiseps valhallae*](https://inpn.mnhn.fr/espece/cd_nom/902180) : en danger critique d'extinction\n[*Cryptoblepharus gloriosus gloriosus*](https://inpn.mnhn.fr/espece/cd_nom/714621) : vulnérable\n[*Cryptoblepharus bitaeniatus*](https://inpn.mnhn.fr/espece/cd_nom/712368) : quasi-menacée.	\N	\N	\N	f
+70952	1056	TEXT	body.photos.5.description	« Le Grand Dauphin de l’Indo-Pacifique ([*Tursiops aduncus*](https://inpn.mnhn.fr/espece/cd_nom/528706)) se rencontre essentiellement à l’intérieur des lagons de la Grande-Terre, où six populations distinctes ont été identifiées grâce aux techniques photographiques et génétiques. Vivant proche des côtes, ce dauphin est particulièrement exposé aux activités humaines telles que la pêche et le trafic maritime. Nombreux sont les individus qui portent sur leur nageoire dorsale les marques de rencontres malencontreuses avec des bateaux ou des filets de pêche. »	\N	\N	\N	f
 68364	1048	TEXT	events.7.description	Classement d'Europa en site Ramsar	\N	\N	\N	f
 68365	1048	TEXT	statistics.3.number	637 hectares	\N	\N	\N	f
 68366	1048	TEXT	events.7.date	2011	\N	\N	\N	f
 68367	1048	TEXT	interests.locations.0.name	L'archipel des Glorieuses	\N	\N	\N	f
 68368	1048	TEXT	species.1.description	Le Filao ([*Casuarina equisetifolia*](https://inpn.mnhn.fr/espece/cd_nom/456837)) est un arbre aux rameaux filiforme qui pousse sur les sols sablonneux chargés en sel. Il peut atteindre une hauteur de 30 m, et bien qu'il ressemble à un pin, ce n'est pas un conifère. Ses fruits sont de petites billes formées de cônes à écailles pointues qui renferment les graines.  \n  \nOriginaire d'Asie du Sud-est et d'Australie, le Filao a été introduit à Europa, Juan de Nova et Grande Glorieuse, où il s’avère envahissant et modifie l’écosystème dans lequel il se développe, notamment car il libère des substances qui rendent le sol infertile pour les autres espèces. 	\N	\N	\N	f
+70953	1056	TEXT	body.photos.7.description	« Le Cachalot ([*Physeter macrocephalus*](https://inpn.mnhn.fr/espece/cd_nom/60949)) est présent toute l’année en Nouvelle-Calédonie, avec un pic saisonnier au mois d’octobre. Ce grand plongeur vit dans les eaux profondes du large, notamment sur les pentes à l’extérieur des récifs barrières de la Grande Terre. En Nouvelle-Calédonie, les échouages de cachalot sont relativement nombreux et concernent essentiellement des animaux solitaires. Les autopsies menées sur les carcasses peuvent parfois permettre de déterminer la cause de leur mort : anthropique (collision, prise dans un dispositif concentrateur de poisson artisanal) mais également naturelle, plus difficile à identifier sans examen approfondi (maladies, vieillesse, etc.). »	\N	\N	\N	f
 68797	1013	TEXT	understand.paragraphs.0.text	Parmi les espèces récemment décrites dans les territoires d’outre-mer français, se trouvent par exemple une nouvelle espèce de grenouille, la Rainette [*Boana courtoisae*](https://inpn.mnhn.fr/espece/cd_nom/982223), en Guyane, un serpent fouisseur, [*Madatyphlops eudelini*](https://inpn.mnhn.fr/espece/cd_nom/979094), à Mayotte ou encore *[Psychotria paulae](https://inpn.mnhn.fr/espece/cd_nom/851490)*, une plante extrêmement rare, endémique de Tahiti (Polynésie française).  \n  \nCes découvertes sont parfois réalisées parmi les spécimens conservés dans des musées, collectés depuis longtemps sans avoir été correctement identifiés. Malheureusement, il arrive qu’il s’agisse d’espèces déjà éteintes dans la nature, c’est par exemple le cas en Guadeloupe du lézard [*Leiocephalus roquetus*](https://inpn.mnhn.fr/espece/cd_nom/977440) décrit en 2021. 	\N	\N	\N	f
+70954	1056	TEXT	presentation.name	A la rencontre des mammifères marins de Nouvelle-Calédonie	\N	\N	\N	f
+70955	1056	TEXT	body.photos.0.description	« Appelé Dugong ([*Dugong dugon*](https://inpn.mnhn.fr/espece/cd_nom/532345)) ou vache marine, ce paisible animal de l’ordre des Siréniens se nourrit principalement sur les herbiers de plantes marines, les phanérogames. Limitée à quelques centaines d’individus, la population de dugongs de Nouvelle-Calédonie est pourtant l’une des plus importante au monde. Chassée par le passé, notamment pour des cérémonies coutumières kanak, l’espèce est maintenant protégée. Elle est fortement menacée par les activités anthropiques qui dégradent les habitats côtiers. »	\N	\N	\N	f
+70956	1056	TEXT	body.photos.6.description	« Facilement reconnaissable à son long bec et à ses sauts en vrille, le Dauphin à long bec ([*Stenella longirostris*](https://inpn.mnhn.fr/espece/cd_nom/60916)) vient se reposer dans les lagons sur les fonds blancs d’arrière récif pendant la journée, après s’être alimenté au large de poissons et de céphalopodes océaniques durant la nuit. »	\N	\N	\N	f
+70957	1056	TEXT	body.photos.8.description	« Le Globicéphale tropical ([*Globicephala macrorhynchus*](https://inpn.mnhn.fr/espece/cd_nom/60887)) est présent toute l’année dans les eaux du Parc naturel de la mer de Corail. On le reconnaît à sa couleur noire et son front proéminent en forme de bulbe. Les mâles adultes sont facilement identifiables à leur large et imposante nageoire dorsale. A ce jour, aucune population résidente n’a été identifiée car aucun individu n’a été observé à plusieurs occasions à travers les années. Du fait du fort lien social qui unit les individus d’un même groupe, les globicéphales tropicaux sont souvent sujets aux échouages en masse. »	\N	\N	\N	f
+70958	1056	IMAGE	body.photos.6.photo	\N	2699	© Marc Oremus - Opération Cétacés	\N	f
+70959	1056	TEXT	presentation.author	15/04/2022	\N	\N	\N	f
+70888	1000	LINK	carousel.carouselElements.3.button	Découvrir les territoires	\N	\N	/territoires	f
+70889	1000	TEXT	presentation.text	Les territoires d’outre-mer français présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
+70890	1000	IMAGE	carousel.carouselElements.5.image	\N	2709	Plantation de palétuviers par les scolaires du village Utufua, Wallis-et-Futuna © Angelina Tofili	\N	f
 64719	1020	IMAGE	species.9.image	\N	2463	*Syzygium acre* © Vanessa Hequet	\N	f
 68369	1048	TEXT	species.2.description	Cinq des sept espèces de tortues marines se retrouvent dans l’océan Indien et les îles Éparses sont des sites majeurs pour leur alimentation et pour la reproduction de la Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338)) et la Tortue imbriquée ([*Eretmochelys imbricata*](https://inpn.mnhn.fr/espece/cd_nom/77347)), en particulier Europa, où 2&nbsp;000 à 10&nbsp;000 femelles viennent pondre chaque année.\nUne même femelle revient pondre plusieurs fois dans la même saison, à quelques jours d'intervalle. A chaque fois, elle déposera entre 100 et 200 œufs, qui mettrons 8 à 10 semaines à éclore. \nGrandes migratrices, les tortues marines sont des espèces fortement menacées par les activités humaines : destruction de leurs habitats (sites de ponte et d'alimentation), prises accidentelles de pêche, collisions avec les engins motorisés et pollutions. Protégées, elles sont cependant toujours largement braconnées à travers le monde. \n\nStatut sur la Liste rouge des reptiles des îles Éparses : \nTortue imbriquée : en danger critique\nTortue verte : en danger.	\N	\N	\N	f
 68370	1048	TEXT	events.0.description	Découverte de Juan de Nova par le navigateur du même nom, qu'il baptise d'abord *Agalega* (La Galicienne)	\N	\N	\N	f
@@ -2437,6 +2499,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68838	1005	TEXT	onb.title	L’Observatoire national de la biodiversité	\N	\N	\N	f
 68839	1005	TEXT	presentation	Les indicateurs sont des outils qui permettent de décrire différentes composantes de la biodiversité et ainsi mesurer son évolution dans le temps. De nombreux paramètres sont étudiés : taille des populations, état de santé des écosystèmes, taux de pollutions, etc. Ils renseignent ainsi l’état de la biodiversité à un instant précis, mais également l’état des connaissances et des moyens scientifiques actuels. Avec ses collaborateurs, le Compteur vise aussi à développer de nouveaux indicateurs ou chiffres clés sur la biodiversité ultramarine, qui viendront peu à peu enrichir le dispositif.	\N	\N	\N	f
 68840	1005	LINK	understand.article	aucun	\N	\N	aucun	f
+70960	1056	TEXT	body.photos.11.description	« Le Grand Dauphin commun ([*Tursiops truncatus*](https://inpn.mnhn.fr/espece/cd_nom/60927)) est présent en Nouvelle-Calédonie tout au long de l’année, mais il n’est jamais rencontré à l’intérieur des lagons. Joueurs, les individus viennent fréquemment surfer à l’étrave des navires et forment généralement de petits groupes d’une quinzaine d’individus. L’existence de populations résidentes a récemment été mise en évidence au sein du Parc naturel de la mer de Corail, notamment aux alentours des monts sous-marins peu profonds. »	\N	\N	\N	f
+70961	1056	IMAGE	body.photos.9.photo	\N	2703	© Claire Garrigue - Opération Cétacés	\N	f
 64288	1021	TEXT	events.2.description	Prise de possession française sous le nom d'*île Bourbon*	\N	\N	\N	f
 68371	1048	TEXT	events.1.description	Découverte probable d'Europa	\N	\N	\N	f
 68372	1048	TEXT	events.8.description	Création du Parc naturel marin des Glorieuses	\N	\N	\N	f
@@ -2446,6 +2510,23 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68376	1048	TEXT	statistics.1.number	200 km<sup>2</sup>	\N	\N	\N	f
 68377	1048	IMAGE	ecosystems.ecosystems.0.image	\N	2489	Récif des Glorieuses © Hendrik Sauvignet - OFB	\N	f
 68378	1048	TEXT	statistics.0.number	6 %	\N	\N	\N	f
+70962	1056	TEXT	body.photos.9.description	« La Fausse-orque ([*Pseudorca crassidens*](https://inpn.mnhn.fr/espece/cd_nom/60911)) peut être rencontrée dans les eaux du Parc naturel de la mer de Corail mais également dans le lagon sud de Nouvelle-Calédonie, en groupes de 10 à 20 individus. Ces petits groupes peuvent également se rassembler pour former de grands groupes de plusieurs centaines d’animaux. La Fausse-orque vient volontiers à la rencontre des bateaux pour surfer la vague d’étrave et peut être accompagnée d’autres espèces de dauphins. »	\N	\N	\N	f
+70963	1056	TEXT	body.photos.12.description	« Découvert en 2003, le Rorqual de Omura ([*Balaenoptera omurai*](https://inpn.mnhn.fr/espece/cd_nom/535523)) reste peu connu à l’échelle mondiale, à l’exception de Madagascar où il a fait l’objet d’études. Rarement observé, il semble cependant être présent toute l’année en Nouvelle-Calédonie. La rencontre de jeunes individus suggère que cet animal discret se reproduit dans les eaux de l’archipel. »  \n<br>\n<strong>Pour en savoir plus</strong> sur les mammifères marins de Nouvelle-Calédonie, consultez le site d'[Opération Cétacés](https://operationcetaces.wordpress.com/) et suivez leurs actualités sur [Facebook](https://www.facebook.com/operationcetaces). \n<br>	\N	\N	\N	f
+70964	1056	IMAGE	body.photos.11.photo	\N	2701	© Claire Garrigue - Opération Cétacés	\N	f
+70965	1056	IMAGE	body.photos.4.photo	\N	2698	© Claire Garrigue - Opération Cétacés	\N	f
+70966	1056	IMAGE	body.photos.7.photo	\N	2692	© Marc Oremus - Opération Cétacés	\N	f
+70967	1056	IMAGE	body.photos.2.photo	\N	2697	© Magaly Chambellant - Opération Cétacés	\N	f
+70968	1056	IMAGE	presentation.image	\N	2693	Rassemblement de Dugongs © Martial Dosdane 	\N	f
+70969	1056	IMAGE	body.photos.10.photo	\N	2702	© Claire Garrigue - Opération Cétacés	\N	f
+70970	1056	IMAGE	photograph.photo	\N	2690	Par Claire Garrigue et Solène Derville	\N	f
+70971	1056	TEXT	body.photos.10.description	« Les rares observations du Dauphin tacheté pantropical ([*Stenella attenuata*](https://inpn.mnhn.fr/espece/cd_nom/60914)) ont été faites dans le chenal des îles Loyauté ou à Lifou. Comme le Dauphin à long bec auquel il ressemble, le Dauphin tacheté pantropical est très acrobatique en surface. Il semble avoir une préférence pour les eaux du large mais peut également être observé près des côtes lorsque les eaux proches du rivage sont profondes. »	\N	\N	\N	f
+70972	1056	IMAGE	body.photos.12.photo	\N	2700	© Claire Garrigue - Opération Cétacés	\N	f
+70973	1056	IMAGE	body.photos.3.photo	\N	2691	© Yohann Djerahian	\N	f
+70974	1056	TEXT	photograph.presentation	Par [Claire Garrigue](https://umr-entropie.ird.nc/index.php/team/claire-garrigue) et [Solène Derville](https://www.researchgate.net/profile/Solene-Derville-2)	\N	\N	\N	f
+70975	1056	IMAGE	body.photos.5.photo	\N	2694	© Claire Garrigue - Opération Cétacés	\N	f
+70976	1056	TEXT	body.introduction	La Nouvelle-Calédonie abrite une biodiversité remarquable en mammifères marins, dont plusieurs espèces présentent une valeur patrimoniale forte pour les populations océaniennes. Si la plupart fréquentent les eaux du large, quelques-unes s’observent également dans les lagons. Depuis plus de 20 ans, l’association Opération Cétacés et une équipe de l’Institut de recherche et développement (IRD) étudient cette grande faune marine. Elles nous présentent ici quelques représentants de la trentaine d’espèces recensée dans les eaux de l’archipel.	\N	\N	\N	f
+70977	1056	IMAGE	body.photos.8.photo	\N	2704	© Claire Garrigue - Opération Cétacés	\N	f
+70978	1056	IMAGE	body.photos.0.photo	\N	2696	© Magali Boussion	\N	f
 68841	1005	TEXT	quote	Documenter et présenter l’évolution de la biodiversité, c’est permettre à chacun de prendre conscience des enjeux et des menaces.	\N	\N	\N	f
 68379	1048	TEXT	statistics.2.number	Des milliers	\N	\N	\N	f
 68380	1048	IMAGE	interests.locations.4.image	\N	2479	Vue aérienne de Bassas da India © Stephanie Legeron - TAAF	\N	f
@@ -2520,6 +2601,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70319	1046	IMAGE	article.image	\N	2680	Gecko vert de Manapany (*Phelsuma inexpectata*), La Réunion © Nature Océan Indien	\N	f
 70320	1046	TEXT	article.title	« A La Réunion, il ne reste que deux reptiles indigènes et endémiques »	\N	\N	\N	f
 70473	1009	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/espece/indicateur	\N	\N	\N	f
+70891	1000	TEXT	carousel.carouselElements.4.text	Dans les territoires d’outre-mer, 20 % des espèces sont considérées comme éteintes ou en danger d’extinction selon la Liste rouge des espèces menacées. Comment ce chiffre est-il calculé ? Quelles sont les menaces qui pèsent sur les espèces ? Quelles actions sont mises en place pour les préserver ? 	\N	\N	\N	f
+70892	1000	CHECKBOX	carousel.carouselElements.4.shadowed	true	\N	\N	\N	f
 69188	1001	TEXT	ecosystems.ecosystems.0.description	A partir de 1 000 m d’altitude, soumise aux vents violents, à l’excès d’humidité et à la persistance des nuages, la végétation n’excède pas 1,50 m de haut. Cette « forêt de montagne » composée d’Ananas montagnes rouges ([*Pitcairnia bifrons*](https://inpn.mnhn.fr/espece/cd_nom/630443)) ou jaunes ([*Guzmania plumieri*](https://inpn.mnhn.fr/espece/cd_nom/629800)), de Thym-montagne ([*Tibouchina ornata*](https://inpn.mnhn.fr/espece/cd_nom/630806)), de Palétuvier montagne ([*Clusia mangle*](https://inpn.mnhn.fr/espece/cd_nom/629372)) et de Laurier rose ([*Podocarpus coriaceus*](https://inpn.mnhn.fr/espece/cd_nom/630457)) laisse place sur les très hauts sommets aux mousses et aux lichens. 	\N	\N	\N	f
 69189	1001	TEXT	identity.highestPoint	1 467	\N	\N	\N	f
 69190	1001	TEXT	risks.risks.0.name	Le premier Parc national dans les outre-mer	\N	\N	\N	f
@@ -2540,8 +2623,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69904	1007	TEXT	goal1.title	Partager la connaissance scientifique	\N	\N	\N	f
 69905	1007	IMAGE	goal2.quoteImage	\N	1433	Requins pointe noire, Fakarava, Polynésie française © Franck Mazeas - 97px	\N	f
 69906	1007	TEXT	goal2.description	De nombreuses actions locales sont mises en place afin de tenter de préserver les écosystèmes et les espèces. Donner de la visibilité aux acteurs locaux, partager les expériences et les réussites, au bénéfice de tous, c’est également l’un des objectifs du Compteur. 	\N	\N	\N	f
-70321	1000	TEXT	presentation.title	Le Compteur de biodiversité outre-mer	\N	\N	\N	f
-70322	1000	TEXT	testimony.title	Des études inédites sur la biodiversité des outre-mer	\N	\N	\N	f
 68396	1048	TEXT	statistics.0.text	des eaux sous juridiction française	\N	\N	\N	f
 68397	1048	IMAGE	species.1.image	\N	2478	*Casuarina equisetifolia* © Jean Hivert - TAAF	\N	f
 64291	1021	TEXT	events.7.description	Découverte du premier site de nidification du [Pétrel noir de Bourbon](https://www.petrels.re/les-especes/petrel-noir-de-bourbon/) ([*Pseudobulweria aterrima*](https://inpn.mnhn.fr/espece/cd_nom/442280)), oiseau endémique encore mal connu	\N	\N	\N	f
@@ -2606,10 +2687,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69922	1007	TEXT	partners.partners.2.url	http://www.criobe.pf/	\N	\N	\N	f
 69923	1007	IMAGE	header.background	\N	1424	Monts Pito Hiti et Orohena, Tahiti, Polynésie française © Jean-Yves Meyer - Délégation à la recherche de Polynésie française	\N	f
 69924	1007	IMAGE	partners.partners.0.logo	\N	1428	Observatoire Martiniquais de la biodiversité	\N	f
-70323	1000	TEXT	carousel.carouselElements.3.title	Partez à la rencontre des espèces et des écosystèmes ultramarins	\N	\N	\N	f
-70324	1000	IMAGE	carousel.carouselElements.4.image	\N	2674	 Rainette de Gaucher (*Dendropsophus gaucheri*), Guyane © Raphael Gailhac - Office français de la biodiversité	\N	f
-70325	1000	LINK	carousel.carouselElements.4.button	Consulter l'indicateur	\N	\N	/indicateurs/especes-menacees	f
-70326	1000	LINK	carousel.carouselElements.5.button	Découvrir les écogestes	\N	\N	/ecogestes	f
 68399	1048	TEXT	events.2.date	1751	\N	\N	\N	f
 68400	1048	TEXT	events.5.date	1897	\N	\N	\N	f
 68401	1048	TEXT	identity.marineArea	634 853	\N	\N	\N	f
@@ -2628,32 +2705,12 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68408	1048	TEXT	risks.title	Enjeux et menaces 	\N	\N	\N	f
 68409	1048	TEXT	species.0.name	Le Veloutier	\N	\N	\N	f
 68410	1048	TEXT	events.4.date	1892	\N	\N	\N	f
-70327	1000	IMAGE	carousel.carouselElements.2.image	\N	2675	Echanges sur le terrain entre les membres de la SEOR et du GEPOMAY © SEOR	\N	f
-70328	1000	CHECKBOX	carousel.carouselElements.2.shadowed	true	\N	\N	\N	f
-70329	1000	CHECKBOX	carousel.carouselElements.5.shadowed	true	\N	\N	\N	f
 68411	1048	IMAGE	interests.locations.2.image	\N	2476	Vue aérienne de Juan de Nova © Stephanie Legeron - TAAF	\N	f
 68412	1048	IMAGE	ecosystems.ecosystems.2.image	\N	2486	Sansouïres d'Europa © B. Navez - Wikimedia commons	\N	f
 68413	1048	TEXT	interests.locations.3.name	Europa	\N	\N	\N	f
 68798	1013	IMAGE	understand.image	\N	2062	Tri d’échantillons récoltés sur le terrain en Guyane © Guillaume Feuillet - 97px	\N	f
 68799	1013	TEXT	presentation.description	nouvelles espèces décrites par an en outre-mer	\N	\N	\N	f
 68800	1013	TEXT	presentation.logoUrl	https://inpn.mnhn.fr/docs/communication/livretInpn/Livret-INPN-especes-2021.pdf	\N	\N	\N	f
-70330	1000	TEXT	presentation.science	Participez aux programmes pour faire progresser la connaissance	\N	\N	\N	f
-70331	1000	TEXT	science.text	Rapporter des observations de requins ou de raies, surveiller l’état de santé de coraux, ou encore compter des lucioles: autant d’activités qui composent les Sciences Participatives dans les Outre-mer. Un premier panorama, permettant l’inventaire et la caractérisation de ces activités vient d’être publié, nous en proposons ici une synthèse.  	\N	\N	\N	f
-70332	1000	TEXT	carousel.carouselElements.5.title	Tous acteurs de la préservation de la biodiversité	\N	\N	\N	f
-70333	1000	TEXT	carousel.carouselElements.0.title	« A La Réunion, il ne reste que deux reptiles indigènes et endémiques »	\N	\N	\N	f
-70334	1000	IMAGE	carousel.carouselElements.0.image	\N	2672	Le Gecko vert de Manapany (Phelsuma inexpectata) est endémique de La Réunion © Nature Océan Indien	\N	f
-70335	1000	TEXT	carousel.carouselElements.1.title	La faune sauvage des Terres australes françaises	\N	\N	\N	f
-70336	1000	LINK	carousel.carouselElements.0.button	Lire l'entretien	\N	\N	/media/interview/Geckos%20Nature%20Ocean%20Indien	f
-70337	1000	LINK	carousel.carouselElements.1.button	Voir le reportage	\N	\N	/media/report/Faune%20TAAF	f
-70338	1000	TEXT	testimony.quote	Dans le cadre du projet de Compteur, le premier état des lieux des programmes de sciences participatives dans les outre-mer a été mené. Consultez [la synthèse des résultats](media/article/Synthèse%20étude%20sciences%20participatives). 	\N	\N	\N	f
-70339	1000	TEXT	presentation.ecogestures	Des gestes simples à mettre en place au quotidien	\N	\N	\N	f
-70340	1000	LINK	carousel.carouselElements.2.button	Lire l'article	\N	\N	/media/article/Compagnonnage TeMeUm	f
-70341	1000	LINK	carousel.carouselElements.3.button	Découvrir les territoires	\N	\N	/territoires	f
-70342	1000	TEXT	presentation.text	Les territoires d’outre-mer français présentent une biodiversité particulièrement riche et variée, mais fragilisée par les activités humaines.\nLa mission du Compteur est de donner une vision d’ensemble des enjeux liés à la biodiversité en outre-mer afin que chacun, résident ou voyageur de passage, puisse s’informer et s’impliquer à son échelle pour la préservation de cette biodiversité exceptionnelle.  	\N	\N	\N	f
-70343	1000	IMAGE	carousel.carouselElements.5.image	\N	2677	Plantation de palétuviers par les scolaires du village Utufua, Wallis-et-Futuna © Angelina Tofili	\N	f
-70344	1000	TEXT	carousel.carouselElements.4.text	Dans les territoires d’outre-mer, 20 % des espèces sont considérées comme éteintes ou en danger d’extinction selon la Liste rouge des espèces menacées. Comment ce chiffre est-il calculé ? Quelles sont les menaces qui pèsent sur les espèces ? Quelles actions sont mises en place pour les préserver ? 	\N	\N	\N	f
-70345	1000	CHECKBOX	carousel.carouselElements.4.shadowed	true	\N	\N	\N	f
-70346	1000	TEXT	carousel.carouselElements.1.text	Crozet, Kerguelen, Saint Paul et Amsterdam, ces îles isolées du sud de l’océan Indien sont soumises à un climat rude et inhospitalier. Elles abritent cependant une faune exceptionnelle et préservée. Le photographe Bruno Marie nous emmène à la rencontre de quelques habitants des « *îles de la Désolation* ».	\N	\N	\N	f
 68414	1048	TEXT	interests.locations.0.description	A l’entrée nord du canal du Mozambique, l’archipel regroupe quatre îles et rochers : Grande Glorieuse, l’île du Lys, les roches Vertes et le rocher du Sud. La biodiversité végétale est importante sur Grande Glorieuse, mais c’est surtout la richesse des récifs qui font des Glorieuses un point chaud de biodiversité, en particulier sur le banc du Geyser. L’ensemble des eaux de l’archipel a été classé en Parc naturel marin en 2012, puis en 2021 le Parc naturel marin a été remplacé par une Réserve naturelle nationale couvrant l’ensemble des îles de l’archipel et des eaux attenantes.	\N	\N	\N	f
 68415	1048	TEXT	interests.locations.2.description	Cette île de 6 km de long sur 1,6 km de large est entourée par une barrière corallienne délimitant un vaste lagon (200 km<sup>2</sup>). L’île a été fortement modifiée par l’exploitation du phosphate issu de la transformation du guano (fientes d’oiseaux), entre 1900 et 1972. Des habitations et des cultures y avaient été aménagées. Malgré l’impact de cette présence humaine, la biodiversité terrestre, en particulier la végétation, demeure riche.	\N	\N	\N	f
 68416	1048	TEXT	interests.locations.1.description	Cette petite île coralienne d’un kilomètre carré en forme d’amande est soumise à des conditions environnementales difficiles : nombreux cyclones, recouvrement par les vagues en cas de houle, forte salinité… C’est un lieu de ponte important pour les tortues vertes (entre 1 000 et 2 000 femelles par an). \nL’histoire de l’île a été marquée par l’échouage de l’*Utile*, un navire français transportant des esclaves, à la fin du 18<sup>e</sup> siècle. L’équipage parvint à rallier Madagascar sur une embarcation de fortune, abandonnant 60 esclaves à leur sort malgré la promesse de venir les chercher. Quinze ans plus tard, le chevalier de Tromelin, qui donna son nom à l’île, récupéra seulement huit survivants : sept femmes et un enfant. \n	\N	\N	\N	f
@@ -2728,13 +2785,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68446	1048	TEXT	events.1.date	16<sup>e</sup> siècle	\N	\N	\N	f
 68447	1048	TEXT	ecosystems.ecosystems.2.name	Les sansouïres et les steppes salées d'Europa 	\N	\N	\N	f
 68448	1048	TEXT	interests.locations.4.name	Bassas da India	\N	\N	\N	f
-70347	1000	IMAGE	carousel.carouselElements.3.image	\N	2673	Noddis noirs (*Anous minutus*), Wallis-et-Futuna © Tristan Berr	\N	f
-70348	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre la biodiversité	\N	\N	\N	f
-70349	1000	IMAGE	testimony.image	\N	2679	Suivi des récifs coralliens à Wallis-et-Futuna © Sandrine Job	\N	f
-70350	1000	TEXT	carousel.carouselElements.4.title	20 % d'espèces menacées 	\N	\N	\N	f
-70351	1000	LINK	science.more	Lire l'article	\N	\N	media/article/Synthèse%20étude%20sciences%20participatives	f
-70352	1000	CHECKBOX	carousel.carouselElements.1.shadowed	true	\N	\N	\N	f
-70353	1000	TEXT	carousel.carouselElements.3.text	Naviguez parmi les portraits biodiversité des territoires pour mieux comprendre les enjeux avec une sélection de repères et de chiffres clés sur la nature.	\N	\N	\N	f
 68914	1030	TEXT	paragraphs.0.title	Conception et édition	\N	\N	\N	f
 69200	1015	TEXT	events.2.description	Dernière éruption de la Montagne Pelée	\N	\N	\N	f
 69201	1015	TEXT	events.3.description	Création du Parc naturel régional de Martinique et de la Réserve naturelle nationale de la presqu'île de la Caravelle	\N	\N	\N	f
@@ -3020,7 +3070,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70204	1054	IMAGE	body.photos.0.photo	\N	2643	© Bruno Marie	\N	f
 70205	1049	TEXT	body.photos.3.description	« L’île d’Europa est l’un des plus importants sites de ponte de l’océan Indien pour les tortues marines. Après être montée en haut de la plage, cette femelle Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338)) creuse un nid de quelques dizaines de centimètres de profondeur, dans lequel elle pondra une centaine d’œufs. \n<br>La ponte d’une tortue est une scène émouvante : elle peine beaucoup à se mouvoir au milieu de la végétation, des débris coralliens et des pierres qui jonchent les plages, sans compter le dénivelé. Se déplaçant à la force des nageoires, bien peu adaptées en milieu terrestre, certaines d’entre elles restent bloquées. Il est à Europa un lieu baptisé «&nbsp;le cimetière des tortues&nbsp;», une grande étendue de sable où nous avons vu nombre de carcasses de tortues n’ayant pu faire l'aller-retour du voyage qu’elles avaient entrepris pour donner la vie.»<br> \n	\N	\N	\N	f
 70206	1049	IMAGE	body.photos.1.photo	\N	2540	Bruno Marie	\N	f
-70354	1000	TEXT	carousel.carouselElements.0.text	Sébastien Dervin, chef de projet scientifique à l’association Nature Océan Indien, nous explique la situation des reptiles endémiques de l'île, les programmes de conservation mis en œuvre et les actions que chacun peut faire pour aider à la préservation de ces espèces uniques au monde.	\N	\N	\N	f
 64741	1020	TEXT	species.15.description	Plus gros pigeon arboricole du monde, le Notou ([*Ducula goliath*](https://www.endemia.nc/faune/fiche71)) présente un plumage bleu gris, avec une pointe de pourpre sur les ailes, et ses yeux sont rouge vif. Il vit dans les forêts humides de la Grande Terre et contribue à sa régénération par dissémination des graines dont il se nourrit. Difficile à observer, il se repère toutefois facilement à son chant particulier, grave et sourd.  \n\nStatut dans la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
 64742	1020	TEXT	events.6.date	2014	\N	\N	\N	f
 66565	1039	TEXT	species.8.description	Le Namoulohna ([*Foetidia comorensis*](https://inpn.mnhn.fr/espece/cd_nom/807350)) est un arbre endémique de Mayotte, extrêmement rare&nbsp;: il n’est connu que d’une unique station de 600 m<sup>2</sup> avec environ 80 individus dénombrés en 2017. Connue depuis longtemps par les villageois locaux, elle n’a été décrite pour la science qu’en 2011. Menacée entre autres par les défrichements pour l’installation de cultures vivrières et le pâturage des animaux domestiques, l’espèce figure sur la liste des espèces protégée de Mayotte et un important travail de sensibilisation est mené autour de sa préservation.  \n  \nStatut sur la Liste rouge de la flore vasculaire de Mayotte : en danger critique.	\N	\N	\N	f
@@ -3044,12 +3093,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68518	1038	IMAGE	interests.locations.0.image	\N	2400	Vue aérienne sur le territoire du Parc national © Guillaume Feuillet, PAG	\N	f
 68519	1038	TEXT	species.6.name	Le Palmier pinot	\N	\N	\N	f
 68520	1038	IMAGE	interests.locations.3.image	\N	2399	Plage d'Awala-Yalimapo © Raphaël Gailhac - OFB	\N	f
-70355	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
 68521	1038	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
 68522	1038	TEXT	interests.locations.3.name	Les plages d'Awala-Yalimapo	\N	\N	\N	f
-70356	1000	TEXT	carousel.carouselElements.5.text	Consultez les écogestes et adaptez vos habitudes pour réduire votre impact sur la biodiversité.	\N	\N	\N	f
-70357	1000	TEXT	carousel.carouselElements.2.text	Le système de compagnonnage mis en place par le programme Te Me Um permet aux acteurs de la préservation de la biodiversité ultramarine d’échanger leurs expériences sur le terrain, et ainsi de se former ou se perfectionner par une rencontre. Présentation de ce dispositif original à travers les expériences de la Société d’étude ornithologique de La Réunion (SEOR).	\N	\N	\N	f
-70358	1000	IMAGE	science.image	\N	2678	Observateur en forêt, Guyane © Pierre-Olivier Jay - 97px	\N	f
 69637	1052	TEXT	body.titre_question.8.paragraph.paragraphText	<strong>Le financement des programmes </strong>  \nCe sont <strong>les services de l’Etat</strong> qui permettent de financer le plus de programmes, même si certaines associations parviennent à faire vivre leurs programmes sur fonds propres.  \n<br> \n<strong>Le public cible</strong>  \nLa moitié des programmes enquêtés concerne <strong>un public large</strong>, cependant, étant donné qu’une grande partie de ces programmes porte sur le milieu marin, les usagers de la mer (souvent les plongeurs sous-marins) sont particulièrement sollicités.      \nOn note également que <strong>la plupart des observateurs et bénévoles proviennent de France hexagonale.</strong> Appelés "métropolitains" dans les Outre-mer, ils s’installent pour raisons professionnelles dans un territoire ultra-marin, pour une durée courte, allant souvent d’une à cinq années.  \n<br> \n<strong>Le type d'observations</strong>  \n<strong>Une majorité des observations est faite de manière opportuniste et en autonomie.</strong> Les programmes qui utilisent un protocole scientifique ne représentent que 33% de l’ensemble enquêté.	\N	\N	\N	f
 64743	1020	TEXT	events.4.description	Publication des Codes de l'environnement des Provinces Sud et Nord	\N	\N	\N	f
 64744	1020	TEXT	events.5.description	Création du [Conservatoire d'espaces naturels](https://www.cen.nc)	\N	\N	\N	f
@@ -3076,13 +3121,6 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68533	1038	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
 68534	1038	TEXT	species.4.name	Les loutres	\N	\N	\N	f
 68535	1038	TEXT	identity.area	83 846	\N	\N	\N	f
-70359	1000	TEXT	science.title	Panorama des programmes de sciences participatives ultramarins : les résultats	\N	\N	\N	f
-70360	1000	CHECKBOX	carousel.carouselElements.3.shadowed	true	\N	\N	\N	f
-70361	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
-70362	1000	TEXT	carousel.carouselElements.2.title	« Les résultats ont nettement dépassé notre objectif initial ! » 	\N	\N	\N	f
-70363	1000	TEXT	testimony.text	L'équipe du Compteur travaille avec ses partenaires sur le développement de nouveaux indicateurs pour enrichir les données disponibles. Des travaux sont également menés sur la perception de la nature et le rapport aux outils numériques. 	\N	\N	\N	f
-70364	1000	CHECKBOX	carousel.carouselElements.0.shadowed	true	\N	\N	\N	f
-70365	1000	IMAGE	carousel.carouselElements.1.image	\N	2676	© Bruno Marie	\N	f
 68536	1038	TEXT	species.0.description	Atteignant jusqu’à 17 cm de long, le Titan ([*Titanus giganteus*](https://inpn.mnhn.fr/espece/cd_nom/758743)) est le plus grand coléoptère du monde. On connait cependant peu de choses sur sa biologie : si les mâles sont attirés par la lumière, ce n’est pas le cas des femelles qui sont rarement observées. On suppose que les larves se développent dans le sol, au niveau des racines ou des souches, et consomment du bois décomposé.  \nCe longicorne attire particulièrement les collectionneurs, c’est pourquoi depuis le 25 juillet 2019, il existe un quota limitant l’exportation à un spécimen par personne et par an.\nL’inventaire des insectes de Guyane est encore largement incomplet. Si la diversité des insectes est très importante, l’abondance de chaque espèce est généralement faible, ce qui rend leur recensement complexe.  \n  \nStatut sur la Liste rouge mondiale : non évalué.	\N	\N	\N	f
 68537	1038	TEXT	identity.highestPointName	Montagne Bellevue	\N	\N	\N	f
 68538	1038	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
@@ -3639,6 +3677,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64281	1031	TEXT	interests.locations.3.description	La plus petite île du groupe n’est habitée à l’année que par une seule personne mais fréquentée quasiment quotidiennement par les agriculteurs de Futuna. D’origine corallienne, elle est majoritairement recouverte par une forêt relativement bien conservée, malgré un défrichement de plus en plus important pour les cultures et le bois de construction.	\N	\N	\N	f
 64282	1031	TEXT	identity.title	Wallis-et-Futuna,  \nun archipel au cœur du Pacifique  	\N	\N	\N	f
 64283	1031	IMAGE	species.6.image	\N	2341	Fruits d'*Aglaia samoaensis* © J-Y. H. Meyer, Délégation à la Recherche de la Polynésie française	\N	f
+70893	1000	TEXT	carousel.carouselElements.1.text	Sébastien Dervin, chef de projet scientifique à l’association Nature Océan Indien, nous explique la situation des reptiles endémiques de l'île, les programmes de conservation mis en œuvre et les actions que chacun peut faire pour aider à la préservation de ces espèces uniques au monde.	\N	\N	\N	f
+70894	1000	IMAGE	carousel.carouselElements.3.image	\N	2707	Noddis noirs (*Anous minutus*), Wallis-et-Futuna © Tristan Berr	\N	f
+70895	1000	TEXT	presentation.indicators	Des chiffres clés pour comprendre la biodiversité	\N	\N	\N	f
+70896	1000	IMAGE	testimony.image	\N	2711	Suivi des récifs coralliens à Wallis-et-Futuna © Sandrine Job	\N	f
+70897	1000	TEXT	carousel.carouselElements.4.title	20 % d'espèces menacées 	\N	\N	\N	f
+70898	1000	LINK	science.more	Lire l'article	\N	\N	/media/article/Compagnonnage TeMeUm	f
+70899	1000	CHECKBOX	carousel.carouselElements.1.shadowed	true	\N	\N	\N	f
 68591	1038	TEXT	ecosystems.ecosystems.0.description	La forêt humide tropicale couvre plus de 80 % du territoire de la Guyane et la diversité floristique y est exceptionnelle. Malgré une apparente uniformité, elle recèle de nombreuses variations de type en fonction de la prépondérance de certaines grandes familles botaniques et de facteurs physico-chimiques multiples, comme l’altitude, la nature du sol ou la pluviométrie. \nDans le sous-bois, les plantes développent des stratégies leur permettant de vivre avec peu de lumière tandis qu’au sommet, la canopée s’étend à 30 à 40 m du sol. L’humidité ambiante favorise le développement de mousses et de lichens qui s’installent parfois à la surface des feuilles, et de champignons qui jouent un rôle écologique important. \nLes chablis (chutes naturelles d’arbres, dus à des évènements climatiques comme les fortes pluies) permettent une régénération naturelle de la forêt en ouvrant des clairières qui permettent l’arrivée de la lumière dans le sous-bois et favorisent certaines espèces dites pionnières à la croissante extrêmement rapide.\n	\N	\N	\N	f
 68592	1038	TEXT	identity.highestPoint	851	\N	\N	\N	f
 68945	1012	TEXT	understand.text1	La mangrove est un écosystème forestier constitué principalement d'arbres appelés palétuviers, et se trouvant dans la zone de balancement des marées. Espace de transition entre le milieu terrestre et le milieu marin, cet écosystème abrite de nombreuses espèces qui en sont dépendantes pour une partie ou la totalité de leur cycle de vie.\n\nOn trouve des mangroves dans tous les territoires tropicaux d’outre-mer français, à l’exception de l’île de La Réunion. Au total, on estime leur superficie à 91 096 ha, la grande majorité se trouvant en Guyane et en Nouvelle-Calédonie. Cependant, en Polynésie, cet écosystème n’est pas présent naturellement : une espèce de palétuvier, [*Rhizophora stylosa*](https://inpn.mnhn.fr/espece/cd_nom/447469), a été introduite volontairement dans les années 1930, et s’est ensuite propagée à l’ensemble des îles de la Société, au détriment de certains écosystèmes natifs. 	\N	\N	\N	f
@@ -3661,6 +3706,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68958	1012	IMAGE	visual.image	\N	2557	Carte mangroves outre-mer	\N	f
 68959	1012	TEXT	visual.title	Les mangroves d'outre-mer	\N	\N	\N	f
 68960	1012	LINK	understand.article	aucun	\N	\N	aucun	f
+70900	1000	TEXT	carousel.carouselElements.3.text	Naviguez parmi les portraits biodiversité des territoires pour mieux comprendre les enjeux avec une sélection de repères et de chiffres clés sur la nature.	\N	\N	\N	f
 68961	1012	TEXT	understand.paragraphs.0.text	Il existe un éventail de dispositions juridiques permettant de protéger les mangroves, par exemple le classement en Zone humide d’importance internationale par la Convention de Ramsar ou les arrêtés de protection de biotope, et de nombreuses zones de mangroves sont présentes dans les aires protégées des territoires (parcs nationaux, parcs naturels régionaux, réserves naturelles, etc.). Cependant, toutes les mangroves protégées ne font pas forcément l’objet de mesures de gestion.\nCet indicateur donne la part de mangroves bénéficiant d'un gestionnaire identifié et d'un document de gestion établi dans un but de conservation. Dans le cadre de la loi pour la reconquête de la biodiversité du 9 août 2016, l’État français s'était fixé pour objectif que 60 % de la surface nationale des mangroves soit gérée à des fins de conservation d'ici à 2020, cet objectif n'a donc pas été atteint. 	\N	\N	\N	f
 68962	1012	IMAGE	understand.image	\N	1314	Sentier aménagé dans la mangrove, Martinique © Fabien Lefebvre - Association ACWAA	\N	f
 68963	1012	TEXT	presentation.description	des mangroves nationales font l’objet de mesures de conservation	\N	\N	\N	f
@@ -3686,6 +3732,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68966	1008	TEXT	understand.text2	On trouve un nombre plus important d’espèces endémiques dans les îles par rapport aux continents en raison de leur isolement géographique : les espèces y ont évolué séparément par rapport à celles sur le continent. Ainsi, plus une île est ancienne, plus il est probable que son taux d’endémisme soit élevé, comme par exemple en Nouvelle-Calédonie où 30 % des espèces du territoire sont uniques au monde.\nL’endémisme est également beaucoup plus important chez les espèces terrestres que chez les espèces marines, le milieu marin étant plus ouvert et permettant une connexion plus importante des habitats.	\N	\N	\N	f
 68967	1008	TEXT	understand.text1	Qualifier une espèce d’endémique, cela veut dire que sa répartition est limitée à une zone géographique peu étendue et qu’elle ne se retrouve nulle part ailleurs dans le monde. Cela donne au territoire en question une responsabilité particulièrement forte dans la conservation du patrimoine mondial. On parle également d'espèces "sub-endémiques" lorsque leur répartition s'étend sur quelques territoires proches mais reste très limitée. \nEn raison de cette aire de répartition géographique restreinte, ces espèces sont généralements plus sensibles aux pressions liées aux activités humaines et se retrouvent plus souvent en danger de disparition que les espèces plus largement répandues. \n\nReflet de l'état actuel des connaissances, ce chiffre peut augmenter en raison de l'amélioration des connaissances scientifiques et de la [découverte de nouvelles espèces](/indicateurs/nouvelles-especes), mais il peut également diminuer lorsque des espèces s'éteignent.  	\N	\N	\N	f
 68968	1008	TEXT	territories.title	Nombre d'espèces endémiques	\N	\N	\N	f
+70901	1000	TEXT	carousel.carouselElements.0.text	La Nouvelle-Calédonie abrite une biodiversité remarquable en mammifères marins, dont plusieurs espèces présentent une valeur patrimoniale forte pour les populations océaniennes. Depuis plus de 20 ans, l’association Opération Cétacés et une équipe de l’Institut de recherche et développement (IRD) étudient cette grande faune marine.	\N	\N	\N	f
+70902	1000	TEXT	presentation.territories	Découvrez l’identité de chaque territoire d’outre-mer	\N	\N	\N	f
 68969	1008	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 68970	1008	TEXT	visual.subtitle	Visualisez la proportion d'espèces endémiques par territoire	\N	\N	\N	f
 68971	1008	TEXT	understand.title1	La notion d'endémisme	\N	\N	\N	f
@@ -3720,6 +3768,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70541	1041	IMAGE	species.2.image	\N	1735	*Eudyptes chrysolophus* © Julie Tucoulet	\N	f
 70542	1041	IMAGE	identity.image	\N	1702	Vallée de la Hébé, île de la Possession, Crozet © Julie Tucoulet	\N	f
 69249	1015	TEXT	species.7.description	Le Moqueur gorge-blanche ([*Ramphocinclus brachyurus*](https://inpn.mnhn.fr/espece/cd_nom/442316\n)) est un petit oiseau à la face dorsale foncée et la face ventrale blanche endémique de la Martinique et de Sainte-Lucie. Il se trouve uniquement dans les zones boisées de la presqu’île de la Caravelle. Considéré en danger d’extinction en raison de la petite taille de la population, il est victime de la prédation par les espèces introduites et fait l’objet d’un programme de conservation dans le cadre du programme [LIFE BIODIV’OM](https://www.lifebiodivom.fr/especes/moqueur-gorge-blanche/).\n\nStatut dans la Liste rouge des oiseaux de Martinique : en danger critique. 	\N	\N	\N	f
+70903	1000	TEXT	carousel.carouselElements.5.text	Consultez les écogestes et adaptez vos habitudes pour réduire votre impact sur la biodiversité.	\N	\N	\N	f
 70216	1049	TEXT	body.photos.8.description	« Le Scinque aux yeux de serpent d'Europa ([*Cryptoblepharus bitaeniatus*](https://inpn.mnhn.fr/espece/cd_nom/712368)) est un reptile terrestre endémique, diurne, qui mesure entre 8 et 10 cm à l’âge adulte. Préalablement considéré comme une sous espèce du Scinque de Bouton ([*Cryptoblepharus boutonii*](https://inpn.mnhn.fr/espece/cd_nom/459101)) présent à La Réunion et Mayotte, il a récemment été élevé au rang d’espèce à part entière, témoignant de la constante évolution de la taxonomie (science de classification du vivant). »	\N	\N	\N	f
 70217	1049	IMAGE	body.photos.6.photo	\N	2545	Bruno Marie	\N	f
 70218	1049	TEXT	presentation.author	01/12/2021	\N	\N	\N	f
@@ -4006,6 +4055,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69094	1011	LINK	understand.article	aucun	\N	\N	aucun	f
 69095	1011	TEXT	understand.paragraphs.0.text	La destruction des forêts est reconnue comme une pression majeure sur la biodiversité. Le suivi du taux de boisement permet de suivre l’évolution de cette pression et donc indirectement l’état de la biodiversité forestière. Sont exclues de ce calcul les forêts urbaines ou à vocation agricole.\n\nDepuis 1990, le taux de boisement reste globalement stable pour les outre-mer français. Cependant, cet indicateur a des limites : il nous donne une indication sur la surface, mais ne renseigne pas sur le bon état écologique de ces forêts.  	\N	\N	\N	f
 69096	1011	IMAGE	understand.image	\N	2021	Forêt boréale, Saint-Pierre-et-Miquelon ©  Bruno Letournel - OFB	\N	f
+70904	1000	TEXT	carousel.carouselElements.2.text	Crozet, Kerguelen, Saint Paul et Amsterdam, ces îles isolées du sud de l’océan Indien sont soumises à un climat rude et inhospitalier. Elles abritent cependant une faune exceptionnelle et préservée. Le photographe Bruno Marie nous emmène à la rencontre de quelques habitants des « *îles de la Désolation* ».	\N	\N	\N	f
+70905	1000	IMAGE	science.image	\N	2712	Echanges sur le terrain entre les membres de la SEOR et du GEPOMAY © SEOR	\N	f
 70626	1055	TEXT	body.bodyElements.2.questionAnswer.response	<strong>Par le passé, de nombreuses autres espèces indigènes et endémiques peuplaient l’île </strong>: la Tortue géante des Mascareignes par exemple ! En se basant sur les documents historiques, on a estimé qu’il y avait environ un million d’individus de cette tortue terrestre à l’arrivée des humains sur l’île au 17<sup>e</sup> siècle. Malheureusement, les premiers occupants de l’île se sont allégrement servis. Il n’y avait pas d’écologues à l’époque mais on a retrouvé des lettres du 18<sup>e</sup> siècle d’un officiel qui avait écrit au roi de France pour dénoncer l’utilisation outrancière des tortues géantes, notamment pour nourrir les cochons ! Elles étaient aussi utilisées comme source de nourriture sur les bateaux, car elles pouvaient rester très longtemps sans boire ni manger. Les rats et les cochons ont dû finir le travail en prédatant les œufs, <strong>et en très peu d’années de présence humaine à La Réunion, les tortues géantes sont devenues un souvenir.</strong>  \n<br>\nParmi les espèces éteintes, on trouve également tous les scinques indigènes et les geckos nocturnes du genre *Nactus*, dont certaines espèces sont encore présentes à l’île Maurice.\n<br> 	\N	\N	\N	f
 70627	1055	TEXT	interviewee.presentation	Nature Océan Indien	\N	\N	\N	f
 70628	1055	TEXT	presentation.name	« A La Réunion, il ne reste que deux reptiles endémiques »	\N	\N	\N	f
@@ -4062,6 +4113,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69145	1001	TEXT	species.7.description	La Tortue imbriquée ([*Eretmochelys imbricata*](https://inpn.mnhn.fr/espece/cd_nom/77347\n)) est l’une des trois espèces de tortues marines qui viennent pondre sur les plages de Guadeloupe. Les tortues marines sont menacées entre autres par les captures accidentelles de pêche, les collisions, l’ingestion de déchets, le braconnage ou encore la destruction de leurs sites d’alimentation. Toutes les espèces de tortues sont protégées, et le réseau des tortues marines de Guadeloupe présente une [charte de bonne conduite à respecter en présence de tortues](http://www.tortuesmarinesguadeloupe.org/les-tortues-marines/la-charte-de-bonne-conduite/) pour les préserver.\n\nStatut dans la Liste rouge mondiale : en danger critique.  	\N	\N	\N	f
 69146	1001	TEXT	species.8.description	Aussi appelé Tapeur ou Toto bois, le Pic de Guadeloupe ([*Melanerpes herminieri*](https://inpn.mnhn.fr/espece/cd_nom/442063)) est le seul oiseau endémique de Guadeloupe et seul pic sédentaire des Petites Antilles. Il vit dans les milieux forestiers où il se nourrit principalement d'insectes qu'il trouve sous l'écorce du bois mort. De coloration noire, avec la gorge et l'abdomen rouge, on peut le reconnaitre à l'oreille au son caractéristique du tambourinage rapide que le mâle effectue sur les troncs pour parader et marquer son territoire.  \n\nStatut dans la Liste rouge des oiseaux de Guadeloupe : quasi-menacé. 	\N	\N	\N	f
 69147	1001	IMAGE	species.2.image	\N	2266	*Guaiacum officinale* © César Delnatte - INPN	\N	f
+70906	1000	TEXT	science.title	« Les résultats ont nettement dépassé notre objectif initial ! » 	\N	\N	\N	f
+70907	1000	CHECKBOX	carousel.carouselElements.3.shadowed	true	\N	\N	\N	f
 66884	1045	TEXT	risks.risks.0.description	Le continent Antarctique est à lui seul l’une des huit écozones de la planète (régions biogéographiques terrestres). Seuls quelques espèces d’oiseaux vivent sur les terres glacées de l’Antarctique et sur les 9 espèces d’oiseaux marins nichant en Antarctique, 8 sont présentes en nidification sur l’archipel de Pointe Géologie, où est installée la Base Dumont d’Urville.  \n  \nMalgré les conditions extrêmes, les eaux glacées de l’océan Austral qui bordent le continent blanc sont pleines de vie. Très riches en krill et en zooplancton, elles accueillent plusieurs espèces de mammifères marins qui viennent s’y nourrir. On y trouve également quelques dizaines d’espèces de poissons et de nombreuses espèces d’invertébrés : mollusques, étoiles de mer et oursins, cnidaires, etc.  \n  \nLe réchauffement climatique est une grande menace pour les colonies d’oiseaux antarctiques et les mammifères marins. La fonte des glaces, les modifications de température et de salinité de l’océan Austral bouleversent l’écosystème entrainant notamment une diminution du plancton et du krill, premiers maillons de la chaîne alimentaire. La plupart des colonies d’oiseaux ont déjà diminué et les scientifiques prédisent un déclin catastrophique d’ici la fin du siècle. \n\n\n	\N	\N	\N	f
 66885	1045	TEXT	events.3.date	1956	\N	\N	\N	f
 66886	1045	IMAGE	species.3.image	\N	2198	*Euphausia superba* © Uwe Kils	\N	f
@@ -4152,9 +4205,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70646	1055	IMAGE	body.bodyElements.12.image.imageElement	\N	2685	Chantier bénévole de restauration de la végétation © L. Brillard - Nature Océan Indien	\N	f
 70647	1055	IMAGE	presentation.image	\N	2689	Le Gecko vert de Manapany (*Phelsuma inexpectata*) est endémique de La Réunion © Nature Océan Indien	\N	f
 70648	1055	TEXT	body.bodyElements.9.questionAnswer.question	Pour le Gecko vert de Manapany, il y a urgence, comment éviter son extinction ? 	\N	\N	\N	f
+70908	1000	TEXT	presentation.quote	Les outre-mer regroupent 80 % de la biodiversité française, réinventons, adaptons notre façon de vivre et de voyager	\N	\N	\N	f
+70909	1000	TEXT	carousel.carouselElements.2.title	La faune sauvage des Terres australes françaises	\N	\N	\N	f
+70910	1000	TEXT	testimony.text	L'équipe du Compteur travaille avec ses partenaires sur le développement de nouveaux indicateurs pour enrichir les données disponibles. Des travaux sont également menés sur la perception de la nature et le rapport aux outils numériques. 	\N	\N	\N	f
 67832	1040	TEXT	identity.highestPoint	2 241	\N	\N	\N	f
 70649	1055	TEXT	body.bodyElements.8.questionAnswer.response	Pour le Gecko vert de Manapany, <strong>la situation est critique </strong>: un doctorant vient d’étudier les populations pendant 4 ans et ses résultats sont inquiétants : il montre un déclin qui s’accélère. Le recrutement des adultes est proche de zéro, c’est-à-dire que <strong>les jeunes ne parviennent pas au stade adulte</strong>. On a donc un réservoir d’adultes qui décline rapidement et qui ne se renouvelle pas. Les modélisations montrent que si rien n’est fait, <strong>ces populations auront disparu à l’horizon 2027, donc c’est très proche !</strong>\n<br>  \nLa situation du Gecko vert de Bourbon est un peu meilleure, ses populations sont plus importantes que celle du Gecko de Manapany et il y a une meilleure connectivité entre elles. </strong>Sa zone de répartition est plus grande, et plutôt située en cœur de l’île</strong>. Contrairement à Manapany où on est dans une zone urbanisée, on pense que les espèces exotiques ne sont pas encore autant répandues là-bas, même si elles gagnent du terrain d’année en année. Cependant, il y a eu des incendies importants au Maïdo ces dernières années, en plein dans des populations connues de Gecko de Bourbon, et on est incapables de dire aujourd’hui dans quelle mesure ça les a impactés…  \n<br>\n<strong>On a moins de connaissances sur le Gecko de Bourbon que sur celui de Manapany</strong>, c’est une espèce sur laquelle on a moins travaillé malheureusement, car le premier [Plan national d’action (PNA)](https://natureoceanindien.org/pna/) qui s’est terminé il y a deux ans, concernait uniquement celui de Manapany. Heureusement, le second PNA, qui est opérationnel depuis 2020, concerne les deux espèces. Avec les équipes du Parc national de La Réunion, on espère pouvoir mettre en place en 2022 des actions concrètes pour le Gecko vert de Bourbon, à commencer par une cartographie de sa distribution.\n<br>\n	\N	\N	\N	f
 70650	1055	IMAGE	body.bodyElements.18.image.imageElement	\N	2688	Gecko vert de Manapany (*Phelsuma inexpectata*), La Réunion © Nature Océan Indien	\N	f
+70911	1000	CHECKBOX	carousel.carouselElements.0.shadowed	true	\N	\N	\N	f
 67720	1040	TEXT	events.2.description	Estimation de la première occupation humaine des îles de la Société	\N	\N	\N	f
 67721	1040	TEXT	events.3.description	Première arrivée des européens aux Marquises	\N	\N	\N	f
 67722	1040	IMAGE	identity.image	\N	2491	Huahine (archipel de la Société) © Céline Soyer	\N	f
@@ -4266,6 +4323,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70654	1055	IMAGE	interviewee.photo	\N	2681	Sébastien Dervin, Chef de projet scientifique à Nature Océan Indien	\N	f
 70655	1055	TEXT	body.introduction	L’association Nature Océan Indien (NOI) est engagée depuis 2007 dans l’étude et la conservation des reptiles indigènes et endémiques de La Réunion. Sur l’île, deux espèces de gecko endémiques sont en danger d’extinction face aux nombreuses espèces introduites. Sébastien Dervin, chef de projet scientifique à NOI, nous explique la situation, les programmes de conservation mis en œuvre et les actions que chacun peut faire pour aider à la préservation de ces reptiles uniques au monde.	\N	\N	\N	f
 70656	1055	TEXT	body.bodyElements.7.questionAnswer.response	Malheureusement, la liste des prédateurs introduits ne s'arrête pas aux reptiles ! Il y a aussi les chats, les rats, souris et musaraignes, ou encore des oiseaux comme le Bulbul orphée ([*Pycnonotus jacosus*](https://inpn.mnhn.fr/espece/cd_nom/418750)) et le Martin triste ([*Acridotheres tristis*](https://inpn.mnhn.fr/espece/cd_nom/601183)). Et même des insectes comme la Fourmi de feu ([*Solenopsis geminata*](https://inpn.mnhn.fr/espece/cd_nom/264070)) ! <strong>Comme dans tous les milieux insulaires, ces prédateurs introduits sont un fléau pour la biodiversité indigène, pas seulement pour nos geckos.</strong>  \n<br>\nMais ils ne sont pas la seule menace, <strong>la fragmentation des milieux naturels</strong> est aussi très préoccupante. Aujourd’hui, sur les 11 km de côte où on trouve encore des populations de Gecko de Manapany, <strong>toutes les populations sont éclatées, il n’y a plus du tout de continuité et chacune décline petit à petit.</strong>  Sans compter l’usage des pesticides et des produits phytosanitaires, qui leur est également néfaste.\n<br>\n	\N	\N	\N	f
+70912	1000	IMAGE	carousel.carouselElements.1.image	\N	2705	Le Gecko vert de Manapany (Phelsuma inexpectata) est endémique de La Réunion © Nature Océan Indien	\N	f
 68299	1051	TEXT	body.bodyElements.5.questionAnswer.response	On demande aux gens de nous signaler leurs observations d’insectes lumineux. Il y a [un formulaire en ligne sur le site internet](https://www.anbaloup-la.fr/observatoire-lucioles/) où nous demandons les informations de base : le lieu, la date, et le nombre d’insectes observés. Il y a aussi un questionnaire plus détaillé si les gens sont motivés à nous donner plus d’informations : si l’insecte était en vol, posé, sur quel support, son comportement, etc. Et on peut bien sûr nous envoyer des photos ! Le fait d’utiliser internet peut limiter certaines personnes : c’est aussi possible de faire un signalement par téléphone ou par courrier.  \n  \n<br>On organise aussi des sorties nature, parfois avec le Parc National de Guadeloupe. Le nombre de personnes est limité à une dizaine, pour éviter de perturber le milieu et la reproduction des lucioles. <strong>Les gens viennent en famille, on pique-nique, on apprend à reconnaitre les insectes, à faire la différence entre taupins et lucioles, on explique le cycle de vie, qu’est-ce que la bioluminescence, la fluorescence et la phosphorescence ? Quelles sont les conséquences de certaines lumières sur leur terrasse la nuit pour les insectes ?</strong> On le fait de façon ludique pour les jeunes, avec de la peinture à visage phosphorescente, du light painting... Ça permet aux enfants de s’amuser et découvrir, et aux adultes d’approfondir certains sujets. On parle plus largement de la protection de la biodiversité et  des milieux de Guadeloupe, des idées reçues, des pollutions, etc.<br>\n	\N	\N	\N	f
 68300	1051	TEXT	body.bodyElements.11.questionAnswer.response	On a déjà eu des remontées d’infos issues de Saint Martin ou de la Martinique. On aimerait bien développer davantage le projet, mais on a déjà beaucoup à faire sur la Guadeloupe ! Quand on sera bien installés ici on pourra essayer de créer des partenariats avec des organismes dans les différents territoires, ce serait bien de développer l’observatoire sur tout l’outre-mer !	\N	\N	\N	f
 68302	1051	TEXT	body.bodyElements.0.questionAnswer.response	Un soir chez moi en Guadeloupe, j’ai vu une luciole et je me suis dit « tiens c’est vrai qu’on n'en voit plus beaucoup, c’est étrange qu’on n’en voit pas plus que ça ». Jusqu’alors, je n’avais pas remarqué qu’on en voyait moins, quand on n’y fait pas attention on ne s’en rend pas compte. Et puis je me suis dit « mais en fait à quoi ça ressemble cette bestiole ? ». J’ai eu la démarche classique de tout un chacun qui s’intéresse à ce qui se passe autour de lui, et je suis partie à la pêche aux informations.  \n  \n<br>Lors de mes recherches, j'ai contacté l’Observatoire des Vers luisants et des Lucioles qui existe dans l'hexagone depuis 2015, il est porté par le Groupe Associatif Estuaire et un référent scientifique du CNRS. C’est comme ça qu’on a monté un partenariat et créé le relai guadeloupéen de l’observatoire, qu’on a nommé avec un terme local : <strong>*Ti bet a limiè*, qui veut dire “petites bêtes lumineuses” en créole antillais</strong>. Ça a un double sens, ça peut aussi vouloir dire “petits trucs lumineux” : même si on est davantage sur les insectes, si on a des infos qui nous parviennent sur d’autres organismes lumineux, on les prend aussi ! On a par exemple retrouvé un champignon bioluminescent. Mais notre spécialité, c’est les insectes lumineux !<br>	\N	\N	\N	f
@@ -4411,7 +4469,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 2689, true);
+SELECT pg_catalog.setval('public.image_seq', 2712, true);
 
 
 --
@@ -4446,14 +4504,14 @@ SELECT pg_catalog.setval('public.media_category_seq', 1000, false);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 70756, true);
+SELECT pg_catalog.setval('public.page_element_seq', 70978, true);
 
 
 --
 -- Name: page_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_seq', 1055, true);
+SELECT pg_catalog.setval('public.page_seq', 1056, true);
 
 
 --
