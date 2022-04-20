@@ -1304,6 +1304,7 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2704	image/jpeg	copy-2074
 2705	image/jpeg	copy-2058
 2708	image/jpeg	copy-2039
+2722	image/jpeg	copy-2069
 1866	image/jpeg	copy-1229
 1867	image/jpeg	copy-1223
 1868	image/jpeg	copy-1228
@@ -1493,6 +1494,9 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2691	image/jpeg	copy-2069
 2701	image/jpeg	copy-2077
 2711	image/jpeg	copy-1957
+2713	image/jpeg	copy-2092
+2724	image/jpeg	copy-2076
+2725	image/jpeg	copy-2073
 2008	image/jpeg	copy-1692
 2013	image/jpeg	copy-1772
 2287	image/jpeg	copy-1059
@@ -1541,6 +1545,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2692	image/jpeg	copy-2073
 2700	image/jpeg	copy-2078
 2709	image/jpeg	copy-1835
+2714	image/jpeg	copy-2066
+2721	image/jpeg	copy-2078
 2009	image/jpeg	copy-1754
 2010	image/jpeg	copy-1693
 2012	image/jpeg	copy-1750
@@ -1596,6 +1602,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2693	image/jpeg	copy-2066
 2702	image/jpeg	copy-2076
 2707	image/jpeg	copy-1837
+2715	image/jpeg	copy-2070
+2723	image/jpeg	copy-2075
 2011	image/jpeg	copy-1746
 2015	image/jpeg	copy-1742
 2017	image/jpeg	copy-1690
@@ -1782,6 +1790,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2684	image/jpeg	copy-2054
 2694	image/jpeg	copy-2071
 2703	image/jpeg	copy-2075
+2716	image/jpeg	copy-2071
+2726	image/jpeg	copy-2074
 2154	image/jpeg	copy-1842
 2290	image/jpeg	copy-1280
 2298	image/jpeg	copy-1298
@@ -1830,6 +1840,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2685	image/jpeg	copy-2050
 2695	image/jpeg	copy-2067
 2710	image/jpeg	copy-1832
+2717	image/jpeg	copy-2065
+2727	image/jpeg	copy-2077
 2156	image/jpeg	copy-1286
 2157	image/jpeg	copy-1236
 2159	image/jpeg	copy-1841
@@ -1875,6 +1887,7 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2687	image/jpeg	copy-2051
 2696	image/jpeg	copy-2065
 2706	image/jpeg	copy-2080
+2718	image/jpeg	copy-2072
 2158	image/jpeg	copy-1285
 2294	image/jpeg	copy-1287
 2306	image/jpeg	copy-1270
@@ -1915,6 +1928,7 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2678	image/jpeg	copy-2040
 2688	image/jpeg	copy-2057
 2697	image/jpeg	copy-2068
+2719	image/jpeg	copy-2068
 2160	image/jpeg	copy-1843
 2295	image/jpeg	copy-1385
 2300	image/jpeg	copy-1307
@@ -1960,6 +1974,7 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2689	image/jpeg	copy-2044
 2698	image/jpeg	copy-2070
 2712	image/jpeg	copy-2081
+2720	image/jpeg	copy-2067
 2162	image/jpeg	copy-1844
 2163	image/jpeg	copy-1622
 2164	image/jpeg	copy-1622
@@ -2312,7 +2327,6 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1014	recifs-coralliens	indicator	Récifs coralliens
 1010	especes-menacees	indicator	Espèces éteintes et menacées
 1011	taux-boisement	indicator	Proportion de forêts
-1056	Cétacés Nouvelle-Calédonie	report	Mammifères marins de Nouvelle-Calédonie
 1001	guadeloupe	territory	Guadeloupe
 1015	martinique	territory	Martinique
 1020	nouvelle-caledonie	territory	Nouvelle-Calédonie
@@ -2321,6 +2335,7 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1054	Faune TAAF	report	La Faune sauvage des Terres Australes françaises
 1039	mayotte	territory	Mayotte
 1049	Balade dans les îles Eparses	report	Balade dans les îles Eparses
+1056	Cétacés Nouvelle-Calédonie	report	Mammifères marins de Nouvelle-Calédonie
 1046	media	Accueil médias	Médias
 1045	terre-adelie	territory	La Terre Adélie
 1051	Ti bet a limie	interview	Ti bet a limie 
@@ -3134,15 +3149,10 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68554	1038	TEXT	zoom.callToAction	Cliquez sur la carte thématique pour vous repérer en un coup d'œil ! 	\N	\N	\N	f
 68555	1038	TEXT	ecosystems.ecosystems.0.name	La forêt humide	\N	\N	\N	f
 68920	1030	TEXT	paragraphs.0.text	**Editeur**\nMuséum national d'Histoire naturelle\nUMS Patrimoine Naturel \nCP41, 36 rue Geoffroy saint-Hilaire\n75005 Paris\n\n**Conception et hébergement**\nAgence Ninja Squad\nwww.ninja-squad.fr\n\nJean-Baptiste Giffard\nwww.digitaldesigner.cool\n\nSite hébergé par le Muséum national d’Histoire naturelle\n\n**Création graphique**\nDesign graphique réalisé par : \nAmélie Bracq\nEdouard Sastre\n\n**Création et mise à jour du contenu**\nLe contenu éditorial du site est produit et mis à jour par PatriNat (OFB - CNRS - MNHN).	\N	\N	\N	f
-71045	1056	TEXT	body.photos.3.description	« En Nouvelle-Calédonie, la Baleine à bosse fait l’objet d’un suivi scientifique depuis plus de 25 ans. Des photographies et des biopsies (prélèvements de tissus à l’aide d’une arbalète) sont collectées depuis des embarcations légères qui permettent d’approcher les baleines à bosse en mer à une dizaine de mètres. Plus de 1 700 individus différents ont ainsi fait l’objet d’un suivi individualisé au cours des dernières décennies afin de suivre leur histoire de vie et de mieux comprendre l’évolution de la population. »	\N	\N	\N	f
 66600	1039	TEXT	events.10.description	Création de la Réserve naturelle nationale des forêts de Mayotte	\N	\N	\N	f
 66601	1039	TEXT	interests.locations.0.description	Situé dans le lagon à l’est de Grande Terre, l’îlot Mbouzi est classé en Réserve naturelle nationale depuis 2007 afin de préserver sa relique de forêt sèche primaire, qui abrite des plantes remarquables et protégées dont le rare Ebène de Bernier ([*Diospyros bernieriana*](https://inpn.mnhn.fr/espece/cd_nom/967608)). On y trouve également la sous-espèce du Foudi des Comores endémique de Mayotte ([*Foudia eminentissima algondae*](https://inpn.mnhn.fr/espece/cd_nom/418756)). La réserve comprend une partie marine de 60 hectares qui abrite des communautés coralliennes remarquables. Elle est gérée par l’association les [Naturalistes de Mayotte](https://www.naturalistesmayotte.fr/).	\N	\N	\N	f
-71046	1056	IMAGE	body.photos.1.photo	\N	2695	© Martial Dosdane	\N	f
 69221	1015	TEXT	ecosystems.ecosystems.4.description	Des communautés coralliennes se développent sur tous les petits fonds de l’île mais elles ne forment de véritables récifs que sur la côte atlantique de l’île et dans la baie de Fort de France. 40 espèces coralliennes sont recensées dans les eaux de l’île, cependant, une importante partie des colonies sont considérées comme dégradées.	\N	\N	\N	f
 69222	1015	TEXT	ecosystems.ecosystems.4.name	Les récifs coralliens	\N	\N	\N	f
-71047	1056	TEXT	body.photos.2.description	« La migration de la Baleine à bosse ([*Megaptera novaeangliae*](https://inpn.mnhn.fr/espece/cd_nom/60867)) rythme le calendrier kanak ; son arrivée indique qu’il est temps de préparer les champs où sera planté l’igname, ce tubercule important dans la tradition locale. D’abord étudiée dans le lagon sud de la Nouvelle-Calédonie, cette espèce a montré qu’elle pouvait également apprécier les eaux du large : le déploiement de balises satellitaires et les campagnes en mer des scientifiques ont mis en évidence des regroupements de baleines autour de certains monts sous-marins peu profonds du Parc naturel de la mer de Corail. »	\N	\N	\N	f
-71048	1056	TEXT	body.photos.4.description	« On pense souvent, à tort, que la Baleine à bosse est le seul rorqual à visiter les eaux de Nouvelle-Calédonie. En réalité, huit espèces de rorquals y sont recensées ! Le Petit Rorqual pygmée ([*Balaenoptera acutorostrata subspecies*](https://inpn.mnhn.fr/espece/cd_nom/60856)) est la plus petite espèce. Il fait partie des rares cétacés fréquentant les lagons. Discret et rapide, il n’est pas toujours facile à observer. On connait peu de choses sur sa distribution en Nouvelle-Calédonie, mais l’observation de jeunes animaux laisse supposer qu’il s’y reproduit. »	\N	\N	\N	f
-71049	1056	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 66602	1039	TEXT	risks.risks.2.description	Les inventaires naturalistes de la flore de Mayotte sont récents, le territoire n’ayant fait l’objet que de quelques prospections ponctuelles jusqu’au début des années 1990. Les travaux se sont intensifiés par la suite, avec notamment l’étendue de l’agrément du Conservatoire botanique national de Mascarin à Mayotte en 2007 et l’ouverture de l’antenne de Coconi en 2009. \n\nLa flore indigène mahoraise présente des affinités avec la flore malgache, les vents, les courants marins et les oiseaux ayant permis un lien avec Madagascar, situé à environ 350 km de Mayotte, cependant près d’une cinquantaine d’espèces végétales sont endémiques strictes de Mayotte.  \n\nSelon la Liste rouge de la flore vasculaire publiée en 2014, 43 % des espèces végétales de Mayotte sont considérées menacées. Afin de préserver les reliques de forêts primaires et restaurer les forêts secondaires limitrophes, la Réserve naturelle nationale des forêts de Mayotte a été créée en 2021. Divisée en 6 zones distinctes, elle s’étend sur 2 800 hectares, soit 8 % de la superficie de l’île. Les activités humaines y sont règlementées.\n	\N	\N	\N	f
 66603	1039	TEXT	risks.risks.1.description	Depuis 1998, l’Observatoire des Récifs Coralliens de Mayotte (ORC) étudie l’évolution de l’état de santé des récifs. Les [menaces qui pèsent sur les récifs coralliens sont nombreuses](https://biodiversite-outre-mer.fr/indicateurs/recifs-coralliens) et les suivis réalisés dans les eaux mahoraises montrent une dégradation sur près de la moitié (43 %) des stations étudiées entre 2015 et 2020.  \n\nLes récifs coralliens sont particulièrement sensibles aux modifications entrainées par le changement climatique (réchauffement et acidification des océans) qui entrainent des épisodes de blanchissement de plus en plus intenses et fréquents. Le dernier épisode de blanchissement à Mayotte, en 2016, a induit une mortalité d’environ 25 % des coraux.  \n\nLes coraux sont également dégradés par les rejets des eaux usées non traitées dans les rivières et le lagon, les apports terrigènes liés à l’érosion et les déchets, notamment les plastiques. Dans une moindre mesure, certaines pratiques de pêche (marche sur le platier à marée basse lors de la pêche à pied), les ancrages des bateaux ou les palmes des plongeurs ont des impacts localisés. Les coraux du genre *Porites* sont également prélevés pour la fabrication du *msindzano*, le masque de beauté traditionnel.\n	\N	\N	\N	f
 66604	1039	TEXT	interests.locations.2.description	Au sud de Grande Terre, le Mont Choungui, second plus haut sommet de Mayotte, culmine à 593 m. Il présente une végétation très différente de celle trouvée sur les autres massifs montagneux de Mayotte, le mont Bénara ou le M’Sapéré, une originalité liée aux conditions particulières de relief, de vent et de pluviométrie sur ce mont isolé. Certaines espèces végétales indigènes ne se trouvent à Mayotte que sur ce site et plusieurs espèces endémiques y ont été découvertes, comme l'arbuste [*Eugenia chounguiensis*](https://inpn.mnhn.fr/espece/cd_nom/852782) décrit en 2016. 	\N	\N	\N	f
@@ -3155,14 +3165,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 67004	1044	IMAGE	interviewee.photo	\N	2237	Marilou Hircq	\N	f
 67005	1044	TEXT	body.introduction	En Guyane, on ne s’intéresse pas qu’aux caïmans et aux jaguars ! Le projet BUG (Biodiversité Urbaine de Guyane) mobilise des centaines d’élèves depuis janvier pour inventorier les fourmis et les champignons. A l’école et chez eux.  \n  \nMarilou Hircq, ingénieure au CNRS, coordonne ce projet de sciences participatives unique dans cette région d’Outre-mer.	\N	\N	\N	f
 70207	1049	TEXT	body.photos.2.description	« Construite en blocs de corail taillé, la maison Paturau est l’un des vestiges de l’occupation éphémère de l’île Juan de Nova pour l’exploitation du guano et de la roche phosphatée au cours du 20<sup>e</sup> siècle. C’est en réalité Edouard Lanier, prédécesseur d’Hector Paturau à la propriété de la concession, qui la fit construire. Sur une pierre de soubassement, l’inscription latine *Labor improbus omnia vincit* datée du 29 juillet 1911 promet qu’«&nbsp;un travail acharné vient à bout de tout&nbsp;». Cette belle demeure n’était cependant pas destinée aux ouvriers, qui vivaient dans des conditions difficiles. »	\N	\N	\N	f
-71050	1056	TEXT	body.photos.1.description	« En saison fraîche, des rassemblements de dugongs comptant plusieurs dizaines d’individus sont régulièrement observés à l’extérieur du récif barrière qui entoure la Grande Terre. La raison de ces rassemblements fait l’objet de plusieurs hypothèses : il est possible que cela soit dû au comportement de thermorégulation de ces animaux, qui préfèrent les eaux océaniques plus chaudes que celles du lagon à cette période, ou que ces regroupements leurs permettent de se protéger des prédateurs (principalement le Requin tigre ([*Galeocerdo cuvier*](https://inpn.mnhn.fr/espece/cd_nom/361617))) en naviguant à l’extérieur du récif barrière pour se déplacer d’une zone lagonaire à une autre. »	\N	\N	\N	f
 70507	1006	TEXT	presentation.name	Je protège les récifs coralliens	\N	\N	\N	f
 70508	1006	IMAGE	action.cards.0.icon	\N	1020	Bateau	\N	f
-71051	1056	TEXT	body.photos.5.description	« Le Grand Dauphin de l’Indo-Pacifique ([*Tursiops aduncus*](https://inpn.mnhn.fr/espece/cd_nom/528706)) se rencontre essentiellement à l’intérieur des lagons de la Grande-Terre, où six populations distinctes ont été identifiées grâce aux techniques photographiques et génétiques. Vivant proche des côtes, ce dauphin est particulièrement exposé aux activités humaines telles que la pêche et le trafic maritime. Nombreux sont les individus qui portent sur leur nageoire dorsale les marques de rencontres malencontreuses avec des bateaux ou des filets de pêche. »	\N	\N	\N	f
-71052	1056	TEXT	body.photos.7.description	« Le Cachalot ([*Physeter macrocephalus*](https://inpn.mnhn.fr/espece/cd_nom/60949)) est présent toute l’année en Nouvelle-Calédonie, avec un pic saisonnier au mois d’octobre. Ce grand plongeur vit dans les eaux profondes du large, notamment sur les pentes à l’extérieur des récifs barrières de la Grande Terre. En Nouvelle-Calédonie, les échouages de cachalot sont relativement nombreux et concernent essentiellement des animaux solitaires. Les autopsies menées sur les carcasses peuvent parfois permettre de déterminer la cause de leur mort : anthropique (collision, prise dans un dispositif concentrateur de poisson artisanal) mais également naturelle, plus difficile à identifier sans examen approfondi (maladies, vieillesse, etc.). »	\N	\N	\N	f
-71053	1056	TEXT	presentation.name	A la rencontre des mammifères marins de Nouvelle-Calédonie	\N	\N	\N	f
-71054	1056	TEXT	body.photos.0.description	« Appelé Dugong ([*Dugong dugon*](https://inpn.mnhn.fr/espece/cd_nom/532345)) ou vache marine, ce paisible animal de l’ordre des Siréniens se nourrit principalement sur les herbiers de plantes marines, les phanérogames. Limitée à quelques centaines d’individus, la population de dugongs de Nouvelle-Calédonie est pourtant l’une des plus importante au monde. Chassée par le passé, notamment pour des cérémonies coutumières kanak, l’espèce est maintenant protégée. Elle est fortement menacée par les activités anthropiques qui dégradent les habitats côtiers. »	\N	\N	\N	f
-71055	1056	TEXT	body.photos.6.description	« Facilement reconnaissable à son long bec et à ses sauts en vrille, le Dauphin à long bec ([*Stenella longirostris*](https://inpn.mnhn.fr/espece/cd_nom/60916)) vient se reposer dans les lagons sur les fonds blancs d’arrière récif pendant la journée, après s’être alimenté au large de poissons et de céphalopodes océaniques durant la nuit. »	\N	\N	\N	f
 70509	1006	IMAGE	presentation.image	\N	1289	Eco-plongeur dans les récifs de Nouvelle-Calédonie © Jean-Pascal Quod / Reefcheck	\N	f
 68921	1004	SELECT	presentation.sourceSelect	onb	\N	\N	\N	f
 68556	1038	TEXT	species.5.description	Les plages de Guyane comptent parmi les plus importants sites de ponte de tortues marines au monde. Elles accueillent principalement trois espèces : la Tortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338)), la Tortue olivâtre ([*Lepidochelys olivacea*]) et la Tortue luth ([*Dermochelys coriacea*](https://inpn.mnhn.fr/espece/cd_nom/77367)). \nLa Tortue luth est la plus grosse espèce de tortue marine au monde, avec un poids moyen de 450 kg pour une taille de près d’1,60 mètre et elle se nourrit essentiellement de méduses. Contrairement aux autres tortues marines, elle ne possède pas d’écailles mais une dossière en cuir très épais, qui lui permet de plonger plus profondément que les autres espèces. Grandes migratrices, les tortues luths remontent jusqu’au nord de l’Atlantique. \nDe nombreuses menaces pèsent sur les tortues marines : braconnage, prises accidentelles dans les filets de pêche, prédation par des chiens errants, collisions avec des bateaux. En Guyane, il semble que les pontes de Tortue luth se raréfient ces dernières années. L’Office français de la biodiversité anime le plan national d’action Tortues marine en Guyane et coordonne l’ensemble des acteurs liés à leur protection. \n\nStatut sur la Liste rouge des reptiles de Guyane française : en danger\n	\N	\N	\N	f
@@ -3194,31 +3198,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 66607	1039	TEXT	identity.subtitle	De nombreuses espèces terrestres endémiques	\N	\N	\N	f
 66608	1039	IMAGE	species.7.image	\N	2383	*Bruguiera gymnorhiza* © Vincent Boullet	\N	f
 66609	1039	TEXT	species.5.name	Les dauphins	\N	\N	\N	f
-71056	1056	TEXT	body.photos.8.description	« Le Globicéphale tropical ([*Globicephala macrorhynchus*](https://inpn.mnhn.fr/espece/cd_nom/60887)) est présent toute l’année dans les eaux du Parc naturel de la mer de Corail. On le reconnaît à sa couleur noire et son front proéminent en forme de bulbe. Les mâles adultes sont facilement identifiables à leur large et imposante nageoire dorsale. A ce jour, aucune population résidente n’a été identifiée car aucun individu n’a été observé à plusieurs occasions à travers les années. Du fait du fort lien social qui unit les individus d’un même groupe, les globicéphales tropicaux sont souvent sujets aux échouages en masse. »	\N	\N	\N	f
 69969	1053	TEXT	body.titre_question.1.citation.citationElement	Grâce à ce compagnonnage nous avons pu concevoir une structure d’accueil adéquate pour les chiroptères.	\N	\N	\N	f
 69970	1053	IMAGE	body.titre_question.15.image.imageElement	\N	2640	Te Me Um	\N	f
 69971	1053	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
-71057	1056	IMAGE	body.photos.6.photo	\N	2699	© Marc Oremus - Opération Cétacés	\N	f
-71058	1056	TEXT	presentation.author	14/04/2022	\N	\N	\N	f
-71059	1056	TEXT	body.photos.11.description	« Le Grand Dauphin commun ([*Tursiops truncatus*](https://inpn.mnhn.fr/espece/cd_nom/60927)) est présent en Nouvelle-Calédonie tout au long de l’année, mais il n’est jamais rencontré à l’intérieur des lagons. Joueurs, les individus viennent fréquemment surfer à l’étrave des navires et forment généralement de petits groupes d’une quinzaine d’individus. L’existence de populations résidentes a récemment été mise en évidence au sein du Parc naturel de la mer de Corail, notamment aux alentours des monts sous-marins peu profonds. »	\N	\N	\N	f
-71060	1056	IMAGE	body.photos.9.photo	\N	2703	© Claire Garrigue - Opération Cétacés	\N	f
-71061	1056	TEXT	body.photos.9.description	« La Fausse-orque ([*Pseudorca crassidens*](https://inpn.mnhn.fr/espece/cd_nom/60911)) peut être rencontrée dans les eaux du Parc naturel de la mer de Corail mais également dans le lagon sud de Nouvelle-Calédonie, en groupes de 10 à 20 individus. Ces petits groupes peuvent également se rassembler pour former de grands groupes de plusieurs centaines d’animaux. La Fausse-orque vient volontiers à la rencontre des bateaux pour surfer la vague d’étrave et peut être accompagnée d’autres espèces de dauphins. »	\N	\N	\N	f
-71062	1056	TEXT	body.photos.12.description	« Découvert en 2003, le Rorqual de Omura ([*Balaenoptera omurai*](https://inpn.mnhn.fr/espece/cd_nom/535523)) reste peu connu à l’échelle mondiale, à l’exception de Madagascar où il a fait l’objet d’études. Rarement observé, il semble cependant être présent toute l’année en Nouvelle-Calédonie. La rencontre de jeunes individus suggère que cet animal discret se reproduit dans les eaux de l’archipel. »  \n<br>\n<strong>Pour en savoir plus</strong> sur les mammifères marins de Nouvelle-Calédonie, consultez le site d'[Opération Cétacés](https://operationcetaces.wordpress.com/) et suivez leurs actualités sur [Facebook](https://www.facebook.com/operationcetaces) ; sur la biodiversité de Nouvelle-Calédonie, consultez [la page portrait du territoire](https://biodiversite-outre-mer.fr/territoires/nouvelle-caledonie). \n<br>	\N	\N	\N	f
-71063	1056	IMAGE	body.photos.11.photo	\N	2701	© Claire Garrigue - Opération Cétacés	\N	f
-71064	1056	IMAGE	body.photos.4.photo	\N	2698	© Claire Garrigue - Opération Cétacés	\N	f
-71065	1056	IMAGE	body.photos.7.photo	\N	2692	© Marc Oremus - Opération Cétacés	\N	f
-71066	1056	IMAGE	body.photos.2.photo	\N	2697	© Magaly Chambellant - Opération Cétacés	\N	f
-71067	1056	IMAGE	presentation.image	\N	2693	Rassemblement de Dugongs © Martial Dosdane 	\N	f
-71068	1056	IMAGE	body.photos.10.photo	\N	2702	© Claire Garrigue - Opération Cétacés	\N	f
-71069	1056	IMAGE	photograph.photo	\N	2690	Par Claire Garrigue et Solène Derville	\N	f
-71070	1056	TEXT	body.photos.10.description	« Les rares observations du Dauphin tacheté pantropical ([*Stenella attenuata*](https://inpn.mnhn.fr/espece/cd_nom/60914)) ont été faites dans le chenal des îles Loyauté ou à Lifou. Comme le Dauphin à long bec auquel il ressemble, le Dauphin tacheté pantropical est très acrobatique en surface. Il semble avoir une préférence pour les eaux du large mais peut également être observé près des côtes lorsque les eaux proches du rivage sont profondes. »	\N	\N	\N	f
-71071	1056	IMAGE	body.photos.12.photo	\N	2700	© Claire Garrigue - Opération Cétacés	\N	f
-71072	1056	IMAGE	body.photos.3.photo	\N	2691	© Yohann Djerahian	\N	f
-71073	1056	TEXT	photograph.presentation	Par [Claire Garrigue](https://umr-entropie.ird.nc/index.php/team/claire-garrigue) et [Solène Derville](https://www.researchgate.net/profile/Solene-Derville-2)	\N	\N	\N	f
-71074	1056	IMAGE	body.photos.5.photo	\N	2694	© Claire Garrigue - Opération Cétacés	\N	f
-71075	1056	TEXT	body.introduction	La Nouvelle-Calédonie abrite une biodiversité remarquable en mammifères marins, dont plusieurs espèces présentent une valeur patrimoniale forte pour les populations océaniennes. Si la plupart fréquentent les eaux du large, quelques-unes s’observent également dans les lagons. Depuis plus de 20 ans, l’association Opération Cétacés et une équipe de l’Institut de recherche et développement (IRD) étudient cette grande faune marine. Elles nous présentent ici quelques représentants de la trentaine d’espèces recensée dans les eaux de l’archipel.	\N	\N	\N	f
-71076	1056	IMAGE	body.photos.8.photo	\N	2704	© Claire Garrigue - Opération Cétacés	\N	f
-71077	1056	IMAGE	body.photos.0.photo	\N	2696	© Magali Boussion	\N	f
 68557	1038	TEXT	species.6.description	Également nommé wassaï (ou açaï), le Palmier pinot ([*Euterpe olaracea*](https://inpn.mnhn.fr/espece/cd_nom/731659)) produit des fruits de couleur violet très foncé utilisés pour de nombreux usages (jus, huile, poudre). Ils poussent en grappes le long du tronc qui peut s’élever jusqu’à 20 m de hauteur, et sont également consommés par la faune sauvage. Ces palmiers sont particulièrement présents en zones marécageuses où ils peuvent former de véritables « pinotières ».\nUtilisées depuis des siècles par les peuples d’Amazonie, les fruits du wassaï font désormais l’objet d’un intérêt mondial sur les marchés de l’alimentation, la cosmétique et la médecine. \n\nStatut sur la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
 68558	1038	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
 68559	1038	TEXT	events.0.date	-13 000 ans	\N	\N	\N	f
@@ -4441,6 +4423,39 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70754	1022	IMAGE	species.0.image	\N	2419	Jeune phoque veau marin  © Daniel Koelsch - DTAM 975	\N	f
 70755	1022	TEXT	events.1.date	17<sup>e</sup> siècle 	\N	\N	\N	f
 70756	1022	TEXT	interests.locations.4.name	Saint-Pierre	\N	\N	\N	f
+71249	1056	TEXT	body.photos.3.description	« En Nouvelle-Calédonie, la Baleine à bosse fait l’objet d’un suivi scientifique depuis plus de 25 ans. Des photographies et des biopsies (prélèvements de tissus à l’aide d’une arbalète) sont collectées depuis des embarcations légères qui permettent d’approcher les baleines à bosse en mer à une dizaine de mètres. Plus de 1 700 individus différents ont ainsi fait l’objet d’un suivi individualisé au cours des dernières décennies afin de suivre leur histoire de vie et de mieux comprendre l’évolution de la population. »	\N	\N	\N	f
+71250	1056	IMAGE	body.photos.1.photo	\N	2720	© Martial Dosdane	\N	f
+71251	1056	TEXT	body.photos.2.description	« La migration de la Baleine à bosse ([*Megaptera novaeangliae*](https://inpn.mnhn.fr/espece/cd_nom/60867)) rythme le calendrier kanak ; son arrivée indique qu’il est temps de préparer les champs où sera planté l’igname, ce tubercule important dans la tradition locale. D’abord étudiée dans le lagon sud de la Nouvelle-Calédonie, cette espèce a montré qu’elle pouvait également apprécier les eaux du large : le déploiement de balises satellitaires et les campagnes en mer des scientifiques ont mis en évidence des regroupements de baleines autour de certains monts sous-marins peu profonds du Parc naturel de la mer de Corail. »	\N	\N	\N	f
+71252	1056	TEXT	body.photos.4.description	« On pense souvent, à tort, que la Baleine à bosse est le seul rorqual à visiter les eaux de Nouvelle-Calédonie. En réalité, huit espèces de rorquals y sont recensées ! Le Petit Rorqual pygmée ([*Balaenoptera acutorostrata subspecies*](https://inpn.mnhn.fr/espece/cd_nom/60856)) est la plus petite espèce. Il fait partie des rares cétacés fréquentant les lagons. Discret et rapide, il n’est pas toujours facile à observer. On connait peu de choses sur sa distribution en Nouvelle-Calédonie, mais l’observation de jeunes animaux laisse supposer qu’il s’y reproduit. »	\N	\N	\N	f
+71253	1056	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
+71254	1056	TEXT	body.photos.1.description	« En saison fraîche, des rassemblements de dugongs comptant plusieurs dizaines d’individus sont régulièrement observés à l’extérieur du récif barrière qui entoure la Grande Terre. La raison de ces rassemblements fait l’objet de plusieurs hypothèses : il est possible que cela soit dû au comportement de thermorégulation de ces animaux, qui préfèrent les eaux océaniques plus chaudes que celles du lagon à cette période, ou que ces regroupements leurs permettent de se protéger des prédateurs (principalement le Requin tigre ([*Galeocerdo cuvier*](https://inpn.mnhn.fr/espece/cd_nom/361617))) en naviguant à l’extérieur du récif barrière pour se déplacer d’une zone lagonaire à une autre. »	\N	\N	\N	f
+71255	1056	TEXT	body.photos.5.description	« Le Grand Dauphin de l’Indo-Pacifique ([*Tursiops aduncus*](https://inpn.mnhn.fr/espece/cd_nom/528706)) se rencontre essentiellement à l’intérieur des lagons de la Grande-Terre, où six populations distinctes ont été identifiées grâce aux techniques photographiques et génétiques. Vivant proche des côtes, ce dauphin est particulièrement exposé aux activités humaines telles que la pêche et le trafic maritime. Nombreux sont les individus qui portent sur leur nageoire dorsale les marques de rencontres malencontreuses avec des bateaux ou des filets de pêche. »	\N	\N	\N	f
+71256	1056	TEXT	body.photos.7.description	« Le Cachalot ([*Physeter macrocephalus*](https://inpn.mnhn.fr/espece/cd_nom/60949)) est présent toute l’année en Nouvelle-Calédonie, avec un pic saisonnier au mois d’octobre. Ce grand plongeur vit dans les eaux profondes du large, notamment sur les pentes à l’extérieur des récifs barrières de la Grande Terre. En Nouvelle-Calédonie, les échouages de cachalot sont relativement nombreux et concernent essentiellement des animaux solitaires. Les autopsies menées sur les carcasses peuvent parfois permettre de déterminer la cause de leur mort : anthropique (collision, prise dans un dispositif concentrateur de poisson artisanal) mais également naturelle, plus difficile à identifier sans examen approfondi (maladies, vieillesse, etc.). »	\N	\N	\N	f
+71257	1056	TEXT	presentation.name	A la rencontre des mammifères marins de Nouvelle-Calédonie	\N	\N	\N	f
+71258	1056	TEXT	body.photos.0.description	« Appelé Dugong ([*Dugong dugon*](https://inpn.mnhn.fr/espece/cd_nom/532345)) ou vache marine, ce paisible animal de l’ordre des Siréniens se nourrit principalement sur les herbiers de plantes marines, les phanérogames. Limitée à quelques centaines d’individus, la population de dugongs de Nouvelle-Calédonie est pourtant l’une des plus importante au monde. Chassée par le passé, notamment pour des cérémonies coutumières kanak, l’espèce est maintenant protégée. Elle est fortement menacée par les activités anthropiques qui dégradent les habitats côtiers. »	\N	\N	\N	f
+71259	1056	TEXT	body.photos.6.description	« Facilement reconnaissable à son long bec et à ses sauts en vrille, le Dauphin à long bec ([*Stenella longirostris*](https://inpn.mnhn.fr/espece/cd_nom/60916)) vient se reposer dans les lagons sur les fonds blancs d’arrière récif pendant la journée, après s’être alimenté au large de poissons et de céphalopodes océaniques durant la nuit. »	\N	\N	\N	f
+71260	1056	TEXT	body.photos.8.description	« Le Globicéphale tropical ([*Globicephala macrorhynchus*](https://inpn.mnhn.fr/espece/cd_nom/60887)) est présent toute l’année dans les eaux du Parc naturel de la mer de Corail. On le reconnaît à sa couleur noire et son front proéminent en forme de bulbe. Les mâles adultes sont facilement identifiables à leur large et imposante nageoire dorsale. A ce jour, aucune population résidente n’a été identifiée car aucun individu n’a été observé à plusieurs occasions à travers les années. Du fait du fort lien social qui unit les individus d’un même groupe, les globicéphales tropicaux sont souvent sujets aux échouages en masse. »	\N	\N	\N	f
+71261	1056	IMAGE	body.photos.6.photo	\N	2718	© Marc Oremus - Opération Cétacés	\N	f
+71262	1056	TEXT	presentation.author	14/04/2022	\N	\N	\N	f
+71263	1056	TEXT	body.photos.11.description	« Le Grand Dauphin commun ([*Tursiops truncatus*](https://inpn.mnhn.fr/espece/cd_nom/60927)) est présent en Nouvelle-Calédonie tout au long de l’année, mais il n’est jamais rencontré à l’intérieur des lagons. Joueurs, les individus viennent fréquemment surfer à l’étrave des navires et forment généralement de petits groupes d’une quinzaine d’individus. L’existence de populations résidentes a récemment été mise en évidence au sein du Parc naturel de la mer de Corail, notamment aux alentours des monts sous-marins peu profonds. »	\N	\N	\N	f
+71264	1056	IMAGE	body.photos.9.photo	\N	2723	© Claire Garrigue - Opération Cétacés	\N	f
+71265	1056	TEXT	body.photos.9.description	« La Fausse-orque ([*Pseudorca crassidens*](https://inpn.mnhn.fr/espece/cd_nom/60911)) peut être rencontrée dans les eaux du Parc naturel de la mer de Corail mais également dans le lagon sud de Nouvelle-Calédonie, en groupes de 10 à 20 individus. Ces petits groupes peuvent également se rassembler pour former de grands groupes de plusieurs centaines d’animaux. La Fausse-orque vient volontiers à la rencontre des bateaux pour surfer la vague d’étrave et peut être accompagnée d’autres espèces de dauphins. »	\N	\N	\N	f
+71266	1056	TEXT	body.photos.12.description	« Découvert en 2003, le Rorqual de Omura ([*Balaenoptera omurai*](https://inpn.mnhn.fr/espece/cd_nom/535523)) reste peu connu à l’échelle mondiale, à l’exception de Madagascar où il a fait l’objet d’études. Rarement observé, il semble cependant être présent toute l’année en Nouvelle-Calédonie. La rencontre de jeunes individus suggère que cet animal discret se reproduit dans les eaux de l’archipel. »  \n<br>\n<strong>Pour en savoir plus</strong> sur les mammifères marins de Nouvelle-Calédonie, consultez le site d'[Opération Cétacés](https://operationcetaces.wordpress.com/) et suivez leurs actualités sur [Facebook](https://www.facebook.com/operationcetaces) ; sur la biodiversité de Nouvelle-Calédonie, consultez [la page portrait du territoire](https://biodiversite-outre-mer.fr/territoires/nouvelle-caledonie).\n<br>	\N	\N	\N	f
+71267	1056	IMAGE	body.photos.11.photo	\N	2727	© Claire Garrigue - Opération Cétacés	\N	f
+71268	1056	IMAGE	body.photos.4.photo	\N	2715	© Claire Garrigue - Opération Cétacés	\N	f
+71269	1056	IMAGE	body.photos.7.photo	\N	2725	© Marc Oremus - Opération Cétacés	\N	f
+71270	1056	IMAGE	body.photos.2.photo	\N	2719	© Magaly Chambellant - Opération Cétacés	\N	f
+71271	1056	IMAGE	presentation.image	\N	2714	Rassemblement de Dugongs © Martial Dosdane 	\N	f
+71272	1056	IMAGE	body.photos.10.photo	\N	2724	© Claire Garrigue - Opération Cétacés	\N	f
+71273	1056	IMAGE	photograph.photo	\N	2713	Par Claire Garrigue et Solène Derville © Marine Reveilhac	\N	f
+71274	1056	TEXT	body.photos.10.description	« Les rares observations du Dauphin tacheté pantropical ([*Stenella attenuata*](https://inpn.mnhn.fr/espece/cd_nom/60914)) ont été faites dans le chenal des îles Loyauté ou à Lifou. Comme le Dauphin à long bec auquel il ressemble, le Dauphin tacheté pantropical est très acrobatique en surface. Il semble avoir une préférence pour les eaux du large mais peut également être observé près des côtes lorsque les eaux proches du rivage sont profondes. »	\N	\N	\N	f
+71275	1056	IMAGE	body.photos.12.photo	\N	2721	© Claire Garrigue - Opération Cétacés	\N	f
+71276	1056	IMAGE	body.photos.3.photo	\N	2722	© Yohann Djerahian	\N	f
+71277	1056	TEXT	photograph.presentation	Par [Claire Garrigue](https://umr-entropie.ird.nc/index.php/team/claire-garrigue) et [Solène Derville](https://www.researchgate.net/profile/Solene-Derville-2)	\N	\N	\N	f
+71278	1056	IMAGE	body.photos.5.photo	\N	2716	© Claire Garrigue - Opération Cétacés	\N	f
+71279	1056	TEXT	body.introduction	La Nouvelle-Calédonie abrite une biodiversité remarquable en mammifères marins, dont plusieurs espèces présentent une valeur patrimoniale forte pour les populations océaniennes. Si la plupart fréquentent les eaux du large, quelques-unes s’observent également dans les lagons. Depuis plus de 20 ans, l’association Opération Cétacés et une équipe de l’Institut de recherche et développement (IRD) étudient cette grande faune marine. Elles nous présentent ici quelques représentants de la trentaine d’espèces recensée dans les eaux de l’archipel.	\N	\N	\N	f
+71280	1056	IMAGE	body.photos.8.photo	\N	2726	© Claire Garrigue - Opération Cétacés	\N	f
+71281	1056	IMAGE	body.photos.0.photo	\N	2717	© Magali Boussion	\N	f
 \.
 
 
@@ -4469,7 +4484,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 2712, true);
+SELECT pg_catalog.setval('public.image_seq', 2727, true);
 
 
 --
@@ -4504,7 +4519,7 @@ SELECT pg_catalog.setval('public.media_category_seq', 1000, false);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 71215, true);
+SELECT pg_catalog.setval('public.page_element_seq', 71281, true);
 
 
 --
