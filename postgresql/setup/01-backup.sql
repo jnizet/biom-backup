@@ -1305,6 +1305,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2705	image/jpeg	copy-2058
 2708	image/jpeg	copy-2039
 2722	image/jpeg	copy-2069
+2737	image/jpeg	copy-2095
+2747	image/jpeg	copy-1997
 1866	image/jpeg	copy-1229
 1867	image/jpeg	copy-1223
 1868	image/jpeg	copy-1228
@@ -1497,6 +1499,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2713	image/jpeg	copy-2092
 2724	image/jpeg	copy-2076
 2725	image/jpeg	copy-2073
+2738	image/jpeg	copy-2093
+2746	image/jpeg	copy-2094
 2008	image/jpeg	copy-1692
 2013	image/jpeg	copy-1772
 2287	image/jpeg	copy-1059
@@ -1547,6 +1551,11 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2709	image/jpeg	copy-1835
 2714	image/jpeg	copy-2066
 2721	image/jpeg	copy-2078
+2728	image/png	copy-2031
+2730	image/jpeg	copy-1985
+2739	image/jpeg	copy-1983
+2741	image/jpeg	copy-2000
+2744	image/jpeg	copy-1994
 2009	image/jpeg	copy-1754
 2010	image/jpeg	copy-1693
 2012	image/jpeg	copy-1750
@@ -1604,6 +1613,9 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2707	image/jpeg	copy-1837
 2715	image/jpeg	copy-2070
 2723	image/jpeg	copy-2075
+2729	image/jpeg	copy-1992
+2734	image/jpeg	copy-1993
+2748	image/jpeg	copy-2001
 2011	image/jpeg	copy-1746
 2015	image/jpeg	copy-1742
 2017	image/jpeg	copy-1690
@@ -1792,6 +1804,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2703	image/jpeg	copy-2075
 2716	image/jpeg	copy-2071
 2726	image/jpeg	copy-2074
+2731	image/jpeg	copy-1986
+2743	image/jpeg	copy-1995
 2154	image/jpeg	copy-1842
 2290	image/jpeg	copy-1280
 2298	image/jpeg	copy-1298
@@ -1842,6 +1856,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2710	image/jpeg	copy-1832
 2717	image/jpeg	copy-2065
 2727	image/jpeg	copy-2077
+2732	image/jpeg	copy-1984
+2740	image/jpeg	copy-2097
 2156	image/jpeg	copy-1286
 2157	image/jpeg	copy-1236
 2159	image/jpeg	copy-1841
@@ -1888,6 +1904,7 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2696	image/jpeg	copy-2065
 2706	image/jpeg	copy-2080
 2718	image/jpeg	copy-2072
+2733	image/jpeg	copy-2096
 2158	image/jpeg	copy-1285
 2294	image/jpeg	copy-1287
 2306	image/jpeg	copy-1270
@@ -1929,6 +1946,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2688	image/jpeg	copy-2057
 2697	image/jpeg	copy-2068
 2719	image/jpeg	copy-2068
+2735	image/jpeg	copy-2060
+2745	image/jpeg	copy-2099
 2160	image/jpeg	copy-1843
 2295	image/jpeg	copy-1385
 2300	image/jpeg	copy-1307
@@ -1975,6 +1994,8 @@ COPY public.image (id, content_type, original_file_name) FROM stdin;
 2698	image/jpeg	copy-2070
 2712	image/jpeg	copy-2081
 2720	image/jpeg	copy-2067
+2736	image/jpeg	copy-1982
+2742	image/jpeg	copy-2098
 2162	image/jpeg	copy-1844
 2163	image/jpeg	copy-1622
 2164	image/jpeg	copy-1622
@@ -2338,6 +2359,7 @@ COPY public.page (id, name, model_name, title) FROM stdin;
 1056	Cétacés Nouvelle-Calédonie	report	Mammifères marins de Nouvelle-Calédonie
 1046	media	Accueil médias	Médias
 1045	terre-adelie	territory	La Terre Adélie
+1057	saint-martin	territory	Saint-Martin
 1051	Ti bet a limie	interview	Ti bet a limie 
 1043	Entretien Eddy Dumbardon-Martial - Pollinisateurs Caravelle	interview	Entretien Eddy Dumbardon - Martial
 1044	Entretien avec Marilou Hircq - BUG	interview	Entretien avec Marilou Hircq - BUG
@@ -2435,6 +2457,13 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70421	1016	TEXT	ecogestures.subtitle	Petits efforts ou grands gestes, nous pouvons tous être acteurs du changement, pour limiter notre impact sur le monde qui nous entoure.	\N	\N	\N	f
 68361	1048	IMAGE	species.2.image	\N	2481	*Chelonia mydas* - Tortue verte © Maxime Amy - TAAF	\N	f
 68362	1048	IMAGE	identity.image	\N	2473	Couple de fous à pieds rouges © Nelly Gravier - TAAF	\N	f
+71282	1057	TEXT	events.2.description	Partage de l’île entre la France et la Hollande (Traité du Mont des Accords)	\N	\N	\N	f
+71283	1057	TEXT	events.3.description	Nouvelle convention franco-hollandaise qui réaffirme le précédent traité, après plusieurs occupations britanniques de l’île	\N	\N	\N	f
+71284	1057	IMAGE	identity.image	\N	2729	© Réserve naturelle nationale de Saint-Martin	\N	f
+71285	1057	TEXT	events.7.description	Saint-Martin, auparavant liée à la Guadeloupe, devient une Collectivité d’outre-mer	\N	\N	\N	f
+71286	1057	TEXT	events.7.date	2007	\N	\N	\N	f
+71287	1057	TEXT	interests.locations.0.name	[La Réserve naturelle nationale de Saint-Martin](https://reservenaturelle-saint-martin.com/)	\N	\N	\N	f
+71288	1057	TEXT	events.0.description	Premières traces d’occupation humaine de l’île 	\N	\N	\N	f
 68784	1013	TEXT	visual.subtitle	Visualisez l'évolution du nombre de nouvelles espèces décrites par année	\N	\N	\N	f
 68785	1013	TEXT	understand.title1	L'outre-mer : un vivier d'espèces à découvrir	\N	\N	\N	f
 68786	1013	TEXT	understand.paragraphs.1.text	Les estimations actuelles du nombre d'espèces présentes sur Terre oscillent entre 8 et 10 millions (hors bactéries), et seules un peu plus de 2 millions d'espèces ont été décrites à ce jour. A l’échelle mondiale, environ 20 000 nouvelles espèces sont décrites chaque année. Cette tâche titanesque est complexifiée par le manque de spécialistes qui s’y consacrent, en particulier chez les invertébrés.  \n  \nCependant, le travail de description morphologique est désormais accompagné de l’utilisation d’analyses ADN qui permettent de distinguer des espèces « cryptiques » c’est-à-dire très semblables morphologiquement mais en réalité différentes génétiquement, ce qui peut par exemple expliquer des différences d’adaptations aux conditions environnementales.	\N	\N	\N	f
@@ -2476,6 +2505,22 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69630	1052	IMAGE	body.titre_question.7.image.imageElement	\N	2611	*	\N	f
 69631	1052	IMAGE	body.titre_question.11.image.imageElement	\N	2613	*	\N	f
 69632	1052	TEXT	body.titre_question.9.citation.citationElement	Les sciences participatives dans les outre-mer : forces, faiblesses, menaces et opportunités	\N	\N	\N	f
+71289	1057	TEXT	events.1.description	Christophe Colomb accoste sur l’île et la nomme Saint-Martin	\N	\N	\N	f
+71290	1057	TEXT	events.8.description	Démarrage du suivi participatif des ponte des tortues marines	\N	\N	\N	f
+71291	1057	TEXT	events.9.description	Création du [Sanctuaire AGOA](https://sanctuaire-agoa.fr/) pour la protection des mammifères marins, qui s’étend sur toutes les Petites Antilles	\N	\N	\N	f
+71292	1057	IMAGE	ecosystems.image	\N	2748	Étang de la Pointe des Froussards © Réserve naturelle nationale de Saint-Martin	\N	f
+71293	1057	TEXT	identity.species	2234	\N	\N	\N	f
+71294	1057	IMAGE	ecosystems.ecosystems.0.image	\N	2742	Récifs coralliens © Julien Chalifour - RNN Saint-Martin	\N	f
+71295	1057	TEXT	zoom.title	Quelques repères à Saint-Martin	\N	\N	\N	f
+71296	1057	TEXT	species.8.name	Le Gaïac	\N	\N	\N	f
+71297	1057	TEXT	events.6.description	Création de la [Réserve naturelle nationale de Saint-Martin](https://reservenaturelle-saint-martin.com/)	\N	\N	\N	f
+71298	1057	TEXT	events.6.date	1998	\N	\N	\N	f
+71299	1057	TEXT	events.4.description	Création des salines de Grand-Case pour l’exploitation du sel	\N	\N	\N	f
+71300	1057	TEXT	events.5.description	Passage de l’ouragan Luis, l’un des plus puissants du XX<sup>e</sup> siècle	\N	\N	\N	f
+71301	1057	TEXT	interests.locations.2.name	L'îlet Pinel	\N	\N	\N	f
+71365	1057	IMAGE	ecosystems.ecosystems.2.image	\N	2747	Mangrove autour de l'Étang aux poissons © Réserve naturelle nationale de Saint-Martin	\N	f
+71366	1057	TEXT	events.10.description	Premier inventaire faunistique sous-marin des échinodermes, crustacés et mollusques de la Réserve naturelle nationale	\N	\N	\N	f
+71367	1057	TEXT	events.11.description	Première campagne du programme MegaRA (étude des mammifères marins dans les Iles du Nord des Petites Antilles)	\N	\N	\N	f
 68363	1048	TEXT	species.3.description	On trouve sur les différentes îles Éparses quinze espèces de reptiles terrestres. Il s'agit de scinques (lézards de la famille des Scincidés) et de geckos (famille des Gekkonidés). Certaines espèces ont probablement été introduites, mais cinq sont endémiques : deux d'Europa, deux de Juan de Nova et une aux Glorieuses. Ces populations fragiles sont menacées par les prédateurs introduits (chats, rats, souris).  \n  \nStatuts sur la Liste rouge des reptiles des îles Éparses, pour les cinq espèces endémiques :\n[*Cryptoblepharus caudatus*](https://inpn.mnhn.fr/espece/cd_nom/785476), [*Lygodactylus insularis*](https://inpn.mnhn.fr/espece/cd_nom/976758) et [*Flexiseps valhallae*](https://inpn.mnhn.fr/espece/cd_nom/902180) : en danger critique d'extinction\n[*Cryptoblepharus gloriosus gloriosus*](https://inpn.mnhn.fr/espece/cd_nom/714621) : vulnérable\n[*Cryptoblepharus bitaeniatus*](https://inpn.mnhn.fr/espece/cd_nom/712368) : quasi-menacée.	\N	\N	\N	f
 68364	1048	TEXT	events.7.description	Classement d'Europa en site Ramsar	\N	\N	\N	f
 68365	1048	TEXT	statistics.3.number	637 hectares	\N	\N	\N	f
@@ -2508,12 +2553,29 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68376	1048	TEXT	statistics.1.number	200 km<sup>2</sup>	\N	\N	\N	f
 68377	1048	IMAGE	ecosystems.ecosystems.0.image	\N	2489	Récif des Glorieuses © Hendrik Sauvignet - OFB	\N	f
 68378	1048	TEXT	statistics.0.number	6 %	\N	\N	\N	f
+71302	1057	TEXT	ecosystems.ecosystems.3.description	La forêt littorale est caractérisée par des espèces xérophiles, c’est-à-dire vivant dans des milieux pauvres en eau. On y trouve par exemple l'Herbe pérenne ([*Mariscus planifolius*](https://fr.wikipedia.org/w/index.php?title=Mariscus_planifolius&action=edit&redlink=1)), le Ti-baume blanc ([*Lantana involucrata*](https://fr.wikipedia.org/wiki/Lantana_involucrata)) ou le Frangipanier blanc ([*Plumieria alba*](https://fr.wikipedia.org/w/index.php?title=Plumieria_alba&action=edit&redlink=1)). Dans les secteurs les plus secs, on trouve l'Acacia bord de mer ([*Acacia tortuosa*](https://fr.wikipedia.org/wiki/Acacia_tortuosa)) et des cactées comme le Cactus cierge ([*Cephalocereus nobilis*](https://fr.wikipedia.org/w/index.php?title=Cephalocereus_nobilis&action=edit&redlink=1)) ou le fameux Cactus tête à l'anglais ([*Melocactus intortus*](https://fr.wikipedia.org/wiki/Melocactus_intortus)).\n	\N	\N	\N	f
+71303	1057	TEXT	statistics.3.text	espèces végétales indigènes	\N	\N	\N	f
+71304	1057	TEXT	events.10.date	2013	\N	\N	\N	f
 68841	1005	TEXT	quote	Documenter et présenter l’évolution de la biodiversité, c’est permettre à chacun de prendre conscience des enjeux et des menaces.	\N	\N	\N	f
+71305	1057	IMAGE	species.1.image	\N	2737	Tortue imbriquée © Julien Chalifour - RNN Saint-Martin	\N	f
+71306	1057	TEXT	events.5.date	1995	\N	\N	\N	f
+71307	1057	TEXT	identity.marineArea	1066	\N	\N	\N	f
+71308	1057	TEXT	events.8.date	2009	\N	\N	\N	f
+71309	1057	IMAGE	interests.locations.0.image	\N	2731	© Réserve naturelle nationale de Saint-Martin	\N	f
+71310	1057	TEXT	species.6.name	Le Cactus tête à l’anglais	\N	\N	\N	f
+71311	1057	IMAGE	interests.locations.3.image	\N	2732	Partie littorale du massif de Red Rock © Réserve naturelle nationale de Saint-Martin	\N	f
+71312	1057	TEXT	risks.title	Enjeux et menaces	\N	\N	\N	f
+71313	1057	TEXT	interests.locations.3.name	Le massif de Red Rock	\N	\N	\N	f
 68379	1048	TEXT	statistics.2.number	Des milliers	\N	\N	\N	f
+71314	1057	TEXT	events.12.date	2017	\N	\N	\N	f
 68380	1048	IMAGE	interests.locations.4.image	\N	2479	Vue aérienne de Bassas da India © Stephanie Legeron - TAAF	\N	f
 68842	1005	CHECKBOX	shadowed	false	\N	\N	\N	f
 68843	1005	IMAGE	understand.image	\N	1362	Fakarava, Polynésie française © Franck Mazeas - 97px	\N	f
 68844	1005	TEXT	questions.0.question	Qu’est-ce que la biodiversité ?	\N	\N	\N	f
+71315	1057	TEXT	statistics.1.text	 étangs	\N	\N	\N	f
+71316	1057	TEXT	events.9.date	2010	\N	\N	\N	f
+71317	1057	IMAGE	species.4.image	\N	2735	Solenoptère de Chalumeau © Eddy Poirier - INPN	\N	f
+71318	1057	TEXT	events.3.date	1839	\N	\N	\N	f
 68845	1005	LINK	inpn.link	Visitez le site de l'INPN	\N	\N	https://inpn.mnhn.fr/	f
 68846	1005	TEXT	questions.2.quote	L'érosion de la biodiversité est une menace pour l'avenir de l'humanité.	\N	\N	\N	f
 68847	1005	TEXT	understand.title	Les indicateurs, des outils pour évaluer l'état de la biodiversité	\N	\N	\N	f
@@ -2665,16 +2727,29 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69922	1007	TEXT	partners.partners.2.url	http://www.criobe.pf/	\N	\N	\N	f
 69923	1007	IMAGE	header.background	\N	1424	Monts Pito Hiti et Orohena, Tahiti, Polynésie française © Jean-Yves Meyer - Délégation à la recherche de Polynésie française	\N	f
 69924	1007	IMAGE	partners.partners.0.logo	\N	1428	Observatoire Martiniquais de la biodiversité	\N	f
+71319	1057	IMAGE	ecosystems.ecosystems.3.image	\N	2745	Forêt sèche littorale © Réserve naturelle nationale de Saint-Martin	\N	f
+71320	1057	IMAGE	species.3.image	\N	2733	Mérou de Nassau © Julien Chalifour - RNN Saint-Martin	\N	f
+71321	1057	IMAGE	zoom.map	\N	2728	Carte Saint-Martin	\N	f
+71322	1057	TEXT	species.1.name	Les tortues marines	\N	\N	\N	f
+71323	1057	TEXT	species.7.name	Le Raisinier bord-de-mer	\N	\N	\N	f
+71324	1057	TEXT	interests.title	Lieux emblématiques	\N	\N	\N	f
 68399	1048	TEXT	events.2.date	1751	\N	\N	\N	f
 68400	1048	TEXT	events.5.date	1897	\N	\N	\N	f
 68401	1048	TEXT	identity.marineArea	634 853	\N	\N	\N	f
 68402	1048	TEXT	events.8.date	2012	\N	\N	\N	f
+71325	1057	TEXT	species.4.name	Le Solenoptère de Chalumeau	\N	\N	\N	f
+71326	1057	TEXT	identity.area	54	\N	\N	\N	f
+71327	1057	TEXT	species.0.description	Neuf espèces de mammifères marins sont observables dans les eaux de Saint-Martin, dont la Baleine à bosse ([*Megaptera novaeangliae*](https://inpn.mnhn.fr/espece/cd_nom/60867)). Mesurant entre 11 et 18 m de long, ce grand cétacé est reconnaissable à la bosse à l’avant de son aileron dorsal. Grandes migratrices, les baleines à bosse se nourrissent en été dans les mers froides et remontent ensuite vers les eaux chaudes pour se reproduire. Elles sont présentes autour de Saint-Martin de janvier à mai, et la zone est le point de rencontre de deux sous-populations : celle fréquentant les Grandes Antilles et celle des Petites Antilles. \nAfin de ne pas perturber les mammifères marins lors d’observation en mer, il est important de respecter [la règlementation](https://www.sanctuaire-agoa.fr/editorial/quand-jobserve-les-cetaces), dont une distance d’approche minimale de 300 m, ou de faire appel à des professionnels formés.  \n  \nStatut sur la Liste rouge mondiale : préoccupation mineure\n	\N	\N	\N	f
+71328	1057	TEXT	identity.highestPointName	Pic Paradis	\N	\N	\N	f
+71329	1057	TEXT	ecosystems.ecosystems.2.name	Les mangroves	\N	\N	\N	f
 64296	1021	TEXT	events.8.description	Publication de la Liste rouge des coraux de l’Océan Indien	\N	\N	\N	f
 64297	1021	IMAGE	ecosystems.image	\N	2370	Éruption du Piton de la Fournaise en 2018 © Fabrice H.	\N	f
 64298	1021	TEXT	identity.species	10 463	\N	\N	\N	f
 64299	1021	IMAGE	ecosystems.ecosystems.0.image	\N	2369	Forêts au cirque de Salazie © Alexandre Clair	\N	f
 64300	1021	TEXT	zoom.title	Quelques repères à La Réunion	\N	\N	\N	f
 64301	1021	TEXT	species.8.name	Le Papangue	\N	\N	\N	f
+71330	1057	TEXT	species.7.description	Le Raisinier bord-de-mer ([*Coccoloba uvifera*](https://inpn.mnhn.fr/espece/cd_nom/447455)) est une plante arbustive que l’on trouve en bordure du rivage, qui peut atteindre 8 mètres de haut. Très résistant au sel et aux embruns, il possède des racines profondes qui retiennent le sable et limitent l’érosion du littoral. Il doit son nom de raisinier à ses fruits rappelant les grappes de raisin, qui peuvent être consommés crus ou utilisés dans des préparations.  \n  \nStatut sur la Liste rouge mondiale : préoccupation mineure\n	\N	\N	\N	f
+71331	1057	TEXT	species.8.description	Le Gaïac ([*Guaiacum officinale*](https://inpn.mnhn.fr/espece/cd_nom/629786)) est un arbre endémique des Petites Antilles pouvant atteindre une douzaine de mètres de haut et dont les branches fourchues forment un couvert dense. Sa floraison et sa fructification sont colorées : il produit de belles fleurs bleues, ses fruits sont oranges et les graines sont enrobées d’une enveloppe rouge vif. On lui prête des vertus médicinales qui lui valent également le nom de « bois de vie ». \nAutrefois répandu, il est aujourd’hui menacé de disparition car son bois a été surexploité pour de nombreux usages (construction navale, meubles, bijoux, parfums, etc.) et sa croissance est très lente. Il est protégé à Saint-Martin.  \n  \nStatut sur la Liste rouge mondiale : en danger\n	\N	\N	\N	f
 68403	1048	TEXT	identity.presentation	Dans le canal du Mozambique, entre 10° et 25° de latitude sud, se répartissent l’archipel des Glorieuses, les îles Juan de Nova et Europa, et l’atoll de Bassas da India. Au nord de La Réunion, l’île de Tromelin complète cet ensemble de territoires français regroupés sous le nom d’îles Éparses, intégrés au sein des Terres australes et antarctiques françaises (TAAF).\nSi la surface terrestre cumulée de ces îles est réduite, elles permettent à la France de détenir un important territoire maritime sous sa juridiction. L’isolement et la faible occupation humaine permettent aux îles Éparses d’abriter une biodiversité remarquable au regard de leur petite taille. Elles hébergent notamment de grandes colonies d’oiseaux marin, des récifs coralliens dans un excellent état de conservation et sont des sites de pontes privilégiés pour les tortues marines.	\N	\N	\N	f
 68404	1048	IMAGE	interests.locations.0.image	\N	2480	Ile du Lys, archipel des Glorieuses © Hendrik Sauvignet - Office français de la biodiversité	\N	f
 68405	1048	TEXT	identity.population	0	\N	\N	\N	f
@@ -2683,6 +2758,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68408	1048	TEXT	risks.title	Enjeux et menaces 	\N	\N	\N	f
 68409	1048	TEXT	species.0.name	Le Veloutier	\N	\N	\N	f
 68410	1048	TEXT	events.4.date	1892	\N	\N	\N	f
+71332	1057	IMAGE	species.2.image	\N	2738	Scinque d'Anguilla © Réserve naturelle nationale de Saint-Martin	\N	f
+71333	1057	TEXT	species.3.description	Le Mérou de Nassau ([*Epinephelus striatus*](https://inpn.mnhn.fr/espece/cd_nom/424158)) est un grand poisson de récifs reconnaissable à sa robe rayée, alternance de bandes irrégulières claires et brunes. Il peut atteindre plus d’un mètre de long et un poids de 25 kg. Autrefois abondant dans toute la Caraïbe, il est victime de pêche intensive et de la dégradation des habitats côtiers, et il est aujourd’hui considéré en danger critique d’extinction. \nA Saint-Martin, il fait l’objet du programme de conservation [Life Biodiv’OM](https://www.lifebiodivom.fr/especes/merou-de-nassau/). Des études sont menées afin de mieux comprendre son développement et des actions sont mises en place pour renforcer les populations. La pêche de loisir du Mérou de Nassau, ainsi que du Mérou Géant ([*Epinephelus itajara*](https://inpn.mnhn.fr/espece/cd_nom/419226)), également vulnérable, est interdite à Saint-Martin.  \n  \nStatut sur la Liste rouge mondiale : en danger critique\n	\N	\N	\N	f
+71334	1057	TEXT	statistics.3.number	360	\N	\N	\N	f
 68411	1048	IMAGE	interests.locations.2.image	\N	2476	Vue aérienne de Juan de Nova © Stephanie Legeron - TAAF	\N	f
 68412	1048	IMAGE	ecosystems.ecosystems.2.image	\N	2486	Sansouïres d'Europa © B. Navez - Wikimedia commons	\N	f
 68413	1048	TEXT	interests.locations.3.name	Europa	\N	\N	\N	f
@@ -3144,6 +3222,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 68552	1038	TEXT	risks.risks.1.name	Le fléau de l’orpaillage illégal	\N	\N	\N	f
 69220	1015	TEXT	ecosystems.ecosystems.3.description	Les herbiers sont composés principalement de phanérogames marines : ce ne sont pas des algues mais bien des plantes à fleurs aquatiques ! Ils sont des lieux de reproduction, de développement et d’alimentation de nombreuses espèces (poissons, oursins, tortues…). En Martinique, ils s’étendent sur les fonds sableux sur près de 5 000 ha.	\N	\N	\N	f
 66599	1039	IMAGE	ecosystems.ecosystems.2.image	\N	2395	Mangrove de Kawéni © Fanny Cautain / Office français de la biodiversité	\N	f
+71335	1057	TEXT	species.1.description	Parmi les 5 espèces fréquentant les eaux de Saint-Martin, trois espèces de tortues marines (verte, imbriquée et Luth) viennent pondre sur le littoral et plus particulièrement sur les grandes plages de la côte orientale et les îlets. Entre 150 et 300 traces de pontes sont observées chaque année, les pontes de Tortue verte étant les plus nombreuses. \nToutes les espèces de tortues marines sont protégées, elles restent cependant victimes de collisions avec les bateaux, de prises accidentelles dans les filets et des déchets plastiques.\n\nStatut sur la Liste rouge mondiale :\nTortue verte ([*Chelonia mydas*](https://inpn.mnhn.fr/espece/cd_nom/77338\n)) : en danger\nTortue imbriquée ([*Eretmochelys imbricata*](https://inpn.mnhn.fr/espece/cd_nom/77347\n)) : en danger critique\nTortue Luth ([*Dermochelys coriacea*](https://inpn.mnhn.fr/espece/cd_nom/77367\n)) : vulnérable\n	\N	\N	\N	f
 40066	1023	TEXT	action.cards.0.description	Je ne jette jamais mes déchets dans la nature. Si il n’y a pas de poubelles à proximité, je les conserve avec moi en attendant.	\N	\N	\N	f
 68553	1038	TEXT	species.4.description	Deux espèces de loutres, la Loutre géante ([*Pteronura brasiliensis*](https://inpn.mnhn.fr/espece/cd_nom/443628)) et la Loutre commune ([*Lontra longicaudis*](https://inpn.mnhn.fr/espece/cd_nom/443627)) vivent dans les cours d’eau et sur les berges de Guyane. La première, de grande taille (jusqu’au 1,80 m de long), vit en groupes familiaux tandis que la seconde, plus petite, est souvent solitaire. \nConsommatrices de poissons et très sensibles à la dégradation des habitats, les loutres peuvent être considérées comme des indicatrices de la qualité des écosystèmes aquatiques. La Loutre géante a fait l’objet d’une chasse intensive pour sa peau au siècle dernier, ce qui l’a conduite au bord de l’extinction au début des années 1970. Les deux espèces sont intégralement protégées mais leur habitat est fortement impacté par l’orpaillage. \n\nStatut sur la Liste rouge des mammifères de Guyane :\nLoutre géante : en danger. \nLoutre commune : préoccupation mineure. \n	\N	\N	\N	f
 68554	1038	TEXT	zoom.callToAction	Cliquez sur la carte thématique pour vous repérer en un coup d'œil ! 	\N	\N	\N	f
@@ -3201,6 +3280,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 69969	1053	TEXT	body.titre_question.1.citation.citationElement	Grâce à ce compagnonnage nous avons pu concevoir une structure d’accueil adéquate pour les chiroptères.	\N	\N	\N	f
 69970	1053	IMAGE	body.titre_question.15.image.imageElement	\N	2640	Te Me Um	\N	f
 69971	1053	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
+71336	1057	TEXT	species.2.description	Le Scinque d’Anguilla ([*Spondylurus powelli*](https://inpn.mnhn.fr/espece/cd_nom/649895)) est un petit reptile dont la présence a été découverte en 2013 sur l’îlet Tintamarre. Endémique de la région, il était jusqu’alors considéré présent uniquement à Anguilla et Saint-Barthélemy. Ses découvreurs ont d’abord cru avoir retrouvé le Scinque de Saint-Martin ([*Spondylurus martinae*](https://inpn.mnhn.fr/espece/cd_nom/649897)) considéré éteint, avant que des analyses ADN viennent réfuter cette hypothèse.\nLa population est estimée à quelques dizaines d’individus, elle est donc très vulnérable, en particulier face aux prédateurs introduits. Si le rat noir ([*Rattus rattus*](https://inpn.mnhn.fr/espece/cd_nom/61587)) est malheureusement déjà présent, l’introduction de la petite mangouste indienne ([*Urva auropunctata*](https://inpn.mnhn.fr/espece/cd_nom/850071)) depuis Saint-Martin sur l’ilet Tintamarre doit absolument être évitée.  \n    \nStatut sur la Liste rouge mondiale : en danger\n	\N	\N	\N	f
 68557	1038	TEXT	species.6.description	Également nommé wassaï (ou açaï), le Palmier pinot ([*Euterpe olaracea*](https://inpn.mnhn.fr/espece/cd_nom/731659)) produit des fruits de couleur violet très foncé utilisés pour de nombreux usages (jus, huile, poudre). Ils poussent en grappes le long du tronc qui peut s’élever jusqu’à 20 m de hauteur, et sont également consommés par la faune sauvage. Ces palmiers sont particulièrement présents en zones marécageuses où ils peuvent former de véritables « pinotières ».\nUtilisées depuis des siècles par les peuples d’Amazonie, les fruits du wassaï font désormais l’objet d’un intérêt mondial sur les marchés de l’alimentation, la cosmétique et la médecine. \n\nStatut sur la Liste rouge mondiale : non évalué.\n	\N	\N	\N	f
 68558	1038	CHECKBOX	identity.shadowed	false	\N	\N	\N	f
 68559	1038	TEXT	events.0.date	-13 000 ans	\N	\N	\N	f
@@ -3279,6 +3359,8 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 71096	1020	TEXT	species.8.name	Le Niaouli	\N	\N	\N	f
 71097	1020	TEXT	species.14.description	Les nautiles sont considérés comme des fossiles vivants dont les ancêtres étaient proches des ammonites, éteintes à la fin de l’ère secondaire. Ils sont les seuls céphalopodes à posséder une coquille, comme les escargots. Habitants du fonds des océans, ils ont une durée de vie d'une vingtaine d'années et se caractérisent par une croissance lente et un faible taux de reproduction. \nSept espèces de nautiles sont aujourd’hui connues, dont [*Nautilus macromphalus*](https://endemia.nc/faune/fiche4911), qui est endémique à la Nouvelle-Calédonie.  \n  \nStatut dans la Liste rouge mondiale pour *Nautilus macromphalus* : non évalué. \n	\N	\N	\N	f
 71098	1020	TEXT	events.6.description	Création du Parc marin de la mer de Corail ; Inscription des lacs du Grand Sud sur la liste des sites Ramsar	\N	\N	\N	f
+71337	1057	TEXT	statistics.1.number	14	\N	\N	\N	f
+71338	1057	TEXT	statistics.0.number	3 054 hectares	\N	\N	\N	f
 67008	1044	TEXT	body.bodyElements.5.citation.citationElement	L’idée est que les élèves reproduisent l’échantillonnage chez eux, afin d’accroître de nombre d’échantillons dans toute la commune.	\N	\N	\N	f
 68578	1038	TEXT	risks.risks.2.description	Le territoire est riche en aires protégées, parmi les plus vastes de France. Outre le parc amazonien de Guyane qui couvre le sud de la Guyane, on compte six réserves naturelles nationales (Marais de Kaw-Roura, Mont Grand Matoury, Trinité, Amana, Grand Connétable et Nouragues) et une réserve naturelle régionale (Trésor). Trois zones humides sont classées au protocole de Ramsar (Basse Mana, les marais de Kaw et l’estuaire des fleuves Sinnamary et Iracoubo) et on compte également 14 000 ha protégés par le Conservatoire du littoral. La Guyane compte également deux réserves biologiques intégrales : la réserve de Petites Montagnes Tortue et la réserve de Lucifer Dékou-Dékou. La création d’une réserve biologique dirigée est en cours.\n\nLa conciliation de la préservation de la biodiversité avec le respect des modes de vie et des traditions des populations est un enjeu fort en Guyane. Le Parc national et l’OFB ont par exemple mené un programme d’étude pour mieux connaître les pratiques de chasse, évaluer l’état de conservation des gibiers et ainsi construire avec les communautés locales des modes de gestion adaptées. \n	\N	\N	\N	f
 68579	1038	TEXT	events.13.description	Création du Parc national Amazonien de Guyane	\N	\N	\N	f
@@ -3342,6 +3424,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 64228	1031	TEXT	identity.highestPointName	Mont Puke (Futuna)	\N	\N	\N	f
 64229	1031	TEXT	ecosystems.ecosystems.2.name	La mangrove	\N	\N	\N	f
 64230	1031	TEXT	species.7.description	Deux espèces de palétuvier sont présentes dans les mangroves de Wallis. L'espèce la plus commune, [*Rhizophora samoensis*](https://inpn.mnhn.fr/espece/cd_nom/672293), présente des racines en échasses tandis que la seconde espèce, [*Bruguiera gymnorhiza*](https://inpn.mnhn.fr/espece/cd_nom/809530\n), possède des racines coudées émergeant du sol, appelées pneumatophores. L'écorce sombre de cette dernière, riche en tanins, est utilisée en artisanat pour teindre les tissus.  \n\nStatut sur la liste rouge mondiale : \n*Rhizophora samoensis* : quasi-menacée.\n*Bruguiera gymnorhiza* : préoccupation mineure.\n\nNoms locaux : *Bruguiera gymnorhiza* : togo, tongo (futunien, wallisien)\n	\N	\N	\N	f
+71339	1057	TEXT	statistics.2.number	61,5 km<sup>2</sup>	\N	\N	\N	f
+71340	1057	IMAGE	interests.locations.4.image	\N	2736	Étang de la Pointe des Froussards © Réserve naturelle nationale de Saint-Martin	\N	f
+71341	1057	TEXT	species.2.name	Le Scinque d’Anguilla	\N	\N	\N	f
 67009	1042	TEXT	body.bodyElements.0.questionAnswer.question	Pouvez-vous nous présenter l’association et ses différentes missions ? 	\N	\N	\N	f
 67010	1042	CHECKBOX	presentation.shadowed	false	\N	\N	\N	f
 67011	1042	IMAGE	body.bodyElements.4.image.imageElement	\N	2247	Carapace de tortue verte femelle braconnée sur la plage de Papani © *Oulanga Na Nyamba*	\N	f
@@ -3359,6 +3444,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 67023	1042	TEXT	body.bodyElements.10.questionAnswer.question	Comment les gens peuvent-ils agir concrètement à Mayotte pour protéger les tortues ? 	\N	\N	\N	f
 67024	1042	IMAGE	body.bodyElements.1.image.imageElement	\N	2244	Formation d'ambassadeurs de l'environnement © *Oulanga Na Nyamba*	\N	f
 71099	1020	TEXT	species.13.description	Ces dernières décennies, la prospection biologique des milieux profonds notamment des monts sous-marins a permis la découverte de fossiles vivants. Parmi eux, un crinoïde ([*Neogymnochrinus richeri*](https://inpn.mnhn.fr/espece/cd_nom/647041)), de la famille des Sclerocrinidae,  datant du jurassique et supposée éteinte. Il a été retrouvé à la fin des années 80 sur la ride de Norflok.  \n  \nStatut dans la Liste rouge mondiale : non évalué. \n\n\n	\N	\N	\N	f
+71342	1057	TEXT	risks.risks.1.name	Ouragans et changements climatiques	\N	\N	\N	f
 70510	1006	TEXT	understand.text	Les récifs coralliens sont un écosystème très riche : ils abritent plus d’un tiers des espèces marines connues pour lesquelles ils représentent notamment une zone de nourricerie pour les juvéniles (poissons, crustacés, etc.). Ils forment également une barrière naturelle contre la houle, protégeant la côte lors des tempêtes.\n\nIls sont particulièrement fragiles, et [de nombreux facteurs les menacent](/indicateurs/recifs-coralliens) : le changement climatique, qui entraine entre autres une augmentation de la température et une acidification des océans, les pollutions, des maladies virales ou bactériennes ou encore la destruction directe pour construire des infrastructures humaines. Par exemple, à Mayotte, le prolongement de la piste d'atterrissage de l'aéroport nécessiterait la destruction d'une importante zone de récifs.\n\nAu-delà de ces pressions globales, les activités de loisirs en mer pèsent également sur la santé des récifs. L’ancrage sauvage peut détériorer les récifs et les herbiers sous-marins. La toxicité pour l’environnement marin des composants de crèmes solaires, qui se dissolvent dans l’eau lors de la baignade, est de plus en plus étudiée et documentée. En plongée, un choc sur les coraux, ou même le simple fait de les toucher leur est néfaste, et cela peut contribuer à la propagation de maladies du corail. Les prélèvements, même de coraux déjà morts, sont préjudiciables pour l’environnement marin et sont rigoureusement interdits dans tous les territoires. 	\N	\N	\N	f
 70511	1006	IMAGE	action.cards.1.icon	\N	1021	Crème solaire	\N	f
 70512	1006	TEXT	action.cards.2.description	En plongée ou en snorkeling, je fais attention à ne pas toucher les coraux et je ne prélève rien. 	\N	\N	\N	f
@@ -4267,6 +4353,7 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 71190	1020	TEXT	identity.subtitle	Un endémisme terrestre remarquable et une diversité marine exceptionnelle	\N	\N	\N	f
 71191	1020	IMAGE	species.7.image	\N	2454	*Sternula nereis* © Nathalie Baillon	\N	f
 71192	1020	TEXT	species.5.name	Les Kaoris	\N	\N	\N	f
+71343	1057	TEXT	species.4.description	Le Solenoptère de Chalumeau ([*Solenoptera chalumeaui*](https://inpn.mnhn.fr/espece/cd_nom/642561)) est un coléoptère endémique de Saint-Martin. De couleur brune, il est couvert de soies grisâtres et peut mesurer jusqu’à 3 cm de long. Il se trouve uniquement autour du Pic Paradis, et cette répartition extrêmement limitée rend l’espèce particulièrement vulnérable, notamment à la dégradation de son habitat. \nIl est protégé intégralement depuis janvier 2020 : toute destruction ou perturbation intentionnelle des spécimens est interdite, ainsi que l’altération ou la dégradation de son habitat.  \n  \nStatut sur la Liste rouge mondiale : non évalué\n	\N	\N	\N	f
 69176	1001	TEXT	events.10.description	Publication de la Liste rouge de la flore vasculaire de Guadeloupe	\N	\N	\N	f
 69177	1001	TEXT	events.11.description	2e Plan national d'actions en faveur des tortues marines des Antilles françaises	\N	\N	\N	f
 69178	1001	TEXT	interests.locations.0.description	Créé en 1989 et premier parc national d’outre-mer, son aire d’adhésion s’étend sur 16 communes du territoire et son cœur de parc sur 21 850 ha dont 3 300 ha marins. Tout l’enjeu du [Parc national de Guadeloupe](http://www.guadeloupe-parcnational.fr/fr) est de conjuguer les activités humaines avec la préservation du patrimoine naturel de grande valeur de la Guadeloupe.	\N	\N	\N	f
@@ -4283,7 +4370,9 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 70655	1055	TEXT	body.introduction	L’association Nature Océan Indien (NOI) est engagée depuis 2007 dans l’étude et la conservation des reptiles indigènes et endémiques de La Réunion. Sur l’île, deux espèces de gecko endémiques sont en danger d’extinction face aux nombreuses espèces introduites. Sébastien Dervin, chef de projet scientifique à NOI, nous explique la situation, les programmes de conservation mis en œuvre et les actions que chacun peut faire pour aider à la préservation de ces reptiles uniques au monde.	\N	\N	\N	f
 70656	1055	TEXT	body.bodyElements.7.questionAnswer.response	Malheureusement, la liste des prédateurs introduits ne s'arrête pas aux reptiles ! Il y a aussi les chats, les rats, souris et musaraignes, ou encore des oiseaux comme le Bulbul orphée ([*Pycnonotus jacosus*](https://inpn.mnhn.fr/espece/cd_nom/418750)) et le Martin triste ([*Acridotheres tristis*](https://inpn.mnhn.fr/espece/cd_nom/601183)). Et même des insectes comme la Fourmi de feu ([*Solenopsis geminata*](https://inpn.mnhn.fr/espece/cd_nom/264070)) ! <strong>Comme dans tous les milieux insulaires, ces prédateurs introduits sont un fléau pour la biodiversité indigène, pas seulement pour nos geckos.</strong>  \n<br>\nMais ils ne sont pas la seule menace, <strong>la fragmentation des milieux naturels</strong> est aussi très préoccupante. Aujourd’hui, sur les 11 km de côte où on trouve encore des populations de Gecko de Manapany, <strong>toutes les populations sont éclatées, il n’y a plus du tout de continuité et chacune décline petit à petit.</strong>  Sans compter l’usage des pesticides et des produits phytosanitaires, qui leur est également néfaste.\n<br>\n	\N	\N	\N	f
 71193	1020	TEXT	risks.risks.0.description	La Nouvelle-Calédonie présente une flore et une faune remarquables, avec des taux d'endémismes très élevés. Trois principales menaces pèsent sur cette biodiversité : les incendies de forêts, les activités minières et les espèces exotiques envahissantes. S'y ajoutent d'autres menaces anthropiques liées à l'aménagement du territoires ou encore les pollutions. \n\nForte de 25 à 30 % des réserves mondiales de nickel, la Nouvelle-Calédonie a comme principale activité économique l'exploitation de ces ressources. Cette exploitation est cependant à l’origine d’impacts notables sur la biodiversité terrestre et marine (érosion, sur-sédimentation…). La réhabilitation des zones exploitées est également un enjeu important.  \n\nLes [incendies de forêt](https://www.oeil.nc/fr/causes/les-incendies) sont particulièrement dévastateurs sur le territoire. Les épisodes sont fréquents et les moyens de lutte limités au regard des enjeux environnementaux. Plusieurs dizaines de milliers d’hectares sont brûlés chaque année. Outre la destruction de la flore, les incendies favorisent la colonisation d’espèces exotiques envahissantes, dégradent la ressource en eau et menacent également les populations humaines.  \n\nLes espèces exotiques envahissantes impactent fortement tous les écosystèmes. Plus de 2 000 espèces végétales, plus de 500 invertébrés et une quarantaine de vertébrés ont ainsi été introduits sur le territoire (dont [36 des 100 espèces considérées comme parmi les plus envahissantes au monde](/indicateurs/especes-exotiques-envahissantes)). Une [stratégie de lutte pays](https://www.cen.nc/lutte-contre-les-eee-en-nouvelle-caledonie) contre les espèces exotiques envahissantes dans les espaces naturels de Nouvelle-Calédonie est en place depuis 2016.  \n\nA une toute autre échelle, l’impact des changements climatiques sur les écosystèmes calédoniens soulève également de nombreuses questions.\n\n	\N	\N	\N	f
+71344	1057	TEXT	zoom.callToAction	Cliquez sur la carte thématique pour vous repérer en un coup d'œil ! 	\N	\N	\N	f
 70912	1000	IMAGE	carousel.carouselElements.1.image	\N	2705	Le Gecko vert de Manapany (Phelsuma inexpectata) est endémique de La Réunion © Nature Océan Indien	\N	f
+71345	1057	TEXT	ecosystems.ecosystems.0.name	Les récifs coralliens	\N	\N	\N	f
 68299	1051	TEXT	body.bodyElements.5.questionAnswer.response	On demande aux gens de nous signaler leurs observations d’insectes lumineux. Il y a [un formulaire en ligne sur le site internet](https://www.anbaloup-la.fr/observatoire-lucioles/) où nous demandons les informations de base : le lieu, la date, et le nombre d’insectes observés. Il y a aussi un questionnaire plus détaillé si les gens sont motivés à nous donner plus d’informations : si l’insecte était en vol, posé, sur quel support, son comportement, etc. Et on peut bien sûr nous envoyer des photos ! Le fait d’utiliser internet peut limiter certaines personnes : c’est aussi possible de faire un signalement par téléphone ou par courrier.  \n  \n<br>On organise aussi des sorties nature, parfois avec le Parc National de Guadeloupe. Le nombre de personnes est limité à une dizaine, pour éviter de perturber le milieu et la reproduction des lucioles. <strong>Les gens viennent en famille, on pique-nique, on apprend à reconnaitre les insectes, à faire la différence entre taupins et lucioles, on explique le cycle de vie, qu’est-ce que la bioluminescence, la fluorescence et la phosphorescence ? Quelles sont les conséquences de certaines lumières sur leur terrasse la nuit pour les insectes ?</strong> On le fait de façon ludique pour les jeunes, avec de la peinture à visage phosphorescente, du light painting... Ça permet aux enfants de s’amuser et découvrir, et aux adultes d’approfondir certains sujets. On parle plus largement de la protection de la biodiversité et  des milieux de Guadeloupe, des idées reçues, des pollutions, etc.<br>\n	\N	\N	\N	f
 68300	1051	TEXT	body.bodyElements.11.questionAnswer.response	On a déjà eu des remontées d’infos issues de Saint Martin ou de la Martinique. On aimerait bien développer davantage le projet, mais on a déjà beaucoup à faire sur la Guadeloupe ! Quand on sera bien installés ici on pourra essayer de créer des partenariats avec des organismes dans les différents territoires, ce serait bien de développer l’observatoire sur tout l’outre-mer !	\N	\N	\N	f
 68302	1051	TEXT	body.bodyElements.0.questionAnswer.response	Un soir chez moi en Guadeloupe, j’ai vu une luciole et je me suis dit « tiens c’est vrai qu’on n'en voit plus beaucoup, c’est étrange qu’on n’en voit pas plus que ça ». Jusqu’alors, je n’avais pas remarqué qu’on en voyait moins, quand on n’y fait pas attention on ne s’en rend pas compte. Et puis je me suis dit « mais en fait à quoi ça ressemble cette bestiole ? ». J’ai eu la démarche classique de tout un chacun qui s’intéresse à ce qui se passe autour de lui, et je suis partie à la pêche aux informations.  \n  \n<br>Lors de mes recherches, j'ai contacté l’Observatoire des Vers luisants et des Lucioles qui existe dans l'hexagone depuis 2015, il est porté par le Groupe Associatif Estuaire et un référent scientifique du CNRS. C’est comme ça qu’on a monté un partenariat et créé le relai guadeloupéen de l’observatoire, qu’on a nommé avec un terme local : <strong>*Ti bet a limiè*, qui veut dire “petites bêtes lumineuses” en créole antillais</strong>. Ça a un double sens, ça peut aussi vouloir dire “petits trucs lumineux” : même si on est davantage sur les insectes, si on a des infos qui nous parviennent sur d’autres organismes lumineux, on les prend aussi ! On a par exemple retrouvé un champignon bioluminescent. Mais notre spécialité, c’est les insectes lumineux !<br>	\N	\N	\N	f
@@ -4327,6 +4416,16 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 71213	1020	TEXT	events.1.date	Entre - 1100 et -1050 ans	\N	\N	\N	f
 71214	1020	IMAGE	ecosystems.ecosystems.7.image	\N	2469	Espèces coralliennes spécifiques des fonds de baie envasés © F. Benzoni / IRD	\N	f
 71215	1020	TEXT	interests.locations.4.name	Le parc provincial de la Côte oubliée (*Woen Vùù – Pwa Pereeù*)	\N	\N	\N	f
+71346	1057	TEXT	species.5.description	Le Noddi brun ([*Anous stolidus*](https://inpn.mnhn.fr/espece/cd_nom/199379)) est un oiseau marin présentant, comme son nom l’indique, un plumage brun, avec le bout des ailes et la queue plus sombre et une coloration gris clair sur la tête. Il se nourrit de petits poissons et de calmars qu’il pêche en vol, juste au-dessus de la surface de l’eau. \nLargement répandu à travers les régions tropicales du globe, il ne niche à Saint-Martin que sur l’ilet Tintamarre et les falaises de Terres Basses. \nLe Noddi brun est protégé à Saint-Martin, et il est important de ne pas déranger les couples nicheurs pour ne pas faire échouer les couvées.  \n  \nStatut sur la Liste rouge mondiale : préoccupation mineure\n	\N	\N	\N	f
+71347	1057	TEXT	species.6.description	Le Cactus tête à l’anglais ([*Melocactus intortus*](https://inpn.mnhn.fr/espece/cd_nom/447021)) est un petit cactus qui doit son nom au cephalium (structure pileuse dressée) rougeâtre qui se développe au sommet de la plante à maturité, et qui porte les fleurs et les fruits. \nRépandu dans plusieurs îles de la Caraïbe, ce cactus est néanmoins en déclin et il est protégé à Saint-Martin. Les prélèvements ne sont pas autorisés car ils mettent en danger l’espèce, déjà fragilisée par la consommation par les animaux domestiques divagant (ânes et chèvres), ainsi que par les chenilles du lépidoptère [*Cactoblastis cactorum*](https://inpn.mnhn.fr/espece/cd_nom/654887), introduites dans la Caraïbe pour réguler les populations de cactacées du genre *Opuntia*, également introduites.  \n  \nStatut sur la Liste rouge mondiale : préoccupation mineure \n	\N	\N	\N	f
+71348	1057	CHECKBOX	identity.shadowed	true	\N	\N	\N	f
+71349	1057	TEXT	events.0.date	-3000 ans 	\N	\N	\N	f
+71350	1057	TEXT	identity.populationYear	2018	\N	\N	\N	f
+71351	1057	IMAGE	species.5.image	\N	2744	Noddi brun © Réserve naturelle nationale de Saint-Martin	\N	f
+71352	1057	TEXT	events.13.date	2019	\N	\N	\N	f
+71353	1057	TEXT	statistics.0.text	de Réserve naturelle nationale	\N	\N	\N	f
+71354	1057	TEXT	ecosystems.ecosystems.1.name	Les herbiers sous-marins	\N	\N	\N	f
+71355	1057	TEXT	events.2.date	1648	\N	\N	\N	f
 70661	1022	TEXT	events.7.date	1988 - 1992 	\N	\N	\N	f
 70662	1022	TEXT	interests.locations.0.name	Le Grand Barachois	\N	\N	\N	f
 70663	1022	TEXT	events.0.description	Prise de possession française des îles par Jacques Cartier	\N	\N	\N	f
@@ -4456,6 +4555,45 @@ COPY public.page_element (id, page_id, type, key, text, image_id, alt, href, tit
 71279	1056	TEXT	body.introduction	La Nouvelle-Calédonie abrite une biodiversité remarquable en mammifères marins, dont plusieurs espèces présentent une valeur patrimoniale forte pour les populations océaniennes. Si la plupart fréquentent les eaux du large, quelques-unes s’observent également dans les lagons. Depuis plus de 20 ans, l’association Opération Cétacés et une équipe de l’Institut de recherche et développement (IRD) étudient cette grande faune marine. Elles nous présentent ici quelques représentants de la trentaine d’espèces recensée dans les eaux de l’archipel.	\N	\N	\N	f
 71280	1056	IMAGE	body.photos.8.photo	\N	2726	© Claire Garrigue - Opération Cétacés	\N	f
 71281	1056	IMAGE	body.photos.0.photo	\N	2717	© Magali Boussion	\N	f
+71356	1057	TEXT	identity.presentation	Située au nord de l’archipel des Petites Antilles, à une vingtaine de kilomètres au nord-ouest de Saint-Barthélemy, l’île de Saint-Martin/Sint-Marteen est partagée en deux : au nord le territoire français, au sud le territoire néerlandais. Densément peuplée, l’île au climat sec est vallonée, avec des collines de faible altitude et de nombreux étangs littoraux anciennement exploités pour la production de sel. Malgré sa petite taille, l’île possède un patrimoine naturel original, avec de quelques espèce endémiques et sub-endémiques aux îles du Banc d’Anguilla (formation géologique qui regroupe Anguilla, Saint-Martin, Saint-Barthélemy et leurs îlets).	\N	\N	\N	f
+71357	1057	TEXT	identity.population	34 065	\N	\N	\N	f
+71358	1057	TEXT	species.3.name	Le Mérou de Nassau	\N	\N	\N	f
+71359	1057	TEXT	risks.risks.2.name	Les impacts des espèces exotiques envahissantes	\N	\N	\N	f
+71360	1057	IMAGE	species.8.image	\N	2741	Gaïac © Réserve naturelle nationale de Saint-Martin	\N	f
+71361	1057	TEXT	species.0.name	La Baleine à bosse	\N	\N	\N	f
+71362	1057	TEXT	events.4.date	1848	\N	\N	\N	f
+71363	1057	IMAGE	interests.locations.2.image	\N	2739	Vue sur l'îlet Pinel depuis Saint-Martin © Réserve naturelle nationale de Saint-Martin	\N	f
+71364	1057	TEXT	events.11.date	2014	\N	\N	\N	f
+71368	1057	TEXT	interests.locations.0.description	La Réserve s’étend au nord-est de l’île. Sa partie marine couvre 2 796 hectares, permettant de protéger d’importants herbiers de phanérogames marines et de nombreuses formations coralliennes qui abritent une grande diversité d’espèces : mollusques, échinodermes, poissons, etc. La pêche y est interdite. La partie terrestre de 164 hectares couvre plusieurs iles et ilets, dont la partie littorale de Tintamarre et Pinel. Plus de 90 espèces d’oiseaux fréquentent la réserve pour nicher ou s’alimenter. 	\N	\N	\N	f
+71369	1057	TEXT	risks.risks.2.description	Comme dans de nombreux milieux insulaires aux ressources limitées, et favorable à l’émergence d’endémisme, les espèces exotiques envahissantes représentent des menaces majeures pour la biodiversité.  \n  \nParmi les espèces animales les plus préoccupantes se trouvent le Rat noir ([*Rattus rattus*](https://inpn.mnhn.fr/espece/cd_nom/61587)) et la Petite mangouste indienne ([*Urva auropunctata*](https://inpn.mnhn.fr/espece/cd_nom/850071)), prédateurs d’oiseaux et de reptiles. Côté flore, la Liane corail ([*Antigonon leptopus*](https://inpn.mnhn.fr/espece/cd_nom/447454)) et le Faux-mimosa ([*Leucaena leucocephala*](https://inpn.mnhn.fr/espece/cd_nom/447354)) entrent en compétition avec les espèces indigènes. Saint-Martin abrite également d’importantes populations d’Iguane commun ([*Iguana iguana*](https://inpn.mnhn.fr/espece/cd_nom/350756)) et de Singe vert ou vervet ([*Chlorocebus sabaeus*](https://inpn.mnhn.fr/espece/cd_nom/926294)), responsables d’une pression supplémentaire non-négligeable au lendemain d’Irma. Certains arbres et certaines plantes ayant survécu à l’impact des vents violents, des projectiles et de la submersion marines, n’ont pas été en mesure de survivre en phase post-cyclonique en raison de l’impact de ces deux espèces.  \n  \nEn milieux marin, deux espèces exotiques sont particulièrement préoccupantes. Le Poisson-lion ([*Pterois volitans*](https://inpn.mnhn.fr/espece/cd_nom/425417)) est un prédateur vorace introduit depuis la Floride au début des années 1990 et dont l’aire de répartition s’est étendue progressivement à l’ensemble de la Caraïbe. Il a été observé pour la première fois à Saint-Martin en juillet 2010 et est désormais bien présent au sein des eaux de l’île, qui n'abritent que peu de prédateurs naturels potentiels. [*Halophila stipulaceae*](https://inpn.mnhn.fr/espece/cd_nom/368620), une espèce de phanérogame marine envahissant les eaux côtières où elle remplace les espèces des herbiers indigènes, et qui colonise aussi des fonds sédimentaires nus, est  désormais également largement répandue.  \n  \nPour limiter les impacts des espèces exotiques envahissantes, une règlementation mise en place depuis le 30 novembre 2020 interdit l’introduction, la détention et le transport d’une [liste d’espèces considérées à risque sur le territoire](https://especes-envahissantes-outremer.fr/depliants-reglementation-eee-saint-martin/).\n	\N	\N	\N	f
+71370	1057	TEXT	events.13.description	Lancement du programme [LIFE BIODIV’OM](https://www.lifebiodivom.fr/especes/merou-de-nassau/)	\N	\N	\N	f
+71371	1057	TEXT	risks.risks.1.description	Du fait de sa location au nord des Petites Antilles, Saint-Martin est naturellement exposée au risque cyclonique. Plusieurs ouragans majeurs et particulièrement puissant ont eu lieu ces dernières décennies : Luis (1995), Lenny (1999), Gonzalo (2014) et Irma (2017), ce dernier étant le plus puissant jamais enregistré dans l’Atlantique nord. Il est fortement probable que la fréquence et la puissance des ouragans soit augmentées par les changements climatiques.\n  \nSi l'ouragan Irma a eu un impact majeur à terre, renforcé par l’anthropisation des côtes et un bâti n’intégrant pas toujours les contraintes para-cycloniques, les fonds marins côtiers ont quant à eux particulièrement souffert de l’après-Irma. La destruction de l’ensemble du réseau d’assainissement collectif et individuel a conduit à des rejets bruts en milieux naturels, principalement en mer, pendant plusieurs mois. Les houles cycloniques ont également été à l’origine d’importants mouvements de sédiments, conduisant à la persistance d’eaux turbides et au relargage de matière organique. 	\N	\N	\N	f
+71372	1057	TEXT	risks.risks.3.description	L’île étant partagée entre deux pays, et proche des îles voisines d’Anguilla et de Saint-Barthélemy, la coopération régionale est indispensable pour répondre aux enjeux communs. Des approches communes homogénéisées sont déployées pour suivre et documenter l’évolution de l’état de santé des peuplements marins et terrestres. Des échanges techniques et collaborations sont développées en matière de gestion et de communication, mais ces initiatives se heurtent aux réglementations différentes existant au sein de chaque territoire.  \n  \nSaint-Martin est inclu dans le [Sanctuaire Agoa](https://sanctuaire-agoa.fr/), voué à la préservation des populations de mammifères marins, qui regroupe l’ensemble des eaux des Antilles françaises. La [Réserve naturelle nationale](https://reservenaturelle-saint-martin.com/) est chargée des principales études et suivis de la biodiversité sur l’île et dans ses eaux. La création d’un Institut Caribéen de la Biodiversité Insulaire (ICBI) est en cours. Le projet regroupe un centre de recherche, d’écotourisme et de mise en valeur de la conservation de la biodiversité locale (musée et jardins) et un centre de soin pour la faune sauvage blessée.\n	\N	\N	\N	f
+71373	1057	TEXT	interests.locations.2.description	Également recouvert par une savane sèche avec quelques bosquets d'épineux, l’ilet est situé à seulement une centaine de mètres de la côte, ce qui en fait un lieu très touristique. En raison de la forte présence humaine, les oiseaux marins présents sur l’îlet n’y nichent pas, mais préfèrent l’ilet voisin, Petite Clef, interdit au débarquement.	\N	\N	\N	f
+71374	1057	TEXT	events.12.description	Passage de l'ouragan Irma, le plus puissant jamais recensé dans la zone	\N	\N	\N	f
+71375	1057	TEXT	interests.locations.1.description	Inhabité, l’îlet est recouvert aux deux tiers par une forêt sèche, le reste étant composé d’une savane herbacée ou de taillis assez impénétrables. De nombreux oiseaux tels que le Grand Paille-en-queue ([*Phaethon aethereus*](https://inpn.mnhn.fr/espece/cd_nom/199319)) ou le Noddi brun ([*Anous stolidus*](https://inpn.mnhn.fr/espece/cd_nom/199379)) nichent sur l’ilet. C’est également un haut lieu de ponte des tortues marines (tortues vertes et imbriquées). Des bouées de mouillage permettent d’éviter de dégrader les fonds marins lors de l’accès en bateau.	\N	\N	\N	f
+71376	1057	TEXT	ecosystems.ecosystems.3.name	La forêt sèche littorale	\N	\N	\N	f
+71377	1057	TEXT	identity.subtitle	Une île partagée en deux	\N	\N	\N	f
+71378	1057	IMAGE	species.7.image	\N	2740	Raisinier bord-de-mer © Réserve naturelle nationale de Saint-Martin	\N	f
+71379	1057	TEXT	species.5.name	Le Noddi brun	\N	\N	\N	f
+71380	1057	TEXT	risks.risks.0.description	La population de Saint-Martin est très dense (782 habitants au km<sup>2</sup>), et l’expansion de l’urbanisation est une menace pour les milieux naturels de l’île. Le tourisme, pilier économique de Saint-Martin, entraine en particulier une forte artificialisation des littoraux et une dégradation des milieux marins, notamment par le rejet d’eaux usées non traités.  \nL’impact des activités nautiques de plaisance, nombreuses, n’a pour le moment pas faire l’objet d’évaluations. 	\N	\N	\N	f
+71381	1057	TEXT	ecosystems.ecosystems.2.description	Peu étendues et clairsemée, les mangroves de Saint-Martin se limitent aux berges de certains étangs côtiers et couvrent 35 hectares au total. Elles sont formées de 4 espèces de palétuviers : [*Rhizophora mangle*](https://inpn.mnhn.fr/espece/cd_nom/447470), [*Laguncularia racemosa*](https://inpn.mnhn.fr/espece/cd_nom/630001), [*Conocarpus erectus*](https://inpn.mnhn.fr/espece/cd_nom/629401) et [*Avicennia germinans*](https://inpn.mnhn.fr/espece/cd_nom/629127). Leur superficie a drastiquement diminué au cours des dernières décennies à cause des défrichements et remblais au profil de l’urbanisation. Elles restent des écosystèmes importants pour l’épuration des eaux et la nidification des oiseaux. La mangrove de l’étang du cimetière de Grand Case abrite par exemple la seule colonie nicheuse de Grande Aigrette ([*Ardea alba*](https://inpn.mnhn.fr/espece/cd_nom/2504)) des Antilles françaises.	\N	\N	\N	f
+71382	1057	TEXT	ecosystems.ecosystems.1.description	Contrairement aux récifs coralliens, les herbiers sous-marins couvrent de grandes étendues à Saint-Martin. Leur superficie est estimée à 61,5 km<sup>2</sup> autour de l’ensemble de l’île. On y trouve 5 espèces de magnoliophytes marines, dont l’Herbe à tortue ([*Thalassia testudinum*](https://inpn.mnhn.fr/espece/cd_nom/627263)) et l’Herbe à lamentin ([*Syringodium filiforme*](https://inpn.mnhn.fr/espece/cd_nom/627259)). On y trouve également l’espèce exotique [*Halophila stipulaceae*](https://inpn.mnhn.fr/espece/cd_nom/368620), en expansion dans la Caraïbe bien que son système racinaire moins profond que les autres espèces semble la rendre plus sensible aux évènements climatiques. Ces herbiers, comme les fonds coralliens, abritent de nombreuses espèces d'invertébrés (étoiles de mer, oursins, langoustes, lambis...) et de poissons (mérou, chirurgien, perroquet, barracuda...). Ils sont la zone d’alimentation privilégiée des tortues vertes et autrefois du Lamentin ([*Trichechus manatus*](https://inpn.mnhn.fr/espece/cd_nom/443799)), aujourd’hui disparu des eaux des Antilles françaises, et dont le dernier représentant en milieu naturel dans la région avait été photographié à Saint-Martin.	\N	\N	\N	f
+71383	1057	TEXT	ecosystems.ecosystems.0.description	Les récifs coralliens sont peu développés autour de Saint-Martin, en raison de la nature sableuse des fonds dans les eaux peu profondes, qui favorisent la présence d'herbiers sous-marins. Leur présence est limitée à la zone nord-est de l’île. Il est également possible que cette couverture plus réduite que dans les autres îles de l’arc des Petites Antilles soit due au passage plus fréquent des ouragans. Malgré leur petite taille, les colonies coralliennes abritent de nombreuses espèces (poissons, invertébrés,...) mais elles ont été fragilisées par un épisode de blanchissement massif entre 2005 et 2006.\n	\N	\N	\N	f
+71384	1057	TEXT	identity.highestPoint	424	\N	\N	\N	f
+71385	1057	TEXT	interests.locations.4.description	L’île compte de nombreux étangs littoraux d’eau saumâtre, certains bordés par des mangroves. Historiquement exploités pour la production de sel, ils sont d’une grande importance pour l’avifaune mais également pour leur rôle d’épuration de l’eau et de régulation des flux hydriques. La plupart sont protégés (par arrêté de biotope, classement en site Ramsar ou acquis par le Conservatoire du littoral, et 2 sont inclus dans la Réserve naturelle nationale), mais ils restent fortement anthropisés et soumis à de nombreuses pressions : remblais, déversements de déchets, rejets d’eaux non traitées, défrichement de la mangrove.	\N	\N	\N	f
+71386	1057	TEXT	risks.risks.0.name	Une île soumise à une forte pression anthropique 	\N	\N	\N	f
+71387	1057	IMAGE	interests.locations.1.image	\N	2730	Vue aérienne de l'îlet Tintamarre © Réserve naturelle nationale de Saint-Martin	\N	f
+71388	1057	IMAGE	ecosystems.ecosystems.1.image	\N	2746	Requins nourrices (*Ginglymostoma  cirratum*) sur un herbier © Julien Chalifour - RNN Saint-Martin	\N	f
+71389	1057	TEXT	interests.locations.3.description	Situé dans la partie nord-est de Saint-Martin, Red Rock est l’un des derniers massifs boisés encore préservé de l’île. On y trouve différents types de milieux : forêt sèche, savanes, fourrés secs, zones humides, falaises bordés par des plages de sables et de galets. Plus de 180 espèces végétales y ont été recensées, dont 2 endémiques.	\N	\N	\N	f
+71390	1057	TEXT	identity.title	Saint-Martin,  \nl'île au sel	\N	\N	\N	f
+71391	1057	TEXT	risks.risks.3.name	Une coopération régionale indispensable	\N	\N	\N	f
+71392	1057	IMAGE	species.6.image	\N	2743	Cactus tête à l'anglais © Réserve naturelle nationale de Saint-Martin	\N	f
+71393	1057	TEXT	interests.locations.1.name	L’îlet Tintamarre	\N	\N	\N	f
+71394	1057	TEXT	statistics.2.text	d'herbiers sous-marins	\N	\N	\N	f
+71395	1057	IMAGE	species.0.image	\N	2734	Baleine à bosse © Steeve Ruillet - RNN Saint-Martin	\N	f
+71396	1057	TEXT	events.1.date	1493	\N	\N	\N	f
+71397	1057	TEXT	interests.locations.4.name	Les étangs	\N	\N	\N	f
 \.
 
 
@@ -4484,7 +4622,7 @@ SELECT pg_catalog.setval('public.ecogesture_seq', 1007, true);
 -- Name: image_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.image_seq', 2727, true);
+SELECT pg_catalog.setval('public.image_seq', 2748, true);
 
 
 --
@@ -4519,14 +4657,14 @@ SELECT pg_catalog.setval('public.media_category_seq', 1000, false);
 -- Name: page_element_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_element_seq', 71281, true);
+SELECT pg_catalog.setval('public.page_element_seq', 71397, true);
 
 
 --
 -- Name: page_seq; Type: SEQUENCE SET; Schema: public; Owner: biom
 --
 
-SELECT pg_catalog.setval('public.page_seq', 1056, true);
+SELECT pg_catalog.setval('public.page_seq', 1057, true);
 
 
 --
